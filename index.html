@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>創作OCメーカー</title>
+<style>
+:root{
+  --bg:#F2F0EB;
+  --card:#FFFFFF;
+  --ink:#2D2A33;
+  --sub:#6E6879;
+  --line:#E4E1D9;
+  --accent:#5A4B8B;
+  --accent-deep:#463A70;
+  --accent-soft:#EEEBF7;
+  --wine:#8E4257;
+  --wine-soft:#F6ECEF;
+  --blue:#5A6E8C;
+  --radius:14px;
+  --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{font-size:16px;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  line-height:1.7;
+  padding:0 14px calc(40px + env(safe-area-inset-bottom));
+}
+.wrap{max-width:720px;margin:0 auto;}
+
+/* ---------- header ---------- */
+header{padding:30px 4px 18px;text-align:center;}
+header h1{
+  font-family:var(--serif);
+  font-size:1.9rem;
+  letter-spacing:.14em;
+  margin:0 0 6px;
+  color:var(--accent-deep);
+}
+header .sub{
+  font-family:var(--serif);
+  font-size:.92rem;
+  color:var(--sub);
+  margin:0 0 10px;
+  letter-spacing:.05em;
+}
+header .desc{font-size:.82rem;color:var(--sub);margin:0;}
+header .rule{
+  width:56px;height:2px;background:var(--accent);
+  margin:14px auto 0;opacity:.5;
+}
+
+/* ---------- mode ---------- */
+.mode-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 16px;}
+.mode-btn{
+  border:1.5px solid var(--line);
+  background:var(--card);
+  color:var(--sub);
+  border-radius:12px;
+  padding:14px 4px 12px;
+  font-size:.9rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .15s;
+  font-family:var(--sans);
+}
+.mode-btn small{display:block;font-weight:400;font-size:.68rem;margin-top:3px;opacity:.75;}
+.mode-btn.on{
+  border-color:var(--accent);
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 3px 10px rgba(90,75,139,.28);
+}
+
+/* ---------- name attach input ---------- */
+#nameInputWrap{display:none;margin:0 0 14px;}
+#nameInputWrap.show{display:block;}
+#nameInputWrap label{font-size:.8rem;color:var(--sub);display:block;margin-bottom:5px;}
+#nameInput{
+  width:100%;padding:12px;border:1.5px solid var(--line);
+  border-radius:10px;font-size:1rem;background:var(--card);
+  font-family:var(--sans);color:var(--ink);
+}
+#nameInput:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+
+/* ---------- conditions ---------- */
+details.cond{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  margin-bottom:10px;
+  overflow:hidden;
+}
+details.cond summary{
+  list-style:none;
+  cursor:pointer;
+  padding:13px 16px;
+  font-weight:600;
+  font-size:.92rem;
+  display:flex;align-items:center;justify-content:space-between;
+  color:var(--ink);
+}
+details.cond summary::-webkit-details-marker{display:none;}
+details.cond summary .sel{
+  font-weight:400;font-size:.74rem;color:var(--accent);
+  max-width:55%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+details.cond summary::after{
+  content:"▾";color:var(--sub);font-size:.8rem;margin-left:8px;
+  transition:transform .15s;
+}
+details.cond[open] summary::after{transform:rotate(180deg);}
+.chip-box{padding:2px 12px 14px;display:flex;flex-wrap:wrap;gap:7px;}
+.chip{
+  border:1.5px solid var(--line);
+  background:#FAF9F6;
+  color:var(--ink);
+  border-radius:999px;
+  padding:8px 14px;
+  font-size:.84rem;
+  cursor:pointer;
+  transition:all .12s;
+  font-family:var(--sans);
+}
+.chip.on{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+.cond-note{width:100%;font-size:.72rem;color:var(--sub);margin:2px 2px 0;}
+
+/* ---------- generate ---------- */
+.gen-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 8px;}
+.btn{
+  border:none;border-radius:12px;cursor:pointer;
+  font-family:var(--sans);font-weight:700;
+  transition:transform .1s, box-shadow .15s;
+}
+.btn:active{transform:scale(.97);}
+.btn-gen{
+  background:var(--accent);color:#fff;
+  padding:16px 8px;font-size:1.02rem;
+  box-shadow:0 4px 12px rgba(90,75,139,.3);
+}
+.btn-gen.multi{background:var(--accent-deep);}
+.gen-sub{display:flex;gap:10px;justify-content:center;margin-bottom:6px;}
+.btn-ghost{
+  background:none;border:1.5px solid var(--line);color:var(--sub);
+  border-radius:999px;padding:8px 16px;font-size:.8rem;font-weight:600;
+}
+
+/* ---------- result cards ---------- */
+#results{margin-top:10px;}
+.res-head{
+  font-family:var(--serif);font-size:1.05rem;letter-spacing:.1em;
+  color:var(--accent-deep);margin:22px 2px 10px;
+  display:none;
+}
+.res-head.show{display:block;}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:18px 18px 14px;
+  margin-bottom:14px;
+  box-shadow:0 2px 8px rgba(45,42,51,.05);
+}
+.card .world-tag{
+  display:inline-block;font-size:.7rem;color:var(--accent);
+  border:1px solid var(--accent);border-radius:999px;
+  padding:2px 10px;margin-bottom:10px;letter-spacing:.05em;
+}
+.card .catch{
+  font-family:var(--serif);
+  font-size:1.02rem;
+  line-height:1.6;
+  color:var(--ink);
+  border-left:3px solid var(--accent);
+  padding-left:12px;
+  margin:0 0 12px;
+  letter-spacing:.04em;
+}
+.card .name-line{margin:0 0 2px;}
+.card .name-line .nm{
+  font-family:var(--serif);font-size:1.45rem;font-weight:600;
+  letter-spacing:.08em;color:var(--ink);
+}
+.card .name-line .rd{font-size:.78rem;color:var(--sub);margin-left:8px;}
+.card .roman{font-size:.78rem;color:var(--blue);letter-spacing:.06em;margin:0 0 10px;}
+.card dl{margin:0;}
+.card .row{
+  display:grid;grid-template-columns:88px 1fr;gap:8px;
+  padding:6px 0;border-top:1px dashed var(--line);
+  font-size:.86rem;
+}
+.card .row dt{color:var(--sub);font-size:.78rem;padding-top:2px;}
+.card .row dd{margin:0;}
+.card .sec-label{
+  font-size:.72rem;color:var(--accent);letter-spacing:.15em;
+  margin:14px 0 2px;font-weight:700;
+}
+.card .prompt{
+  font-size:.76rem;background:#F6F5F1;border-radius:8px;
+  padding:9px 11px;color:#4A4552;word-break:break-all;
+  border:1px solid var(--line);line-height:1.55;
+}
+.card-actions{
+  display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;
+  border-top:1px solid var(--line);padding-top:12px;
+}
+.btn-sm{
+  border-radius:999px;padding:8px 13px;font-size:.78rem;font-weight:600;
+  border:1.5px solid var(--line);background:#FAF9F6;color:var(--ink);
+  cursor:pointer;font-family:var(--sans);
+}
+.btn-sm.save{background:var(--wine);border-color:var(--wine);color:#fff;}
+.btn-sm.save:disabled{background:var(--wine-soft);border-color:var(--wine-soft);color:var(--wine);opacity:.9;}
+.btn-sm.copy{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);}
+
+/* ---------- saved ---------- */
+#savedWrap{margin-top:34px;}
+#savedWrap h2{
+  font-family:var(--serif);font-size:1.15rem;letter-spacing:.12em;
+  color:var(--accent-deep);margin:0 0 4px;
+}
+#savedWrap .saved-note{font-size:.76rem;color:var(--sub);margin:0 0 10px;}
+.saved-actions{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+.saved-item{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:13px 15px;margin-bottom:9px;
+}
+.saved-item .s-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.saved-item .s-name{font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:.05em;}
+.saved-item .s-imp{font-size:.75rem;color:var(--sub);}
+.saved-item .s-detail{
+  display:none;margin-top:10px;font-size:.8rem;white-space:pre-wrap;
+  background:#F8F7F3;border-radius:8px;padding:10px 12px;
+  border:1px solid var(--line);line-height:1.65;
+}
+.saved-item.open .s-detail{display:block;}
+.saved-item .s-actions{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap;}
+.btn-danger{border-color:#D8B9BF;color:var(--wine);background:#FDF7F8;}
+.empty-msg{
+  font-size:.82rem;color:var(--sub);text-align:center;
+  padding:18px 10px;border:1.5px dashed var(--line);border-radius:12px;
+  background:rgba(255,255,255,.5);
+}
+
+/* ---------- toast / fallback ---------- */
+#toast{
+  position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));
+  transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:#fff;font-size:.82rem;
+  padding:10px 20px;border-radius:999px;opacity:0;
+  pointer-events:none;transition:all .25s;z-index:50;
+  white-space:nowrap;
+}
+#toast.show{opacity:.95;transform:translateX(-50%) translateY(0);}
+#copyFallback{
+  display:none;position:fixed;inset:0;background:rgba(45,42,51,.5);
+  z-index:60;padding:24px 16px;
+}
+#copyFallback.show{display:flex;align-items:center;justify-content:center;}
+#copyFallback .fb-box{
+  background:var(--card);border-radius:14px;padding:16px;max-width:560px;width:100%;
+}
+#copyFallback textarea{
+  width:100%;height:180px;font-size:.8rem;border:1px solid var(--line);
+  border-radius:8px;padding:8px;font-family:var(--sans);
+}
+footer{
+  text-align:center;font-size:.7rem;color:var(--sub);
+  margin-top:36px;font-family:var(--serif);letter-spacing:.1em;
+}
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important;}
+}
+@media (min-width:600px){
+  .chip{font-size:.86rem;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>創作OCメーカー</h1>
+  <p class="sub">名前だけ、設定だけ、まるごとお任せ。</p>
+  <p class="desc">世界観や雰囲気を選んでボタンを押すだけ。創作キャラの「種」をすぐ作れるOC生成ツールです。</p>
+  <div class="rule"></div>
+</header>
+
+<nav class="mode-grid" id="modeBtns"></nav>
+
+<div id="nameInputWrap">
+  <label for="nameInput">この名前に設定をつける（任意）</label>
+  <input type="text" id="nameInput" placeholder="例：佐伯 丞（空欄なら設定のみ生成）">
+</div>
+
+<section id="conditions"></section>
+
+<div class="gen-row">
+  <button class="btn btn-gen" id="btnGen1">1人生成</button>
+  <button class="btn btn-gen multi" id="btnGen5">5人生成</button>
+</div>
+<div class="gen-sub">
+  <button class="btn-ghost" id="btnReset">条件リセット</button>
+  <button class="btn-ghost" id="btnRandom">条件ランダム</button>
+</div>
+
+<h2 class="res-head" id="resHead">― 生成結果 ―</h2>
+<section id="results"></section>
+
+<section id="savedWrap">
+  <h2>保存リスト</h2>
+  <p class="saved-note">気に入ったキャラはこの端末（ブラウザ）に保存されます。</p>
+  <div class="saved-actions">
+    <button class="btn-sm" id="btnCopyAllSaved">まとめてコピー</button>
+    <button class="btn-sm btn-danger" id="btnClearSaved">全削除</button>
+  </div>
+  <div id="savedList"></div>
+</section>
+
+<footer>創作OCメーカー v1.0</footer>
+</div>
+
+<div id="toast"></div>
+<div id="copyFallback">
+  <div class="fb-box">
+    <p style="font-size:.8rem;margin:0 0 8px;">自動コピーできませんでした。以下を長押しでコピーしてください。</p>
+    <textarea id="fbText" readonly></textarea>
+    <div style="text-align:right;margin-top:8px;">
+      <button class="btn-sm" id="fbClose">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+/* ============================================================
+   データ定義（後から増やしやすいよう、すべてこの区画にまとめる）
+   ============================================================ */
+
+/* ---- 世界観 ---- */
+const worldDefs = {
+  modern:      {label:"現代日本",        nameKey:"japanese", group:"modern",  en:"modern Japanese setting",       scene:"city street at dusk"},
+  school:      {label:"学園",            nameKey:"japanese", group:"modern",  en:"modern school setting",         scene:"quiet classroom after school"},
+  work:        {label:"職業もの",        nameKey:"japanese", group:"modern",  en:"modern workplace setting",      scene:"office at night"},
+  wafu:        {label:"和風",            nameKey:"wafu",     group:"wafu",    en:"traditional Japanese setting",  scene:"old wooden townscape"},
+  wafuFantasy: {label:"和風ファンタジー", nameKey:"wafu",     group:"wafu",    en:"Japanese fantasy setting",      scene:"shrine in the mist"},
+  western:     {label:"西洋ファンタジー", nameKey:"western",  group:"western", en:"western fantasy setting",       scene:"old stone city"},
+  royal:       {label:"王侯貴族",        nameKey:"western",  group:"western", en:"royal court setting",           scene:"candlelit palace hall"},
+  chinese:     {label:"中華・東洋風",    nameKey:"chinese",  group:"chinese", en:"east asian fantasy setting",    scene:"lantern-lit courtyard"},
+  desert:      {label:"砂漠幻想風",      nameKey:"desert",   group:"desert",  en:"desert fantasy setting",        scene:"moonlit oasis"},
+  dark:        {label:"ダークファンタジー",nameKey:"western", group:"western", en:"dark fantasy setting",          scene:"ruined cathedral"},
+  scifi:       {label:"近未来・SF",      nameKey:"scifi",    group:"scifi",   en:"near future sci-fi setting",    scene:"neon-lit corridor"},
+  cyber:       {label:"サイバーパンク",  nameKey:"scifi",    group:"scifi",   en:"cyberpunk setting",             scene:"rainy neon street"},
+  steam:       {label:"スチームパンク",  nameKey:"western",  group:"steam",   en:"steampunk setting",             scene:"clockwork workshop"},
+  ability:     {label:"現代異能",        nameKey:"japanese", group:"modern",  en:"modern supernatural setting",   scene:"city rooftop at night"},
+  nonhuman:    {label:"人外・異種族",    nameKey:"western",  group:"western", en:"fantasy setting",               scene:"deep ancient forest"},
+  mixed:       {label:"和洋折衷",        nameKey:"mixed",    group:"modern",  en:"japanese-western fusion setting",scene:"retro modern mansion"}
+};
+const worldOrder = ["modern","school","work","wafu","wafuFantasy","western","royal","chinese","desert","dark","scifi","cyber","steam","ability","nonhuman","mixed","random"];
+
+/* ---- 性別・印象 ---- */
+const genderDefs = {
+  male:      {label:"男性",     pool:"male",    age:[18,45], en:"man",              noun:"男"},
+  female:    {label:"女性",     pool:"female",  age:[18,45], en:"woman",            noun:"女"},
+  neutral:   {label:"中性的",   pool:"neutral", age:[16,30], en:"androgynous person",noun:"人"},
+  boy:       {label:"少年",     pool:"male",    age:[12,18], en:"teenage boy",      noun:"少年"},
+  girl:      {label:"少女",     pool:"female",  age:[12,18], en:"teenage girl",     noun:"少女"},
+  youngMan:  {label:"青年",     pool:"male",    age:[18,29], en:"young man",        noun:"青年"},
+  adultMan:  {label:"成人男性", pool:"male",    age:[25,45], en:"adult man",        noun:"男"},
+  adultWoman:{label:"成人女性", pool:"female",  age:[25,45], en:"adult woman",      noun:"女"},
+  older:     {label:"年上",     pool:"any",     age:[30,50], en:"mature adult",     noun:"人"},
+  younger:   {label:"年下",     pool:"any",     age:[16,24], en:"young person",     noun:"人"},
+  nonhuman:  {label:"人外",     pool:"any",     age:[16,40], en:"non-human being",  noun:"存在", inhuman:true},
+  unspecified:{label:"指定なし", pool:"any",    age:[15,45], en:"person",           noun:"人"}
+};
+const genderOrder = ["male","female","neutral","boy","girl","youngMan","adultMan","adultWoman","older","younger","nonhuman","unspecified"];
+
+/* ---- 雰囲気（性格・口調・キャッチコピー・英語タグの素材を各moodが持つ）---- */
+const moodDefs = {
+  "優しい":   {en:"gentle atmosphere",  pers:["人の痛みに敏感で、頼まれる前に手を貸してしまう。","強い言葉を使わず、相手のペースを崩さない。"], catch:["優しさを疑われたことのない","誰にでも優しく、誰のものにもならない"], speech:"穏やかで柔らかい話し方。否定から入らない。"},
+  "冷たい":   {en:"cold aloof atmosphere", pers:["感情を表に出さず、必要なことだけを端的に処理する。","距離を詰めてくる相手ほど冷静に観察する。"], catch:["体温を見せない","冷たさで自分を守っている"], speech:"短く、平坦。無駄な相槌を打たない。"},
+  "高貴":     {en:"noble elegant aura", pers:["立ち居振る舞いに育ちの良さがにじみ、無作法を嫌う。","責任を負うことを当然と考えている。"], catch:["生まれながらに背筋の伸びた","誇りを脱げない"], speech:"格式のある丁寧な言葉遣い。命じることに慣れている。"},
+  "儚い":     {en:"fragile ephemeral presence", pers:["どこか消えてしまいそうな印象を周囲に与える。","自分の存在が長く続くと思っていない節がある。"], catch:["朝の光に透けそうな","いつか消えることを知っている"], speech:"声が細く、言葉数が少ない。語尾が消え入りがち。"},
+  "色気がある":{en:"alluring atmosphere", pers:["視線や間の取り方が妙に艶っぽく、本人は無自覚を装う。","相手の反応を楽しむ余裕がある。"], catch:["視線ひとつで場を支配する","艶を隠す気のない"], speech:"低めの声でゆっくり話す。語尾に含みを残す。"},
+  "知的":     {en:"intelligent atmosphere", pers:["物事をまず構造で捉え、感情論を後回しにする。","知らないことを知らないと言える誠実さがある。"], catch:["理性で感情を縛っている","答えより問いを愛する"], speech:"論理的で整った話し方。たまに皮肉が混ざる。"},
+  "真面目":   {en:"earnest serious air", pers:["決めたことは守る。手を抜くという発想がない。","融通が利かない自覚はあるが、直す気もあまりない。"], catch:["不器用なほどまっすぐな","正しさに殉じかねない"], speech:"折り目正しく丁寧。冗談が通じにくい。"},
+  "危うい":   {en:"unstable dangerous air", pers:["普段は穏やかだが、どこか均衡の崩れそうな気配がある。","一線を越えることへのためらいが薄い。"], catch:["壊れる音を待っている","善悪の境界線の上で笑う"], speech:"柔らかいのに、時々ぞっとする一言を挟む。"},
+  "狂気":     {en:"mad unhinged aura", pers:["独自の論理で世界が完結しており、他人の常識が通用しない。","楽しそうに笑う瞬間ほど周囲は緊張する。"], catch:["正気のふりが上手い","愛し方を間違え続ける"], speech:"妙に明るい。話が急に飛ぶ。"},
+  "明るい":   {en:"bright cheerful aura", pers:["場の空気を軽くするのがうまく、初対面でも懐に入る。","落ち込んでいる姿をあまり人に見せない。"], catch:["太陽の役を降りられない","明るさの裏に鍵をかけた"], speech:"テンポが良く、よく笑う。"},
+  "陽気":     {en:"lively jovial mood", pers:["祭りごとと騒ぎが好きで、静けさが少し苦手。","細かいことを気にしない胆力がある。"], catch:["宴の真ん中がよく似合う","笑い声で不安をかき消す"], speech:"声が大きく、冗談が多い。"},
+  "無邪気":   {en:"innocent playful aura", pers:["興味の赴くままに動き、計算というものをしない。","その無防備さが周囲を振り回すことがある。"], catch:["悪意を知らない目をした","無邪気という名の凶器"], speech:"素直でストレート。思ったことがそのまま口に出る。"},
+  "ミステリアス":{en:"mysterious enigmatic presence", pers:["経歴も目的も語らず、質問をやわらかくかわす。","肝心なところで必ず一歩引いた場所にいる。"], catch:["正体を明かさないまま隣にいる","謎のままでいることを選んだ"], speech:"質問に質問で返す。核心には触れさせない。"},
+  "闇がある": {en:"shadowed brooding aura", pers:["過去に触れられると一瞬だけ表情が消える。","自分の暗部を他人に背負わせない主義。"], catch:["夜を一人で抱えている","過去に鍵をかけて生きる"], speech:"普段は普通だが、特定の話題で急に口が重くなる。"},
+  "神秘的":   {en:"mystical otherworldly aura", pers:["どこか人間離れした静けさをまとっている。","時間の流れ方が周囲と違うように見える。"], catch:["此岸と彼岸の間に立つ","祈りの形をした"], speech:"静かで、選び抜かれた言葉だけを口にする。"},
+  "不器用":   {en:"awkward earnest air", pers:["好意の伝え方が下手で、誤解されやすい。","言葉より先に行動で示そうとする。"], catch:["優しさの翻訳が下手な","まっすぐしか歩けない"], speech:"言葉に詰まりやすい。肝心なことほど言えない。"},
+  "執着":     {en:"obsessive intense aura", pers:["一度手に入れたいと思ったものを諦める回路がない。","対象のことになると判断基準が変わる。"], catch:["手放し方を知らない","一途と呼ぶには重すぎる"], speech:"普段は普通だが、対象の話になると口数が増える。"},
+  "献身":     {en:"devoted selfless air", pers:["誰かのためなら自分の損得を簡単に捨てる。","尽くすことでしか居場所を確認できない。"], catch:["自分の順番をいつも最後にする","捧げることが呼吸になっている"], speech:"相手を立てる話し方。自分の希望を言うのが苦手。"},
+  "余裕がある":{en:"composed confident air", pers:["どんな状況でも慌てず、まず全体を眺める。","挑発に乗らず、笑って受け流す。"], catch:["切り札を最後まで見せない","勝ち方を知っている"], speech:"ゆったりと構えた話し方。焦りを見せない。"},
+  "未熟":     {en:"inexperienced youthful air", pers:["実力も経験も足りない自覚があり、それでも前に出る。","失敗の数だけ立ち上がってきた。"], catch:["伸びしろだけは誰にも負けない","まだ何者でもない"], speech:"勢いはあるが言葉選びが荒い。敬語が怪しい。"},
+  "孤独":     {en:"solitary lonely presence", pers:["群れることを避け、一人でいる時間で自分を保つ。","孤独に慣れすぎて、頼り方を忘れている。"], catch:["一人でいることを選び続けた","孤独と和解した"], speech:"必要最低限。ただし一対一だと少し柔らかくなる。"},
+  "強気":     {en:"bold confident attitude", pers:["言いたいことは相手が誰でも言う。","退くという選択肢を最後まで検討しない。"], catch:["退路を焼いて進む","強がりを本物にしてきた"], speech:"断定が多く、歯切れがいい。"},
+  "影が薄い": {en:"faint unassuming presence", pers:["気づけばそこにいるが、誰も入ってきた瞬間を覚えていない。","観察者としての視点が異様に鋭い。"], catch:["誰の記憶にも残らないはずだった","背景に紛れて世界を見ている"], speech:"声が小さい。だが発言の中身は的確。"},
+  "圧がある": {en:"imposing intense presence", pers:["黙って立っているだけで場の空気が張り詰める。","本人にその自覚はあまりない。"], catch:["沈黙が一番雄弁な","立っているだけで場を制す"], speech:"低く静か。短い言葉に重さがある。"},
+  "無口":     {en:"quiet reticent air", pers:["話すより聞く側で、口を開くのは必要なときだけ。","言葉が少ないぶん、一言の信頼度が高い。"], catch:["言葉を出し惜しみする","沈黙で語る"], speech:"一言二言で終わる。だが嘘は言わない。"},
+  "穏やか":   {en:"calm serene atmosphere", pers:["感情の起伏が少なく、周囲を安心させる。","怒らないのではなく、怒りの置き場所を知っている。"], catch:["凪のような","静けさの底に芯がある"], speech:"ゆっくり落ち着いた話し方。声を荒げない。"},
+  "生意気":   {en:"cheeky impudent attitude", pers:["目上にも遠慮なく軽口を叩くが、実力は伴っている。","素直に謝るのが世界で一番苦手。"], catch:["口の減らない","可愛げを捨てて牙を選んだ"], speech:"軽口と挑発が多い。ただし急所は外す。"},
+  "忠実":     {en:"loyal faithful air", pers:["仕えると決めた相手への忠誠は疑いようがない。","主の間違いを正すのも忠義だと考えている。"], catch:["忠誠に理由を求めない","最後の一人になっても隣に立つ"], speech:"主には礼を尽くし、それ以外には素っ気ない。"},
+  "気だるい": {en:"languid laid-back air", pers:["万事において省エネで、本気を出す場面を選ぶ。","面倒くさがりだが、見捨てるのはもっと面倒だと思っている。"], catch:["やる気の在庫が常に少ない","本気の出し方を隠している"], speech:"語尾が伸びる。あくび混じり。だが要点は外さない。"},
+  "透明感":   {en:"pure translucent aura", pers:["濁りのない雰囲気で、嘘や駆け引きが似合わない。","本人は自分の印象に無頓着。"], catch:["水のように澄んだ","汚れ方を知らない"], speech:"静かで素直。飾らない言葉を使う。"}
+};
+const moodOrder = Object.keys(moodDefs).concat(["お任せ"]);
+
+/* ---- 役割・職業（世界観グループ別に自然な言い換えを持つ）---- */
+/* conv が無い役割は「関係性寄りの役割」として物語での役割に反映する */
+const roleDefs = {
+  protagonist:{label:"主人公",  story:"物語の中心。周囲を巻き込みながら変化していく側の人物。"},
+  partner:   {label:"相棒",    story:"主役の隣に立つ人物。対等な立場から支え、時にぶつかる。"},
+  rival:     {label:"ライバル", story:"主役と同じものを目指す好敵手。敵ではないが譲らない。"},
+  villain:   {label:"敵役",    story:"主役の前に立ちはだかる人物。ただの悪ではなく、彼なりの正義がある。"},
+  traitor:   {label:"裏切り者", story:"味方の顔で近づき、物語の折り返しで立場を変える人物。"},
+  guardian:  {label:"保護者",  story:"未熟な誰かを守る立場。守り方を間違えることもある。"},
+  mentor:    {label:"導き手",  story:"主役に道を示す人物。すべてを教えるわけではない。"},
+  childhood: {label:"幼なじみ", story:"昔からの関係ゆえに、今さら言えないことを抱えている。"},
+  sibOlder:  {label:"兄・姉",  story:"年上のきょうだい枠。頼れるが、本人にも本人の物語がある。"},
+  sibYounger:{label:"弟・妹",  story:"年下のきょうだい枠。守られる側から抜け出そうとしている。"},
+  master:    {label:"師匠",    conv:{modern:"指導者・コーチ",wafu:"剣術指南役",western:"老練の導師",chinese:"武芸の師父",desert:"隊商の長老",scifi:"教官",steam:"親方"}, story:"技と生き方を教える側。弟子の成長を一番恐れ、一番望んでいる。"},
+  servant:   {label:"従者",    conv:{modern:"付き人・秘書",wafu:"小姓・供回り",western:"従者",chinese:"侍従",desert:"従者",scifi:"随行オペレーター",steam:"従僕"}, story:"主に仕える者。忠誠の理由が物語の鍵になる。"},
+  royalty:   {label:"王族",    conv:{modern:"名家の跡取り",wafu:"皇族・宮家の人間",western:"王族",chinese:"皇族",desert:"族長の血筋",scifi:"財閥の後継者",steam:"公爵家の血筋"}, story:"生まれで役割を決められた人物。血筋と自分の間で揺れる。"},
+  noble:     {label:"貴族",    conv:{modern:"上流階級の人間",wafu:"公家",western:"貴族",chinese:"貴人",desert:"名家の出",scifi:"上級市民",steam:"貴族"}, story:"体面と実利の間で立ち回る人物。"},
+  knight:    {label:"騎士",    conv:{modern:"護衛・警備員",wafu:"侍",western:"騎士",chinese:"武官",desert:"氏族の戦士",scifi:"治安部隊員",steam:"機装衛士"}, story:"誓いに縛られた戦う者。誓いと本心が食い違う日が来る。"},
+  mage:      {label:"魔法使い", conv:{modern:"奇術師・オカルト研究家",wafu:"陰陽師",western:"魔法使い",chinese:"方士",desert:"星読みの術師",scifi:"特殊技能者",steam:"錬金術師"}, story:"常人に見えないものを扱う者。力の代償を知っている。"},
+  priest:    {label:"神官",    conv:{modern:"神社・寺の関係者",wafu:"神職・巫女",western:"神官",chinese:"廟の司祭",desert:"聖地の守り手",scifi:"精神ケア士",steam:"聖堂の司祭"}, story:"祈る側の人間。信じているものと見てしまったものの間で揺れる。"},
+  researcher:{label:"研究者",  conv:{modern:"大学助教・研究員",wafu:"蘭学者",western:"賢者・学者",chinese:"翰林の学士",desert:"古文書の学者",scifi:"研究員",steam:"技師・発明家"}, story:"真実を知りたい側の人物。知ることの罪に触れていく。"},
+  doctor:    {label:"医師",    conv:{modern:"医師",wafu:"町医者",western:"治癒師",chinese:"薬師",desert:"隊商付きの医師",scifi:"医療オフィサー",steam:"外科医"}, story:"命を扱う立場。救えなかった記憶を抱えている。"},
+  police:    {label:"警察官",  conv:{modern:"警察官",wafu:"同心・目付",western:"衛兵・監察官",chinese:"捕吏",desert:"市場の警吏",scifi:"都市保安官",steam:"憲兵"}, story:"秩序の側に立つ人物。法と情の板挟みになる。"},
+  teacher:   {label:"教師",    conv:{modern:"教師",wafu:"寺子屋の師匠",western:"学院の教師",chinese:"書院の先生",desert:"学舎の導師",scifi:"アカデミー教官",steam:"家庭教師"}, story:"教える側の人物。生徒に教えられる日が来る。"},
+  bartender: {label:"バーテンダー", conv:{modern:"バーテンダー",wafu:"居酒屋の主人",western:"酒場の主人",chinese:"茶楼の主人",desert:"隊商宿の主人",scifi:"バーの店主",steam:"パブの主人"}, story:"人の話を聞く側の人物。すべての事情がその店に集まる。"},
+  attendant: {label:"使用人",  conv:{modern:"家政スタッフ",wafu:"女中・下男",western:"使用人",chinese:"下女・下男",desert:"館の使用人",scifi:"ハウスキーパー",steam:"使用人"}, story:"屋敷の内側を知る人物。見なかったことにしてきた秘密がある。"},
+  butler:    {label:"執事",    conv:{modern:"執事",wafu:"家令",western:"執事",chinese:"大管家",desert:"館の家令",scifi:"執務AI管理者",steam:"執事"}, story:"主家に人生を捧げた人物。完璧の裏に私情を隠している。"},
+  maid:      {label:"メイド",  conv:{modern:"メイド・家政婦",wafu:"奥向きの女中",western:"メイド",chinese:"侍女",desert:"侍女",scifi:"サービスクルー",steam:"メイド"}, story:"仕える側の目線から物語を見る人物。"},
+  assassin:  {label:"暗殺者",  conv:{modern:"裏社会の始末屋",wafu:"忍・刺客",western:"暗殺者",chinese:"刺客",desert:"砂の暗殺者",scifi:"掃除屋",steam:"仕立て屋と呼ばれる殺し屋"}, story:"影で刃を振るう者。殺せない相手ができたときが転機になる。"},
+  detective: {label:"探偵",    conv:{modern:"探偵",wafu:"岡っ引き",western:"調査官",chinese:"推官",desert:"市場の情報屋",scifi:"民間調査員",steam:"諮問探偵"}, story:"真相を追う人物。真相が誰かを不幸にすると知っても止まれない。"},
+  merchant:  {label:"商人",    conv:{modern:"実業家",wafu:"廻船問屋",western:"商人",chinese:"商家の主",desert:"隊商の主",scifi:"仲介ブローカー",steam:"貿易商"}, story:"損得で動くと公言しながら、損な選択をしてしまう人物。"},
+  traveler:  {label:"旅人",    conv:{modern:"バックパッカー",wafu:"旅の絵師",western:"旅人",chinese:"游侠",desert:"砂漠の旅人",scifi:"惑星間の渡り労働者",steam:"飛行船乗り"}, story:"どこにも根を張らない人物。初めて留まりたい場所ができる。"},
+  inhuman:   {label:"人外",    story:"人ならざる者。人の営みを外側から眺めてきた。"},
+  monster:   {label:"怪物",    story:"恐れられる側の存在。怪物と呼ばれる理由は姿だけではない。"},
+  divine:    {label:"神・精霊", story:"人より長い時間を生きる存在。人間のはかなさに惹かれている。"},
+  student:   {label:"学生",    conv:{modern:"学生",wafu:"藩校の生徒",western:"学院の生徒",chinese:"書院の学生",desert:"学舎の生徒",scifi:"アカデミー候補生",steam:"工科学校の生徒"}, story:"まだ何者でもない人物。選択の連続がこの先を決める。"},
+  soldier:   {label:"軍人",    conv:{modern:"自衛官・特殊部隊員",wafu:"武士・足軽頭",western:"傭兵・軍人",chinese:"将軍麾下の兵",desert:"氏族の兵",scifi:"機動部隊員",steam:"帝国軍人"}, story:"命令と良心の間に立つ人物。"}
+};
+const roleOrder = Object.keys(roleDefs).concat(["お任せ"]);
+
+/* ---- 関係性タイプ ---- */
+const relDefs = {
+  "主従":     "仕える側と仕えられる側。忠誠の理由が崩れたとき、関係の本質が試される。",
+  "師弟":     "教える者と学ぶ者。弟子が師を越える日をどう迎えるか。",
+  "幼なじみ": "積み重ねた時間が武器にも枷にもなる。今さら関係を変える一言が言えない。",
+  "敵対":     "立場上ぶつかるしかない相手。憎み切れないことが一番の問題。",
+  "共犯":     "同じ秘密を共有する二人。裏切れば共倒れ、それが絆になっている。",
+  "保護・被保護":"守る側と守られる側。守られる側がそれを望んでいるとは限らない。",
+  "依存":     "相手なしでは立てない関係。心地よさと危うさが同居する。",
+  "片想い":   "届かない想いを抱えたまま隣にいる。伝えれば関係が壊れるかもしれない。",
+  "ライバル": "同じ高みを目指す好敵手。相手の存在が自分を強くしている。",
+  "相棒":     "背中を預け合う対等な関係。言葉にしない信頼で成り立っている。",
+  "家族":     "血縁か、それに代わる絆。近すぎるゆえの遠慮のなさと厄介さがある。",
+  "契約":     "利害で結ばれた関係。契約が切れた後も隣にいるかどうかが本題。",
+  "因縁":     "過去の出来事で結ばれた腐れ縁。清算の日は近い。",
+  "救済":     "一方がもう一方を救った、あるいは救われた関係。恩と対等さの間で揺れる。",
+  "監視":     "見張る側と見張られる側。監視のはずが、目が離せなくなっている。",
+  "利用関係": "互いに利用し合っていると割り切っている。割り切れなくなった方が負け。",
+  "秘密共有": "二人だけが知っている事実がある。秘密が二人を縛り、繋いでいる。",
+  "すれ違い": "想いはあるのに言葉が噛み合わない。誤解が解ける瞬間が山場になる。",
+  "裏切り":   "一度裏切った、あるいは裏切られた関係。信頼の再構築は簡単ではない。",
+  "忠誠":     "揺るがぬ忠義で結ばれた関係。忠誠の対象が間違っていたらどうするか。",
+  "腐れ縁":   "切ろうとして切れなかった長い縁。文句を言いながら隣にいる。"
+};
+const relOrder = Object.keys(relDefs).concat(["お任せ"]);
+
+/* ============================================================
+   名前データ（ここに追記すれば自動で抽選対象になる）
+   tags は雰囲気との相性ヒント。空でもよい。
+   ============================================================ */
+const nameData = {
+
+  /* ---- 現代日本系（現代日本・学園・職業もの・現代異能で使用）---- */
+  japanese: {
+    surnames: [
+      {kanji:"佐伯",reading:"さえき",roman:"Saeki",tags:["知的"]},
+      {kanji:"氷室",reading:"ひむろ",roman:"Himuro",tags:["冷たい"]},
+      {kanji:"桐生",reading:"きりゅう",roman:"Kiryu",tags:["知的"]},
+      {kanji:"高遠",reading:"たかとお",roman:"Takato",tags:["穏やか"]},
+      {kanji:"一ノ瀬",reading:"いちのせ",roman:"Ichinose",tags:["明るい"]},
+      {kanji:"綾瀬",reading:"あやせ",roman:"Ayase",tags:["透明感"]},
+      {kanji:"東雲",reading:"しののめ",roman:"Shinonome",tags:["神秘的"]},
+      {kanji:"御影",reading:"みかげ",roman:"Mikage",tags:["高貴"]},
+      {kanji:"九条",reading:"くじょう",roman:"Kujo",tags:["高貴"]},
+      {kanji:"白瀬",reading:"しらせ",roman:"Shirase",tags:["透明感"]},
+      {kanji:"黒川",reading:"くろかわ",roman:"Kurokawa",tags:["無口"]},
+      {kanji:"藤堂",reading:"とうどう",roman:"Todo",tags:["圧がある"]},
+      {kanji:"橘",reading:"たちばな",roman:"Tachibana",tags:["真面目"]},
+      {kanji:"真壁",reading:"まかべ",roman:"Makabe",tags:["強気"]},
+      {kanji:"霧島",reading:"きりしま",roman:"Kirishima",tags:["ミステリアス"]},
+      {kanji:"遠野",reading:"とおの",roman:"Tono",tags:["穏やか"]},
+      {kanji:"有栖川",reading:"ありすがわ",roman:"Arisugawa",tags:["高貴"]},
+      {kanji:"早乙女",reading:"さおとめ",roman:"Saotome",tags:["明るい"]},
+      {kanji:"神代",reading:"かみしろ",roman:"Kamishiro",tags:["神秘的"]},
+      {kanji:"若槻",reading:"わかつき",roman:"Wakatsuki",tags:["知的"]},
+      {kanji:"芹沢",reading:"せりざわ",roman:"Serizawa",tags:["気だるい"]},
+      {kanji:"篠宮",reading:"しのみや",roman:"Shinomiya",tags:["高貴"]},
+      {kanji:"楠木",reading:"くすのき",roman:"Kusunoki",tags:["穏やか"]},
+      {kanji:"榊",reading:"さかき",roman:"Sakaki",tags:["真面目"]},
+      {kanji:"円城寺",reading:"えんじょうじ",roman:"Enjoji",tags:["圧がある"]},
+      {kanji:"深山",reading:"みやま",roman:"Miyama",tags:["無口"]},
+      {kanji:"水原",reading:"みずはら",roman:"Mizuhara",tags:["透明感"]},
+      {kanji:"春日",reading:"かすが",roman:"Kasuga",tags:["明るい"]},
+      {kanji:"夏目",reading:"なつめ",roman:"Natsume",tags:["知的"]},
+      {kanji:"秋津",reading:"あきつ",roman:"Akitsu",tags:["穏やか"]},
+      {kanji:"冬野",reading:"ふゆの",roman:"Fuyuno",tags:["冷たい"]},
+      {kanji:"柊",reading:"ひいらぎ",roman:"Hiiragi",tags:["冷たい"]},
+      {kanji:"真行寺",reading:"しんぎょうじ",roman:"Shingyoji",tags:["圧がある"]},
+      {kanji:"八雲",reading:"やくも",roman:"Yakumo",tags:["神秘的"]},
+      {kanji:"七瀬",reading:"ななせ",roman:"Nanase",tags:["明るい"]},
+      {kanji:"三枝",reading:"さえぐさ",roman:"Saegusa",tags:["知的"]},
+      {kanji:"五十嵐",reading:"いがらし",roman:"Igarashi",tags:["強気"]},
+      {kanji:"百瀬",reading:"ももせ",roman:"Momose",tags:["無邪気"]},
+      {kanji:"千早",reading:"ちはや",roman:"Chihaya",tags:["透明感"]},
+      {kanji:"久遠",reading:"くおん",roman:"Kuon",tags:["神秘的"]},
+      {kanji:"新堂",reading:"しんどう",roman:"Shindo",tags:["強気"]},
+      {kanji:"鷹村",reading:"たかむら",roman:"Takamura",tags:["強気"]},
+      {kanji:"瀬名",reading:"せな",roman:"Sena",tags:["透明感"]},
+      {kanji:"帯刀",reading:"たてわき",roman:"Tatewaki",tags:["圧がある"]},
+      {kanji:"宇佐美",reading:"うさみ",roman:"Usami",tags:["明るい"]},
+      {kanji:"栗林",reading:"くりばやし",roman:"Kuribayashi",tags:["穏やか"]},
+      {kanji:"戸叶",reading:"とかの",roman:"Tokano",tags:["影が薄い"]},
+      {kanji:"真木",reading:"まき",roman:"Maki",tags:["真面目"]},
+      {kanji:"小田切",reading:"おだぎり",roman:"Odagiri",tags:["気だるい"]},
+      {kanji:"南雲",reading:"なぐも",roman:"Nagumo",tags:["ミステリアス"]}
+    ],
+    givenNames: {
+      male: [
+        {kanji:"丞",reading:"たすく",roman:"Tasuku",tags:["知的"]},
+        {kanji:"蒼真",reading:"そうま",roman:"Soma",tags:["強気"]},
+        {kanji:"慧",reading:"けい",roman:"Kei",tags:["知的"]},
+        {kanji:"尚哉",reading:"なおや",roman:"Naoya",tags:["真面目"]},
+        {kanji:"玲司",reading:"れいじ",roman:"Reiji",tags:["冷たい"]},
+        {kanji:"悠人",reading:"ゆうと",roman:"Yuto",tags:["穏やか"]},
+        {kanji:"篤",reading:"あつし",roman:"Atsushi",tags:["真面目"]},
+        {kanji:"迅",reading:"じん",roman:"Jin",tags:["強気"]},
+        {kanji:"遼",reading:"りょう",roman:"Ryo",tags:["余裕がある"]},
+        {kanji:"圭吾",reading:"けいご",roman:"Keigo",tags:["知的"]},
+        {kanji:"直紀",reading:"なおき",roman:"Naoki",tags:["真面目"]},
+        {kanji:"匡",reading:"ただす",roman:"Tadasu",tags:["真面目"]},
+        {kanji:"燈真",reading:"とうま",roman:"Toma",tags:["明るい"]},
+        {kanji:"志貴",reading:"しき",roman:"Shiki",tags:["ミステリアス"]},
+        {kanji:"頼人",reading:"よりと",roman:"Yorito",tags:["穏やか"]},
+        {kanji:"紘",reading:"ひろ",roman:"Hiro",tags:["穏やか"]},
+        {kanji:"泰生",reading:"たいせい",roman:"Taisei",tags:["陽気"]},
+        {kanji:"修吾",reading:"しゅうご",roman:"Shugo",tags:["真面目"]},
+        {kanji:"幸人",reading:"ゆきと",roman:"Yukito",tags:["優しい"]},
+        {kanji:"雅臣",reading:"まさおみ",roman:"Masaomi",tags:["高貴"]},
+        {kanji:"恭介",reading:"きょうすけ",roman:"Kyosuke",tags:["知的"]},
+        {kanji:"澄人",reading:"すみと",roman:"Sumito",tags:["透明感"]},
+        {kanji:"皓",reading:"こう",roman:"Ko",tags:["透明感"]},
+        {kanji:"岳",reading:"がく",roman:"Gaku",tags:["無口"]},
+        {kanji:"隼人",reading:"はやと",roman:"Hayato",tags:["強気"]},
+        {kanji:"亘",reading:"わたる",roman:"Wataru",tags:["穏やか"]},
+        {kanji:"智弘",reading:"ともひろ",roman:"Tomohiro",tags:["知的"]},
+        {kanji:"玄",reading:"げん",roman:"Gen",tags:["圧がある"]},
+        {kanji:"秀爾",reading:"しゅうじ",roman:"Shuji",tags:["知的"]},
+        {kanji:"涼真",reading:"りょうま",roman:"Ryoma",tags:["余裕がある"]},
+        {kanji:"東吾",reading:"とうご",roman:"Togo",tags:["圧がある"]},
+        {kanji:"剛志",reading:"つよし",roman:"Tsuyoshi",tags:["強気"]},
+        {kanji:"文人",reading:"ふみと",roman:"Fumito",tags:["知的"]},
+        {kanji:"亮佑",reading:"りょうすけ",roman:"Ryosuke",tags:["明るい"]},
+        {kanji:"晴嗣",reading:"はるつぐ",roman:"Harutsugu",tags:["高貴"]},
+        {kanji:"要",reading:"かなめ",roman:"Kaname",tags:["ミステリアス"]},
+        {kanji:"惣一",reading:"そういち",roman:"Soichi",tags:["真面目"]},
+        {kanji:"柾樹",reading:"まさき",roman:"Masaki",tags:["穏やか"]},
+        {kanji:"暁人",reading:"あきと",roman:"Akito",tags:["強気"]},
+        {kanji:"路生",reading:"みちお",roman:"Michio",tags:["影が薄い"]}
+      ],
+      female: [
+        {kanji:"澪",reading:"みお",roman:"Mio",tags:["透明感"]},
+        {kanji:"詩織",reading:"しおり",roman:"Shiori",tags:["知的"]},
+        {kanji:"千夏",reading:"ちなつ",roman:"Chinatsu",tags:["明るい"]},
+        {kanji:"玲奈",reading:"れな",roman:"Rena",tags:["強気"]},
+        {kanji:"紬",reading:"つむぎ",roman:"Tsumugi",tags:["穏やか"]},
+        {kanji:"琴音",reading:"ことね",roman:"Kotone",tags:["透明感"]},
+        {kanji:"芽衣",reading:"めい",roman:"Mei",tags:["無邪気"]},
+        {kanji:"六花",reading:"りっか",roman:"Rikka",tags:["儚い"]},
+        {kanji:"燈子",reading:"とうこ",roman:"Toko",tags:["知的"]},
+        {kanji:"真昼",reading:"まひる",roman:"Mahiru",tags:["明るい"]},
+        {kanji:"小夜",reading:"さよ",roman:"Sayo",tags:["儚い"]},
+        {kanji:"陽菜",reading:"ひな",roman:"Hina",tags:["明るい"]},
+        {kanji:"楓花",reading:"ふうか",roman:"Fuka",tags:["穏やか"]},
+        {kanji:"心春",reading:"こはる",roman:"Koharu",tags:["無邪気"]},
+        {kanji:"百合香",reading:"ゆりか",roman:"Yurika",tags:["高貴"]},
+        {kanji:"静葉",reading:"しずは",roman:"Shizuha",tags:["穏やか"]},
+        {kanji:"千代",reading:"ちよ",roman:"Chiyo",tags:["真面目"]},
+        {kanji:"望美",reading:"のぞみ",roman:"Nozomi",tags:["明るい"]},
+        {kanji:"佳乃",reading:"よしの",roman:"Yoshino",tags:["穏やか"]},
+        {kanji:"弥生",reading:"やよい",roman:"Yayoi",tags:["透明感"]},
+        {kanji:"悠里",reading:"ゆり",roman:"Yuri",tags:["優しい"]},
+        {kanji:"沙羅",reading:"さら",roman:"Sara",tags:["高貴"]},
+        {kanji:"瑞葉",reading:"みずは",roman:"Mizuha",tags:["透明感"]},
+        {kanji:"京香",reading:"きょうか",roman:"Kyoka",tags:["知的"]},
+        {kanji:"藍",reading:"あい",roman:"Ai",tags:["無口"]},
+        {kanji:"早紀",reading:"さき",roman:"Saki",tags:["強気"]},
+        {kanji:"文乃",reading:"あやの",roman:"Ayano",tags:["知的"]},
+        {kanji:"柚葉",reading:"ゆずは",roman:"Yuzuha",tags:["明るい"]},
+        {kanji:"菫",reading:"すみれ",roman:"Sumire",tags:["儚い"]},
+        {kanji:"朱音",reading:"あかね",roman:"Akane",tags:["強気"]},
+        {kanji:"仁菜",reading:"にな",roman:"Nina",tags:["無邪気"]},
+        {kanji:"冴子",reading:"さえこ",roman:"Saeko",tags:["冷たい"]},
+        {kanji:"美空",reading:"みそら",roman:"Misora",tags:["明るい"]},
+        {kanji:"里桜",reading:"りお",roman:"Rio",tags:["無邪気"]},
+        {kanji:"波留",reading:"はる",roman:"Haru",tags:["陽気"]},
+        {kanji:"椿",reading:"つばき",roman:"Tsubaki",tags:["色気がある"]},
+        {kanji:"梨世",reading:"りせ",roman:"Rise",tags:["影が薄い"]},
+        {kanji:"郁美",reading:"いくみ",roman:"Ikumi",tags:["真面目"]},
+        {kanji:"千景",reading:"ちかげ",roman:"Chikage",tags:["ミステリアス"]},
+        {kanji:"環奈",reading:"かんな",roman:"Kanna",tags:["高貴"]}
+      ],
+      neutral: [
+        {kanji:"律",reading:"りつ",roman:"Ritsu",tags:["冷たい"]},
+        {kanji:"伊織",reading:"いおり",roman:"Iori",tags:["知的"]},
+        {kanji:"環",reading:"たまき",roman:"Tamaki",tags:["余裕がある"]},
+        {kanji:"朔",reading:"さく",roman:"Saku",tags:["無口"]},
+        {kanji:"千秋",reading:"ちあき",roman:"Chiaki",tags:["穏やか"]},
+        {kanji:"湊",reading:"みなと",roman:"Minato",tags:["明るい"]},
+        {kanji:"蒼",reading:"あおい",roman:"Aoi",tags:["透明感"]},
+        {kanji:"一葉",reading:"かずは",roman:"Kazuha",tags:["知的"]},
+        {kanji:"光",reading:"ひかる",roman:"Hikaru",tags:["明るい"]},
+        {kanji:"薫",reading:"かおる",roman:"Kaoru",tags:["色気がある"]},
+        {kanji:"忍",reading:"しのぶ",roman:"Shinobu",tags:["無口"]},
+        {kanji:"渚",reading:"なぎさ",roman:"Nagisa",tags:["穏やか"]},
+        {kanji:"睦月",reading:"むつき",roman:"Mutsuki",tags:["儚い"]},
+        {kanji:"真白",reading:"ましろ",roman:"Mashiro",tags:["透明感"]},
+        {kanji:"玲",reading:"れい",roman:"Rei",tags:["冷たい"]},
+        {kanji:"司",reading:"つかさ",roman:"Tsukasa",tags:["真面目"]},
+        {kanji:"汐",reading:"うしお",roman:"Ushio",tags:["儚い"]},
+        {kanji:"泉",reading:"いずみ",roman:"Izumi",tags:["透明感"]},
+        {kanji:"奏",reading:"かなで",roman:"Kanade",tags:["神秘的"]},
+        {kanji:"千歳",reading:"ちとせ",roman:"Chitose",tags:["穏やか"]},
+        {kanji:"真尋",reading:"まひろ",roman:"Mahiro",tags:["知的"]},
+        {kanji:"依吹",reading:"いぶき",roman:"Ibuki",tags:["強気"]},
+        {kanji:"灯",reading:"あかり",roman:"Akari",tags:["優しい"]},
+        {kanji:"十和",reading:"とわ",roman:"Towa",tags:["神秘的"]},
+        {kanji:"遥",reading:"はるか",roman:"Haruka",tags:["穏やか"]},
+        {kanji:"雪路",reading:"ゆきじ",roman:"Yukiji",tags:["儚い"]},
+        {kanji:"縁",reading:"ゆかり",roman:"Yukari",tags:["ミステリアス"]},
+        {kanji:"椋",reading:"むく",roman:"Muku",tags:["無口"]},
+        {kanji:"透",reading:"とおる",roman:"Toru",tags:["影が薄い"]},
+        {kanji:"叶多",reading:"かなた",roman:"Kanata",tags:["明るい"]}
+      ]
+    }
+  },
+
+  /* ---- 和風・和風ファンタジー ---- */
+  wafu: {
+    surnames: [
+      {kanji:"綾小路",reading:"あやのこうじ",roman:"Ayanokoji",tags:["高貴"]},
+      {kanji:"一条",reading:"いちじょう",roman:"Ichijo",tags:["高貴"]},
+      {kanji:"二階堂",reading:"にかいどう",roman:"Nikaido",tags:["圧がある"]},
+      {kanji:"西園寺",reading:"さいおんじ",roman:"Saionji",tags:["高貴"]},
+      {kanji:"花菱",reading:"はなびし",roman:"Hanabishi",tags:["色気がある"]},
+      {kanji:"鬼灯",reading:"ほおずき",roman:"Hozuki",tags:["ミステリアス"]},
+      {kanji:"天音",reading:"あまね",roman:"Amane",tags:["神秘的"]},
+      {kanji:"玉置",reading:"たまき",roman:"Tamaki",tags:["穏やか"]},
+      {kanji:"常盤",reading:"ときわ",roman:"Tokiwa",tags:["真面目"]},
+      {kanji:"篝",reading:"かがり",roman:"Kagari",tags:["神秘的"]},
+      {kanji:"時雨",reading:"しぐれ",roman:"Shigure",tags:["儚い"]},
+      {kanji:"白妙",reading:"しろたえ",roman:"Shirotae",tags:["透明感"]},
+      {kanji:"久我",reading:"こが",roman:"Koga",tags:["高貴"]},
+      {kanji:"朧",reading:"おぼろ",roman:"Oboro",tags:["ミステリアス"]},
+      {kanji:"葛葉",reading:"くずのは",roman:"Kuzunoha",tags:["神秘的"]},
+      {kanji:"伏見",reading:"ふしみ",roman:"Fushimi",tags:["知的"]},
+      {kanji:"桜庭",reading:"さくらば",roman:"Sakuraba",tags:["明るい"]},
+      {kanji:"弓削",reading:"ゆげ",roman:"Yuge",tags:["無口"]},
+      {kanji:"犬飼",reading:"いぬかい",roman:"Inukai",tags:["忠実"]},
+      {kanji:"鵜飼",reading:"うかい",roman:"Ukai",tags:["気だるい"]},
+      {kanji:"巴",reading:"ともえ",roman:"Tomoe",tags:["強気"]},
+      {kanji:"綺堂",reading:"きどう",roman:"Kido",tags:["知的"]},
+      {kanji:"陰山",reading:"かげやま",roman:"Kageyama",tags:["闇がある"]},
+      {kanji:"大鳥",reading:"おおとり",roman:"Otori",tags:["圧がある"]},
+      {kanji:"御門",reading:"みかど",roman:"Mikado",tags:["高貴"]},
+      {kanji:"錦",reading:"にしき",roman:"Nishiki",tags:["色気がある"]},
+      {kanji:"縹",reading:"はなだ",roman:"Hanada",tags:["透明感"]},
+      {kanji:"椿宮",reading:"つばきみや",roman:"Tsubakimiya",tags:["高貴"]},
+      {kanji:"立花",reading:"たちばな",roman:"Tachibana",tags:["真面目"]},
+      {kanji:"忌部",reading:"いんべ",roman:"Inbe",tags:["神秘的"]}
+    ],
+    givenNames: {
+      male: [
+        {kanji:"隼之介",reading:"はやのすけ",roman:"Hayanosuke",tags:["強気"]},
+        {kanji:"右京",reading:"うきょう",roman:"Ukyo",tags:["知的"]},
+        {kanji:"左近",reading:"さこん",roman:"Sakon",tags:["圧がある"]},
+        {kanji:"尚之",reading:"なおゆき",roman:"Naoyuki",tags:["真面目"]},
+        {kanji:"兵吾",reading:"ひょうご",roman:"Hyogo",tags:["陽気"]},
+        {kanji:"燕次",reading:"えんじ",roman:"Enji",tags:["生意気"]},
+        {kanji:"佐吉",reading:"さきち",roman:"Sakichi",tags:["明るい"]},
+        {kanji:"甚八",reading:"じんぱち",roman:"Jinpachi",tags:["余裕がある"]},
+        {kanji:"玄哉",reading:"げんや",roman:"Genya",tags:["無口"]},
+        {kanji:"宗玄",reading:"そうげん",roman:"Sogen",tags:["神秘的"]},
+        {kanji:"雪嗣",reading:"ゆきつぐ",roman:"Yukitsugu",tags:["冷たい"]},
+        {kanji:"千早丸",reading:"ちはやまる",roman:"Chihayamaru",tags:["無邪気"]},
+        {kanji:"影正",reading:"かげまさ",roman:"Kagemasa",tags:["忠実"]},
+        {kanji:"時貞",reading:"ときさだ",roman:"Tokisada",tags:["高貴"]},
+        {kanji:"伊武樹",reading:"いぶき",roman:"Ibuki",tags:["強気"]},
+        {kanji:"清嗣",reading:"きよつぐ",roman:"Kiyotsugu",tags:["透明感"]},
+        {kanji:"鷹嶺",reading:"たかね",roman:"Takane",tags:["圧がある"]},
+        {kanji:"竜臣",reading:"たつおみ",roman:"Tatsuomi",tags:["強気"]},
+        {kanji:"周防",reading:"すおう",roman:"Suo",tags:["余裕がある"]},
+        {kanji:"要人",reading:"かなめ",roman:"Kaname",tags:["知的"]}
+      ],
+      female: [
+        {kanji:"小雪",reading:"こゆき",roman:"Koyuki",tags:["儚い"]},
+        {kanji:"綾乃",reading:"あやの",roman:"Ayano",tags:["高貴"]},
+        {kanji:"千鶴",reading:"ちづる",roman:"Chizuru",tags:["穏やか"]},
+        {kanji:"楓",reading:"かえで",roman:"Kaede",tags:["強気"]},
+        {kanji:"撫子",reading:"なでしこ",roman:"Nadeshiko",tags:["透明感"]},
+        {kanji:"白露",reading:"しらつゆ",roman:"Shiratsuyu",tags:["儚い"]},
+        {kanji:"桔梗",reading:"ききょう",roman:"Kikyo",tags:["知的"]},
+        {kanji:"紅葉",reading:"くれは",roman:"Kureha",tags:["色気がある"]},
+        {kanji:"澄乃",reading:"すみの",roman:"Sumino",tags:["透明感"]},
+        {kanji:"八重",reading:"やえ",roman:"Yae",tags:["真面目"]},
+        {kanji:"玉緒",reading:"たまお",roman:"Tamao",tags:["優しい"]},
+        {kanji:"篠",reading:"しの",roman:"Shino",tags:["無口"]},
+        {kanji:"琴乃",reading:"ことの",roman:"Kotono",tags:["穏やか"]},
+        {kanji:"糸",reading:"いと",roman:"Ito",tags:["影が薄い"]},
+        {kanji:"千代乃",reading:"ちよの",roman:"Chiyono",tags:["高貴"]},
+        {kanji:"朝霧",reading:"あさぎり",roman:"Asagiri",tags:["神秘的"]},
+        {kanji:"文",reading:"ふみ",roman:"Fumi",tags:["知的"]},
+        {kanji:"茜音",reading:"あかね",roman:"Akane",tags:["明るい"]}
+      ],
+      neutral: [
+        {kanji:"霞",reading:"かすみ",roman:"Kasumi",tags:["神秘的"]},
+        {kanji:"雫",reading:"しずく",roman:"Shizuku",tags:["透明感"]},
+        {kanji:"宵",reading:"よい",roman:"Yoi",tags:["色気がある"]},
+        {kanji:"暁",reading:"あかつき",roman:"Akatsuki",tags:["強気"]},
+        {kanji:"琥珀",reading:"こはく",roman:"Kohaku",tags:["神秘的"]},
+        {kanji:"竜胆",reading:"りんどう",roman:"Rindo",tags:["冷たい"]},
+        {kanji:"水琴",reading:"みこと",roman:"Mikoto",tags:["高貴"]},
+        {kanji:"真葛",reading:"まくず",roman:"Makuzu",tags:["ミステリアス"]},
+        {kanji:"玻璃",reading:"はり",roman:"Hari",tags:["儚い"]},
+        {kanji:"榛",reading:"はしばみ",roman:"Hashibami",tags:["穏やか"]},
+        {kanji:"燈",reading:"ともり",roman:"Tomori",tags:["優しい"]},
+        {kanji:"椋鳥",reading:"むくどり",roman:"Mukudori",tags:["陽気"]}
+      ]
+    }
+  },
+
+  /* ---- 西洋ファンタジー・王侯貴族・ダーク・スチーム・人外 ----
+     g: "m"=男性寄り "f"=女性寄り "n"=中性 */
+  western: {
+    givenNames: [
+      {kana:"エリアス",roman:"Elias",g:"m",tags:["高貴","知的"]},
+      {kana:"ルシアン",roman:"Lucian",g:"m",tags:["色気がある"]},
+      {kana:"セオドア",roman:"Theodore",g:"m",tags:["穏やか"]},
+      {kana:"アルドリック",roman:"Aldric",g:"m",tags:["圧がある"]},
+      {kana:"カジミール",roman:"Casimir",g:"m",tags:["ミステリアス"]},
+      {kana:"ギデオン",roman:"Gideon",g:"m",tags:["真面目"]},
+      {kana:"フェリクス",roman:"Felix",g:"m",tags:["陽気"]},
+      {kana:"エドガー",roman:"Edgar",g:"m",tags:["知的"]},
+      {kana:"ユリウス",roman:"Julius",g:"m",tags:["高貴"]},
+      {kana:"コンラート",roman:"Conrad",g:"m",tags:["無口"]},
+      {kana:"シルヴァン",roman:"Sylvain",g:"m",tags:["気だるい"]},
+      {kana:"レアンドル",roman:"Leandre",g:"m",tags:["色気がある"]},
+      {kana:"バジル",roman:"Basil",g:"m",tags:["穏やか"]},
+      {kana:"アラリック",roman:"Alaric",g:"m",tags:["強気"]},
+      {kana:"ドリアン",roman:"Dorian",g:"m",tags:["危うい"]},
+      {kana:"パーシヴァル",roman:"Percival",g:"m",tags:["真面目"]},
+      {kana:"トリスタン",roman:"Tristan",g:"m",tags:["闇がある"]},
+      {kana:"ヴェルナー",roman:"Werner",g:"m",tags:["知的"]},
+      {kana:"クラウス",roman:"Klaus",g:"m",tags:["冷たい"]},
+      {kana:"マイロ",roman:"Milo",g:"m",tags:["無邪気"]},
+      {kana:"オズリック",roman:"Osric",g:"m",tags:["ミステリアス"]},
+      {kana:"ルナール",roman:"Renard",g:"m",tags:["余裕がある"]},
+      {kana:"アンセル",roman:"Ansel",g:"m",tags:["優しい"]},
+      {kana:"エヴラール",roman:"Everard",g:"m",tags:["高貴"]},
+      {kana:"ダミアン",roman:"Damian",g:"m",tags:["危うい"]},
+      {kana:"ラウル",roman:"Raoul",g:"m",tags:["強気"]},
+      {kana:"リリアーヌ",roman:"Liliane",g:"f",tags:["高貴"]},
+      {kana:"ヴィヴィアン",roman:"Vivienne",g:"f",tags:["色気がある"]},
+      {kana:"ロザリンド",roman:"Rosalind",g:"f",tags:["知的"]},
+      {kana:"イゾルデ",roman:"Isolde",g:"f",tags:["儚い"]},
+      {kana:"セラフィーヌ",roman:"Seraphine",g:"f",tags:["神秘的"]},
+      {kana:"オデット",roman:"Odette",g:"f",tags:["透明感"]},
+      {kana:"マルゴー",roman:"Margaux",g:"f",tags:["強気"]},
+      {kana:"エステル",roman:"Estelle",g:"f",tags:["明るい"]},
+      {kana:"アマリア",roman:"Amalia",g:"f",tags:["穏やか"]},
+      {kana:"コーデリア",roman:"Cordelia",g:"f",tags:["高貴"]},
+      {kana:"ベアトリクス",roman:"Beatrix",g:"f",tags:["真面目"]},
+      {kana:"グウェン",roman:"Gwen",g:"f",tags:["陽気"]},
+      {kana:"ヘレナ",roman:"Helena",g:"f",tags:["知的"]},
+      {kana:"イヴェット",roman:"Yvette",g:"f",tags:["生意気"]},
+      {kana:"アデリーヌ",roman:"Adeline",g:"f",tags:["優しい"]},
+      {kana:"ミリエル",roman:"Miriel",g:"f",tags:["儚い"]},
+      {kana:"カサンドラ",roman:"Cassandra",g:"f",tags:["ミステリアス"]},
+      {kana:"エロウェン",roman:"Elowen",g:"f",tags:["神秘的"]},
+      {kana:"ロミルダ",roman:"Romilda",g:"f",tags:["圧がある"]},
+      {kana:"フィオナ",roman:"Fiona",g:"f",tags:["強気"]},
+      {kana:"ユディト",roman:"Judith",g:"f",tags:["冷たい"]},
+      {kana:"クレマンス",roman:"Clemence",g:"f",tags:["穏やか"]},
+      {kana:"ノア",roman:"Noah",g:"n",tags:["神秘的","透明感"]},
+      {kana:"サーシャ",roman:"Sasha",g:"n",tags:["明るい"]},
+      {kana:"ロビン",roman:"Robin",g:"n",tags:["陽気"]},
+      {kana:"モルガン",roman:"Morgan",g:"n",tags:["ミステリアス"]},
+      {kana:"クイン",roman:"Quinn",g:"n",tags:["生意気"]},
+      {kana:"アイリス",roman:"Iris",g:"n",tags:["透明感"]},
+      {kana:"アッシュ",roman:"Ash",g:"n",tags:["冷たい"]},
+      {kana:"リオル",roman:"Lior",g:"n",tags:["神秘的"]},
+      {kana:"エデン",roman:"Eden",g:"n",tags:["儚い"]},
+      {kana:"ソル",roman:"Sol",g:"n",tags:["明るい"]},
+      {kana:"ルー",roman:"Lou",g:"n",tags:["気だるい"]},
+      {kana:"シエル",roman:"Ciel",g:"n",tags:["高貴"]},
+      {kana:"ニカ",roman:"Nika",g:"n",tags:["無邪気"]},
+      {kana:"レン",roman:"Wren",g:"n",tags:["影が薄い"]}
+    ],
+    familyNames: [
+      {kana:"アルデブランド",roman:"Aldebrand",tags:["古風"]},
+      {kana:"ヴァレモント",roman:"Valemont",tags:["高貴"]},
+      {kana:"アシュクロフト",roman:"Ashcroft",tags:["知的"]},
+      {kana:"ブラックウッド",roman:"Blackwood",tags:["闇がある"]},
+      {kana:"ハートレー",roman:"Hartley",tags:["穏やか"]},
+      {kana:"フォークナー",roman:"Falkner",tags:["真面目"]},
+      {kana:"メリウェザー",roman:"Merriweather",tags:["陽気"]},
+      {kana:"コーヴェル",roman:"Corvell",tags:["冷たい"]},
+      {kana:"グレイソン",roman:"Greyson",tags:["無口"]},
+      {kana:"ハロウェイ",roman:"Halloway",tags:["ミステリアス"]},
+      {kana:"マーロウ",roman:"Marlowe",tags:["気だるい"]},
+      {kana:"レッドファーン",roman:"Redfern",tags:["強気"]},
+      {kana:"エヴァーハート",roman:"Everhart",tags:["優しい"]},
+      {kana:"コールドウェル",roman:"Caldwell",tags:["知的"]},
+      {kana:"フォンテーヌ",roman:"Fontaine",tags:["色気がある"]},
+      {kana:"ボーモン",roman:"Beaumont",tags:["高貴"]},
+      {kana:"キングスレー",roman:"Kingsley",tags:["圧がある"]},
+      {kana:"レイヴンショー",roman:"Ravenshaw",tags:["闇がある"]},
+      {kana:"ウィンターボーン",roman:"Winterbourne",tags:["冷たい"]},
+      {kana:"ソーンリー",roman:"Thornley",tags:["危うい"]},
+      {kana:"オルブライト",roman:"Albright",tags:["明るい"]},
+      {kana:"ペンハリガン",roman:"Penhaligan",tags:["古風"]},
+      {kana:"ダンヴァース",roman:"Danvers",tags:["真面目"]},
+      {kana:"ロックハート",roman:"Lockhart",tags:["余裕がある"]},
+      {kana:"ヘイルシャム",roman:"Hailsham",tags:["影が薄い"]},
+      {kana:"ウルフレイク",roman:"Wolflake",tags:["圧がある"]},
+      {kana:"ギャレット",roman:"Garrett",tags:["陽気"]},
+      {kana:"モスグローヴ",roman:"Mossgrove",tags:["穏やか"]},
+      {kana:"ファロン",roman:"Fallon",tags:["強気"]},
+      {kana:"リヴィングストン",roman:"Livingston",tags:["知的"]},
+      {kana:"クレイヴン",roman:"Craven",tags:["闇がある"]},
+      {kana:"サマーフィールド",roman:"Summerfield",tags:["明るい"]},
+      {kana:"ノースゲート",roman:"Northgate",tags:["真面目"]},
+      {kana:"ヴェイル",roman:"Vale",tags:["ミステリアス"]},
+      {kana:"オークデン",roman:"Oakden",tags:["無口"]},
+      {kana:"ラングレー",roman:"Langley",tags:["知的"]},
+      {kana:"ウェストブルック",roman:"Westbrook",tags:["穏やか"]},
+      {kana:"ハーグリーヴス",roman:"Hargreaves",tags:["古風"]},
+      {kana:"ドレイクフォード",roman:"Drakeford",tags:["圧がある"]},
+      {kana:"リンドール",roman:"Lindall",tags:["透明感"]}
+    ],
+    nobleNames: [
+      {kana:"アルデンベルク",roman:"Aldenberg",tags:["高貴"]},
+      {kana:"ヴァルクール",roman:"Valcourt",tags:["高貴"]},
+      {kana:"ローテンフェルト",roman:"Rothenfeld",tags:["圧がある"]},
+      {kana:"モンクレア",roman:"Montclair",tags:["色気がある"]},
+      {kana:"エーレンフェルト",roman:"Ehrenfeld",tags:["真面目"]},
+      {kana:"ヴェルレーヌ",roman:"Verlaine",tags:["儚い"]},
+      {kana:"オルレンシア",roman:"Orlensia",tags:["神秘的"]},
+      {kana:"グランフォルテ",roman:"Granforte",tags:["圧がある"]},
+      {kana:"リシュフォール",roman:"Richefort",tags:["余裕がある"]},
+      {kana:"ゼーヴァルト",roman:"Seewald",tags:["冷たい"]},
+      {kana:"カステルローネ",roman:"Castellone",tags:["高貴"]},
+      {kana:"ブランシェフォール",roman:"Blanchefort",tags:["透明感"]},
+      {kana:"アイゼングラーツ",roman:"Eisengratz",tags:["圧がある"]},
+      {kana:"フィオラヴェンテ",roman:"Fioravente",tags:["色気がある"]},
+      {kana:"ノルデンハイム",roman:"Nordenheim",tags:["冷たい"]},
+      {kana:"サンリオール",roman:"Sanriole",tags:["優しい"]},
+      {kana:"ヴェスパリア",roman:"Vesparia",tags:["ミステリアス"]},
+      {kana:"ロズヴェルデ",roman:"Rosverde",tags:["高貴"]},
+      {kana:"アルバフィカ",roman:"Albafica",tags:["儚い"]},
+      {kana:"クロンヴァルト",roman:"Kronwald",tags:["古風"]}
+    ]
+  },
+
+  /* ---- 中華・東洋風 ---- */
+  chinese: {
+    surnames: [
+      {kanji:"李",reading:"リー",roman:"Li"},{kanji:"王",reading:"ワン",roman:"Wang"},
+      {kanji:"張",reading:"チャン",roman:"Zhang"},{kanji:"陳",reading:"チェン",roman:"Chen"},
+      {kanji:"楊",reading:"ヤン",roman:"Yang"},{kanji:"趙",reading:"ヂャオ",roman:"Zhao"},
+      {kanji:"周",reading:"ヂョウ",roman:"Zhou"},{kanji:"呉",reading:"ウー",roman:"Wu"},
+      {kanji:"徐",reading:"シュー",roman:"Xu"},{kanji:"沈",reading:"シェン",roman:"Shen"},
+      {kanji:"韓",reading:"ハン",roman:"Han"},{kanji:"秦",reading:"チン",roman:"Qin"},
+      {kanji:"白",reading:"バイ",roman:"Bai"},{kanji:"藍",reading:"ラン",roman:"Lan"},
+      {kanji:"蘇",reading:"スー",roman:"Su"},{kanji:"顧",reading:"グー",roman:"Gu"},
+      {kanji:"江",reading:"ジャン",roman:"Jiang"},{kanji:"温",reading:"ウェン",roman:"Wen"},
+      {kanji:"霍",reading:"フオ",roman:"Huo"},{kanji:"慕容",reading:"ムーロン",roman:"Murong"},
+      {kanji:"司馬",reading:"スーマー",roman:"Sima"},{kanji:"欧陽",reading:"オウヤン",roman:"Ouyang"},
+      {kanji:"上官",reading:"シャングァン",roman:"Shangguan"},{kanji:"夏",reading:"シア",roman:"Xia"},
+      {kanji:"雲",reading:"ユン",roman:"Yun"},{kanji:"花",reading:"ホワ",roman:"Hua"},
+      {kanji:"燕",reading:"イェン",roman:"Yan"},{kanji:"柳",reading:"リウ",roman:"Liu"},
+      {kanji:"賀",reading:"ホー",roman:"He"},{kanji:"段",reading:"ドゥアン",roman:"Duan"}
+    ],
+    givenNames: {
+      male: [
+        {kanji:"明軒",reading:"ミンシュエン",roman:"Mingxuan",tags:["知的"]},
+        {kanji:"子墨",reading:"ズーモー",roman:"Zimo",tags:["知的"]},
+        {kanji:"雲嵐",reading:"ユンラン",roman:"Yunlan",tags:["余裕がある"]},
+        {kanji:"少卿",reading:"シャオチン",roman:"Shaoqing",tags:["高貴"]},
+        {kanji:"敬亭",reading:"ジンティン",roman:"Jingting",tags:["真面目"]},
+        {kanji:"凌霄",reading:"リンシャオ",roman:"Lingxiao",tags:["強気"]},
+        {kanji:"慕言",reading:"ムーイェン",roman:"Muyan",tags:["無口"]},
+        {kanji:"硯之",reading:"イェンヂー",roman:"Yanzhi",tags:["知的"]},
+        {kanji:"泊遠",reading:"ボーユエン",roman:"Boyuan",tags:["穏やか"]},
+        {kanji:"景行",reading:"ジンシン",roman:"Jingxing",tags:["高貴"]},
+        {kanji:"暁風",reading:"シャオフォン",roman:"Xiaofeng",tags:["気だるい"]},
+        {kanji:"承徽",reading:"チョンフイ",roman:"Chenghui",tags:["忠実"]},
+        {kanji:"鶴鳴",reading:"ホーミン",roman:"Heming",tags:["神秘的"]},
+        {kanji:"翊安",reading:"イーアン",roman:"Yian",tags:["優しい"]},
+        {kanji:"寒山",reading:"ハンシャン",roman:"Hanshan",tags:["冷たい"]},
+        {kanji:"烈",reading:"リエ",roman:"Lie",tags:["強気"]},
+        {kanji:"青玄",reading:"チンシュエン",roman:"Qingxuan",tags:["ミステリアス"]},
+        {kanji:"文昭",reading:"ウェンヂャオ",roman:"Wenzhao",tags:["知的"]}
+      ],
+      female: [
+        {kanji:"玉蘭",reading:"ユーラン",roman:"Yulan",tags:["高貴"]},
+        {kanji:"紫鳶",reading:"ズーユエン",roman:"Ziyuan",tags:["ミステリアス"]},
+        {kanji:"明珠",reading:"ミンヂュー",roman:"Mingzhu",tags:["明るい"]},
+        {kanji:"春燕",reading:"チュンイェン",roman:"Chunyan",tags:["陽気"]},
+        {kanji:"雪琴",reading:"シュエチン",roman:"Xueqin",tags:["透明感"]},
+        {kanji:"婉清",reading:"ワンチン",roman:"Wanqing",tags:["穏やか"]},
+        {kanji:"若薇",reading:"ルオウェイ",roman:"Ruowei",tags:["儚い"]},
+        {kanji:"麗華",reading:"リーホワ",roman:"Lihua",tags:["色気がある"]},
+        {kanji:"小蝶",reading:"シャオディエ",roman:"Xiaodie",tags:["無邪気"]},
+        {kanji:"静姝",reading:"ジンシュー",roman:"Jingshu",tags:["高貴"]},
+        {kanji:"芳菲",reading:"ファンフェイ",roman:"Fangfei",tags:["明るい"]},
+        {kanji:"月娥",reading:"ユエオー",roman:"Yue'e",tags:["神秘的"]},
+        {kanji:"錦繍",reading:"ジンシウ",roman:"Jinxiu",tags:["強気"]},
+        {kanji:"疏影",reading:"シューイン",roman:"Shuying",tags:["影が薄い"]},
+        {kanji:"晩晴",reading:"ワンチン",roman:"Wanqing",tags:["穏やか"]},
+        {kanji:"青黛",reading:"チンダイ",roman:"Qingdai",tags:["冷たい"]},
+        {kanji:"霊犀",reading:"リンシー",roman:"Lingxi",tags:["知的"]},
+        {kanji:"素心",reading:"スーシン",roman:"Suxin",tags:["透明感"]}
+      ],
+      neutral: [
+        {kanji:"清風",reading:"チンフォン",roman:"Qingfeng",tags:["穏やか"]},
+        {kanji:"聞笛",reading:"ウェンディー",roman:"Wendi",tags:["神秘的"]},
+        {kanji:"望舒",reading:"ワンシュー",roman:"Wangshu",tags:["儚い"]},
+        {kanji:"懐瑾",reading:"ホワイジン",roman:"Huaijin",tags:["高貴"]},
+        {kanji:"知秋",reading:"ヂーチウ",roman:"Zhiqiu",tags:["知的"]},
+        {kanji:"星河",reading:"シンホー",roman:"Xinghe",tags:["神秘的"]},
+        {kanji:"聴雨",reading:"ティンユー",roman:"Tingyu",tags:["無口"]},
+        {kanji:"問渠",reading:"ウェンチュー",roman:"Wenqu",tags:["ミステリアス"]},
+        {kanji:"泠音",reading:"リンイン",roman:"Lingyin",tags:["透明感"]},
+        {kanji:"归鴻",reading:"グイホン",roman:"Guihong",tags:["孤独"]},
+        {kanji:"雲起",reading:"ユンチー",roman:"Yunqi",tags:["余裕がある"]},
+        {kanji:"抱朴",reading:"バオプー",roman:"Baopu",tags:["真面目"]},
+        {kanji:"疏桐",reading:"シュートン",roman:"Shutong",tags:["孤独"]},
+        {kanji:"暮雪",reading:"ムーシュエ",roman:"Muxue",tags:["儚い"]}
+      ]
+    }
+  },
+
+  /* ---- 砂漠幻想風 ---- */
+  desert: {
+    givenNames: [
+      {kana:"ラシード",roman:"Rashid",g:"m",tags:["高貴"]},
+      {kana:"カリーム",roman:"Karim",g:"m",tags:["優しい"]},
+      {kana:"ザイード",roman:"Zayed",g:"m",tags:["強気"]},
+      {kana:"タリク",roman:"Tariq",g:"m",tags:["余裕がある"]},
+      {kana:"サミール",roman:"Samir",g:"m",tags:["陽気"]},
+      {kana:"ナディム",roman:"Nadim",g:"m",tags:["穏やか"]},
+      {kana:"イドリース",roman:"Idris",g:"m",tags:["知的"]},
+      {kana:"ハキーム",roman:"Hakim",g:"m",tags:["知的"]},
+      {kana:"アズハル",roman:"Azhar",g:"m",tags:["透明感"]},
+      {kana:"ラフィク",roman:"Rafiq",g:"m",tags:["忠実"]},
+      {kana:"マリク",roman:"Malik",g:"m",tags:["圧がある"]},
+      {kana:"ユースフ",roman:"Yusuf",g:"m",tags:["優しい"]},
+      {kana:"オマール",roman:"Omar",g:"m",tags:["強気"]},
+      {kana:"バシル",roman:"Bashir",g:"m",tags:["明るい"]},
+      {kana:"サレム",roman:"Salem",g:"m",tags:["無口"]},
+      {kana:"ナジーブ",roman:"Najib",g:"m",tags:["高貴"]},
+      {kana:"ジブリール",roman:"Jibril",g:"m",tags:["神秘的"]},
+      {kana:"ムラード",roman:"Murad",g:"m",tags:["闇がある"]},
+      {kana:"ライラ",roman:"Laila",g:"f",tags:["色気がある"]},
+      {kana:"ヤスミン",roman:"Yasmin",g:"f",tags:["明るい"]},
+      {kana:"ザーラ",roman:"Zahra",g:"f",tags:["高貴"]},
+      {kana:"アミラ",roman:"Amira",g:"f",tags:["高貴"]},
+      {kana:"ナディア",roman:"Nadia",g:"f",tags:["知的"]},
+      {kana:"サフィヤ",roman:"Safiya",g:"f",tags:["透明感"]},
+      {kana:"ファリダ",roman:"Farida",g:"f",tags:["強気"]},
+      {kana:"ハディル",roman:"Hadeel",g:"f",tags:["穏やか"]},
+      {kana:"サミラ",roman:"Samira",g:"f",tags:["陽気"]},
+      {kana:"アイシャ",roman:"Aisha",g:"f",tags:["無邪気"]},
+      {kana:"ナイマ",roman:"Naima",g:"f",tags:["優しい"]},
+      {kana:"ジャミラ",roman:"Jamila",g:"f",tags:["色気がある"]},
+      {kana:"セリマ",roman:"Selima",g:"f",tags:["儚い"]},
+      {kana:"ズライカ",roman:"Zulaikha",g:"f",tags:["ミステリアス"]},
+      {kana:"マイサ",roman:"Maysa",g:"f",tags:["余裕がある"]},
+      {kana:"ラナ",roman:"Rana",g:"f",tags:["生意気"]},
+      {kana:"バディーア",roman:"Badia",g:"f",tags:["神秘的"]},
+      {kana:"フーリヤ",roman:"Huriya",g:"f",tags:["強気"]},
+      {kana:"ノール",roman:"Noor",g:"n",tags:["透明感"]},
+      {kana:"アマル",roman:"Amal",g:"n",tags:["優しい"]},
+      {kana:"イマーン",roman:"Iman",g:"n",tags:["真面目"]},
+      {kana:"サバ",roman:"Saba",g:"n",tags:["穏やか"]},
+      {kana:"シャムス",roman:"Shams",g:"n",tags:["明るい"]},
+      {kana:"ハヤート",roman:"Hayat",g:"n",tags:["神秘的"]},
+      {kana:"ジハーン",roman:"Jihan",g:"n",tags:["知的"]},
+      {kana:"ナシーム",roman:"Naseem",g:"n",tags:["気だるい"]},
+      {kana:"ディヤー",roman:"Diya",g:"n",tags:["儚い"]},
+      {kana:"サラーブ",roman:"Sarab",g:"n",tags:["ミステリアス"]},
+      {kana:"リハーン",roman:"Rihan",g:"n",tags:["影が薄い"]},
+      {kana:"ワルド",roman:"Ward",g:"n",tags:["無口"]},
+      {kana:"バハル",roman:"Bahar",g:"n",tags:["陽気"]},
+      {kana:"カマル",roman:"Kamal",g:"n",tags:["高貴"]}
+    ],
+    familyNames: [
+      {kana:"アル＝サーリム",roman:"al-Salim"},{kana:"アル＝ファラー",roman:"al-Farah"},
+      {kana:"アル＝ハキーム",roman:"al-Hakim"},{kana:"アル＝ヌール",roman:"al-Nur"},
+      {kana:"アル＝バドル",roman:"al-Badr"},{kana:"アル＝サイフ",roman:"al-Sayf"},
+      {kana:"アル＝アズラク",roman:"al-Azraq"},{kana:"アル＝カマル",roman:"al-Qamar"},
+      {kana:"アル＝リヤーフ",roman:"al-Riyah"},{kana:"アル＝ワーハ",roman:"al-Waha"},
+      {kana:"イブン・ハリド",roman:"ibn Khalid"},{kana:"イブン・ラシード",roman:"ibn Rashid"},
+      {kana:"イブン・ヌール",roman:"ibn Nur"},{kana:"イブン・サーリフ",roman:"ibn Salih"},
+      {kana:"イブン・ザイダーン",roman:"ibn Zaydan"},{kana:"バヌー・シャムス",roman:"Banu Shams"},
+      {kana:"バヌー・リヤーフ",roman:"Banu Riyah"},{kana:"バヌー・サハル",roman:"Banu Sahar"},
+      {kana:"バヌー・ナジュム",roman:"Banu Najm"},{kana:"バヌー・カスィーム",roman:"Banu Qasim"},
+      {kana:"ザフラーン",roman:"Zahran"},{kana:"ハムダーン",roman:"Hamdan"},
+      {kana:"タイイブ",roman:"Tayyib"},{kana:"マフルーフ",roman:"Makhluf"},
+      {kana:"サアダーン",roman:"Saadan"},{kana:"ヌサイル",roman:"Nusayr"},
+      {kana:"ハッダード",roman:"Haddad"},{kana:"ファイルーズ",roman:"Fairuz"},
+      {kana:"シャラフ",roman:"Sharaf"},{kana:"ミスバーフ",roman:"Misbah"}
+    ]
+  },
+
+  /* ---- 近未来・SF・サイバーパンク ---- */
+  scifi: {
+    givenNames: [
+      {kana:"カイ",roman:"Kai",g:"m"},{kana:"テオ",roman:"Theo",g:"m"},
+      {kana:"ルカ",roman:"Luca",g:"m"},{kana:"ゼン",roman:"Zen",g:"m"},
+      {kana:"リオ",roman:"Rio",g:"m"},{kana:"シリル",roman:"Cyril",g:"m"},
+      {kana:"ダンテ",roman:"Dante",g:"m"},{kana:"イーサン",roman:"Ethan",g:"m"},
+      {kana:"ノエ",roman:"Noe",g:"m"},{kana:"ヴィクター",roman:"Victor",g:"m"},
+      {kana:"アクセル",roman:"Axel",g:"m"},{kana:"ジュード",roman:"Jude",g:"m"},
+      {kana:"ミラ",roman:"Mira",g:"f"},{kana:"ジュノ",roman:"Juno",g:"f"},
+      {kana:"イヴ",roman:"Eve",g:"f"},{kana:"アイラ",roman:"Aira",g:"f"},
+      {kana:"ニナ",roman:"Nina",g:"f"},{kana:"セレナ",roman:"Serena",g:"f"},
+      {kana:"ルナ",roman:"Luna",g:"f"},{kana:"ヴェラ",roman:"Vera",g:"f"},
+      {kana:"リゼル",roman:"Liesel",g:"f"},{kana:"ナオミ",roman:"Naomi",g:"f"},
+      {kana:"サナ",roman:"Sana",g:"f"},{kana:"エリカ",roman:"Erika",g:"f"},
+      {kana:"レイ",roman:"Ray",g:"n"},{kana:"シオン",roman:"Sion",g:"n"},
+      {kana:"ユナ",roman:"Yuna",g:"n"},{kana:"アオ",roman:"Ao",g:"n"},
+      {kana:"キリ",roman:"Kiri",g:"n"},{kana:"ハル",roman:"Hal",g:"n"}
+    ],
+    codenames: [
+      {kana:"ヴェスパー",roman:"Vesper"},{kana:"ハルシオン",roman:"Halcyon"},
+      {kana:"レイス",roman:"Wraith"},{kana:"ノマド",roman:"Nomad"},
+      {kana:"スペクター",roman:"Specter"},{kana:"オーロラ",roman:"Aurora"},
+      {kana:"クエーサー",roman:"Quasar"},{kana:"ベクター",roman:"Vector"},
+      {kana:"オニキス",roman:"Onyx"},{kana:"ミラージュ",roman:"Mirage"},
+      {kana:"テンペスト",roman:"Tempest"},{kana:"ゼファー",roman:"Zephyr"},
+      {kana:"ケストレル",roman:"Kestrel"},{kana:"リンクス",roman:"Lynx"},
+      {kana:"レイヴン",roman:"Raven"},{kana:"イオン",roman:"Ion"},
+      {kana:"ヘリックス",roman:"Helix"},{kana:"ノヴァ",roman:"Nova"},
+      {kana:"パルス",roman:"Pulse"},{kana:"ドリフト",roman:"Drift"},
+      {kana:"エンバー",roman:"Ember"},{kana:"フロスト",roman:"Frost"},
+      {kana:"スタティック",roman:"Static"},{kana:"エコー",roman:"Echo"},
+      {kana:"サイファー",roman:"Cipher"},{kana:"ルーク",roman:"Rook"},
+      {kana:"ヴァイパー",roman:"Viper"},{kana:"ブリッツ",roman:"Blitz"},
+      {kana:"コメット",roman:"Comet"},{kana:"アルゴス",roman:"Argos"},
+      {kana:"セーブル",roman:"Sable"},{kana:"クイル",roman:"Quill"},
+      {kana:"ヴァーテックス",roman:"Vertex"},{kana:"ルーメン",roman:"Lumen"},
+      {kana:"プリズム",roman:"Prism"},{kana:"ソナー",roman:"Sonar"},
+      {kana:"デルタ",roman:"Delta"},{kana:"ナディール",roman:"Nadir"},
+      {kana:"ゼニス",roman:"Zenith"},{kana:"オービット",roman:"Orbit"},
+      {kana:"フラックス",roman:"Flux"},{kana:"グリッチ",roman:"Glitch"},
+      {kana:"ハヴォック",roman:"Havoc"},{kana:"シュリケ",roman:"Shrike"},
+      {kana:"ガンビット",roman:"Gambit"},{kana:"フェイズ",roman:"Phase"},
+      {kana:"カスケード",roman:"Cascade"},{kana:"ラチェット",roman:"Ratchet"},
+      {kana:"ソレル",roman:"Sorrel"},{kana:"キロワット",roman:"Kilowatt"}
+    ]
+  }
+};
+
+/* ============================================================
+   設定データプール
+   ============================================================ */
+
+/* 世界観グループ別・職業プール（役割未選択時に使用） */
+const occupationPools = {
+  modern: ["大学助教","カフェの店員","フリーの記者","看護師","古書店の店主","会社員（企画職）","写真家","塾講師","消防士","調律師","花屋の店主","システムエンジニア","理学療法士","翻訳家","刑事"],
+  wafu:   ["刀鍛冶","呉服屋の若旦那","旅の絵師","薬売り","宮仕えの文官","茶屋の看板娘","能楽師","付喪神の世話役","祈祷師","渡り中間","髪結い","版木彫り"],
+  western:["宮廷書記官","薬草医","吟遊詩人","竜骨の鑑定士","傭兵","修道院の司書","王宮料理人","地図職人","魔導具店の店主","狩人","星見の学者","没落貴族の家庭教師"],
+  chinese:["医館の若先生","茶楼の楽師","武館の師範代","宮中の女官","書画の商人","薬草園の管理人","刺繍職人","科挙浪人","門派の弟子","占い師"],
+  desert: ["隊商の案内人","香辛料商","水路の管理人","絨毯織り","星読み","宮殿の書記","剣舞の踊り手","鷹匠","硝子職人","遺跡の案内人"],
+  scifi:  ["メカニック","情報ブローカー","配送ドローンの管理者","電脳医","賞金稼ぎ","植民都市の農業技師","AI調律師","違法バーの店主","宇宙港の管制官","記憶編集士"],
+  steam:  ["飛行船の機関士","時計職人","新聞記者","蒸気機関の設計士","骨董商","写真館の主人","貴族お抱えの発明家","機械義肢の医師"]
+};
+
+/* 外見素材（ja/enペア） */
+const hairColors = [
+  {ja:"黒髪",en:"black hair"},{ja:"焦げ茶の髪",en:"dark brown hair"},
+  {ja:"明るい栗色の髪",en:"chestnut brown hair"},{ja:"亜麻色の髪",en:"flaxen hair"},
+  {ja:"灰色がかった金髪",en:"ash blond hair"},{ja:"金髪",en:"blond hair"},
+  {ja:"赤毛",en:"red hair"},{ja:"銀灰色の髪",en:"silver gray hair"},
+  {ja:"白に近い髪",en:"white hair"},{ja:"青みがかった黒髪",en:"blue-black hair"},
+  {ja:"深緑がかった髪",en:"dark green hair"},{ja:"紫がかった黒髪",en:"purple-tinted black hair"},
+  {ja:"蜂蜜色の髪",en:"honey-colored hair"},{ja:"墨色の髪",en:"ink-black hair"}
+];
+const hairStyles = [
+  {ja:"短く整えた",en:"short neat"},{ja:"無造作な",en:"messy"},
+  {ja:"肩に届く",en:"shoulder-length"},{ja:"長い",en:"long"},
+  {ja:"緩く結んだ",en:"loosely tied"},{ja:"きっちり撫でつけた",en:"slicked back"},
+  {ja:"癖のある",en:"wavy"},{ja:"編み込んだ",en:"braided"},
+  {ja:"襟足だけ長い",en:"short with long nape"},{ja:"片側だけ流した",en:"side-swept"}
+];
+const eyeLooks = [
+  {ja:"切れ長の目",en:"sharp narrow eyes"},{ja:"柔らかな垂れ目",en:"gentle drooping eyes"},
+  {ja:"意思の強い目",en:"determined eyes"},{ja:"眠たげな目",en:"sleepy half-lidded eyes"},
+  {ja:"よく笑う目",en:"smiling eyes"},{ja:"光をあまり映さない静かな目",en:"quiet dim eyes"},
+  {ja:"人をよく観察する目",en:"observant eyes"},{ja:"澄んだ目",en:"clear eyes"},
+  {ja:"猫のような目",en:"cat-like eyes"},{ja:"憂いを帯びた目",en:"melancholic eyes"}
+];
+const builds = [
+  {ja:"細身",en:"slim build"},{ja:"中肉中背",en:"average build"},
+  {ja:"がっしりとした体格",en:"sturdy build"},{ja:"小柄",en:"petite build"},
+  {ja:"長身",en:"tall figure"},{ja:"しなやかな体つき",en:"lithe build"}
+];
+const outfitPools = {
+  modern: [
+    {ja:"シンプルなシャツにジャケット",en:"simple shirt and jacket"},
+    {ja:"白衣",en:"white coat"},{ja:"着慣れたスーツ",en:"well-worn suit"},
+    {ja:"パーカーとスニーカー",en:"hoodie and sneakers"},
+    {ja:"きれいめのニット",en:"clean knitwear"},{ja:"エプロン姿",en:"apron over casual clothes"},
+    {ja:"シャツの袖をまくった格好",en:"rolled-up shirt sleeves"}
+  ],
+  wafu: [
+    {ja:"藍染の着物",en:"indigo kimono"},{ja:"羽織姿",en:"haori jacket"},
+    {ja:"袴姿",en:"hakama"},{ja:"矢絣の着物",en:"arrow-pattern kimono"},
+    {ja:"作務衣",en:"samue work clothes"},{ja:"白装束",en:"white ritual garments"}
+  ],
+  western: [
+    {ja:"仕立てのいい旅装",en:"fine traveling cloak"},{ja:"深い色のローブ",en:"deep-colored robe"},
+    {ja:"軽鎧",en:"light armor"},{ja:"刺繍入りの貴族服",en:"embroidered noble attire"},
+    {ja:"詰襟の礼服",en:"high-collared formal wear"},{ja:"革のロングコート",en:"long leather coat"}
+  ],
+  chinese: [
+    {ja:"淡い色の長衣",en:"pale flowing hanfu-style robe"},{ja:"深い色の長袍",en:"dark long robe"},
+    {ja:"武人らしい動きやすい装束",en:"practical martial attire"},{ja:"金糸の刺繍が入った衣",en:"gold-embroidered robes"}
+  ],
+  desert: [
+    {ja:"布を幾重にも重ねた衣装",en:"layered desert garments"},{ja:"白い外套と頭布",en:"white cloak and headscarf"},
+    {ja:"装飾の入った腰帯と軽装",en:"ornate sash and light clothing"},{ja:"藍色の遊牧の装い",en:"indigo nomad attire"}
+  ],
+  scifi: [
+    {ja:"機能的なテックジャケット",en:"functional tech jacket"},{ja:"発光ラインの入ったコート",en:"coat with glowing lines"},
+    {ja:"作業用ジャンプスーツ",en:"utility jumpsuit"},{ja:"防護素材のインナーとアウター",en:"armored bodysuit and outer layer"}
+  ],
+  steam: [
+    {ja:"ベストに懐中時計",en:"vest with pocket watch"},{ja:"油の染みた作業着とゴーグル",en:"oil-stained work clothes and goggles"},
+    {ja:"クラシカルなロングドレス",en:"classical long dress"},{ja:"真鍮の装飾がついたコート",en:"brass-fitted coat"}
+  ]
+};
+/* 職業役割ごとの服装ヒント（選択時に優先採用） */
+const roleOutfits = {
+  knight:  {ja:"手入れされた鎧",en:"well-kept armor"},
+  soldier: {ja:"軍装",en:"military uniform"},
+  priest:  {ja:"清潔な法衣",en:"clean priestly vestments"},
+  mage:    {ja:"深い色のローブ",en:"deep-colored robe"},
+  doctor:  {ja:"白衣",en:"white coat"},
+  maid:    {ja:"お仕着せのメイド服",en:"maid uniform"},
+  butler:  {ja:"隙のない燕尾服",en:"immaculate tailcoat"},
+  attendant:{ja:"仕着せの装い",en:"servant livery"},
+  student: {ja:"制服",en:"school uniform"},
+  assassin:{ja:"闇に紛れる装束",en:"dark concealing garb"},
+  bartender:{ja:"ベストにエプロン",en:"vest and apron"}
+};
+const auras = [
+  {ja:"静かに立っているだけで少し圧がある。",en:"quiet commanding presence"},
+  {ja:"人の懐に入るのがうまそうな空気をまとっている。",en:"approachable warm presence"},
+  {ja:"どこか浮世離れした雰囲気がある。",en:"otherworldly air"},
+  {ja:"隙がなさそうに見えて、ふとした仕草に抜けがある。",en:"composed yet unguarded moments"},
+  {ja:"第一印象より、二度目に会ったときのほうが印象に残る。",en:"quietly memorable presence"},
+  {ja:"季節の変わり目のような、掴みどころのない気配がある。",en:"elusive shifting atmosphere"},
+  {ja:"疲れているのに姿勢だけは崩れない。",en:"tired but upright posture"},
+  {ja:"笑っていても目の奥だけ温度が違う。",en:"smile that never reaches the eyes"}
+];
+const expressions = [
+  {ja:"穏やかな表情",en:"composed expression"},{ja:"かすかな微笑",en:"faint smile"},
+  {ja:"挑むような視線",en:"defiant gaze"},{ja:"気だるげな表情",en:"languid look"},
+  {ja:"感情の読めない表情",en:"unreadable expression"},{ja:"柔らかな笑顔",en:"soft smile"}
+];
+
+/* 一人称・二人称（groups: 使用可能な世界観グループ / g: 性別プール） */
+const firstPersons = [
+  {word:"俺",   g:["male"], groups:"all"},
+  {word:"僕",   g:["male","neutral"], groups:"all"},
+  {word:"私",   g:["male","female","neutral"], groups:"all"},
+  {word:"わたし",g:["female","neutral"], groups:"all"},
+  {word:"あたし",g:["female"], groups:["modern","scifi"]},
+  {word:"自分", g:["male","neutral"], groups:["modern","scifi","steam"]},
+  {word:"われ", g:["male","female","neutral"], groups:["wafu","western","chinese"], special:"inhumanOrRoyal"},
+  {word:"余",   g:["male"], groups:["western","chinese","wafu"], special:"royalOnly"},
+  {word:"拙者", g:["male"], groups:["wafu"]},
+  {word:"わし", g:["male"], groups:["wafu","western","chinese"], minAge:45}
+];
+const secondPersons = [
+  {word:"あなた", g:"all", groups:"all"},
+  {word:"君",     g:"all", groups:"all"},
+  {word:"きみ",   g:"all", groups:"all"},
+  {word:"お前",   g:"all", groups:"all"},
+  {word:"あんた", g:"all", groups:["modern","scifi","steam","desert"]},
+  {word:"貴様",   g:"all", groups:["wafu","western","scifi"], special:"harsh"},
+  {word:"そなた", g:"all", groups:["wafu","western","chinese","desert"], special:"inhumanOrRoyal"},
+  {word:"おまえさん", g:"all", groups:["wafu"], minAge:40},
+  {word:"呼び捨て", g:"all", groups:"all"},
+  {word:"役職や肩書きで呼ぶ", g:"all", groups:"all"}
+];
+
+/* 好き・苦手 */
+const likesPool = [
+  "静かな雨の音","湯気の立つ茶","古い本の匂い","よく手入れされた道具","夜明け前の空気","甘いもの（本人は隠している）","猫","市場の喧騒","手紙を書くこと","星のよく見える夜","湯船に長く浸かること","切れ味のいい刃物","焼きたてのパン","誰かの笑い声","雨上がりの土の匂い","整頓された棚","辛いもの","古い歌","窓際の席","火を眺めること","早朝の散歩","よく冷えた水","布団の重み","地図を眺めること","果物","静かな酒場の隅","雪の降る音","修理や手入れの時間"
+];
+const dislikesPool = [
+  "大きな音","予定の急な変更","嘘のつけない自分","人混み","朝","感情論だけの議論","雷","暑さ","寒さ","褒められること（反応に困る）","待たされること","無駄な会議や集まり","自分の字","占い","虫","高い場所","浅い眠り","別れの挨拶","病院や薬の匂い","形式だけの謝罪","辛いもの","にぎやかな祝い事"
+];
+
+/* 強み・弱み・秘密 */
+const strengthsPool = [
+  "観察力と判断力","一度決めたら折れない胆力","人の話を最後まで聞ける","危機のときほど冷静になる","手先の器用さ","嘘を見抜く勘","体力と回復の早さ","敵を作らない立ち回り","記憶力","損得抜きで動ける瞬発力","場の空気を読む力","諦めの悪さ","教えるのがうまい","痛みに強い","人の名前と顔を忘れない"
+];
+const weaknessesPool = [
+  "自分の感情を後回しにしすぎる","頼ることが極端に下手","嘘が下手","一度抱え込むと吐き出せない","朝に弱い","情に流されやすい","負けず嫌いが空回りする","過去の話になると口が重い","大事な場面で軽口を叩いてしまう","身内への詰めが甘い","金銭感覚が少しずれている","方向音痴","自己評価が実力より低い","察しはいいのに自分のことには鈍い","休み方を知らない"
+];
+const secretsPool = [
+  "過去に一度、大切な判断を誤ったことがある","本当の名前を捨てている","家族と縁を切った理由を誰にも話していない","恩人の死に責任を感じている","身分を偽って今の場所にいる","かつて敵側にいた","余命や体の不調を隠している","手放したはずのものを今も探している","誰かの身代わりとして生きてきた","一番大事な約束をまだ果たせていない","本当は今の仕事に向いていないと思っている","昔の自分を知る人物に会うことを恐れている","字が読めなかった時期がある","誰にも言えない相手に恩がある","一度だけ、人を見殺しにしたことがある"
+];
+
+/* 物語での役割（役割未選択時のプール） */
+const storyRolePool = [
+  "主役の価値観を揺さぶる触媒となる人物。",
+  "物語の折り返しで立場が反転する人物。",
+  "脇役に見えて、実は物語の鍵を最初から持っている人物。",
+  "日常パートの空気を作り、失われたときに物語が動く人物。",
+  "理性側の人物に見えて、後半で感情の揺れを見せる人物。",
+  "敵味方の間に立ち、どちらの言い分も理解してしまう人物。",
+  "過去の出来事の生き証人として、真相の断片を握る人物。",
+  "主役の「もしも」の姿。選択が違えばこうなっていたという鏡。",
+  "去り際に一番いい台詞を持っていくタイプの人物。",
+  "物語の始まりには関係者ですらなかったのに、最後には中心にいる人物。",
+  "誰かを救うことで、自分の物語を取り戻していく人物。",
+  "静かに全体を見ていて、最後に一手だけ動く人物。"
+];
+
+/* ============================================================
+   状態管理
+   ============================================================ */
+let currentMode = "full";               // nameOnly / settingOnly / full
+let selectedWorld = "random";
+let selectedGender = "unspecified";
+let selectedMoods = [];                 // 複数
+let selectedRoles = [];                 // 複数
+let selectedRelationships = [];         // 複数
+let generatedResults = [];
+let savedResults = [];
+const STORAGE_KEY = "ocMakerSavedV1";
+let storageOK = true;
+
+/* ============================================================
+   ユーティリティ
+   ============================================================ */
+function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+function pickN(arr,n){
+  const copy = arr.slice(); const out = [];
+  while(copy.length && out.length < n){
+    out.push(copy.splice(Math.floor(Math.random()*copy.length),1)[0]);
+  }
+  return out;
+}
+function randInt(min,max){ return Math.floor(Math.random()*(max-min+1))+min; }
+function esc(s){
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function makeId(){ return Date.now().toString() + "-" + Math.random().toString(36).slice(2); }
+
+/* タグと雰囲気の一致を優先しつつ抽選（pickFromPool） */
+function pickFromPool(pool, moods){
+  if(!pool || !pool.length) return null;
+  if(moods && moods.length){
+    const matched = pool.filter(item => item.tags && item.tags.some(t => moods.includes(t)));
+    if(matched.length && Math.random() < 0.75) return pick(matched);
+  }
+  return pick(pool);
+}
+
+/* ============================================================
+   名前生成
+   ============================================================ */
+function poolGender(genderKey){
+  const def = genderDefs[genderKey];
+  if(def.pool === "any") return pick(["male","female","neutral"]);
+  return def.pool;
+}
+function filterByG(list, pg){
+  const map = {male:"m", female:"f", neutral:"n"};
+  const want = map[pg];
+  let out = list.filter(n => n.g === want);
+  if(pg === "neutral" && !out.length) out = list;
+  if(!out.length) out = list;
+  return out;
+}
+
+function generateName(worldKey, genderKey, moods){
+  const world = worldDefs[worldKey];
+  const key = world.nameKey;
+  const pg = poolGender(genderKey);
+
+  if(key === "japanese" || key === "wafu"){
+    const data = nameData[key];
+    const sur = pickFromPool(data.surnames, moods);
+    let givenPool = data.givenNames[pg] || data.givenNames.neutral;
+    // 中性的指定は neutral 優先
+    const giv = pickFromPool(givenPool, moods);
+    return {
+      display: sur.kanji + " " + giv.kanji,
+      reading: sur.reading + " " + giv.reading,
+      roman: giv.roman + " " + sur.roman,
+      tags: (sur.tags||[]).concat(giv.tags||[])
+    };
+  }
+  if(key === "western"){
+    const data = nameData.western;
+    const giv = pickFromPool(filterByG(data.givenNames, pg), moods);
+    const famPool = (worldKey === "royal" || (worldKey === "dark" && Math.random() < 0.3))
+      ? data.nobleNames
+      : (Math.random() < 0.25 ? data.nobleNames : data.familyNames);
+    // 人外は姓を持たないことがある
+    if(worldKey === "nonhuman" && Math.random() < 0.5){
+      return {display:giv.kana, reading:giv.kana, roman:giv.roman, tags:giv.tags||[]};
+    }
+    const fam = pickFromPool(famPool, moods);
+    return {
+      display: giv.kana + "・" + fam.kana,
+      reading: giv.kana + "・" + fam.kana,
+      roman: giv.roman + " " + fam.roman,
+      tags: (giv.tags||[]).concat(fam.tags||[])
+    };
+  }
+  if(key === "chinese"){
+    const data = nameData.chinese;
+    const sur = pick(data.surnames);
+    const givenPool = data.givenNames[pg] || data.givenNames.neutral;
+    const giv = pickFromPool(givenPool, moods);
+    return {
+      display: sur.kanji + giv.kanji,
+      reading: sur.reading + "・" + giv.reading,
+      roman: sur.roman + " " + giv.roman,
+      tags: giv.tags||[]
+    };
+  }
+  if(key === "desert"){
+    const data = nameData.desert;
+    const giv = pickFromPool(filterByG(data.givenNames, pg), moods);
+    if(Math.random() < 0.65){
+      const fam = pick(data.familyNames);
+      return {
+        display: giv.kana + "・" + fam.kana,
+        reading: giv.kana + "・" + fam.kana,
+        roman: giv.roman + " " + fam.roman,
+        tags: giv.tags||[]
+      };
+    }
+    return {display:giv.kana, reading:giv.kana, roman:giv.roman, tags:giv.tags||[]};
+  }
+  if(key === "scifi"){
+    const data = nameData.scifi;
+    const giv = pick(filterByG(data.givenNames, pg));
+    const code = pick(data.codenames);
+    return {
+      display: giv.kana,
+      reading: giv.kana,
+      roman: giv.roman,
+      codename: code.kana + "（" + code.roman + "）",
+      tags: []
+    };
+  }
+  if(key === "mixed"){
+    const sur = pickFromPool(nameData.japanese.surnames, moods);
+    const giv = pickFromPool(filterByG(nameData.western.givenNames, pg), moods);
+    return {
+      display: sur.kanji + " " + giv.kana,
+      reading: sur.reading + " " + giv.kana,
+      roman: giv.roman + " " + sur.roman,
+      tags: (sur.tags||[]).concat(giv.tags||[])
+    };
+  }
+  return {display:"名無し", reading:"ななし", roman:"Nanashi", tags:[]};
+}
+
+/* ============================================================
+   設定生成
+   ============================================================ */
+function resolveWorldKey(){
+  if(selectedWorld === "random") return pick(Object.keys(worldDefs));
+  return selectedWorld;
+}
+function resolveGenderKey(){
+  if(selectedGender === "unspecified"){
+    return pick(genderOrder.filter(k => k !== "unspecified" && k !== "nonhuman"));
+  }
+  return selectedGender;
+}
+function resolveMoods(){
+  const chosen = selectedMoods.filter(m => m !== "お任せ");
+  if(chosen.length) return chosen;
+  return pickN(Object.keys(moodDefs), randInt(2,3));
+}
+function resolveRoles(){
+  const chosen = selectedRoles.filter(r => r !== "お任せ");
+  if(selectedRoles.includes("お任せ") && !chosen.length) return [pick(Object.keys(roleDefs))];
+  return chosen;
+}
+function resolveRels(){
+  const chosen = selectedRelationships.filter(r => r !== "お任せ");
+  if(selectedRelationships.includes("お任せ") && !chosen.length) return [pick(Object.keys(relDefs))];
+  return chosen;
+}
+
+function buildAge(genderKey, worldKey){
+  const def = genderDefs[genderKey];
+  const inhuman = def.inhuman || worldKey === "nonhuman";
+  const [a,b] = def.age;
+  const apparent = randInt(a,b);
+  if(inhuman && Math.random() < 0.75){
+    const real = randInt(120, 900);
+    return {text:"外見年齢 " + apparent + "歳程度（実年齢 " + real + "年以上）", num:apparent};
+  }
+  return {text: apparent + "歳", num:apparent};
+}
+
+function buildOccupation(worldKey, roles){
+  const group = worldDefs[worldKey].group;
+  for(const r of roles){
+    const def = roleDefs[r];
+    if(def && def.conv){
+      return def.conv[group] || def.conv.modern || def.label;
+    }
+  }
+  // 役割が関係性寄り or 未選択 → 世界観プールから
+  const pool = occupationPools[group] || occupationPools.modern;
+  return pick(pool);
+}
+
+function buildAppearance(worldKey, moods, ageNum, roles){
+  const group = worldDefs[worldKey].group;
+  const hc = pick(hairColors), hs = pick(hairStyles);
+  const eye = pick(eyeLooks), bd = pick(builds);
+  let outfit = pick(outfitPools[group] || outfitPools.modern);
+  const hintRole = (roles || []).find(r => roleOutfits[r]);
+  if(hintRole && Math.random() < 0.75){
+    outfit = roleOutfits[hintRole];
+  } else if(group === "modern" && ageNum <= 18 && Math.random() < 0.6){
+    outfit = {ja:"制服", en:"school uniform"};
+  }
+  const aura = pick(auras);
+  const ja = hs.ja + hc.ja + "。" + eye.ja + "。" + bd.ja + "で、" + outfit.ja + "が似合う。" + aura.ja;
+  return {
+    ja,
+    en:{hair: hs.en + " " + hc.en, eye: eye.en, build: bd.en, outfit: outfit.en, aura: aura.en}
+  };
+}
+
+function buildPersonality(moods){
+  const ms = pickN(moods, Math.min(2, moods.length));
+  const parts = ms.map(m => pick(moodDefs[m].pers));
+  return parts.join("");
+}
+
+function buildSpeech(moods){
+  return moodDefs[pick(moods)].speech;
+}
+
+function buildPronouns(worldKey, genderKey, roles, ageNum){
+  const group = worldDefs[worldKey].group;
+  const pg = genderDefs[genderKey].pool === "any" ? pick(["male","female","neutral"]) : genderDefs[genderKey].pool;
+  const isRoyal = roles.some(r => r === "royalty" || r === "noble") || worldKey === "royal";
+  const isInhuman = worldKey === "nonhuman" || genderKey === "nonhuman" || roles.some(r => ["inhuman","monster","divine"].includes(r));
+
+  const fpCands = firstPersons.filter(fp => {
+    if(fp.groups !== "all" && !fp.groups.includes(group)) return false;
+    if(!fp.g.includes(pg)) return false;
+    if(fp.minAge && ageNum < fp.minAge) return false;
+    if(fp.special === "royalOnly" && !isRoyal) return false;
+    if(fp.special === "inhumanOrRoyal" && !(isRoyal || isInhuman)) return false;
+    return true;
+  });
+  const spCands = secondPersons.filter(sp => {
+    if(sp.groups !== "all" && !sp.groups.includes(group)) return false;
+    if(sp.minAge && ageNum < sp.minAge) return false;
+    if(sp.special === "inhumanOrRoyal" && !(isRoyal || isInhuman)) return false;
+    if(sp.special === "harsh" && Math.random() < 0.7) return false;
+    return true;
+  });
+  return {
+    first: fpCands.length ? pick(fpCands).word : "私",
+    second: spCands.length ? pick(spCands).word : "あなた"
+  };
+}
+
+function buildRelationSeed(rels){
+  if(rels.length){
+    const r = pick(rels);
+    return "【" + r + "】" + relDefs[r];
+  }
+  const key = pick(Object.keys(relDefs));
+  return "【" + key + "】" + relDefs[key];
+}
+
+function buildStoryRole(roles){
+  for(const r of roles){
+    if(roleDefs[r] && roleDefs[r].story) return roleDefs[r].story;
+  }
+  return pick(storyRolePool);
+}
+
+function buildCatch(moods, genderKey){
+  const m = pick(moods);
+  const noun = genderDefs[genderKey].noun;
+  return pick(moodDefs[m].catch) + noun;
+}
+
+function buildImagePromptData(character){
+  const w = worldDefs[character.worldKey];
+  const g = genderDefs[character.genderKey];
+  const ap = character.appearanceEn;
+  const moodEn = pickN(character.moods, Math.min(2, character.moods.length)).map(m => moodDefs[m].en);
+  const expr = pick(expressions);
+  const parts = [g.en, ap.hair, ap.eye, ap.build, ap.outfit]
+    .concat(moodEn)
+    .concat([w.en, w.scene, expr.en, "clean character design"]);
+  return parts.join(", ");
+}
+
+function generateFullCharacter(opts){
+  const worldKey = resolveWorldKey();
+  const genderKey = resolveGenderKey();
+  const moods = resolveMoods();
+  const roles = resolveRoles();
+  const rels = resolveRels();
+  const mode = currentMode;
+
+  const c = {
+    id: makeId(),
+    mode, worldKey, genderKey, moods,
+    worldLabel: worldDefs[worldKey].label,
+    genderLabel: genderDefs[genderKey].label
+  };
+
+  if(mode !== "settingOnly"){
+    const nm = generateName(worldKey, genderKey, moods);
+    c.name = nm.display; c.reading = nm.reading; c.roman = nm.roman;
+    c.codename = nm.codename || null;
+    c.nameTags = nm.tags || [];
+  } else {
+    const manual = document.getElementById("nameInput").value.trim();
+    if(manual){ c.name = manual; c.manualName = true; }
+  }
+
+  if(mode === "nameOnly"){
+    const tagWords = (c.nameTags||[]).slice(0,3);
+    const impressionSrc = tagWords.length ? tagWords : pickN(moods, Math.min(2,moods.length));
+    c.nameImpression = impressionSrc.join("・") + "な印象の名前。";
+    const occ = buildOccupation(worldKey, roles);
+    const m2 = pickN(moods, Math.min(2, moods.length));
+    c.suitedFor = worldDefs[worldKey].label + "の世界観で、「" + m2.join("」「") + "」系の人物──たとえば" + occ + "などに向く。";
+    return c;
+  }
+
+  const age = buildAge(genderKey, worldKey);
+  const app = buildAppearance(worldKey, moods, age.num, roles);
+  const pron = buildPronouns(worldKey, genderKey, roles, age.num);
+
+  c.age = age.text;
+  c.genderImp = genderDefs[genderKey].label + "（印象：" + pickN(moods, Math.min(2,moods.length)).join("・") + "）";
+  c.occupation = buildOccupation(worldKey, roles);
+  const hasOccRole = roles.some(r => roleDefs[r] && roleDefs[r].conv);
+  const isInhumanC = worldKey === "nonhuman" || genderKey === "nonhuman";
+  if(age.num <= 18 && !hasOccRole && !isInhumanC && Math.random() < 0.8){
+    c.occupation = roleDefs.student.conv[worldDefs[worldKey].group] || "学生";
+  }
+  c.appearance = app.ja;
+  c.appearanceEn = app.en;
+  c.personality = buildPersonality(moods);
+  c.speech = buildSpeech(moods);
+  c.first = pron.first;
+  c.second = pron.second;
+  c.likes = pickN(likesPool, randInt(2,3)).join("、");
+  c.dislikes = pickN(dislikesPool, 2).join("、");
+  c.strength = pick(strengthsPool);
+  c.weakness = pick(weaknessesPool);
+  c.secret = pick(secretsPool);
+  c.relationSeed = buildRelationSeed(rels);
+  c.storyRole = buildStoryRole(roles);
+  c.catch = buildCatch(moods, genderKey);
+  c.imagePrompt = buildImagePromptData(c);
+  return c;
+}
+
+function generateMultiple(count){
+  const out = [];
+  const usedNames = new Set();
+  const usedCatch = new Set();
+  for(let i=0;i<count;i++){
+    let ch = null;
+    for(let retry=0; retry<8; retry++){
+      ch = generateFullCharacter();
+      const nameKey = ch.name || ch.catch || Math.random();
+      if(!usedNames.has(nameKey) && !(ch.catch && usedCatch.has(ch.catch))) break;
+    }
+    if(ch.name) usedNames.add(ch.name);
+    if(ch.catch) usedCatch.add(ch.catch);
+    out.push(ch);
+  }
+  return out;
+}
+
+/* ============================================================
+   テキスト整形
+   ============================================================ */
+function buildNameText(c){
+  let t = "名前：" + (c.name||"（名前なし）") + "\n読み：" + (c.reading||"—") + "\n英字表記：" + (c.roman||"—");
+  if(c.codename) t += "\nコードネーム：" + c.codename;
+  return t;
+}
+
+function buildDetailText(c){
+  if(c.mode === "nameOnly"){
+    return buildNameText(c) + "\n\n名前の印象：" + c.nameImpression + "\n向いているキャラ像：" + c.suitedFor;
+  }
+  const lines = [];
+  if(c.name){
+    lines.push("【名前】");
+    if(c.manualName){ lines.push("名前：" + c.name); }
+    else {
+      lines.push("名前：" + c.name, "読み：" + c.reading, "英字表記：" + c.roman);
+      if(c.codename) lines.push("コードネーム：" + c.codename);
+    }
+    lines.push("");
+  }
+  lines.push("【基本設定】",
+    "年齢：" + c.age,
+    "性別・印象：" + c.genderImp,
+    "職業・立場：" + c.occupation,
+    "世界観：" + c.worldLabel, "",
+    "【外見】", c.appearance, "",
+    "【人物像】",
+    "性格：" + c.personality,
+    "話し方：" + c.speech,
+    "一人称：" + c.first,
+    "二人称：" + c.second,
+    "好きなもの：" + c.likes,
+    "苦手なもの：" + c.dislikes,
+    "強み：" + c.strength,
+    "弱み：" + c.weakness,
+    "秘密：" + c.secret, "",
+    "【創作フック】",
+    "関係性の種：" + c.relationSeed,
+    "物語での役割：" + c.storyRole,
+    "キャッチコピー：" + c.catch, "",
+    "【画像生成用英語プロンプト素材】",
+    c.imagePrompt);
+  return lines.join("\n");
+}
+
+function buildImagePrompt(c){ return c.imagePrompt || ""; }
+
+/* ============================================================
+   コピー・トースト
+   ============================================================ */
+function showToast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove("show"), 1800);
+}
+function showFallback(text){
+  const fb = document.getElementById("copyFallback");
+  document.getElementById("fbText").value = text;
+  fb.classList.add("show");
+}
+function copyToClipboard(text, msg){
+  msg = msg || "コピーしました";
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(
+      () => showToast(msg),
+      () => legacyCopy(text, msg)
+    );
+  } else {
+    legacyCopy(text, msg);
+  }
+}
+function legacyCopy(text, msg){
+  try{
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.focus(); ta.select();
+    const ok = document.execCommand("copy");
+    document.body.removeChild(ta);
+    if(ok) showToast(msg); else showFallback(text);
+  }catch(e){ showFallback(text); }
+}
+
+/* ============================================================
+   保存（localStorage）
+   ============================================================ */
+function loadSavedCharacters(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    savedResults = raw ? JSON.parse(raw) : [];
+    if(!Array.isArray(savedResults)) savedResults = [];
+  }catch(e){
+    storageOK = false; savedResults = [];
+  }
+}
+function persistSaved(){
+  if(!storageOK) return;
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(savedResults)); }
+  catch(e){ storageOK = false; showToast("保存領域が使えません"); }
+}
+function saveCharacter(id){
+  const c = generatedResults.find(x => x.id === id);
+  if(!c) return;
+  if(savedResults.some(s => s.id === id)){ showToast("保存済みです"); return; }
+  if(!storageOK){ showToast("この環境では保存できません"); return; }
+  savedResults.unshift(c);
+  persistSaved();
+  renderSavedCharacters();
+  renderResults(generatedResults); // 保存済み表示を更新
+  showToast("保存しました");
+}
+function deleteSavedCharacter(id){
+  savedResults = savedResults.filter(s => s.id !== id);
+  persistSaved();
+  renderSavedCharacters();
+  renderResults(generatedResults);
+  showToast("削除しました");
+}
+function clearSavedCharacters(){
+  if(!savedResults.length){ showToast("保存リストは空です"); return; }
+  if(!confirm("保存リストをすべて削除します。よろしいですか？")) return;
+  savedResults = [];
+  persistSaved();
+  renderSavedCharacters();
+  renderResults(generatedResults);
+  showToast("すべて削除しました");
+}
+
+/* ============================================================
+   描画
+   ============================================================ */
+function renderModeButtons(){
+  const defs = [
+    {key:"nameOnly", label:"名前だけ", sub:"名前＋印象"},
+    {key:"settingOnly", label:"設定だけ", sub:"名前なし"},
+    {key:"full", label:"すべてお任せ", sub:"名前＋設定"}
+  ];
+  const nav = document.getElementById("modeBtns");
+  nav.innerHTML = defs.map(d =>
+    '<button class="mode-btn' + (currentMode===d.key?" on":"") + '" data-mode="' + d.key + '">' +
+    d.label + '<small>' + d.sub + '</small></button>'
+  ).join("");
+  nav.querySelectorAll(".mode-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      currentMode = btn.dataset.mode;
+      document.getElementById("nameInputWrap").classList.toggle("show", currentMode === "settingOnly");
+      renderModeButtons();
+    });
+  });
+}
+
+const condConfigs = [
+  {id:"world", title:"世界観", multi:false, note:"名前の系統に大きく影響します。",
+    items:() => worldOrder.map(k => ({key:k, label: k==="random" ? "お任せ" : worldDefs[k].label})),
+    get:() => [selectedWorld], set:(k) => { selectedWorld = k; }},
+  {id:"gender", title:"性別・印象", multi:false, note:"創作上の印象として扱います。",
+    items:() => genderOrder.map(k => ({key:k, label:genderDefs[k].label})),
+    get:() => [selectedGender], set:(k) => { selectedGender = k; }},
+  {id:"mood", title:"雰囲気（複数可）", multi:true, note:"組み合わせて印象を作ります。",
+    items:() => moodOrder.map(k => ({key:k, label:k})),
+    get:() => selectedMoods, set:null},
+  {id:"role", title:"役割・職業（複数可）", multi:true, note:"世界観に合わせて自然に言い換えます。",
+    items:() => roleOrder.map(k => ({key:k, label: k==="お任せ" ? "お任せ" : roleDefs[k].label})),
+    get:() => selectedRoles, set:null},
+  {id:"rel", title:"関係性タイプ（任意・複数可）", multi:true, note:"キャラを動かすための創作フックになります。",
+    items:() => relOrder.map(k => ({key:k, label:k})),
+    get:() => selectedRelationships, set:null}
+];
+
+function renderChoiceChips(){
+  const box = document.getElementById("conditions");
+  box.innerHTML = condConfigs.map((cfg, idx) => {
+    const chips = cfg.items().map(it =>
+      '<button class="chip' + (cfg.get().includes(it.key) ? " on":"") + '" data-cond="' + cfg.id + '" data-key="' + esc(it.key) + '">' + esc(it.label) + '</button>'
+    ).join("");
+    const selLabels = cfg.get().map(k => {
+      const item = cfg.items().find(i => i.key === k);
+      return item ? item.label : k;
+    }).join("・");
+    return '<details class="cond"' + (idx < 2 ? " open" : "") + '>' +
+      '<summary>' + cfg.title + '<span class="sel">' + esc(selLabels || "未選択") + '</span></summary>' +
+      '<div class="chip-box"><p class="cond-note">' + cfg.note + '</p>' + chips + '</div></details>';
+  }).join("");
+  box.querySelectorAll(".chip").forEach(chip => {
+    chip.addEventListener("click", () => toggleChip(chip.dataset.cond, chip.dataset.key));
+  });
+}
+
+function toggleChip(condId, key){
+  const cfg = condConfigs.find(c => c.id === condId);
+  if(!cfg.multi){
+    cfg.set(key);
+  } else {
+    let arr;
+    if(condId === "mood") arr = selectedMoods;
+    else if(condId === "role") arr = selectedRoles;
+    else arr = selectedRelationships;
+    const i = arr.indexOf(key);
+    if(i >= 0) arr.splice(i,1); else arr.push(key);
+  }
+  // 開閉状態を保ったまま再描画
+  const openStates = Array.from(document.querySelectorAll("details.cond")).map(d => d.open);
+  renderChoiceChips();
+  document.querySelectorAll("details.cond").forEach((d,i) => { d.open = openStates[i]; });
+}
+
+function cardRow(dt, dd){
+  return '<div class="row"><dt>' + esc(dt) + '</dt><dd>' + esc(dd) + '</dd></div>';
+}
+
+function renderResults(results){
+  const box = document.getElementById("results");
+  document.getElementById("resHead").classList.toggle("show", results.length > 0);
+  box.innerHTML = results.map(c => {
+    const saved = savedResults.some(s => s.id === c.id);
+    let inner = '<span class="world-tag">' + esc(c.worldLabel) + '</span>';
+
+    if(c.mode === "nameOnly"){
+      inner += '<p class="name-line"><span class="nm">' + esc(c.name) + '</span><span class="rd">' + esc(c.reading) + '</span></p>' +
+        '<p class="roman">' + esc(c.roman) + (c.codename ? "　CODE: " + esc(c.codename) : "") + '</p><dl>' +
+        cardRow("名前の印象", c.nameImpression) +
+        cardRow("向いている像", c.suitedFor) + '</dl>';
+    } else {
+      inner += '<p class="catch">' + esc(c.catch) + '</p>';
+      if(c.name){
+        inner += '<p class="name-line"><span class="nm">' + esc(c.name) + '</span>' +
+          (c.manualName ? "" : '<span class="rd">' + esc(c.reading) + '</span>') + '</p>' +
+          (c.manualName ? "" : '<p class="roman">' + esc(c.roman) + (c.codename ? "　CODE: " + esc(c.codename) : "") + '</p>');
+      }
+      inner += '<dl>' +
+        cardRow("年齢", c.age) +
+        cardRow("性別・印象", c.genderImp) +
+        cardRow("職業・立場", c.occupation) +
+        '<div class="sec-label">外見</div>' + cardRow("外見", c.appearance) +
+        '<div class="sec-label">人物像</div>' +
+        cardRow("性格", c.personality) +
+        cardRow("話し方", c.speech) +
+        cardRow("一人称／二人称", c.first + " ／ " + c.second) +
+        cardRow("好きなもの", c.likes) +
+        cardRow("苦手なもの", c.dislikes) +
+        cardRow("強み", c.strength) +
+        cardRow("弱み", c.weakness) +
+        cardRow("秘密", c.secret) +
+        '<div class="sec-label">創作フック</div>' +
+        cardRow("関係性の種", c.relationSeed) +
+        cardRow("物語での役割", c.storyRole) +
+        '</dl>' +
+        '<div class="sec-label">画像生成用英語プロンプト素材</div>' +
+        '<div class="prompt">' + esc(c.imagePrompt) + '</div>';
+    }
+
+    inner += '<div class="card-actions">' +
+      '<button class="btn-sm save" data-act="save" data-id="' + c.id + '"' + (saved ? " disabled" : "") + '>' + (saved ? "保存済み" : "保存") + '</button>' +
+      '<button class="btn-sm copy" data-act="detail" data-id="' + c.id + '">詳細コピー</button>' +
+      (c.name && !c.manualName ? '<button class="btn-sm" data-act="name" data-id="' + c.id + '">名前だけコピー</button>' : "") +
+      (c.mode !== "nameOnly" ? '<button class="btn-sm" data-act="img" data-id="' + c.id + '">画像生成用コピー</button>' : "") +
+      '</div>';
+    return '<article class="card">' + inner + '</article>';
+  }).join("");
+
+  box.querySelectorAll("button[data-act]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const c = generatedResults.find(x => x.id === btn.dataset.id);
+      if(!c) return;
+      const act = btn.dataset.act;
+      if(act === "save") saveCharacter(c.id);
+      else if(act === "detail") copyToClipboard(buildDetailText(c));
+      else if(act === "name") copyToClipboard(buildNameText(c));
+      else if(act === "img") copyToClipboard(buildImagePrompt(c));
+    });
+  });
+}
+
+function savedTitle(c){
+  return c.name || c.catch || "（名前なし）";
+}
+function savedImpression(c){
+  if(c.mode === "nameOnly") return c.worldLabel + "／" + (c.nameImpression || "");
+  return c.worldLabel + "・" + (c.age || "") + "　" + (c.occupation || "");
+}
+
+function renderSavedCharacters(){
+  const box = document.getElementById("savedList");
+  if(!storageOK){
+    box.innerHTML = '<div class="empty-msg">この環境ではブラウザ保存が使えません。生成とコピーは利用できます。</div>';
+    return;
+  }
+  if(!savedResults.length){
+    box.innerHTML = '<div class="empty-msg">まだ保存されたキャラはいません。<br>気に入った結果カードの「保存」を押してください。</div>';
+    return;
+  }
+  box.innerHTML = savedResults.map(c =>
+    '<div class="saved-item" data-id="' + c.id + '">' +
+      '<div class="s-top"><span class="s-name">' + esc(savedTitle(c)) + '</span>' +
+      '<span class="s-imp">' + esc(savedImpression(c)) + '</span></div>' +
+      '<div class="s-detail">' + esc(buildDetailText(c)) + '</div>' +
+      '<div class="s-actions">' +
+        '<button class="btn-sm" data-sact="toggle">詳細表示</button>' +
+        '<button class="btn-sm copy" data-sact="copy">コピー</button>' +
+        '<button class="btn-sm btn-danger" data-sact="del">削除</button>' +
+      '</div></div>'
+  ).join("");
+  box.querySelectorAll(".saved-item").forEach(item => {
+    const id = item.dataset.id;
+    const c = savedResults.find(s => s.id === id);
+    item.querySelector('[data-sact="toggle"]').addEventListener("click", () => item.classList.toggle("open"));
+    item.querySelector('[data-sact="copy"]').addEventListener("click", () => copyToClipboard(buildDetailText(c)));
+    item.querySelector('[data-sact="del"]').addEventListener("click", () => deleteSavedCharacter(id));
+  });
+}
+
+/* ============================================================
+   生成トリガー・初期化
+   ============================================================ */
+function runGenerate(count){
+  generatedResults = generateMultiple(count);
+  renderResults(generatedResults);
+  const head = document.getElementById("resHead");
+  setTimeout(() => head.scrollIntoView({behavior:"smooth", block:"start"}), 60);
+}
+
+function resetConditions(){
+  selectedWorld = "random";
+  selectedGender = "unspecified";
+  selectedMoods = [];
+  selectedRoles = [];
+  selectedRelationships = [];
+  renderChoiceChips();
+  showToast("条件をリセットしました");
+}
+function randomConditions(){
+  selectedWorld = pick(Object.keys(worldDefs));
+  selectedGender = pick(genderOrder.filter(k => k !== "unspecified"));
+  selectedMoods = pickN(Object.keys(moodDefs), randInt(2,3));
+  selectedRoles = [pick(Object.keys(roleDefs))];
+  selectedRelationships = Math.random() < 0.5 ? [pick(Object.keys(relDefs))] : [];
+  renderChoiceChips();
+  showToast("条件をランダムに設定しました");
+}
+
+function init(){
+  loadSavedCharacters();
+  renderModeButtons();
+  renderChoiceChips();
+  renderSavedCharacters();
+  document.getElementById("btnGen1").addEventListener("click", () => runGenerate(1));
+  document.getElementById("btnGen5").addEventListener("click", () => runGenerate(5));
+  document.getElementById("btnReset").addEventListener("click", resetConditions);
+  document.getElementById("btnRandom").addEventListener("click", randomConditions);
+  document.getElementById("btnClearSaved").addEventListener("click", clearSavedCharacters);
+  document.getElementById("btnCopyAllSaved").addEventListener("click", () => {
+    if(!savedResults.length){ showToast("保存リストは空です"); return; }
+    const all = savedResults.map(c => buildDetailText(c)).join("\n\n――――――――――\n\n");
+    copyToClipboard(all, "保存リストをコピーしました");
+  });
+  document.getElementById("fbClose").addEventListener("click", () => {
+    document.getElementById("copyFallback").classList.remove("show");
+  });
+}
+init();
+</script>
+</body>
+</html>
