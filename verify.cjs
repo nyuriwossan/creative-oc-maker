@@ -8,10 +8,10 @@ const script=scripts[0][1].replace(/\binit\(\);\s*$/,'');
 let seed=0x12345678;const math=Object.create(Math);math.random=()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296;};
 let input='';const ctx=vm.createContext({console,Math:math,document:{getElementById:id=>{assert.equal(id,'nameInput');return {value:input};}}});
 vm.runInContext(script,ctx,{timeout:10000});
-const api=vm.runInContext(`({nameData,moodDefs,worldDefs,genderDefs,worldOrder,genderOrder,generateName,generateFullCharacter,generateMultiple,buildNameText,buildDetailText,buildImagePrompt,
+const api=vm.runInContext(`({nameData,nameRecords,moodDefs,worldDefs,genderDefs,worldOrder,genderOrder,generateName,generateFullCharacter,generateMultiple,buildNameText,buildDetailText,buildImagePrompt,
  configure(world,gender,mode,moods=[]){selectedWorld=world;selectedGender=gender;currentMode=mode;selectedMoods=moods;selectedRoles=[];selectedRelationships=[];}})`,ctx);
 const data=api.nameData,normalize=s=>s.normalize('NFKC').toLowerCase().replace(/[\s\-'’]/g,'');
-const report={version:'1.2',seed:'0x12345678',data:{pools:[],invalidFields:0,invalidTags:0,displayDuplicates:0,existingHomophones:[]},generation:{singleNames:0,batches:0,charactersInBatches:0,duplicateBatches:0,byWorld:[]},regressions:[]};
+const report={version:'1.3',seed:'0x12345678',data:{pools:[],invalidFields:0,invalidTags:0,displayDuplicates:0,existingHomophones:[]},generation:{singleNames:0,batches:0,charactersInBatches:0,duplicateBatches:0,byWorld:[]},regressions:[]};
 function walk(obj,at=''){for(const [k,v] of Object.entries(obj)){const p=at?at+'.'+k:k;if(Array.isArray(v))checkPool(v,p);else walk(v,p);}}
 function checkPool(pool,p){
  report.data.pools.push({pool:p,count:pool.length});const fields=['kanji','kana','reading','roman'];
@@ -50,6 +50,18 @@ function allowed(pool,gender){const pg=api.genderDefs[gender].pool;if(pg==='any'
 function jpGiven(d,gender){const pg=api.genderDefs[gender].pool;return pg==='any'?Object.values(d.givenNames).flat():d.givenNames[pg];}
 function verifyName(c){
  for(const f of ['name','reading','roman']){assert.ok(typeof c[f]==='string'&&c[f].trim());assert.ok(!/undefined|null|名無し/.test(c[f]),JSON.stringify(c));}
+ // v1.3 adds a modern world and source-word fantasy names. Validate their actual
+ // components and provenance; all original legacy reconstruction checks stay below.
+ assert.ok(c.nameParts&&c.naming);
+ if(c.naming.system==='modernWestern'||(c.naming.system==='fantasy'&&c.naming.motif!=='legacy')){
+  const g=c.nameParts.given||c.nameParts.single,f=c.nameParts.family;assert.ok(g&&api.nameRecords.has(g.id));
+  if(f)assert.ok(api.nameRecords.has(f.id));
+  assert.equal(c.name,g.display+(f?'・'+f.display:''));assert.equal(c.reading,g.reading+(f?'・'+f.reading:''));assert.equal(c.roman,g.original+(f?' '+f.original:''));
+  if(c.naming.system==='modernWestern'){
+   assert.ok(f);assert.ok(!c.codename);for(const part of [g,f]){assert.equal(part.originType,'attested_name');assert.ok(api.nameRecords.get(part.id).cultures.includes(c.naming.culture));}
+  }else assert.ok([g,f].some(part=>part?.motifs.includes(c.naming.motif)));
+  for(const tag of c.nameTags||[])assert.ok(api.moodDefs[tag]);return;
+ }
  const key=api.worldDefs[c.worldKey].nameKey;let sur,giv,fam,expectedRoman,expectedReading;
  if(key==='japanese'||key==='wafu'){
   const parts=c.name.split(' ');assert.equal(parts.length,2);sur=data[key].surnames.find(n=>n.kanji===parts[0]);giv=jpGiven(data[key],c.genderKey).find(n=>n.kanji===parts[1]);assert.ok(sur&&giv);
@@ -104,6 +116,6 @@ const motifs={};for(const p of ['western.givenNames','western.familyNames','west
 let darkHits=0;api.configure('dark','unspecified','nameOnly',['闇がある','ミステリアス']);for(let i=0;i<10000;i++){const c=api.generateFullCharacter();if(c.roman.split(' ').some(s=>common.test(s)))darkHits++;}
 assert.ok(darkHits/10000<0.2);report.motifAudit={pools:motifs,darkSample:10000,darkHits,rate:darkHits/10000};
 report.generation.additionalDarkSamples=10000;
-assert.ok(html.includes('<footer>創作OCメーカー v1.2</footer>'));
+assert.ok(html.includes('<footer>創作OCメーカー v1.3</footer>'));
 report.passed=true;
 const output=process.argv[3];if(output)fs.writeFileSync(output,JSON.stringify(report,null,2));console.log(JSON.stringify({passed:true,singles:report.generation.singleNames,batches:report.generation.batches,added:1370,darkMotifRate:darkHits/10000}));

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>創作OCメーカー v1.2</title>
+<title>創作OCメーカー v1.3</title>
 <style>
 :root{
   --bg:#F2F0EB;
@@ -283,6 +283,18 @@ footer{
 @media (min-width:600px){
   .chip{font-size:.86rem;}
 }
+/* v1.3 名前の詳細設定 */
+#namingOptions fieldset{border:0;padding:0;margin:12px 0 18px;min-width:0;}
+#namingOptions legend{font-size:.86rem;margin-bottom:8px;font-weight:600;}
+.naming-info{margin:12px 0;color:var(--sub);font-size:.79rem;line-height:1.8;overflow-wrap:anywhere;}
+.naming-meta{margin:0 0 5px;}
+.name-origin summary{cursor:pointer;}
+.name-origin p{margin:9px 0;}
+.name-origin a{color:inherit;text-decoration:underline;text-underline-offset:3px;}
+.naming-notice{font-size:.8rem;line-height:1.8;background:rgba(170,140,90,.12);border-radius:6px;padding:10px;}
+#generationError{padding:14px;border:1px solid #b36054;border-radius:8px;font-size:.86rem;line-height:1.8;}
+.chip:disabled{opacity:.45;cursor:default;}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
 </style>
 </head>
 <body>
@@ -303,6 +315,8 @@ footer{
 </div>
 
 <section id="conditions"></section>
+<section id="namingOptions" aria-label="名前の詳細設定"></section>
+<p id="generationError" role="alert" tabindex="-1" hidden></p>
 
 <div class="gen-row">
   <button class="btn btn-gen" id="btnGen1">1人生成</button>
@@ -326,7 +340,7 @@ footer{
   <div id="savedList"></div>
 </section>
 
-<footer>創作OCメーカー v1.2</footer>
+<footer>創作OCメーカー v1.3</footer>
 </div>
 
 <div id="toast"></div>
@@ -348,6 +362,7 @@ footer{
 
 /* ---- 世界観 ---- */
 const worldDefs = {
+  modernWestern:{label:"現代欧米",nameKey:"modernWestern",group:"modernWestern",en:"contemporary Western setting",scene:"a contemporary town street"},
   modern:      {label:"現代日本",        nameKey:"japanese", group:"modern",  en:"modern Japanese setting",       scene:"city street at dusk"},
   school:      {label:"学園",            nameKey:"japanese", group:"modern",  en:"modern school setting",         scene:"quiet classroom after school"},
   work:        {label:"職業もの",        nameKey:"japanese", group:"modern",  en:"modern workplace setting",      scene:"office at night"},
@@ -365,7 +380,7 @@ const worldDefs = {
   nonhuman:    {label:"人外・異種族",    nameKey:"western",  group:"western", en:"fantasy setting",               scene:"deep ancient forest"},
   mixed:       {label:"和洋折衷",        nameKey:"mixed",    group:"modern",  en:"japanese-western fusion setting",scene:"retro modern mansion"}
 };
-const worldOrder = ["modern","school","work","wafu","wafuFantasy","western","royal","chinese","desert","dark","scifi","cyber","steam","ability","nonhuman","mixed","random"];
+const worldOrder = ["modern","modernWestern","school","work","wafu","wafuFantasy","western","royal","chinese","desert","dark","scifi","cyber","steam","ability","nonhuman","mixed","random"];
 
 /* ---- 性別・印象 ---- */
 const genderDefs = {
@@ -3391,14 +3406,6 @@ function esc(s){
 function makeId(){ return Date.now().toString() + "-" + Math.random().toString(36).slice(2); }
 
 /* タグと雰囲気の一致を優先しつつ抽選（pickFromPool） */
-function pickFromPool(pool, moods){
-  if(!pool || !pool.length) return null;
-  if(moods && moods.length){
-    const matched = pool.filter(item => item.tags && item.tags.some(t => moods.includes(t)));
-    if(matched.length && Math.random() < 0.75) return pick(matched);
-  }
-  return pick(pool);
-}
 
 /* ============================================================
    雰囲気語の日本語活用（v1.1）
@@ -3448,92 +3455,6 @@ function filterByG(list, pg){
   return out;
 }
 
-function generateName(worldKey, genderKey, moods){
-  const world = worldDefs[worldKey];
-  const key = world.nameKey;
-  const pg = poolGender(genderKey);
-
-  if(key === "japanese" || key === "wafu"){
-    const data = nameData[key];
-    const sur = pickFromPool(data.surnames, moods);
-    let givenPool = data.givenNames[pg] || data.givenNames.neutral;
-    // 中性的指定は neutral 優先
-    const giv = pickFromPool(givenPool, moods);
-    return {
-      display: sur.kanji + " " + giv.kanji,
-      reading: sur.reading + " " + giv.reading,
-      roman: giv.roman + " " + sur.roman,
-      tags: (sur.tags||[]).concat(giv.tags||[])
-    };
-  }
-  if(key === "western"){
-    const data = nameData.western;
-    const giv = pickFromPool(filterByG(data.givenNames, pg), moods);
-    const famPool = (worldKey === "royal" || (worldKey === "dark" && Math.random() < 0.3))
-      ? data.nobleNames
-      : (Math.random() < 0.25 ? data.nobleNames : data.familyNames);
-    // 人外は姓を持たないことがある
-    if(worldKey === "nonhuman" && Math.random() < 0.5){
-      return {display:giv.kana, reading:giv.kana, roman:giv.roman, tags:giv.tags||[]};
-    }
-    const fam = pickFromPool(famPool, moods);
-    return {
-      display: giv.kana + "・" + fam.kana,
-      reading: giv.kana + "・" + fam.kana,
-      roman: giv.roman + " " + fam.roman,
-      tags: (giv.tags||[]).concat(fam.tags||[])
-    };
-  }
-  if(key === "chinese"){
-    const data = nameData.chinese;
-    const sur = pick(data.surnames);
-    const givenPool = data.givenNames[pg] || data.givenNames.neutral;
-    const giv = pickFromPool(givenPool, moods);
-    return {
-      display: sur.kanji + giv.kanji,
-      reading: sur.reading + "・" + giv.reading,
-      roman: sur.roman + " " + giv.roman,
-      tags: giv.tags||[]
-    };
-  }
-  if(key === "desert"){
-    const data = nameData.desert;
-    const giv = pickFromPool(filterByG(data.givenNames, pg), moods);
-    if(Math.random() < 0.65){
-      const fam = pick(data.familyNames);
-      return {
-        display: giv.kana + "・" + fam.kana,
-        reading: giv.kana + "・" + fam.kana,
-        roman: giv.roman + " " + fam.roman,
-        tags: giv.tags||[]
-      };
-    }
-    return {display:giv.kana, reading:giv.kana, roman:giv.roman, tags:giv.tags||[]};
-  }
-  if(key === "scifi"){
-    const data = nameData.scifi;
-    const giv = pick(filterByG(data.givenNames, pg));
-    const code = pick(data.codenames);
-    return {
-      display: giv.kana,
-      reading: giv.kana,
-      roman: giv.roman,
-      codename: code.kana + "（" + code.roman + "）",
-      tags: []
-    };
-  }
-  if(key === "mixed"){
-    const sur = pickFromPool(nameData.japanese.surnames, moods);
-    const giv = pickFromPool(filterByG(nameData.western.givenNames, pg), moods);
-    return {
-      display: sur.kanji + " " + giv.kana,
-      reading: sur.reading + " " + giv.kana,
-      roman: giv.roman + " " + sur.roman,
-      tags: (sur.tags||[]).concat(giv.tags||[])
-    };
-  }
-  return {display:"名無し", reading:"ななし", roman:"Nanashi", tags:[]};
-}
 
 /* ============================================================
    設定生成
@@ -3577,6 +3498,7 @@ function buildAge(genderKey, worldKey){
 }
 
 function buildOccupation(worldKey, roles){
+  if(worldKey==="modernWestern"){if(roles.includes("soldier"))return "軍人・特殊部隊員";if(roles.includes("priest"))return "聖職者・宗教施設の職員";}
   const group = worldDefs[worldKey].group;
   for(const r of roles){
     const def = roleDefs[r];
@@ -3596,7 +3518,7 @@ function buildAppearance(worldKey, moods, ageNum, roles){
   let outfit = pick(outfitPools[group] || outfitPools.modern);
   const hintRole = (roles || []).find(r => roleOutfits[r]);
   if(hintRole && Math.random() < 0.75){
-    outfit = roleOutfits[hintRole];
+    outfit = worldKey==="modernWestern" && ["knight","mage","student"].includes(hintRole) ? ({knight:{ja:"警備用のジャケット",en:"security jacket"},mage:{ja:"落ち着いた色のコート",en:"dark tailored coat"},student:{ja:"カジュアルな学生服",en:"casual student clothes"}}[hintRole]) : roleOutfits[hintRole];
   } else if(group === "modern" && ageNum <= 18 && Math.random() < 0.6){
     outfit = {ja:"制服", en:"school uniform"};
   }
@@ -3679,7 +3601,7 @@ function buildImagePromptData(character){
   return parts.join(", ");
 }
 
-function generateFullCharacter(opts){
+function generateFullCharacter(opts={}){
   const worldKey = resolveWorldKey();
   const genderKey = resolveGenderKey();
   const moods = resolveMoods();
@@ -3695,7 +3617,8 @@ function generateFullCharacter(opts){
   };
 
   if(mode !== "settingOnly"){
-    const nm = generateName(worldKey, genderKey, moods);
+    const nm = generateName(worldKey, genderKey, moods, opts);
+    c.nameParts=nm.nameParts; c.naming=nm.naming;
     c.name = nm.display; c.reading = nm.reading; c.roman = nm.roman;
     c.codename = nm.codename || null;
     c.nameTags = nm.tags || [];
@@ -3746,35 +3669,6 @@ function generateFullCharacter(opts){
   return c;
 }
 
-function generateMultiple(count){
-  const out = [];
-  const usedNames = new Set();
-  const usedCatch = new Set();
-  const usedSurnames = new Set();
-  for(let i=0;i<count;i++){
-    let ch = null;
-    let accepted = false;
-    // v1.2: 名前の重複は必ず再抽選。姓とコピーの重複は途中から許容する。
-    // 少数の雰囲気語からは5種類のコピーを作れないことがあるため。
-    for(let retry=0; retry<128; retry++){
-      ch = generateFullCharacter();
-      const nameKey = ch.name || ch.catch || Math.random();
-      const surname = ch.name && !ch.manualName ? ch.name.split(/[ ・]/)[0] : null;
-      if(!ch.manualName && usedNames.has(nameKey)) continue;
-      if(ch.catch && usedCatch.has(ch.catch) && retry < 8) continue;
-      if(surname && usedSurnames.has(surname) && retry < 5) continue; // 苗字被りは緩やかに回避
-      accepted = true;
-      break;
-    }
-    // 上限に到達しても重複した結果を採用しない（乱数異常などへの有限回ガード）。
-    if(!accepted) throw new Error("重複しない名前を選べませんでした。もう一度生成してください。");
-    if(ch.name) usedNames.add(ch.name);
-    if(ch.name && !ch.manualName) usedSurnames.add(ch.name.split(/[ ・]/)[0]);
-    if(ch.catch) usedCatch.add(ch.catch);
-    out.push(ch);
-  }
-  return out;
-}
 
 /* ============================================================
    テキスト整形
@@ -3785,7 +3679,7 @@ function buildNameText(c){
   return t;
 }
 
-function buildDetailText(c){
+function buildDetailTextBase(c){
   if(c.mode === "nameOnly"){
     return buildNameText(c) + "\n\n名前の印象：" + c.nameImpression + "\n向いているキャラ像：" + c.suitedFor;
   }
@@ -3921,7 +3815,7 @@ function renderModeButtons(){
   ];
   const nav = document.getElementById("modeBtns");
   nav.innerHTML = defs.map(d =>
-    '<button class="mode-btn' + (currentMode===d.key?" on":"") + '" data-mode="' + d.key + '">' +
+    '<button class="mode-btn' + (currentMode===d.key?" on":"") + '" data-mode="' + d.key + '" aria-pressed="' + (currentMode===d.key) + '">' +
     d.label + '<small>' + d.sub + '</small></button>'
   ).join("");
   nav.querySelectorAll(".mode-btn").forEach(btn => {
@@ -3929,12 +3823,14 @@ function renderModeButtons(){
       currentMode = btn.dataset.mode;
       document.getElementById("nameInputWrap").classList.toggle("show", currentMode === "settingOnly");
       renderModeButtons();
+      renderNamingOptions();
+      document.querySelector('[data-mode="'+currentMode+'"]')?.focus({preventScroll:true});
     });
   });
 }
 
 const condConfigs = [
-  {id:"world", title:"世界観", multi:false, note:"名前の系統に大きく影響します。",
+  {id:"world", title:"世界観", multi:false, note:"職業・衣装・背景を決めます。名前の系統は詳細設定で個別に選べます。",
     items:() => worldOrder.map(k => ({key:k, label: k==="random" ? "お任せ" : worldDefs[k].label})),
     get:() => [selectedWorld], set:(k) => { selectedWorld = k; }},
   {id:"gender", title:"性別・印象", multi:false, note:"創作上の印象として扱います。",
@@ -3955,7 +3851,7 @@ function renderChoiceChips(){
   const box = document.getElementById("conditions");
   box.innerHTML = condConfigs.map((cfg, idx) => {
     const chips = cfg.items().map(it =>
-      '<button class="chip' + (cfg.get().includes(it.key) ? " on":"") + '" data-cond="' + cfg.id + '" data-key="' + esc(it.key) + '">' + esc(it.label) + '</button>'
+      '<button class="chip' + (cfg.get().includes(it.key) ? " on":"") + '" aria-pressed="' + cfg.get().includes(it.key) + '" data-cond="' + cfg.id + '" data-key="' + esc(it.key) + '">' + esc(it.label) + '</button>'
     ).join("");
     const selLabels = cfg.get().map(k => {
       const item = cfg.items().find(i => i.key === k);
@@ -3982,10 +3878,13 @@ function toggleChip(condId, key){
     const i = arr.indexOf(key);
     if(i >= 0) arr.splice(i,1); else arr.push(key);
   }
+  const focusCond=condId,focusKey=key;
   // 開閉状態を保ったまま再描画
   const openStates = Array.from(document.querySelectorAll("details.cond")).map(d => d.open);
   renderChoiceChips();
   document.querySelectorAll("details.cond").forEach((d,i) => { d.open = openStates[i]; });
+  Array.from(document.querySelectorAll("button[data-cond]")).find(b=>b.dataset.cond===focusCond&&b.dataset.key===focusKey)?.focus({preventScroll:true});
+  renderNamingOptions();
 }
 
 function cardRow(dt, dd){
@@ -4033,6 +3932,7 @@ function renderResults(results){
         '<div class="prompt">' + esc(c.imagePrompt) + '</div>';
     }
 
+    inner += renderNameInfo(c);
     inner += '<div class="card-actions">' +
       '<button class="btn-sm save" data-act="save" data-id="' + c.id + '"' + (saved ? " disabled" : "") + '>' + (saved ? "保存済み" : "保存") + '</button>' +
       '<button class="btn-sm copy" data-act="detail" data-id="' + c.id + '">詳細コピー</button>' +
@@ -4053,6 +3953,11 @@ function renderResults(results){
       else if(act === "img") copyToClipboard(buildImagePrompt(c));
     });
   });
+}
+
+function buildDetailText(c){
+  const base=buildDetailTextBase(c);
+  return c.naming ? base+"\n名前の系統："+namingSummary(c)+(c.naming.notice?"\n"+c.naming.notice:"") : base;
 }
 
 function savedTitle(c){
@@ -4096,20 +4001,17 @@ function renderSavedCharacters(){
 /* ============================================================
    生成トリガー・初期化
    ============================================================ */
-function runGenerate(count){
-  generatedResults = generateMultiple(count);
-  renderResults(generatedResults);
-  const head = document.getElementById("resHead");
-  setTimeout(() => head.scrollIntoView({behavior:"smooth", block:"start"}), 60);
-}
 
 function resetConditions(){
+  selectedNameSystem="auto";selectedNameCulture="auto";selectedNameMotifs=[];
+  renderNamingOptions();
   selectedWorld = "random";
   selectedGender = "unspecified";
   selectedMoods = [];
   selectedRoles = [];
   selectedRelationships = [];
   renderChoiceChips();
+  renderNamingOptions();
   showToast("条件をリセットしました");
 }
 function randomConditions(){
@@ -4119,11 +4021,13 @@ function randomConditions(){
   selectedRoles = [pick(Object.keys(roleDefs))];
   selectedRelationships = Math.random() < 0.5 ? [pick(Object.keys(relDefs))] : [];
   renderChoiceChips();
+  renderNamingOptions();
   showToast("条件をランダムに設定しました");
 }
 
 function init(){
   loadSavedCharacters();
+  renderNamingOptions();
   renderModeButtons();
   renderChoiceChips();
   renderSavedCharacters();
@@ -4141,6 +4045,463 @@ function init(){
     document.getElementById("copyFallback").classList.remove("show");
   });
 }
+/* v1.3: 旧配列を変更せず、用途・出典を持つレコードへ接続する。 */
+const namingSystems = {auto:"世界観に合わせる",japanese:"現代日本",wafu:"和風",modernWestern:"現代欧米",fantasy:"ファンタジー",chinese:"中華・東洋風",desert:"砂漠幻想風",scifi:"近未来・SF",mixed:"和洋折衷"};
+const namingCultures = {auto:"お任せ",en:"英語圏（米・英中心）",de:"ドイツ語圏",fr:"フランス語圏",it:"イタリア語圏",es:"スペイン語圏"};
+const namingMotifs = {legacy:"従来のファンタジー",german:"ドイツ語",gemstone:"宝石",constellation:"星座"};
+let selectedNameSystem="auto", selectedNameCulture="auto", selectedNameMotifs=[];
+const nameRecords = new Map(), legacyRecords = new WeakMap(), modernPools={};
+const nameSources = {};
+const fantasyPools = {german:[],gemstone:[],constellation:[]};
+const nameSearchKey = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const stableNameId = (scope,s) => scope+":"+encodeURIComponent(s.normalize("NFC"));
+function adaptLegacyNames(node,path=[]){
+  for(const [key,value] of Object.entries(node)){
+    const parts=path.concat(key);
+    if(!Array.isArray(value)){adaptLegacyNames(value,parts);continue;}
+    const system=parts[0]==="western"?"fantasy":parts[0];
+    const role=parts.includes("codenames")?"codename":parts.includes("givenNames")?"given":"family";
+    for(const item of value){
+      const id=stableNameId("legacy:"+parts.join("."), (item.kanji||item.kana)+"|"+item.roman);
+      const record={id,display:item.kanji||item.kana,original:item.roman,reading:item.reading||item.kana,
+        systems:[system],cultures:[],roles:[role],motifs:[],moodTags:item.tags||[],
+        genderAffinity:{kind:"editorial",values:[item.g||({male:"m",female:"f",neutral:"n"}[key])||"any"]},
+        originLanguage:null,originType:"legacy_unverified",sourceTerm:null,meaningJa:null,sources:[],legacyPaths:[parts.join(".")],modernUsage:{}};
+      nameRecords.set(id,record);legacyRecords.set(item,record);
+    }
+  }
+}
+adaptLegacyNames(nameData);
+function addModern(culture,gender,rows,source){
+  const role=gender==="family"?"family":"given";
+  modernPools[culture] ||= {given:[],family:[]};
+  for(const [original,reading] of rows){
+    // 同綴り・同用途だけを再利用。検索用アクセント除去キーでは統合しない。
+    let r=[...nameRecords.values()].find(n=>n.original===original && n.roles.includes(role) && (n.systems.includes("fantasy")||n.systems.includes("modernWestern")));
+    if(!r){r={id:stableNameId("modern:"+role,original),display:reading,reading,original,systems:[],cultures:[],roles:[role],motifs:[],moodTags:[],genderAffinity:{kind:"attested_usage",values:[]},originLanguage:null,originType:"attested_name",sourceTerm:original,meaningJa:null,sources:[],legacyPaths:[],modernUsage:{}};nameRecords.set(r.id,r);}
+    if(!r.systems.includes("modernWestern"))r.systems.push("modernWestern");
+    if(!r.cultures.includes(culture))r.cultures.push(culture);
+    r.modernUsage[culture] ||= {reading,genders:[],sources:[]};
+    const usage=r.modernUsage[culture];
+    if(!usage.genders.includes(gender))usage.genders.push(gender);
+    if(!usage.sources.includes(source))usage.sources.push(source);
+    if(!r.sources.includes(source))r.sources.push(source);
+    if(!modernPools[culture][role].includes(r.id))modernPools[culture][role].push(r.id);
+  }
+}
+function addMotif(original,reading,motif,roles,meaningJa,source,extra={}){
+  let r=[...nameRecords.values()].find(n=>n.original===original && (n.systems.includes("fantasy")||n.systems.includes("scifi")));
+  if(!r){r={id:stableNameId("word",original),display:reading,reading,original,systems:[],cultures:[],roles:[],motifs:[],moodTags:[],genderAffinity:{kind:"editorial",values:["any"]},originLanguage:null,originType:"source_word",sourceTerm:original,meaningJa,sources:[],legacyPaths:[],modernUsage:{}};nameRecords.set(r.id,r);}
+  r.motifUsage ||= {};
+  r.motifUsage[motif]={reading,roles,meaningJa,sourceTerm:original,originType:"source_word",sources:[source],...extra};
+  if(!fantasyPools[motif].some(n=>n.id===r.id))fantasyPools[motif].push(r);
+  r.systems=[...new Set(r.systems.concat("fantasy"))];r.roles=[...new Set(r.roles.concat(roles))];r.motifs=[...new Set(r.motifs.concat(motif))];r.sources=[...new Set(r.sources.concat(source))];
+}
+class NamingError extends Error{}
+function nameRandom(rng){const x=rng();if(!Number.isFinite(x)||x<0||x>=1)throw new NamingError("乱数を取得できませんでした。再度生成してください。");return x;}
+function namingWeight(item,moods){
+  const tags=[...new Set((moods||[]).filter(m=>m&&m!=="お任せ"))];
+  const have=new Set(item.moodTags||item.tags||[]);
+  return 1+(tags.length?0.75*tags.filter(t=>have.has(t)).length/tags.length:0);
+}
+function pickFromPool(pool,moods,rng=Math.random){
+  if(!pool||!pool.length)return null;
+  const weights=pool.map(n=>namingWeight(n,moods));
+  let target=nameRandom(rng)*weights.reduce((a,b)=>a+b,0);
+  for(let i=0;i<pool.length;i++){target-=weights[i];if(target<0)return pool[i];}
+  return pool[pool.length-1];
+}
+const nameHistory = new Map(), NAME_HISTORY_LIMIT=20;
+function cloneNameHistory(history){return new Map([...history].map(([k,v])=>[k,{given:v.given.slice(),full:v.full.slice()}]));}
+function rememberName(history,c){
+  if(c.manualName||!c.naming||!c.nameParts)return;
+  const key=c.naming.historyKey;
+  const h=history.get(key)||{given:[],full:[]};
+  h.given.push(c.nameParts.given?.id||c.nameParts.single?.id);
+  h.full.push(c.name||c.display);
+  h.given=h.given.slice(-NAME_HISTORY_LIMIT);h.full=h.full.slice(-NAME_HISTORY_LIMIT);history.set(key,h);
+}
+function avoidRecent(pool,recent,key){
+  // 候補が尽きたときだけ、最も古い履歴から緩和する。
+  for(let start=0;start<=recent.length;start++){
+    const blocked=new Set(recent.slice(start)),available=pool.filter(n=>!blocked.has(key(n)));
+    if(available.length)return available;
+  }
+  return [];
+}
+function uniqueRecords(pool){return [...new Map(pool.map(r=>[r.id,r])).values()];}
+function legacyPool(list){return (list||[]).map(n=>legacyRecords.get(n));}
+function legacyGenderPool(list,pg){return legacyPool((list||[]).filter(n=>n.g===({male:"m",female:"f",neutral:"n"}[pg])));}
+function recordPart(r,role,culture=null,motif=null){
+  const usage=culture?r.modernUsage[culture]:motif?r.motifUsage?.[motif]:null;
+  return {id:r.id,role,display:usage?.reading||r.display,reading:usage?.reading||r.reading,original:r.original,
+    originType:culture?"attested_name":usage?.originType||r.originType,sourceTerm:culture?r.original:usage?.sourceTerm||r.sourceTerm,
+    meaningJa:usage?.meaningJa||null,originLanguage:usage?.originLanguage||null,
+    classification:usage?.classification||null,latinCase:usage?.latinCase||null,genitive:usage?.genitive||null,
+    sources:usage?.sources||[],motifs:motif?[motif]:[],moodTags:r.moodTags};
+}
+function resolveNameSystem(worldKey,requested=selectedNameSystem){
+  if(requested!=="auto")return requested;
+  const key=worldDefs[worldKey]?.nameKey;
+  return key==="western"?"fantasy":key;
+}
+function generateName(worldKey,genderKey,moods,options={}){
+  const rng=options.rng||Math.random;
+  const choose=arr=>arr[Math.floor(nameRandom(rng)*arr.length)];
+  const system=resolveNameSystem(worldKey,options.system??selectedNameSystem);
+  let pg=genderDefs[genderKey]?.pool;
+  if(pg==="any")pg=choose(["male","female","neutral"]);
+  if(!pg||!namingSystems[system])throw new NamingError("名前の条件を確認してください。");
+  let culture=null,motif=null,notice="",givenPool=[],familyPool=[],codePool=[],givenRole="given",familyMotif=null,givenMotif=null;
+  const selected=options.culture??selectedNameCulture;
+  if(system==="modernWestern"){
+    culture=selected==="auto"?choose(Object.keys(namingCultures).filter(k=>k!=="auto")):selected;
+    const pools=modernPools[culture];
+    if(!pools)throw new NamingError("選択した言語圏の候補がありません。");
+    const all=pools.given.map(id=>nameRecords.get(id));
+    const g={male:"m",female:"f",neutral:"n"}[pg];
+    givenPool=all.filter(r=>{const a=r.modernUsage[culture].genders;return g==="n"?a.includes("m")&&a.includes("f"):a.includes(g);});
+    if(pg==="neutral"&&!givenPool.length){
+      const fallback=choose(["m","f"]);
+      givenPool=all.filter(r=>r.modernUsage[culture].genders.includes(fallback));
+      notice="この言語圏では男女両方の用例を確認した中性名が未収録のため、男女の名を同じ確率で選んでいます。人物の中性的な印象は保持します。";
+    }
+    familyPool=pools.family.map(id=>nameRecords.get(id));
+  }else if(system==="fantasy"){
+    const motifs=[...new Set(options.motifs??selectedNameMotifs)];
+    if(motifs.some(m=>!namingMotifs[m]))throw new NamingError("着想元の条件を確認してください。");
+    motif=choose(motifs.length?motifs:Object.keys(namingMotifs));
+    givenPool=legacyGenderPool(nameData.western.givenNames,pg);
+    familyPool=legacyPool((worldKey==="royal"||(worldKey==="dark"&&nameRandom(rng)<.3)||nameRandom(rng)<.25)?nameData.western.nobleNames:nameData.western.familyNames);
+    if(motif!=="legacy"){
+      const themed=uniqueRecords(fantasyPools[motif]||[]);
+      const asGiven=themed.filter(r=>r.motifUsage[motif].roles.includes("given"));
+      const asFamily=themed.filter(r=>r.motifUsage[motif].roles.includes("family"));
+      if(asGiven.length&&(!asFamily.length||nameRandom(rng)<.75)){givenPool=asGiven;givenMotif=motif;}
+      else{familyPool=asFamily;familyMotif=motif;}
+      // ドイツ語の家名には短いゲルマン風の既存名を合わせる（創作上の編集）。
+      if(motif==="german"){
+        const compatible=givenPool.filter(r=>/^(?:Alaric|Cedric|Edgar|Edmund|Erik|Felix|Hugo|Leon|Oscar|Otto|Roland|Victor|Ada|Alma|Clara|Emma|Erika|Frida|Greta|Hilda|Iris|Marta|Nora|Rosa|Haldren|Brenwin|Tervin|Adel|Elwin|Rene|Robin)/i.test(r.original));
+        if(compatible.length>=5)givenPool=compatible;
+      }
+    }
+    if(worldKey==="nonhuman"&&!familyMotif&&nameRandom(rng)<.5){familyPool=[];givenRole="single";}
+  }else if(system==="japanese"||system==="wafu"||system==="chinese"){
+    givenPool=legacyPool(nameData[system].givenNames[pg]);familyPool=legacyPool(nameData[system].surnames);
+  }else if(system==="mixed"){
+    givenPool=legacyGenderPool(nameData.western.givenNames,pg);familyPool=legacyPool(nameData.japanese.surnames);
+  }else if(system==="desert"){
+    givenPool=legacyGenderPool(nameData.desert.givenNames,pg);
+    if(nameRandom(rng)<.65)familyPool=legacyPool(nameData.desert.familyNames);else givenRole="single";
+  }else if(system==="scifi"){
+    givenPool=legacyGenderPool(nameData.scifi.givenNames,pg);codePool=legacyPool(nameData.scifi.codenames);givenRole="single";
+  }
+  const historyKey=[system,culture||"-",pg,motif||"-"].join("|");
+  const recent=options.history?.get(historyKey)||{given:[],full:[]};
+  givenPool=uniqueRecords(givenPool);familyPool=uniqueRecords(familyPool);
+  if(["fantasy","desert"].includes(system)&&givenRole!=="single"&&!familyPool.length)throw new NamingError("この条件に使える家名の候補がありません。条件を調整してください。");
+  if(!givenPool.length || (system==="modernWestern"&&!familyPool.length) || (familyMotif&&!familyPool.length) || (["japanese","wafu","chinese","mixed"].includes(system)&&!familyPool.length) || (system==="scifi"&&!codePool.length))throw new NamingError("この条件に使える名前の候補がありません。系統・言語圏・性別の条件を調整してください。");
+  const giv=pickFromPool(avoidRecent(givenPool,recent.given,n=>n.id),moods,rng);
+  const g=recordPart(giv,givenRole,culture,givenMotif);
+  const format=f=>{
+    if(!f)return {display:g.display,reading:g.reading,roman:g.original};
+    if(system==="japanese"||system==="wafu"||system==="mixed")return {display:f.display+" "+g.display,reading:f.reading+" "+g.reading,roman:g.original+" "+f.original};
+    if(system==="chinese")return {display:f.display+g.display,reading:f.reading+"・"+g.reading,roman:f.original+" "+g.original};
+    return {display:g.display+"・"+f.display,reading:g.reading+"・"+f.reading,roman:g.original+" "+f.original};
+  };
+  let f=null;
+  if(familyPool.length){
+    familyPool=avoidRecent(familyPool,recent.full,r=>format(recordPart(r,"family",culture,familyMotif)).display);
+    f=recordPart(pickFromPool(familyPool,moods,rng),"family",culture,familyMotif);
+  }
+  const code=codePool.length?recordPart(pickFromPool(codePool,moods,rng),"codename"):null;
+  const nameParts={[givenRole]:g};if(f)nameParts.family=f;if(code)nameParts.codename=code;
+  return {...format(f),codename:code?code.display+"（"+code.original+"）":null,
+    tags:[...new Set(giv.moodTags.concat(f?nameRecords.get(f.id).moodTags:[]))],nameParts,
+    naming:{system,culture,motif,genderPool:pg,historyKey,notice}};
+}
+function generateMultiple(count,options={}){
+  if(!Number.isInteger(count)||count<1||count>5)throw new NamingError("生成件数は1〜5人で指定してください。");
+  const out=[],usedNames=new Set(),usedCatch=new Set(),usedFamilies=new Set();
+  const staged=cloneNameHistory(options.history||new Map());
+  for(let i=0;i<count;i++){
+    let ch=null,accepted=false;
+    for(let retry=0;retry<128;retry++){
+      ch=generateFullCharacter({...options,history:staged});
+      if(ch.name&&!ch.manualName&&usedNames.has(ch.name))continue;
+      if(ch.catch&&usedCatch.has(ch.catch)&&retry<8)continue;
+      const family=ch.nameParts?.family?.id;
+      if(family&&usedFamilies.has(family)&&retry<5)continue;
+      accepted=true;break;
+    }
+    if(!accepted)throw new NamingError(count+"人分の重複しない名前を選べませんでした（候補不足、または再抽選128回に到達）。条件を広げるか、1人生成をお試しください。");
+    if(ch.name&&!ch.manualName)usedNames.add(ch.name);
+    if(ch.nameParts?.family)usedFamilies.add(ch.nameParts.family.id);
+    if(ch.catch)usedCatch.add(ch.catch);
+    out.push(ch);rememberName(staged,ch);
+  }
+  // 呼び出し元が表示できた後にだけ、セッション履歴を確定する。
+  Object.defineProperty(out,"nextHistory",{value:staged});return out;
+}
+
+/* v1.3 curated names. 読み・用途は編集上の提案。出典の順位を抽選率にしない。 */
+Object.assign(nameSources,{
+  ssa80:{title:"SSA・1980年代",url:"https://www.ssa.gov/oact/babynames/decades/names1980s.html",region:"米国",period:"1980–1989",kind:"出生名統計",proves:"名の綴りと男女別の登録用例"},
+  ssa00:{title:"SSA・2000年代",url:"https://www.ssa.gov/oact/babynames/decades/names2000s.html",region:"米国",period:"2000–2009",kind:"出生名統計",proves:"名の綴りと男女別の登録用例"},
+  census:{title:"US Census・姓",url:"https://www.census.gov/topics/population/genealogy/data/2010_surnames.html",region:"米国",period:"2010",kind:"国勢調査の姓の集計",proves:"姓の登録用例。民族・名の言語を特定する資料ではない"},
+  gfdsGiven:{title:"GfdS・名",url:"https://gfds.de/vornamen/beliebteste-vornamen/",region:"ドイツ",period:"1977–2025から照合",kind:"登録された出生名の年別集計",proves:"名の綴りと男女別の用例。成人全体の頻度ではない"},
+  gfdsFamily:{title:"GfdS・姓",url:"https://gfds.de/vornamen/familiennamen/",region:"ドイツ",period:"1995年の電話帳／1999年刊行資料",kind:"姓の研究資料",proves:"姓の綴りと使用例。現在の全国民の頻度ではない"},
+  inseeGiven:{title:"INSEE・名",url:"https://www.insee.fr/fr/statistiques/8595130",region:"フランス（2012年以前はマヨットを除く）",period:"1900–2025／選定では1960・1980・2000・2024年等を照合",kind:"出生名統計",proves:"名の綴りと男女別の登録用例"},
+  inseeFamily:{title:"INSEE・姓",url:"https://www.insee.fr/fr/statistiques/3536630",region:"フランス、資料記載の出生地域・生存条件に限定",period:"1891–2000",kind:"出生時の姓の歴史集計",proves:"姓の使用例。大文字・省略アクセントは表示用に整形。現在の人口順位ではない"},
+  bolognaGiven:{title:"ボローニャ市統計・名",url:"https://inumeridibolognametropolitana.it/dati-statistici/graduatoria-ordine-decrescente-dei-nomi-maschili-e-femminili-piu-comuni-tra-i",region:"イタリア・ボローニャ市",period:"2024-12-31（複数世代の住民）",kind:"住民の男女別の名",proves:"同市での使用例。イタリア全国の順位ではない"},
+  bolognaFamily:{title:"ボローニャ市統計・姓",url:"https://inumeridibolognametropolitana.it/dati-statistici/graduatoria-ordine-decrescente-dei-cognomi-piu-comuni-bologna-al-31-dicembre",region:"イタリア・ボローニャ市",period:"2024-12-31",kind:"住民の姓",proves:"同市での姓の使用例。イタリア全国の順位ではない"},
+  ineGiven:{title:"INE・住民の名",url:"https://www.ine.es/daco/daco42/nombyapel/nombres_mas_frecuentes.xlsx",region:"スペイン",period:"2025-01-01",kind:"住民全体の名の集計",proves:"複数世代の住民の名の使用例。統計表はアクセントを省略し、表示では通常表記を採用"},
+  ineFamily:{title:"INE・住民の姓",url:"https://www.ine.es/daco/daco42/nombyapel/apellidos_mas_frecuentes.xls",region:"スペイン",period:"2025-01-01",kind:"住民の姓の集計",proves:"姓の使用例。統計表はアクセントを省略し、表示では通常表記を採用。姓は一つ選ぶ"},
+  naoj:{title:"国立天文台・星座一覧",url:"https://www.nao.ac.jp/new-info/constellation2.html",region:"国際的な星座の学名・日本語名",period:"2026-09-22確認",kind:"星座名一覧",proves:"ラテン語学名と和名。人物名としての実在性は示さない"},
+});
+{
+  const rows=s=>s.split("|").map(x=>x.split("="));
+  const add=(culture,g,s,source)=>addModern(culture,g,rows(s),source);
+  add("en","m","Michael=マイケル|Christopher=クリストファー|Matthew=マシュー|Joshua=ジョシュア|David=デイヴィッド|James=ジェームズ|Daniel=ダニエル|Robert=ロバート|John=ジョン|Joseph=ジョゼフ|Jason=ジェイソン|Justin=ジャスティン|Andrew=アンドリュー|Ryan=ライアン|William=ウィリアム|Brian=ブライアン|Brandon=ブランドン|Jonathan=ジョナサン|Nicholas=ニコラス|Anthony=アンソニー", "ssa80");
+  add("en","m","Jacob=ジェイコブ|Ethan=イーサン|Alexander=アレクサンダー|Tyler=タイラー|Noah=ノア|Benjamin=ベンジャミン|Samuel=サミュエル|Dylan=ディラン|Nathan=ネイサン|Logan=ローガン", "ssa00");
+  add("en","f","Jessica=ジェシカ|Jennifer=ジェニファー|Amanda=アマンダ|Ashley=アシュリー|Sarah=サラ|Stephanie=ステファニー|Melissa=メリッサ|Nicole=ニコール|Elizabeth=エリザベス|Heather=ヘザー|Tiffany=ティファニー|Michelle=ミシェル|Amber=アンバー|Megan=メーガン|Amy=エイミー|Rachel=レイチェル|Kimberly=キンバリー|Christina=クリスティーナ|Lauren=ローレン|Crystal=クリスタル", "ssa80");
+  add("en","f","Emily=エミリー|Madison=マディソン|Emma=エマ|Olivia=オリヴィア|Hannah=ハンナ|Abigail=アビゲイル|Isabella=イザベラ|Samantha=サマンサ|Sophia=ソフィア|Grace=グレイス", "ssa00");
+  for(const g of ["m","f"])add("en",g,"Casey=ケイシー|Jamie=ジェイミー", "ssa80");
+  for(const g of ["m","f"])add("en",g,"Taylor=テイラー", "ssa80");
+  for(const g of ["m","f"])add("en",g,"Jordan=ジョーダン", "ssa00");
+  add("en","family","Smith=スミス|Johnson=ジョンソン|Williams=ウィリアムズ|Brown=ブラウン|Jones=ジョーンズ|Miller=ミラー|Davis=デイヴィス|Wilson=ウィルソン|Anderson=アンダーソン|Thomas=トーマス|Taylor=テイラー|Moore=ムーア|Jackson=ジャクソン|Martin=マーティン|Lee=リー|Thompson=トンプソン|White=ホワイト|Harris=ハリス|Clark=クラーク|Lewis=ルイス|Robinson=ロビンソン|Walker=ウォーカー|Young=ヤング|Allen=アレン|King=キング|Wright=ライト|Scott=スコット|Green=グリーン|Baker=ベイカー|Adams=アダムズ", "census");
+  add("de","m","Michael=ミヒャエル|Thomas=トーマス|Andreas=アンドレアス|Stefan=シュテファン|Markus=マルクス|Matthias=マティアス|Christian=クリスティアン|Daniel=ダニエル|Sebastian=ゼバスティアン|Tobias=トビアス|Florian=フローリアン|Philipp=フィリップ|Alexander=アレクサンダー|Jan=ヤン|Lukas=ルーカス|Niklas=ニクラス|Tim=ティム|Jonas=ヨーナス|Maximilian=マクシミリアン|Felix=フェーリクス|Leon=レオン|Paul=パウル|Noah=ノア|Elias=エリアス|Emil=エーミール|Theo=テオ|Leo=レオ|Ben=ベン|Finn=フィン|Henry=ヘンリー", "gfdsGiven");
+  add("de","f","Julia=ユーリア|Sabrina=ザブリナ|Stefanie=シュテファニー|Nicole=ニコレ|Sandra=ザンドラ|Melanie=メラニー|Kathrin=カトリン|Kerstin=ケルスティン|Tanja=ターニャ|Simone=ジモーネ|Daniela=ダニエラ|Nadine=ナディーネ|Jennifer=ジェニファー|Vanessa=ヴァネッサ|Lisa=リーザ|Katharina=カタリーナ|Sarah=ザーラ|Laura=ラウラ|Anna=アンナ|Lena=レーナ|Leonie=レオニー|Johanna=ヨハンナ|Marie=マリー|Emma=エマ|Mia=ミア|Emilia=エミーリア|Lina=リーナ|Ella=エラ|Mila=ミラ|Clara=クララ", "gfdsGiven");
+  add("de","family","Müller=ミュラー|Schmidt=シュミット|Schneider=シュナイダー|Fischer=フィッシャー|Meyer=マイヤー|Weber=ヴェーバー|Schulz=シュルツ|Wagner=ヴァーグナー|Becker=ベッカー|Hoffmann=ホフマン|Schäfer=シェーファー|Koch=コッホ|Bauer=バウアー|Schröder=シュレーダー|Klein=クライン|Richter=リヒター|Wolf=ヴォルフ|Neumann=ノイマン|Schwarz=シュヴァルツ|Schmitz=シュミッツ|Krüger=クリューガー|Braun=ブラウン|Zimmermann=ツィンマーマン|Schmitt=シュミット|Lange=ランゲ|Hartmann=ハルトマン|Hofmann=ホーフマン|Krause=クラウゼ|Werner=ヴェルナー|Meier=マイアー", "gfdsFamily");
+  add("fr","m","Jean=ジャン|Pierre=ピエール|Michel=ミシェル|Alain=アラン|Philippe=フィリップ|Patrick=パトリック|Jacques=ジャック|François=フランソワ|Laurent=ローラン|Christophe=クリストフ|Nicolas=ニコラ|Stéphane=ステファン|Olivier=オリヴィエ|Sébastien=セバスティアン|David=ダヴィッド|Julien=ジュリアン|Thomas=トマ|Alexandre=アレクサンドル|Antoine=アントワーヌ|Maxime=マクシム|Lucas=リュカ|Hugo=ユーゴ|Louis=ルイ|Gabriel=ガブリエル|Raphaël=ラファエル|Arthur=アルテュール|Jules=ジュール|Léo=レオ|Paul=ポール|Nathan=ナタン", "inseeGiven");
+  add("fr","f","Marie=マリー|Anne=アンヌ|Françoise=フランソワーズ|Catherine=カトリーヌ|Christine=クリスティーヌ|Isabelle=イザベル|Nathalie=ナタリー|Valérie=ヴァレリー|Sylvie=シルヴィ|Véronique=ヴェロニク|Sandrine=サンドリーヌ|Sophie=ソフィー|Céline=セリーヌ|Virginie=ヴィルジニー|Émilie=エミリー|Julie=ジュリー|Aurélie=オレリー|Marion=マリオン|Laura=ローラ|Sarah=サラ|Léa=レア|Chloé=クロエ|Manon=マノン|Emma=エマ|Jade=ジャド|Louise=ルイーズ|Alice=アリス|Charlotte=シャルロット|Inès=イネス|Élise=エリーズ", "inseeGiven");
+  for(const g of ["m","f"])add("fr",g,"Camille=カミーユ|Claude=クロード|Dominique=ドミニク", "inseeGiven");
+  add("fr","family","Martin=マルタン|Bernard=ベルナール|Thomas=トマ|Petit=プティ|Robert=ロベール|Richard=リシャール|Durand=デュラン|Dubois=デュボワ|Moreau=モロー|Laurent=ローラン|Simon=シモン|Michel=ミシェル|Lefebvre=ルフェーヴル|Leroy=ルロワ|Roux=ルー|David=ダヴィッド|Bertrand=ベルトラン|Morel=モレル|Fournier=フルニエ|Girard=ジラール|Bonnet=ボネ|Dupont=デュポン|Lambert=ランベール|Fontaine=フォンテーヌ|Rousseau=ルソー|Vincent=ヴァンサン|Muller=ミュレール|Lefèvre=ルフェーヴル|Faure=フォール|André=アンドレ", "inseeFamily");
+  add("it","m","Andrea=アンドレア|Marco=マルコ|Luca=ルカ|Alessandro=アレッサンドロ|Francesco=フランチェスコ|Giuseppe=ジュゼッペ|Giovanni=ジョヴァンニ|Roberto=ロベルト|Stefano=ステファノ|Paolo=パオロ|Matteo=マッテオ|Massimo=マッシモ|Davide=ダヴィデ|Fabio=ファビオ|Antonio=アントニオ|Simone=シモーネ|Luigi=ルイジ|Riccardo=リッカルド|Michele=ミケーレ|Alberto=アルベルト|Federico=フェデリーコ|Giorgio=ジョルジョ|Carlo=カルロ|Daniele=ダニエーレ|Enrico=エンリーコ|Gabriele=ガブリエーレ|Nicola=ニコラ|Sergio=セルジョ|Leonardo=レオナルド|Filippo=フィリッポ", "bolognaGiven");
+  add("it","f","Maria=マリーア|Anna=アンナ|Giulia=ジュリア|Francesca=フランチェスカ|Elena=エレーナ|Laura=ラウラ|Paola=パオラ|Sara=サーラ|Chiara=キアーラ|Silvia=シルヴィア|Daniela=ダニエーラ|Valentina=ヴァレンティーナ|Alessandra=アレッサンドラ|Elisabetta=エリザベッタ|Cristina=クリスティーナ|Federica=フェデリーカ|Roberta=ロベルタ|Barbara=バルバラ|Patrizia=パトリツィア|Monica=モニカ|Simona=シモーナ|Claudia=クラウディア|Ilaria=イラーリア|Lucia=ルチーア|Antonella=アントネッラ|Stefania=ステファニア|Sofia=ソフィア|Irene=イレーネ|Angela=アンジェラ|Gabriella=ガブリエッラ", "bolognaGiven");
+  add("it","family","Rossi=ロッシ|Venturi=ヴェントゥーリ|Ferrari=フェッラーリ|Fabbri=ファッブリ|Russo=ルッソ|Montanari=モンタナーリ|Barbieri=バルビエーリ|Nanni=ナンニ|Gamberini=ガンベリーニ|Monti=モンティ|Ventura=ヴェントゥーラ|Neri=ネーリ|Bernardi=ベルナルディ|Esposito=エスポジト|Serra=セッラ|Grandi=グランディ|Ricci=リッチ|Degli Esposti=デリ・エスポスティ|Lolli=ロッリ|Ferri=フェッリ|Martelli=マルテッリ|Sarti=サルティ|Righi=リーギ|Bianchi=ビアンキ|Conti=コンティ|Romano=ロマーノ|Calzolari=カルツォラーリ|Rinaldi=リナルディ|Romagnoli=ロマニョーリ|Costa=コスタ", "bolognaFamily");
+  add("es","m","Antonio=アントニオ|Manuel=マヌエル|José=ホセ|Francisco=フランシスコ|David=ダビド|Juan=フアン|Javier=ハビエル|Daniel=ダニエル|Luis=ルイス|Carlos=カルロス|Jesús=ヘスス|Alejandro=アレハンドロ|Miguel=ミゲル|Rafael=ラファエル|Pedro=ペドロ|Pablo=パブロ|Ángel=アンヘル|Sergio=セルヒオ|Fernando=フェルナンド|Jorge=ホルヘ|Alberto=アルベルト|Diego=ディエゴ|Adrián=アドリアン|Álvaro=アルバロ|Raúl=ラウル|Enrique=エンリケ|Ramón=ラモン|Vicente=ビセンテ|Iván=イバン|Rubén=ルベン", "ineGiven");
+  add("es","f","María=マリア|Carmen=カルメン|Ana=アナ|Isabel=イサベル|Laura=ラウラ|Dolores=ドロレス|Pilar=ピラール|Teresa=テレサ|Josefa=ホセファ|Rosa=ロサ|Cristina=クリスティナ|Marta=マルタ|Lucía=ルシア|Paula=パウラ|Sara=サラ|Elena=エレナ|Sofía=ソフィア|Raquel=ラケル|Rocío=ロシオ|Patricia=パトリシア|Silvia=シルビア|Andrea=アンドレア|Beatriz=ベアトリス|Julia=フリア|Nuria=ヌリア|Alba=アルバ|Ángela=アンヘラ|Irene=イレネ|Victoria=ビクトリア|Mercedes=メルセデス", "ineGiven");
+  add("es","family","García=ガルシア|Rodríguez=ロドリゲス|González=ゴンサレス|Fernández=フェルナンデス|López=ロペス|Martínez=マルティネス|Sánchez=サンチェス|Pérez=ペレス|Gómez=ゴメス|Martín=マルティン|Jiménez=ヒメネス|Ruiz=ルイス|Hernández=エルナンデス|Díaz=ディアス|Moreno=モレノ|Muñoz=ムニョス|Álvarez=アルバレス|Romero=ロメロ|Alonso=アロンソ|Gutiérrez=グティエレス|Navarro=ナバロ|Torres=トレス|Domínguez=ドミンゲス|Vázquez=バスケス|Ramos=ラモス|Ramírez=ラミレス|Gil=ヒル|Serrano=セラノ|Blanco=ブランコ|Molina=モリナ", "ineFamily");
+}
+
+/* Source words: fantasy roles are editorial choices, not claims of human usage. */
+nameSources["duden:Nebel"]={"title":"Duden・Nebel","url":"https://www.duden.de/rechtschreibung/Nebel","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Nebel","ネーベル","german",["family"],"霧","duden:Nebel",{"originLanguage":"de"});
+nameSources["duden:Silber"]={"title":"Duden・Silber","url":"https://www.duden.de/rechtschreibung/Silber","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Silber","ジルバー","german",["family"],"銀","duden:Silber",{"originLanguage":"de"});
+nameSources["duden:Bernstein"]={"title":"Duden・Bernstein","url":"https://www.duden.de/rechtschreibung/Bernstein_Schmuckstein","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Bernstein","ベルンシュタイン","german",["family"],"琥珀（化石化した樹脂）","duden:Bernstein",{"originLanguage":"de"});
+addMotif("Bernstein","ベルンシュタイン","gemstone",["family"],"琥珀（化石化した樹脂）","duden:Bernstein",{"originLanguage":"de","classification":"有機質宝飾素材・化石樹脂"});
+nameSources["duden:Stein"]={"title":"Duden・Stein","url":"https://www.duden.de/rechtschreibung/Stein","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Stein","シュタイン","german",["family"],"石","duden:Stein",{"originLanguage":"de"});
+nameSources["duden:Fels"]={"title":"Duden・Fels","url":"https://www.duden.de/rechtschreibung/Fels_Gestein","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Fels","フェルス","german",["family"],"岩","duden:Fels",{"originLanguage":"de"});
+nameSources["duden:Berg"]={"title":"Duden・Berg","url":"https://www.duden.de/rechtschreibung/Berg_Erhebung","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Berg","ベルク","german",["family"],"山","duden:Berg",{"originLanguage":"de"});
+nameSources["duden:Tal"]={"title":"Duden・Tal","url":"https://www.duden.de/rechtschreibung/Tal","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Tal","タール","german",["family"],"谷","duden:Tal",{"originLanguage":"de"});
+nameSources["duden:Wald"]={"title":"Duden・Wald","url":"https://www.duden.de/rechtschreibung/Wald","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Wald","ヴァルト","german",["family"],"森林","duden:Wald",{"originLanguage":"de"});
+nameSources["duden:Hain"]={"title":"Duden・Hain","url":"https://www.duden.de/rechtschreibung/Hain","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Hain","ハイン","german",["family"],"小さな森・林","duden:Hain",{"originLanguage":"de"});
+nameSources["duden:Eiche"]={"title":"Duden・Eiche","url":"https://www.duden.de/rechtschreibung/Eiche_Baum","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Eiche","アイヒェ","german",["family"],"オークの木","duden:Eiche",{"originLanguage":"de"});
+nameSources["duden:Linde"]={"title":"Duden・Linde","url":"https://www.duden.de/rechtschreibung/Linde","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Linde","リンデ","german",["family"],"シナノキ類の木","duden:Linde",{"originLanguage":"de"});
+nameSources["duden:Buche"]={"title":"Duden・Buche","url":"https://www.duden.de/rechtschreibung/Buche","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Buche","ブーヒェ","german",["family"],"ブナの木","duden:Buche",{"originLanguage":"de"});
+nameSources["duden:Esche"]={"title":"Duden・Esche","url":"https://www.duden.de/rechtschreibung/Esche","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Esche","エッシェ","german",["family"],"トネリコ類の木","duden:Esche",{"originLanguage":"de"});
+nameSources["duden:Erle"]={"title":"Duden・Erle","url":"https://www.duden.de/rechtschreibung/Erle","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Erle","エルレ","german",["family"],"ハンノキ類の木","duden:Erle",{"originLanguage":"de"});
+nameSources["duden:Birke"]={"title":"Duden・Birke","url":"https://www.duden.de/rechtschreibung/Birke","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Birke","ビルケ","german",["family"],"カバノキ類の木","duden:Birke",{"originLanguage":"de"});
+nameSources["duden:Ahorn"]={"title":"Duden・Ahorn","url":"https://www.duden.de/rechtschreibung/Ahorn","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Ahorn","アホルン","german",["family"],"カエデ類の木","duden:Ahorn",{"originLanguage":"de"});
+nameSources["duden:Tanne"]={"title":"Duden・Tanne","url":"https://www.duden.de/rechtschreibung/Tanne","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Tanne","タンネ","german",["family"],"モミの木","duden:Tanne",{"originLanguage":"de"});
+nameSources["duden:Fichte"]={"title":"Duden・Fichte","url":"https://www.duden.de/rechtschreibung/Fichte_Nadelbaum","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Fichte","フィヒテ","german",["family"],"トウヒ類の木","duden:Fichte",{"originLanguage":"de"});
+nameSources["duden:Dorn"]={"title":"Duden・Dorn","url":"https://www.duden.de/rechtschreibung/Dorn","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Dorn","ドルン","german",["family"],"植物のとげ","duden:Dorn",{"originLanguage":"de"});
+nameSources["duden:Farn"]={"title":"Duden・Farn","url":"https://www.duden.de/rechtschreibung/Farn","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Farn","ファルン","german",["family"],"シダ","duden:Farn",{"originLanguage":"de"});
+nameSources["duden:Moos"]={"title":"Duden・Moos","url":"https://www.duden.de/rechtschreibung/Moos","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Moos","モース","german",["family"],"苔","duden:Moos",{"originLanguage":"de"});
+nameSources["duden:Quelle"]={"title":"Duden・Quelle","url":"https://www.duden.de/rechtschreibung/Quelle","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Quelle","クヴェレ","german",["family"],"泉・水源","duden:Quelle",{"originLanguage":"de"});
+nameSources["duden:Bach"]={"title":"Duden・Bach","url":"https://www.duden.de/rechtschreibung/Bach_Wasserlauf","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Bach","バッハ","german",["family"],"小川","duden:Bach",{"originLanguage":"de"});
+nameSources["duden:Fluss"]={"title":"Duden・Fluss","url":"https://www.duden.de/rechtschreibung/Fluss","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Fluss","フルス","german",["family"],"川","duden:Fluss",{"originLanguage":"de"});
+nameSources["duden:Ufer"]={"title":"Duden・Ufer","url":"https://www.duden.de/rechtschreibung/Ufer","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Ufer","ウーファー","german",["family"],"岸辺","duden:Ufer",{"originLanguage":"de"});
+nameSources["duden:Regen"]={"title":"Duden・Regen","url":"https://www.duden.de/rechtschreibung/Regen_Niederschlag","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Regen","レーゲン","german",["family"],"雨","duden:Regen",{"originLanguage":"de"});
+nameSources["duden:Schnee"]={"title":"Duden・Schnee","url":"https://www.duden.de/rechtschreibung/Schnee","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Schnee","シュネー","german",["family"],"雪","duden:Schnee",{"originLanguage":"de"});
+nameSources["duden:Frost"]={"title":"Duden・Frost","url":"https://www.duden.de/rechtschreibung/Frost","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Frost","フロスト","german",["family"],"氷点下の寒さ","duden:Frost",{"originLanguage":"de"});
+nameSources["duden:Wind"]={"title":"Duden・Wind","url":"https://www.duden.de/rechtschreibung/Wind","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Wind","ヴィント","german",["family"],"風","duden:Wind",{"originLanguage":"de"});
+nameSources["duden:Sturm"]={"title":"Duden・Sturm","url":"https://www.duden.de/rechtschreibung/Sturm_Wind","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Sturm","シュトゥルム","german",["family"],"嵐・暴風","duden:Sturm",{"originLanguage":"de"});
+nameSources["duden:Glanz"]={"title":"Duden・Glanz","url":"https://www.duden.de/rechtschreibung/Glanz","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Glanz","グランツ","german",["family"],"輝き","duden:Glanz",{"originLanguage":"de"});
+nameSources["duden:Licht"]={"title":"Duden・Licht","url":"https://www.duden.de/rechtschreibung/Licht","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Licht","リヒト","german",["family"],"光","duden:Licht",{"originLanguage":"de"});
+nameSources["duden:Funke"]={"title":"Duden・Funke","url":"https://www.duden.de/rechtschreibung/Funke","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Funke","フンケ","german",["family"],"火花","duden:Funke",{"originLanguage":"de"});
+nameSources["duden:Eis"]={"title":"Duden・Eis","url":"https://www.duden.de/rechtschreibung/Eis_Gefrorenes","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Eis","アイス","german",["family"],"氷","duden:Eis",{"originLanguage":"de"});
+nameSources["duden:Wolke"]={"title":"Duden・Wolke","url":"https://www.duden.de/rechtschreibung/Wolke","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Wolke","ヴォルケ","german",["family"],"雲","duden:Wolke",{"originLanguage":"de"});
+nameSources["duden:Blitz"]={"title":"Duden・Blitz","url":"https://www.duden.de/rechtschreibung/Blitz","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Blitz","ブリッツ","german",["family"],"稲妻","duden:Blitz",{"originLanguage":"de"});
+nameSources["duden:Donner"]={"title":"Duden・Donner","url":"https://www.duden.de/rechtschreibung/Donner","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Donner","ドンナー","german",["family"],"雷鳴","duden:Donner",{"originLanguage":"de"});
+nameSources["duden:Gold"]={"title":"Duden・Gold","url":"https://www.duden.de/rechtschreibung/Gold","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Gold","ゴルト","german",["family"],"金","duden:Gold",{"originLanguage":"de"});
+nameSources["duden:Kupfer"]={"title":"Duden・Kupfer","url":"https://www.duden.de/rechtschreibung/Kupfer","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Kupfer","クプファー","german",["family"],"銅","duden:Kupfer",{"originLanguage":"de"});
+nameSources["duden:Falke"]={"title":"Duden・Falke","url":"https://www.duden.de/rechtschreibung/Falke","region":"ドイツ語","period":"2026-09-22確認","kind":"一般語の辞書","proves":"原語の綴りと意味。人名としての使用や性別適性は示さない"};
+addMotif("Falke","ファルケ","german",["family"],"ハヤブサ類の鳥","duden:Falke",{"originLanguage":"de"});
+nameSources["gia:Beryl"]={"title":"GIA・Beryl","url":"https://www.gia.edu/gia-gem-project-beryl","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Beryl","ベリル","gemstone",["given","single"],"緑柱石","gia:Beryl",{"originLanguage":"en","classification":"鉱物"});
+nameSources["gia:Spinel"]={"title":"GIA・Spinel","url":"https://www.gia.edu/spinel","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Spinel","スピネル","gemstone",["given","single"],"スピネル","gia:Spinel",{"originLanguage":"en","classification":"鉱物"});
+nameSources["gia:Garnet"]={"title":"GIA・Garnet","url":"https://www.gia.edu/garnet","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Garnet","ガーネット","gemstone",["given","single"],"ガーネット（ざくろ石）","gia:Garnet",{"originLanguage":"en","classification":"鉱物グループ"});
+nameSources["gia:Amber"]={"title":"GIA・Amber","url":"https://www.gia.edu/amber","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Amber","アンバー","gemstone",["given","single"],"琥珀","gia:Amber",{"originLanguage":"en","classification":"有機質宝飾素材・化石樹脂"});
+nameSources["gia:Pearl"]={"title":"GIA・Pearl","url":"https://www.gia.edu/pearl","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Pearl","パール","gemstone",["given","single"],"真珠","gia:Pearl",{"originLanguage":"en","classification":"生物由来の宝飾素材"});
+nameSources["gia:Opal"]={"title":"GIA・Opal","url":"https://www.gia.edu/opal","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Opal","オパール","gemstone",["given","single"],"オパール","gia:Opal",{"originLanguage":"en","classification":"非晶質の含水シリカ・準鉱物"});
+nameSources["gia:Ruby"]={"title":"GIA・Ruby","url":"https://www.gia.edu/ruby","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Ruby","ルビー","gemstone",["given","single"],"ルビー","gia:Ruby",{"originLanguage":"en","classification":"コランダムの宝石変種"});
+nameSources["gia:Sapphire"]={"title":"GIA・Sapphire","url":"https://www.gia.edu/sapphire","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Sapphire","サファイア","gemstone",["given","single"],"サファイア","gia:Sapphire",{"originLanguage":"en","classification":"コランダムの宝石変種"});
+nameSources["gia:Topaz"]={"title":"GIA・Topaz","url":"https://www.gia.edu/topaz","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Topaz","トパーズ","gemstone",["given","single"],"トパーズ（黄玉）","gia:Topaz",{"originLanguage":"en","classification":"鉱物"});
+nameSources["gia:Citrine"]={"title":"GIA・Citrine","url":"https://www.gia.edu/citrine","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Citrine","シトリン","gemstone",["given","single"],"シトリン（黄水晶）","gia:Citrine",{"originLanguage":"en","classification":"石英の変種"});
+nameSources["gia:Zircon"]={"title":"GIA・Zircon","url":"https://www.gia.edu/zircon","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Zircon","ジルコン","gemstone",["given","single"],"ジルコン","gia:Zircon",{"originLanguage":"en","classification":"鉱物"});
+nameSources["gia:Aquamarine"]={"title":"GIA・Aquamarine","url":"https://www.gia.edu/aquamarine","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Aquamarine","アクアマリン","gemstone",["given","single"],"アクアマリン","gia:Aquamarine",{"originLanguage":"en","classification":"ベリルの青～青緑色の宝石変種"});
+nameSources["gia:Morganite"]={"title":"GIA・Morganite","url":"https://www.gia.edu/morganite","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Morganite","モルガナイト","gemstone",["given","single"],"モルガナイト","gia:Morganite",{"originLanguage":"en","classification":"ベリルの桃色系の宝石変種"});
+nameSources["gia:Amethyst"]={"title":"GIA・Amethyst","url":"https://www.gia.edu/amethyst","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Amethyst","アメシスト","gemstone",["given","single"],"アメシスト（紫水晶）","gia:Amethyst",{"originLanguage":"en","classification":"石英の変種"});
+nameSources["gia:Emerald"]={"title":"GIA・Emerald","url":"https://www.gia.edu/emerald","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Emerald","エメラルド","gemstone",["given","single"],"エメラルド","gia:Emerald",{"originLanguage":"en","classification":"ベリルの緑色の宝石変種"});
+nameSources["gia:Peridot"]={"title":"GIA・Peridot","url":"https://www.gia.edu/peridot","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Peridot","ペリドット","gemstone",["given","single"],"ペリドット","gia:Peridot",{"originLanguage":"en","classification":"かんらん石の宝石名"});
+nameSources["gia:Iolite"]={"title":"GIA・Iolite","url":"https://www.gia.edu/iolite","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Iolite","アイオライト","gemstone",["given","single"],"アイオライト","gia:Iolite",{"originLanguage":"en","classification":"コーディエライトの宝石名"});
+nameSources["gia:Jade"]={"title":"GIA・Jade","url":"https://www.gia.edu/jade","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Jade","ジェイド","gemstone",["given","single"],"翡翠","gia:Jade",{"originLanguage":"en","classification":"ジェダイトとネフライト等に用いる宝石名"});
+nameSources["gia:Tourmaline"]={"title":"GIA・Tourmaline","url":"https://www.gia.edu/tourmaline","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Tourmaline","トルマリン","gemstone",["given","single"],"トルマリン（電気石）","gia:Tourmaline",{"originLanguage":"en","classification":"鉱物グループ"});
+nameSources["gia:Turquoise"]={"title":"GIA・Turquoise","url":"https://www.gia.edu/turquoise","region":"英語の宝石名称","period":"2026-09-22確認","kind":"宝石学資料","proves":"素材・鉱物・変種の区別。人物名の実在性や効能は示さない"};
+addMotif("Turquoise","ターコイズ","gemstone",["given","single"],"トルコ石","gia:Turquoise",{"originLanguage":"en","classification":"鉱物"});
+addMotif("Orion","オリオン","constellation",["given","single"],"オリオン座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Orionis"});
+addMotif("Lyra","リラ","constellation",["given","single"],"こと座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Lyrae"});
+addMotif("Carina","カリーナ","constellation",["given","single"],"りゅうこつ座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Carinae"});
+addMotif("Cygnus","シグナス","constellation",["given","single"],"はくちょう座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Cygni"});
+addMotif("Columba","コルンバ","constellation",["given","single"],"はと座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Columbae"});
+addMotif("Aquila","アクィラ","constellation",["given","single"],"わし座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Aquilae"});
+addMotif("Vela","ヴェラ","constellation",["given","single"],"ほ座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Velorum"});
+addMotif("Pavo","パーヴォ","constellation",["given","single"],"くじゃく座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Pavonis"});
+addMotif("Ara","アラ","constellation",["given","single"],"さいだん座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Arae"});
+addMotif("Eridanus","エリダヌス","constellation",["given","single"],"エリダヌス座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Eridani"});
+addMotif("Delphinus","デルフィヌス","constellation",["given","single"],"いるか座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Delphini"});
+addMotif("Andromeda","アンドロメダ","constellation",["given","single"],"アンドロメダ座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Andromedae"});
+addMotif("Cassiopeia","カシオペア","constellation",["given","single"],"カシオペヤ座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Cassiopeiae"});
+addMotif("Cepheus","ケフェウス","constellation",["given","single"],"ケフェウス座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Cephei"});
+addMotif("Perseus","ペルセウス","constellation",["given","single"],"ペルセウス座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Persei"});
+addMotif("Caelum","カエルム","constellation",["given","single"],"ちょうこくぐ座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Caeli"});
+addMotif("Lacerta","ラケルタ","constellation",["given","single"],"とかげ座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Lacertae"});
+addMotif("Corvus","コルヴス","constellation",["given","single"],"からす座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Corvi"});
+addMotif("Dorado","ドラド","constellation",["given","single"],"かじき座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Doradus"});
+addMotif("Hydra","ヒドラ","constellation",["given","single"],"うみへび座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Hydrae"});
+addMotif("Corona Australis","コロナ・アウストラリス","constellation",["family"],"みなみのかんむり座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Coronae Australis"});
+addMotif("Corona Borealis","コロナ・ボレアリス","constellation",["family"],"かんむり座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Coronae Borealis"});
+addMotif("Ursa Minor","ウルサ・ミノル","constellation",["family"],"こぐま座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Ursae Minoris"});
+addMotif("Ursa Major","ウルサ・マヨル","constellation",["family"],"おおぐま座","naoj",{"originLanguage":"la","latinCase":"主格（正式学名）","genitive":"Ursae Majoris"});
+
+function namingSummary(c){
+  if(!c.naming)return "";
+  const n=c.naming;
+  return [namingSystems[n.system],n.culture?namingCultures[n.culture]:null,n.motif?"着想："+namingMotifs[n.motif]:null].filter(Boolean).join(" ／ ");
+}
+function renderNameInfo(c){
+  if(!c.naming||!c.nameParts)return "";
+  const parts=Object.values(c.nameParts);
+  const origin=parts.map(p=>{
+    const role={given:"名",family:"姓・家名",single:"単名",codename:"コードネーム"}[p.role]||"名前";
+    const kind={attested_name:"実在人名の用例",source_word:"原語を創作名に採用",coined_name:"原語からの創作",legacy_unverified:"従来の創作候補（語源は未確認）"}[p.originType];
+    const sources=(p.sources||[]).map(id=>nameSources[id]).filter(Boolean);
+    return '<p><strong>'+esc(role+"："+p.original)+'</strong> — '+esc(kind||"")+
+      (p.meaningJa?'<br>原語の意味：'+esc(p.meaningJa):"")+
+      (p.classification?' / '+esc(p.classification):"")+
+      (p.latinCase?'（ラテン語'+esc(p.latinCase)+(p.genitive?'／属格 '+esc(p.genitive):'')+'）':"")+
+      (sources.length?'<br>'+sources.map(s=>'<a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title)+'</a>：'+esc([s.region,s.period,s.kind,s.proves].filter(Boolean).join("・"))).join('<br>'):"")+'</p>';
+  }).join("");
+  return '<div class="naming-info"><p class="naming-meta">'+esc(namingSummary(c))+'</p>'+
+    (c.naming.notice?'<p class="naming-notice">'+esc(c.naming.notice)+'</p>':"")+
+    '<details class="name-origin"><summary>名前の由来・出典</summary>'+origin+
+    '<p class="cond-note">カナは創作で使うための表示案です。名前の印象・用途は編集上の判断で、原語の意味や実際の頻度とは別です。</p></details></div>';
+}
+function renderNamingOptions(){
+  const box=document.getElementById("namingOptions");
+  const active=document.activeElement;
+  const focusKey=box.contains(active)?active?.dataset?.nameChoice:null;
+  const open=box.querySelector("details")?.open||false;
+  const disabled=currentMode==="settingOnly";
+  const system=selectedWorld==="random"&&selectedNameSystem==="auto"?null:resolveNameSystem(selectedWorld);
+  const button=(group,key,label,on)=>'<button type="button" class="chip'+(on?' on':'')+'" data-name-choice="'+group+':'+key+'" aria-pressed="'+on+'"'+(disabled?' disabled':'')+'>'+esc(label)+'</button>';
+  const chips=(group,defs,chosen)=>Object.entries(defs).map(([k,l])=>button(group,k,l,chosen.includes(k))).join("");
+  box.innerHTML='<details class="cond naming-details"'+(open?' open':'')+'><summary>名前の詳細設定<span class="sel">'+esc(namingSystems[selectedNameSystem])+'</span></summary><div class="chip-box">'+
+    '<p class="cond-note">世界観は職業・衣装・背景、名前の系統は名前に使います。名前の系統を変えても世界観は変わりません。</p>'+
+    (disabled?'<p class="naming-notice">「設定だけ」では名前の詳細設定は使いません。手入力の名前をそのまま使用します。</p>':'')+
+    '<fieldset'+(disabled?' disabled':'')+'><legend>名前の系統</legend>'+chips("system",namingSystems,[selectedNameSystem])+'</fieldset>'+
+    (system==="modernWestern"?'<fieldset'+(disabled?' disabled':'')+'><legend>文化・言語圏</legend>'+chips("culture",namingCultures,[selectedNameCulture])+'<p class="cond-note">初期対応は5つの言語圏です。民族やヨーロッパ全域の分類ではありません。お任せでは言語圏を同じ確率で選び、同じ圏の姓と名を組み合わせます。世代別の頻度は再現しません。</p><p class="cond-note">「中性的」は人物の印象です。男女両方の用例を確認した名が未収録の圏では男女の名を同じ確率で選び、結果にも表示します。</p></fieldset>':"")+
+    (system==="fantasy"?'<fieldset'+(disabled?' disabled':'')+'><legend>ファンタジーの着想元（複数可）</legend>'+button("motif","auto","お任せ（従来候補も含む）",!selectedNameMotifs.length)+chips("motif",{german:namingMotifs.german,gemstone:namingMotifs.gemstone,constellation:namingMotifs.constellation},selectedNameMotifs)+'<p class="cond-note">1人ごとに主な着想元を同じ確率で選び、名か家名に反映します。複数の語を必ず合成する設定ではありません。</p></fieldset>':"")+
+    (system===null?'<p class="cond-note">世界観がお任せのときは、生成した世界観に合わせて名前の系統を決めます。</p>':"")+
+    '<p class="cond-note">雰囲気が未指定なら、生成時に選んだ2〜3個の雰囲気を名前にも使います。最近表示した名は最大20件まで避け、候補が少なければ古い履歴から緩和します。</p></div></details>';
+  box.querySelectorAll("button[data-name-choice]").forEach(btn=>btn.addEventListener("click",()=>{
+    const [group,key]=btn.dataset.nameChoice.split(":");
+    if(group==="system")selectedNameSystem=key;
+    if(group==="culture")selectedNameCulture=key;
+    if(group==="motif"){
+      if(key==="auto")selectedNameMotifs=[];
+      else if(selectedNameMotifs.includes(key))selectedNameMotifs=selectedNameMotifs.filter(x=>x!==key);
+      else selectedNameMotifs.push(key);
+    }
+    renderNamingOptions();
+  }));
+  if(focusKey)Array.from(box.querySelectorAll("button")).find(b=>b.dataset.nameChoice===focusKey)?.focus({preventScroll:true});
+}
+function runGenerate(count){
+  const error=document.getElementById("generationError");
+  try{
+    const next=generateMultiple(count,{history:nameHistory});
+    renderResults(next);
+    generatedResults=next;
+    nameHistory.clear();for(const [key,value] of next.nextHistory)nameHistory.set(key,value);
+    error.hidden=true;error.textContent="";
+    setTimeout(()=>document.getElementById("resHead").scrollIntoView({behavior:"smooth",block:"start"}),60);
+  }catch(e){
+    error.hidden=false;
+    error.textContent="「"+namingSystems[selectedNameSystem]+"」で"+count+"人を生成できませんでした。"+(e instanceof NamingError?e.message:"もう一度お試しください。")+" 以前の結果は保持しています。";
+    error.focus({preventScroll:true});
+  }
+}
+
+
 init();
 </script>
 </body>
