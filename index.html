@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>創作OCメーカー</title>
+<title>創作OCメーカー v1.2</title>
 <style>
 :root{
   --bg:#F2F0EB;
@@ -326,7 +326,7 @@ footer{
   <div id="savedList"></div>
 </section>
 
-<footer>創作OCメーカー v1.1</footer>
+<footer>創作OCメーカー v1.2</footer>
 </div>
 
 <div id="toast"></div>
@@ -827,7 +827,7 @@ const nameData = {
       {kana:"レン",roman:"Wren",g:"n",tags:["影が薄い"]}
     ],
     familyNames: [
-      {kana:"アルデブランド",roman:"Aldebrand",tags:["古風"]},
+      {kana:"アルデブランド",roman:"Aldebrand",tags:["真面目"],style:"historical"},
       {kana:"ヴァレモント",roman:"Valemont",tags:["高貴"]},
       {kana:"アシュクロフト",roman:"Ashcroft",tags:["知的"]},
       {kana:"ブラックウッド",roman:"Blackwood",tags:["闇がある"]},
@@ -848,7 +848,7 @@ const nameData = {
       {kana:"ウィンターボーン",roman:"Winterbourne",tags:["冷たい"]},
       {kana:"ソーンリー",roman:"Thornley",tags:["危うい"]},
       {kana:"オルブライト",roman:"Albright",tags:["明るい"]},
-      {kana:"ペンハリガン",roman:"Penhaligan",tags:["古風"]},
+      {kana:"ペンハリガン",roman:"Penhaligan",tags:["真面目"],style:"historical"},
       {kana:"ダンヴァース",roman:"Danvers",tags:["真面目"]},
       {kana:"ロックハート",roman:"Lockhart",tags:["余裕がある"]},
       {kana:"ヘイルシャム",roman:"Hailsham",tags:["影が薄い"]},
@@ -864,7 +864,7 @@ const nameData = {
       {kana:"オークデン",roman:"Oakden",tags:["無口"]},
       {kana:"ラングレー",roman:"Langley",tags:["知的"]},
       {kana:"ウェストブルック",roman:"Westbrook",tags:["穏やか"]},
-      {kana:"ハーグリーヴス",roman:"Hargreaves",tags:["古風"]},
+      {kana:"ハーグリーヴス",roman:"Hargreaves",tags:["真面目"],style:"historical"},
       {kana:"ドレイクフォード",roman:"Drakeford",tags:["圧がある"]},
       {kana:"リンドール",roman:"Lindall",tags:["透明感"]}
     ],
@@ -884,11 +884,11 @@ const nameData = {
       {kana:"アイゼングラーツ",roman:"Eisengratz",tags:["圧がある"]},
       {kana:"フィオラヴェンテ",roman:"Fioravente",tags:["色気がある"]},
       {kana:"ノルデンハイム",roman:"Nordenheim",tags:["冷たい"]},
-      {kana:"サンリオール",roman:"Sanriole",tags:["優しい"]},
+      {kana:"ロッカピアーナ",roman:"Roccapiana",tags:["優しい"]},
       {kana:"ヴェスパリア",roman:"Vesparia",tags:["ミステリアス"]},
       {kana:"ロズヴェルデ",roman:"Rosverde",tags:["高貴"]},
-      {kana:"アルバフィカ",roman:"Albafica",tags:["儚い"]},
-      {kana:"クロンヴァルト",roman:"Kronwald",tags:["古風"]}
+      {kana:"アルバコルテ",roman:"Albacorte",tags:["儚い"]},
+      {kana:"クロンヴァルト",roman:"Kronwald",tags:["真面目"],style:"historical"}
     ]
   },
 
@@ -1473,6 +1473,1893 @@ nameData.japanese.givenNames.neutral.push(
 );
 
 /* ============================================================
+   名前データ追加ブロック（v1.2）
+   各項目は既存形式を維持。source/style/culture は将来用のメタデータ。
+   同一プール内の表示名・読み・英字表記を照合してから追記する。
+   ============================================================ */
+/* everyday / modern */
+nameData.japanese.surnames.push(
+  {"kanji":"佐藤","reading":"さとう","roman":"Sato","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"鈴木","reading":"すずき","roman":"Suzuki","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"高橋","reading":"たかはし","roman":"Takahashi","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"田中","reading":"たなか","roman":"Tanaka","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"伊藤","reading":"いとう","roman":"Ito","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"渡辺","reading":"わたなべ","roman":"Watanabe","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"山本","reading":"やまもと","roman":"Yamamoto","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"中村","reading":"なかむら","roman":"Nakamura","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"小林","reading":"こばやし","roman":"Kobayashi","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"加藤","reading":"かとう","roman":"Kato","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"吉田","reading":"よしだ","roman":"Yoshida","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"山田","reading":"やまだ","roman":"Yamada","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"佐々木","reading":"ささき","roman":"Sasaki","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"山口","reading":"やまぐち","roman":"Yamaguchi","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"松本","reading":"まつもと","roman":"Matsumoto","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"井上","reading":"いのうえ","roman":"Inoue","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"木村","reading":"きむら","roman":"Kimura","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"林","reading":"はやし","roman":"Hayashi","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"清水","reading":"しみず","roman":"Shimizu","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"山崎","reading":"やまざき","roman":"Yamazaki","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"池田","reading":"いけだ","roman":"Ikeda","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"阿部","reading":"あべ","roman":"Abe","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"橋本","reading":"はしもと","roman":"Hashimoto","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"山下","reading":"やました","roman":"Yamashita","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"石川","reading":"いしかわ","roman":"Ishikawa","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"中島","reading":"なかじま","roman":"Nakajima","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"前田","reading":"まえだ","roman":"Maeda","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"藤田","reading":"ふじた","roman":"Fujita","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"岡田","reading":"おかだ","roman":"Okada","tags":["真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"後藤","reading":"ごとう","roman":"Goto","tags":["真面目"],"source":"everyday","style":"modern"}
+);
+
+/* everyday / modern */
+nameData.japanese.surnames.push(
+  {"kanji":"長田","reading":"ながた","roman":"Nagata","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"石田","reading":"いしだ","roman":"Ishida","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"坂本","reading":"さかもと","roman":"Sakamoto","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"村上","reading":"むらかみ","roman":"Murakami","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"太田","reading":"おおた","roman":"Ota","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"金子","reading":"かねこ","roman":"Kaneko","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"青木","reading":"あおき","roman":"Aoki","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"福田","reading":"ふくだ","roman":"Fukuda","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"西村","reading":"にしむら","roman":"Nishimura","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"藤井","reading":"ふじい","roman":"Fujii","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"福井","reading":"ふくい","roman":"Fukui","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"藤原","reading":"ふじわら","roman":"Fujiwara","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"岡本","reading":"おかもと","roman":"Okamoto","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"中川","reading":"なかがわ","roman":"Nakagawa","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"中野","reading":"なかの","roman":"Nakano","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"原田","reading":"はらだ","roman":"Harada","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"小野","reading":"おの","roman":"Ono","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"竹内","reading":"たけうち","roman":"Takeuchi","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"田村","reading":"たむら","roman":"Tamura","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"和田","reading":"わだ","roman":"Wada","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"中山","reading":"なかやま","roman":"Nakayama","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"石井","reading":"いしい","roman":"Ishii","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"上田","reading":"うえだ","roman":"Ueda","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"内田","reading":"うちだ","roman":"Uchida","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"柴田","reading":"しばた","roman":"Shibata","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"酒井","reading":"さかい","roman":"Sakai","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"横山","reading":"よこやま","roman":"Yokoyama","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"宮崎","reading":"みやざき","roman":"Miyazaki","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"上野","reading":"うえの","roman":"Ueno","tags":["穏やか"],"source":"everyday","style":"modern"},
+  {"kanji":"安藤","reading":"あんどう","roman":"Ando","tags":["穏やか"],"source":"everyday","style":"modern"}
+);
+
+/* everyday / modern */
+nameData.japanese.surnames.push(
+  {"kanji":"工藤","reading":"くどう","roman":"Kudo","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"谷口","reading":"たにぐち","roman":"Taniguchi","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"丸山","reading":"まるやま","roman":"Maruyama","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"高木","reading":"たかぎ","roman":"Takagi","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"今井","reading":"いまい","roman":"Imai","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"河野","reading":"こうの","roman":"Kono","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"小島","reading":"こじま","roman":"Kojima","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"武田","reading":"たけだ","roman":"Takeda","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"増田","reading":"ますだ","roman":"Masuda","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"小山","reading":"こやま","roman":"Koyama","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"杉山","reading":"すぎやま","roman":"Sugiyama","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"平野","reading":"ひらの","roman":"Hirano","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"大塚","reading":"おおつか","roman":"Otsuka","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"安田","reading":"やすだ","roman":"Yasuda","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"松井","reading":"まつい","roman":"Matsui","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"原","reading":"はら","roman":"Hara","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"菅原","reading":"すがわら","roman":"Sugawara","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"大西","reading":"おおにし","roman":"Onishi","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"松尾","reading":"まつお","roman":"Matsuo","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"野村","reading":"のむら","roman":"Nomura","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"佐野","reading":"さの","roman":"Sano","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"新井","reading":"あらい","roman":"Arai","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"杉本","reading":"すぎもと","roman":"Sugimoto","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"古川","reading":"ふるかわ","roman":"Furukawa","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"},
+  {"kanji":"野口","reading":"のぐち","roman":"Noguchi","tags":["影が薄い","真面目"],"source":"everyday","style":"modern"}
+);
+
+/* everyday / modern */
+nameData.japanese.surnames.push(
+  {"kanji":"吉川","reading":"よしかわ","roman":"Yoshikawa","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"小松","reading":"こまつ","roman":"Komatsu","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"浜田","reading":"はまだ","roman":"Hamada","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"市川","reading":"いちかわ","roman":"Ichikawa","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"菊池","reading":"きくち","roman":"Kikuchi","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"西田","reading":"にしだ","roman":"Nishida","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"五島","reading":"ごしま","roman":"Goshima","tags":["陽気"],"source":"everyday","style":"modern"},
+  {"kanji":"松岡","reading":"まつおか","roman":"Matsuoka","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"東","reading":"ひがし","roman":"Higashi","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"飯塚","reading":"いいづか","roman":"Iizuka","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"本田","reading":"ほんだ","roman":"Honda","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"久保","reading":"くぼ","roman":"Kubo","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"高田","reading":"たかだ","roman":"Takada","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"平田","reading":"ひらた","roman":"Hirata","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"岩田","reading":"いわた","roman":"Iwata","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"川口","reading":"かわぐち","roman":"Kawaguchi","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"吉岡","reading":"よしおか","roman":"Yoshioka","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"中田","reading":"なかた","roman":"Nakata","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"川崎","reading":"かわさき","roman":"Kawasaki","tags":["明るい","優しい"],"source":"everyday","style":"modern"},
+  {"kanji":"辻","reading":"つじ","roman":"Tsuji","tags":["明るい","優しい"],"source":"everyday","style":"modern"}
+);
+
+/* surname / modern */
+nameData.japanese.surnames.push(
+  {"kanji":"石原","reading":"いしはら","roman":"Ishihara","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"永井","reading":"ながい","roman":"Nagai","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"松浦","reading":"まつうら","roman":"Matsuura","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"大橋","reading":"おおはし","roman":"Ohashi","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"小池","reading":"こいけ","roman":"Koike","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"関","reading":"せき","roman":"Seki","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"萩原","reading":"はぎわら","roman":"Hagiwara","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"杉浦","reading":"すぎうら","roman":"Sugiura","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"堀内","reading":"ほりうち","roman":"Horiuchi","tags":["知的","無口"],"source":"surname","style":"modern"},
+  {"kanji":"篠田","reading":"しのだ","roman":"Shinoda","tags":["知的","無口"],"source":"surname","style":"modern"}
+);
+
+/* surname / modern */
+nameData.japanese.surnames.push(
+  {"kanji":"三上","reading":"みかみ","roman":"Mikami","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"香川","reading":"かがわ","roman":"Kagawa","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"柳沢","reading":"やなぎさわ","roman":"Yanagisawa","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"花岡","reading":"はなおか","roman":"Hanaoka","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"津田","reading":"つだ","roman":"Tsuda","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"三田","reading":"みた","roman":"Mita","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"滝沢","reading":"たきざわ","roman":"Takizawa","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"広瀬","reading":"ひろせ","roman":"Hirose","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"松平","reading":"まつだいら","roman":"Matsudaira","tags":["高貴","余裕がある"],"source":"surname","style":"modern"},
+  {"kanji":"武藤","reading":"むとう","roman":"Muto","tags":["高貴","余裕がある"],"source":"surname","style":"modern"}
+);
+
+/* surname / modern */
+nameData.japanese.surnames.push(
+  {"kanji":"岩崎","reading":"いわさき","roman":"Iwasaki","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"石橋","reading":"いしばし","roman":"Ishibashi","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"熊谷","reading":"くまがい","roman":"Kumagai","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"荒川","reading":"あらかわ","roman":"Arakawa","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"大石","reading":"おおいし","roman":"Oishi","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"大久保","reading":"おおくぼ","roman":"Okubo","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"岩本","reading":"いわもと","roman":"Iwamoto","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"松永","reading":"まつなが","roman":"Matsunaga","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"福島","reading":"ふくしま","roman":"Fukushima","tags":["強気","圧がある"],"source":"surname","style":"modern"},
+  {"kanji":"橋口","reading":"はしぐち","roman":"Hashiguchi","tags":["強気","圧がある"],"source":"surname","style":"modern"}
+);
+
+/* surname / modern */
+nameData.japanese.surnames.push(
+  {"kanji":"浅野","reading":"あさの","roman":"Asano","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"水野","reading":"みずの","roman":"Mizuno","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"堀江","reading":"ほりえ","roman":"Horie","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"柳田","reading":"やなぎだ","roman":"Yanagida","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"浅井","reading":"あさい","roman":"Asai","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"川瀬","reading":"かわせ","roman":"Kawase","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"長浜","reading":"ながはま","roman":"Nagahama","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"青山","reading":"あおやま","roman":"Aoyama","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"瀬戸","reading":"せと","roman":"Seto","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"白井","reading":"しらい","roman":"Shirai","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"小川","reading":"おがわ","roman":"Ogawa","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"森","reading":"もり","roman":"Mori","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"池上","reading":"いけがみ","roman":"Ikegami","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"竹田","reading":"たけた","roman":"Taketa","tags":["透明感","穏やか"],"source":"surname","style":"modern"},
+  {"kanji":"吉村","reading":"よしむら","roman":"Yoshimura","tags":["透明感","穏やか"],"source":"surname","style":"modern"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.male.push(
+  {"kanji":"健太","reading":"けんた","roman":"Kenta","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"和也","reading":"かずや","roman":"Kazuya","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"浩","reading":"ひろし","roman":"Hiroshi","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"誠","reading":"まこと","roman":"Makoto","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"勉","reading":"つとむ","roman":"Tsutomu","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"隆","reading":"たかし","roman":"Takashi","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"正人","reading":"まさと","roman":"Masato","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"達也","reading":"たつや","roman":"Tatsuya","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"信也","reading":"しんや","roman":"Shinya","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"淳一","reading":"じゅんいち","roman":"Junichi","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"一郎","reading":"いちろう","roman":"Ichiro","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"次郎","reading":"じろう","roman":"Jiro","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"三郎","reading":"さぶろう","roman":"Saburo","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"健一","reading":"けんいち","roman":"Kenichi","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"和夫","reading":"かずお","roman":"Kazuo","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"正夫","reading":"まさお","roman":"Masao","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"康夫","reading":"やすお","roman":"Yasuo","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"秀夫","reading":"ひでお","roman":"Hideo","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"昭夫","reading":"あきお","roman":"Akio","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"敏夫","reading":"としお","roman":"Toshio","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"博之","reading":"ひろゆき","roman":"Hiroyuki","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"雅之","reading":"まさゆき","roman":"Masayuki","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"隆之","reading":"たかゆき","roman":"Takayuki","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"信之","reading":"のぶゆき","roman":"Nobuyuki","tags":["真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"秀明","reading":"ひであき","roman":"Hideaki","tags":["真面目"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.male.push(
+  {"kanji":"大輔","reading":"だいすけ","roman":"Daisuke","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"翔太","reading":"しょうた","roman":"Shota","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"駿介","reading":"しゅんすけ","roman":"Shunsuke","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"雄太","reading":"ゆうた","roman":"Yuta","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"裕也","reading":"ゆうや","roman":"Yuya","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"翔","reading":"しょう","roman":"Sho","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"康太","reading":"こうた","roman":"Kota","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"太一","reading":"たいち","roman":"Taichi","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"大地","reading":"だいち","roman":"Daichi","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"健次","reading":"けんじ","roman":"Kenji","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"宏樹","reading":"ひろき","roman":"Hiroki","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"和彦","reading":"かずひこ","roman":"Kazuhiko","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"裕二","reading":"ゆうじ","roman":"Yuji","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"秀幸","reading":"ひでゆき","roman":"Hideyuki","tags":["明るい","陽気"],"source":"personal-name","style":"modern"},
+  {"kanji":"雅彦","reading":"まさひこ","roman":"Masahiko","tags":["明るい","陽気"],"source":"personal-name","style":"modern"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.male.push(
+  {"kanji":"哲也","reading":"てつや","roman":"Tetsuya","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"聡","reading":"さとし","roman":"Satoshi","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"英樹","reading":"ひでき","roman":"Hideki","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"伸二","reading":"しんじ","roman":"Shinji","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"文也","reading":"ふみや","roman":"Fumiya","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"雄一","reading":"ゆういち","roman":"Yuichi","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"英一","reading":"えいいち","roman":"Eiichi","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"圭介","reading":"けいすけ","roman":"Keisuke","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"淳平","reading":"じゅんぺい","roman":"Junpei","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"哲郎","reading":"てつろう","roman":"Tetsuro","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"圭一","reading":"けいいち","roman":"Keiichi","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"智紀","reading":"とものり","roman":"Tomonori","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"博文","reading":"ひろふみ","roman":"Hirofumi","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"泰彦","reading":"やすひこ","roman":"Yasuhiko","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"敏明","reading":"としあき","roman":"Toshiaki","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"修一","reading":"しゅういち","roman":"Shuichi","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"正志","reading":"まさし","roman":"Masashi","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"伸介","reading":"しんすけ","roman":"Shinsuke","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"},
+  {"kanji":"和弘","reading":"かずひろ","roman":"Kazuhiro","tags":["知的","穏やか"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.male.push(
+  {"kanji":"武","reading":"たけし","roman":"Takeshi","tags":["強気","不器用"],"source":"personal-name","style":"everyday"},
+  {"kanji":"勇","reading":"いさむ","roman":"Isamu","tags":["強気","不器用"],"source":"personal-name","style":"everyday"},
+  {"kanji":"勝","reading":"まさる","roman":"Masaru","tags":["強気","不器用"],"source":"personal-name","style":"everyday"},
+  {"kanji":"徹","reading":"とおる","roman":"Toru","tags":["強気","不器用"],"source":"personal-name","style":"everyday"},
+  {"kanji":"剛","reading":"ごう","roman":"Go","tags":["強気","不器用"],"source":"personal-name","style":"everyday"},
+  {"kanji":"力也","reading":"りきや","roman":"Rikiya","tags":["強気","不器用"],"source":"personal-name","style":"everyday"},
+  {"kanji":"龍之介","reading":"りゅうのすけ","roman":"Ryunosuke","tags":["強気","不器用"],"source":"personal-name","style":"everyday"},
+  {"kanji":"竜一","reading":"りゅういち","roman":"Ryuichi","tags":["強気","不器用"],"source":"personal-name","style":"everyday"},
+  {"kanji":"剛太","reading":"ごうた","roman":"Gota","tags":["強気","不器用"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.male.push(
+  {"kanji":"晴彦","reading":"はるひこ","roman":"Haruhiko","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"春樹","reading":"はるき","roman":"Haruki","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"康成","reading":"やすなり","roman":"Yasunari","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"俊哉","reading":"としや","roman":"Toshiya","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"尚文","reading":"なおふみ","roman":"Naofumi","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"智春","reading":"ともはる","roman":"Tomoharu","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"広夢","reading":"ひろむ","roman":"Hiromu","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"豊","reading":"ゆたか","roman":"Yutaka","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"学","reading":"まなぶ","roman":"Manabu","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"}
+);
+
+/* personal-name / classical */
+nameData.japanese.givenNames.male.push(
+  {"kanji":"清彦","reading":"きよひこ","roman":"Kiyohiko","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"成臣","reading":"なりおみ","roman":"Nariomi","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"雅隆","reading":"まさたか","roman":"Masataka","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"晴信","reading":"はるのぶ","roman":"Harunobu","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"友成","reading":"ともなり","roman":"Tomonari","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"貴文","reading":"たかふみ","roman":"Takafumi","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"有朋","reading":"ありとも","roman":"Aritomo","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"義隆","reading":"よしたか","roman":"Yoshitaka","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"宗一郎","reading":"そういちろう","roman":"Soichiro","tags":["高貴","知的"],"source":"personal-name","style":"classical"},
+  {"kanji":"克己","reading":"かつみ","roman":"Katsumi","tags":["高貴","知的"],"source":"personal-name","style":"classical"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.male.push(
+  {"kanji":"拓郎","reading":"たくろう","roman":"Takuro","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"達郎","reading":"たつろう","roman":"Tatsuro","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"祐一郎","reading":"ゆういちろう","roman":"Yuichiro","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"和幸","reading":"かずゆき","roman":"Kazuyuki","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"俊彦","reading":"としひこ","roman":"Toshihiko","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"雅史","reading":"まさふみ","roman":"Masafumi","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"信夫","reading":"のぶお","roman":"Nobuo","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"義男","reading":"よしお","roman":"Yoshio","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"忠","reading":"ただし","roman":"Tadashi","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"謙一郎","reading":"けんいちろう","roman":"Kenichiro","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"雄三","reading":"ゆうぞう","roman":"Yuzo","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"修作","reading":"しゅうさく","roman":"Shusaku","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"敏行","reading":"としゆき","roman":"Toshiyuki","tags":["明るい","真面目"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.female.push(
+  {"kanji":"美咲","reading":"みさき","roman":"Misaki","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"佳奈","reading":"かな","roman":"Kana","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"里奈","reading":"りな","roman":"Rina","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"優子","reading":"ゆうこ","roman":"Yuko","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"久美子","reading":"くみこ","roman":"Kumiko","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"洋子","reading":"ようこ","roman":"Yoko","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"幸子","reading":"さちこ","roman":"Sachiko","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"和子","reading":"かずこ","roman":"Kazuko","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"裕美","reading":"ひろみ","roman":"Hiromi","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"由美","reading":"ゆみ","roman":"Yumi","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"恵美","reading":"えみ","roman":"Emi","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"真由美","reading":"まゆみ","roman":"Mayumi","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"智子","reading":"ともこ","roman":"Tomoko","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"直子","reading":"なおこ","roman":"Naoko","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"典子","reading":"のりこ","roman":"Noriko","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"美穂","reading":"みほ","roman":"Miho","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"香織","reading":"かおり","roman":"Kaori","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"理恵","reading":"りえ","roman":"Rie","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"愛美","reading":"まなみ","roman":"Manami","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"奈緒","reading":"なお","roman":"Nao","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"絵里","reading":"えり","roman":"Eri","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"真紀","reading":"まき","roman":"Maki","tags":["明るい","優しい"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.female.push(
+  {"kanji":"千恵","reading":"ちえ","roman":"Chie","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"文香","reading":"ふみか","roman":"Fumika","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"美智子","reading":"みちこ","roman":"Michiko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"礼子","reading":"れいこ","roman":"Reiko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"祥子","reading":"しょうこ","roman":"Shoko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"清美","reading":"きよみ","roman":"Kiyomi","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"美和","reading":"みわ","roman":"Miwa","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"聡美","reading":"さとみ","roman":"Satomi","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"知世","reading":"ともよ","roman":"Tomoyo","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"奈津子","reading":"なつこ","roman":"Natsuko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"育子","reading":"いくこ","roman":"Ikuko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"仁美","reading":"ひとみ","roman":"Hitomi","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"敦子","reading":"あつこ","roman":"Atsuko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"理津子","reading":"りつこ","roman":"Ritsuko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"由紀","reading":"ゆき","roman":"Yuki","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"由利子","reading":"ゆりこ","roman":"Yuriko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"雅子","reading":"まさこ","roman":"Masako","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"文子","reading":"ふみこ","roman":"Fumiko","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"史緒","reading":"しお","roman":"Shio","tags":["知的","真面目"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / classical */
+nameData.japanese.givenNames.female.push(
+  {"kanji":"和美","reading":"かずみ","roman":"Kazumi","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"千春","reading":"ちはる","roman":"Chiharu","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"千尋","reading":"ちひろ","roman":"Chihiro","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"佳代","reading":"かよ","roman":"Kayo","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"千佳","reading":"ちか","roman":"Chika","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"美奈","reading":"みな","roman":"Mina","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"友美","reading":"ともみ","roman":"Tomomi","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"美里","reading":"みさと","roman":"Misato","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"多恵","reading":"たえ","roman":"Tae","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"志保","reading":"しほ","roman":"Shiho","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"春江","reading":"はるえ","roman":"Harue","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"絹代","reading":"きぬよ","roman":"Kinuyo","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"文代","reading":"ふみよ","roman":"Fumiyo","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"雪乃","reading":"ゆきの","roman":"Yukino","tags":["穏やか","献身"],"source":"personal-name","style":"classical"},
+  {"kanji":"里穂","reading":"りほ","roman":"Riho","tags":["穏やか","献身"],"source":"personal-name","style":"classical"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.female.push(
+  {"kanji":"美優","reading":"みゆ","roman":"Miyu","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"結菜","reading":"ゆな","roman":"Yuna","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"愛莉","reading":"あいり","roman":"Airi","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"花音","reading":"かのん","roman":"Kanon","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"柚香","reading":"ゆずか","roman":"Yuzuka","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"心音","reading":"ここね","roman":"Kokone","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"ひまり","reading":"ひまり","roman":"Himari","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"萌","reading":"もえ","roman":"Moe","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"菜々","reading":"なな","roman":"Nana","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"みく","reading":"みく","roman":"Miku","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"くるみ","reading":"くるみ","roman":"Kurumi","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"すず","reading":"すず","roman":"Suzu","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"日和","reading":"ひより","roman":"Hiyori","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"いろは","reading":"いろは","roman":"Iroha","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"},
+  {"kanji":"小桃","reading":"こもも","roman":"Komomo","tags":["明るい","無邪気"],"source":"personal-name","style":"modern"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.female.push(
+  {"kanji":"琴美","reading":"ことみ","roman":"Kotomi","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"真帆","reading":"まほ","roman":"Maho","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"佳澄","reading":"かすみ","roman":"Kasumi","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"梨央奈","reading":"りおな","roman":"Riona","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"美緒里","reading":"みおり","roman":"Miori","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"菜穂","reading":"なほ","roman":"Naho","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"清花","reading":"さやか","roman":"Sayaka","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"優","reading":"ゆう","roman":"Yu","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"紗奈","reading":"さな","roman":"Sana","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"風音","reading":"かざね","roman":"Kazane","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"乃愛","reading":"のあ","roman":"Noa","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.female.push(
+  {"kanji":"亜美","reading":"あみ","roman":"Ami","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"麗","reading":"うらら","roman":"Urara","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"蘭","reading":"らん","roman":"Ran","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"怜奈","reading":"れいな","roman":"Reina","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"由香里","reading":"ゆかり","roman":"Yukari","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"麻里子","reading":"まりこ","roman":"Mariko","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"夏美","reading":"なつみ","roman":"Natsumi","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"絵梨香","reading":"えりか","roman":"Erika","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"百花","reading":"ももか","roman":"Momoka","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"美佳","reading":"みか","roman":"Mika","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"杏奈","reading":"あんな","roman":"Anna","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"綾子","reading":"あやこ","roman":"Ayako","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"梢","reading":"こずえ","roman":"Kozue","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"},
+  {"kanji":"亜沙美","reading":"あさみ","roman":"Asami","tags":["強気","余裕がある"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.female.push(
+  {"kanji":"麻子","reading":"あさこ","roman":"Asako","tags":["知的","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"久美","reading":"くみ","roman":"Kumi","tags":["知的","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"涼香","reading":"りょうか","roman":"Ryoka","tags":["知的","優しい"],"source":"personal-name","style":"everyday"},
+  {"kanji":"真奈","reading":"まな","roman":"Mana","tags":["知的","優しい"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.neutral.push(
+  {"kanji":"和美","reading":"かずみ","roman":"Kazumi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"裕美","reading":"ひろみ","roman":"Hiromi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"尚美","reading":"なおみ","roman":"Naomi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"友美","reading":"ともみ","roman":"Tomomi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"芳美","reading":"よしみ","roman":"Yoshimi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"真澄","reading":"ますみ","roman":"Masumi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"晴美","reading":"はるみ","roman":"Harumi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"千晴","reading":"ちはる","roman":"Chiharu","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"秋実","reading":"あきみ","roman":"Akimi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"郁実","reading":"いくみ","roman":"Ikumi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"成美","reading":"なるみ","roman":"Narumi","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"純","reading":"じゅん","roman":"Jun","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"操","reading":"みさお","roman":"Misao","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"},
+  {"kanji":"寛","reading":"ひろ","roman":"Hiro","tags":["穏やか","知的"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.neutral.push(
+  {"kanji":"夏希","reading":"なつき","roman":"Natsuki","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"皓希","reading":"こうき","roman":"Koki","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"陽希","reading":"はるき","roman":"Haruki","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"有希","reading":"ゆうき","roman":"Yuki","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"佑真","reading":"ゆうま","roman":"Yuma","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"理央","reading":"りお","roman":"Rio","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"玲央","reading":"れお","roman":"Reo","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"日向","reading":"ひゅうが","roman":"Hyuga","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"笑","reading":"えみ","roman":"Emi","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"みちる","reading":"みちる","roman":"Michiru","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"ひかり","reading":"ひかり","roman":"Hikari","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"結","reading":"ゆい","roman":"Yui","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"晴音","reading":"はるね","roman":"Harune","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"歌音","reading":"かのん","roman":"Kanon","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"音","reading":"おと","roman":"Oto","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"笑里","reading":"えり","roman":"Eri","tags":["明るい","優しい"],"source":"personal-name","style":"modern"},
+  {"kanji":"光希","reading":"みつき","roman":"Mitsuki","tags":["明るい","優しい"],"source":"personal-name","style":"modern"}
+);
+
+/* nature / modern */
+nameData.japanese.givenNames.neutral.push(
+  {"kanji":"瑞穂","reading":"みずほ","roman":"Mizuho","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"風花","reading":"ふうか","roman":"Fuka","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"楓","reading":"かえで","roman":"Kaede","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"梓","reading":"あずさ","roman":"Azusa","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"柳","reading":"やなぎ","roman":"Yanagi","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"柊","reading":"ひいらぎ","roman":"Hiiragi","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"梢","reading":"こずえ","roman":"Kozue","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"桐","reading":"きり","roman":"Kiri","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"翠","reading":"すい","roman":"Sui","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"秋穂","reading":"あきほ","roman":"Akiho","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"澄","reading":"すみ","roman":"Sumi","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"椿","reading":"つばき","roman":"Tsubaki","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"香","reading":"かおり","roman":"Kaori","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"しずく","reading":"しずく","roman":"Shizuku","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"夏帆","reading":"かほ","roman":"Kaho","tags":["透明感","穏やか"],"source":"nature","style":"modern"},
+  {"kanji":"海里","reading":"かいり","roman":"Kairi","tags":["透明感","穏やか"],"source":"nature","style":"modern"}
+);
+
+/* personal-name / everyday */
+nameData.japanese.givenNames.neutral.push(
+  {"kanji":"聖","reading":"ひじり","roman":"Hijiri","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"律希","reading":"りつき","roman":"Ritsuki","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"敬","reading":"けい","roman":"Kei","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"秀","reading":"しゅう","roman":"Shu","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"真","reading":"しん","roman":"Shin","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"圭人","reading":"けいと","roman":"Keito","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"章","reading":"あき","roman":"Aki","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"侑李","reading":"ゆうり","roman":"Yuri","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"道","reading":"みち","roman":"Michi","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"智佳","reading":"ちか","roman":"Chika","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"静","reading":"しずか","roman":"Shizuka","tags":["知的","真面目"],"source":"personal-name","style":"everyday"},
+  {"kanji":"愛","reading":"あい","roman":"Ai","tags":["知的","真面目"],"source":"personal-name","style":"everyday"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.neutral.push(
+  {"kanji":"理久","reading":"りく","roman":"Riku","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"蓮","reading":"れん","roman":"Ren","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"響","reading":"ひびき","roman":"Hibiki","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"昴","reading":"すばる","roman":"Subaru","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"紫苑","reading":"しおん","roman":"Shion","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"紡","reading":"つむぐ","roman":"Tsumugu","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"紬","reading":"つむぎ","roman":"Tsumugi","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"尚","reading":"しょう","roman":"Sho","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"千景","reading":"ちかげ","roman":"Chikage","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"},
+  {"kanji":"眞冬","reading":"まふゆ","roman":"Mafuyu","tags":["無口","ミステリアス"],"source":"personal-name","style":"modern"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.neutral.push(
+  {"kanji":"一歩","reading":"いっぽ","roman":"Ippo","tags":["陽気","強気"],"source":"personal-name","style":"modern"},
+  {"kanji":"叶","reading":"かなう","roman":"Kanau","tags":["陽気","強気"],"source":"personal-name","style":"modern"},
+  {"kanji":"碧斗","reading":"あおと","roman":"Aoto","tags":["陽気","強気"],"source":"personal-name","style":"modern"},
+  {"kanji":"伊都","reading":"いと","roman":"Ito","tags":["陽気","強気"],"source":"personal-name","style":"modern"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.neutral.push(
+  {"kanji":"可南","reading":"かなん","roman":"Kanan","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"ななせ","reading":"ななせ","roman":"Nanase","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"流","reading":"ながれ","roman":"Nagare","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"嵐","reading":"あらし","roman":"Arashi","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"羽純","reading":"はすみ","roman":"Hasumi","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"穂高","reading":"ほだか","roman":"Hodaka","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"千里","reading":"ちさと","roman":"Chisato","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"冬海","reading":"ふゆみ","roman":"Fuyumi","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"佳月","reading":"かづき","roman":"Kazuki","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"陽世","reading":"ひよ","roman":"Hiyo","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"清良","reading":"きよら","roman":"Kiyora","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"安","reading":"やす","roman":"Yasu","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"柚音","reading":"ゆのん","roman":"Yunon","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"穂","reading":"みのり","roman":"Minori","tags":["優しい","穏やか"],"source":"personal-name","style":"modern"}
+);
+
+/* personal-name / modern */
+nameData.japanese.givenNames.neutral.push(
+  {"kanji":"青葉","reading":"あおば","roman":"Aoba","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"若葉","reading":"わかば","roman":"Wakaba","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"春","reading":"しゅん","roman":"Shun","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"充","reading":"みつる","roman":"Mitsuru","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"潤","reading":"うるう","roman":"Uru","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"実緒","reading":"みお","roman":"Mio","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"類","reading":"るい","roman":"Rui","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"南","reading":"みなみ","roman":"Minami","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"蛍","reading":"ほたる","roman":"Hotaru","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"夏目","reading":"なつめ","roman":"Natsume","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"咲","reading":"さき","roman":"Saki","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"頼","reading":"より","roman":"Yori","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"},
+  {"kanji":"天音","reading":"あまね","roman":"Amane","tags":["透明感","穏やか"],"source":"personal-name","style":"modern"}
+);
+
+/* court / classical */
+nameData.wafu.surnames.push(
+  {"kanji":"冷泉","reading":"れいぜい","roman":"Reizei","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"勘解由小路","reading":"かでのこうじ","roman":"Kadenokoji","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"烏丸","reading":"からすま","roman":"Karasuma","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"花山院","reading":"かざんいん","roman":"Kazanin","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"日野","reading":"ひの","roman":"Hino","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"高辻","reading":"たかつじ","roman":"Takatsuji","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"壬生","reading":"みぶ","roman":"Mibu","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"三条","reading":"さんじょう","roman":"Sanjo","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"四辻","reading":"よつつじ","roman":"Yotsutsuji","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"万里小路","reading":"までのこうじ","roman":"Madenokoji","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"飛鳥井","reading":"あすかい","roman":"Asukai","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"広橋","reading":"ひろはし","roman":"Hirohashi","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"清閑寺","reading":"せいかんじ","roman":"Seikanji","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"中御門","reading":"なかのみかど","roman":"Nakanomikado","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"正親町","reading":"おおぎまち","roman":"Ogimachi","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"柳原","reading":"やなぎはら","roman":"Yanagihara","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"押小路","reading":"おしこうじ","roman":"Oshikoji","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"梅小路","reading":"うめこうじ","roman":"Umekoji","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"勧修寺","reading":"かじゅうじ","roman":"Kajuji","tags":["高貴","知的"],"source":"court","style":"classical"},
+  {"kanji":"土御門","reading":"つちみかど","roman":"Tsuchimikado","tags":["高貴","知的"],"source":"court","style":"classical"}
+);
+
+/* old-place / classical */
+nameData.wafu.surnames.push(
+  {"kanji":"物部","reading":"もののべ","roman":"Mononobe","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"中臣","reading":"なかとみ","roman":"Nakatomi","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"大伴","reading":"おおとも","roman":"Otomo","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"土師","reading":"はじ","roman":"Haji","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"海部","reading":"あまべ","roman":"Amabe","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"紀","reading":"き","roman":"Ki","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"秦","reading":"はた","roman":"Hata","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"安曇","reading":"あずみ","roman":"Azumi","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"出雲","reading":"いずも","roman":"Izumo","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"住吉","reading":"すみよし","roman":"Sumiyoshi","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"大和","reading":"やまと","roman":"Yamato","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"紀伊","reading":"きい","roman":"Kii","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"三輪","reading":"みわ","roman":"Miwa","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"香取","reading":"かとり","roman":"Katori","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"鹿島","reading":"かしま","roman":"Kashima","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"石上","reading":"いそのかみ","roman":"Isonokami","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"高鴨","reading":"たかかも","roman":"Takakamo","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"日下","reading":"くさか","roman":"Kusaka","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"丹生","reading":"にう","roman":"Niu","tags":["真面目","忠実"],"source":"old-place","style":"classical"},
+  {"kanji":"石清水","reading":"いわしみず","roman":"Iwashimizu","tags":["真面目","忠実"],"source":"old-place","style":"classical"}
+);
+
+/* landscape / fantasy */
+nameData.wafu.surnames.push(
+  {"kanji":"水無瀬","reading":"みなせ","roman":"Minase","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"花隈","reading":"はなくま","roman":"Hanakuma","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"淡路","reading":"あわじ","roman":"Awaji","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"逢坂","reading":"おうさか","roman":"Osaka","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"笠置","reading":"かさぎ","roman":"Kasagi","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"浮島","reading":"うきしま","roman":"Ukishima","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"鳴滝","reading":"なるたき","roman":"Narutaki","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"音無","reading":"おとなし","roman":"Otonashi","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"葛城","reading":"かつらぎ","roman":"Katsuragi","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"吉野","reading":"よしの","roman":"Yoshino","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"宇治","reading":"うじ","roman":"Uji","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"有明","reading":"ありあけ","roman":"Ariake","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"高嶺","reading":"たかね","roman":"Takane","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"奥津","reading":"おくつ","roman":"Okutsu","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"},
+  {"kanji":"秋篠","reading":"あきしの","roman":"Akishino","tags":["神秘的","透明感"],"source":"landscape","style":"fantasy"}
+);
+
+/* old-place / classical */
+nameData.wafu.surnames.push(
+  {"kanji":"武蔵","reading":"むさし","roman":"Musashi","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"相模","reading":"さがみ","roman":"Sagami","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"駿河","reading":"するが","roman":"Suruga","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"遠江","reading":"とおとうみ","roman":"Totomi","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"諏方","reading":"すわ","roman":"Suwa","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"甲斐","reading":"かい","roman":"Kai","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"筑紫","reading":"つくし","roman":"Tsukushi","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"隠岐","reading":"おき","roman":"Oki","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"佐渡","reading":"さど","roman":"Sado","tags":["強気","圧がある"],"source":"old-place","style":"classical"},
+  {"kanji":"能登","reading":"のと","roman":"Noto","tags":["強気","圧がある"],"source":"old-place","style":"classical"}
+);
+
+/* poetic-place / fantasy */
+nameData.wafu.surnames.push(
+  {"kanji":"花房","reading":"はなぶさ","roman":"Hanabusa","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"葦原","reading":"あしはら","roman":"Ashihara","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"蓬田","reading":"よもぎだ","roman":"Yomogida","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"萩野","reading":"はぎの","roman":"Hagino","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"藤波","reading":"ふじなみ","roman":"Fujinami","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"松風","reading":"まつかぜ","roman":"Matsukaze","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"小菅","reading":"こすげ","roman":"Kosuge","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"榛名","reading":"はるな","roman":"Haruna","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"真砂","reading":"まさご","roman":"Masago","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"紅林","reading":"くればやし","roman":"Kurebayashi","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"千種","reading":"ちぐさ","roman":"Chigusa","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"浅茅","reading":"あさじ","roman":"Asaji","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"薄井","reading":"うすい","roman":"Usui","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"玉川","reading":"たまがわ","roman":"Tamagawa","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"},
+  {"kanji":"雪代","reading":"ゆきしろ","roman":"Yukishiro","tags":["穏やか","儚い"],"source":"poetic-place","style":"fantasy"}
+);
+
+/* old-personal-name / classical */
+nameData.wafu.givenNames.male.push(
+  {"kanji":"宗助","reading":"そうすけ","roman":"Sosuke","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"清之進","reading":"せいのしん","roman":"Seinoshin","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"源之丞","reading":"げんのじょう","roman":"Gennojo","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"弥一","reading":"やいち","roman":"Yaichi","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"仁之助","reading":"じんのすけ","roman":"Jinnosuke","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"新八","reading":"しんぱち","roman":"Shinpachi","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"喜平","reading":"きへい","roman":"Kihei","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"久兵衛","reading":"きゅうべえ","roman":"Kyubei","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"善蔵","reading":"ぜんぞう","roman":"Zenzo","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"孝之丞","reading":"こうのじょう","roman":"Konojo","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"定信","reading":"さだのぶ","roman":"Sadanobu","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"宗清","reading":"むねきよ","roman":"Munekiyo","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"忠重","reading":"ただしげ","roman":"Tadashige","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"直政","reading":"なおまさ","roman":"Naomasa","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"守綱","reading":"もりつな","roman":"Moritsuna","tags":["真面目","忠実"],"source":"old-personal-name","style":"classical"}
+);
+
+/* court-name / classical */
+nameData.wafu.givenNames.male.push(
+  {"kanji":"篤親","reading":"あつちか","roman":"Atsuchika","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"雅澄","reading":"まさずみ","roman":"Masazumi","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"公継","reading":"きんつぐ","roman":"Kintsugu","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"実兼","reading":"さねかね","roman":"Sanekane","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"季明","reading":"すえあき","roman":"Sueaki","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"文衡","reading":"ふみひら","roman":"Fumihira","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"経久","reading":"つねひさ","roman":"Tsunehisa","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"有季","reading":"ありすえ","roman":"Arisue","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"清房","reading":"きよふさ","roman":"Kiyofusa","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"時頼","reading":"ときより","roman":"Tokiyori","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"光定","reading":"みつさだ","roman":"Mitsusada","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"成経","reading":"なりつね","roman":"Naritsune","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"行成","reading":"ゆきなり","roman":"Yukinari","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"兼久","reading":"かねひさ","roman":"Kanehisa","tags":["知的","高貴"],"source":"court-name","style":"classical"},
+  {"kanji":"惟政","reading":"これまさ","roman":"Koremasa","tags":["知的","高貴"],"source":"court-name","style":"classical"}
+);
+
+/* old-personal-name / classical */
+nameData.wafu.givenNames.male.push(
+  {"kanji":"徳松","reading":"とくまつ","roman":"Tokumatsu","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"市之助","reading":"いちのすけ","roman":"Ichinosuke","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"喜八","reading":"きはち","roman":"Kihachi","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"太吉","reading":"たきち","roman":"Takichi","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"竹之丞","reading":"たけのじょう","roman":"Takenojo","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"福太郎","reading":"ふくたろう","roman":"Fukutaro","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"卯之吉","reading":"うのきち","roman":"Unokichi","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"弥助","reading":"やすけ","roman":"Yasuke","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"正吉","reading":"しょうきち","roman":"Shokichi","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"利兵衛","reading":"りへえ","roman":"Rihei","tags":["陽気","不器用"],"source":"old-personal-name","style":"classical"}
+);
+
+/* old-personal-name / fantasy */
+nameData.wafu.givenNames.male.push(
+  {"kanji":"道玄","reading":"どうげん","roman":"Dogen","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"宗庵","reading":"そうあん","roman":"Soan","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"玄斎","reading":"げんさい","roman":"Gensai","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"白玄","reading":"はくげん","roman":"Hakugen","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"静庵","reading":"せいあん","roman":"Seian","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"雪之丞","reading":"ゆきのじょう","roman":"Yukinojo","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"朔之進","reading":"さくのしん","roman":"Sakunoshin","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"榛之介","reading":"しんのすけ","roman":"Shinnosuke","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"時近","reading":"ときちか","roman":"Tokichika","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"},
+  {"kanji":"秋成","reading":"あきなり","roman":"Akinari","tags":["神秘的","無口"],"source":"old-personal-name","style":"fantasy"}
+);
+
+/* old-personal-name / classical */
+nameData.wafu.givenNames.male.push(
+  {"kanji":"重蔵","reading":"じゅうぞう","roman":"Juzo","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"平蔵","reading":"へいぞう","roman":"Heizo","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"景久","reading":"かげひさ","roman":"Kagehisa","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"政綱","reading":"まさつな","roman":"Masatsuna","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"義房","reading":"よしふさ","roman":"Yoshifusa","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"勝成","reading":"かつなり","roman":"Katsunari","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"晴重","reading":"はるしげ","roman":"Harushige","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"国秀","reading":"くにひで","roman":"Kunihide","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"長親","reading":"ながちか","roman":"Nagachika","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"直武","reading":"なおたけ","roman":"Naotake","tags":["強気","余裕がある"],"source":"old-personal-name","style":"classical"}
+);
+
+/* old-personal-name / classical */
+nameData.wafu.givenNames.female.push(
+  {"kanji":"お春","reading":"おはる","roman":"Oharu","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お梅","reading":"おうめ","roman":"Oume","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お鶴","reading":"おつる","roman":"Otsuru","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お市","reading":"おいち","roman":"Oichi","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お初","reading":"おはつ","roman":"Ohatsu","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お妙","reading":"おたえ","roman":"Otae","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お絹","reading":"おきぬ","roman":"Okinu","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お福","reading":"おふく","roman":"Ofuku","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お藤","reading":"おふじ","roman":"Ofuji","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お里","reading":"おさと","roman":"Osato","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"梅乃","reading":"うめの","roman":"Umeno","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"菊乃","reading":"きくの","roman":"Kikuno","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"鶴乃","reading":"つるの","roman":"Tsuruno","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"花乃","reading":"はなの","roman":"Hanano","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"萩乃","reading":"はぎの","roman":"Hagino","tags":["穏やか","優しい"],"source":"old-personal-name","style":"classical"}
+);
+
+/* court-name / classical */
+nameData.wafu.givenNames.female.push(
+  {"kanji":"式子","reading":"しょくし","roman":"Shokushi","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"宣子","reading":"のぶこ","roman":"Nobuko","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"定子","reading":"ていし","roman":"Teishi","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"彰子","reading":"しょうし","roman":"Shoshi","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"倫子","reading":"りんし","roman":"Rinshi","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"藤乃","reading":"ふじの","roman":"Fujino","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"初音","reading":"はつね","roman":"Hatsune","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"小萩","reading":"こはぎ","roman":"Kohagi","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"小菊","reading":"こぎく","roman":"Kogiku","tags":["高貴","知的"],"source":"court-name","style":"classical"},
+  {"kanji":"早蕨","reading":"さわらび","roman":"Sawarabi","tags":["高貴","知的"],"source":"court-name","style":"classical"}
+);
+
+/* plant-season / fantasy */
+nameData.wafu.givenNames.female.push(
+  {"kanji":"小夜","reading":"さよ","roman":"Sayo","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"小春","reading":"こはる","roman":"Koharu","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"夕霧","reading":"ゆうぎり","roman":"Yugiri","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"夕顔","reading":"ゆうがお","roman":"Yugao","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"松乃","reading":"まつの","roman":"Matsuno","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"春乃","reading":"はるの","roman":"Haruno","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"深雪","reading":"みゆき","roman":"Miyuki","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"雪乃","reading":"ゆきの","roman":"Yukino","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"月乃","reading":"つきの","roman":"Tsukino","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"千草","reading":"ちぐさ","roman":"Chigusa","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"玉藻","reading":"たまも","roman":"Tamamo","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"春霞","reading":"はるがすみ","roman":"Harugasumi","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"白菊","reading":"しらぎく","roman":"Shiragiku","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"},
+  {"kanji":"鈴音","reading":"すずね","roman":"Suzune","tags":["透明感","儚い"],"source":"plant-season","style":"fantasy"}
+);
+
+/* old-personal-name / classical */
+nameData.wafu.givenNames.female.push(
+  {"kanji":"こま","reading":"こま","roman":"Koma","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お鈴","reading":"おすず","roman":"Osuzu","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お咲","reading":"おさき","roman":"Osaki","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お夏","reading":"おなつ","roman":"Onatsu","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お千","reading":"おせん","roman":"Osen","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お種","reading":"おたね","roman":"Otane","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お縫","reading":"おぬい","roman":"Onui","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お蝶","reading":"おちょう","roman":"Ocho","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お民","reading":"おたみ","roman":"Otami","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"},
+  {"kanji":"お竹","reading":"おたけ","roman":"Otake","tags":["明るい","無邪気"],"source":"old-personal-name","style":"classical"}
+);
+
+/* poetic-name / fantasy */
+nameData.wafu.givenNames.female.push(
+  {"kanji":"紅緒","reading":"べにお","roman":"Benio","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"巴","reading":"ともえ","roman":"Tomoe","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"千鳥","reading":"ちどり","roman":"Chidori","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"小袖","reading":"こそで","roman":"Kosode","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"緋桜","reading":"ひざくら","roman":"Hizakura","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"紅梅","reading":"こうばい","roman":"Kobai","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"菖蒲","reading":"あやめ","roman":"Ayame","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"葵","reading":"あおい","roman":"Aoi","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"玉梓","reading":"たまずさ","roman":"Tamazusa","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"真弓","reading":"まゆみ","roman":"Mayumi","tags":["強気","色気がある"],"source":"poetic-name","style":"fantasy"}
+);
+
+/* old-personal-name / classical */
+nameData.wafu.givenNames.female.push(
+  {"kanji":"汐乃","reading":"しおの","roman":"Shiono","tags":["穏やか","知的"],"source":"old-personal-name","style":"classical"}
+);
+
+/* poetic-name / fantasy */
+nameData.wafu.givenNames.neutral.push(
+  {"kanji":"伊織","reading":"いおり","roman":"Iori","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"千早","reading":"ちはや","roman":"Chihaya","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"沙羅","reading":"さら","roman":"Sara","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"水緒","reading":"みお","roman":"Mio","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"朔夜","reading":"さくや","roman":"Sakuya","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"八千代","reading":"やちよ","roman":"Yachiyo","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"夜澄","reading":"よすみ","roman":"Yosumi","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"雪笹","reading":"ゆきざさ","roman":"Yukizasa","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"真澄","reading":"ますみ","roman":"Masumi","tags":["神秘的","透明感"],"source":"poetic-name","style":"fantasy"}
+);
+
+/* plant / fantasy */
+nameData.wafu.givenNames.neutral.push(
+  {"kanji":"梓","reading":"あずさ","roman":"Azusa","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"椿","reading":"つばき","roman":"Tsubaki","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"蓮","reading":"れん","roman":"Ren","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"柊","reading":"ひいらぎ","roman":"Hiiragi","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"桐","reading":"きり","roman":"Kiri","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"槐","reading":"えんじゅ","roman":"Enju","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"梛","reading":"なぎ","roman":"Nagi","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"柳","reading":"やなぎ","roman":"Yanagi","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"蘭","reading":"らん","roman":"Ran","tags":["穏やか","無口"],"source":"plant","style":"fantasy"},
+  {"kanji":"楡","reading":"にれ","roman":"Nire","tags":["穏やか","無口"],"source":"plant","style":"fantasy"}
+);
+
+/* season / fantasy */
+nameData.wafu.givenNames.neutral.push(
+  {"kanji":"弥生","reading":"やよい","roman":"Yayoi","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"皐月","reading":"さつき","roman":"Satsuki","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"葉月","reading":"はづき","roman":"Hazuki","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"霜月","reading":"しもつき","roman":"Shimotsuki","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"卯月","reading":"うづき","roman":"Uzuki","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"千秋","reading":"ちあき","roman":"Chiaki","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"小夜","reading":"さよ","roman":"Sayo","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"夕","reading":"ゆう","roman":"Yu","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"朝","reading":"あさ","roman":"Asa","tags":["知的","儚い"],"source":"season","style":"fantasy"},
+  {"kanji":"冬至","reading":"とうじ","roman":"Toji","tags":["知的","儚い"],"source":"season","style":"fantasy"}
+);
+
+/* poetic-name / fantasy */
+nameData.wafu.givenNames.neutral.push(
+  {"kanji":"雅","reading":"みやび","roman":"Miyabi","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"幸","reading":"さち","roman":"Sachi","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"常葉","reading":"とこは","roman":"Tokoha","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"玉響","reading":"たまゆら","roman":"Tamayura","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"真麻","reading":"まあさ","roman":"Maasa","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"浅葱","reading":"あさぎ","roman":"Asagi","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"緋","reading":"あけ","roman":"Ake","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"藍","reading":"あい","roman":"Ai","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"紫","reading":"むらさき","roman":"Murasaki","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"萌黄","reading":"もえぎ","roman":"Moegi","tags":["高貴","穏やか"],"source":"poetic-name","style":"fantasy"}
+);
+
+/* poetic-name / fantasy */
+nameData.wafu.givenNames.neutral.push(
+  {"kanji":"篝","reading":"かがり","roman":"Kagari","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"笹音","reading":"ささね","roman":"Sasane","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"風音","reading":"かざね","roman":"Kazane","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"若葉","reading":"わかば","roman":"Wakaba","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"千種","reading":"ちぐさ","roman":"Chigusa","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"律","reading":"りつ","roman":"Ritsu","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"忍","reading":"しのぶ","roman":"Shinobu","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"巴","reading":"ともえ","roman":"Tomoe","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"瑞穂","reading":"みずほ","roman":"Mizuho","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"青葉","reading":"あおば","roman":"Aoba","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"},
+  {"kanji":"鈴","reading":"すず","roman":"Suzu","tags":["強気","神秘的"],"source":"poetic-name","style":"fantasy"}
+);
+
+/* english / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"アーサー","roman":"Arthur","g":"m","tags":["真面目","優しい"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"エドマンド","roman":"Edmund","g":"m","tags":["真面目","優しい"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"アルフレッド","roman":"Alfred","g":"m","tags":["真面目","優しい"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"ウォルター","roman":"Walter","g":"m","tags":["真面目","優しい"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"ヒュー","roman":"Hugh","g":"m","tags":["真面目","優しい"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"マーティン","roman":"Martin","g":"m","tags":["真面目","優しい"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"サイモン","roman":"Simon","g":"m","tags":["真面目","優しい"],"source":"personal-name","style":"historical","culture":"english"}
+);
+
+/* germanic / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"ディートリヒ","roman":"Dietrich","g":"m","tags":["強気","忠実"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"ヴォルフラム","roman":"Wolfram","g":"m","tags":["強気","忠実"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"ハルトムート","roman":"Hartmut","g":"m","tags":["強気","忠実"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"ベルトルト","roman":"Berthold","g":"m","tags":["強気","忠実"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"フリードリヒ","roman":"Friedrich","g":"m","tags":["強気","忠実"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"ゴットフリート","roman":"Gottfried","g":"m","tags":["強気","忠実"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"ライナー","roman":"Rainer","g":"m","tags":["強気","忠実"],"source":"personal-name","style":"historical","culture":"germanic"}
+);
+
+/* french / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"エティエンヌ","roman":"Etienne","g":"m","tags":["知的","余裕がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"マチュー","roman":"Mathieu","g":"m","tags":["知的","余裕がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"レミ","roman":"Remy","g":"m","tags":["知的","余裕がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"オリヴィエ","roman":"Olivier","g":"m","tags":["知的","余裕がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"バスティアン","roman":"Bastien","g":"m","tags":["知的","余裕がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"アルマン","roman":"Armand","g":"m","tags":["知的","余裕がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"ゴーティエ","roman":"Gautier","g":"m","tags":["知的","余裕がある"],"source":"personal-name","style":"historical","culture":"french"}
+);
+
+/* italian / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"アレッシオ","roman":"Alessio","g":"m","tags":["明るい","高貴"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"マッテオ","roman":"Matteo","g":"m","tags":["明るい","高貴"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"ジャコモ","roman":"Giacomo","g":"m","tags":["明るい","高貴"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"ラッファエーレ","roman":"Raffaele","g":"m","tags":["明るい","高貴"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"ロレンツォ","roman":"Lorenzo","g":"m","tags":["明るい","高貴"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"ヴィットリオ","roman":"Vittorio","g":"m","tags":["明るい","高貴"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"マルチェッロ","roman":"Marcello","g":"m","tags":["明るい","高貴"],"source":"personal-name","style":"historical","culture":"italian"}
+);
+
+/* iberian / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"アルバロ","roman":"Alvaro","g":"m","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"ロドリゴ","roman":"Rodrigo","g":"m","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"イニゴ","roman":"Inigo","g":"m","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"ゴンサロ","roman":"Gonzalo","g":"m","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"エステバン","roman":"Esteban","g":"m","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"サンティアゴ","roman":"Santiago","g":"m","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"エルナンド","roman":"Hernando","g":"m","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"}
+);
+
+/* nordic / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"エイナル","roman":"Einar","g":"m","tags":["無口","真面目"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"レイフ","roman":"Leif","g":"m","tags":["無口","真面目"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"アンダース","roman":"Anders","g":"m","tags":["無口","真面目"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"ニルス","roman":"Nils","g":"m","tags":["無口","真面目"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"セーレン","roman":"Soren","g":"m","tags":["無口","真面目"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"イーヴァル","roman":"Ivar","g":"m","tags":["無口","真面目"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"ステラン","roman":"Stellan","g":"m","tags":["無口","真面目"],"source":"personal-name","style":"historical","culture":"nordic"}
+);
+
+/* celtic / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"キーラン","roman":"Ciaran","g":"m","tags":["穏やか","神秘的"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"エイモン","roman":"Eamon","g":"m","tags":["穏やか","神秘的"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"フィンタン","roman":"Fintan","g":"m","tags":["穏やか","神秘的"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"ナイル","roman":"Niall","g":"m","tags":["穏やか","神秘的"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"ドーナル","roman":"Donal","g":"m","tags":["穏やか","神秘的"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"ローナン","roman":"Ronan","g":"m","tags":["穏やか","神秘的"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"コーマック","roman":"Cormac","g":"m","tags":["穏やか","神秘的"],"source":"personal-name","style":"historical","culture":"celtic"}
+);
+
+/* slavic / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"ミロスラフ","roman":"Miroslav","g":"m","tags":["知的","圧がある"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"ラドミル","roman":"Radomir","g":"m","tags":["知的","圧がある"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"ボグダン","roman":"Bogdan","g":"m","tags":["知的","圧がある"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"スタニスラフ","roman":"Stanislav","g":"m","tags":["知的","圧がある"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"ヴァーツラフ","roman":"Vaclav","g":"m","tags":["知的","圧がある"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"パヴェル","roman":"Pavel","g":"m","tags":["知的","圧がある"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"マレク","roman":"Marek","g":"m","tags":["知的","圧がある"],"source":"personal-name","style":"historical","culture":"slavic"}
+);
+
+/* english / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"アリス","roman":"Alice","g":"f","tags":["優しい","穏やか"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"イーディス","roman":"Edith","g":"f","tags":["優しい","穏やか"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"メイベル","roman":"Mabel","g":"f","tags":["優しい","穏やか"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"フローレンス","roman":"Florence","g":"f","tags":["優しい","穏やか"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"エレノア","roman":"Eleanor","g":"f","tags":["優しい","穏やか"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"ハリエット","roman":"Harriet","g":"f","tags":["優しい","穏やか"],"source":"personal-name","style":"historical","culture":"english"},
+  {"kana":"マチルダ","roman":"Matilda","g":"f","tags":["優しい","穏やか"],"source":"personal-name","style":"historical","culture":"english"}
+);
+
+/* germanic / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"アーデルハイト","roman":"Adelheid","g":"f","tags":["真面目","高貴"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"マティルデ","roman":"Mathilde","g":"f","tags":["真面目","高貴"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"ゲルトルート","roman":"Gertrud","g":"f","tags":["真面目","高貴"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"ヒルデガルト","roman":"Hildegard","g":"f","tags":["真面目","高貴"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"オティーリエ","roman":"Ottilie","g":"f","tags":["真面目","高貴"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"フリーダ","roman":"Frieda","g":"f","tags":["真面目","高貴"],"source":"personal-name","style":"historical","culture":"germanic"},
+  {"kana":"イルムガルト","roman":"Irmgard","g":"f","tags":["真面目","高貴"],"source":"personal-name","style":"historical","culture":"germanic"}
+);
+
+/* french / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"サビーヌ","roman":"Sabine","g":"f","tags":["知的","色気がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"コレット","roman":"Colette","g":"f","tags":["知的","色気がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"リュシル","roman":"Lucile","g":"f","tags":["知的","色気がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"アリーヌ","roman":"Aline","g":"f","tags":["知的","色気がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"デルフィーヌ","roman":"Delphine","g":"f","tags":["知的","色気がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"ソランジュ","roman":"Solange","g":"f","tags":["知的","色気がある"],"source":"personal-name","style":"historical","culture":"french"},
+  {"kana":"ミレイユ","roman":"Mireille","g":"f","tags":["知的","色気がある"],"source":"personal-name","style":"historical","culture":"french"}
+);
+
+/* italian / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"キアーラ","roman":"Chiara","g":"f","tags":["明るい","余裕がある"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"ビアンカ","roman":"Bianca","g":"f","tags":["明るい","余裕がある"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"フィオレッラ","roman":"Fiorella","g":"f","tags":["明るい","余裕がある"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"イラリア","roman":"Ilaria","g":"f","tags":["明るい","余裕がある"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"アレッサンドラ","roman":"Alessandra","g":"f","tags":["明るい","余裕がある"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"ジュリエッタ","roman":"Giulietta","g":"f","tags":["明るい","余裕がある"],"source":"personal-name","style":"historical","culture":"italian"},
+  {"kana":"ルクレツィア","roman":"Lucrezia","g":"f","tags":["明るい","余裕がある"],"source":"personal-name","style":"historical","culture":"italian"}
+);
+
+/* iberian / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"イネス","roman":"Ines","g":"f","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"ベアトリス","roman":"Beatriz","g":"f","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"パロマ","roman":"Paloma","g":"f","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"マリソル","roman":"Marisol","g":"f","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"テレサ","roman":"Teresa","g":"f","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"レオノール","roman":"Leonor","g":"f","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"},
+  {"kana":"イサベル","roman":"Isabel","g":"f","tags":["陽気","強気"],"source":"personal-name","style":"historical","culture":"iberian"}
+);
+
+/* nordic / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"シグリッド","roman":"Sigrid","g":"f","tags":["無口","透明感"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"イングリッド","roman":"Ingrid","g":"f","tags":["無口","透明感"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"アストリッド","roman":"Astrid","g":"f","tags":["無口","透明感"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"ソルヴェイ","roman":"Solveig","g":"f","tags":["無口","透明感"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"ラグンヒルド","roman":"Ragnhild","g":"f","tags":["無口","透明感"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"リンネア","roman":"Linnea","g":"f","tags":["無口","透明感"],"source":"personal-name","style":"historical","culture":"nordic"},
+  {"kana":"シグネ","roman":"Signe","g":"f","tags":["無口","透明感"],"source":"personal-name","style":"historical","culture":"nordic"}
+);
+
+/* celtic / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"オーラ","roman":"Orla","g":"f","tags":["神秘的","穏やか"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"ニーヴ","roman":"Niamh","g":"f","tags":["神秘的","穏やか"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"アシュリン","roman":"Aisling","g":"f","tags":["神秘的","穏やか"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"シヴォーン","roman":"Siobhan","g":"f","tags":["神秘的","穏やか"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"メイヴ","roman":"Maeve","g":"f","tags":["神秘的","穏やか"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"ブロンウェン","roman":"Bronwen","g":"f","tags":["神秘的","穏やか"],"source":"personal-name","style":"historical","culture":"celtic"},
+  {"kana":"エイリー","roman":"Eilidh","g":"f","tags":["神秘的","穏やか"],"source":"personal-name","style":"historical","culture":"celtic"}
+);
+
+/* slavic / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"ミレナ","roman":"Milena","g":"f","tags":["知的","真面目"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"ゾフィア","roman":"Zofia","g":"f","tags":["知的","真面目"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"ダニツァ","roman":"Danica","g":"f","tags":["知的","真面目"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"ヴェスナ","roman":"Vesna","g":"f","tags":["知的","真面目"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"リュドミラ","roman":"Ludmila","g":"f","tags":["知的","真面目"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"イヴァナ","roman":"Ivana","g":"f","tags":["知的","真面目"],"source":"personal-name","style":"historical","culture":"slavic"},
+  {"kana":"ボジェナ","roman":"Bozena","g":"f","tags":["知的","真面目"],"source":"personal-name","style":"historical","culture":"slavic"}
+);
+
+/* english / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"アレックス","roman":"Alex","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"エイヴリー","roman":"Avery","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ブレア","roman":"Blair","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ケイシー","roman":"Casey","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"デイナ","roman":"Dana","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ダーシー","roman":"Darcy","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"エリス","roman":"Ellis","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"フィンリー","roman":"Finley","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ジェイミー","roman":"Jamie","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ジェシー","roman":"Jesse","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ジョーダン","roman":"Jordan","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"リー","roman":"Lee","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"レスリー","roman":"Leslie","g":"n","tags":["明るい","穏やか"],"source":"personal-name","style":"unisex","culture":"english"}
+);
+
+/* english / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"マイカ","roman":"Micah","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ノエル","roman":"Noel","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"パット","roman":"Pat","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"リース","roman":"Reese","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ライリー","roman":"Riley","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ローリー","roman":"Rory","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"サム","roman":"Sam","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"シャノン","roman":"Shannon","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"シドニー","roman":"Sidney","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"スカイラー","roman":"Skyler","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"テイラー","roman":"Taylor","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"テリー","roman":"Terry","g":"n","tags":["知的","余裕がある"],"source":"personal-name","style":"unisex","culture":"english"}
+);
+
+/* english / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"アデア","roman":"Adair","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"アーデン","roman":"Arden","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"オーデン","roman":"Auden","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ベック","roman":"Beck","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ベラミー","roman":"Bellamy","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ブレイン","roman":"Blaine","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"デヴォン","roman":"Devon","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ドリュー","roman":"Drew","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"ホリス","roman":"Hollis","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"},
+  {"kana":"レーン","roman":"Lane","g":"n","tags":["真面目","無口"],"source":"personal-name","style":"unisex","culture":"english"}
+);
+
+/* english / plant */
+nameData.western.givenNames.push(
+  {"kana":"ローワン","roman":"Rowan","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"セージ","roman":"Sage","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"リンデン","roman":"Linden","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"ローレル","roman":"Laurel","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"ブライア","roman":"Briar","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"アルダー","roman":"Alder","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"ファーン","roman":"Fern","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"アスター","roman":"Aster","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"クローヴァー","roman":"Clover","g":"n","tags":["透明感","優しい"],"source":"plant","style":"nature-name","culture":"english"}
+);
+
+/* english / landscape */
+nameData.western.givenNames.push(
+  {"kana":"リヴァー","roman":"River","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"ブルック","roman":"Brook","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"グレン","roman":"Glen","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"ヴェイル","roman":"Vale","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"レイク","roman":"Lake","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"レイン","roman":"Rain","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"ゲイル","roman":"Gale","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"ウィンター","roman":"Winter","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"オーシャン","roman":"Ocean","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"},
+  {"kana":"サニー","roman":"Sunny","g":"n","tags":["穏やか","神秘的"],"source":"landscape","style":"nature-name","culture":"english"}
+);
+
+/* english / mineral-colour */
+nameData.western.givenNames.push(
+  {"kana":"ジェイド","roman":"Jade","g":"n","tags":["無口","ミステリアス"],"source":"mineral-colour","style":"nature-name","culture":"english"},
+  {"kana":"ガーネット","roman":"Garnet","g":"n","tags":["無口","ミステリアス"],"source":"mineral-colour","style":"nature-name","culture":"english"},
+  {"kana":"インディゴ","roman":"Indigo","g":"n","tags":["無口","ミステリアス"],"source":"mineral-colour","style":"nature-name","culture":"english"},
+  {"kana":"スターリング","roman":"Sterling","g":"n","tags":["無口","ミステリアス"],"source":"mineral-colour","style":"nature-name","culture":"english"},
+  {"kana":"アイヴォリー","roman":"Ivory","g":"n","tags":["無口","ミステリアス"],"source":"mineral-colour","style":"nature-name","culture":"english"},
+  {"kana":"トパーズ","roman":"Topaz","g":"n","tags":["無口","ミステリアス"],"source":"mineral-colour","style":"nature-name","culture":"english"}
+);
+
+/* french / personal-name */
+nameData.western.givenNames.push(
+  {"kana":"カミーユ","roman":"Camille","g":"n","tags":["知的","穏やか"],"source":"personal-name","style":"unisex","culture":"french"},
+  {"kana":"ドミニク","roman":"Dominique","g":"n","tags":["知的","穏やか"],"source":"personal-name","style":"unisex","culture":"french"},
+  {"kana":"クロード","roman":"Claude","g":"n","tags":["知的","穏やか"],"source":"personal-name","style":"unisex","culture":"french"},
+  {"kana":"アリックス","roman":"Alix","g":"n","tags":["知的","穏やか"],"source":"personal-name","style":"unisex","culture":"french"}
+);
+
+/* latin / latin-root */
+nameData.western.givenNames.push(
+  {"kana":"オーレリアン","roman":"Aurelian","g":"m","tags":["穏やか","高貴"],"source":"latin-root","style":"historical","culture":"latin"},
+  {"kana":"フロリアン","roman":"Florian","g":"m","tags":["穏やか","高貴"],"source":"latin-root","style":"historical","culture":"latin"},
+  {"kana":"イグナティウス","roman":"Ignatius","g":"m","tags":["穏やか","高貴"],"source":"latin-root","style":"historical","culture":"latin"},
+  {"kana":"シルヴァヌス","roman":"Silvanus","g":"m","tags":["穏やか","高貴"],"source":"latin-root","style":"historical","culture":"latin"},
+  {"kana":"ヴィタリス","roman":"Vitalis","g":"m","tags":["穏やか","高貴"],"source":"latin-root","style":"historical","culture":"latin"},
+  {"kana":"カエリウス","roman":"Caelius","g":"m","tags":["穏やか","高貴"],"source":"latin-root","style":"historical","culture":"latin"}
+);
+
+/* greek / legend */
+nameData.western.givenNames.push(
+  {"kana":"エヴァンダー","roman":"Evander","g":"m","tags":["神秘的","知的"],"source":"legend","style":"historical","culture":"greek"},
+  {"kana":"リアンダー","roman":"Leander","g":"m","tags":["神秘的","知的"],"source":"legend","style":"historical","culture":"greek"},
+  {"kana":"ダフニス","roman":"Daphnis","g":"m","tags":["神秘的","知的"],"source":"legend","style":"historical","culture":"greek"}
+);
+
+/* english / mineral-plant */
+nameData.western.givenNames.push(
+  {"kana":"ジャスパー","roman":"Jasper","g":"m","tags":["明るい","真面目"],"source":"mineral-plant","style":"nature-name","culture":"english"},
+  {"kana":"フリント","roman":"Flint","g":"m","tags":["明るい","真面目"],"source":"mineral-plant","style":"nature-name","culture":"english"},
+  {"kana":"ヒース","roman":"Heath","g":"m","tags":["明るい","真面目"],"source":"mineral-plant","style":"nature-name","culture":"english"}
+);
+
+/* germanic / old-name-root */
+nameData.western.givenNames.push(
+  {"kana":"ベルネヴィン","roman":"Bernewin","g":"m","tags":["無口","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"},
+  {"kana":"エデムント","roman":"Edemund","g":"m","tags":["無口","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"},
+  {"kana":"ハルトリヒ","roman":"Hartrich","g":"m","tags":["無口","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"},
+  {"kana":"ウィンフレッド","roman":"Winfred","g":"m","tags":["無口","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"},
+  {"kana":"オズワルディン","roman":"Oswaldin","g":"m","tags":["無口","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"},
+  {"kana":"アダルマール","roman":"Adalmar","g":"m","tags":["無口","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"}
+);
+
+/* latin / latin-root */
+nameData.western.givenNames.push(
+  {"kana":"ヴィテラン","roman":"Vitellan","g":"m","tags":["高貴","神秘的"],"source":"latin-root","style":"fantasy","culture":"latin"},
+  {"kana":"フロレンティス","roman":"Florentis","g":"m","tags":["高貴","神秘的"],"source":"latin-root","style":"fantasy","culture":"latin"},
+  {"kana":"カエリドール","roman":"Caelidor","g":"m","tags":["高貴","神秘的"],"source":"latin-root","style":"fantasy","culture":"latin"},
+  {"kana":"アウレスタン","roman":"Aurestan","g":"m","tags":["高貴","神秘的"],"source":"latin-root","style":"fantasy","culture":"latin"},
+  {"kana":"イグナヴェル","roman":"Ignavel","g":"m","tags":["高貴","神秘的"],"source":"latin-root","style":"fantasy","culture":"latin"},
+  {"kana":"シルヴォルン","roman":"Silvorn","g":"m","tags":["高貴","神秘的"],"source":"latin-root","style":"fantasy","culture":"latin"}
+);
+
+/* english / plant */
+nameData.western.givenNames.push(
+  {"kana":"ヘイゼル","roman":"Hazel","g":"f","tags":["明るい","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"ホリー","roman":"Holly","g":"f","tags":["明るい","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"ヘザー","roman":"Heather","g":"f","tags":["明るい","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"ローズ","roman":"Rose","g":"f","tags":["明るい","優しい"],"source":"plant","style":"nature-name","culture":"english"},
+  {"kana":"リリー","roman":"Lily","g":"f","tags":["明るい","優しい"],"source":"plant","style":"nature-name","culture":"english"}
+);
+
+/* english / virtue */
+nameData.western.givenNames.push(
+  {"kana":"グレイス","roman":"Grace","g":"f","tags":["穏やか","知的"],"source":"virtue","style":"historical","culture":"english"},
+  {"kana":"ホープ","roman":"Hope","g":"f","tags":["穏やか","知的"],"source":"virtue","style":"historical","culture":"english"},
+  {"kana":"フェイス","roman":"Faith","g":"f","tags":["穏やか","知的"],"source":"virtue","style":"historical","culture":"english"},
+  {"kana":"フェリシティ","roman":"Felicity","g":"f","tags":["穏やか","知的"],"source":"virtue","style":"historical","culture":"english"},
+  {"kana":"ヴェリティ","roman":"Verity","g":"f","tags":["穏やか","知的"],"source":"virtue","style":"historical","culture":"english"}
+);
+
+/* latin / sky */
+nameData.western.givenNames.push(
+  {"kana":"セレスト","roman":"Celeste","g":"f","tags":["透明感","神秘的"],"source":"sky","style":"historical","culture":"latin"},
+  {"kana":"オーロラ","roman":"Aurora","g":"f","tags":["透明感","神秘的"],"source":"sky","style":"historical","culture":"latin"}
+);
+
+/* italian / music */
+nameData.western.givenNames.push(
+  {"kana":"アリア","roman":"Aria","g":"f","tags":["高貴","穏やか"],"source":"music","style":"historical","culture":"italian"},
+  {"kana":"ヴィオラ","roman":"Viola","g":"f","tags":["高貴","穏やか"],"source":"music","style":"historical","culture":"italian"}
+);
+
+/* english / mineral-colour */
+nameData.western.givenNames.push(
+  {"kana":"アンバー","roman":"Amber","g":"f","tags":["透明感","優しい"],"source":"mineral-colour","style":"nature-name","culture":"english"},
+  {"kana":"パール","roman":"Pearl","g":"f","tags":["透明感","優しい"],"source":"mineral-colour","style":"nature-name","culture":"english"},
+  {"kana":"オパール","roman":"Opal","g":"f","tags":["透明感","優しい"],"source":"mineral-colour","style":"nature-name","culture":"english"},
+  {"kana":"シエナ","roman":"Sienna","g":"f","tags":["透明感","優しい"],"source":"mineral-colour","style":"nature-name","culture":"english"}
+);
+
+/* french / plant-root */
+nameData.western.givenNames.push(
+  {"kana":"ロズリーヌ","roman":"Roseline","g":"f","tags":["神秘的","穏やか"],"source":"plant-root","style":"fantasy","culture":"french"},
+  {"kana":"フィオレンヌ","roman":"Fiorenne","g":"f","tags":["神秘的","穏やか"],"source":"plant-root","style":"fantasy","culture":"french"},
+  {"kana":"アヴリーズ","roman":"Avelise","g":"f","tags":["神秘的","穏やか"],"source":"plant-root","style":"fantasy","culture":"french"},
+  {"kana":"メルヴェル","roman":"Mervelle","g":"f","tags":["神秘的","穏やか"],"source":"plant-root","style":"fantasy","culture":"french"}
+);
+
+/* germanic / old-name-root */
+nameData.western.givenNames.push(
+  {"kana":"ベルトルーナ","roman":"Bertruna","g":"f","tags":["強気","知的"],"source":"old-name-root","style":"fantasy","culture":"germanic"},
+  {"kana":"アルトヴィーナ","roman":"Altwina","g":"f","tags":["強気","知的"],"source":"old-name-root","style":"fantasy","culture":"germanic"}
+);
+
+/* english, french / music-art */
+nameData.western.givenNames.push(
+  {"kana":"ケイデンス","roman":"Cadence","g":"n","tags":["透明感","穏やか"],"source":"music-art","style":"nature-name","culture":"english"},
+  {"kana":"リリック","roman":"Lyric","g":"n","tags":["透明感","穏やか"],"source":"music-art","style":"nature-name","culture":"english"},
+  {"kana":"シャンソン","roman":"Chanson","g":"n","tags":["透明感","穏やか"],"source":"music-art","style":"nature-name","culture":"french"}
+);
+
+/* international-star-name, welsh, arabic-star-name / sky */
+nameData.western.givenNames.push(
+  {"kana":"ヴェガ","roman":"Vega","g":"n","tags":["神秘的","明るい"],"source":"sky","style":"nature-name","culture":"international-star-name"},
+  {"kana":"セレン","roman":"Seren","g":"n","tags":["神秘的","明るい"],"source":"sky","style":"nature-name","culture":"welsh"},
+  {"kana":"アルタイル","roman":"Altair","g":"n","tags":["神秘的","明るい"],"source":"sky","style":"nature-name","culture":"arabic-star-name"}
+);
+
+/* english / virtue */
+nameData.western.givenNames.push(
+  {"kana":"アミティ","roman":"Amity","g":"n","tags":["優しい","高貴"],"source":"virtue","style":"historical","culture":"english"},
+  {"kana":"オナー","roman":"Honor","g":"n","tags":["優しい","高貴"],"source":"virtue","style":"historical","culture":"english"},
+  {"kana":"トゥルー","roman":"True","g":"n","tags":["優しい","高貴"],"source":"virtue","style":"historical","culture":"english"}
+);
+
+/* romance / colour-root */
+nameData.western.givenNames.push(
+  {"kana":"ヴィレル","roman":"Virel","g":"n","tags":["知的","ミステリアス"],"source":"colour-root","style":"fantasy","culture":"romance"},
+  {"kana":"インドレン","roman":"Indren","g":"n","tags":["知的","ミステリアス"],"source":"colour-root","style":"fantasy","culture":"romance"},
+  {"kana":"オクレン","roman":"Ocren","g":"n","tags":["知的","ミステリアス"],"source":"colour-root","style":"fantasy","culture":"romance"},
+  {"kana":"シエンネル","roman":"Siennel","g":"n","tags":["知的","ミステリアス"],"source":"colour-root","style":"fantasy","culture":"romance"}
+);
+
+/* germanic / old-name-root */
+nameData.western.givenNames.push(
+  {"kana":"ハルドレン","roman":"Haldren","g":"n","tags":["真面目","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"},
+  {"kana":"ブレンウィン","roman":"Brenwin","g":"n","tags":["真面目","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"},
+  {"kana":"テルヴィン","roman":"Tervin","g":"n","tags":["真面目","余裕がある"],"source":"old-name-root","style":"fantasy","culture":"germanic"}
+);
+
+/* english / occupation */
+nameData.western.familyNames.push(
+  {"kana":"スミス","roman":"Smith","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ミラー","roman":"Miller","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"クーパー","roman":"Cooper","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"フレッチャー","roman":"Fletcher","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"タナー","roman":"Tanner","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ウィーヴァー","roman":"Weaver","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ターナー","roman":"Turner","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"カーター","roman":"Carter","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ベイカー","roman":"Baker","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"フィッシャー","roman":"Fisher","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"メイソン","roman":"Mason","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ポッター","roman":"Potter","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"チャンドラー","roman":"Chandler","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"マーサー","roman":"Mercer","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ブルワー","roman":"Brewer","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ソーヤー","roman":"Sawyer","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"サッチャー","roman":"Thatcher","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ウェインライト","roman":"Wainwright","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"ホイールライト","roman":"Wheelwright","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"シェパード","roman":"Shepherd","tags":["真面目","不器用"],"source":"occupation","style":"historical","culture":"english"}
+);
+
+/* english / landscape */
+nameData.western.familyNames.push(
+  {"kana":"アシュフォード","roman":"Ashford","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ブラッドフォード","roman":"Bradford","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ホイットフォード","roman":"Whitford","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ウッドフォード","roman":"Woodford","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"サンドフォード","roman":"Sandford","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ホルト","roman":"Holt","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"アトウッド","roman":"Atwood","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"グリーンウッド","roman":"Greenwood","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"リンウッド","roman":"Linwood","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"アンダーウッド","roman":"Underwood","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"グリーンフィールド","roman":"Greenfield","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ウェイクフィールド","roman":"Wakefield","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"クランフィールド","roman":"Cranfield","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ハートフィールド","roman":"Hartfield","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"フェアフィールド","roman":"Fairfield","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ブルックフィールド","roman":"Brookfield","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ラングフォード","roman":"Langford","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ホルブルック","roman":"Holbrook","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"イーストブルック","roman":"Eastbrook","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"フェアブルック","roman":"Fairbrook","tags":["穏やか","優しい"],"source":"landscape","style":"historical","culture":"english"}
+);
+
+/* english / settlement */
+nameData.western.familyNames.push(
+  {"kana":"ハートウェル","roman":"Hartwell","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ブライトウェル","roman":"Brightwell","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ホイットウェル","roman":"Whitwell","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"クロムウェル","roman":"Cromwell","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"アップルトン","roman":"Appleton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ミドルトン","roman":"Middleton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"バートン","roman":"Barton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"サットン","roman":"Sutton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ノートン","roman":"Norton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ホイットン","roman":"Whitton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ヒントン","roman":"Hinton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"フェルトン","roman":"Felton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"モートン","roman":"Morton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"クレイトン","roman":"Clayton","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ダラム","roman":"Durham","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"マーカム","roman":"Markham","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ペラム","roman":"Pelham","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"ニーダム","roman":"Needham","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"},
+  {"kana":"デナム","roman":"Denham","tags":["明るい","陽気"],"source":"settlement","style":"historical","culture":"english"}
+);
+
+/* english / landscape */
+nameData.western.familyNames.push(
+  {"kana":"フェニック","roman":"Fenwick","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ハードウィック","roman":"Hardwick","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"チャドウィック","roman":"Chadwick","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"セジウィック","roman":"Sedgwick","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ケジック","roman":"Keswick","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ミアウッド","roman":"Merewood","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ブラッケンミア","roman":"Brackenmere","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ヒリアー","roman":"Hillier","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"レッドヒル","roman":"Redhill","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"グリーンヒル","roman":"Greenhill","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ストーンブリッジ","roman":"Stonebridge","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ウッドブリッジ","roman":"Woodbridge","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ベインブリッジ","roman":"Bainbridge","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ラングブリッジ","roman":"Langbridge","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"アシュブリッジ","roman":"Ashbridge","tags":["知的","無口"],"source":"landscape","style":"historical","culture":"english"}
+);
+
+/* english / landscape-heraldry */
+nameData.western.familyNames.push(
+  {"kana":"グレイストーン","roman":"Greystone","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"ホワイトストーン","roman":"Whitestone","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"レッドストーン","roman":"Redstone","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"ブラッケンストーン","roman":"Brackenstone","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"ハートストーン","roman":"Hartstone","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"レイヴンズミア","roman":"Ravensmere","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"ファルコンリッジ","roman":"Falconridge","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"スワンヒル","roman":"Swanhill","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"オークハースト","roman":"Oakhurst","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"},
+  {"kana":"ローズウェル","roman":"Rosewell","tags":["強気","余裕がある"],"source":"landscape-heraldry","style":"fantasy","culture":"english"}
+);
+
+/* english / landscape */
+nameData.western.familyNames.push(
+  {"kana":"バンクロフト","roman":"Bancroft","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ビークロフト","roman":"Beecroft","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ホルクロフト","roman":"Holcroft","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"グリーンクロフト","roman":"Greencroft","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ウッドクロフト","roman":"Woodcroft","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ハーグローヴ","roman":"Hargrove","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"コズグローヴ","roman":"Cosgrove","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ハーウッド","roman":"Harwood","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"バーチウッド","roman":"Birchwood","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"エルムウッド","roman":"Elmwood","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"クレイブルック","roman":"Claybrook","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ホイットコム","roman":"Whitcomb","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"アシュビー","roman":"Ashby","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"セルビー","roman":"Selby","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"},
+  {"kana":"ブッシェル","roman":"Bushell","tags":["穏やか","影が薄い"],"source":"landscape","style":"historical","culture":"english"}
+);
+
+/* french / occupation-landscape */
+nameData.western.familyNames.push(
+  {"kana":"モロー","roman":"Moreau","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"メルシエ","roman":"Mercier","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"ブーランジェ","roman":"Boulanger","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"シャルパンティエ","roman":"Charpentier","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"ムニエ","roman":"Meunier","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"デュポン","roman":"Dupont","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"デュボワ","roman":"Dubois","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"デシャン","roman":"Deschamps","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"ドラクロワ","roman":"Delacroix","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"デュモン","roman":"Dumont","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"リヴィエール","roman":"Riviere","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"ロッシュ","roman":"Roche","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"ラフォレ","roman":"Laforet","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"デロジエ","roman":"Desrosiers","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"},
+  {"kana":"ベランジェ","roman":"Bellanger","tags":["知的","穏やか"],"source":"occupation-landscape","style":"historical","culture":"french"}
+);
+
+/* german / occupation-landscape */
+nameData.western.familyNames.push(
+  {"kana":"シュミット","roman":"Schmidt","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"ヴェーバー","roman":"Weber","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"シュナイダー","roman":"Schneider","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"カウフマン","roman":"Kaufmann","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"ツィンマーマン","roman":"Zimmermann","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"ヴァーグナー","roman":"Wagner","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"フォーゲル","roman":"Vogel","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"ベルクマン","roman":"Bergmann","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"バウマン","roman":"Baumann","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"リントナー","roman":"Lindner","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"バッハマン","roman":"Bachmann","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"ザイデル","roman":"Seidel","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"シュタインバッハ","roman":"Steinbach","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"},
+  {"kana":"キルヒナー","roman":"Kirchner","tags":["真面目","強気"],"source":"occupation-landscape","style":"historical","culture":"german"}
+);
+
+/* italian / occupation-landscape */
+nameData.western.familyNames.push(
+  {"kana":"フェッラーロ","roman":"Ferraro","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"モリナーリ","roman":"Molinari","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"サルトーリ","roman":"Sartori","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"モレッティ","roman":"Moretti","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"ビアンキ","roman":"Bianchi","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"フォンターナ","roman":"Fontana","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"コスタ","roman":"Costa","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"マリーニ","roman":"Marini","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"ロセッティ","roman":"Rossetti","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"},
+  {"kana":"ベッリーニ","roman":"Bellini","tags":["明るい","余裕がある"],"source":"occupation-landscape","style":"historical","culture":"italian"}
+);
+
+/* nordic / landscape */
+nameData.western.familyNames.push(
+  {"kana":"リンドホルム","roman":"Lindholm","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"ベルグルンド","roman":"Berglund","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"エークマン","roman":"Ekman","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"スンドベリ","roman":"Sundberg","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"ホルムストローム","roman":"Holmstrom","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"ニューベリ","roman":"Nyberg","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"ダール","roman":"Dahl","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"ルンドグレン","roman":"Lundgren","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"サンドヴィーク","roman":"Sandvik","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"},
+  {"kana":"ビョルクルンド","roman":"Bjorklund","tags":["無口","穏やか"],"source":"landscape","style":"historical","culture":"nordic"}
+);
+
+/* english / occupation */
+nameData.western.familyNames.push(
+  {"kana":"フラー","roman":"Fuller","tags":["穏やか","真面目"],"source":"occupation","style":"historical","culture":"english"},
+  {"kana":"グローヴァー","roman":"Glover","tags":["穏やか","真面目"],"source":"occupation","style":"historical","culture":"english"}
+);
+
+/* french / estate */
+nameData.western.nobleNames.push(
+  {"kana":"モントルヴァル","roman":"Montreval","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"ヴォークレール","roman":"Vauclair","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"ベルコンブ","roman":"Bellecombe","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"ロシュブリュヌ","roman":"Rochebrune","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"フォントネル","roman":"Fontenelle","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"クレールヴォー","roman":"Clairvaux","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"ヴィルヌーヴ","roman":"Villeneuve","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"クルトネ","roman":"Courtenay","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"シャントリーヴ","roman":"Chanterive","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"ブリーズクール","roman":"Brisecourt","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"モンフォコン","roman":"Montfaucon","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"オーブリーヴ","roman":"Auberive","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"シャトールー","roman":"Chateauroux","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"ヴァルルナール","roman":"Valrenard","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"},
+  {"kana":"ロックフルール","roman":"Roquefleur","tags":["高貴","知的"],"source":"estate","style":"fantasy","culture":"french"}
+);
+
+/* french / heraldry-estate */
+nameData.western.nobleNames.push(
+  {"kana":"アルジャンテル","roman":"Argentelle","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"エーグクレール","roman":"Aigueclaire","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"ロズレ","roman":"Roseraie","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"クルセル","roman":"Courcelles","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"ベルフォン","roman":"Bellefont","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"シャントメルル","roman":"Chantemerle","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"オートリーヴ","roman":"Hauterive","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"フルーリモン","roman":"Fleurimont","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"ボワルー","roman":"Boisroux","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"モンドレ","roman":"Montdore","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"サブランクール","roman":"Sablencourt","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"オルムヴォー","roman":"Ormevaux","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"ヴァルデゾーヌ","roman":"Valdesaulnes","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"トゥールネル","roman":"Tourenelle","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"},
+  {"kana":"エグランテル","roman":"Eglantelle","tags":["高貴","透明感"],"source":"heraldry-estate","style":"fantasy","culture":"french"}
+);
+
+/* germanic / castle-estate */
+nameData.western.nobleNames.push(
+  {"kana":"ファルケンリート","roman":"Falkenried","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"アイヒェンホルスト","roman":"Eichenhorst","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ローゼンフェルス","roman":"Rosenfels","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ヒルシェンタール","roman":"Hirschenthal","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ホーエンリート","roman":"Hohenried","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"シュタインブルン","roman":"Steinbrunn","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"タンネンフェルス","roman":"Tannenfels","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"アドラーハイン","roman":"Adlerhain","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"リヒテンフォルスト","roman":"Lichtenforst","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ブーヘンハイム","roman":"Buchenheim","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"クローネンフェルス","roman":"Kronenfels","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ラーベンブルン","roman":"Rabenbrunn","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"アイゼンリート","roman":"Eisenried","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"トゥルムハーゲン","roman":"Turmhagen","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ヴァハテンタール","roman":"Wachtenthal","tags":["高貴","圧がある"],"source":"castle-estate","style":"fantasy","culture":"germanic"}
+);
+
+/* germanic / estate */
+nameData.western.nobleNames.push(
+  {"kana":"リンデンブルン","roman":"Lindenbrunn","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"グライフェンホルスト","roman":"Greifenhorst","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ビルケンフェルス","roman":"Birkenfels","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ジルバーハーゲン","roman":"Silberhagen","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"アルテンフォルスト","roman":"Altenforst","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ファルケナウ","roman":"Falkenau","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ライヒェンハイン","roman":"Reichenhain","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ベルゲンタール","roman":"Bergenthal","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"エルレンブルック","roman":"Erlenbruck","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"シュヴァーネンフェルス","roman":"Schwanenfels","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ホーエンヴァハト","roman":"Hohenwacht","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ドルネンタール","roman":"Dornenthal","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ヴァイデンフェルス","roman":"Weidenfels","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"ゴルトブルン","roman":"Goldbrunn","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"},
+  {"kana":"フィヒテンリート","roman":"Fichtenried","tags":["高貴","真面目"],"source":"estate","style":"fantasy","culture":"germanic"}
+);
+
+/* italian / estate */
+nameData.western.nobleNames.push(
+  {"kana":"モンテファルコーネ","roman":"Montefalcone","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"ロッカフルヴァ","roman":"Roccafulva","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"ヴァルデッローロ","roman":"Valdelloro","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"カステルフロンダ","roman":"Castelfronda","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"フォンテラルゴ","roman":"Fontelargo","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"ピエトラルンガ","roman":"Pietralunga","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"ベッラロッカ","roman":"Bellarocca","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"リヴァキアーラ","roman":"Rivachiara","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"トッレネーラ","roman":"Torrenera","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"カンポフィオリート","roman":"Campofiorito","tags":["高貴","色気がある"],"source":"estate","style":"fantasy","culture":"italian"}
+);
+
+/* italian / estate */
+nameData.western.nobleNames.push(
+  {"kana":"モンテラウロ","roman":"Montelauro","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"カステルベッロ","roman":"Castelbello","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"ロッカセルヴァ","roman":"Roccaselva","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"ヴァルデルソーリョ","roman":"Valdelsoglio","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"フォンテドーロ","roman":"Fontedoro","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"ピエトラヴァッレ","roman":"Pietravalle","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"ローザフォルテ","roman":"Rosaforte","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"トッレキアーラ","roman":"Torrechiara","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"カンポルンゴ","roman":"Campolungo","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"},
+  {"kana":"リヴァフォルテ","roman":"Rivaforte","tags":["高貴","穏やか"],"source":"estate","style":"fantasy","culture":"italian"}
+);
+
+/* english / estate */
+nameData.western.nobleNames.push(
+  {"kana":"ブラッケンワース","roman":"Brackenworth","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"アルダーコム","roman":"Aldercombe","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"ハーテンショー","roman":"Hartenshaw","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"ホイットモアホール","roman":"Whitmorehall","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"ソーンウィック","roman":"Thornwick","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"ホークスワース","roman":"Hawkesworth","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"エヴァーズホルト","roman":"Eversholt","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"ダンスタンミア","roman":"Dunstanmere","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"エルムズバラ","roman":"Elmsborough","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"},
+  {"kana":"アシェンハースト","roman":"Ashenhurst","tags":["高貴","余裕がある"],"source":"estate","style":"fantasy","culture":"english"}
+);
+
+/* english / heraldry-estate */
+nameData.western.nobleNames.push(
+  {"kana":"ランスワース","roman":"Lanceworth","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"ローズウォーデン","roman":"Rosewarden","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"スタッグコム","roman":"Stagcombe","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"オークンフォード","roman":"Oakenford","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"クラウンズヒル","roman":"Crownshill","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"ファルコンハースト","roman":"Falconhurst","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"スワンズブリッジ","roman":"Swansbridge","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"コッパーステッド","roman":"Copperstead","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"シールドウィック","roman":"Shieldwick","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"},
+  {"kana":"ハーテンコート","roman":"Hartencourt","tags":["高貴","忠実"],"source":"heraldry-estate","style":"fantasy","culture":"english"}
+);
+
+/* english / personal-name */
+nameData.scifi.givenNames.push(
+  {"kana":"アダム","roman":"Adam","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ベン","roman":"Ben","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"コール","roman":"Cole","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ディーン","roman":"Dean","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"イーライ","roman":"Eli","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"フィン","roman":"Finn","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"グラント","roman":"Grant","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"イアン","roman":"Ian","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ジョエル","roman":"Joel","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"セス","roman":"Seth","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"english"}
+);
+
+/* european / personal-name */
+nameData.scifi.givenNames.push(
+  {"kana":"エミル","roman":"Emil","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ユーゴー","roman":"Hugo","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"イヴォー","roman":"Ivo","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"レオン","roman":"Leon","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ラース","roman":"Lars","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ニコ","roman":"Nico","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"オットー","roman":"Otto","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ポール","roman":"Paul","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"スヴェン","roman":"Sven","g":"m","tags":["知的"],"source":"personal-name","style":"future","culture":"european"}
+);
+
+/* european / personal-name */
+nameData.scifi.givenNames.push(
+  {"kana":"ブルーノ","roman":"Bruno","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"デニス","roman":"Denis","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"エンツォ","roman":"Enzo","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"エリク","roman":"Erik","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ゴラン","roman":"Goran","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"イヴァン","roman":"Ivan","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ヤン","roman":"Jan","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"レフ","roman":"Lev","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"オレグ","roman":"Oleg","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ウーヴェ","roman":"Uwe","g":"m","tags":["強気"],"source":"personal-name","style":"future","culture":"european"}
+);
+
+/* european / personal-name */
+nameData.scifi.givenNames.push(
+  {"kana":"エイダ","roman":"Ada","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"アルマ","roman":"Alma","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"アーニャ","roman":"Anya","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ベス","roman":"Bess","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"コーラ","roman":"Cora","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ドーラ","roman":"Dora","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"エルサ","roman":"Elsa","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"エズメ","roman":"Esme","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"フェイ","roman":"Faye","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"グレタ","roman":"Greta","g":"f","tags":["明るい"],"source":"personal-name","style":"future","culture":"european"}
+);
+
+/* european / personal-name */
+nameData.scifi.givenNames.push(
+  {"kana":"イーダ","roman":"Ida","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"イルゼ","roman":"Ilse","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"イーナ","roman":"Ina","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ジョーン","roman":"Joan","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ジョイ","roman":"Joy","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"キーラ","roman":"Kira","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"レナ","roman":"Lena","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"リーズ","roman":"Lise","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"マーラ","roman":"Mara","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ネル","roman":"Nell","g":"f","tags":["透明感"],"source":"personal-name","style":"future","culture":"european"}
+);
+
+/* european / personal-name */
+nameData.scifi.givenNames.push(
+  {"kana":"ノラ","roman":"Nora","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"オルガ","roman":"Olga","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ピア","roman":"Pia","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"レア","roman":"Rhea","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"リタ","roman":"Rita","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ローザ","roman":"Rosa","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ルース","roman":"Ruth","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"テス","roman":"Tess","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ウーナ","roman":"Una","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"},
+  {"kana":"ゾーイ","roman":"Zoe","g":"f","tags":["知的"],"source":"personal-name","style":"future","culture":"european"}
+);
+
+/* english / personal-name */
+nameData.scifi.givenNames.push(
+  {"kana":"アレックス","roman":"Alex","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"アリ","roman":"Ari","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"アッシュ","roman":"Ash","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ベック","roman":"Beck","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ブレア","roman":"Blair","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ケイシー","roman":"Casey","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"クリス","roman":"Chris","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ドリュー","roman":"Drew","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"エリス","roman":"Ellis","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"グレイ","roman":"Gray","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ジョス","roman":"Joss","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"キット","roman":"Kit","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"レーン","roman":"Lane","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"リー","roman":"Lee","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ルクス","roman":"Lux","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"マックス","roman":"Max","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ニッキー","roman":"Nicky","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"リース","roman":"Reese","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"サム","roman":"Sam","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"},
+  {"kana":"ヴァル","roman":"Val","g":"n","tags":["穏やか"],"source":"personal-name","style":"future","culture":"english"}
+);
+
+/* european / personal-name */
+nameData.scifi.givenNames.push(
+  {"kana":"アルノー","roman":"Arno","g":"m","tags":["真面目"],"source":"personal-name","style":"future","culture":"european"}
+);
+
+/* scientific / astronomy */
+nameData.scifi.codenames.push(
+  {"kana":"アフェリオン","roman":"Aphelion","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"ペリヘリオン","roman":"Perihelion","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"アジマス","roman":"Azimuth","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"メリディアン","roman":"Meridian","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"デクリネーション","roman":"Declination","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"アポジー","roman":"Apogee","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"ペリジー","roman":"Perigee","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"オカルテーション","roman":"Occultation","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"エクリプティック","roman":"Ecliptic","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"},
+  {"kana":"ペナンブラ","roman":"Penumbra","tags":["神秘的"],"source":"astronomy","style":"codename","culture":"scientific"}
+);
+
+/* scientific / mineral */
+nameData.scifi.codenames.push(
+  {"kana":"クォーツ","roman":"Quartz","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"バサルト","roman":"Basalt","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"ベリル","roman":"Beryl","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"カルサイト","roman":"Calcite","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"マイカ","roman":"Mica","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"オリヴィン","roman":"Olivine","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"スピネル","roman":"Spinel","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"ジルコン","roman":"Zircon","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"ヘマタイト","roman":"Hematite","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"},
+  {"kana":"ペリドット","roman":"Peridot","tags":["透明感"],"source":"mineral","style":"codename","culture":"scientific"}
+);
+
+/* scientific / optics */
+nameData.scifi.codenames.push(
+  {"kana":"リフラクション","roman":"Refraction","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"ディフラクション","roman":"Diffraction","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"バイリフリンジェンス","roman":"Birefringence","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"アパーチャー","roman":"Aperture","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"レティクル","roman":"Reticle","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"コースティック","roman":"Caustic","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"フォトン","roman":"Photon","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"ポラライザー","roman":"Polarizer","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"クロマティック","roman":"Chromatic","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"},
+  {"kana":"アフターイメージ","roman":"Afterimage","tags":["知的"],"source":"optics","style":"codename","culture":"scientific"}
+);
+
+/* scientific / acoustics */
+nameData.scifi.codenames.push(
+  {"kana":"レゾナンス","roman":"Resonance","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"オーヴァートーン","roman":"Overtone","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"タンバー","roman":"Timbre","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"フォルマント","roman":"Formant","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"ハーモニック","roman":"Harmonic","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"ビート","roman":"Beat","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"ピッチ","roman":"Pitch","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"ドップラー","roman":"Doppler","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"リヴァーバレーション","roman":"Reverberation","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"},
+  {"kana":"ソノグラム","roman":"Sonogram","tags":["無口"],"source":"acoustics","style":"codename","culture":"scientific"}
+);
+
+/* scientific / communication */
+nameData.scifi.codenames.push(
+  {"kana":"ビーコン","roman":"Beacon","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"リレー","roman":"Relay","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"アップリンク","roman":"Uplink","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"ダウンリンク","roman":"Downlink","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"デュプレックス","roman":"Duplex","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"サイドバンド","roman":"Sideband","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"キャリア","roman":"Carrier","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"パケット","roman":"Packet","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"チェックサム","roman":"Checksum","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"},
+  {"kana":"ボー","roman":"Baud","tags":["真面目"],"source":"communication","style":"codename","culture":"scientific"}
+);
+
+/* scientific / weather */
+nameData.scifi.codenames.push(
+  {"kana":"シーラス","roman":"Cirrus","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"ストラタス","roman":"Stratus","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"キュムラス","roman":"Cumulus","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"シロッコ","roman":"Sirocco","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"ミストラル","roman":"Mistral","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"アイソバー","roman":"Isobar","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"ヴァーガ","roman":"Virga","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"グラウペル","roman":"Graupel","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"スリート","roman":"Sleet","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"},
+  {"kana":"スコール","roman":"Squall","tags":["穏やか"],"source":"weather","style":"codename","culture":"scientific"}
+);
+
+/* english / animal */
+nameData.scifi.codenames.push(
+  {"kana":"オスプレイ","roman":"Osprey","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"ハリアー","roman":"Harrier","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"ビターン","roman":"Bittern","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"マーテン","roman":"Marten","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"バジャー","roman":"Badger","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"カーリュー","roman":"Curlew","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"ラップウィング","roman":"Lapwing","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"ピピット","roman":"Pipit","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"ペトレル","roman":"Petrel","tags":["強気"],"source":"animal","style":"codename","culture":"english"},
+  {"kana":"オッター","roman":"Otter","tags":["強気"],"source":"animal","style":"codename","culture":"english"}
+);
+
+/* english / colour */
+nameData.scifi.codenames.push(
+  {"kana":"オーカー","roman":"Ochre","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"ラセット","roman":"Russet","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"セピア","roman":"Sepia","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"コバルト","roman":"Cobalt","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"セルリアン","roman":"Cerulean","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"ヴァーミリオン","roman":"Vermilion","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"トーニー","roman":"Tawny","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"アンバー","roman":"Umber","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"ヴィリジアン","roman":"Viridian","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"},
+  {"kana":"エクリュ","roman":"Ecru","tags":["ミステリアス"],"source":"colour","style":"codename","culture":"english"}
+);
+
+/* scientific / mathematics */
+nameData.scifi.codenames.push(
+  {"kana":"テンソル","roman":"Tensor","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"スカラー","roman":"Scalar","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"タンジェント","roman":"Tangent","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"シーカント","roman":"Secant","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"オーディナル","roman":"Ordinal","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"レイディックス","roman":"Radix","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"モジュロ","roman":"Modulo","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"オクタント","roman":"Octant","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"ヘクサッド","roman":"Hexad","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"},
+  {"kana":"ダイアド","roman":"Dyad","tags":["知的"],"source":"mathematics","style":"codename","culture":"scientific"}
+);
+
+/* scientific / navigation */
+nameData.scifi.codenames.push(
+  {"kana":"ウェイポイント","roman":"Waypoint","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"デッドレコニング","roman":"Deadreckoning","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"ベアリング","roman":"Bearing","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"セクスタント","roman":"Sextant","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"ジャイロスコープ","roman":"Gyroscope","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"ロクソドローム","roman":"Loxodrome","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"アイソゴニック","roman":"Isogonic","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"リーウェイ","roman":"Leeway","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"サウンディング","roman":"Sounding","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"},
+  {"kana":"フィデューシャル","roman":"Fiducial","tags":["忠実"],"source":"navigation","style":"codename","culture":"scientific"}
+);
+
+/* ============================================================
    状態管理
    ============================================================ */
 let currentMode = "full";               // nameOnly / settingOnly / full
@@ -1866,15 +3753,21 @@ function generateMultiple(count){
   const usedSurnames = new Set();
   for(let i=0;i<count;i++){
     let ch = null;
-    for(let retry=0; retry<8; retry++){
+    let accepted = false;
+    // v1.2: 名前の重複は必ず再抽選。姓とコピーの重複は途中から許容する。
+    // 少数の雰囲気語からは5種類のコピーを作れないことがあるため。
+    for(let retry=0; retry<128; retry++){
       ch = generateFullCharacter();
       const nameKey = ch.name || ch.catch || Math.random();
       const surname = ch.name && !ch.manualName ? ch.name.split(/[ ・]/)[0] : null;
-      if(usedNames.has(nameKey)) continue;
-      if(ch.catch && usedCatch.has(ch.catch)) continue;
+      if(!ch.manualName && usedNames.has(nameKey)) continue;
+      if(ch.catch && usedCatch.has(ch.catch) && retry < 8) continue;
       if(surname && usedSurnames.has(surname) && retry < 5) continue; // 苗字被りは緩やかに回避
+      accepted = true;
       break;
     }
+    // 上限に到達しても重複した結果を採用しない（乱数異常などへの有限回ガード）。
+    if(!accepted) throw new Error("重複しない名前を選べませんでした。もう一度生成してください。");
     if(ch.name) usedNames.add(ch.name);
     if(ch.name && !ch.manualName) usedSurnames.add(ch.name.split(/[ ・]/)[0]);
     if(ch.catch) usedCatch.add(ch.catch);
