@@ -1,0 +1,5093 @@
+{
+  "version": "1.4",
+  "sources": {
+    "reference-place": {
+      "title": "難読地名（素材の選別のみ）",
+      "url": "https://kakkoii-yougosyuu.com/archives/1034849658.html",
+      "kind": "創作の着想資料",
+      "proves": "素材語の参考。派生名の実在・語源は証明しない",
+      "accessed": "2026-09-29"
+    },
+    "reference-one-kanji": {
+      "title": "一文字の中性名（候補の選別のみ）",
+      "url": "https://kakkoii-yougosyuu.com/archives/name-ichimoji.html",
+      "kind": "創作の着想資料",
+      "proves": "素材語の参考。派生名の実在・語源は証明しない",
+      "accessed": "2026-09-29"
+    },
+    "reference-italian": {
+      "title": "イタリア語の着想資料",
+      "url": "https://kakkoii-yougosyuu.com/archives/italian-naming.html",
+      "kind": "創作の着想資料",
+      "proves": "素材語の参考。派生名の実在・語源は証明しない",
+      "accessed": "2026-09-29"
+    },
+    "reference-italian-extra": {
+      "title": "イタリア語の追加着想資料",
+      "url": "https://kakkoii-yougosyuu.com/archives/naming-italian.html",
+      "kind": "創作の着想資料",
+      "proves": "素材語の参考。派生名の実在・語源は証明しない",
+      "accessed": "2026-09-29"
+    },
+    "reference-french": {
+      "title": "フランス語の着想資料",
+      "url": "https://kakkoii-yougosyuu.com/archives/french-naming.html",
+      "kind": "創作の着想資料",
+      "proves": "素材語の参考。派生名の実在・語源は証明しない",
+      "accessed": "2026-09-29"
+    },
+    "reference-french-extra": {
+      "title": "フランス語の追加着想資料",
+      "url": "https://kakkoii-yougosyuu.com/archives/french-stylish.html",
+      "kind": "創作の着想資料",
+      "proves": "素材語の参考。派生名の実在・語源は証明しない",
+      "accessed": "2026-09-29"
+    },
+    "reference-latin": {
+      "title": "ラテン語の着想資料",
+      "url": "https://kakkoii-yougosyuu.com/archives/naming-latin.html",
+      "kind": "創作の着想資料",
+      "proves": "素材語の参考。派生名の実在・語源は証明しない",
+      "accessed": "2026-09-29"
+    },
+    "reference-german": {
+      "title": "ドイツ語の着想資料",
+      "url": "https://kakkoii-yougosyuu.com/archives/german-naming.html",
+      "kind": "創作の着想資料",
+      "proves": "素材語の参考。派生名の実在・語源は証明しない",
+      "accessed": "2026-09-29"
+    },
+    "editorial-v14": {
+      "title": "v1.4 編集方針",
+      "url": "https://github.com/nyuriwossan/creative-oc-maker/blob/main/NAMING-V1.4.md",
+      "kind": "編集による候補",
+      "proves": "自然な音・用途の編集判断。実在や統計は未主張"
+    },
+    "latin-ignis": {
+      "title": "Wiktionary: ignis",
+      "url": "https://en.wiktionary.org/wiki/ignis#Latin",
+      "kind": "素材語の語義",
+      "proves": "原語の意味のみ。派生名は編集による創作",
+      "accessed": "2026-09-29"
+    },
+    "latin-anima": {
+      "title": "Wiktionary: anima",
+      "url": "https://en.wiktionary.org/wiki/anima#Latin",
+      "kind": "素材語の語義",
+      "proves": "原語の意味のみ。派生名は編集による創作",
+      "accessed": "2026-09-29"
+    },
+    "latin-tempus": {
+      "title": "Wiktionary: tempus",
+      "url": "https://en.wiktionary.org/wiki/tempus#Latin",
+      "kind": "素材語の語義",
+      "proves": "原語の意味のみ。派生名は編集による創作",
+      "accessed": "2026-09-29"
+    },
+    "latin-veritas": {
+      "title": "Wiktionary: veritas",
+      "url": "https://en.wiktionary.org/wiki/veritas#Latin",
+      "kind": "素材語の語義",
+      "proves": "原語の意味のみ。派生名は編集による創作",
+      "accessed": "2026-09-29"
+    }
+  },
+  "entries": [
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "要",
+      "reading": "かなめ",
+      "roman": "Kaname",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-one-kanji",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "新",
+      "reading": "あらた",
+      "roman": "Arata",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-one-kanji",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "巴",
+      "reading": "ともえ",
+      "roman": "Tomoe",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-one-kanji",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "譲",
+      "reading": "ゆずる",
+      "roman": "Yuzuru",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-one-kanji",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "豊",
+      "reading": "ゆたか",
+      "roman": "Yutaka",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-one-kanji",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "尊",
+      "reading": "みこと",
+      "roman": "Mikoto",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-one-kanji",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "栄",
+      "reading": "さかえ",
+      "roman": "Sakae",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "温",
+      "reading": "のどか",
+      "roman": "Nodoka",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-one-kanji",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "絆",
+      "reading": "きずな",
+      "roman": "Kizuna",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-one-kanji",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "織",
+      "reading": "しき",
+      "roman": "Shiki",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.givenNames.neutral",
+      "kanji": "恵",
+      "reading": "めぐみ",
+      "roman": "Megumi",
+      "language": "japanese",
+      "motif": "emotion",
+      "style": "modern",
+      "sourceTerm": "一文字名",
+      "meaning": "性別印象は創作上の目安。男女の使用頻度を示さない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "小坂",
+      "reading": "こさか",
+      "roman": "Kosaka",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "寺尾",
+      "reading": "てらお",
+      "roman": "Terao",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "平岡",
+      "reading": "ひらおか",
+      "roman": "Hiraoka",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "富田",
+      "reading": "とみた",
+      "roman": "Tomita",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "栗田",
+      "reading": "くりた",
+      "roman": "Kurita",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "稲垣",
+      "reading": "いながき",
+      "roman": "Inagaki",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "野崎",
+      "reading": "のざき",
+      "roman": "Nozaki",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "大沢",
+      "reading": "おおさわ",
+      "roman": "Oosawa",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "石塚",
+      "reading": "いしづか",
+      "roman": "Ishizuka",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "田島",
+      "reading": "たじま",
+      "roman": "Tajima",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "竹村",
+      "reading": "たけむら",
+      "roman": "Takemura",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "堀田",
+      "reading": "ほった",
+      "roman": "Hotta",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "西沢",
+      "reading": "にしざわ",
+      "roman": "Nishizawa",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "田代",
+      "reading": "たしろ",
+      "roman": "Tashiro",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "武井",
+      "reading": "たけい",
+      "roman": "Takei",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "内山",
+      "reading": "うちやま",
+      "roman": "Uchiyama",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "宮沢",
+      "reading": "みやざわ",
+      "roman": "Miyazawa",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "長岡",
+      "reading": "ながおか",
+      "roman": "Nagaoka",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "岩井",
+      "reading": "いわい",
+      "roman": "Iwai",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "寺島",
+      "reading": "てらしま",
+      "roman": "Terashima",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "富沢",
+      "reading": "とみざわ",
+      "roman": "Tomizawa",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "福本",
+      "reading": "ふくもと",
+      "roman": "Fukumoto",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "松島",
+      "reading": "まつしま",
+      "roman": "Matsushima",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "矢島",
+      "reading": "やじま",
+      "roman": "Yajima",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "亀田",
+      "reading": "かめだ",
+      "roman": "Kameda",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "高井",
+      "reading": "たかい",
+      "roman": "Takai",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "小森",
+      "reading": "こもり",
+      "roman": "Komori",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "宮原",
+      "reading": "みやはら",
+      "roman": "Miyahara",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "平松",
+      "reading": "ひらまつ",
+      "roman": "Hiramatsu",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "小出",
+      "reading": "こいで",
+      "roman": "Koide",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "大槻",
+      "reading": "おおつき",
+      "roman": "Ootsuki",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "塚田",
+      "reading": "つかだ",
+      "roman": "Tsukada",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "荻野",
+      "reading": "おぎの",
+      "roman": "Ogino",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "中沢",
+      "reading": "なかざわ",
+      "roman": "Nakazawa",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "広田",
+      "reading": "ひろた",
+      "roman": "Hirota",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "小笠原",
+      "reading": "おがさわら",
+      "roman": "Ogasawara",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "大平",
+      "reading": "おおひら",
+      "roman": "Oohira",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "村井",
+      "reading": "むらい",
+      "roman": "Murai",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "片岡",
+      "reading": "かたおか",
+      "roman": "Kataoka",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "栗原",
+      "reading": "くりはら",
+      "roman": "Kurihara",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "里・田畑・集落",
+      "meaning": "日常的な日本姓の形を優先した編集候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "香芝",
+      "reading": "かしば",
+      "roman": "Kashiba",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "呉羽",
+      "reading": "くれは",
+      "roman": "Kureha",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "久能",
+      "reading": "くのう",
+      "roman": "Kunou",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "芦原",
+      "reading": "あわら",
+      "roman": "Awara",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "榛原",
+      "reading": "はいばら",
+      "roman": "Haibara",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "日夏",
+      "reading": "ひなつ",
+      "roman": "Hinatsu",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "土岐",
+      "reading": "とき",
+      "roman": "Toki",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "氷見",
+      "reading": "ひみ",
+      "roman": "Himi",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "杵築",
+      "reading": "きつき",
+      "roman": "Kitsuki",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "japanese.surnames",
+      "kanji": "椿井",
+      "reading": "つばい",
+      "roman": "Tsubai",
+      "language": "japanese",
+      "motif": "place",
+      "style": "modern",
+      "sourceTerm": "地名と姓に馴染む形",
+      "meaning": "地名資料から選別した創作姓候補。実在姓の証明としては扱わない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "editorial_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "綾羅木",
+      "reading": "あやらぎ",
+      "roman": "Ayaragi",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "音海",
+      "reading": "おとみ",
+      "roman": "Otomi",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "香流",
+      "reading": "かなれ",
+      "roman": "Kanare",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "菟田野",
+      "reading": "うたの",
+      "roman": "Utano",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "篠座",
+      "reading": "しのくら",
+      "roman": "Shinokura",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "冬ノ瀬",
+      "reading": "ふゆのせ",
+      "roman": "Fuyunose",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "三夜沢",
+      "reading": "みよさわ",
+      "roman": "Miyosawa",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "美笹",
+      "reading": "みささ",
+      "roman": "Misasa",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "諭鶴羽",
+      "reading": "ゆづるは",
+      "roman": "Yuzuruha",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "和良比",
+      "reading": "わらび",
+      "roman": "Warabi",
+      "language": "japanese",
+      "motif": "place",
+      "style": "fantasy",
+      "sourceTerm": "地形・集落の響き",
+      "meaning": "家名または領地名として用いる創作候補。現代の実在姓とは断定しない。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "reference-place",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "榎ヶ原",
+      "reading": "えのきがはら",
+      "roman": "Enokigahara",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "萩ノ浦",
+      "reading": "はぎのうら",
+      "roman": "Haginoura",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "藤ヶ丘",
+      "reading": "ふじがおか",
+      "roman": "Fujigaoka",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "柏ノ井",
+      "reading": "かしわのい",
+      "roman": "Kashiwanoi",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "栂ノ沢",
+      "reading": "つがのさわ",
+      "roman": "Tsuganosawa",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "楠ヶ崎",
+      "reading": "くすがさき",
+      "roman": "Kusugasaki",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "蘆ノ辺",
+      "reading": "あしのべ",
+      "roman": "Ashinobe",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "芹ノ宮",
+      "reading": "せりのみや",
+      "roman": "Serinomiya",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "蓬ヶ野",
+      "reading": "よもぎがの",
+      "roman": "Yomogigano",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "椎ノ里",
+      "reading": "しいのさと",
+      "roman": "Shiinosato",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "楡ヶ瀬",
+      "reading": "にれがせ",
+      "roman": "Niregase",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "柚ノ坂",
+      "reading": "ゆのさか",
+      "roman": "Yunosaka",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "菱ノ原",
+      "reading": "ひしのはら",
+      "roman": "Hishinohara",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "桑ノ瀬",
+      "reading": "くわのせ",
+      "roman": "Kuwanose",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "梨ヶ峰",
+      "reading": "なしがみね",
+      "roman": "Nashigamine",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "栗ノ岡",
+      "reading": "くりのおか",
+      "roman": "Kurinooka",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "草木と土地",
+      "meaning": "草木を領地の目印にした創作家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "瀬ノ口",
+      "reading": "せのくち",
+      "roman": "Senokuchi",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "汐ヶ辻",
+      "reading": "しおがつじ",
+      "roman": "Shiogatsuji",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "淵ノ辺",
+      "reading": "ふちのべ",
+      "roman": "Fuchinobe",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "泉ヶ浜",
+      "reading": "いずみがはま",
+      "roman": "Izumigahama",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "渡ノ宮",
+      "reading": "わたりのみや",
+      "roman": "Watarinomiya",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "湧ノ井",
+      "reading": "わきのい",
+      "roman": "Wakinoi",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "浦ヶ崎",
+      "reading": "うらがさき",
+      "roman": "Uragasaki",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "沢ノ内",
+      "reading": "さわのうち",
+      "roman": "Sawanouchi",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "滝ノ園",
+      "reading": "たきのその",
+      "roman": "Takinosono",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "岸ヶ丘",
+      "reading": "きしがおか",
+      "roman": "Kishigaoka",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "洲ノ原",
+      "reading": "すのはら",
+      "roman": "Sunohara",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.surnames",
+      "kanji": "潮ノ里",
+      "reading": "しおのさと",
+      "roman": "Shionosato",
+      "language": "japanese",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "水・渡し・入り江",
+      "meaning": "水辺の地形を使った和風の家名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "稔之助",
+      "reading": "みのりのすけ",
+      "roman": "Minorinosuke",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "松弥",
+      "reading": "まつや",
+      "roman": "Matsuya",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "梢太郎",
+      "reading": "しょうたろう",
+      "roman": "Shoutarou",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "梅之進",
+      "reading": "うめのしん",
+      "roman": "Umenoshin",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "竹弥",
+      "reading": "たけや",
+      "roman": "Takeya",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "藤介",
+      "reading": "とうすけ",
+      "roman": "Tousuke",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "栗之丞",
+      "reading": "くりのじょう",
+      "roman": "Kurinojou",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "槙太",
+      "reading": "まきた",
+      "roman": "Makita",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "穂之助",
+      "reading": "ほのすけ",
+      "roman": "Honosuke",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "菊彦",
+      "reading": "きくひこ",
+      "roman": "Kikuhiko",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "桑吉",
+      "reading": "くわきち",
+      "roman": "Kuwakichi",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.male",
+      "kanji": "柏之進",
+      "reading": "かしわのしん",
+      "roman": "Kashiwanoshin",
+      "language": "japanese",
+      "motif": "plant",
+      "style": "historical",
+      "sourceTerm": "草木・実り",
+      "meaning": "古風な名乗りの形に、草木と実りの漢字を合わせた候補。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "萩江",
+      "reading": "はぎえ",
+      "roman": "Hagie",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "芹乃",
+      "reading": "せりの",
+      "roman": "Serino",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "藤緒",
+      "reading": "ふじお",
+      "roman": "Fujio",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "菊枝",
+      "reading": "きくえ",
+      "roman": "Kikue",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "梅衣",
+      "reading": "うめぎぬ",
+      "roman": "Umeginu",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "蓬乃",
+      "reading": "よもぎの",
+      "roman": "Yomogino",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "椎奈",
+      "reading": "しいな",
+      "roman": "Shiina",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "梢乃",
+      "reading": "こずえの",
+      "roman": "Kozueno",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "蘆乃",
+      "reading": "あしの",
+      "roman": "Ashino",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "桐緒",
+      "reading": "きりお",
+      "roman": "Kirio",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "花紬",
+      "reading": "はなつむぎ",
+      "roman": "Hanatsumugi",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.female",
+      "kanji": "綾萩",
+      "reading": "あやはぎ",
+      "roman": "Ayahagi",
+      "language": "japanese",
+      "motif": "flower",
+      "style": "historical",
+      "sourceTerm": "季節の草花",
+      "meaning": "花と織物の柔らかい音を使った古風な創作名。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "穂波",
+      "reading": "ほなみ",
+      "roman": "Honami",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "稲穂",
+      "reading": "いなほ",
+      "roman": "Inaho",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "早瀬",
+      "reading": "はやせ",
+      "roman": "Hayase",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "葦音",
+      "reading": "あしね",
+      "roman": "Ashine",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "麦穂",
+      "reading": "むぎほ",
+      "roman": "Mugiho",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "春野",
+      "reading": "はるの",
+      "roman": "Haruno",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "榎葉",
+      "reading": "えのは",
+      "roman": "Enoha",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "野分",
+      "reading": "のわき",
+      "roman": "Nowaki",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "冬芽",
+      "reading": "ふゆめ",
+      "roman": "Fuyume",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "浅瀬",
+      "reading": "あさせ",
+      "roman": "Asase",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "汐風",
+      "reading": "しおかぜ",
+      "roman": "Shiokaze",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "wafu.givenNames.neutral",
+      "kanji": "山吹",
+      "reading": "やまぶき",
+      "roman": "Yamabuki",
+      "language": "japanese",
+      "motif": "season",
+      "style": "natural",
+      "sourceTerm": "季節・風景",
+      "meaning": "和風の通称や地名的な単名として選定。現代名の自然さとは分ける。",
+      "derivation": "漢字と読みを個別に選定。実在地名からの血縁・語源を主張しない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "フィオレット",
+      "roman": "Fioretto",
+      "g": "m",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "fior の連なりを残し、重子音・母音の位置と音節長を個別に調整。",
+      "source": "reference-italian",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "フィオランテ",
+      "roman": "Fiorante",
+      "g": "n",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "fior の連なりを残し、重子音・母音の位置と音節長を個別に調整。",
+      "source": "reference-italian",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "フィオリーナ",
+      "roman": "Fiorina",
+      "g": "f",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "fior の連なりを残し、重子音・母音の位置と音節長を個別に調整。",
+      "source": "reference-italian",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "フィレッタ",
+      "roman": "Firetta",
+      "g": "f",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "fior の連なりを残し、重子音・母音の位置と音節長を個別に調整。",
+      "source": "reference-italian",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "カンゼーロ",
+      "roman": "Canzero",
+      "g": "m",
+      "language": "italian-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "canzone",
+      "meaning": "歌",
+      "derivation": "canz を短縮する候補と、母音を挟んで柔らかくする候補を個別に作成。",
+      "source": "reference-italian",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "カネッタ",
+      "roman": "Canetta",
+      "g": "f",
+      "language": "italian-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "canzone",
+      "meaning": "歌",
+      "derivation": "canz を短縮する候補と、母音を挟んで柔らかくする候補を個別に作成。",
+      "source": "reference-italian",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "カンゾリ",
+      "roman": "Canzori",
+      "g": "n",
+      "language": "italian-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "canzone",
+      "meaning": "歌",
+      "derivation": "canz を短縮する候補と、母音を挟んで柔らかくする候補を個別に作成。",
+      "source": "reference-italian",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ルチェンテ",
+      "roman": "Lucente",
+      "g": "n",
+      "language": "italian-inspired",
+      "motif": "light",
+      "style": "fantasy",
+      "sourceTerm": "luce",
+      "meaning": "光",
+      "derivation": "luc の子音を c＋e/i の読みと硬い c の読みで区別。",
+      "source": "reference-italian",
+      "tags": [
+        "明るい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ルチーヴォ",
+      "roman": "Lucivo",
+      "g": "m",
+      "language": "italian-inspired",
+      "motif": "light",
+      "style": "fantasy",
+      "sourceTerm": "luce",
+      "meaning": "光",
+      "derivation": "luc の子音を c＋e/i の読みと硬い c の読みで区別。",
+      "source": "reference-italian",
+      "tags": [
+        "明るい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ルチェリーナ",
+      "roman": "Lucerina",
+      "g": "f",
+      "language": "italian-inspired",
+      "motif": "light",
+      "style": "fantasy",
+      "sourceTerm": "luce",
+      "meaning": "光",
+      "derivation": "luc の子音を c＋e/i の読みと硬い c の読みで区別。",
+      "source": "reference-italian",
+      "tags": [
+        "明るい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アルデーロ",
+      "roman": "Ardero",
+      "g": "m",
+      "language": "italian-inspired",
+      "motif": "emotion",
+      "style": "fantasy",
+      "sourceTerm": "ardore",
+      "meaning": "熱意",
+      "derivation": "ard の音を保ち、語中母音と長さを変えて名乗りを構成。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アルデッサ",
+      "roman": "Ardessa",
+      "g": "f",
+      "language": "italian-inspired",
+      "motif": "emotion",
+      "style": "fantasy",
+      "sourceTerm": "ardore",
+      "meaning": "熱意",
+      "derivation": "ard の音を保ち、語中母音と長さを変えて名乗りを構成。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アルドリ",
+      "roman": "Ardori",
+      "g": "n",
+      "language": "italian-inspired",
+      "motif": "emotion",
+      "style": "fantasy",
+      "sourceTerm": "ardore",
+      "meaning": "熱意",
+      "derivation": "ard の音を保ち、語中母音と長さを変えて名乗りを構成。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "クエルチーノ",
+      "roman": "Quercino",
+      "g": "m",
+      "language": "italian-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "quercia",
+      "meaning": "オーク",
+      "derivation": "querc の硬い音を残す形と、名乗りやすく短縮した形。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "クエリーナ",
+      "roman": "Querina",
+      "g": "f",
+      "language": "italian-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "quercia",
+      "meaning": "オーク",
+      "derivation": "querc の硬い音を残す形と、名乗りやすく短縮した形。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "クエルチ",
+      "roman": "Querci",
+      "g": "n",
+      "language": "italian-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "quercia",
+      "meaning": "オーク",
+      "derivation": "querc の硬い音を残す形と、名乗りやすく短縮した形。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ネヴァート",
+      "roman": "Nevato",
+      "g": "m",
+      "language": "italian-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "neve",
+      "meaning": "雪",
+      "derivation": "nev の短い音を残して、音節と強勢の置き方を変えた創作。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ネヴェッタ",
+      "roman": "Nevetta",
+      "g": "f",
+      "language": "italian-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "neve",
+      "meaning": "雪",
+      "derivation": "nev の短い音を残して、音節と強勢の置き方を変えた創作。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ネヴェリ",
+      "roman": "Neveri",
+      "g": "n",
+      "language": "italian-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "neve",
+      "meaning": "雪",
+      "derivation": "nev の短い音を残して、音節と強勢の置き方を変えた創作。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アルアン",
+      "roman": "Alouin",
+      "g": "m",
+      "language": "french-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "alouette",
+      "meaning": "ヒバリ",
+      "derivation": "alou と lou の音を抽出。語尾を含め全体の音節を組み直す。",
+      "source": "reference-french-extra",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アルエーヌ",
+      "roman": "Alouenne",
+      "g": "f",
+      "language": "french-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "alouette",
+      "meaning": "ヒバリ",
+      "derivation": "alou と lou の音を抽出。語尾を含め全体の音節を組み直す。",
+      "source": "reference-french-extra",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ルエリ",
+      "roman": "Louéry",
+      "g": "n",
+      "language": "french-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "alouette",
+      "meaning": "ヒバリ",
+      "derivation": "alou と lou の音を抽出。語尾を含め全体の音節を組み直す。",
+      "source": "reference-french-extra",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "クロシアン",
+      "roman": "Clochian",
+      "g": "m",
+      "language": "french-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "clochette",
+      "meaning": "鈴",
+      "derivation": "clo と ch の音を離し、短い名乗りに再構成。",
+      "source": "reference-french-extra",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "クロエルヌ",
+      "roman": "Cloerne",
+      "g": "n",
+      "language": "french-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "clochette",
+      "meaning": "鈴",
+      "derivation": "clo と ch の音を離し、短い名乗りに再構成。",
+      "source": "reference-french-extra",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "クロシーヌ",
+      "roman": "Clochine",
+      "g": "f",
+      "language": "french-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "clochette",
+      "meaning": "鈴",
+      "derivation": "clo と ch の音を離し、短い名乗りに再構成。",
+      "source": "reference-french-extra",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アヴレーヌ",
+      "roman": "Avrenne",
+      "g": "f",
+      "language": "french-inspired",
+      "motif": "season",
+      "style": "fantasy",
+      "sourceTerm": "avril",
+      "meaning": "四月",
+      "derivation": "avr の連なりを分け、母音を補って創作。実在人名の語源ではない。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アヴリオ",
+      "roman": "Avriot",
+      "g": "m",
+      "language": "french-inspired",
+      "motif": "season",
+      "style": "fantasy",
+      "sourceTerm": "avril",
+      "meaning": "四月",
+      "derivation": "avr の連なりを分け、母音を補って創作。実在人名の語源ではない。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アヴレ",
+      "roman": "Avret",
+      "g": "n",
+      "language": "french-inspired",
+      "motif": "season",
+      "style": "fantasy",
+      "sourceTerm": "avril",
+      "meaning": "四月",
+      "derivation": "avr の連なりを分け、母音を補って創作。実在人名の語源ではない。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "グリザン",
+      "roman": "Grisin",
+      "g": "m",
+      "language": "french-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "grisaille",
+      "meaning": "灰色の濃淡を使う絵画表現",
+      "derivation": "gris と ail の響きを、名乗り用に短縮・再配列。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "グリザーヌ",
+      "roman": "Grisane",
+      "g": "f",
+      "language": "french-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "grisaille",
+      "meaning": "灰色の濃淡を使う絵画表現",
+      "derivation": "gris と ail の響きを、名乗り用に短縮・再配列。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "グリセル",
+      "roman": "Gricelle",
+      "g": "n",
+      "language": "french-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "grisaille",
+      "meaning": "灰色の濃淡を使う絵画表現",
+      "derivation": "gris と ail の響きを、名乗り用に短縮・再配列。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "エスペラン",
+      "roman": "Espéran",
+      "g": "m",
+      "language": "french-inspired",
+      "motif": "emotion",
+      "style": "fantasy",
+      "sourceTerm": "espoir",
+      "meaning": "希望",
+      "derivation": "esp の音を保持し、語末を柔らかく再設計。",
+      "source": "reference-french",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "エスプリーヌ",
+      "roman": "Esprine",
+      "g": "f",
+      "language": "french-inspired",
+      "motif": "emotion",
+      "style": "fantasy",
+      "sourceTerm": "espoir",
+      "meaning": "希望",
+      "derivation": "esp の音を保持し、語末を柔らかく再設計。",
+      "source": "reference-french",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "エスポレ",
+      "roman": "Esporet",
+      "g": "n",
+      "language": "french-inspired",
+      "motif": "emotion",
+      "style": "fantasy",
+      "sourceTerm": "espoir",
+      "meaning": "希望",
+      "derivation": "esp の音を保持し、語末を柔らかく再設計。",
+      "source": "reference-french",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "シエロン",
+      "roman": "Ciellon",
+      "g": "m",
+      "language": "french-inspired",
+      "motif": "sky",
+      "style": "fantasy",
+      "sourceTerm": "ciel",
+      "meaning": "空",
+      "derivation": "ci の柔らかい子音と母音の響きに着想。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "シエリーヌ",
+      "roman": "Ciéline",
+      "g": "f",
+      "language": "french-inspired",
+      "motif": "sky",
+      "style": "fantasy",
+      "sourceTerm": "ciel",
+      "meaning": "空",
+      "derivation": "ci の柔らかい子音と母音の響きに着想。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "シエロ",
+      "roman": "Cielot",
+      "g": "n",
+      "language": "french-inspired",
+      "motif": "sky",
+      "style": "fantasy",
+      "sourceTerm": "ciel",
+      "meaning": "空",
+      "derivation": "ci の柔らかい子音と母音の響きに着想。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "カルメティウス",
+      "roman": "Carmetius",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "carmen",
+      "meaning": "歌・詩",
+      "derivation": "carm の骨格から、古典語風の名乗りを個別に設計。実在ラテン人名ではない。",
+      "source": "reference-latin",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "カルメッサ",
+      "roman": "Carmessa",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "carmen",
+      "meaning": "歌・詩",
+      "derivation": "carm の骨格から、古典語風の名乗りを個別に設計。実在ラテン人名ではない。",
+      "source": "reference-latin",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "カルミス",
+      "roman": "Carmis",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "music",
+      "style": "fantasy",
+      "sourceTerm": "carmen",
+      "meaning": "歌・詩",
+      "derivation": "carm の骨格から、古典語風の名乗りを個別に設計。実在ラテン人名ではない。",
+      "source": "reference-latin",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "テロヴィウス",
+      "roman": "Terrovius",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "earth",
+      "style": "fantasy",
+      "sourceTerm": "terra",
+      "meaning": "大地",
+      "derivation": "terr の重子音を軸に、語中の音を変えて創作。",
+      "source": "reference-latin",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "テレヴィア",
+      "roman": "Terrevia",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "earth",
+      "style": "fantasy",
+      "sourceTerm": "terra",
+      "meaning": "大地",
+      "derivation": "terr の重子音を軸に、語中の音を変えて創作。",
+      "source": "reference-latin",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "テルニス",
+      "roman": "Ternis",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "earth",
+      "style": "fantasy",
+      "sourceTerm": "terra",
+      "meaning": "大地",
+      "derivation": "terr の重子音を軸に、語中の音を変えて創作。",
+      "source": "reference-latin",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アクエントゥス",
+      "roman": "Aquentus",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "aqua",
+      "meaning": "水",
+      "derivation": "aqu の連なりを残したラテン風の創作名。",
+      "source": "reference-latin",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アクレッサ",
+      "roman": "Aquressa",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "aqua",
+      "meaning": "水",
+      "derivation": "aqu の連なりを残したラテン風の創作名。",
+      "source": "reference-latin",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アクエリス",
+      "roman": "Aqueris",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "aqua",
+      "meaning": "水",
+      "derivation": "aqu の連なりを残したラテン風の創作名。",
+      "source": "reference-latin",
+      "tags": [
+        "透明感"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "サペンティウス",
+      "roman": "Sapentius",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "knowledge",
+      "style": "fantasy",
+      "sourceTerm": "sapiens",
+      "meaning": "賢い",
+      "derivation": "sap の語根的な部分を抽出し、音節長と子音を個別調整。",
+      "source": "reference-latin",
+      "tags": [
+        "知的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "サピレーナ",
+      "roman": "Sapirena",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "knowledge",
+      "style": "fantasy",
+      "sourceTerm": "sapiens",
+      "meaning": "賢い",
+      "derivation": "sap の語根的な部分を抽出し、音節長と子音を個別調整。",
+      "source": "reference-latin",
+      "tags": [
+        "知的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "サピル",
+      "roman": "Sapir",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "knowledge",
+      "style": "fantasy",
+      "sourceTerm": "sapiens",
+      "meaning": "賢い",
+      "derivation": "sap の語根的な部分を抽出し、音節長と子音を個別調整。",
+      "source": "reference-latin",
+      "tags": [
+        "知的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ルカンティス",
+      "roman": "Lucantis",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "light",
+      "style": "fantasy",
+      "sourceTerm": "lux",
+      "meaning": "光",
+      "derivation": "属格 lucis に現れる luc の響きを参考にした創作。",
+      "source": "reference-latin",
+      "tags": [
+        "明るい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ルケッサ",
+      "roman": "Lucessa",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "light",
+      "style": "fantasy",
+      "sourceTerm": "lux",
+      "meaning": "光",
+      "derivation": "属格 lucis に現れる luc の響きを参考にした創作。",
+      "source": "reference-latin",
+      "tags": [
+        "明るい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ルキネル",
+      "roman": "Lucinel",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "light",
+      "style": "fantasy",
+      "sourceTerm": "lux",
+      "meaning": "光",
+      "derivation": "属格 lucis に現れる luc の響きを参考にした創作。",
+      "source": "reference-latin",
+      "tags": [
+        "明るい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アルテヴィウス",
+      "roman": "Artevius",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "ars",
+      "meaning": "技術・芸術",
+      "derivation": "属格 artis の art を参考に、古代の学匠向けの名を構成。",
+      "source": "reference-latin",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アルテッサ",
+      "roman": "Artessa",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "ars",
+      "meaning": "技術・芸術",
+      "derivation": "属格 artis の art を参考に、古代の学匠向けの名を構成。",
+      "source": "reference-latin",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アルティス",
+      "roman": "Artis",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "ars",
+      "meaning": "技術・芸術",
+      "derivation": "属格 artis の art を参考に、古代の学匠向けの名を構成。",
+      "source": "reference-latin",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "フィオラーニ",
+      "roman": "Fiorani",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "土地や一族の呼び名として音を再構成。",
+      "source": "reference-italian",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "フィオレッシ",
+      "roman": "Fioressi",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "土地や一族の呼び名として音を再構成。",
+      "source": "reference-italian",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "フィオラート",
+      "roman": "Fiorato",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "土地や一族の呼び名として音を再構成。",
+      "source": "reference-italian",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "フィオルチェ",
+      "roman": "Fiorce",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "土地や一族の呼び名として音を再構成。",
+      "source": "reference-italian",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "クエルチェッリ",
+      "roman": "Quercelli",
+      "language": "italian-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "quercia",
+      "meaning": "オーク",
+      "derivation": "同じイタリア風の音の範囲で家名に加工。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "クエルチャーティ",
+      "roman": "Querciati",
+      "language": "italian-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "quercia",
+      "meaning": "オーク",
+      "derivation": "同じイタリア風の音の範囲で家名に加工。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "クエルカーニ",
+      "roman": "Quercani",
+      "language": "italian-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "quercia",
+      "meaning": "オーク",
+      "derivation": "同じイタリア風の音の範囲で家名に加工。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "クエルコーリ",
+      "roman": "Quercoli",
+      "language": "italian-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "quercia",
+      "meaning": "オーク",
+      "derivation": "同じイタリア風の音の範囲で家名に加工。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ビアンケッティ",
+      "roman": "Bianchetti",
+      "language": "italian-inspired",
+      "motif": "color",
+      "style": "fantasy",
+      "sourceTerm": "bianco",
+      "meaning": "白",
+      "derivation": "bianc の音を基調に一族名として編集。",
+      "source": "reference-italian",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ビアンコーリ",
+      "roman": "Biancori",
+      "language": "italian-inspired",
+      "motif": "color",
+      "style": "fantasy",
+      "sourceTerm": "bianco",
+      "meaning": "白",
+      "derivation": "bianc の音を基調に一族名として編集。",
+      "source": "reference-italian",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ビアンカーティ",
+      "roman": "Biancati",
+      "language": "italian-inspired",
+      "motif": "color",
+      "style": "fantasy",
+      "sourceTerm": "bianco",
+      "meaning": "白",
+      "derivation": "bianc の音を基調に一族名として編集。",
+      "source": "reference-italian",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ビアンチェーリ",
+      "roman": "Bianceri",
+      "language": "italian-inspired",
+      "motif": "color",
+      "style": "fantasy",
+      "sourceTerm": "bianco",
+      "meaning": "白",
+      "derivation": "bianc の音を基調に一族名として編集。",
+      "source": "reference-italian",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "アトリアン",
+      "roman": "Atelien",
+      "language": "french-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "atelier",
+      "meaning": "工房",
+      "derivation": "atelier の音を短縮し職人家系を想起する創作家名へ。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "アトルー",
+      "roman": "Ateloux",
+      "language": "french-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "atelier",
+      "meaning": "工房",
+      "derivation": "atelier の音を短縮し職人家系を想起する創作家名へ。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "アトリエール",
+      "roman": "Atelière",
+      "language": "french-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "atelier",
+      "meaning": "工房",
+      "derivation": "atelier の音を短縮し職人家系を想起する創作家名へ。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "アトリネ",
+      "roman": "Atelinet",
+      "language": "french-inspired",
+      "motif": "art",
+      "style": "fantasy",
+      "sourceTerm": "atelier",
+      "meaning": "工房",
+      "derivation": "atelier の音を短縮し職人家系を想起する創作家名へ。",
+      "source": "reference-french",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ブクロー",
+      "roman": "Bouquerot",
+      "language": "french-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "bouquet",
+      "meaning": "花束",
+      "derivation": "bouqu の音を保持し、家名の長さへ個別に加工。",
+      "source": "reference-french",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ブケルネ",
+      "roman": "Bouquernet",
+      "language": "french-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "bouquet",
+      "meaning": "花束",
+      "derivation": "bouqu の音を保持し、家名の長さへ個別に加工。",
+      "source": "reference-french",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ブクレール",
+      "roman": "Bouquerelle",
+      "language": "french-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "bouquet",
+      "meaning": "花束",
+      "derivation": "bouqu の音を保持し、家名の長さへ個別に加工。",
+      "source": "reference-french",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ブクラン",
+      "roman": "Bouqueran",
+      "language": "french-inspired",
+      "motif": "flower",
+      "style": "fantasy",
+      "sourceTerm": "bouquet",
+      "meaning": "花束",
+      "derivation": "bouqu の音を保持し、家名の長さへ個別に加工。",
+      "source": "reference-french",
+      "tags": [
+        "優しい"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "アルヴレ",
+      "roman": "Alouvret",
+      "language": "french-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "alouette",
+      "meaning": "ヒバリ",
+      "derivation": "鳥の音から短縮・子音挿入で創作家名を作成。",
+      "source": "reference-french-extra",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "アルネ",
+      "roman": "Alounet",
+      "language": "french-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "alouette",
+      "meaning": "ヒバリ",
+      "derivation": "鳥の音から短縮・子音挿入で創作家名を作成。",
+      "source": "reference-french-extra",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ルエヴァル",
+      "roman": "Louéval",
+      "language": "french-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "alouette",
+      "meaning": "ヒバリ",
+      "derivation": "鳥の音から短縮・子音挿入で創作家名を作成。",
+      "source": "reference-french-extra",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "アルヴィエ",
+      "roman": "Alouvier",
+      "language": "french-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "alouette",
+      "meaning": "ヒバリ",
+      "derivation": "鳥の音から短縮・子音挿入で創作家名を作成。",
+      "source": "reference-french-extra",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "バウムヴェルト",
+      "roman": "Baumwert",
+      "language": "german-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "Baum",
+      "meaning": "木",
+      "derivation": "ドイツ語の土地名的な音を組み合わせた創作家名。実在姓の由来ではない。",
+      "source": "reference-german",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "バウムリンゲン",
+      "roman": "Baumlingen",
+      "language": "german-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "Baum",
+      "meaning": "木",
+      "derivation": "ドイツ語の土地名的な音を組み合わせた創作家名。実在姓の由来ではない。",
+      "source": "reference-german",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "バウムハイデ",
+      "roman": "Baumheide",
+      "language": "german-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "Baum",
+      "meaning": "木",
+      "derivation": "ドイツ語の土地名的な音を組み合わせた創作家名。実在姓の由来ではない。",
+      "source": "reference-german",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "バウムシュテーク",
+      "roman": "Baumsteg",
+      "language": "german-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "Baum",
+      "meaning": "木",
+      "derivation": "ドイツ語の土地名的な音を組み合わせた創作家名。実在姓の由来ではない。",
+      "source": "reference-german",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ウィローフェン",
+      "roman": "Willowfen",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "willow / reed",
+      "meaning": "柳・葦",
+      "derivation": "英語の地形姓の構造を参考に、植物と土地の音を組み合わせる。古英語とは称さない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "リードコーム",
+      "roman": "Reedcombe",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "willow / reed",
+      "meaning": "柳・葦",
+      "derivation": "英語の地形姓の構造を参考に、植物と土地の音を組み合わせる。古英語とは称さない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "ウィロークロフト",
+      "roman": "Willowcroft",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "willow / reed",
+      "meaning": "柳・葦",
+      "derivation": "英語の地形姓の構造を参考に、植物と土地の音を組み合わせる。古英語とは称さない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.familyNames",
+      "kana": "リードホロウ",
+      "roman": "Reedhollow",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "willow / reed",
+      "meaning": "柳・葦",
+      "derivation": "英語の地形姓の構造を参考に、植物と土地の音を組み合わせる。古英語とは称さない。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "シャテルヴォー",
+      "roman": "Châtelvaux",
+      "language": "french-inspired",
+      "motif": "architecture",
+      "style": "noble",
+      "sourceTerm": "château",
+      "meaning": "城",
+      "derivation": "城や領地を思わせる長い家名に再構成。爵位や実在貴族の証明ではない。",
+      "source": "reference-french",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "シャトルーヴ",
+      "roman": "Châterouve",
+      "language": "french-inspired",
+      "motif": "architecture",
+      "style": "noble",
+      "sourceTerm": "château",
+      "meaning": "城",
+      "derivation": "城や領地を思わせる長い家名に再構成。爵位や実在貴族の証明ではない。",
+      "source": "reference-french",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "シャテルブリュン",
+      "roman": "Châtelbrun",
+      "language": "french-inspired",
+      "motif": "architecture",
+      "style": "noble",
+      "sourceTerm": "château",
+      "meaning": "城",
+      "derivation": "城や領地を思わせる長い家名に再構成。爵位や実在貴族の証明ではない。",
+      "source": "reference-french",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "シャトレーヴ",
+      "roman": "Châtreve",
+      "language": "french-inspired",
+      "motif": "architecture",
+      "style": "noble",
+      "sourceTerm": "château",
+      "meaning": "城",
+      "derivation": "城や領地を思わせる長い家名に再構成。爵位や実在貴族の証明ではない。",
+      "source": "reference-french",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "アヴリモン",
+      "roman": "Avrimont",
+      "language": "french-inspired",
+      "motif": "season",
+      "style": "noble",
+      "sourceTerm": "avril",
+      "meaning": "四月",
+      "derivation": "春の領地を思わせる仏語風の家名。複合語の正規の訳ではない。",
+      "source": "reference-french",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "アヴリクール",
+      "roman": "Avricourt",
+      "language": "french-inspired",
+      "motif": "season",
+      "style": "noble",
+      "sourceTerm": "avril",
+      "meaning": "四月",
+      "derivation": "春の領地を思わせる仏語風の家名。複合語の正規の訳ではない。",
+      "source": "reference-french",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "アヴリヴァル",
+      "roman": "Avrival",
+      "language": "french-inspired",
+      "motif": "season",
+      "style": "noble",
+      "sourceTerm": "avril",
+      "meaning": "四月",
+      "derivation": "春の領地を思わせる仏語風の家名。複合語の正規の訳ではない。",
+      "source": "reference-french",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "アヴレヴィーユ",
+      "roman": "Avreville",
+      "language": "french-inspired",
+      "motif": "season",
+      "style": "noble",
+      "sourceTerm": "avril",
+      "meaning": "四月",
+      "derivation": "春の領地を思わせる仏語風の家名。複合語の正規の訳ではない。",
+      "source": "reference-french",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "フィオルカステッロ",
+      "roman": "Fiorcastello",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "noble",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "花の領地を思わせる伊語風の音の組み合わせ。",
+      "source": "reference-italian",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "フィオルヴァッレ",
+      "roman": "Fiorvalle",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "noble",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "花の領地を思わせる伊語風の音の組み合わせ。",
+      "source": "reference-italian",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "フィオルモンテ",
+      "roman": "Fiormonte",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "noble",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "花の領地を思わせる伊語風の音の組み合わせ。",
+      "source": "reference-italian",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "フィオルロッカ",
+      "roman": "Fiorrocca",
+      "language": "italian-inspired",
+      "motif": "flower",
+      "style": "noble",
+      "sourceTerm": "fiore",
+      "meaning": "花",
+      "derivation": "花の領地を思わせる伊語風の音の組み合わせ。",
+      "source": "reference-italian",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "アルドヴァッレ",
+      "roman": "Ardovalle",
+      "language": "italian-inspired",
+      "motif": "emotion",
+      "style": "noble",
+      "sourceTerm": "ardore",
+      "meaning": "熱意",
+      "derivation": "長めの領地名の響きに再構成した創作家名。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "アルドカステッリ",
+      "roman": "Ardocastelli",
+      "language": "italian-inspired",
+      "motif": "emotion",
+      "style": "noble",
+      "sourceTerm": "ardore",
+      "meaning": "熱意",
+      "derivation": "長めの領地名の響きに再構成した創作家名。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "アルドモンティ",
+      "roman": "Ardomonti",
+      "language": "italian-inspired",
+      "motif": "emotion",
+      "style": "noble",
+      "sourceTerm": "ardore",
+      "meaning": "熱意",
+      "derivation": "長めの領地名の響きに再構成した創作家名。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "アルドロッキ",
+      "roman": "Ardorocchi",
+      "language": "italian-inspired",
+      "motif": "emotion",
+      "style": "noble",
+      "sourceTerm": "ardore",
+      "meaning": "熱意",
+      "derivation": "長めの領地名の響きに再構成した創作家名。",
+      "source": "reference-italian-extra",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "サペンティナス",
+      "roman": "Sapentinas",
+      "language": "latin-inspired",
+      "motif": "knowledge",
+      "style": "noble",
+      "sourceTerm": "sapiens",
+      "meaning": "賢い",
+      "derivation": "古代の学術氏族を想定したラテン風の創作。正規ラテン語の語形ではない。",
+      "source": "reference-latin",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "サピロウィクス",
+      "roman": "Sapirovix",
+      "language": "latin-inspired",
+      "motif": "knowledge",
+      "style": "noble",
+      "sourceTerm": "sapiens",
+      "meaning": "賢い",
+      "derivation": "古代の学術氏族を想定したラテン風の創作。正規ラテン語の語形ではない。",
+      "source": "reference-latin",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "サペントリウム",
+      "roman": "Sapentorium",
+      "language": "latin-inspired",
+      "motif": "knowledge",
+      "style": "noble",
+      "sourceTerm": "sapiens",
+      "meaning": "賢い",
+      "derivation": "古代の学術氏族を想定したラテン風の創作。正規ラテン語の語形ではない。",
+      "source": "reference-latin",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "サピレントゥス",
+      "roman": "Sapirentus",
+      "language": "latin-inspired",
+      "motif": "knowledge",
+      "style": "noble",
+      "sourceTerm": "sapiens",
+      "meaning": "賢い",
+      "derivation": "古代の学術氏族を想定したラテン風の創作。正規ラテン語の語形ではない。",
+      "source": "reference-latin",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "シュタインヴェルダー",
+      "roman": "Steinwerder",
+      "language": "german-inspired",
+      "motif": "mineral",
+      "style": "noble",
+      "sourceTerm": "Stein",
+      "meaning": "石",
+      "derivation": "領地を思わせるドイツ語の音の範囲で複合。実在王家とは扱わない。",
+      "source": "reference-german",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "シュタインホーフェン",
+      "roman": "Steinhofen",
+      "language": "german-inspired",
+      "motif": "mineral",
+      "style": "noble",
+      "sourceTerm": "Stein",
+      "meaning": "石",
+      "derivation": "領地を思わせるドイツ語の音の範囲で複合。実在王家とは扱わない。",
+      "source": "reference-german",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "シュタインリート",
+      "roman": "Steinried",
+      "language": "german-inspired",
+      "motif": "mineral",
+      "style": "noble",
+      "sourceTerm": "Stein",
+      "meaning": "石",
+      "derivation": "領地を思わせるドイツ語の音の範囲で複合。実在王家とは扱わない。",
+      "source": "reference-german",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.nobleNames",
+      "kana": "シュタインタール",
+      "roman": "Steintal",
+      "language": "german-inspired",
+      "motif": "mineral",
+      "style": "noble",
+      "sourceTerm": "Stein",
+      "meaning": "石",
+      "derivation": "領地を思わせるドイツ語の音の範囲で複合。実在王家とは扱わない。",
+      "source": "reference-german",
+      "tags": [
+        "高貴"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "リード・リレー",
+      "roman": "Reed-Relay",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "plant + operational image",
+      "meaning": "植物をセンサー・伝送のイメージに重ねた識別名。",
+      "derivation": "人名ではなく二語の運用呼称。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "モス・ビーコン",
+      "roman": "Moss-Beacon",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "plant + operational image",
+      "meaning": "植物をセンサー・伝送のイメージに重ねた識別名。",
+      "derivation": "人名ではなく二語の運用呼称。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "フェン・パルス",
+      "roman": "Fen-Pulse",
+      "language": "english-inspired",
+      "motif": "water",
+      "style": "fantasy",
+      "sourceTerm": "fen + pulse",
+      "meaning": "湿地と信号の脈動を組み合わせた識別名。",
+      "derivation": "人名ではなく二語の運用呼称。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "ウィロー・プローブ",
+      "roman": "Willow-Probe",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "plant + operational image",
+      "meaning": "植物をセンサー・伝送のイメージに重ねた識別名。",
+      "derivation": "人名ではなく二語の運用呼称。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "セッジ・リンク",
+      "roman": "Sedge-Link",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "plant + operational image",
+      "meaning": "植物をセンサー・伝送のイメージに重ねた識別名。",
+      "derivation": "人名ではなく二語の運用呼称。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "クローバー・トレース",
+      "roman": "Clover-Trace",
+      "language": "english-inspired",
+      "motif": "plant",
+      "style": "fantasy",
+      "sourceTerm": "plant + operational image",
+      "meaning": "植物をセンサー・伝送のイメージに重ねた識別名。",
+      "derivation": "人名ではなく二語の運用呼称。",
+      "source": "editorial-v14",
+      "tags": [
+        "穏やか"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "テルン・ベクター",
+      "roman": "Tern-Vector",
+      "language": "english-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "bird + operational image",
+      "meaning": "鳥の動きと偵察機器のイメージを組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "レン・スコープ",
+      "roman": "Wren-Scope",
+      "language": "english-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "bird + operational image",
+      "meaning": "鳥の動きと偵察機器のイメージを組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "スイフト・テザー",
+      "roman": "Swift-Tether",
+      "language": "english-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "bird + operational image",
+      "meaning": "鳥の動きと偵察機器のイメージを組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "フィンチ・リレー",
+      "roman": "Finch-Relay",
+      "language": "english-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "bird + operational image",
+      "meaning": "鳥の動きと偵察機器のイメージを組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "プラヴァー・スキャン",
+      "roman": "Plover-Scan",
+      "language": "english-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "bird + operational image",
+      "meaning": "鳥の動きと偵察機器のイメージを組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "ダンリン・ポート",
+      "roman": "Dunlin-Port",
+      "language": "english-inspired",
+      "motif": "bird",
+      "style": "fantasy",
+      "sourceTerm": "bird + operational image",
+      "meaning": "鳥の動きと偵察機器のイメージを組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "陽気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "スリート・メッシュ",
+      "roman": "Sleet-Mesh",
+      "language": "english-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "weather + operational image",
+      "meaning": "天気と観測機器を組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "ドリズル・ノード",
+      "roman": "Drizzle-Node",
+      "language": "english-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "weather + operational image",
+      "meaning": "天気と観測機器を組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "ヘイル・リピーター",
+      "roman": "Hail-Repeater",
+      "language": "english-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "weather + operational image",
+      "meaning": "天気と観測機器を組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "ブリーズ・アンカー",
+      "roman": "Breeze-Anchor",
+      "language": "english-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "weather + operational image",
+      "meaning": "天気と観測機器を組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "ミスト・レコーダー",
+      "roman": "Mist-Recorder",
+      "language": "english-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "weather + operational image",
+      "meaning": "天気と観測機器を組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "ガスト・バッファー",
+      "roman": "Gust-Buffer",
+      "language": "english-inspired",
+      "motif": "weather",
+      "style": "fantasy",
+      "sourceTerm": "weather + operational image",
+      "meaning": "天気と観測機器を組み合わせた識別名。",
+      "derivation": "一般語を使うコードネームとして編集。",
+      "source": "editorial-v14",
+      "tags": [
+        "無口"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "マイカ・グリッド",
+      "roman": "Mica-Grid",
+      "language": "english-inspired",
+      "motif": "mineral",
+      "style": "fantasy",
+      "sourceTerm": "mineral + operational image",
+      "meaning": "鉱物の質感と装置を組み合わせた識別名。",
+      "derivation": "宝石の実在人名としては扱わない。",
+      "source": "editorial-v14",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "チョーク・プリズム",
+      "roman": "Chalk-Prism",
+      "language": "english-inspired",
+      "motif": "mineral",
+      "style": "fantasy",
+      "sourceTerm": "mineral + operational image",
+      "meaning": "鉱物の質感と装置を組み合わせた識別名。",
+      "derivation": "宝石の実在人名としては扱わない。",
+      "source": "editorial-v14",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "フリント・ゲート",
+      "roman": "Flint-Gate",
+      "language": "english-inspired",
+      "motif": "mineral",
+      "style": "fantasy",
+      "sourceTerm": "mineral + operational image",
+      "meaning": "鉱物の質感と装置を組み合わせた識別名。",
+      "derivation": "宝石の実在人名としては扱わない。",
+      "source": "editorial-v14",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "スレート・コンパス",
+      "roman": "Slate-Compass",
+      "language": "english-inspired",
+      "motif": "mineral",
+      "style": "fantasy",
+      "sourceTerm": "mineral + operational image",
+      "meaning": "鉱物の質感と装置を組み合わせた識別名。",
+      "derivation": "宝石の実在人名としては扱わない。",
+      "source": "editorial-v14",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "クレイ・アレイ",
+      "roman": "Clay-Array",
+      "language": "english-inspired",
+      "motif": "mineral",
+      "style": "fantasy",
+      "sourceTerm": "mineral + operational image",
+      "meaning": "鉱物の質感と装置を組み合わせた識別名。",
+      "derivation": "宝石の実在人名としては扱わない。",
+      "source": "editorial-v14",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "scifi.codenames",
+      "kana": "シルト・メモリー",
+      "roman": "Silt-Memory",
+      "language": "english-inspired",
+      "motif": "mineral",
+      "style": "fantasy",
+      "sourceTerm": "mineral + operational image",
+      "meaning": "鉱物の質感と装置を組み合わせた識別名。",
+      "derivation": "宝石の実在人名としては扱わない。",
+      "source": "editorial-v14",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "イグネッサ",
+      "roman": "Ignessa",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "fire",
+      "style": "fantasy",
+      "sourceTerm": "ignis",
+      "meaning": "火",
+      "derivation": "ign の音を保持し、魔術師向けに子音間へ母音を置いた創作。",
+      "source": "latin-ignis",
+      "tags": [
+        "強気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "イグナヴィウス",
+      "roman": "Ignavius",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "fire",
+      "style": "fantasy",
+      "sourceTerm": "ignis",
+      "meaning": "火",
+      "derivation": "ign の音を保持し、魔術師向けに子音間へ母音を置いた創作。",
+      "source": "latin-ignis",
+      "tags": [
+        "強気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "イグネリス",
+      "roman": "Igneris",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "fire",
+      "style": "fantasy",
+      "sourceTerm": "ignis",
+      "meaning": "火",
+      "derivation": "ign の音を保持し、魔術師向けに子音間へ母音を置いた創作。",
+      "source": "latin-ignis",
+      "tags": [
+        "強気"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アニメッタ",
+      "roman": "Animetta",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "soul",
+      "style": "mystical",
+      "sourceTerm": "anima",
+      "meaning": "魂・生命の息",
+      "derivation": "anim の響きから、神官向けに長短の名を個別設計。",
+      "source": "latin-anima",
+      "tags": [
+        "神秘的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アニモリウス",
+      "roman": "Animorius",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "soul",
+      "style": "mystical",
+      "sourceTerm": "anima",
+      "meaning": "魂・生命の息",
+      "derivation": "anim の響きから、神官向けに長短の名を個別設計。",
+      "source": "latin-anima",
+      "tags": [
+        "神秘的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "アニメリス",
+      "roman": "Animeris",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "soul",
+      "style": "mystical",
+      "sourceTerm": "anima",
+      "meaning": "魂・生命の息",
+      "derivation": "anim の響きから、神官向けに長短の名を個別設計。",
+      "source": "latin-anima",
+      "tags": [
+        "神秘的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "テンペリナ",
+      "roman": "Temperina",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "time",
+      "style": "mystical",
+      "sourceTerm": "tempus",
+      "meaning": "時間",
+      "derivation": "temp の骨格を残し、時の学匠を想定した創作。",
+      "source": "latin-tempus",
+      "tags": [
+        "知的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "テンポリウス",
+      "roman": "Temporius",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "time",
+      "style": "mystical",
+      "sourceTerm": "tempus",
+      "meaning": "時間",
+      "derivation": "temp の骨格を残し、時の学匠を想定した創作。",
+      "source": "latin-tempus",
+      "tags": [
+        "知的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "テンペリス",
+      "roman": "Temperis",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "time",
+      "style": "mystical",
+      "sourceTerm": "tempus",
+      "meaning": "時間",
+      "derivation": "temp の骨格を残し、時の学匠を想定した創作。",
+      "source": "latin-tempus",
+      "tags": [
+        "知的"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ヴェリテッサ",
+      "roman": "Veritessa",
+      "g": "f",
+      "language": "latin-inspired",
+      "motif": "truth",
+      "style": "mystical",
+      "sourceTerm": "veritas",
+      "meaning": "真実",
+      "derivation": "verit の響きを短縮・再配列した創作名。",
+      "source": "latin-veritas",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ヴェルトゥス",
+      "roman": "Vertus",
+      "g": "m",
+      "language": "latin-inspired",
+      "motif": "truth",
+      "style": "mystical",
+      "sourceTerm": "veritas",
+      "meaning": "真実",
+      "derivation": "verit の響きを短縮・再配列した創作名。",
+      "source": "latin-veritas",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    },
+    {
+      "pool": "western.givenNames",
+      "kana": "ヴェリティス",
+      "roman": "Veritis",
+      "g": "n",
+      "language": "latin-inspired",
+      "motif": "truth",
+      "style": "mystical",
+      "sourceTerm": "veritas",
+      "meaning": "真実",
+      "derivation": "verit の響きを短縮・再配列した創作名。",
+      "source": "latin-veritas",
+      "tags": [
+        "真面目"
+      ],
+      "addedVersion": "1.4",
+      "originType": "coined_name"
+    }
+  ]
+}

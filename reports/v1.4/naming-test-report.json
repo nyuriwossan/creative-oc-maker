@@ -1,0 +1,291 @@
+{
+  "version": "1.4",
+  "passed": true,
+  "distribution": {
+    "singleMatch": {
+      "expected": 0.009174311926605505,
+      "actual": 0.00928,
+      "trials": 100000
+    },
+    "before": {
+      "trials": 30000,
+      "unique": 190,
+      "maxShare": 0.7456666666666667,
+      "top10": [
+        {
+          "name": "蓮",
+          "count": 22370,
+          "share": 0.7456666666666667
+        },
+        {
+          "name": "勇",
+          "count": 58,
+          "share": 0.0019333333333333333
+        },
+        {
+          "name": "志貴",
+          "count": 56,
+          "share": 0.0018666666666666666
+        },
+        {
+          "name": "雅之",
+          "count": 56,
+          "share": 0.0018666666666666666
+        },
+        {
+          "name": "皓",
+          "count": 56,
+          "share": 0.0018666666666666666
+        },
+        {
+          "name": "宗一郎",
+          "count": 55,
+          "share": 0.0018333333333333333
+        },
+        {
+          "name": "要",
+          "count": 53,
+          "share": 0.0017666666666666666
+        },
+        {
+          "name": "達郎",
+          "count": 53,
+          "share": 0.0017666666666666666
+        },
+        {
+          "name": "純",
+          "count": 52,
+          "share": 0.0017333333333333333
+        },
+        {
+          "name": "俊彦",
+          "count": 52,
+          "share": 0.0017333333333333333
+        }
+      ]
+    },
+    "after": {
+      "trials": 30000,
+      "unique": 190,
+      "maxShare": 0.008733333333333333,
+      "top10": [
+        {
+          "name": "蓮",
+          "count": 262,
+          "share": 0.008733333333333333
+        },
+        {
+          "name": "泰彦",
+          "count": 201,
+          "share": 0.0067
+        },
+        {
+          "name": "志貴",
+          "count": 191,
+          "share": 0.006366666666666666
+        },
+        {
+          "name": "哲平",
+          "count": 188,
+          "share": 0.006266666666666667
+        },
+        {
+          "name": "雅彦",
+          "count": 183,
+          "share": 0.0061
+        },
+        {
+          "name": "英一",
+          "count": 183,
+          "share": 0.0061
+        },
+        {
+          "name": "航平",
+          "count": 179,
+          "share": 0.005966666666666667
+        },
+        {
+          "name": "祐一郎",
+          "count": 179,
+          "share": 0.005966666666666667
+        },
+        {
+          "name": "誠司",
+          "count": 179,
+          "share": 0.005966666666666667
+        },
+        {
+          "name": "隼人",
+          "count": 178,
+          "share": 0.005933333333333333
+        }
+      ]
+    },
+    "afterWithHistory": {
+      "trials": 30000,
+      "unique": 190,
+      "maxShare": 0.0074333333333333335,
+      "top10": [
+        {
+          "name": "蓮",
+          "count": 223,
+          "share": 0.0074333333333333335
+        },
+        {
+          "name": "尊",
+          "count": 188,
+          "share": 0.006266666666666667
+        },
+        {
+          "name": "直紀",
+          "count": 186,
+          "share": 0.0062
+        },
+        {
+          "name": "春樹",
+          "count": 183,
+          "share": 0.0061
+        },
+        {
+          "name": "匡",
+          "count": 182,
+          "share": 0.006066666666666666
+        },
+        {
+          "name": "頼人",
+          "count": 181,
+          "share": 0.006033333333333333
+        },
+        {
+          "name": "剛太",
+          "count": 181,
+          "share": 0.006033333333333333
+        },
+        {
+          "name": "拓郎",
+          "count": 180,
+          "share": 0.006
+        },
+        {
+          "name": "雅隆",
+          "count": 179,
+          "share": 0.005966666666666667
+        },
+        {
+          "name": "健太",
+          "count": 178,
+          "share": 0.005933333333333333
+        }
+      ]
+    },
+    "otherSingleMatches": [
+      {
+        "pool": "japanese.male",
+        "tag": "影が薄い",
+        "expected": 0.009174311926605505,
+        "actual": 0.0092
+      },
+      {
+        "pool": "japanese.male",
+        "tag": "未熟",
+        "expected": 0.009174311926605505,
+        "actual": 0.0077
+      },
+      {
+        "pool": "japanese.male",
+        "tag": "生意気",
+        "expected": 0.009174311926605505,
+        "actual": 0.009
+      },
+      {
+        "pool": "japanese.male",
+        "tag": "無邪気",
+        "expected": 0.009174311926605505,
+        "actual": 0.0088
+      }
+    ],
+    "themeCounts": {
+      "gemstone": 4046,
+      "constellation": 4003,
+      "german": 3951
+    },
+    "cultureCounts": {
+      "en": 2470,
+      "de": 2443,
+      "it": 2362,
+      "fr": 2381,
+      "es": 2344
+    }
+  },
+  "data": {
+    "modern": {
+      "byCulture": {
+        "en": {
+          "given": 64,
+          "family": 30,
+          "neutral": 4
+        },
+        "de": {
+          "given": 60,
+          "family": 30,
+          "neutral": 0
+        },
+        "fr": {
+          "given": 63,
+          "family": 30,
+          "neutral": 3
+        },
+        "it": {
+          "given": 60,
+          "family": 30,
+          "neutral": 0
+        },
+        "es": {
+          "given": 60,
+          "family": 30,
+          "neutral": 0
+        }
+      },
+      "uniqueRecords": 422,
+      "legacyReused": 39,
+      "newRecords": 383,
+      "memberships": 457
+    },
+    "fantasy": {
+      "byMotif": {
+        "german": {
+          "memberships": 40,
+          "legacyReused": 2
+        },
+        "gemstone": {
+          "memberships": 21,
+          "legacyReused": 10
+        },
+        "constellation": {
+          "memberships": 24,
+          "legacyReused": 0
+        }
+      },
+      "uniqueRecords": 84,
+      "legacyReused": 12,
+      "newRecords": 72,
+      "coined": 0
+    }
+  },
+  "checks": [
+    "bounded weights use unique selected tags",
+    "190 candidates / one match follows 1.75 ÷ 190.75",
+    "Ren no longer receives a 75% fixed quota; compare before/after/history",
+    "multiple real single-match conditions remain varied",
+    "modern records are deduplicated by exact spelling and have per-culture sources",
+    "all systems / cultures / themes / genders generate five distinct names",
+    "categories are balanced before sampling; multi-membership is one ticket",
+    "legacy SF codes remain available; all motif records have valid roles and sources",
+    "name RNG is reproducible and independent of world/settings RNG when injected",
+    "session history records only displayed results; failed batches preserve results/history",
+    "history isolation and oldest-first relaxation",
+    "empty family/code pools fail explicitly; rejected rerolls are not remembered",
+    "setting-only/manual modes and legacy saves do not require nameParts"
+  ],
+  "samples": 267600
+}

@@ -13,7 +13,7 @@ vm.runInContext(source,ctx);
 const a=vm.runInContext(`({nameData,nameRecords,nameSources,modernPools,fantasyPools,namingSystems,namingCultures,namingMotifs,nameHistory,namingWeight,pickFromPool,generateName,generateMultiple,generateFullCharacter,rememberName,avoidRecent,uniqueRecords,buildNameText,buildDetailText,renderNameInfo,runGenerate,
  configure(system,culture='auto',motifs=[],world='modern',gender='male',mode='nameOnly'){selectedNameSystem=system;selectedNameCulture=culture;selectedNameMotifs=motifs;selectedWorld=world;selectedGender=gender;currentMode=mode;selectedMoods=['気だるい'];selectedRoles=[];selectedRelationships=[];},
  results(){return generatedResults;},setRender(fn){renderResults=fn;}})`,ctx);
-const report={version:'1.3',passed:false,distribution:{},data:{},checks:[],samples:0};
+const report={version:'1.4',passed:false,distribution:{},data:{},checks:[],samples:0};
 const check=(name,fn)=>{fn();report.checks.push(name);console.log('PASS',name);};
 function summarize(counts){const sorted=[...counts].sort((a,b)=>b[1]-a[1]),n=sorted.reduce((s,x)=>s+x[1],0);return {trials:n,unique:counts.size,maxShare:sorted[0][1]/n,top10:sorted.slice(0,10).map(([name,count])=>({name,count,share:count/n}))};}
 function sample(pool,moods,legacy,history){const r=seeded(0x51f7),counts=new Map(),h=new Map();for(let i=0;i<30000;i++){
@@ -96,7 +96,7 @@ check('categories are balanced before sampling; multi-membership is one ticket',
 check('legacy SF codes remain available; all motif records have valid roles and sources',()=>{
  for(const word of ['Beryl','Spinel']){const raw=a.nameData.scifi.codenames.find(n=>n.roman===word);assert.ok(raw);const record=[...a.nameRecords.values()].find(n=>n.original===word&&n.legacyPaths.includes('scifi.codenames'));assert.ok(record.motifs.includes('gemstone'));assert.ok(record.roles.includes('codename'));}
  const counts={};for(const motif of ['german','gemstone','constellation']){const pool=a.fantasyPools[motif];counts[motif]={memberships:pool.length,legacyReused:pool.filter(n=>n.legacyPaths.length).length};assert.equal(pool.length,new Set(pool.map(n=>n.id)).size);for(const n of pool){assert.ok(n.motifUsage[motif].meaningJa);assert.ok(n.motifUsage[motif].sources.every(s=>a.nameSources[s]));}}
- const words=[...a.nameRecords.values()].filter(n=>n.motifs.length);report.data.fantasy={byMotif:counts,uniqueRecords:words.length,legacyReused:words.filter(n=>n.legacyPaths.length).length,newRecords:words.filter(n=>!n.legacyPaths.length).length,coined:0};
+ const words=[...a.nameRecords.values()].filter(n=>n.motifUsage);report.data.fantasy={byMotif:counts,uniqueRecords:words.length,legacyReused:words.filter(n=>n.legacyPaths.length).length,newRecords:words.filter(n=>!n.legacyPaths.length).length,coined:0};
 });
 check('name RNG is reproducible and independent of world/settings RNG when injected',()=>{
  const r1=seeded(333),r2=seeded(333);for(let i=0;i<50;i++)assert.equal(a.generateName('modern','male',['知的'],{system:'modernWestern',rng:r1}).display,a.generateName('modern','male',['知的'],{system:'modernWestern',rng:r2}).display);

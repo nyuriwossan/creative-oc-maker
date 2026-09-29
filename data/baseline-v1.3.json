@@ -1,0 +1,78 @@
+{
+  "japanese.surnames": {
+    "count": 250,
+    "sha256": "e6f5dfb6ab584263d5c14d89f96458738b6efd32682bf758947e1480fe35b238"
+  },
+  "japanese.givenNames.male": {
+    "count": 190,
+    "sha256": "790ea5e8bc07f4879e45b9f1e05e52a75918a3e8eaa981c3425bf042d69172ed"
+  },
+  "japanese.givenNames.female": {
+    "count": 190,
+    "sha256": "cc02cf75bd753d8185e327cae491153e3e4b71ae856e7d1d6e0c1a29d92628c6"
+  },
+  "japanese.givenNames.neutral": {
+    "count": 170,
+    "sha256": "8ea957643e18f9e7d4e1a4c863d4487a092ef8624e0fc0f698b87e34bbcfe393"
+  },
+  "wafu.surnames": {
+    "count": 110,
+    "sha256": "6ed08992233f57e68b9f9db4310d225cfe47dc1586cff9039296c86233cbb3d3"
+  },
+  "wafu.givenNames.male": {
+    "count": 80,
+    "sha256": "c08e2fd72ffbecc9c79e4ba682a36f5d49be828eda08e5fcf0c4f13d7d69f74d"
+  },
+  "wafu.givenNames.female": {
+    "count": 78,
+    "sha256": "10c3bda508887ff4259ed12f83bc368775881549622d6a0303603f367a18a06d"
+  },
+  "wafu.givenNames.neutral": {
+    "count": 62,
+    "sha256": "d31375830d672dc7774c7e442fd4545d0d3a0783d7d61a9595c48cebc01c6b4a"
+  },
+  "western.givenNames": {
+    "count": 302,
+    "sha256": "a254dc65cea75bdf850a2f10e2deb8354a6c50010df5a93ffecbee92c54deaa4"
+  },
+  "western.familyNames": {
+    "count": 190,
+    "sha256": "4911c8ff383f228116fca79887b3c04285822fc966014a0905ad81667491bdc7"
+  },
+  "western.nobleNames": {
+    "count": 120,
+    "sha256": "af6e1281d0e26e735b05d13886a160a047a01ce741df1a31ff24d15ffe2bfc90"
+  },
+  "chinese.surnames": {
+    "count": 30,
+    "sha256": "ce0405252e9fc4dc9a7000a1cd11eda44a8b94525ead56cda0af9fb3612bc95f"
+  },
+  "chinese.givenNames.male": {
+    "count": 18,
+    "sha256": "613500356dbe109098ebf17b6616aa4e09b492f9eaf4819f36b6d1ca052048f3"
+  },
+  "chinese.givenNames.female": {
+    "count": 18,
+    "sha256": "526459a04728b5995ab3c8c1e3c3e48c8cfad6c37bdc42f868b2faee59b7e5e9"
+  },
+  "chinese.givenNames.neutral": {
+    "count": 14,
+    "sha256": "24a339ad80e04021a716729d66a29b0fbfcb0d8afe4828a92f5c03e254a4d0e8"
+  },
+  "desert.givenNames": {
+    "count": 50,
+    "sha256": "25a8e803c652d96abd7151ff137ea134ea3f9290636ae41700e58eccc48bc2c3"
+  },
+  "desert.familyNames": {
+    "count": 30,
+    "sha256": "3c777ff6bf11430f3f34382bd08d121ac6c2dfe22f725ac3909ea21519bf69cf"
+  },
+  "scifi.givenNames": {
+    "count": 110,
+    "sha256": "6ce8cc9b6f554121423ac2ed0806aa19e9fe3b90f4d72d168ad1e62131f2f1ec"
+  },
+  "scifi.codenames": {
+    "count": 150,
+    "sha256": "380caff1e863372c894e01535730d82f13ef94e08509b4eaa0f6425da72d111a"
+  }
+}

@@ -11,7 +11,7 @@ vm.runInContext(script,ctx,{timeout:10000});
 const api=vm.runInContext(`({nameData,nameRecords,moodDefs,worldDefs,genderDefs,worldOrder,genderOrder,generateName,generateFullCharacter,generateMultiple,buildNameText,buildDetailText,buildImagePrompt,
  configure(world,gender,mode,moods=[]){selectedWorld=world;selectedGender=gender;currentMode=mode;selectedMoods=moods;selectedRoles=[];selectedRelationships=[];}})`,ctx);
 const data=api.nameData,normalize=s=>s.normalize('NFKC').toLowerCase().replace(/[\s\-'’]/g,'');
-const report={version:'1.3',seed:'0x12345678',data:{pools:[],invalidFields:0,invalidTags:0,displayDuplicates:0,existingHomophones:[]},generation:{singleNames:0,batches:0,charactersInBatches:0,duplicateBatches:0,byWorld:[]},regressions:[]};
+const report={version:'1.4',seed:'0x12345678',data:{pools:[],invalidFields:0,invalidTags:0,displayDuplicates:0,existingHomophones:[]},generation:{singleNames:0,batches:0,charactersInBatches:0,duplicateBatches:0,byWorld:[]},regressions:[]};
 function walk(obj,at=''){for(const [k,v] of Object.entries(obj)){const p=at?at+'.'+k:k;if(Array.isArray(v))checkPool(v,p);else walk(v,p);}}
 function checkPool(pool,p){
  report.data.pools.push({pool:p,count:pool.length});const fields=['kanji','kana','reading','roman'];
@@ -32,10 +32,11 @@ walk(data);
 const expected={'japanese.surnames':[100,150],'japanese.givenNames.male':[90,100],'japanese.givenNames.female':[90,100],'japanese.givenNames.neutral':[70,100],'wafu.surnames':[30,80],'wafu.givenNames.male':[20,60],'wafu.givenNames.female':[18,60],'wafu.givenNames.neutral':[12,50],'western.givenNames':[62,240],'western.familyNames':[40,150],'western.nobleNames':[20,100],'scifi.givenNames':[30,80],'scifi.codenames':[50,100]};
 const at=(p)=>p.split('.').reduce((a,k)=>a[k],data);
 const additions=[];
-for(const [p,[before,add]] of Object.entries(expected)){const pool=at(p);assert.equal(pool.length,before+add,p);for(const n of pool.slice(before)){assert.ok(n.tags.length>=1&&n.tags.length<=2);assert.ok(n.source&&n.style);additions.push({pool:p,...n});}}
+for(const [p,[before,add]] of Object.entries(expected)){const pool=at(p);assert.equal(pool.filter(n=>n.addedVersion!=='1.4').length,before+add,p);for(const n of pool.slice(before,before+add)){assert.ok(n.tags.length>=1&&n.tags.length<=2);assert.ok(n.source&&n.style);additions.push({pool:p,...n});}}
 assert.equal(additions.length,1370);
-for(const g of ['m','f','n'])assert.equal(data.western.givenNames.slice(62).filter(n=>n.g===g).length,80);
+for(const g of ['m','f','n'])assert.equal(data.western.givenNames.slice(62,302).filter(n=>n.g===g).length,80);
 report.data.added=additions.length;
+report.data.addedV14=require('./data/names-v1.4.json').entries.length;
 assert.ok(!data.western.nobleNames.some(n=>['Albafica','Sanriole'].includes(n.roman)));
 report.data.legacyCorrections={undefinedMoodTags:4,nobleNames:2};
 // All new Japanese readings use hiragana; validate romanization independently, allowing ordinary long-vowel conventions.
@@ -44,8 +45,9 @@ const syllables={};for(const [ja,en]of basicRows)Array.from(ja).forEach((c,i)=>s
 for(const [a,b]of Object.entries({'き':'ky','ぎ':'gy','し':'sh','じ':'j','ち':'ch','に':'ny','ひ':'hy','び':'by','ぴ':'py','み':'my','り':'ry'}))for(const [c,d]of Object.entries({'ゃ':'a','ゅ':'u','ょ':'o'}))syllables[a+c]=b+d;
 const romanKey=s=>s.toLowerCase().replace(/ou|oo/g,'o').replace(/uu/g,'u').replace(/ei|ee/g,'e').replace(/n(?=[bmp])/g,'m').replace(/'/g,'');
 function romanize(s){let out='';for(let i=0;i<s.length;i++){if(s[i]==='っ'){const next=syllables[s.slice(i+1,i+3)]||syllables[s[i+1]];assert.ok(next);out+=next.startsWith('ch')?'t':next[0];continue;}const two=syllables[s.slice(i,i+2)];if(two){out+=two;i++;}else{assert.ok(syllables[s[i]],'unknown kana '+s);out+=syllables[s[i]];}}return out;}
-for(const n of additions.filter(n=>n.kanji)){assert.match(n.reading,/^[ぁ-ゖ]+$/u);assert.equal(romanKey(n.roman),romanKey(romanize(n.reading)),n.kanji+' '+n.reading+' '+n.roman);}
-report.data.newJapaneseRomanizationChecks=additions.filter(n=>n.kanji).length;
+const newJapanese=require('./data/names-v1.4.json').entries.filter(n=>n.kanji);
+for(const n of additions.filter(n=>n.kanji).concat(newJapanese)){assert.match(n.reading,/^[ぁ-ゖ]+$/u);assert.equal(romanKey(n.roman),romanKey(romanize(n.reading)),n.kanji+' '+n.reading+' '+n.roman);}
+report.data.newJapaneseRomanizationChecks=additions.filter(n=>n.kanji).length+newJapanese.length;
 function allowed(pool,gender){const pg=api.genderDefs[gender].pool;if(pg==='any')return pool;const g={male:'m',female:'f',neutral:'n'}[pg];return pool.filter(n=>n.g===g);}
 function jpGiven(d,gender){const pg=api.genderDefs[gender].pool;return pg==='any'?Object.values(d.givenNames).flat():d.givenNames[pg];}
 function verifyName(c){
@@ -64,7 +66,7 @@ function verifyName(c){
  }
  const key=api.worldDefs[c.worldKey].nameKey;let sur,giv,fam,expectedRoman,expectedReading;
  if(key==='japanese'||key==='wafu'){
-  const parts=c.name.split(' ');assert.equal(parts.length,2);sur=data[key].surnames.find(n=>n.kanji===parts[0]);giv=jpGiven(data[key],c.genderKey).find(n=>n.kanji===parts[1]);assert.ok(sur&&giv);
+  const parts=c.name.split(' ');assert.equal(parts.length,2);sur=data[key].surnames.find(n=>n.kanji===parts[0]);giv=jpGiven(data[key],c.genderKey).find(n=>n.kanji===parts[1]&&n.roman===c.nameParts.given.original&&n.reading===c.nameParts.given.reading);assert.ok(sur&&giv);
   expectedRoman=giv.roman+' '+sur.roman;expectedReading=sur.reading+' '+giv.reading;
  }else if(key==='western'){
   const parts=c.name.split('・');giv=allowed(data.western.givenNames,c.genderKey).find(n=>n.kana===parts[0]);assert.ok(giv);
@@ -116,6 +118,6 @@ const motifs={};for(const p of ['western.givenNames','western.familyNames','west
 let darkHits=0;api.configure('dark','unspecified','nameOnly',['闇がある','ミステリアス']);for(let i=0;i<10000;i++){const c=api.generateFullCharacter();if(c.roman.split(' ').some(s=>common.test(s)))darkHits++;}
 assert.ok(darkHits/10000<0.2);report.motifAudit={pools:motifs,darkSample:10000,darkHits,rate:darkHits/10000};
 report.generation.additionalDarkSamples=10000;
-assert.ok(html.includes('<footer>創作OCメーカー v1.3</footer>'));
+assert.ok(html.includes('<footer>創作OCメーカー v1.4</footer>'));
 report.passed=true;
-const output=process.argv[3];if(output)fs.writeFileSync(output,JSON.stringify(report,null,2));console.log(JSON.stringify({passed:true,singles:report.generation.singleNames,batches:report.generation.batches,added:1370,darkMotifRate:darkHits/10000}));
+const output=process.argv[3];if(output)fs.writeFileSync(output,JSON.stringify(report,null,2));console.log(JSON.stringify({passed:true,singles:report.generation.singleNames,batches:report.generation.batches,addedV12:1370,addedV14:report.data.addedV14,darkMotifRate:darkHits/10000}));

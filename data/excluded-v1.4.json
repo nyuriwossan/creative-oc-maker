@@ -1,0 +1,210 @@
+[
+  {
+    "pool": "japanese.givenNames.neutral",
+    "candidate": {
+      "kanji": "薫",
+      "reading": "かおる",
+      "roman": "Kaoru"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "薫"
+    ]
+  },
+  {
+    "pool": "japanese.givenNames.neutral",
+    "candidate": {
+      "kanji": "周",
+      "reading": "あまね",
+      "roman": "Amane"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "天音"
+    ]
+  },
+  {
+    "pool": "japanese.givenNames.neutral",
+    "candidate": {
+      "kanji": "皐",
+      "reading": "さつき",
+      "roman": "Satsuki"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "皐月"
+    ]
+  },
+  {
+    "pool": "japanese.givenNames.neutral",
+    "candidate": {
+      "kanji": "汀",
+      "reading": "なぎさ",
+      "roman": "Nagisa"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "渚"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "本多",
+      "reading": "ほんだ",
+      "roman": "Honda"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "本田"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "杉浦",
+      "reading": "すぎうら",
+      "roman": "Sugiura"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "杉浦"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "菅原",
+      "reading": "すがわら",
+      "roman": "Sugawara"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "菅原"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "松浦",
+      "reading": "まつうら",
+      "roman": "Matsuura"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "松浦"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "片桐",
+      "reading": "かたぎり",
+      "roman": "Katagiri"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "片桐"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "飯塚",
+      "reading": "いいづか",
+      "roman": "Iizuka"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "飯塚"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "堀江",
+      "reading": "ほりえ",
+      "roman": "Horie"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "堀江"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "宇佐美",
+      "reading": "うさみ",
+      "roman": "Usami"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "宇佐美"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "坂井",
+      "reading": "さかい",
+      "roman": "Sakai"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "酒井"
+    ]
+  },
+  {
+    "pool": "japanese.surnames",
+    "candidate": {
+      "kanji": "田辺",
+      "reading": "たなべ",
+      "roman": "Tanabe"
+    },
+    "reason": "same-pool spelling/reading/roman collision",
+    "existing": [
+      "田辺"
+    ]
+  },
+  {
+    "candidate": "不入斗",
+    "reason": "難読で現代の名前としての使いやすさを優先できない",
+    "category": "editorial-rejection"
+  },
+  {
+    "candidate": "不帰ノ嶮",
+    "reason": "山岳地形の名称として保持、人名には長すぎる",
+    "category": "editorial-rejection"
+  },
+  {
+    "candidate": "花京院",
+    "reason": "著名作品の登場人物を強く連想するため追加しない",
+    "category": "editorial-rejection"
+  },
+  {
+    "candidate": "Dio / Diavolo",
+    "reason": "著名作品への連想が強い素材を避ける",
+    "category": "editorial-rejection"
+  },
+  {
+    "candidate": "Cendrillon / Blanche Neige",
+    "reason": "既存の物語主人公そのものは採用しない",
+    "category": "editorial-rejection"
+  },
+  {
+    "candidate": "Nerv / frieren",
+    "reason": "著名作品・組織への強い連想を避ける",
+    "category": "editorial-rejection"
+  },
+  {
+    "candidate": "mercari",
+    "reason": "企業・ブランドとの強い一致を避ける",
+    "category": "editorial-rejection"
+  },
+  {
+    "candidate": "amarillo",
+    "reason": "参考ページの言語分類が疑わしいため不採用",
+    "category": "editorial-rejection"
+  }
+]
