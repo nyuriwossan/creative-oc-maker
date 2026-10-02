@@ -170,11 +170,13 @@ details.cond[open] summary::after{transform:rotate(180deg);}
   margin-bottom:14px;
   box-shadow:0 2px 8px rgba(45,42,51,.05);
 }
+.card .tag-row{display:flex;flex-wrap:wrap;gap:6px 8px;margin-bottom:10px;}
 .card .world-tag{
   display:inline-block;font-size:.7rem;color:var(--accent);
   border:1px solid var(--accent);border-radius:999px;
-  padding:2px 10px;margin-bottom:10px;letter-spacing:.05em;
+  padding:2px 10px;letter-spacing:.05em;
 }
+.card .world-tag.secondary{color:var(--sub);border-color:var(--line);}
 .card .catch{
   font-family:var(--serif);
   font-size:1.02rem;
@@ -293,6 +295,7 @@ footer{
 .name-origin a{color:inherit;text-decoration:underline;text-underline-offset:3px;}
 .naming-notice{font-size:.8rem;line-height:1.8;background:rgba(170,140,90,.12);border-radius:6px;padding:10px;}
 #generationError{padding:14px;border:1px solid #b36054;border-radius:8px;font-size:.86rem;line-height:1.8;}
+#generationNotice{padding:10px 14px;border:1px solid var(--accent);border-radius:8px;font-size:.86rem;line-height:1.8;}
 .chip:disabled{opacity:.45;cursor:default;}
 button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
 </style>
@@ -317,6 +320,7 @@ button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var
 <section id="conditions"></section>
 <section id="namingOptions" aria-label="名前の詳細設定"></section>
 <p id="generationError" role="alert" tabindex="-1" hidden></p>
+<p id="generationNotice" role="status" aria-live="polite" hidden></p>
 
 <div class="gen-row">
   <button class="btn btn-gen" id="btnGen1">1人生成</button>
@@ -3823,6 +3827,8 @@ function renderModeButtons(){
     '<button class="mode-btn' + (currentMode===d.key?" on":"") + '" data-mode="' + d.key + '" aria-pressed="' + (currentMode===d.key) + '">' +
     d.label + '<small>' + d.sub + '</small></button>'
   ).join("");
+  document.getElementById("btnGen1").textContent=currentMode==="nameOnly"?"1個生成":"1人生成";
+  document.getElementById("btnGen5").textContent=currentMode==="nameOnly"?"10個生成":"5人生成";
   nav.querySelectorAll(".mode-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       currentMode = btn.dataset.mode;
@@ -3905,12 +3911,29 @@ function renderRomanLine(c){
   return items.length?'<p class="roman">' + items.join("　") + '</p>':"";
 }
 
+function resultTags(c){
+  const n=c.naming;
+  const nameSystem=n&&namingSystems[n.system]&&n.system!=="auto"?namingSystems[n.system]:null;
+  const tags=[];
+  if(c.mode==="nameOnly"){
+    if(nameSystem)tags.push([nameSystem,false]);
+    if(n?.system==="mythology"&&n.tradition!=="auto"&&mythTraditions[n.tradition])tags.push(["伝承："+mythTraditions[n.tradition],true]);
+    else if(n?.culture&&n.culture!=="auto"&&namingCultures[n.culture])tags.push(["言語圏："+namingCultures[n.culture],true]);
+    if(c.worldLabel&&!nameSystem)tags.push(["世界観："+c.worldLabel,true]);
+  }else{
+    if(c.worldLabel)tags.push(["世界観："+c.worldLabel,false]);
+    if(nameSystem)tags.push(["名前："+nameSystem,true]);
+  }
+  return tags.length?'<div class="tag-row">'+tags.map(([label,secondary])=>
+    '<span class="world-tag'+(secondary?' secondary':'')+'">'+esc(label)+'</span>').join("")+'</div>':"";
+}
+
 function renderResults(results){
   const box = document.getElementById("results");
   document.getElementById("resHead").classList.toggle("show", results.length > 0);
   box.innerHTML = results.map(c => {
     const saved = savedResults.some(s => s.id === c.id);
-    let inner = '<span class="world-tag">' + esc(c.worldLabel) + '</span>';
+    let inner = resultTags(c);
 
     if(c.mode === "nameOnly"){
       inner += '<p class="name-line"><span class="nm">' + esc(c.name) + '</span>' + renderNameReading(c) + '</p>' +
@@ -3991,8 +4014,10 @@ function savedTitle(c){
   return c.name || c.catch || "（名前なし）";
 }
 function savedImpression(c){
-  if(c.mode === "nameOnly") return c.worldLabel + "／" + (c.nameImpression || "");
-  return c.worldLabel + "・" + (c.age || "") + "　" + (c.occupation || "");
+  const nameSystem=c.naming&&namingSystems[c.naming.system]&&c.naming.system!=="auto"?namingSystems[c.naming.system]:null;
+  const context=[c.worldLabel?"世界観："+c.worldLabel:null,nameSystem?"名前："+nameSystem:null].filter(Boolean).join("／");
+  if(c.mode === "nameOnly") return [nameSystem?"名前："+nameSystem:null,c.worldLabel?"世界観："+c.worldLabel:null,c.nameImpression].filter(Boolean).join("／");
+  return [context,[c.age,c.occupation].filter(Boolean).join("　")].filter(Boolean).join("・");
 }
 
 function renderSavedCharacters(){
@@ -4060,7 +4085,7 @@ function init(){
   renderChoiceChips();
   renderSavedCharacters();
   document.getElementById("btnGen1").addEventListener("click", () => runGenerate(1));
-  document.getElementById("btnGen5").addEventListener("click", () => runGenerate(5));
+  document.getElementById("btnGen5").addEventListener("click", () => runGenerate(currentMode==="nameOnly"?10:5));
   document.getElementById("btnReset").addEventListener("click", resetConditions);
   document.getElementById("btnRandom").addEventListener("click", randomConditions);
   document.getElementById("btnClearSaved").addEventListener("click", clearSavedCharacters);
@@ -4733,7 +4758,7 @@ function generateName(worldKey,genderKey,moods,options={}){
     naming:{system,culture,motif,genderPool:pg,historyKey,notice}};
 }
 function generateMultiple(count,options={}){
-  if(!Number.isInteger(count)||count<1||count>5)throw new NamingError("生成件数は1〜5人で指定してください。");
+  if(!Number.isInteger(count)||count<1||count>(currentMode==="nameOnly"?10:5))throw new NamingError("生成件数を確認してください。");
   const selectedSystem=options.system??selectedNameSystem;
   if(currentMode!=="settingOnly"&&["kanjiSingle","mythology"].includes(selectedSystem)){
     const staged=cloneNameHistory(options.history||new Map()),out=[];
@@ -4741,8 +4766,9 @@ function generateMultiple(count,options={}){
     const available=selectedSystem==="kanjiSingle"
       ?kanjiEligibleGroups(options.kanjiReadingMode??selectedKanjiReadingMode).length
       :mythEligibleEntities(options.mythType??selectedMythType,options.mythTradition??selectedMythTradition).length;
-    if(available<count)throw new NamingError("この条件では"+available+"人分まで生成できます。条件を広げるか、生成件数を減らしてください。");
-    for(let i=0;i<count;i++){
+    const target=currentMode==="nameOnly"&&count===10?Math.min(count,available):count;
+    if(available<target)throw new NamingError("この条件では"+available+(count===10?"個":"人分")+"まで生成できます。条件を広げるか、生成件数を減らしてください。");
+    for(let i=0;i<target;i++){
       const ch=generateFullCharacter({...options,history:staged,exclusions});
       const part=ch.nameParts.single;
       if(selectedSystem==="kanjiSingle")exclusions.groups.add(part.variantGroup);
@@ -4763,7 +4789,7 @@ function generateMultiple(count,options={}){
       if(family&&usedFamilies.has(family)&&retry<5)continue;
       accepted=true;break;
     }
-    if(!accepted)throw new NamingError(count+"人分の重複しない名前を選べませんでした（候補不足、または再抽選128回に到達）。条件を広げるか、1人生成をお試しください。");
+    if(!accepted)throw new NamingError(count+(currentMode==="nameOnly"?"個":"人分")+"の重複しない名前を選べませんでした（候補不足、または再抽選128回に到達）。条件を広げるか、1"+(currentMode==="nameOnly"?"個":"人")+"生成をお試しください。");
     if(ch.name&&!ch.manualName)usedNames.add(ch.name);
     if(ch.nameParts?.family)usedFamilies.add(ch.nameParts.family.id);
     if(ch.catch)usedCatch.add(ch.catch);
@@ -5013,7 +5039,7 @@ function renderNamingOptions(){
     (system==="modernWestern"?'<fieldset'+(disabled?' disabled':'')+'><legend>文化・言語圏</legend>'+chips("culture",namingCultures,[selectedNameCulture])+'<p class="cond-note">初期対応は5つの言語圏です。民族やヨーロッパ全域の分類ではありません。お任せでは言語圏を同じ確率で選び、同じ圏の姓と名を組み合わせます。世代別の頻度は再現しません。</p><p class="cond-note">「中性的」は人物の印象です。男女両方の用例を確認した名が未収録の圏では男女の名を同じ確率で選び、結果にも表示します。</p></fieldset>':"")+
     (system==="fantasy"?'<fieldset'+(disabled?' disabled':'')+'><legend>ファンタジーの着想元（複数可）</legend>'+button("motif","auto","お任せ（従来候補も含む）",!selectedNameMotifs.length)+chips("motif",{german:namingMotifs.german,gemstone:namingMotifs.gemstone,constellation:namingMotifs.constellation},selectedNameMotifs)+'<p class="cond-note">1人ごとに主な着想元を同じ確率で選び、名か家名に反映します。複数の語を必ず合成する設定ではありません。</p></fieldset>':"")+
     (system==="kanjiSingle"?'<fieldset'+(disabled?' disabled':'')+'><legend>漢字の読み</legend>'+chips("kanjiReading",{standard:"標準・確認済みのみ",creative:"創作読みも含める"},[selectedKanjiReadingMode])+'<p class="cond-note">字体群→表記→読みの順に選びます。複数の読みや異体字がある字も、抽選枠は一つです。創作読みは結果に明記します。</p></fieldset>':"")+
-    (system==="mythology"?'<fieldset'+(disabled?' disabled':'')+'><legend>存在の種類</legend>'+chips("mythType",mythEntityTypes,[selectedMythType])+'</fieldset><fieldset'+(disabled?' disabled':'')+'><legend>伝承</legend><label for="mythTraditionSelect">伝承・文化圏</label> <select id="mythTraditionSelect" data-name-select="mythTradition" aria-label="伝承・文化圏">'+Object.entries(mythTraditions).map(([k,v])=>'<option value="'+k+'"'+(selectedMythTradition===k?' selected':'')+'>'+esc(v)+'</option>').join('')+'</select><p class="cond-note">お任せでは候補が3件以上ある種別・伝承を同じ確率で選び、その中から一つの存在を選びます。別名が複数あっても抽選枠は一つです。候補が少ない組み合わせでは5人生成できない場合があります。</p></fieldset>':"")+
+    (system==="mythology"?'<fieldset'+(disabled?' disabled':'')+'><legend>存在の種類</legend>'+chips("mythType",mythEntityTypes,[selectedMythType])+'</fieldset><fieldset'+(disabled?' disabled':'')+'><legend>伝承</legend><label for="mythTraditionSelect">伝承・文化圏</label> <select id="mythTraditionSelect" data-name-select="mythTradition" aria-label="伝承・文化圏">'+Object.entries(mythTraditions).map(([k,v])=>'<option value="'+k+'"'+(selectedMythTradition===k?' selected':'')+'>'+esc(v)+'</option>').join('')+'</select><p class="cond-note">お任せでは候補が3件以上ある種別・伝承を同じ確率で選び、その中から一つの存在を選びます。別名が複数あっても抽選枠は一つです。名前だけモードの10個生成では候補が少なければ全候補を表示します。</p></fieldset>':"")+
     (system===null?'<p class="cond-note">世界観がお任せのときは、生成した世界観に合わせて名前の系統を決めます。</p>':"")+
     '<p class="cond-note">雰囲気が未指定なら、生成時に選んだ2〜3個の雰囲気を名前にも使います。最近表示した名は最大20件まで避け、候補が少なければ古い履歴から緩和します。</p></div></details>';
   box.querySelectorAll("button[data-name-choice]").forEach(btn=>btn.addEventListener("click",()=>{
@@ -5039,16 +5065,20 @@ function renderNamingOptions(){
 }
 function runGenerate(count){
   const error=document.getElementById("generationError");
+  const notice=document.getElementById("generationNotice");
   try{
     const next=generateMultiple(count,{history:nameHistory});
     renderResults(next);
     generatedResults=next;
     nameHistory.clear();for(const [key,value] of next.nextHistory)nameHistory.set(key,value);
     error.hidden=true;error.textContent="";
-    setTimeout(()=>document.getElementById("resHead").scrollIntoView({behavior:"smooth",block:"start"}),60);
+    notice.hidden=next.length>=count;
+    notice.textContent=next.length<count?"この条件では"+next.length+"個の候補を表示しました":"";
+    setTimeout(()=>(next.length<count?notice:document.getElementById("resHead")).scrollIntoView({behavior:"smooth",block:"start"}),60);
   }catch(e){
+    notice.hidden=true;notice.textContent="";
     error.hidden=false;
-    error.textContent="「"+namingSystems[selectedNameSystem]+"」で"+count+"人を生成できませんでした。"+(e instanceof NamingError?e.message:"もう一度お試しください。")+" 以前の結果は保持しています。";
+    error.textContent="「"+namingSystems[selectedNameSystem]+"」で"+count+(currentMode==="nameOnly"?"個":"人")+"を生成できませんでした。"+(e instanceof NamingError?e.message:"もう一度お試しください。")+" 以前の結果は保持しています。";
     error.focus({preventScroll:true});
   }
 }

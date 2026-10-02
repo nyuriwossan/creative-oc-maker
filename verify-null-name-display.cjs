@@ -29,19 +29,21 @@ async function clipboard(page){return (await page.evaluate(()=>navigator.clipboa
   const system=key=>page.locator('[data-name-choice="system:'+key+'"]');
   const oldFull=await page.locator('#savedList [data-id="old-v12"] .s-detail').textContent();
   const oldMissing=await page.locator('#savedList [data-id="old-v12-null"] .s-detail').textContent();
+  const oldSummary=await page.locator('#savedList [data-id="old-v12-null"] .s-imp').textContent();
   assert.match(oldFull,/英字表記：Old Test/);assert.doesNotMatch(oldMissing,absent);
   assert.doesNotMatch(oldMissing,/英字表記：/);
-  report.checks.push('old saves load with and without optional roman spelling');
+  assert.match(oldSummary,/世界観：現代日本/);assert.doesNotMatch(oldSummary,/名前：/);
+  report.checks.push('old saves load without invented naming system or missing roman spelling');
 
-  // The reported UI sequence: name only > details > one kanji > standard > five.
+  // Name only > details > one kanji > standard > ten.
   await page.locator('[data-mode="nameOnly"]').click();
   await page.locator('.naming-details > summary').click();
   await system('kanjiSingle').click();
   assert.equal(await page.locator('[data-name-choice="kanjiReading:standard"]').getAttribute('aria-pressed'),'true');
   await page.locator('#btnGen5').click();
-  assert.equal(await page.locator('#results .card').count(),5);
+  assert.equal(await page.locator('#results .card').count(),10);
   assert.equal(await page.locator('#results .roman').count(),0);
-  assert.equal(await page.locator('#results .rd').count(),5);
+  assert.equal(await page.locator('#results .rd').count(),10);
   assert.doesNotMatch(await page.locator('#results').textContent(),absent);
   assert.ok(await page.evaluate(()=>generatedResults.every(c=>c.roman===null&&c.reading)));
   await page.locator('#results [data-act="name"]').first().click();
@@ -50,7 +52,7 @@ async function clipboard(page){return (await page.evaluate(()=>navigator.clipboa
   await page.locator('#results [data-act="detail"]').first().click();
   await page.waitForFunction(async()=> (await navigator.clipboard.readText()).includes('名前の系統：'));
   const detailCopy=await clipboard(page);assert.doesNotMatch(detailCopy,absent);assert.doesNotMatch(detailCopy,/英字表記：/);
-  report.checks.push('reported five-name path, card rendering, name and detail copy');
+  report.checks.push('ten-name path, card rendering, name and detail copy');
 
   const savedName=await page.evaluate(()=>generatedResults[0].name);
   await page.locator('#results [data-act="save"]').first().click();
@@ -77,8 +79,8 @@ async function clipboard(page){return (await page.evaluate(()=>navigator.clipboa
   await system('mythology').click();
   await page.locator('[data-mode="nameOnly"]').click();
   await page.locator('#btnGen5').click();
-  assert.equal(await page.locator('#results .card').count(),5);
-  assert.equal(await page.locator('#results .roman').count(),5);
+  assert.equal(await page.locator('#results .card').count(),10);
+  assert.equal(await page.locator('#results .roman').count(),10);
   assert.doesNotMatch(await page.locator('#results').textContent(),absent);
   await page.locator('#results [data-act="name"]').first().click();
   await page.waitForFunction(async()=> (await navigator.clipboard.readText()).includes('英字表記：'));
