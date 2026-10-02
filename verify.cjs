@@ -118,6 +118,6 @@ const motifs={};for(const p of ['western.givenNames','western.familyNames','west
 let darkHits=0;api.configure('dark','unspecified','nameOnly',['闇がある','ミステリアス']);for(let i=0;i<10000;i++){const c=api.generateFullCharacter();if(c.roman.split(' ').some(s=>common.test(s)))darkHits++;}
 assert.ok(darkHits/10000<0.2);report.motifAudit={pools:motifs,darkSample:10000,darkHits,rate:darkHits/10000};
 report.generation.additionalDarkSamples=10000;
-assert.ok(html.includes('<footer>創作OCメーカー v1.4</footer>'));
+assert.ok(html.includes('<footer>創作OCメーカー v1.5</footer>'));
 report.passed=true;
 const output=process.argv[3];if(output)fs.writeFileSync(output,JSON.stringify(report,null,2));console.log(JSON.stringify({passed:true,singles:report.generation.singleNames,batches:report.generation.batches,addedV12:1370,addedV14:report.data.addedV14,darkMotifRate:darkHits/10000}));

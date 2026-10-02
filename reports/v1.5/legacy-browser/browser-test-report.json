@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    "details initially collapsed",
+    "legacy save displays and copies",
+    "keyboard selection keeps focus and aria-pressed",
+    "five modern names, exact name-only clipboard text, new save and reload",
+    "old save deletion",
+    "setting-only with and without manual name; name controls disabled",
+    "fantasy themes, full detail and image prompt clipboard text",
+    "empty candidates and bounded retry errors preserve real DOM results and recover",
+    "390px mobile width has no horizontal overflow",
+    "v1.4 editorial origin renders at 390px and metadata survives save/reload"
+  ],
+  "consoleErrors": [],
+  "screenshots": [
+    "desktop-result.png",
+    "mobile-controls.png",
+    "mobile-result.png",
+    "new-origin-mobile.png"
+  ]
+}

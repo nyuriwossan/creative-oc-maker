@@ -1,0 +1,2822 @@
+{
+  "version": "1.5",
+  "sources": {
+    "unihan18": {
+      "title": "Unicode Unihan 18.0.0 (kJapaneseOn / kJapaneseKun)",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip",
+      "kind": "漢字の音訓",
+      "proves": "字ごとの音訓。人名としての実例や創作読みは証明しない"
+    },
+    "kanjipedia": {
+      "title": "漢字ペディア",
+      "url": "https://www.kanjipedia.jp/",
+      "kind": "漢字辞典",
+      "proves": "漢字の読みの補助確認"
+    },
+    "editorial": {
+      "title": "v1.5 編集上の創作読み",
+      "url": "",
+      "kind": "編集上の提案",
+      "proves": "辞書に記載された読みではない"
+    },
+    "theoi-pantheon": {
+      "title": "Theoi Greek Gods",
+      "url": "https://www.theoi.com/Pantheon.html",
+      "kind": "ギリシア神話資料",
+      "proves": "神格の名と対応するローマ名"
+    },
+    "theoi-heroes": {
+      "title": "Theoi Greek Heroes",
+      "url": "https://www.theoi.com/greek-mythology/heroes.html",
+      "kind": "ギリシア神話資料",
+      "proves": "固有名を持つ英雄"
+    },
+    "theoi-bestiary": {
+      "title": "Theoi Bestiary",
+      "url": "https://www.theoi.com/greek-mythology/bestiary.html",
+      "kind": "ギリシア神話資料",
+      "proves": "固有名を持つ神話上の生物"
+    },
+    "norse-museum": {
+      "title": "National Museum of Denmark: Norse gods",
+      "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-late-iron-age/iron-age-gods/odin-tor-and-the-other-norse-gods/",
+      "kind": "博物館解説",
+      "proves": "北欧神話の神格"
+    },
+    "british-egypt": {
+      "title": "British Museum: Ancient Egypt",
+      "url": "https://www.britishmuseum.org/sites/default/files/2019-09/Visit_Egypt_Daily_Life_KS2.pdf",
+      "kind": "博物館資料",
+      "proves": "エジプト神話の神格"
+    },
+    "met-hathor": {
+      "title": "Metropolitan Museum: Arc sistrum of Tapenu",
+      "url": "https://www.metmuseum.org/art/collection/search/553814",
+      "kind": "博物館解説",
+      "proves": "ハトホルと音楽の関係"
+    },
+    "met-bastet": {
+      "title": "Metropolitan Museum: Bastet",
+      "url": "https://www.metmuseum.org/art/collection/search/551774",
+      "kind": "博物館解説",
+      "proves": "バステトの名と猫の姿"
+    },
+    "kokugakuin-amaterasu": {
+      "title": "國學院大學・Encyclopedia of Shinto: Amaterasu",
+      "url": "https://d-museum.kokugakuin.ac.jp/eos/detail/?id=9440",
+      "kind": "神道事典",
+      "proves": "アマテラスの名と表記"
+    },
+    "kokugakuin-susanoo": {
+      "title": "國學院大學・Encyclopedia of Shinto: Susanoo",
+      "url": "https://d-museum.kokugakuin.ac.jp/eos/detail/id%3D9152",
+      "kind": "神道事典",
+      "proves": "スサノオと関連する神格の名"
+    },
+    "kokugakuin-ookuninushi": {
+      "title": "國學院大學・Encyclopedia of Shinto: Ōkuninushi",
+      "url": "https://d-museum.kokugakuin.ac.jp/eos/detail/?id=9965",
+      "kind": "神道事典",
+      "proves": "オオクニヌシの名と別表記"
+    },
+    "oracc": {
+      "title": "Oracc: Ancient Mesopotamian Gods and Goddesses",
+      "url": "https://oracc.museum.upenn.edu/amgg/Listofdeities/index.html",
+      "kind": "研究資料",
+      "proves": "メソポタミア神格と別名"
+    },
+    "british-arthur": {
+      "title": "British Library: King Arthur, fable, fact and fiction",
+      "url": "https://www.bl.uk/stories/blogs/posts/king-arthur-fable-fact-and-fiction",
+      "kind": "図書館解説",
+      "proves": "アーサー王物語の固有人物"
+    }
+  },
+  "kanji": [
+    {
+      "id": "kanji:6714",
+      "display": "朔",
+      "variantGroup": "char:6714",
+      "readings": [
+        {
+          "text": "さく",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "ついたち",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "はじめ",
+          "kind": "creative",
+          "sources": [
+            "editorial"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:51ea",
+      "display": "凪",
+      "variantGroup": "char:51ea",
+      "readings": [
+        {
+          "text": "なぎ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "優しい",
+        "儚い"
+      ]
+    },
+    {
+      "id": "kanji:84bc",
+      "display": "蒼",
+      "variantGroup": "char:84bc",
+      "readings": [
+        {
+          "text": "そう",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "あおい",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "あお",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "そら",
+          "kind": "creative",
+          "sources": [
+            "editorial"
+          ]
+        }
+      ],
+      "moodTags": [
+        "冷たい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:84ee",
+      "display": "蓮",
+      "variantGroup": "char:84ee",
+      "readings": [
+        {
+          "text": "れん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "優しい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:7384",
+      "display": "玄",
+      "variantGroup": "char:7384",
+      "readings": [
+        {
+          "text": "げん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "冷たい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:73b2",
+      "display": "玲",
+      "variantGroup": "char:73b2",
+      "readings": [
+        {
+          "text": "れい",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "優しい",
+        "高貴"
+      ]
+    },
+    {
+      "id": "kanji:51db",
+      "display": "凛",
+      "variantGroup": "rin",
+      "readings": [
+        {
+          "text": "りん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "冷たい",
+        "真面目"
+      ]
+    },
+    {
+      "id": "kanji:51dc",
+      "display": "凜",
+      "variantGroup": "rin",
+      "readings": [
+        {
+          "text": "りん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "冷たい",
+        "真面目"
+      ]
+    },
+    {
+      "id": "kanji:666f",
+      "display": "景",
+      "variantGroup": "char:666f",
+      "readings": [
+        {
+          "text": "けい",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "真面目"
+      ]
+    },
+    {
+      "id": "kanji:98af",
+      "display": "颯",
+      "variantGroup": "char:98af",
+      "readings": [
+        {
+          "text": "そう",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "はやて",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "明るい",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:5f8b",
+      "display": "律",
+      "variantGroup": "char:5f8b",
+      "readings": [
+        {
+          "text": "りつ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "真面目",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:97ff",
+      "display": "響",
+      "variantGroup": "char:97ff",
+      "readings": [
+        {
+          "text": "ひびき",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "明るい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:6faa",
+      "display": "澪",
+      "variantGroup": "char:6faa",
+      "readings": [
+        {
+          "text": "みお",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "儚い",
+        "優しい"
+      ]
+    },
+    {
+      "id": "kanji:7fe0",
+      "display": "翠",
+      "variantGroup": "char:7fe0",
+      "readings": [
+        {
+          "text": "すい",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "みどり",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:78a7",
+      "display": "碧",
+      "variantGroup": "char:78a7",
+      "readings": [
+        {
+          "text": "へき",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "あお",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "みどり",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "冷たい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:85cd",
+      "display": "藍",
+      "variantGroup": "char:85cd",
+      "readings": [
+        {
+          "text": "あい",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:7d2b",
+      "display": "紫",
+      "variantGroup": "char:7d2b",
+      "readings": [
+        {
+          "text": "むらさき",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:6681",
+      "display": "暁",
+      "variantGroup": "char:6681",
+      "readings": [
+        {
+          "text": "あかつき",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "明るい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:5bb5",
+      "display": "宵",
+      "variantGroup": "char:5bb5",
+      "readings": [
+        {
+          "text": "よい",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "儚い",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:7114",
+      "display": "焔",
+      "variantGroup": "char:7114",
+      "readings": [
+        {
+          "text": "ほのお",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "明るい",
+        "闇がある"
+      ]
+    },
+    {
+      "id": "kanji:71ce",
+      "display": "燎",
+      "variantGroup": "char:71ce",
+      "readings": [
+        {
+          "text": "りょう",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "明るい",
+        "闇がある"
+      ]
+    },
+    {
+      "id": "kanji:5f71",
+      "display": "影",
+      "variantGroup": "char:5f71",
+      "readings": [
+        {
+          "text": "かげ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:96f6",
+      "display": "零",
+      "variantGroup": "char:96f6",
+      "readings": [
+        {
+          "text": "れい",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "儚い",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:7985",
+      "display": "禅",
+      "variantGroup": "char:7985",
+      "readings": [
+        {
+          "text": "ぜん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "真面目",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:9065",
+      "display": "遥",
+      "variantGroup": "char:9065",
+      "readings": [
+        {
+          "text": "はるか",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "優しい",
+        "儚い"
+      ]
+    },
+    {
+      "id": "kanji:8981",
+      "display": "要",
+      "variantGroup": "char:8981",
+      "readings": [
+        {
+          "text": "かなめ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "真面目",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:5deb",
+      "display": "巫",
+      "variantGroup": "char:5deb",
+      "readings": [
+        {
+          "text": "みこ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:6727",
+      "display": "朧",
+      "variantGroup": "char:6727",
+      "readings": [
+        {
+          "text": "おぼろ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "儚い",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:9d09",
+      "display": "鴉",
+      "variantGroup": "char:9d09",
+      "readings": [
+        {
+          "text": "からす",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:96bc",
+      "display": "隼",
+      "variantGroup": "char:96bc",
+      "readings": [
+        {
+          "text": "はやぶさ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "明るい",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:9df9",
+      "display": "鷹",
+      "variantGroup": "char:9df9",
+      "readings": [
+        {
+          "text": "たか",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "明るい",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:72fc",
+      "display": "狼",
+      "variantGroup": "char:72fc",
+      "readings": [
+        {
+          "text": "おおかみ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "ろう",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "明るい"
+      ]
+    },
+    {
+      "id": "kanji:5203",
+      "display": "刃",
+      "variantGroup": "char:5203",
+      "readings": [
+        {
+          "text": "やいば",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "明るい"
+      ]
+    },
+    {
+      "id": "kanji:92fc",
+      "display": "鋼",
+      "variantGroup": "char:92fc",
+      "readings": [
+        {
+          "text": "はがね",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "真面目",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:71c8",
+      "display": "燈",
+      "variantGroup": "char:71c8",
+      "readings": [
+        {
+          "text": "とう",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "儚い",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:66d9",
+      "display": "曙",
+      "variantGroup": "char:66d9",
+      "readings": [
+        {
+          "text": "あけぼの",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "優しい",
+        "明るい"
+      ]
+    },
+    {
+      "id": "kanji:7d2c",
+      "display": "紬",
+      "variantGroup": "char:7d2c",
+      "readings": [
+        {
+          "text": "つむぎ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "優しい",
+        "高貴"
+      ]
+    },
+    {
+      "id": "kanji:7dbe",
+      "display": "綾",
+      "variantGroup": "char:7dbe",
+      "readings": [
+        {
+          "text": "あや",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "優しい"
+      ]
+    },
+    {
+      "id": "kanji:7434",
+      "display": "琴",
+      "variantGroup": "char:7434",
+      "readings": [
+        {
+          "text": "こと",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "優しい"
+      ]
+    },
+    {
+      "id": "kanji:693f",
+      "display": "椿",
+      "variantGroup": "char:693f",
+      "readings": [
+        {
+          "text": "つばき",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:67ca",
+      "display": "柊",
+      "variantGroup": "char:67ca",
+      "readings": [
+        {
+          "text": "ひいらぎ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "しゅう",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "冷たい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:69d0",
+      "display": "槐",
+      "variantGroup": "char:69d0",
+      "readings": [
+        {
+          "text": "えんじゅ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:698a",
+      "display": "榊",
+      "variantGroup": "char:698a",
+      "readings": [
+        {
+          "text": "さかき",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:9d07",
+      "display": "鴇",
+      "variantGroup": "char:9d07",
+      "readings": [
+        {
+          "text": "とき",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:9d7a",
+      "display": "鵺",
+      "variantGroup": "char:9d7a",
+      "readings": [
+        {
+          "text": "ぬえ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:86df",
+      "display": "蛟",
+      "variantGroup": "char:86df",
+      "readings": [
+        {
+          "text": "みずち",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的",
+        "闇がある"
+      ]
+    },
+    {
+      "id": "kanji:9cf3",
+      "display": "鳳",
+      "variantGroup": "char:9cf3",
+      "readings": [
+        {
+          "text": "おおとり",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "ほう",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:9e92",
+      "display": "麒",
+      "variantGroup": "char:9e92",
+      "readings": [
+        {
+          "text": "き",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的",
+        "高貴"
+      ]
+    },
+    {
+      "id": "kanji:9e9f",
+      "display": "麟",
+      "variantGroup": "char:9e9f",
+      "readings": [
+        {
+          "text": "りん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的",
+        "高貴"
+      ]
+    },
+    {
+      "id": "kanji:9354",
+      "display": "鍔",
+      "variantGroup": "char:9354",
+      "readings": [
+        {
+          "text": "つば",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "真面目"
+      ]
+    },
+    {
+      "id": "kanji:92d2",
+      "display": "鋒",
+      "variantGroup": "char:92d2",
+      "readings": [
+        {
+          "text": "ほこ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "明るい"
+      ]
+    },
+    {
+      "id": "kanji:71be",
+      "display": "熾",
+      "variantGroup": "char:71be",
+      "readings": [
+        {
+          "text": "し",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "明るい"
+      ]
+    },
+    {
+      "id": "kanji:71fc",
+      "display": "燼",
+      "variantGroup": "char:71fc",
+      "readings": [
+        {
+          "text": "じん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "儚い"
+      ]
+    },
+    {
+      "id": "kanji:5dd6",
+      "display": "巖",
+      "variantGroup": "char:5dd6",
+      "readings": [
+        {
+          "text": "いわお",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "真面目",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:5dbd",
+      "display": "嶽",
+      "variantGroup": "char:5dbd",
+      "readings": [
+        {
+          "text": "たけ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "真面目",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:6f23",
+      "display": "漣",
+      "variantGroup": "char:6f23",
+      "readings": [
+        {
+          "text": "れん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        },
+        {
+          "text": "さざなみ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "儚い",
+        "優しい"
+      ]
+    },
+    {
+      "id": "kanji:6a12",
+      "display": "樒",
+      "variantGroup": "char:6a12",
+      "readings": [
+        {
+          "text": "しきみ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:8af1",
+      "display": "諱",
+      "variantGroup": "char:8af1",
+      "readings": [
+        {
+          "text": "いみな",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的",
+        "闇がある"
+      ]
+    },
+    {
+      "id": "kanji:798a",
+      "display": "禊",
+      "variantGroup": "char:798a",
+      "readings": [
+        {
+          "text": "みそぎ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:7940",
+      "display": "祀",
+      "variantGroup": "char:7940",
+      "readings": [
+        {
+          "text": "まつり",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:7687",
+      "display": "皇",
+      "variantGroup": "char:7687",
+      "readings": [
+        {
+          "text": "すめらぎ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "高貴",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:9d6c",
+      "display": "鵬",
+      "variantGroup": "char:9d6c",
+      "readings": [
+        {
+          "text": "ほう",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的",
+        "明るい"
+      ]
+    },
+    {
+      "id": "kanji:8c98",
+      "display": "貘",
+      "variantGroup": "char:8c98",
+      "readings": [
+        {
+          "text": "ばく",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "神秘的",
+        "闇がある"
+      ]
+    },
+    {
+      "id": "kanji:51a5",
+      "display": "冥",
+      "variantGroup": "char:51a5",
+      "readings": [
+        {
+          "text": "めい",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:660f",
+      "display": "昏",
+      "variantGroup": "char:660f",
+      "readings": [
+        {
+          "text": "こん",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "闇がある",
+        "儚い"
+      ]
+    },
+    {
+      "id": "kanji:9744",
+      "display": "靄",
+      "variantGroup": "char:9744",
+      "readings": [
+        {
+          "text": "もや",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "儚い",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:685c",
+      "display": "桜",
+      "variantGroup": "sakura",
+      "readings": [
+        {
+          "text": "さくら",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "優しい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:6afb",
+      "display": "櫻",
+      "variantGroup": "sakura",
+      "readings": [
+        {
+          "text": "さくら",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "優しい",
+        "神秘的"
+      ]
+    },
+    {
+      "id": "kanji:9244",
+      "display": "鉄",
+      "variantGroup": "tetsu",
+      "readings": [
+        {
+          "text": "てつ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "真面目",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:9435",
+      "display": "鐵",
+      "variantGroup": "tetsu",
+      "readings": [
+        {
+          "text": "てつ",
+          "kind": "dictionary",
+          "sources": [
+            "unihan18"
+          ]
+        }
+      ],
+      "moodTags": [
+        "真面目",
+        "冷たい"
+      ]
+    },
+    {
+      "id": "kanji:6c38",
+      "display": "永",
+      "variantGroup": "char:6c38",
+      "readings": [
+        {
+          "text": "とわ",
+          "kind": "creative",
+          "sources": [
+            "editorial"
+          ]
+        }
+      ],
+      "moodTags": [
+        "儚い",
+        "神秘的"
+      ]
+    }
+  ],
+  "myth": [
+    {
+      "id": "greek:zeus",
+      "canonicalEntityId": "greek:zeus",
+      "display": "ゼウス",
+      "sourceSpelling": "Zeus",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "天空と雷に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:hera",
+      "canonicalEntityId": "greek:hera",
+      "display": "ヘラ",
+      "sourceSpelling": "Hera",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "婚姻に関わる女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:athena",
+      "canonicalEntityId": "greek:athena",
+      "display": "アテナ",
+      "sourceSpelling": "Athena",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "知恵と戦略に関わる女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:ares",
+      "canonicalEntityId": "greek:ares",
+      "display": "アレス",
+      "sourceSpelling": "Ares",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "戦に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:aphrodite",
+      "canonicalEntityId": "greek:aphrodite",
+      "display": "アフロディテ",
+      "sourceSpelling": "Aphrodite",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "愛と美に関わる女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:hermes",
+      "canonicalEntityId": "greek:hermes",
+      "display": "ヘルメス",
+      "sourceSpelling": "Hermes",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "伝令に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:poseidon",
+      "canonicalEntityId": "greek:poseidon",
+      "display": "ポセイドン",
+      "sourceSpelling": "Poseidon",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "海に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:apollo",
+      "canonicalEntityId": "greek:apollo",
+      "display": "アポロン",
+      "sourceSpelling": "Apollo",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "予言や音楽に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:artemis",
+      "canonicalEntityId": "greek:artemis",
+      "display": "アルテミス",
+      "sourceSpelling": "Artemis",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "狩猟に関わる女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:demeter",
+      "canonicalEntityId": "greek:demeter",
+      "display": "デメテル",
+      "sourceSpelling": "Demeter",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "穀物に関わる女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:hades",
+      "canonicalEntityId": "greek:hades",
+      "display": "ハデス",
+      "sourceSpelling": "Hades",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "冥界に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:nyx",
+      "canonicalEntityId": "greek:nyx",
+      "display": "ニュクス",
+      "sourceSpelling": "Nyx",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "夜を体現する女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "roman:jupiter",
+      "canonicalEntityId": "roman:jupiter",
+      "display": "ユピテル",
+      "sourceSpelling": "Jupiter",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "roman",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "天空に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "roman:juno",
+      "canonicalEntityId": "roman:juno",
+      "display": "ユノ",
+      "sourceSpelling": "Juno",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "roman",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "婚姻に関わる女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "roman:minerva",
+      "canonicalEntityId": "roman:minerva",
+      "display": "ミネルウァ",
+      "sourceSpelling": "Minerva",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "roman",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "知恵に関わる女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "roman:mars",
+      "canonicalEntityId": "roman:mars",
+      "display": "マルス",
+      "sourceSpelling": "Mars",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "roman",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "戦に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "roman:venus",
+      "canonicalEntityId": "roman:venus",
+      "display": "ウェヌス",
+      "sourceSpelling": "Venus",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "roman",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "愛に関わる女神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "roman:mercury",
+      "canonicalEntityId": "roman:mercury",
+      "display": "メルクリウス",
+      "sourceSpelling": "Mercury",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "roman",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "伝令に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "roman:neptune",
+      "canonicalEntityId": "roman:neptune",
+      "display": "ネプトゥヌス",
+      "sourceSpelling": "Neptune",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "roman",
+          "sources": [
+            "theoi-pantheon"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "海に関わる神",
+      "aliases": [],
+      "sources": [
+        "theoi-pantheon"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "norse:odin",
+      "canonicalEntityId": "norse:odin",
+      "display": "オーディン",
+      "sourceSpelling": "Odin",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "norse",
+          "sources": [
+            "norse-museum"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "知恵と戦に関わる神",
+      "aliases": [],
+      "sources": [
+        "norse-museum"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "norse:thor",
+      "canonicalEntityId": "norse:thor",
+      "display": "トール",
+      "sourceSpelling": "Thor",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "norse",
+          "sources": [
+            "norse-museum"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "雷に関わる神",
+      "aliases": [],
+      "sources": [
+        "norse-museum"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "norse:tyr",
+      "canonicalEntityId": "norse:tyr",
+      "display": "テュール",
+      "sourceSpelling": "Tyr",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "norse",
+          "sources": [
+            "norse-museum"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "戦に関わる神",
+      "aliases": [],
+      "sources": [
+        "norse-museum"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "norse:frigg",
+      "canonicalEntityId": "norse:frigg",
+      "display": "フリッグ",
+      "sourceSpelling": "Frigg",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "norse",
+          "sources": [
+            "norse-museum"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "アース神族の女神",
+      "aliases": [],
+      "sources": [
+        "norse-museum"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "norse:freyja",
+      "canonicalEntityId": "norse:freyja",
+      "display": "フレイヤ",
+      "sourceSpelling": "Freya",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "norse",
+          "sources": [
+            "norse-museum"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "ヴァン神族の女神",
+      "aliases": [],
+      "sources": [
+        "norse-museum"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "norse:freyr",
+      "canonicalEntityId": "norse:freyr",
+      "display": "フレイ",
+      "sourceSpelling": "Frey",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "norse",
+          "sources": [
+            "norse-museum"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "豊穣に関わる神",
+      "aliases": [],
+      "sources": [
+        "norse-museum"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "norse:njord",
+      "canonicalEntityId": "norse:njord",
+      "display": "ニョルズ",
+      "sourceSpelling": "Njord",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "norse",
+          "sources": [
+            "norse-museum"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "海に関わる神",
+      "aliases": [],
+      "sources": [
+        "norse-museum"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "norse:baldr",
+      "canonicalEntityId": "norse:baldr",
+      "display": "バルドル",
+      "sourceSpelling": "Balder",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "norse",
+          "sources": [
+            "norse-museum"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "光に関わる神",
+      "aliases": [],
+      "sources": [
+        "norse-museum"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "egypt:osiris",
+      "canonicalEntityId": "egypt:osiris",
+      "display": "オシリス",
+      "sourceSpelling": "Osiris",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "egypt",
+          "sources": [
+            "british-egypt"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "冥界に関わる神",
+      "aliases": [],
+      "sources": [
+        "british-egypt"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "egypt:isis",
+      "canonicalEntityId": "egypt:isis",
+      "display": "イシス",
+      "sourceSpelling": "Isis",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "egypt",
+          "sources": [
+            "british-egypt"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "王権や魔術に関わる女神",
+      "aliases": [],
+      "sources": [
+        "british-egypt"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "egypt:horus",
+      "canonicalEntityId": "egypt:horus",
+      "display": "ホルス",
+      "sourceSpelling": "Horus",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "egypt",
+          "sources": [
+            "british-egypt"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "天空と王権に関わる神",
+      "aliases": [],
+      "sources": [
+        "british-egypt"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "egypt:anubis",
+      "canonicalEntityId": "egypt:anubis",
+      "display": "アヌビス",
+      "sourceSpelling": "Anubis",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "egypt",
+          "sources": [
+            "british-egypt"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "葬送に関わる神",
+      "aliases": [],
+      "sources": [
+        "british-egypt"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "egypt:thoth",
+      "canonicalEntityId": "egypt:thoth",
+      "display": "トト",
+      "sourceSpelling": "Thoth",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "egypt",
+          "sources": [
+            "british-egypt"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "知恵と書記に関わる神",
+      "aliases": [],
+      "sources": [
+        "british-egypt"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "egypt:nephthys",
+      "canonicalEntityId": "egypt:nephthys",
+      "display": "ネフティス",
+      "sourceSpelling": "Nephthys",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "egypt",
+          "sources": [
+            "british-egypt"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "葬送に関わる女神",
+      "aliases": [],
+      "sources": [
+        "british-egypt"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "egypt:hathor",
+      "canonicalEntityId": "egypt:hathor",
+      "display": "ハトホル",
+      "sourceSpelling": "Hathor",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "egypt",
+          "sources": [
+            "met-hathor"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "音楽に関わる女神",
+      "aliases": [],
+      "sources": [
+        "met-hathor"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "egypt:bastet",
+      "canonicalEntityId": "egypt:bastet",
+      "display": "バステト",
+      "sourceSpelling": "Bastet",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "egypt",
+          "sources": [
+            "met-bastet"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "猫の姿でも表される女神",
+      "aliases": [],
+      "sources": [
+        "met-bastet"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "japan:amaterasu",
+      "canonicalEntityId": "japan:amaterasu",
+      "display": "アマテラス",
+      "sourceSpelling": "Amaterasu",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "japan",
+          "sources": [
+            "kokugakuin-amaterasu"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "太陽に関わる神",
+      "aliases": [
+        {
+          "display": "天照大神",
+          "sourceSpelling": "Amaterasu Ōmikami",
+          "reading": "あまてらすおおみかみ",
+          "sources": [
+            "kokugakuin-amaterasu"
+          ]
+        }
+      ],
+      "sources": [
+        "kokugakuin-amaterasu"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "japan:susanoo",
+      "canonicalEntityId": "japan:susanoo",
+      "display": "スサノオ",
+      "sourceSpelling": "Susanoo",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "japan",
+          "sources": [
+            "kokugakuin-susanoo"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "海や嵐に関わる神",
+      "aliases": [
+        {
+          "display": "須佐之男命",
+          "sourceSpelling": "Susanoo no Mikoto",
+          "reading": "すさのおのみこと",
+          "sources": [
+            "kokugakuin-susanoo"
+          ]
+        }
+      ],
+      "sources": [
+        "kokugakuin-susanoo"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "japan:tsukuyomi",
+      "canonicalEntityId": "japan:tsukuyomi",
+      "display": "ツクヨミ",
+      "sourceSpelling": "Tsukuyomi",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "japan",
+          "sources": [
+            "kokugakuin-susanoo"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "月に関わる神",
+      "aliases": [],
+      "sources": [
+        "kokugakuin-susanoo"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "japan:izanagi",
+      "canonicalEntityId": "japan:izanagi",
+      "display": "イザナギ",
+      "sourceSpelling": "Izanagi",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "japan",
+          "sources": [
+            "kokugakuin-susanoo"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "国生みに関わる神",
+      "aliases": [],
+      "sources": [
+        "kokugakuin-susanoo"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "japan:izanami",
+      "canonicalEntityId": "japan:izanami",
+      "display": "イザナミ",
+      "sourceSpelling": "Izanami",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "japan",
+          "sources": [
+            "kokugakuin-susanoo"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "国生みに関わる神",
+      "aliases": [],
+      "sources": [
+        "kokugakuin-susanoo"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "japan:ookuninushi",
+      "canonicalEntityId": "japan:ookuninushi",
+      "display": "オオクニヌシ",
+      "sourceSpelling": "Ōkuninushi",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "japan",
+          "sources": [
+            "kokugakuin-ookuninushi"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "国づくりに関わる神",
+      "aliases": [
+        {
+          "display": "大国主",
+          "sourceSpelling": "Ōkuninushi",
+          "reading": "おおくにぬし",
+          "sources": [
+            "kokugakuin-ookuninushi"
+          ]
+        }
+      ],
+      "sources": [
+        "kokugakuin-ookuninushi"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "mesopotamia:anu",
+      "canonicalEntityId": "mesopotamia:anu",
+      "display": "アヌ",
+      "sourceSpelling": "Anu",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "mesopotamia",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "天空に関わる神",
+      "aliases": [
+        {
+          "display": "アン",
+          "sourceSpelling": "An",
+          "reading": "アン",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "sources": [
+        "oracc"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "mesopotamia:enlil",
+      "canonicalEntityId": "mesopotamia:enlil",
+      "display": "エンリル",
+      "sourceSpelling": "Enlil",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "mesopotamia",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "風と王権に関わる神",
+      "aliases": [],
+      "sources": [
+        "oracc"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "mesopotamia:enki",
+      "canonicalEntityId": "mesopotamia:enki",
+      "display": "エンキ",
+      "sourceSpelling": "Enki",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "mesopotamia",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "知恵と淡水に関わる神",
+      "aliases": [
+        {
+          "display": "エア",
+          "sourceSpelling": "Ea",
+          "reading": "エア",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "sources": [
+        "oracc"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "mesopotamia:inanna",
+      "canonicalEntityId": "mesopotamia:inanna",
+      "display": "イナンナ",
+      "sourceSpelling": "Inana",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "mesopotamia",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "愛と戦に関わる女神",
+      "aliases": [
+        {
+          "display": "イシュタル",
+          "sourceSpelling": "Ištar",
+          "reading": "イシュタル",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "sources": [
+        "oracc"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "mesopotamia:marduk",
+      "canonicalEntityId": "mesopotamia:marduk",
+      "display": "マルドゥク",
+      "sourceSpelling": "Marduk",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "mesopotamia",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "バビロンの主神",
+      "aliases": [],
+      "sources": [
+        "oracc"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "mesopotamia:nanna",
+      "canonicalEntityId": "mesopotamia:nanna",
+      "display": "ナンナ",
+      "sourceSpelling": "Nanna",
+      "entityType": "deity",
+      "traditions": [
+        {
+          "id": "mesopotamia",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "月に関わる神",
+      "aliases": [
+        {
+          "display": "シン",
+          "sourceSpelling": "Sîn",
+          "reading": "シン",
+          "sources": [
+            "oracc"
+          ]
+        }
+      ],
+      "sources": [
+        "oracc"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:perseus",
+      "canonicalEntityId": "greek:perseus",
+      "display": "ペルセウス",
+      "sourceSpelling": "Perseus",
+      "entityType": "hero",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-heroes"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "メドゥーサ討伐で知られる英雄",
+      "aliases": [],
+      "sources": [
+        "theoi-heroes"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:heracles",
+      "canonicalEntityId": "greek:heracles",
+      "display": "ヘラクレス",
+      "sourceSpelling": "Heracles",
+      "entityType": "hero",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-heroes"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "十二の功業で知られる英雄",
+      "aliases": [],
+      "sources": [
+        "theoi-heroes"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:bellerophon",
+      "canonicalEntityId": "greek:bellerophon",
+      "display": "ベレロポン",
+      "sourceSpelling": "Bellerophon",
+      "entityType": "hero",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-heroes"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "ペガソスとともに語られる英雄",
+      "aliases": [],
+      "sources": [
+        "theoi-heroes"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:odysseus",
+      "canonicalEntityId": "greek:odysseus",
+      "display": "オデュッセウス",
+      "sourceSpelling": "Odysseus",
+      "entityType": "hero",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-heroes"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "帰還の物語で知られる英雄",
+      "aliases": [],
+      "sources": [
+        "theoi-heroes"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "arthur:arthur",
+      "canonicalEntityId": "arthur:arthur",
+      "display": "アーサー",
+      "sourceSpelling": "Arthur",
+      "entityType": "hero",
+      "traditions": [
+        {
+          "id": "arthur",
+          "sources": [
+            "british-arthur"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "ブリテンの伝説上の王",
+      "aliases": [],
+      "sources": [
+        "british-arthur"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:cerberus",
+      "canonicalEntityId": "greek:cerberus",
+      "display": "ケルベロス",
+      "sourceSpelling": "Cerberus",
+      "entityType": "namedCreature",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-bestiary"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "冥界の門を守る犬",
+      "aliases": [],
+      "sources": [
+        "theoi-bestiary"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:pegasus",
+      "canonicalEntityId": "greek:pegasus",
+      "display": "ペガソス",
+      "sourceSpelling": "Pegasus",
+      "entityType": "namedCreature",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-bestiary"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "翼を持つ馬",
+      "aliases": [],
+      "sources": [
+        "theoi-bestiary"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:medusa",
+      "canonicalEntityId": "greek:medusa",
+      "display": "メドゥーサ",
+      "sourceSpelling": "Medusa",
+      "entityType": "namedCreature",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-bestiary"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "ゴルゴンの一人",
+      "aliases": [],
+      "sources": [
+        "theoi-bestiary"
+      ],
+      "moodTags": []
+    },
+    {
+      "id": "greek:orthros",
+      "canonicalEntityId": "greek:orthros",
+      "display": "オルトロス",
+      "sourceSpelling": "Orthros",
+      "entityType": "namedCreature",
+      "traditions": [
+        {
+          "id": "greek",
+          "sources": [
+            "theoi-bestiary"
+          ]
+        }
+      ],
+      "originType": "original",
+      "description": "双頭の犬",
+      "aliases": [],
+      "sources": [
+        "theoi-bestiary"
+      ],
+      "moodTags": []
+    }
+  ],
+  "candidateLedger": [
+    {
+      "candidate": "朱／すざく",
+      "decision": "hold",
+      "reason": "字の音訓と混同するため。朱雀の省略読みは確認できない",
+      "sources": [
+        "kanjipedia"
+      ]
+    },
+    {
+      "candidate": "蘇／すい",
+      "decision": "hold",
+      "reason": "辞書で確認できる音訓と一致しない",
+      "sources": [
+        "kanjipedia"
+      ]
+    },
+    {
+      "candidate": "紫／ゆかり",
+      "decision": "hold",
+      "reason": "今回の一次資料では読みを確認できない",
+      "sources": [
+        "unihan18"
+      ]
+    },
+    {
+      "candidate": "隼／はやと",
+      "decision": "hold",
+      "reason": "今回の一次資料では読みを確認できない",
+      "sources": [
+        "unihan18"
+      ]
+    },
+    {
+      "candidate": "鏑／かぶら",
+      "decision": "hold",
+      "reason": "今回の一次資料では読みを確認できない",
+      "sources": [
+        "unihan18"
+      ]
+    },
+    {
+      "candidate": "フェニックス",
+      "decision": "exclude",
+      "reason": "鳥の種別名として用いられ、個体の固有名と確認できない",
+      "sources": [
+        "theoi-bestiary"
+      ]
+    },
+    {
+      "candidate": "オリュンポス",
+      "decision": "exclude",
+      "reason": "地名であり神格の固有名ではない",
+      "sources": [
+        "theoi-pantheon"
+      ]
+    },
+    {
+      "candidate": "ゼウス／ユピテルの同一ID化",
+      "decision": "exclude",
+      "reason": "対応する神格として記録し、文化をまたいで同一個体には統合しない",
+      "sources": [
+        "theoi-pantheon"
+      ]
+    }
+  ]
+}

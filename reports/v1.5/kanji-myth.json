@@ -1,0 +1,106 @@
+{
+  "version": "1.5",
+  "passed": true,
+  "counts": {
+    "kanjiDisplays": 71,
+    "kanjiReadings": 84,
+    "kanjiGroups": 68,
+    "standardGroups": 67,
+    "creativeReadings": 3,
+    "mythEntities": 56,
+    "mythAliases": 7,
+    "traditionMemberships": 56,
+    "byType": {
+      "deity": 47,
+      "hero": 5,
+      "namedCreature": 4,
+      "namedSpirit": 0
+    },
+    "byTradition": {
+      "greek": 20,
+      "roman": 7,
+      "norse": 8,
+      "egypt": 8,
+      "japan": 6,
+      "mesopotamia": 6,
+      "arthur": 1
+    },
+    "reusedKanjiDisplays": 25,
+    "newKanjiDisplays": 46,
+    "reusedKanji": [
+      "朔",
+      "凪",
+      "蒼",
+      "蓮",
+      "玄",
+      "玲",
+      "凛",
+      "律",
+      "響",
+      "澪",
+      "翠",
+      "碧",
+      "藍",
+      "紫",
+      "暁",
+      "宵",
+      "遥",
+      "要",
+      "朧",
+      "燈",
+      "紬",
+      "椿",
+      "柊",
+      "槐",
+      "榊"
+    ],
+    "reusedMythEntities": 1,
+    "newMythEntities": 55,
+    "reusedMyth": [
+      "arthur:arthur"
+    ],
+    "held": 5,
+    "excluded": 3
+  },
+  "distribution": {
+    "variantGroups": {
+      "trials": 60000,
+      "expected": 895.5223880597015,
+      "rin": 902,
+      "sakura": 934,
+      "tetsu": 876
+    },
+    "myth": {
+      "trials": 30000,
+      "types": {
+        "hero": 9926,
+        "deity": 10046,
+        "namedCreature": 10028
+      },
+      "traditions": {
+        "egypt": 1688,
+        "mesopotamia": 1670,
+        "norse": 1683,
+        "japan": 1640,
+        "greek": 1718,
+        "roman": 1647
+      },
+      "mesopotamia": {
+        "mesopotamia:enki": 4119,
+        "mesopotamia:enlil": 4094,
+        "mesopotamia:marduk": 3981,
+        "mesopotamia:nanna": 3986,
+        "mesopotamia:inanna": 3930,
+        "mesopotamia:anu": 3890
+      }
+    }
+  },
+  "checks": [
+    "records, one-Han names, provenance and separate entity identity",
+    "kanji reading mode and variant group selection",
+    "creative reading and Japanese myth alias retain explicit reading labels",
+    "myth categories and aliases do not change selection tickets",
+    "five unique groups or entities, all modes and independent world settings",
+    "candidate shortage and mid-batch failure preserve displayed results and history"
+  ]
+}

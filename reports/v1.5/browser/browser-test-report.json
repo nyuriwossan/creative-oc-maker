@@ -1,0 +1,15 @@
+{
+  "version": "1.5",
+  "passed": true,
+  "checks": [
+    "keyboard controls, standard one-kanji five, name clipboard",
+    "creative-reading control and saved metadata survive reload",
+    "myth auto five, provenance, detail clipboard and 360px layout",
+    "tradition select focus, one available hero, transactional five-person error",
+    "reset and manual setting-only compatibility"
+  ],
+  "pageErrors": [],
+  "screenshots": [
+    "mythology-360px.png"
+  ]
+}

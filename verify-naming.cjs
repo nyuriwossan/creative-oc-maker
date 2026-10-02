@@ -69,7 +69,7 @@ check('modern records are deduplicated by exact spelling and have per-culture so
  assert.ok(modern.some(n=>n.original==='Müller'));assert.ok(modern.some(n=>n.original==='Lefèvre'));assert.ok(modern.some(n=>n.original==='García'));
 });
 check('all systems / cultures / themes / genders generate five distinct names',()=>{
- const scenarios=Object.keys(a.namingSystems).filter(k=>!['auto','fantasy','modernWestern'].includes(k)).map(system=>({system}));
+ const scenarios=Object.keys(a.namingSystems).filter(k=>!['auto','fantasy','modernWestern','kanjiSingle','mythology'].includes(k)).map(system=>({system}));
  for(const culture of Object.keys(a.namingCultures))scenarios.push({system:'modernWestern',culture});
  for(const motifs of [[],['german'],['gemstone'],['constellation'],['german','gemstone','constellation']])scenarios.push({system:'fantasy',motifs});
  for(const s of scenarios)for(const gender of ['male','female','neutral','unspecified'])for(const mode of ['nameOnly','full']){

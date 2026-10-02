@@ -66,7 +66,7 @@ const report={passed:false,checks:[],consoleErrors:[],screenshots:[]};
   await page.locator('#results [data-act="save"]').click();await page.reload();
   const restored=await page.evaluate(name=>JSON.parse(localStorage.getItem('ocMakerSavedV1')).find(n=>n.name===name),saved.name);
   assert.deepEqual(restored.nameParts,saved.parts);report.checks.push('v1.4 editorial origin renders at 390px and metadata survives save/reload');
-  assert.equal(await page.title(),'創作OCメーカー v1.4');
+  assert.equal(await page.title(),'創作OCメーカー v1.5');
   assert.equal(report.consoleErrors.length,0);report.passed=true;
  }finally{if(browser)await browser.close();server.close();fs.writeFileSync(path.join(outdir,'browser-test-report.json'),JSON.stringify(report,null,2));}
  console.log(JSON.stringify(report));
