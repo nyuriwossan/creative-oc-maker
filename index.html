@@ -3673,10 +3673,13 @@ function generateFullCharacter(opts={}){
 /* ============================================================
    テキスト整形
    ============================================================ */
+function hasNameValue(value){ return value != null && String(value).trim() !== ""; }
 function buildNameText(c){
-  let t = "名前：" + (c.name||"（名前なし）") + "\n読み：" + (c.reading||"—") + "\n英字表記：" + (c.roman||"—");
-  if(c.codename) t += "\nコードネーム：" + c.codename;
-  return t;
+  const lines=["名前：" + (hasNameValue(c.name)?c.name:"（名前なし）")];
+  if(hasNameValue(c.reading))lines.push("読み：" + c.reading);
+  if(hasNameValue(c.roman))lines.push("英字表記：" + c.roman);
+  if(hasNameValue(c.codename))lines.push("コードネーム：" + c.codename);
+  return lines.join("\n");
 }
 
 function buildDetailTextBase(c){
@@ -3688,8 +3691,10 @@ function buildDetailTextBase(c){
     lines.push("【名前】");
     if(c.manualName){ lines.push("名前：" + c.name); }
     else {
-      lines.push("名前：" + c.name, "読み：" + c.reading, "英字表記：" + c.roman);
-      if(c.codename) lines.push("コードネーム：" + c.codename);
+      lines.push("名前：" + c.name);
+      if(hasNameValue(c.reading))lines.push("読み：" + c.reading);
+      if(hasNameValue(c.roman))lines.push("英字表記：" + c.roman);
+      if(hasNameValue(c.codename))lines.push("コードネーム：" + c.codename);
     }
     lines.push("");
   }
@@ -3890,6 +3895,15 @@ function toggleChip(condId, key){
 function cardRow(dt, dd){
   return '<div class="row"><dt>' + esc(dt) + '</dt><dd>' + esc(dd) + '</dd></div>';
 }
+function renderNameReading(c){
+  return hasNameValue(c.reading)?'<span class="rd">' + esc(c.reading) + '</span>':"";
+}
+function renderRomanLine(c){
+  const items=[];
+  if(hasNameValue(c.roman))items.push(esc(c.roman));
+  if(hasNameValue(c.codename))items.push("CODE: " + esc(c.codename));
+  return items.length?'<p class="roman">' + items.join("　") + '</p>':"";
+}
 
 function renderResults(results){
   const box = document.getElementById("results");
@@ -3899,16 +3913,16 @@ function renderResults(results){
     let inner = '<span class="world-tag">' + esc(c.worldLabel) + '</span>';
 
     if(c.mode === "nameOnly"){
-      inner += '<p class="name-line"><span class="nm">' + esc(c.name) + '</span><span class="rd">' + esc(c.reading) + '</span></p>' +
-        '<p class="roman">' + esc(c.roman) + (c.codename ? "　CODE: " + esc(c.codename) : "") + '</p><dl>' +
+      inner += '<p class="name-line"><span class="nm">' + esc(c.name) + '</span>' + renderNameReading(c) + '</p>' +
+        renderRomanLine(c) + '<dl>' +
         cardRow("名前の印象", c.nameImpression) +
         cardRow("向いている像", c.suitedFor) + '</dl>';
     } else {
       inner += '<p class="catch">' + esc(c.catch) + '</p>';
       if(c.name){
         inner += '<p class="name-line"><span class="nm">' + esc(c.name) + '</span>' +
-          (c.manualName ? "" : '<span class="rd">' + esc(c.reading) + '</span>') + '</p>' +
-          (c.manualName ? "" : '<p class="roman">' + esc(c.roman) + (c.codename ? "　CODE: " + esc(c.codename) : "") + '</p>');
+          (c.manualName ? "" : renderNameReading(c)) + '</p>' +
+          (c.manualName ? "" : renderRomanLine(c));
       }
       inner += '<dl>' +
         cardRow("年齢", c.age) +
@@ -3960,11 +3974,16 @@ function buildDetailText(c){
   if(!c.naming)return base;
   const part=c.nameParts?.single;
   const sourceLine=part?.sources?.map(id=>nameSources[id]).filter(s=>s?.url).map(s=>s.title+" "+s.url).join(" ／ ");
-  const provenance=part?.originType==="dictionary_reading"||part?.originType==="creative_reading"
-    ?"\n一字名："+part.display+"（"+part.reading+"）／"+(part.readingKind==="creative"?"創作読み":"辞書で確認した読み")
-    :part?.originType==="myth_original"
-      ?"\n伝承："+(mythTraditions[part.tradition]||part.tradition)+"／"+(mythEntityTypes[part.entityType]||part.entityType)+"\n元の綴り："+(part.original||"—")+"\n由来："+part.description
-      :"";
+  let provenance="";
+  if(part?.originType==="dictionary_reading"||part?.originType==="creative_reading"){
+    const reading=hasNameValue(part.reading)?"（"+part.reading+"）":"";
+    provenance="\n一字名："+part.display+reading+"／"+(part.readingKind==="creative"?"創作読み":"辞書で確認した読み");
+  }else if(part?.originType==="myth_original"){
+    const tradition=[mythTraditions[part.tradition]||part.tradition,mythEntityTypes[part.entityType]||part.entityType].filter(hasNameValue);
+    if(tradition.length)provenance+="\n伝承："+tradition.join("／");
+    if(hasNameValue(part.original))provenance+="\n元の綴り："+part.original;
+    if(hasNameValue(part.description))provenance+="\n由来："+part.description;
+  }
   return base+"\n名前の系統："+namingSummary(c)+provenance+(sourceLine?"\n出典："+sourceLine:"")+(c.naming.notice?"\n"+c.naming.notice:"");
 }
 
@@ -4957,9 +4976,15 @@ function renderNameInfo(c){
     const role={given:"名",family:"姓・家名",single:"単名",codename:"コードネーム"}[p.role]||"名前";
     const kind={attested_name:"実在人名の用例",source_word:"原語を創作名に採用",coined_name:"素材からの創作",editorial_name:"創作向けに選定",legacy_unverified:"従来の創作候補（語源は未確認）",dictionary_reading:"字の読みを確認・創作名に採用",creative_reading:"創作読み（辞書の読みではない）",myth_original:"伝承に登場する固有名"}[p.originType];
     const sources=(p.sources||[]).map(id=>nameSources[id]).filter(s=>s?.url);
-    return '<p><strong>'+esc(role+"："+p.original)+'</strong> — '+esc(kind||"")+
-      (p.originType==="dictionary_reading"||p.originType==="creative_reading"?'<br>読み：'+esc(p.reading)+'／字体群：'+esc(p.variantGroup):"")+
-      (p.originType==="myth_original"?'<br>伝承：'+esc(mythTraditions[p.tradition]||p.tradition)+'／'+esc(mythEntityTypes[p.entityType]||p.entityType)+'<br>'+esc(p.description):"")+
+    const title=esc(role)+(hasNameValue(p.original)?"："+esc(p.original):"");
+    const reading=p.originType==="dictionary_reading"||p.originType==="creative_reading"
+      ?[hasNameValue(p.reading)?"読み："+esc(p.reading):null,hasNameValue(p.variantGroup)?"字体群："+esc(p.variantGroup):null].filter(Boolean).join("／"):"";
+    const myth=p.originType==="myth_original"
+      ?[mythTraditions[p.tradition]||p.tradition,mythEntityTypes[p.entityType]||p.entityType].filter(hasNameValue).map(esc).join("／"):"";
+    return '<p><strong>'+title+'</strong> — '+esc(kind||"")+
+      (reading?'<br>'+reading:"")+
+      (myth?'<br>伝承：'+myth:"")+
+      (p.originType==="myth_original"&&hasNameValue(p.description)?'<br>'+esc(p.description):"")+
       (p.meaningJa?'<br>'+(p.editorialNote?'素材語の意味・着想：':'原語の意味：')+esc(p.meaningJa):"")+
       (p.editorialNote?'<br>編集上の着想：'+esc(p.editorialNote):"")+
       (p.classification?' / '+esc(p.classification):"")+
