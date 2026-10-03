@@ -1,0 +1,3539 @@
+{
+  "version": "1.6",
+  "checkedAt": "2026-10-03",
+  "fields": {
+    "physics": {
+      "label": "物理・数学",
+      "moodTags": [
+        "知的"
+      ]
+    },
+    "chemistry": {
+      "label": "化学・元素・物質",
+      "moodTags": [
+        "冷たい"
+      ]
+    },
+    "astronomy": {
+      "label": "天文・宇宙",
+      "moodTags": [
+        "神秘的"
+      ]
+    },
+    "earth": {
+      "label": "地学・気象",
+      "moodTags": [
+        "真面目"
+      ]
+    },
+    "life": {
+      "label": "生命科学・人体",
+      "moodTags": [
+        "優しい"
+      ]
+    },
+    "medicine": {
+      "label": "医学・薬学",
+      "moodTags": [
+        "真面目"
+      ]
+    }
+  },
+  "sources": {
+    "cms": {
+      "title": "CERN CMS Experiment Glossary",
+      "url": "https://cms.cern/index.php/content/glossary",
+      "kind": "粒子物理学用語集",
+      "proves": "粒子・測定装置の名称と定義",
+      "checkedAt": "2026-10-03"
+    },
+    "cernAxion": {
+      "title": "CERN CAST experiment",
+      "url": "https://home.cern/science/experiments/cast/",
+      "kind": "研究機関の解説",
+      "proves": "アクシオンが仮説上の粒子であること",
+      "checkedAt": "2026-10-03"
+    },
+    "nasa": {
+      "title": "NASA Universe Glossary",
+      "url": "https://science.nasa.gov/universe/glossary/",
+      "kind": "天文学用語集",
+      "proves": "天体・現象・観測用語の名称と定義",
+      "checkedAt": "2026-10-03"
+    },
+    "nasaSun": {
+      "title": "NASA Sun Facts",
+      "url": "https://science.nasa.gov/sun/facts/",
+      "kind": "研究機関の解説",
+      "proves": "光球と彩層の名称・位置",
+      "checkedAt": "2026-10-03"
+    },
+    "nasaPrism": {
+      "title": "NASA Hubble Spectroscopy",
+      "url": "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-spectroscopy/",
+      "kind": "研究機関の解説",
+      "proves": "プリズムによる分光",
+      "checkedAt": "2026-10-03"
+    },
+    "rsc": {
+      "title": "Royal Society of Chemistry Periodic Table",
+      "baseUrl": "https://periodic-table.rsc.org/element/",
+      "kind": "化学会の元素資料",
+      "proves": "元素名・原子番号",
+      "checkedAt": "2026-10-03"
+    },
+    "usgsVolcano": {
+      "title": "USGS Volcano Hazards Program Glossary",
+      "url": "https://www.usgs.gov/glossary/volcano-hazards-program-glossary",
+      "kind": "地学用語集",
+      "proves": "火山・岩石用語の名称と定義",
+      "checkedAt": "2026-10-03"
+    },
+    "usgsQuake": {
+      "title": "USGS Volcano Watch: horsts, grabens and rift zones",
+      "url": "https://www.usgs.gov/observatories/hvo/news/volcano-watch-origin-big-islands-great-valleys-revealed-hawaiian-chant",
+      "kind": "地質調査所の解説",
+      "proves": "リフト・地溝・地塁の名称と形成",
+      "checkedAt": "2026-10-03"
+    },
+    "usgsWater": {
+      "title": "USGS Water Science Glossary",
+      "url": "https://www.usgs.gov/water-science-school/science/water-science-glossary",
+      "kind": "水文用語集",
+      "proves": "地下水・帯水層の定義",
+      "checkedAt": "2026-10-03"
+    },
+    "nws": {
+      "title": "NOAA National Weather Service Glossary",
+      "baseUrl": "https://forecast.weather.gov/glossary.php?word=",
+      "kind": "気象用語集",
+      "proves": "気象現象の名称と定義",
+      "checkedAt": "2026-10-03"
+    },
+    "nhgri": {
+      "title": "NHGRI Talking Glossary of Genetic Terms",
+      "baseUrl": "https://www.genome.gov/genetics-glossary/",
+      "kind": "公的遺伝学用語集",
+      "proves": "遺伝学用語の名称と定義",
+      "checkedAt": "2026-10-03"
+    },
+    "nci": {
+      "title": "NCI Dictionary of Cancer Terms",
+      "baseUrl": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/",
+      "kind": "公的医学用語集",
+      "proves": "生命科学・医療用語の名称と短い定義",
+      "checkedAt": "2026-10-03"
+    },
+    "seer": {
+      "title": "NCI SEER Training: Nerve Tissue",
+      "url": "https://training.seer.cancer.gov/anatomy/nervous/tissue.html",
+      "kind": "公的解剖学資料",
+      "proves": "軸索と神経細胞の構造",
+      "checkedAt": "2026-10-03"
+    },
+    "nciChemo": {
+      "title": "NCI Chemotherapy to Treat Cancer",
+      "url": "https://www.cancer.gov/about-cancer/treatment/types/chemotherapy",
+      "kind": "公的患者向け資料",
+      "proves": "カテーテルの名称と基本的な形態",
+      "checkedAt": "2026-10-03"
+    },
+    "nciDiagnosis": {
+      "title": "NCI Tests and Procedures Used to Diagnose Cancer",
+      "url": "https://www.cancer.gov/about-cancer/diagnosis-staging/diagnosis",
+      "kind": "公的患者向け資料",
+      "proves": "内視鏡と生検の名称と目的",
+      "checkedAt": "2026-10-03"
+    },
+    "cdcPrion": {
+      "title": "CDC About Prion Diseases",
+      "url": "https://www.cdc.gov/prions/about/index.html",
+      "kind": "公衆衛生機関の解説",
+      "proves": "プリオンと感染性タンパク質",
+      "checkedAt": "2026-10-03"
+    },
+    "cdcCandida": {
+      "title": "CDC Candidiasis Basics",
+      "url": "https://www.cdc.gov/candidiasis/about/index.html",
+      "kind": "公衆衛生機関の解説",
+      "proves": "Candida属の酵母と感染症",
+      "checkedAt": "2026-10-03"
+    },
+    "pubchem": {
+      "title": "NIH PubChem Compound",
+      "baseUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/",
+      "kind": "公的化学物質資料",
+      "proves": "物質の名称・分類と基本的な作用",
+      "checkedAt": "2026-10-03"
+    }
+  },
+  "terms": [
+    {
+      "id": "science:quark",
+      "canonicalTermId": "science:quark",
+      "kana": "クォーク",
+      "original": "Quark",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "強い相互作用を受ける素粒子",
+      "kind": "素粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:lepton",
+      "canonicalTermId": "science:lepton",
+      "kana": "レプトン",
+      "original": "Lepton",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "強い相互作用を受けない素粒子の仲間",
+      "kind": "素粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:hadron",
+      "canonicalTermId": "science:hadron",
+      "kana": "ハドロン",
+      "original": "Hadron",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "クォークなどからなる複合粒子",
+      "kind": "複合粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:baryon",
+      "canonicalTermId": "science:baryon",
+      "kana": "バリオン",
+      "original": "Baryon",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "通常3個のクォークからなるハドロン",
+      "kind": "複合粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:meson",
+      "canonicalTermId": "science:meson",
+      "kana": "メソン",
+      "original": "Meson",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "クォークと反クォークからなるハドロン",
+      "kind": "複合粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:neutrino",
+      "canonicalTermId": "science:neutrino",
+      "kana": "ニュートリノ",
+      "original": "Neutrino",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "電荷を持たず物質とほとんど反応しない粒子",
+      "kind": "素粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:photon",
+      "canonicalTermId": "science:photon",
+      "kana": "フォトン",
+      "original": "Photon",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "電磁相互作用を伝える光子",
+      "kind": "素粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:gluon",
+      "canonicalTermId": "science:gluon",
+      "kana": "グルーオン",
+      "original": "Gluon",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "強い相互作用を伝える粒子",
+      "kind": "素粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:muon",
+      "canonicalTermId": "science:muon",
+      "kana": "ミューオン",
+      "original": "Muon",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "電子より重いレプトン",
+      "kind": "素粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:positron",
+      "canonicalTermId": "science:positron",
+      "kana": "ポジトロン",
+      "original": "Positron",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "電子に対応する反粒子",
+      "kind": "反粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:proton",
+      "canonicalTermId": "science:proton",
+      "kana": "プロトン",
+      "original": "Proton",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "正の電荷を持つ陽子",
+      "kind": "複合粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:neutron",
+      "canonicalTermId": "science:neutron",
+      "kana": "ニュートロン",
+      "original": "Neutron",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "電荷を持たない中性子",
+      "kind": "複合粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:pion",
+      "canonicalTermId": "science:pion",
+      "kana": "パイオン",
+      "original": "Pion",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "軽いメソンの一種",
+      "kind": "複合粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:kaon",
+      "canonicalTermId": "science:kaon",
+      "kana": "カオン",
+      "original": "Kaon",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "ストレンジクォークを含むメソン",
+      "kind": "複合粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:boson",
+      "canonicalTermId": "science:boson",
+      "kana": "ボソン",
+      "original": "Boson",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "相互作用を伝える粒子を含む粒子群",
+      "kind": "粒子分類",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:ion",
+      "canonicalTermId": "science:ion",
+      "kana": "イオン",
+      "original": "Ion",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "電子を失うか受け取って電荷を帯びた原子など",
+      "kind": "荷電粒子",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:isotope",
+      "canonicalTermId": "science:isotope",
+      "kana": "アイソトープ",
+      "original": "Isotope",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "陽子数が同じで中性子数が異なる原子",
+      "kind": "同位体",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:spin",
+      "canonicalTermId": "science:spin",
+      "kana": "スピン",
+      "original": "Spin",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "粒子が持つ固有の角運動量",
+      "kind": "物理量",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:scintillation",
+      "canonicalTermId": "science:scintillation",
+      "kana": "シンチレーション",
+      "original": "Scintillation",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "励起した原子などが発する短い閃光",
+      "kind": "発光現象",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:spectrometer",
+      "canonicalTermId": "science:spectrometer",
+      "kana": "スペクトロメーター",
+      "original": "Spectrometer",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "code"
+      ],
+      "gates": [],
+      "meaning": "粒子の運動量などを測定する装置",
+      "kind": "測定装置",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:quadrupole",
+      "canonicalTermId": "science:quadrupole",
+      "kana": "クアドラポール",
+      "original": "Quadrupole",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "code"
+      ],
+      "gates": [],
+      "meaning": "粒子ビームを集束する四極磁石",
+      "kind": "磁石",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:quench",
+      "canonicalTermId": "science:quench",
+      "kana": "クエンチ",
+      "original": "Quench",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "超伝導磁石が加熱され超伝導を失う現象",
+      "kind": "現象",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cms",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:axion",
+      "canonicalTermId": "science:axion",
+      "kana": "アクシオン",
+      "original": "Axion",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "仮説上の素粒子。発見済みではない",
+      "kind": "仮説上の粒子",
+      "hypothetical": true,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "cernAxion",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:plasma",
+      "canonicalTermId": "science:plasma",
+      "kana": "プラズマ",
+      "original": "Plasma",
+      "aliases": [],
+      "fields": [
+        "physics",
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "自由電子とイオンを含む電離気体",
+      "kind": "物質の状態",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:prism",
+      "canonicalTermId": "science:prism",
+      "kana": "プリズム",
+      "original": "Prism",
+      "aliases": [],
+      "fields": [
+        "physics"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "光を波長ごとに分ける透明な光学部品",
+      "kind": "光学部品",
+      "hypothetical": false,
+      "moodTags": [
+        "知的"
+      ],
+      "source": "nasaPrism",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:neon",
+      "canonicalTermId": "science:neon",
+      "kana": "ネオン",
+      "original": "Neon",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号10の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "10/Neon",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:argon",
+      "canonicalTermId": "science:argon",
+      "kana": "アルゴン",
+      "original": "Argon",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号18の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "18/Argon",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:krypton",
+      "canonicalTermId": "science:krypton",
+      "kana": "クリプトン",
+      "original": "Krypton",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号36の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "36/Krypton",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:xenon",
+      "canonicalTermId": "science:xenon",
+      "kana": "キセノン",
+      "original": "Xenon",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号54の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "54/Xenon",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:selenium",
+      "canonicalTermId": "science:selenium",
+      "kana": "セレン",
+      "original": "Selenium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号34の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "34/Selenium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:gallium",
+      "canonicalTermId": "science:gallium",
+      "kana": "ガリウム",
+      "original": "Gallium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号31の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "31/Gallium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:iridium",
+      "canonicalTermId": "science:iridium",
+      "kana": "イリジウム",
+      "original": "Iridium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号77の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "77/Iridium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:rhodium",
+      "canonicalTermId": "science:rhodium",
+      "kana": "ロジウム",
+      "original": "Rhodium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号45の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "45/Rhodium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:osmium",
+      "canonicalTermId": "science:osmium",
+      "kana": "オスミウム",
+      "original": "Osmium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号76の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "76/Osmium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:tellurium",
+      "canonicalTermId": "science:tellurium",
+      "kana": "テルル",
+      "original": "Tellurium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号52の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "52/Tellurium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:bismuth",
+      "canonicalTermId": "science:bismuth",
+      "kana": "ビスマス",
+      "original": "Bismuth",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号83の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "83/Bismuth",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:astatine",
+      "canonicalTermId": "science:astatine",
+      "kana": "アスタチン",
+      "original": "Astatine",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号85の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "85/Astatine",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:helium",
+      "canonicalTermId": "science:helium",
+      "kana": "ヘリウム",
+      "original": "Helium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号2の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "2/Helium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:cobalt",
+      "canonicalTermId": "science:cobalt",
+      "kana": "コバルト",
+      "original": "Cobalt",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号27の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "27/Cobalt",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:tantalum",
+      "canonicalTermId": "science:tantalum",
+      "kana": "タンタル",
+      "original": "Tantalum",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号73の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "73/Tantalum",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:boron",
+      "canonicalTermId": "science:boron",
+      "kana": "ボロン",
+      "original": "Boron",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号5の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "5/Boron",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:lithium",
+      "canonicalTermId": "science:lithium",
+      "kana": "リチウム",
+      "original": "Lithium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号3の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "3/Lithium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:titanium",
+      "canonicalTermId": "science:titanium",
+      "kana": "チタン",
+      "original": "Titanium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号22の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "22/Titanium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:vanadium",
+      "canonicalTermId": "science:vanadium",
+      "kana": "バナジウム",
+      "original": "Vanadium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号23の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "23/Vanadium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:chromium",
+      "canonicalTermId": "science:chromium",
+      "kana": "クロム",
+      "original": "Chromium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号24の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "24/Chromium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:zirconium",
+      "canonicalTermId": "science:zirconium",
+      "kana": "ジルコニウム",
+      "original": "Zirconium",
+      "aliases": [],
+      "fields": [
+        "chemistry"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "原子番号40の元素",
+      "kind": "元素",
+      "hypothetical": false,
+      "moodTags": [
+        "冷たい"
+      ],
+      "source": "rsc",
+      "sourcePath": "40/Zirconium",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:nebula",
+      "canonicalTermId": "science:nebula",
+      "kana": "ネビュラ",
+      "original": "Nebula",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "星と星の間に広がるガスや塵の雲",
+      "kind": "星間雲",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:pulsar",
+      "canonicalTermId": "science:pulsar",
+      "kana": "パルサー",
+      "original": "Pulsar",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "周期的な光のパルスを放つ回転する中性子星",
+      "kind": "天体",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:quasar",
+      "canonicalTermId": "science:quasar",
+      "kana": "クエーサー",
+      "original": "Quasar",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "非常に明るい活動銀河核",
+      "kind": "天体",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:magnetar",
+      "canonicalTermId": "science:magnetar",
+      "kana": "マグネター",
+      "original": "Magnetar",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "特に強い磁場を持つ中性子星",
+      "kind": "天体",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:supernova",
+      "canonicalTermId": "science:supernova",
+      "kana": "スーパーノヴァ",
+      "original": "Supernova",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "星の大規模な爆発",
+      "kind": "天体現象",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:eclipse",
+      "canonicalTermId": "science:eclipse",
+      "kana": "エクリプス",
+      "original": "Eclipse",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "天体が別の天体やその影に隠される現象",
+      "kind": "天体現象",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:apogee",
+      "canonicalTermId": "science:apogee",
+      "kana": "アポジー",
+      "original": "Apogee",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "地球を回る天体の軌道で最も遠い点",
+      "kind": "軌道用語",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:perigee",
+      "canonicalTermId": "science:perigee",
+      "kana": "ペリジー",
+      "original": "Perigee",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "地球を回る天体の軌道で最も近い点",
+      "kind": "軌道用語",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:parallax",
+      "canonicalTermId": "science:parallax",
+      "kana": "パララックス",
+      "original": "Parallax",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "観測位置の変化で天体の見かけの位置が変わること",
+      "kind": "観測用語",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:parsec",
+      "canonicalTermId": "science:parsec",
+      "kana": "パーセク",
+      "original": "Parsec",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "年周視差に基づく天文学の距離単位",
+      "kind": "距離単位",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:asteroid",
+      "canonicalTermId": "science:asteroid",
+      "kana": "アステロイド",
+      "original": "Asteroid",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "恒星を回る小さな岩石天体",
+      "kind": "天体",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:comet",
+      "canonicalTermId": "science:comet",
+      "kana": "コメット",
+      "original": "Comet",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "太陽へ近づくとガスや塵を放つ小天体",
+      "kind": "天体",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:exoplanet",
+      "canonicalTermId": "science:exoplanet",
+      "kana": "エクソプラネット",
+      "original": "Exoplanet",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "太陽系の外にある惑星",
+      "kind": "天体",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:protostar",
+      "canonicalTermId": "science:protostar",
+      "kana": "プロトスター",
+      "original": "Protostar",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "星になる過程で収縮しているガスと塵",
+      "kind": "形成中の天体",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:protoplanet",
+      "canonicalTermId": "science:protoplanet",
+      "kana": "プロトプラネット",
+      "original": "Protoplanet",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "code"
+      ],
+      "gates": [],
+      "meaning": "微惑星の集積で形成される惑星の前段階",
+      "kind": "形成中の天体",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:chromosphere",
+      "canonicalTermId": "science:chromosphere",
+      "kana": "クロモスフィア",
+      "original": "Chromosphere",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "太陽などの光球の外側にある大気層",
+      "kind": "恒星大気",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasaSun",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:photosphere",
+      "canonicalTermId": "science:photosphere",
+      "kana": "フォトスフィア",
+      "original": "Photosphere",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "太陽などの光が見える表面の層",
+      "kind": "恒星大気",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasaSun",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:corona",
+      "canonicalTermId": "science:corona",
+      "kana": "コロナ",
+      "original": "Corona",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "太陽などの外側に広がる高温の大気",
+      "kind": "恒星大気",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:ecliptic",
+      "canonicalTermId": "science:ecliptic",
+      "kana": "エクリプティック",
+      "original": "Ecliptic",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "地球の軌道面を天球に投影した面",
+      "kind": "天球用語",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:magnetosphere",
+      "canonicalTermId": "science:magnetosphere",
+      "kana": "マグネトスフィア",
+      "original": "Magnetosphere",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "code"
+      ],
+      "gates": [],
+      "meaning": "天体の磁場が支配的な周辺領域",
+      "kind": "宇宙空間",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:nova",
+      "canonicalTermId": "science:nova",
+      "kana": "ノヴァ",
+      "original": "Nova",
+      "aliases": [],
+      "fields": [
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "白色矮星を含む連星系で起こる急激な増光",
+      "kind": "天体現象",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:spectrum",
+      "canonicalTermId": "science:spectrum",
+      "kana": "スペクトル",
+      "original": "Spectrum",
+      "aliases": [],
+      "fields": [
+        "physics",
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "光の波長ごとの成分やその分布",
+      "kind": "観測用語",
+      "hypothetical": false,
+      "moodTags": [
+        "神秘的"
+      ],
+      "source": "nasa",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:magma",
+      "canonicalTermId": "science:magma",
+      "kana": "マグマ",
+      "original": "Magma",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "地下にある溶融した岩石",
+      "kind": "地質物質",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:lava",
+      "canonicalTermId": "science:lava",
+      "kana": "ラーヴァ",
+      "original": "Lava",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "地表へ噴出した溶融した岩石",
+      "kind": "地質物質",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:caldera",
+      "canonicalTermId": "science:caldera",
+      "kana": "カルデラ",
+      "original": "Caldera",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "火山の崩壊などでできる大きなくぼ地",
+      "kind": "火山地形",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:basalt",
+      "canonicalTermId": "science:basalt",
+      "kana": "バサルト",
+      "original": "Basalt",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "暗色の苦鉄質火成岩",
+      "kind": "岩石",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:andesite",
+      "canonicalTermId": "science:andesite",
+      "kana": "アンデサイト",
+      "original": "Andesite",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "中間的な組成の火山岩",
+      "kind": "岩石",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:dacite",
+      "canonicalTermId": "science:dacite",
+      "kana": "デイサイト",
+      "original": "Dacite",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "珪長質の火山岩",
+      "kind": "岩石",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:obsidian",
+      "canonicalTermId": "science:obsidian",
+      "kana": "オブシディアン",
+      "original": "Obsidian",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "急冷でできた火山ガラス",
+      "kind": "岩石",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:rhyolite",
+      "canonicalTermId": "science:rhyolite",
+      "kana": "ライオライト",
+      "original": "Rhyolite",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "珪長質の火山岩",
+      "kind": "岩石",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:scoria",
+      "canonicalTermId": "science:scoria",
+      "kana": "スコリア",
+      "original": "Scoria",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "気泡の多い暗色の火山噴出物",
+      "kind": "火山噴出物",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:tephra",
+      "canonicalTermId": "science:tephra",
+      "kana": "テフラ",
+      "original": "Tephra",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "噴火で放出される破片状の物質",
+      "kind": "火山噴出物",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:fumarole",
+      "canonicalTermId": "science:fumarole",
+      "kana": "フマロール",
+      "original": "Fumarole",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "火山ガスを噴き出す小さな開口部",
+      "kind": "火山地形",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:dike",
+      "canonicalTermId": "science:dike",
+      "kana": "ダイク",
+      "original": "Dike",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "周囲の岩石を切って貫入した板状の岩体",
+      "kind": "地質構造",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsVolcano",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:rift",
+      "canonicalTermId": "science:rift",
+      "kana": "リフト",
+      "original": "Rift",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "地殻が引き伸ばされてできる裂け目や帯",
+      "kind": "地質構造",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsQuake",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:graben",
+      "canonicalTermId": "science:graben",
+      "kana": "グラーベン",
+      "original": "Graben",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "断層に挟まれて沈降した地塊",
+      "kind": "地形",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsQuake",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:horst",
+      "canonicalTermId": "science:horst",
+      "kana": "ホルスト",
+      "original": "Horst",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "隣接部より相対的に高い地塊",
+      "kind": "地形",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsQuake",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:aquifer",
+      "canonicalTermId": "science:aquifer",
+      "kana": "アクイファー",
+      "original": "Aquifer",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "地下水を蓄え流す地層",
+      "kind": "水文地質",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "usgsWater",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:cyclone",
+      "canonicalTermId": "science:cyclone",
+      "kana": "サイクロン",
+      "original": "Cyclone",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "低気圧を中心とする大規模な循環",
+      "kind": "気象現象",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nws",
+      "sourcePath": "CYCLONE",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:blizzard",
+      "canonicalTermId": "science:blizzard",
+      "kana": "ブリザード",
+      "original": "Blizzard",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "強風と雪で視界が悪くなる吹雪",
+      "kind": "気象現象",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nws",
+      "sourcePath": "BLIZZARD",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:aurora",
+      "canonicalTermId": "science:aurora",
+      "kana": "オーロラ",
+      "original": "Aurora",
+      "aliases": [],
+      "fields": [
+        "earth",
+        "astronomy"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "高緯度の夜空で光る大気現象",
+      "kind": "大気現象",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nws",
+      "sourcePath": "AURORA",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:halo",
+      "canonicalTermId": "science:halo",
+      "kana": "ハロー",
+      "original": "Halo",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "氷晶で光が屈折・反射してできる光輪",
+      "kind": "大気光学現象",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nws",
+      "sourcePath": "HALO",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:mirage",
+      "canonicalTermId": "science:mirage",
+      "kana": "ミラージュ",
+      "original": "Mirage",
+      "aliases": [],
+      "fields": [
+        "earth"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "大気の屈折で物体がずれて見える現象",
+      "kind": "大気光学現象",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nws",
+      "sourcePath": "MIRAGE",
+      "tracking": "reused",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、既存の表示名・原綴りと一致したためカテゴリ所属を追加"
+    },
+    {
+      "id": "science:telomere",
+      "canonicalTermId": "science:telomere",
+      "kana": "テロメア",
+      "original": "Telomere",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "染色体の端にある反復DNA領域",
+      "kind": "染色体構造",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Telomere",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:centromere",
+      "canonicalTermId": "science:centromere",
+      "kana": "セントロメア",
+      "original": "Centromere",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "染色体分配に関わるくびれた領域",
+      "kind": "染色体構造",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Centromere",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:intron",
+      "canonicalTermId": "science:intron",
+      "kana": "イントロン",
+      "original": "Intron",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "成熟したmRNAから取り除かれる遺伝子内領域",
+      "kind": "遺伝子構造",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Intron",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:exon",
+      "canonicalTermId": "science:exon",
+      "kana": "エクソン",
+      "original": "Exon",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "成熟したmRNAに残る遺伝子内領域",
+      "kind": "遺伝子構造",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Exon",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:codon",
+      "canonicalTermId": "science:codon",
+      "kana": "コドン",
+      "original": "Codon",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "アミノ酸などを指定する3塩基の単位",
+      "kind": "遺伝情報",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Codon",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:genome",
+      "canonicalTermId": "science:genome",
+      "kana": "ゲノム",
+      "original": "Genome",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "生物が持つ遺伝情報の全体",
+      "kind": "遺伝情報",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Genome",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:allele",
+      "canonicalTermId": "science:allele",
+      "kana": "アレル",
+      "original": "Allele",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "同じ座位にある配列の異なる型",
+      "kind": "遺伝情報",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Allele",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:chromatin",
+      "canonicalTermId": "science:chromatin",
+      "kana": "クロマチン",
+      "original": "Chromatin",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "DNAとタンパク質からなる染色体の材料",
+      "kind": "染色体構造",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Chromatin",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:exome",
+      "canonicalTermId": "science:exome",
+      "kana": "エクソーム",
+      "original": "Exome",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "ゲノムに含まれるエクソンの全体",
+      "kind": "遺伝情報",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Exome",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:genotype",
+      "canonicalTermId": "science:genotype",
+      "kana": "ジェノタイプ",
+      "original": "Genotype",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "個体が持つ遺伝子型",
+      "kind": "遺伝情報",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Genotype",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:mutation",
+      "canonicalTermId": "science:mutation",
+      "kana": "ミューテーション",
+      "original": "Mutation",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "DNA配列などに生じる変化",
+      "kind": "遺伝的変化",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Mutation",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:nucleotide",
+      "canonicalTermId": "science:nucleotide",
+      "kana": "ヌクレオチド",
+      "original": "Nucleotide",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "核酸を構成する基本単位",
+      "kind": "分子",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Nucleotide",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:chromosome",
+      "canonicalTermId": "science:chromosome",
+      "kana": "クロモソーム",
+      "original": "Chromosome",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "DNAとタンパク質からなる遺伝情報の構造",
+      "kind": "染色体",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nhgri",
+      "sourcePath": "Chromosome",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:synapse",
+      "canonicalTermId": "science:synapse",
+      "kana": "シナプス",
+      "original": "Synapse",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "神経細胞と次の細胞の間で信号を伝える接合部",
+      "kind": "神経構造",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nci",
+      "sourcePath": "synapse",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:neuron",
+      "canonicalTermId": "science:neuron",
+      "kana": "ニューロン",
+      "original": "Neuron",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "信号を受け渡す神経細胞",
+      "kind": "細胞",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nci",
+      "sourcePath": "neuron",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:myelin",
+      "canonicalTermId": "science:myelin",
+      "kana": "ミエリン",
+      "original": "Myelin",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "神経を包み保護する脂質に富む物質",
+      "kind": "神経構造",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nci",
+      "sourcePath": "myelin",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:keratin",
+      "canonicalTermId": "science:keratin",
+      "kana": "ケラチン",
+      "original": "Keratin",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "皮膚や毛髪などを構成するタンパク質",
+      "kind": "タンパク質",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nci",
+      "sourcePath": "keratin",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:apoptosis",
+      "canonicalTermId": "science:apoptosis",
+      "kana": "アポトーシス",
+      "original": "Apoptosis",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "細胞が制御された過程を経て死ぬこと",
+      "kind": "細胞現象",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nci",
+      "sourcePath": "apoptosis",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:autophagy",
+      "canonicalTermId": "science:autophagy",
+      "kana": "オートファジー",
+      "original": "Autophagy",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "細胞が自分の成分を分解・再利用する過程",
+      "kind": "細胞現象",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "nci",
+      "sourcePath": "autophagy",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:axon",
+      "canonicalTermId": "science:axon",
+      "kana": "アクソン",
+      "original": "Axon",
+      "aliases": [],
+      "fields": [
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "神経細胞から信号を送り出す長い突起",
+      "kind": "神経構造",
+      "hypothetical": false,
+      "moodTags": [
+        "優しい"
+      ],
+      "source": "seer",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:biopsy",
+      "canonicalTermId": "science:biopsy",
+      "kana": "バイオプシー",
+      "original": "Biopsy",
+      "aliases": [],
+      "fields": [
+        "medicine",
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "検査のために細胞や組織を採取すること",
+      "kind": "検査",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "biopsy",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:placebo",
+      "canonicalTermId": "science:placebo",
+      "kana": "プラセボ",
+      "original": "Placebo",
+      "aliases": [],
+      "fields": [
+        "medicine",
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "比較試験で使う有効成分を含まない介入",
+      "kind": "臨床試験用語",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "placebo",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:stent",
+      "canonicalTermId": "science:stent",
+      "kana": "ステント",
+      "original": "Stent",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "管状の組織を内側から支える器具",
+      "kind": "医療器具",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "stent",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:angiogram",
+      "canonicalTermId": "science:angiogram",
+      "kana": "アンジオグラム",
+      "original": "Angiogram",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "血管と血流を示す画像",
+      "kind": "検査画像",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "angiogram",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:prosthesis",
+      "canonicalTermId": "science:prosthesis",
+      "kana": "プロテーゼ",
+      "original": "Prosthesis",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "失われた部位を補う人工物",
+      "kind": "医療器具",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "prosthesis",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:laparoscope",
+      "canonicalTermId": "science:laparoscope",
+      "kana": "ラパロスコープ",
+      "original": "Laparoscope",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "code"
+      ],
+      "gates": [],
+      "meaning": "腹腔内の観察に使う内視鏡",
+      "kind": "医療器具",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "laparoscope",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:mammography",
+      "canonicalTermId": "science:mammography",
+      "kana": "マンモグラフィー",
+      "original": "Mammography",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "低線量X線で乳房を画像化する検査",
+      "kind": "検査",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "mammography",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:scintigraphy",
+      "canonicalTermId": "science:scintigraphy",
+      "kana": "シンチグラフィー",
+      "original": "Scintigraphy",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "code"
+      ],
+      "gates": [],
+      "meaning": "放射性物質の分布を画像化する検査",
+      "kind": "検査",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "scintigraphy",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:cytology",
+      "canonicalTermId": "science:cytology",
+      "kana": "サイトロジー",
+      "original": "Cytology",
+      "aliases": [],
+      "fields": [
+        "medicine",
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "顕微鏡による細胞の研究・検査",
+      "kind": "検査",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "cytology",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:pacemaker",
+      "canonicalTermId": "science:pacemaker",
+      "kana": "ペースメーカー",
+      "original": "Pacemaker",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "心拍を調整するために用いる装置",
+      "kind": "医療器具",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "pacemaker",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:necrosis",
+      "canonicalTermId": "science:necrosis",
+      "kana": "ネクローシス",
+      "original": "Necrosis",
+      "aliases": [
+        {
+          "kana": "ネクロシス",
+          "original": "Necrosis"
+        }
+      ],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [
+        "disease"
+      ],
+      "meaning": "損傷などによる細胞や組織の死",
+      "kind": "病理現象",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "necrosis",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:sepsis",
+      "canonicalTermId": "science:sepsis",
+      "kana": "セプシス",
+      "original": "Sepsis",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [
+        "disease"
+      ],
+      "meaning": "感染への反応が全身に害を及ぼす状態",
+      "kind": "病態",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "sepsis",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:glioma",
+      "canonicalTermId": "science:glioma",
+      "kana": "グリオーマ",
+      "original": "Glioma",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [
+        "disease"
+      ],
+      "meaning": "神経膠細胞に由来する腫瘍",
+      "kind": "腫瘍",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "glioma",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:heparin",
+      "canonicalTermId": "science:heparin",
+      "kana": "ヘパリン",
+      "original": "Heparin",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [
+        "drugToxin"
+      ],
+      "meaning": "血液の凝固を抑える物質",
+      "kind": "薬・毒物",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nci",
+      "sourcePath": "heparin",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:catheter",
+      "canonicalTermId": "science:catheter",
+      "kana": "カテーテル",
+      "original": "Catheter",
+      "aliases": [],
+      "fields": [
+        "medicine",
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "血管などへ入れる細い柔軟な管",
+      "kind": "医療器具",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nciChemo",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:endoscope",
+      "canonicalTermId": "science:endoscope",
+      "kana": "エンドスコープ",
+      "original": "Endoscope",
+      "aliases": [],
+      "fields": [
+        "medicine",
+        "life"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [],
+      "meaning": "体内を観察するための細い光学器具",
+      "kind": "医療器具",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "nciDiagnosis",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:prion",
+      "canonicalTermId": "science:prion",
+      "kana": "プリオン",
+      "original": "Prion",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [
+        "pathogen"
+      ],
+      "meaning": "感染性を持つ異常なタンパク質",
+      "kind": "病原体",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "cdcPrion",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:candida",
+      "canonicalTermId": "science:candida",
+      "kana": "カンジダ",
+      "original": "Candida",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [
+        "pathogen"
+      ],
+      "meaning": "一部が感染症の原因となる酵母の属",
+      "kind": "病原体",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "cdcCandida",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:atropine",
+      "canonicalTermId": "science:atropine",
+      "kana": "アトロピン",
+      "original": "Atropine",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [
+        "drugToxin"
+      ],
+      "meaning": "抗ムスカリン作用を持つアルカロイド性物質",
+      "kind": "薬・毒物",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "pubchem",
+      "sourcePath": "Atropine",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    },
+    {
+      "id": "science:morphine",
+      "canonicalTermId": "science:morphine",
+      "kana": "モルヒネ",
+      "original": "Morphine",
+      "aliases": [],
+      "fields": [
+        "medicine"
+      ],
+      "uses": [
+        "name",
+        "code"
+      ],
+      "gates": [
+        "drugToxin"
+      ],
+      "meaning": "ケシ由来の鎮痛作用を持つアルカロイド",
+      "kind": "薬・毒物",
+      "hypothetical": false,
+      "moodTags": [
+        "真面目"
+      ],
+      "source": "pubchem",
+      "sourcePath": "Morphine",
+      "tracking": "new",
+      "decision": "adopt",
+      "decisionReason": "出典で用語と短い意味を照合し、正規の原綴りを改変せず単名候補として採用"
+    }
+  ],
+  "candidateLedger": [
+    {
+      "candidate": "アドレナリン／エピネフリン",
+      "decision": "hold",
+      "reason": "同義語・薬理学上の用途区分と正本表記を個別確認するまで保留"
+    },
+    {
+      "candidate": "コミュニズム",
+      "decision": "hold",
+      "reason": "片利共生の commensalism との混同を確認するまで保留"
+    },
+    {
+      "candidate": "クランブル",
+      "decision": "hold",
+      "reason": "対象分野の学術語としての根拠が不足"
+    },
+    {
+      "candidate": "アクアフィックス",
+      "decision": "hold",
+      "reason": "学術用語の実在性を確認できない"
+    },
+    {
+      "candidate": "フェリウム",
+      "decision": "hold",
+      "reason": "元素・物質名としての実在性を確認できない"
+    },
+    {
+      "candidate": "レピレーション",
+      "decision": "hold",
+      "reason": "原語と定義が確認できない"
+    },
+    {
+      "candidate": "フェテーション",
+      "decision": "hold",
+      "reason": "原語と定義が確認できない"
+    },
+    {
+      "candidate": "ディラック／フェルミ／ニュートン／ユング／フロイト",
+      "decision": "exclude",
+      "reason": "人物名単独は今回の科学用語カテゴリの対象外"
+    },
+    {
+      "candidate": "イクシェル",
+      "decision": "exclude",
+      "reason": "神話上の固有名であり科学用語ではない"
+    },
+    {
+      "candidate": "ティラノ／プテラ",
+      "decision": "exclude",
+      "reason": "正式な学術名称の無根拠な短縮形としては採用しない"
+    },
+    {
+      "candidate": "ネクロシス",
+      "decision": "merge",
+      "into": "science:necrosis",
+      "reason": "同一用語の別カナ表記。抽選レコードを増やさない"
+    }
+  ]
+}

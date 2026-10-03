@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "old saves load without invented naming system or missing roman spelling",
+    "ten-name path, card rendering, name and detail copy",
+    "saved one-kanji result and saved-detail copy after reload",
+    "full-character one-kanji detail copy omits missing roman spelling",
+    "myth names retain source spellings in card and both copy actions",
+    "null, undefined, empty and whitespace-only optional myth spellings are omitted",
+    "ordinary surname-plus-given-name display and copy remain intact"
+  ],
+  "pageErrors": []
+}

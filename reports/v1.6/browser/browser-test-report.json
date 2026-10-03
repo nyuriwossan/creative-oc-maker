@@ -1,0 +1,15 @@
+{
+  "version": "1.6",
+  "passed": true,
+  "checks": [
+    "keyboard, default gates off, six fields with ten unique names and honest tags",
+    "multi-field OR, code usage, opt-in category controls",
+    "provenance, two copy formats, 360px layout",
+    "science save/reload and legacy saved data",
+    "zero pool keeps previous results and full/setting-only five unchanged"
+  ],
+  "pageErrors": [],
+  "screenshots": [
+    "science-360px.png"
+  ]
+}
