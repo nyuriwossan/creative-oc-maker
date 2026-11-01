@@ -1,0 +1,44 @@
+{
+  "version": "reconstructed-2026-11-01",
+  "quality_notice": "既存のDeep Research作成ZIPがこの作業環境で取得できなかったため再構成。専門一次資料による各名称の直接照合は未完了。完成検証品と誤認しないこと。",
+  "total": 675,
+  "existing": 389,
+  "new": 264,
+  "supplement": 22,
+  "original_uncertain": 212,
+  "genre_count_new": {
+    "古語・雅語": 32,
+    "香木・香料": 32,
+    "月・暦・季語": 40,
+    "海洋生物": 32,
+    "気象・自然現象": 32,
+    "日本の伝統文様": 32,
+    "和楽器・雅楽": 32,
+    "金属・工芸素材": 32
+  },
+  "app_duplicates": {
+    "一致なし（提供された554行内）": 666,
+    "名称＋読み一致": 7,
+    "名称一致・読み異なる": 2
+  },
+  "internal_duplicate_groups": 3,
+  "files": [
+    "01_existing_389_reconstructed.csv",
+    "04b_unconfirmed_fields.csv",
+    "manifest.json",
+    "05b_duplicate_details.csv",
+    "05_genre_counts.csv",
+    "04c_mineral_classification_review.csv",
+    "00_manus_original_delivery.zip",
+    "00_previous_deep_research_report.md",
+    "02b_bird_insect_kanji_22.csv",
+    "04_sources.csv",
+    "01c_change_log.csv",
+    "06_curated_names.csv",
+    "02_new_8genres_264.csv",
+    "03_master_675_reconstructed.csv",
+    "07_dictionary_ui_design.md",
+    "README_FIRST.md",
+    "01b_original_212_unconfirmed.csv"
+  ]
+}

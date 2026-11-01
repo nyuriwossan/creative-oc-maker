@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "baseline": "83cd24b18eec84468bc2793e6d634b6731920a01",
+  "identicalLegacyOutputs": 2592,
+  "fixedName": "SUP-001 花鶏（あとり）",
+  "categoriesTested": 12,
+  "usagesTested": 5
+}

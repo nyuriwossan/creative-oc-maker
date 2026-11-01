@@ -1,0 +1,17 @@
+{
+  "version": "1.5",
+  "passed": true,
+  "checks": [
+    "keyboard controls, standard one-kanji ten, name tags and clipboard",
+    "creative-reading control and saved metadata survive reload",
+    "myth auto ten, provenance, detail clipboard and 360px layout",
+    "tradition select focus, one available hero and zero-candidate notice",
+    "reset and manual setting-only five with labeled world",
+    "independent modern world and myth name, saved labels after reload",
+    "full mode five and auto-resolved naming tags"
+  ],
+  "pageErrors": [],
+  "screenshots": [
+    "mythology-360px.png"
+  ]
+}

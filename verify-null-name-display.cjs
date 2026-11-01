@@ -3,17 +3,14 @@
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const report={passed:false,checks:[],pageErrors:[]};
-const server=http.createServer((req,res)=>{
-  res.setHeader('Content-Type','text/html; charset=utf-8');
-  res.end(fs.readFileSync(path.join(__dirname,'index.html')));
-});
+const server=require('./tests/static-server.cjs')(__dirname);
 const absent=/\b(?:null|undefined)\b/i;
 async function clipboard(page){return (await page.evaluate(()=>navigator.clipboard.readText())).replace(/\r\n/g,'\n');}
 (async()=>{
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  let browser;
  try{
-  browser=await chromium.launch({channel:'msedge',headless:true});
+  browser=await chromium.launch({headless:true,...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{})});
   const context=await browser.newContext({permissions:['clipboard-read','clipboard-write']});
   const page=await context.newPage();page.on('pageerror',e=>report.pageErrors.push(e.message));
   await page.addInitScript(()=>{

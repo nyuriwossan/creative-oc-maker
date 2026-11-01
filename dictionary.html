@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>名前辞典 | 創作OCメーカー v1.7</title>
+<link rel="icon" href="./icons/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="stylesheet" href="./dictionary.css">
+<script src="./js/dictionary-core.js" defer></script>
+<script src="./js/dictionary-page.js" defer></script>
+</head>
+<body><main class="wrap">
+<header><p class="eyebrow">創作OCメーカー v1.7</p><h1>名前辞典</h1><p>自然や古典のことばから、キャラクターの種を探す。</p></header>
+<nav class="site-nav" aria-label="画面切り替え"><a href="./index.html">ガチャ</a><a href="./dictionary.html" aria-current="page">名前辞典</a></nav>
+<p id="loadStatus" role="status">辞典を読み込んでいます…</p>
+<div id="loadError" role="alert" hidden><p>名前辞典を読み込めませんでした。接続を確認して再読み込みしてください。</p><button id="retry" type="button">再読み込み</button></div>
+<p id="storageWarning" role="status" hidden></p>
+<form id="filters" class="panel" aria-label="名前を絞り込む">
+<fieldset id="filterControls" disabled>
+<label for="search">名称・読み・説明・別表記・原語で検索</label>
+<input id="search" type="search" placeholder="例：花鶏、あとり、青海波" autocomplete="off">
+<fieldset><legend>50音の行</legend><div id="gojuon" class="chips"></div></fieldset>
+<details><summary>ジャンル・創作用途などで絞り込む</summary>
+<fieldset><legend>ジャンル（複数可・未選択なら全ジャンル）</legend><div id="categories" class="checks"></div></fieldset>
+<label for="minor">小分類</label><select id="minor"><option value="">すべて</option></select>
+<fieldset><legend>編集上のおすすめ用途（複数可・未選択なら全候補）</legend><div id="usages" class="checks"></div></fieldset>
+<label for="impression">印象（編集上の提案）</label><select id="impression"><option value="">すべて</option></select>
+</details>
+<div class="filter-bottom"><label class="check"><input id="favoritesOnly" type="checkbox">お気に入りだけ</label>
+<label for="sort">並び順</label><select id="sort"><option value="reading">読みの50音順</option><option value="favorite">お気に入り登録順</option></select>
+<button id="clear" type="button">条件をクリア</button></div>
+</fieldset></form>
+<p class="notice">収録候補は現在、個別出典の再確認中です。表示する用途・印象は創作向けの提案です。</p>
+<p id="count" role="status" aria-live="polite"></p>
+<div id="results" aria-busy="true"></div>
+<button id="more" type="button" hidden>もっと見る</button>
+<p id="actionStatus" role="status" aria-live="polite"></p>
+<section id="copyFallback" class="panel" hidden><label for="copyText">自動コピーできませんでした。選択してコピーしてください。</label><textarea id="copyText" readonly></textarea><button id="closeCopy" type="button">閉じる</button></section>
+<footer>名前は創作の素材です。実在人名としての用例を示すものではありません。</footer>
+</main></body></html>
