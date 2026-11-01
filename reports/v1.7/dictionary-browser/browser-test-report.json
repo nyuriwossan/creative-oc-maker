@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "engine": "chromium",
+  "checks": [
+    "675 searchable IDs, 36-card pagination, kana normalization, separate meanings, details, clipboard, persistent favorites separate from OC saves",
+    "dictionary → gacha fixed name, 1/5 people, varied settings, copies/image prompt, save/reload, manual mode, release, old OC deletion, motif categories and 10 unique names",
+    "no horizontal overflow at 320/375/390/430/768px, touch emulation, expanded details and filters",
+    "keyboard filter, zero results/reset, missing favorite ID notice, favorite removal",
+    "tampered URL, malicious HTML/URL payload, broken data and retry, malformed/hostile/invalid JSON OC saves, unavailable localStorage memory fallback"
+  ],
+  "pageErrors": [],
+  "widths": [
+    320,
+    375,
+    390,
+    430,
+    768
+  ],
+  "screenshots": [
+    "dictionary-320.png",
+    "gacha-320.png",
+    "dictionary-375.png",
+    "gacha-375.png",
+    "dictionary-390.png",
+    "gacha-390.png",
+    "dictionary-430.png",
+    "gacha-430.png",
+    "dictionary-768.png",
+    "gacha-768.png"
+  ]
+}

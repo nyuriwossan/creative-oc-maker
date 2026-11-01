@@ -1,0 +1,2 @@
+# Preserve the delivered BOM and CRLF byte-for-byte. CR is the original line ending.
+data/raw/name-dictionary/*.csv -text whitespace=cr-at-eol

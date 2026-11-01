@@ -1,0 +1,275 @@
+{
+  "version": "1.4",
+  "seed": "0x12345678",
+  "data": {
+    "pools": [
+      {
+        "pool": "japanese.surnames",
+        "count": 300
+      },
+      {
+        "pool": "japanese.givenNames.male",
+        "count": 190
+      },
+      {
+        "pool": "japanese.givenNames.female",
+        "count": 190
+      },
+      {
+        "pool": "japanese.givenNames.neutral",
+        "count": 181
+      },
+      {
+        "pool": "wafu.surnames",
+        "count": 148
+      },
+      {
+        "pool": "wafu.givenNames.male",
+        "count": 92
+      },
+      {
+        "pool": "wafu.givenNames.female",
+        "count": 90
+      },
+      {
+        "pool": "wafu.givenNames.neutral",
+        "count": 74
+      },
+      {
+        "pool": "western.givenNames",
+        "count": 369
+      },
+      {
+        "pool": "western.familyNames",
+        "count": 222
+      },
+      {
+        "pool": "western.nobleNames",
+        "count": 144
+      },
+      {
+        "pool": "chinese.surnames",
+        "count": 30
+      },
+      {
+        "pool": "chinese.givenNames.male",
+        "count": 18
+      },
+      {
+        "pool": "chinese.givenNames.female",
+        "count": 18
+      },
+      {
+        "pool": "chinese.givenNames.neutral",
+        "count": 14
+      },
+      {
+        "pool": "desert.givenNames",
+        "count": 50
+      },
+      {
+        "pool": "desert.familyNames",
+        "count": 30
+      },
+      {
+        "pool": "scifi.givenNames",
+        "count": 110
+      },
+      {
+        "pool": "scifi.codenames",
+        "count": 174
+      }
+    ],
+    "invalidFields": 0,
+    "invalidTags": 0,
+    "displayDuplicates": 0,
+    "existingHomophones": [
+      {
+        "pool": "chinese.givenNames.female",
+        "field": "reading",
+        "value": "ワンチン",
+        "names": [
+          "婉清",
+          "晩晴"
+        ]
+      },
+      {
+        "pool": "chinese.givenNames.female",
+        "field": "roman",
+        "value": "Wanqing",
+        "names": [
+          "婉清",
+          "晩晴"
+        ]
+      }
+    ],
+    "added": 1370,
+    "addedV14": 282,
+    "legacyCorrections": {
+      "undefinedMoodTags": 4,
+      "nobleNames": 2
+    },
+    "newJapaneseRomanizationChecks": 835
+  },
+  "generation": {
+    "singleNames": 216000,
+    "batches": 36000,
+    "charactersInBatches": 180000,
+    "duplicateBatches": 0,
+    "byWorld": [
+      {
+        "world": "modern",
+        "singles": 12000,
+        "uniqueIdentities": 11466,
+        "repeatRate": 0.044499999999999984,
+        "batches": 2000
+      },
+      {
+        "world": "modernWestern",
+        "singles": 12000,
+        "uniqueIdentities": 6321,
+        "repeatRate": 0.47324999999999995,
+        "batches": 2000
+      },
+      {
+        "world": "school",
+        "singles": 12000,
+        "uniqueIdentities": 11508,
+        "repeatRate": 0.041000000000000036,
+        "batches": 2000
+      },
+      {
+        "world": "work",
+        "singles": 12000,
+        "uniqueIdentities": 11529,
+        "repeatRate": 0.03925000000000001,
+        "batches": 2000
+      },
+      {
+        "world": "wafu",
+        "singles": 12000,
+        "uniqueIdentities": 10172,
+        "repeatRate": 0.15233333333333332,
+        "batches": 2000
+      },
+      {
+        "world": "wafuFantasy",
+        "singles": 12000,
+        "uniqueIdentities": 10203,
+        "repeatRate": 0.14975000000000005,
+        "batches": 2000
+      },
+      {
+        "world": "western",
+        "singles": 12000,
+        "uniqueIdentities": 9027,
+        "repeatRate": 0.24775000000000003,
+        "batches": 2000
+      },
+      {
+        "world": "royal",
+        "singles": 12000,
+        "uniqueIdentities": 8263,
+        "repeatRate": 0.3114166666666667,
+        "batches": 2000
+      },
+      {
+        "world": "chinese",
+        "singles": 12000,
+        "uniqueIdentities": 1496,
+        "repeatRate": 0.8753333333333333,
+        "batches": 2000
+      },
+      {
+        "world": "desert",
+        "singles": 12000,
+        "uniqueIdentities": 1535,
+        "repeatRate": 0.8720833333333333,
+        "batches": 2000
+      },
+      {
+        "world": "dark",
+        "singles": 12000,
+        "uniqueIdentities": 9017,
+        "repeatRate": 0.24858333333333338,
+        "batches": 2000
+      },
+      {
+        "world": "scifi",
+        "singles": 12000,
+        "uniqueIdentities": 8838,
+        "repeatRate": 0.26349999999999996,
+        "batches": 2000
+      },
+      {
+        "world": "cyber",
+        "singles": 12000,
+        "uniqueIdentities": 8915,
+        "repeatRate": 0.25708333333333333,
+        "batches": 2000
+      },
+      {
+        "world": "steam",
+        "singles": 12000,
+        "uniqueIdentities": 9067,
+        "repeatRate": 0.24441666666666662,
+        "batches": 2000
+      },
+      {
+        "world": "ability",
+        "singles": 12000,
+        "uniqueIdentities": 11522,
+        "repeatRate": 0.03983333333333339,
+        "batches": 2000
+      },
+      {
+        "world": "nonhuman",
+        "singles": 12000,
+        "uniqueIdentities": 6194,
+        "repeatRate": 0.48383333333333334,
+        "batches": 2000
+      },
+      {
+        "world": "mixed",
+        "singles": 12000,
+        "uniqueIdentities": 11322,
+        "repeatRate": 0.056499999999999995,
+        "batches": 2000
+      },
+      {
+        "world": "random",
+        "singles": 12000,
+        "uniqueIdentities": 10942,
+        "repeatRate": 0.08816666666666662,
+        "batches": 2000
+      }
+    ],
+    "additionalDarkSamples": 10000
+  },
+  "regressions": [
+    "exhausted original eight retries never commits a duplicate name",
+    "manual name remains unchanged in settingOnly",
+    "settingOnly without a name still generates settings",
+    "broken random source terminates without publishing duplicate results"
+  ],
+  "motifAudit": {
+    "pools": {
+      "western.givenNames": {
+        "total": 369,
+        "matching": 0
+      },
+      "western.familyNames": {
+        "total": 222,
+        "matching": 2
+      },
+      "western.nobleNames": {
+        "total": 144,
+        "matching": 0
+      }
+    },
+    "darkSample": 10000,
+    "darkHits": 29,
+    "rate": 0.0029
+  },
+  "passed": true
+}
