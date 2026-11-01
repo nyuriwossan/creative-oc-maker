@@ -10,6 +10,8 @@ const error={hidden:true,textContent:'',focus(){}};
 const math=Object.create(Math);math.random=()=>rng();
 const ctx=vm.createContext({console,Math:math,document:{getElementById:id=>id==='nameInput'?{value:manual}:id==='generationError'?error:{scrollIntoView(){}}},setTimeout:()=>{}});
 vm.runInContext(source,ctx);
+ctx.dictionaryFixture=require('./data/dictionary-v1.7.json').entries;
+vm.runInContext('dictionaryEntries=dictionaryFixture;',ctx);
 const a=vm.runInContext(`({nameData,nameRecords,nameSources,modernPools,fantasyPools,namingSystems,namingCultures,namingMotifs,nameHistory,namingWeight,pickFromPool,generateName,generateMultiple,generateFullCharacter,rememberName,avoidRecent,uniqueRecords,buildNameText,buildDetailText,renderNameInfo,runGenerate,
  configure(system,culture='auto',motifs=[],world='modern',gender='male',mode='nameOnly'){selectedNameSystem=system;selectedNameCulture=culture;selectedNameMotifs=motifs;selectedWorld=world;selectedGender=gender;currentMode=mode;selectedMoods=['気だるい'];selectedRoles=[];selectedRelationships=[];},
  results(){return generatedResults;},setRender(fn){renderResults=fn;}})`,ctx);

@@ -6,6 +6,8 @@ let seed=17;
 const math=Object.create(Math);math.random=()=>((seed=Math.imul(seed,1664525)+1013904223>>>0)/4294967296);
 const ctx=vm.createContext({console,Math:math,document:{getElementById:()=>({value:''})},setTimeout:()=>{}});
 vm.runInContext(source,ctx);
+ctx.dictionaryFixture=require('./data/dictionary-v1.7.json').entries;
+vm.runInContext('dictionaryEntries=dictionaryFixture;',ctx);
 const api=vm.runInContext(`({
   systems:Object.keys(namingSystems).filter(s=>s!=='auto'),
   configure(system,mode='nameOnly'){currentMode=mode;selectedNameSystem=system;selectedWorld='modern';selectedGender='male';selectedMoods=[];selectedRoles=[];selectedRelationships=[];selectedNameCulture='auto';selectedNameMotifs=[];selectedKanjiReadingMode='standard';selectedMythType='deity';selectedMythTradition='auto';},

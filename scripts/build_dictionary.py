@@ -5,6 +5,7 @@ import collections
 import csv
 import hashlib
 import json
+import io
 from pathlib import Path
 import re
 import unicodedata
@@ -53,7 +54,7 @@ def serialized(obj):
 
 def build():
     raw = RAW.read_bytes()
-    rows = list(csv.DictReader(raw.decode('utf-8-sig').splitlines()))
+    rows = list(csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))))
     assert len(rows) == 675 and len(rows[0]) == 38
     assert len({r['id'] for r in rows}) == 675
     assert collections.Counter(r['id'].split('-')[0] for r in rows) == {'ND': 389, 'NEW': 264, 'SUP': 22}

@@ -1,6 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const D=require('./js/dictionary-core.js');
+assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync('data/raw/name-dictionary/03_master_675_reconstructed.csv')).digest('hex'),'b1601520f6cab12d5f10cea2abd1507fe127d93824e395580ba9d0f3759512e9');
 const data=JSON.parse(fs.readFileSync('data/dictionary-v1.7.json','utf8')),es=D.validate(data);
 assert.equal(es.length,675);assert.equal(new Set(es.map(e=>e.id)).size,675);
 for(const [prefix,count] of [['ND-',389],['NEW-',264],['SUP-',22]])assert.equal(es.filter(e=>e.id.startsWith(prefix)).length,count);

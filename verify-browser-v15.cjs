@@ -4,11 +4,11 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const repo=__dirname,outdir=process.argv[2]||path.join(repo,'test-results-v15');fs.mkdirSync(outdir,{recursive:true});
 const report={version:'1.5',passed:false,checks:[],pageErrors:[],screenshots:[]};
 (async()=>{
- const server=http.createServer((req,res)=>{res.setHeader('Content-Type','text/html; charset=utf-8');res.end(fs.readFileSync(path.join(repo,'index.html')));});
+ const server=require('./tests/static-server.cjs')(repo);
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  let browser;
  try{
-  browser=await chromium.launch({channel:'msedge',headless:true});
+  browser=await chromium.launch({headless:true,...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{})});
   const context=await browser.newContext({viewport:{width:360,height:800},permissions:['clipboard-read','clipboard-write']});
   const page=await context.newPage();page.on('pageerror',e=>report.pageErrors.push(e.message));
   await page.goto('http://127.0.0.1:'+server.address().port);

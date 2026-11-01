@@ -3,11 +3,11 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const repo=__dirname,outdir=process.argv[2]||path.join(__dirname,'test-results');fs.mkdirSync(outdir,{recursive:true});
 const report={passed:false,checks:[],consoleErrors:[],screenshots:[]};
 (async()=>{
- const server=http.createServer((req,res)=>{res.setHeader('Content-Type','text/html; charset=utf-8');res.end(fs.readFileSync(path.join(repo,'index.html')));});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+ const server=require('./tests/static-server.cjs')(repo);await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const origin='http://127.0.0.1:'+server.address().port;
  let browser;
  try{
-  browser=await chromium.launch({channel:'msedge',headless:true});
+  browser=await chromium.launch({headless:true,...(process.env.BROWSER_EXECUTABLE?{executablePath:process.env.BROWSER_EXECUTABLE}:{})});
   const context=await browser.newContext({viewport:{width:1280,height:950},permissions:['clipboard-read','clipboard-write']});
   const page=await context.newPage();page.on('pageerror',e=>report.consoleErrors.push(e.message));
   // Inject a real legacy-format save before app initialization.
@@ -66,7 +66,7 @@ const report={passed:false,checks:[],consoleErrors:[],screenshots:[]};
   await page.locator('#results [data-act="save"]').click();await page.reload();
   const restored=await page.evaluate(name=>JSON.parse(localStorage.getItem('ocMakerSavedV1')).find(n=>n.name===name),saved.name);
   assert.deepEqual(restored.nameParts,saved.parts);report.checks.push('v1.4 editorial origin renders at 390px and metadata survives save/reload');
-  assert.equal(await page.title(),'創作OCメーカー v1.6');
+  assert.equal(await page.title(),'創作OCメーカー v1.7');
   assert.equal(report.consoleErrors.length,0);report.passed=true;
  }finally{if(browser)await browser.close();server.close();fs.writeFileSync(path.join(outdir,'browser-test-report.json'),JSON.stringify(report,null,2));}
  console.log(JSON.stringify(report));

@@ -43,7 +43,7 @@
     const create=el('a','この名前でOCを作る');create.href='./index.html?dictionaryId='+encodeURIComponent(e.id);
     actions.append(copyButton,favoriteButton(e.id),create);article.append(actions);
     const details=el('details');details.append(el('summary','意味・用途・確認状況・参考資料'));
-    details.append(el('p',D.notice,'notice'),el('p','ID：'+e.id+' ／ 原ID：'+e.sourceId),el('p','意味・説明：'+e.description));
+    details.append(el('p',D.notice,'notice'),el('p','ID：'+e.id+' ／ 原ID：'+e.sourceId),el('p','原分類：'+e.originalCategory+' ／ 収録元：'+e.sourceBatch),el('p','意味・説明：'+e.description));
     if(e.original)details.append(el('p','原語・原記録：'+e.original));
     if(e.aliases.length)details.append(el('p','別表記：'+e.aliases.join('、')));
     const uses=Object.keys(D.usages).filter(k=>e.usageFlags[k]===1).map(k=>D.usages[k]);
@@ -60,7 +60,7 @@
     article.append(details);return article;
   }
   function append(){
-    const shown=$('results').querySelectorAll('article').length;
+    const shown=$('results').querySelectorAll('article[data-id]').length;
     const fragment=document.createDocumentFragment();
     for(const e of matched.slice(shown,limit))fragment.append(card(e));
     $('results').append(fragment);$('more').hidden=limit>=matched.length;
@@ -102,12 +102,12 @@
   }
   $('filters').addEventListener('submit',e=>e.preventDefault());
   $('search').addEventListener('input',render);
-  $('filters').addEventListener('change',e=>{if(e.target.closest('#categories'))updateMinor();render();});
+  $('filters').addEventListener('change',e=>{if(e.target.id==='search')return;if(e.target.closest('#categories'))updateMinor();render();});
   $('clear').addEventListener('click',()=>{
     $('filters').reset();group='';for(const [i,b] of [...$('gojuon').children].entries())b.setAttribute('aria-pressed',String(i===0));updateMinor();render();$('search').focus();
   });
   $('more').addEventListener('click',()=>{
-    const old=$('results').querySelectorAll('article').length;limit+=36;append();
+    const old=$('results').querySelectorAll('article[data-id]').length;limit+=36;append();
     const heading=$('results').querySelectorAll('article')[old]?.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}
   });
   $('retry').addEventListener('click',start);
