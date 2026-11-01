@@ -1,0 +1,2800 @@
+{
+  "rawSha256": "b1601520f6cab12d5f10cea2abd1507fe127d93824e395580ba9d0f3759512e9",
+  "rawColumns": 38,
+  "inputCount": 675,
+  "outputCount": 675,
+  "batches": {
+    "ND": 389,
+    "NEW": 264,
+    "SUP": 22
+  },
+  "categories": {
+    "鳥類": 113,
+    "鉱物・宝石": 95,
+    "蝶・蛾・昆虫": 95,
+    "日本の伝統色": 108,
+    "古語・雅語": 32,
+    "香木・香料": 32,
+    "月・暦・季語": 40,
+    "海洋生物": 32,
+    "気象・自然現象": 32,
+    "日本の伝統文様": 32,
+    "和楽器・雅楽": 32,
+    "金属・工芸素材": 32
+  },
+  "reviewRequired": 675,
+  "missingReadings": 0,
+  "missingNormalizedKeys": 0,
+  "idMapping": [
+    {
+      "source": "ND-0001",
+      "output": "ND-0001"
+    },
+    {
+      "source": "ND-0002",
+      "output": "ND-0002"
+    },
+    {
+      "source": "ND-0003",
+      "output": "ND-0003"
+    },
+    {
+      "source": "ND-0004",
+      "output": "ND-0004"
+    },
+    {
+      "source": "ND-0005",
+      "output": "ND-0005"
+    },
+    {
+      "source": "ND-0006",
+      "output": "ND-0006"
+    },
+    {
+      "source": "ND-0007",
+      "output": "ND-0007"
+    },
+    {
+      "source": "ND-0008",
+      "output": "ND-0008"
+    },
+    {
+      "source": "ND-0009",
+      "output": "ND-0009"
+    },
+    {
+      "source": "ND-0010",
+      "output": "ND-0010"
+    },
+    {
+      "source": "ND-0011",
+      "output": "ND-0011"
+    },
+    {
+      "source": "ND-0012",
+      "output": "ND-0012"
+    },
+    {
+      "source": "ND-0013",
+      "output": "ND-0013"
+    },
+    {
+      "source": "ND-0014",
+      "output": "ND-0014"
+    },
+    {
+      "source": "ND-0015",
+      "output": "ND-0015"
+    },
+    {
+      "source": "ND-0016",
+      "output": "ND-0016"
+    },
+    {
+      "source": "ND-0017",
+      "output": "ND-0017"
+    },
+    {
+      "source": "ND-0018",
+      "output": "ND-0018"
+    },
+    {
+      "source": "ND-0019",
+      "output": "ND-0019"
+    },
+    {
+      "source": "ND-0020",
+      "output": "ND-0020"
+    },
+    {
+      "source": "ND-0021",
+      "output": "ND-0021"
+    },
+    {
+      "source": "ND-0022",
+      "output": "ND-0022"
+    },
+    {
+      "source": "ND-0023",
+      "output": "ND-0023"
+    },
+    {
+      "source": "ND-0024",
+      "output": "ND-0024"
+    },
+    {
+      "source": "ND-0025",
+      "output": "ND-0025"
+    },
+    {
+      "source": "ND-0026",
+      "output": "ND-0026"
+    },
+    {
+      "source": "ND-0027",
+      "output": "ND-0027"
+    },
+    {
+      "source": "ND-0028",
+      "output": "ND-0028"
+    },
+    {
+      "source": "ND-0029",
+      "output": "ND-0029"
+    },
+    {
+      "source": "ND-0030",
+      "output": "ND-0030"
+    },
+    {
+      "source": "ND-0031",
+      "output": "ND-0031"
+    },
+    {
+      "source": "ND-0032",
+      "output": "ND-0032"
+    },
+    {
+      "source": "ND-0033",
+      "output": "ND-0033"
+    },
+    {
+      "source": "ND-0034",
+      "output": "ND-0034"
+    },
+    {
+      "source": "ND-0035",
+      "output": "ND-0035"
+    },
+    {
+      "source": "ND-0036",
+      "output": "ND-0036"
+    },
+    {
+      "source": "ND-0037",
+      "output": "ND-0037"
+    },
+    {
+      "source": "ND-0038",
+      "output": "ND-0038"
+    },
+    {
+      "source": "ND-0039",
+      "output": "ND-0039"
+    },
+    {
+      "source": "ND-0040",
+      "output": "ND-0040"
+    },
+    {
+      "source": "ND-0041",
+      "output": "ND-0041"
+    },
+    {
+      "source": "ND-0042",
+      "output": "ND-0042"
+    },
+    {
+      "source": "ND-0043",
+      "output": "ND-0043"
+    },
+    {
+      "source": "ND-0044",
+      "output": "ND-0044"
+    },
+    {
+      "source": "ND-0045",
+      "output": "ND-0045"
+    },
+    {
+      "source": "ND-0046",
+      "output": "ND-0046"
+    },
+    {
+      "source": "ND-0047",
+      "output": "ND-0047"
+    },
+    {
+      "source": "ND-0048",
+      "output": "ND-0048"
+    },
+    {
+      "source": "ND-0049",
+      "output": "ND-0049"
+    },
+    {
+      "source": "ND-0050",
+      "output": "ND-0050"
+    },
+    {
+      "source": "ND-0051",
+      "output": "ND-0051"
+    },
+    {
+      "source": "ND-0052",
+      "output": "ND-0052"
+    },
+    {
+      "source": "ND-0053",
+      "output": "ND-0053"
+    },
+    {
+      "source": "ND-0054",
+      "output": "ND-0054"
+    },
+    {
+      "source": "ND-0055",
+      "output": "ND-0055"
+    },
+    {
+      "source": "ND-0056",
+      "output": "ND-0056"
+    },
+    {
+      "source": "ND-0057",
+      "output": "ND-0057"
+    },
+    {
+      "source": "ND-0058",
+      "output": "ND-0058"
+    },
+    {
+      "source": "ND-0059",
+      "output": "ND-0059"
+    },
+    {
+      "source": "ND-0060",
+      "output": "ND-0060"
+    },
+    {
+      "source": "ND-0061",
+      "output": "ND-0061"
+    },
+    {
+      "source": "ND-0062",
+      "output": "ND-0062"
+    },
+    {
+      "source": "ND-0063",
+      "output": "ND-0063"
+    },
+    {
+      "source": "ND-0064",
+      "output": "ND-0064"
+    },
+    {
+      "source": "ND-0065",
+      "output": "ND-0065"
+    },
+    {
+      "source": "ND-0066",
+      "output": "ND-0066"
+    },
+    {
+      "source": "ND-0067",
+      "output": "ND-0067"
+    },
+    {
+      "source": "ND-0068",
+      "output": "ND-0068"
+    },
+    {
+      "source": "ND-0069",
+      "output": "ND-0069"
+    },
+    {
+      "source": "ND-0070",
+      "output": "ND-0070"
+    },
+    {
+      "source": "ND-0071",
+      "output": "ND-0071"
+    },
+    {
+      "source": "ND-0072",
+      "output": "ND-0072"
+    },
+    {
+      "source": "ND-0073",
+      "output": "ND-0073"
+    },
+    {
+      "source": "ND-0074",
+      "output": "ND-0074"
+    },
+    {
+      "source": "ND-0075",
+      "output": "ND-0075"
+    },
+    {
+      "source": "ND-0076",
+      "output": "ND-0076"
+    },
+    {
+      "source": "ND-0077",
+      "output": "ND-0077"
+    },
+    {
+      "source": "ND-0078",
+      "output": "ND-0078"
+    },
+    {
+      "source": "ND-0079",
+      "output": "ND-0079"
+    },
+    {
+      "source": "ND-0080",
+      "output": "ND-0080"
+    },
+    {
+      "source": "ND-0081",
+      "output": "ND-0081"
+    },
+    {
+      "source": "ND-0082",
+      "output": "ND-0082"
+    },
+    {
+      "source": "ND-0083",
+      "output": "ND-0083"
+    },
+    {
+      "source": "ND-0084",
+      "output": "ND-0084"
+    },
+    {
+      "source": "ND-0085",
+      "output": "ND-0085"
+    },
+    {
+      "source": "ND-0086",
+      "output": "ND-0086"
+    },
+    {
+      "source": "ND-0087",
+      "output": "ND-0087"
+    },
+    {
+      "source": "ND-0088",
+      "output": "ND-0088"
+    },
+    {
+      "source": "ND-0089",
+      "output": "ND-0089"
+    },
+    {
+      "source": "ND-0090",
+      "output": "ND-0090"
+    },
+    {
+      "source": "ND-0091",
+      "output": "ND-0091"
+    },
+    {
+      "source": "ND-0092",
+      "output": "ND-0092"
+    },
+    {
+      "source": "ND-0093",
+      "output": "ND-0093"
+    },
+    {
+      "source": "ND-0094",
+      "output": "ND-0094"
+    },
+    {
+      "source": "ND-0095",
+      "output": "ND-0095"
+    },
+    {
+      "source": "ND-0096",
+      "output": "ND-0096"
+    },
+    {
+      "source": "ND-0097",
+      "output": "ND-0097"
+    },
+    {
+      "source": "ND-0098",
+      "output": "ND-0098"
+    },
+    {
+      "source": "ND-0099",
+      "output": "ND-0099"
+    },
+    {
+      "source": "ND-0100",
+      "output": "ND-0100"
+    },
+    {
+      "source": "ND-0101",
+      "output": "ND-0101"
+    },
+    {
+      "source": "ND-0102",
+      "output": "ND-0102"
+    },
+    {
+      "source": "ND-0103",
+      "output": "ND-0103"
+    },
+    {
+      "source": "ND-0104",
+      "output": "ND-0104"
+    },
+    {
+      "source": "ND-0105",
+      "output": "ND-0105"
+    },
+    {
+      "source": "ND-0106",
+      "output": "ND-0106"
+    },
+    {
+      "source": "ND-0107",
+      "output": "ND-0107"
+    },
+    {
+      "source": "ND-0108",
+      "output": "ND-0108"
+    },
+    {
+      "source": "ND-0109",
+      "output": "ND-0109"
+    },
+    {
+      "source": "ND-0110",
+      "output": "ND-0110"
+    },
+    {
+      "source": "ND-0111",
+      "output": "ND-0111"
+    },
+    {
+      "source": "ND-0112",
+      "output": "ND-0112"
+    },
+    {
+      "source": "ND-0113",
+      "output": "ND-0113"
+    },
+    {
+      "source": "ND-0114",
+      "output": "ND-0114"
+    },
+    {
+      "source": "ND-0115",
+      "output": "ND-0115"
+    },
+    {
+      "source": "ND-0116",
+      "output": "ND-0116"
+    },
+    {
+      "source": "ND-0117",
+      "output": "ND-0117"
+    },
+    {
+      "source": "ND-0118",
+      "output": "ND-0118"
+    },
+    {
+      "source": "ND-0119",
+      "output": "ND-0119"
+    },
+    {
+      "source": "ND-0120",
+      "output": "ND-0120"
+    },
+    {
+      "source": "ND-0121",
+      "output": "ND-0121"
+    },
+    {
+      "source": "ND-0122",
+      "output": "ND-0122"
+    },
+    {
+      "source": "ND-0123",
+      "output": "ND-0123"
+    },
+    {
+      "source": "ND-0124",
+      "output": "ND-0124"
+    },
+    {
+      "source": "ND-0125",
+      "output": "ND-0125"
+    },
+    {
+      "source": "ND-0126",
+      "output": "ND-0126"
+    },
+    {
+      "source": "ND-0127",
+      "output": "ND-0127"
+    },
+    {
+      "source": "ND-0128",
+      "output": "ND-0128"
+    },
+    {
+      "source": "ND-0129",
+      "output": "ND-0129"
+    },
+    {
+      "source": "ND-0130",
+      "output": "ND-0130"
+    },
+    {
+      "source": "ND-0131",
+      "output": "ND-0131"
+    },
+    {
+      "source": "ND-0132",
+      "output": "ND-0132"
+    },
+    {
+      "source": "ND-0133",
+      "output": "ND-0133"
+    },
+    {
+      "source": "ND-0134",
+      "output": "ND-0134"
+    },
+    {
+      "source": "ND-0135",
+      "output": "ND-0135"
+    },
+    {
+      "source": "ND-0136",
+      "output": "ND-0136"
+    },
+    {
+      "source": "ND-0137",
+      "output": "ND-0137"
+    },
+    {
+      "source": "ND-0138",
+      "output": "ND-0138"
+    },
+    {
+      "source": "ND-0139",
+      "output": "ND-0139"
+    },
+    {
+      "source": "ND-0140",
+      "output": "ND-0140"
+    },
+    {
+      "source": "ND-0141",
+      "output": "ND-0141"
+    },
+    {
+      "source": "ND-0142",
+      "output": "ND-0142"
+    },
+    {
+      "source": "ND-0143",
+      "output": "ND-0143"
+    },
+    {
+      "source": "ND-0144",
+      "output": "ND-0144"
+    },
+    {
+      "source": "ND-0145",
+      "output": "ND-0145"
+    },
+    {
+      "source": "ND-0146",
+      "output": "ND-0146"
+    },
+    {
+      "source": "ND-0147",
+      "output": "ND-0147"
+    },
+    {
+      "source": "ND-0148",
+      "output": "ND-0148"
+    },
+    {
+      "source": "ND-0149",
+      "output": "ND-0149"
+    },
+    {
+      "source": "ND-0150",
+      "output": "ND-0150"
+    },
+    {
+      "source": "ND-0151",
+      "output": "ND-0151"
+    },
+    {
+      "source": "ND-0152",
+      "output": "ND-0152"
+    },
+    {
+      "source": "ND-0153",
+      "output": "ND-0153"
+    },
+    {
+      "source": "ND-0154",
+      "output": "ND-0154"
+    },
+    {
+      "source": "ND-0155",
+      "output": "ND-0155"
+    },
+    {
+      "source": "ND-0156",
+      "output": "ND-0156"
+    },
+    {
+      "source": "ND-0157",
+      "output": "ND-0157"
+    },
+    {
+      "source": "ND-0158",
+      "output": "ND-0158"
+    },
+    {
+      "source": "ND-0159",
+      "output": "ND-0159"
+    },
+    {
+      "source": "ND-0160",
+      "output": "ND-0160"
+    },
+    {
+      "source": "ND-0161",
+      "output": "ND-0161"
+    },
+    {
+      "source": "ND-0162",
+      "output": "ND-0162"
+    },
+    {
+      "source": "ND-0163",
+      "output": "ND-0163"
+    },
+    {
+      "source": "ND-0164",
+      "output": "ND-0164"
+    },
+    {
+      "source": "ND-0165",
+      "output": "ND-0165"
+    },
+    {
+      "source": "ND-0166",
+      "output": "ND-0166"
+    },
+    {
+      "source": "ND-0167",
+      "output": "ND-0167"
+    },
+    {
+      "source": "ND-0168",
+      "output": "ND-0168"
+    },
+    {
+      "source": "ND-0169",
+      "output": "ND-0169"
+    },
+    {
+      "source": "ND-0170",
+      "output": "ND-0170"
+    },
+    {
+      "source": "ND-0171",
+      "output": "ND-0171"
+    },
+    {
+      "source": "ND-0172",
+      "output": "ND-0172"
+    },
+    {
+      "source": "ND-0173",
+      "output": "ND-0173"
+    },
+    {
+      "source": "ND-0174",
+      "output": "ND-0174"
+    },
+    {
+      "source": "ND-0175",
+      "output": "ND-0175"
+    },
+    {
+      "source": "ND-0176",
+      "output": "ND-0176"
+    },
+    {
+      "source": "ND-0177",
+      "output": "ND-0177"
+    },
+    {
+      "source": "ND-0178",
+      "output": "ND-0178"
+    },
+    {
+      "source": "ND-0179",
+      "output": "ND-0179"
+    },
+    {
+      "source": "ND-0180",
+      "output": "ND-0180"
+    },
+    {
+      "source": "ND-0181",
+      "output": "ND-0181"
+    },
+    {
+      "source": "ND-0182",
+      "output": "ND-0182"
+    },
+    {
+      "source": "ND-0183",
+      "output": "ND-0183"
+    },
+    {
+      "source": "ND-0184",
+      "output": "ND-0184"
+    },
+    {
+      "source": "ND-0185",
+      "output": "ND-0185"
+    },
+    {
+      "source": "ND-0186",
+      "output": "ND-0186"
+    },
+    {
+      "source": "ND-0187",
+      "output": "ND-0187"
+    },
+    {
+      "source": "ND-0188",
+      "output": "ND-0188"
+    },
+    {
+      "source": "ND-0189",
+      "output": "ND-0189"
+    },
+    {
+      "source": "ND-0190",
+      "output": "ND-0190"
+    },
+    {
+      "source": "ND-0191",
+      "output": "ND-0191"
+    },
+    {
+      "source": "ND-0192",
+      "output": "ND-0192"
+    },
+    {
+      "source": "ND-0193",
+      "output": "ND-0193"
+    },
+    {
+      "source": "ND-0194",
+      "output": "ND-0194"
+    },
+    {
+      "source": "ND-0195",
+      "output": "ND-0195"
+    },
+    {
+      "source": "ND-0196",
+      "output": "ND-0196"
+    },
+    {
+      "source": "ND-0197",
+      "output": "ND-0197"
+    },
+    {
+      "source": "ND-0198",
+      "output": "ND-0198"
+    },
+    {
+      "source": "ND-0199",
+      "output": "ND-0199"
+    },
+    {
+      "source": "ND-0200",
+      "output": "ND-0200"
+    },
+    {
+      "source": "ND-0201",
+      "output": "ND-0201"
+    },
+    {
+      "source": "ND-0202",
+      "output": "ND-0202"
+    },
+    {
+      "source": "ND-0203",
+      "output": "ND-0203"
+    },
+    {
+      "source": "ND-0204",
+      "output": "ND-0204"
+    },
+    {
+      "source": "ND-0205",
+      "output": "ND-0205"
+    },
+    {
+      "source": "ND-0206",
+      "output": "ND-0206"
+    },
+    {
+      "source": "ND-0207",
+      "output": "ND-0207"
+    },
+    {
+      "source": "ND-0208",
+      "output": "ND-0208"
+    },
+    {
+      "source": "ND-0209",
+      "output": "ND-0209"
+    },
+    {
+      "source": "ND-0210",
+      "output": "ND-0210"
+    },
+    {
+      "source": "ND-0211",
+      "output": "ND-0211"
+    },
+    {
+      "source": "ND-0212",
+      "output": "ND-0212"
+    },
+    {
+      "source": "ND-0213",
+      "output": "ND-0213"
+    },
+    {
+      "source": "ND-0214",
+      "output": "ND-0214"
+    },
+    {
+      "source": "ND-0215",
+      "output": "ND-0215"
+    },
+    {
+      "source": "ND-0216",
+      "output": "ND-0216"
+    },
+    {
+      "source": "ND-0217",
+      "output": "ND-0217"
+    },
+    {
+      "source": "ND-0218",
+      "output": "ND-0218"
+    },
+    {
+      "source": "ND-0219",
+      "output": "ND-0219"
+    },
+    {
+      "source": "ND-0220",
+      "output": "ND-0220"
+    },
+    {
+      "source": "ND-0221",
+      "output": "ND-0221"
+    },
+    {
+      "source": "ND-0222",
+      "output": "ND-0222"
+    },
+    {
+      "source": "ND-0223",
+      "output": "ND-0223"
+    },
+    {
+      "source": "ND-0224",
+      "output": "ND-0224"
+    },
+    {
+      "source": "ND-0225",
+      "output": "ND-0225"
+    },
+    {
+      "source": "ND-0226",
+      "output": "ND-0226"
+    },
+    {
+      "source": "ND-0227",
+      "output": "ND-0227"
+    },
+    {
+      "source": "ND-0228",
+      "output": "ND-0228"
+    },
+    {
+      "source": "ND-0229",
+      "output": "ND-0229"
+    },
+    {
+      "source": "ND-0230",
+      "output": "ND-0230"
+    },
+    {
+      "source": "ND-0231",
+      "output": "ND-0231"
+    },
+    {
+      "source": "ND-0232",
+      "output": "ND-0232"
+    },
+    {
+      "source": "ND-0233",
+      "output": "ND-0233"
+    },
+    {
+      "source": "ND-0234",
+      "output": "ND-0234"
+    },
+    {
+      "source": "ND-0235",
+      "output": "ND-0235"
+    },
+    {
+      "source": "ND-0236",
+      "output": "ND-0236"
+    },
+    {
+      "source": "ND-0237",
+      "output": "ND-0237"
+    },
+    {
+      "source": "ND-0238",
+      "output": "ND-0238"
+    },
+    {
+      "source": "ND-0239",
+      "output": "ND-0239"
+    },
+    {
+      "source": "ND-0240",
+      "output": "ND-0240"
+    },
+    {
+      "source": "ND-0241",
+      "output": "ND-0241"
+    },
+    {
+      "source": "ND-0242",
+      "output": "ND-0242"
+    },
+    {
+      "source": "ND-0243",
+      "output": "ND-0243"
+    },
+    {
+      "source": "ND-0244",
+      "output": "ND-0244"
+    },
+    {
+      "source": "ND-0245",
+      "output": "ND-0245"
+    },
+    {
+      "source": "ND-0246",
+      "output": "ND-0246"
+    },
+    {
+      "source": "ND-0247",
+      "output": "ND-0247"
+    },
+    {
+      "source": "ND-0248",
+      "output": "ND-0248"
+    },
+    {
+      "source": "ND-0249",
+      "output": "ND-0249"
+    },
+    {
+      "source": "ND-0250",
+      "output": "ND-0250"
+    },
+    {
+      "source": "ND-0251",
+      "output": "ND-0251"
+    },
+    {
+      "source": "ND-0252",
+      "output": "ND-0252"
+    },
+    {
+      "source": "ND-0253",
+      "output": "ND-0253"
+    },
+    {
+      "source": "ND-0254",
+      "output": "ND-0254"
+    },
+    {
+      "source": "ND-0255",
+      "output": "ND-0255"
+    },
+    {
+      "source": "ND-0256",
+      "output": "ND-0256"
+    },
+    {
+      "source": "ND-0257",
+      "output": "ND-0257"
+    },
+    {
+      "source": "ND-0258",
+      "output": "ND-0258"
+    },
+    {
+      "source": "ND-0259",
+      "output": "ND-0259"
+    },
+    {
+      "source": "ND-0260",
+      "output": "ND-0260"
+    },
+    {
+      "source": "ND-0261",
+      "output": "ND-0261"
+    },
+    {
+      "source": "ND-0262",
+      "output": "ND-0262"
+    },
+    {
+      "source": "ND-0263",
+      "output": "ND-0263"
+    },
+    {
+      "source": "ND-0264",
+      "output": "ND-0264"
+    },
+    {
+      "source": "ND-0265",
+      "output": "ND-0265"
+    },
+    {
+      "source": "ND-0266",
+      "output": "ND-0266"
+    },
+    {
+      "source": "ND-0267",
+      "output": "ND-0267"
+    },
+    {
+      "source": "ND-0268",
+      "output": "ND-0268"
+    },
+    {
+      "source": "ND-0269",
+      "output": "ND-0269"
+    },
+    {
+      "source": "ND-0270",
+      "output": "ND-0270"
+    },
+    {
+      "source": "ND-0271",
+      "output": "ND-0271"
+    },
+    {
+      "source": "ND-0272",
+      "output": "ND-0272"
+    },
+    {
+      "source": "ND-0273",
+      "output": "ND-0273"
+    },
+    {
+      "source": "ND-0274",
+      "output": "ND-0274"
+    },
+    {
+      "source": "ND-0275",
+      "output": "ND-0275"
+    },
+    {
+      "source": "ND-0276",
+      "output": "ND-0276"
+    },
+    {
+      "source": "ND-0277",
+      "output": "ND-0277"
+    },
+    {
+      "source": "ND-0278",
+      "output": "ND-0278"
+    },
+    {
+      "source": "ND-0279",
+      "output": "ND-0279"
+    },
+    {
+      "source": "ND-0280",
+      "output": "ND-0280"
+    },
+    {
+      "source": "ND-0281",
+      "output": "ND-0281"
+    },
+    {
+      "source": "ND-0282",
+      "output": "ND-0282"
+    },
+    {
+      "source": "ND-0283",
+      "output": "ND-0283"
+    },
+    {
+      "source": "ND-0284",
+      "output": "ND-0284"
+    },
+    {
+      "source": "ND-0285",
+      "output": "ND-0285"
+    },
+    {
+      "source": "ND-0286",
+      "output": "ND-0286"
+    },
+    {
+      "source": "ND-0287",
+      "output": "ND-0287"
+    },
+    {
+      "source": "ND-0288",
+      "output": "ND-0288"
+    },
+    {
+      "source": "ND-0289",
+      "output": "ND-0289"
+    },
+    {
+      "source": "ND-0290",
+      "output": "ND-0290"
+    },
+    {
+      "source": "ND-0291",
+      "output": "ND-0291"
+    },
+    {
+      "source": "ND-0292",
+      "output": "ND-0292"
+    },
+    {
+      "source": "ND-0293",
+      "output": "ND-0293"
+    },
+    {
+      "source": "ND-0294",
+      "output": "ND-0294"
+    },
+    {
+      "source": "ND-0295",
+      "output": "ND-0295"
+    },
+    {
+      "source": "ND-0296",
+      "output": "ND-0296"
+    },
+    {
+      "source": "ND-0297",
+      "output": "ND-0297"
+    },
+    {
+      "source": "ND-0298",
+      "output": "ND-0298"
+    },
+    {
+      "source": "ND-0299",
+      "output": "ND-0299"
+    },
+    {
+      "source": "ND-0300",
+      "output": "ND-0300"
+    },
+    {
+      "source": "ND-0301",
+      "output": "ND-0301"
+    },
+    {
+      "source": "ND-0302",
+      "output": "ND-0302"
+    },
+    {
+      "source": "ND-0303",
+      "output": "ND-0303"
+    },
+    {
+      "source": "ND-0304",
+      "output": "ND-0304"
+    },
+    {
+      "source": "ND-0305",
+      "output": "ND-0305"
+    },
+    {
+      "source": "ND-0306",
+      "output": "ND-0306"
+    },
+    {
+      "source": "ND-0307",
+      "output": "ND-0307"
+    },
+    {
+      "source": "ND-0308",
+      "output": "ND-0308"
+    },
+    {
+      "source": "ND-0309",
+      "output": "ND-0309"
+    },
+    {
+      "source": "ND-0310",
+      "output": "ND-0310"
+    },
+    {
+      "source": "ND-0311",
+      "output": "ND-0311"
+    },
+    {
+      "source": "ND-0312",
+      "output": "ND-0312"
+    },
+    {
+      "source": "ND-0313",
+      "output": "ND-0313"
+    },
+    {
+      "source": "ND-0314",
+      "output": "ND-0314"
+    },
+    {
+      "source": "ND-0315",
+      "output": "ND-0315"
+    },
+    {
+      "source": "ND-0316",
+      "output": "ND-0316"
+    },
+    {
+      "source": "ND-0317",
+      "output": "ND-0317"
+    },
+    {
+      "source": "ND-0318",
+      "output": "ND-0318"
+    },
+    {
+      "source": "ND-0319",
+      "output": "ND-0319"
+    },
+    {
+      "source": "ND-0320",
+      "output": "ND-0320"
+    },
+    {
+      "source": "ND-0321",
+      "output": "ND-0321"
+    },
+    {
+      "source": "ND-0322",
+      "output": "ND-0322"
+    },
+    {
+      "source": "ND-0323",
+      "output": "ND-0323"
+    },
+    {
+      "source": "ND-0324",
+      "output": "ND-0324"
+    },
+    {
+      "source": "ND-0325",
+      "output": "ND-0325"
+    },
+    {
+      "source": "ND-0326",
+      "output": "ND-0326"
+    },
+    {
+      "source": "ND-0327",
+      "output": "ND-0327"
+    },
+    {
+      "source": "ND-0328",
+      "output": "ND-0328"
+    },
+    {
+      "source": "ND-0329",
+      "output": "ND-0329"
+    },
+    {
+      "source": "ND-0330",
+      "output": "ND-0330"
+    },
+    {
+      "source": "ND-0331",
+      "output": "ND-0331"
+    },
+    {
+      "source": "ND-0332",
+      "output": "ND-0332"
+    },
+    {
+      "source": "ND-0333",
+      "output": "ND-0333"
+    },
+    {
+      "source": "ND-0334",
+      "output": "ND-0334"
+    },
+    {
+      "source": "ND-0335",
+      "output": "ND-0335"
+    },
+    {
+      "source": "ND-0336",
+      "output": "ND-0336"
+    },
+    {
+      "source": "ND-0337",
+      "output": "ND-0337"
+    },
+    {
+      "source": "ND-0338",
+      "output": "ND-0338"
+    },
+    {
+      "source": "ND-0339",
+      "output": "ND-0339"
+    },
+    {
+      "source": "ND-0340",
+      "output": "ND-0340"
+    },
+    {
+      "source": "ND-0341",
+      "output": "ND-0341"
+    },
+    {
+      "source": "ND-0342",
+      "output": "ND-0342"
+    },
+    {
+      "source": "ND-0343",
+      "output": "ND-0343"
+    },
+    {
+      "source": "ND-0344",
+      "output": "ND-0344"
+    },
+    {
+      "source": "ND-0345",
+      "output": "ND-0345"
+    },
+    {
+      "source": "ND-0346",
+      "output": "ND-0346"
+    },
+    {
+      "source": "ND-0347",
+      "output": "ND-0347"
+    },
+    {
+      "source": "ND-0348",
+      "output": "ND-0348"
+    },
+    {
+      "source": "ND-0349",
+      "output": "ND-0349"
+    },
+    {
+      "source": "ND-0350",
+      "output": "ND-0350"
+    },
+    {
+      "source": "ND-0351",
+      "output": "ND-0351"
+    },
+    {
+      "source": "ND-0352",
+      "output": "ND-0352"
+    },
+    {
+      "source": "ND-0353",
+      "output": "ND-0353"
+    },
+    {
+      "source": "ND-0354",
+      "output": "ND-0354"
+    },
+    {
+      "source": "ND-0355",
+      "output": "ND-0355"
+    },
+    {
+      "source": "ND-0356",
+      "output": "ND-0356"
+    },
+    {
+      "source": "ND-0357",
+      "output": "ND-0357"
+    },
+    {
+      "source": "ND-0358",
+      "output": "ND-0358"
+    },
+    {
+      "source": "ND-0359",
+      "output": "ND-0359"
+    },
+    {
+      "source": "ND-0360",
+      "output": "ND-0360"
+    },
+    {
+      "source": "ND-0361",
+      "output": "ND-0361"
+    },
+    {
+      "source": "ND-0362",
+      "output": "ND-0362"
+    },
+    {
+      "source": "ND-0363",
+      "output": "ND-0363"
+    },
+    {
+      "source": "ND-0364",
+      "output": "ND-0364"
+    },
+    {
+      "source": "ND-0365",
+      "output": "ND-0365"
+    },
+    {
+      "source": "ND-0366",
+      "output": "ND-0366"
+    },
+    {
+      "source": "ND-0367",
+      "output": "ND-0367"
+    },
+    {
+      "source": "ND-0368",
+      "output": "ND-0368"
+    },
+    {
+      "source": "ND-0369",
+      "output": "ND-0369"
+    },
+    {
+      "source": "ND-0370",
+      "output": "ND-0370"
+    },
+    {
+      "source": "ND-0371",
+      "output": "ND-0371"
+    },
+    {
+      "source": "ND-0372",
+      "output": "ND-0372"
+    },
+    {
+      "source": "ND-0373",
+      "output": "ND-0373"
+    },
+    {
+      "source": "ND-0374",
+      "output": "ND-0374"
+    },
+    {
+      "source": "ND-0375",
+      "output": "ND-0375"
+    },
+    {
+      "source": "ND-0376",
+      "output": "ND-0376"
+    },
+    {
+      "source": "ND-0377",
+      "output": "ND-0377"
+    },
+    {
+      "source": "ND-0378",
+      "output": "ND-0378"
+    },
+    {
+      "source": "ND-0379",
+      "output": "ND-0379"
+    },
+    {
+      "source": "ND-0380",
+      "output": "ND-0380"
+    },
+    {
+      "source": "ND-0381",
+      "output": "ND-0381"
+    },
+    {
+      "source": "ND-0382",
+      "output": "ND-0382"
+    },
+    {
+      "source": "ND-0383",
+      "output": "ND-0383"
+    },
+    {
+      "source": "ND-0384",
+      "output": "ND-0384"
+    },
+    {
+      "source": "ND-0385",
+      "output": "ND-0385"
+    },
+    {
+      "source": "ND-0386",
+      "output": "ND-0386"
+    },
+    {
+      "source": "ND-0387",
+      "output": "ND-0387"
+    },
+    {
+      "source": "ND-0388",
+      "output": "ND-0388"
+    },
+    {
+      "source": "ND-0389",
+      "output": "ND-0389"
+    },
+    {
+      "source": "NEW-0001",
+      "output": "NEW-0001"
+    },
+    {
+      "source": "NEW-0002",
+      "output": "NEW-0002"
+    },
+    {
+      "source": "NEW-0003",
+      "output": "NEW-0003"
+    },
+    {
+      "source": "NEW-0004",
+      "output": "NEW-0004"
+    },
+    {
+      "source": "NEW-0005",
+      "output": "NEW-0005"
+    },
+    {
+      "source": "NEW-0006",
+      "output": "NEW-0006"
+    },
+    {
+      "source": "NEW-0007",
+      "output": "NEW-0007"
+    },
+    {
+      "source": "NEW-0008",
+      "output": "NEW-0008"
+    },
+    {
+      "source": "NEW-0009",
+      "output": "NEW-0009"
+    },
+    {
+      "source": "NEW-0010",
+      "output": "NEW-0010"
+    },
+    {
+      "source": "NEW-0011",
+      "output": "NEW-0011"
+    },
+    {
+      "source": "NEW-0012",
+      "output": "NEW-0012"
+    },
+    {
+      "source": "NEW-0013",
+      "output": "NEW-0013"
+    },
+    {
+      "source": "NEW-0014",
+      "output": "NEW-0014"
+    },
+    {
+      "source": "NEW-0015",
+      "output": "NEW-0015"
+    },
+    {
+      "source": "NEW-0016",
+      "output": "NEW-0016"
+    },
+    {
+      "source": "NEW-0017",
+      "output": "NEW-0017"
+    },
+    {
+      "source": "NEW-0018",
+      "output": "NEW-0018"
+    },
+    {
+      "source": "NEW-0019",
+      "output": "NEW-0019"
+    },
+    {
+      "source": "NEW-0020",
+      "output": "NEW-0020"
+    },
+    {
+      "source": "NEW-0021",
+      "output": "NEW-0021"
+    },
+    {
+      "source": "NEW-0022",
+      "output": "NEW-0022"
+    },
+    {
+      "source": "NEW-0023",
+      "output": "NEW-0023"
+    },
+    {
+      "source": "NEW-0024",
+      "output": "NEW-0024"
+    },
+    {
+      "source": "NEW-0025",
+      "output": "NEW-0025"
+    },
+    {
+      "source": "NEW-0026",
+      "output": "NEW-0026"
+    },
+    {
+      "source": "NEW-0027",
+      "output": "NEW-0027"
+    },
+    {
+      "source": "NEW-0028",
+      "output": "NEW-0028"
+    },
+    {
+      "source": "NEW-0029",
+      "output": "NEW-0029"
+    },
+    {
+      "source": "NEW-0030",
+      "output": "NEW-0030"
+    },
+    {
+      "source": "NEW-0031",
+      "output": "NEW-0031"
+    },
+    {
+      "source": "NEW-0032",
+      "output": "NEW-0032"
+    },
+    {
+      "source": "NEW-0033",
+      "output": "NEW-0033"
+    },
+    {
+      "source": "NEW-0034",
+      "output": "NEW-0034"
+    },
+    {
+      "source": "NEW-0035",
+      "output": "NEW-0035"
+    },
+    {
+      "source": "NEW-0036",
+      "output": "NEW-0036"
+    },
+    {
+      "source": "NEW-0037",
+      "output": "NEW-0037"
+    },
+    {
+      "source": "NEW-0038",
+      "output": "NEW-0038"
+    },
+    {
+      "source": "NEW-0039",
+      "output": "NEW-0039"
+    },
+    {
+      "source": "NEW-0040",
+      "output": "NEW-0040"
+    },
+    {
+      "source": "NEW-0041",
+      "output": "NEW-0041"
+    },
+    {
+      "source": "NEW-0042",
+      "output": "NEW-0042"
+    },
+    {
+      "source": "NEW-0043",
+      "output": "NEW-0043"
+    },
+    {
+      "source": "NEW-0044",
+      "output": "NEW-0044"
+    },
+    {
+      "source": "NEW-0045",
+      "output": "NEW-0045"
+    },
+    {
+      "source": "NEW-0046",
+      "output": "NEW-0046"
+    },
+    {
+      "source": "NEW-0047",
+      "output": "NEW-0047"
+    },
+    {
+      "source": "NEW-0048",
+      "output": "NEW-0048"
+    },
+    {
+      "source": "NEW-0049",
+      "output": "NEW-0049"
+    },
+    {
+      "source": "NEW-0050",
+      "output": "NEW-0050"
+    },
+    {
+      "source": "NEW-0051",
+      "output": "NEW-0051"
+    },
+    {
+      "source": "NEW-0052",
+      "output": "NEW-0052"
+    },
+    {
+      "source": "NEW-0053",
+      "output": "NEW-0053"
+    },
+    {
+      "source": "NEW-0054",
+      "output": "NEW-0054"
+    },
+    {
+      "source": "NEW-0055",
+      "output": "NEW-0055"
+    },
+    {
+      "source": "NEW-0056",
+      "output": "NEW-0056"
+    },
+    {
+      "source": "NEW-0057",
+      "output": "NEW-0057"
+    },
+    {
+      "source": "NEW-0058",
+      "output": "NEW-0058"
+    },
+    {
+      "source": "NEW-0059",
+      "output": "NEW-0059"
+    },
+    {
+      "source": "NEW-0060",
+      "output": "NEW-0060"
+    },
+    {
+      "source": "NEW-0061",
+      "output": "NEW-0061"
+    },
+    {
+      "source": "NEW-0062",
+      "output": "NEW-0062"
+    },
+    {
+      "source": "NEW-0063",
+      "output": "NEW-0063"
+    },
+    {
+      "source": "NEW-0064",
+      "output": "NEW-0064"
+    },
+    {
+      "source": "NEW-0065",
+      "output": "NEW-0065"
+    },
+    {
+      "source": "NEW-0066",
+      "output": "NEW-0066"
+    },
+    {
+      "source": "NEW-0067",
+      "output": "NEW-0067"
+    },
+    {
+      "source": "NEW-0068",
+      "output": "NEW-0068"
+    },
+    {
+      "source": "NEW-0069",
+      "output": "NEW-0069"
+    },
+    {
+      "source": "NEW-0070",
+      "output": "NEW-0070"
+    },
+    {
+      "source": "NEW-0071",
+      "output": "NEW-0071"
+    },
+    {
+      "source": "NEW-0072",
+      "output": "NEW-0072"
+    },
+    {
+      "source": "NEW-0073",
+      "output": "NEW-0073"
+    },
+    {
+      "source": "NEW-0074",
+      "output": "NEW-0074"
+    },
+    {
+      "source": "NEW-0075",
+      "output": "NEW-0075"
+    },
+    {
+      "source": "NEW-0076",
+      "output": "NEW-0076"
+    },
+    {
+      "source": "NEW-0077",
+      "output": "NEW-0077"
+    },
+    {
+      "source": "NEW-0078",
+      "output": "NEW-0078"
+    },
+    {
+      "source": "NEW-0079",
+      "output": "NEW-0079"
+    },
+    {
+      "source": "NEW-0080",
+      "output": "NEW-0080"
+    },
+    {
+      "source": "NEW-0081",
+      "output": "NEW-0081"
+    },
+    {
+      "source": "NEW-0082",
+      "output": "NEW-0082"
+    },
+    {
+      "source": "NEW-0083",
+      "output": "NEW-0083"
+    },
+    {
+      "source": "NEW-0084",
+      "output": "NEW-0084"
+    },
+    {
+      "source": "NEW-0085",
+      "output": "NEW-0085"
+    },
+    {
+      "source": "NEW-0086",
+      "output": "NEW-0086"
+    },
+    {
+      "source": "NEW-0087",
+      "output": "NEW-0087"
+    },
+    {
+      "source": "NEW-0088",
+      "output": "NEW-0088"
+    },
+    {
+      "source": "NEW-0089",
+      "output": "NEW-0089"
+    },
+    {
+      "source": "NEW-0090",
+      "output": "NEW-0090"
+    },
+    {
+      "source": "NEW-0091",
+      "output": "NEW-0091"
+    },
+    {
+      "source": "NEW-0092",
+      "output": "NEW-0092"
+    },
+    {
+      "source": "NEW-0093",
+      "output": "NEW-0093"
+    },
+    {
+      "source": "NEW-0094",
+      "output": "NEW-0094"
+    },
+    {
+      "source": "NEW-0095",
+      "output": "NEW-0095"
+    },
+    {
+      "source": "NEW-0096",
+      "output": "NEW-0096"
+    },
+    {
+      "source": "NEW-0097",
+      "output": "NEW-0097"
+    },
+    {
+      "source": "NEW-0098",
+      "output": "NEW-0098"
+    },
+    {
+      "source": "NEW-0099",
+      "output": "NEW-0099"
+    },
+    {
+      "source": "NEW-0100",
+      "output": "NEW-0100"
+    },
+    {
+      "source": "NEW-0101",
+      "output": "NEW-0101"
+    },
+    {
+      "source": "NEW-0102",
+      "output": "NEW-0102"
+    },
+    {
+      "source": "NEW-0103",
+      "output": "NEW-0103"
+    },
+    {
+      "source": "NEW-0104",
+      "output": "NEW-0104"
+    },
+    {
+      "source": "NEW-0105",
+      "output": "NEW-0105"
+    },
+    {
+      "source": "NEW-0106",
+      "output": "NEW-0106"
+    },
+    {
+      "source": "NEW-0107",
+      "output": "NEW-0107"
+    },
+    {
+      "source": "NEW-0108",
+      "output": "NEW-0108"
+    },
+    {
+      "source": "NEW-0109",
+      "output": "NEW-0109"
+    },
+    {
+      "source": "NEW-0110",
+      "output": "NEW-0110"
+    },
+    {
+      "source": "NEW-0111",
+      "output": "NEW-0111"
+    },
+    {
+      "source": "NEW-0112",
+      "output": "NEW-0112"
+    },
+    {
+      "source": "NEW-0113",
+      "output": "NEW-0113"
+    },
+    {
+      "source": "NEW-0114",
+      "output": "NEW-0114"
+    },
+    {
+      "source": "NEW-0115",
+      "output": "NEW-0115"
+    },
+    {
+      "source": "NEW-0116",
+      "output": "NEW-0116"
+    },
+    {
+      "source": "NEW-0117",
+      "output": "NEW-0117"
+    },
+    {
+      "source": "NEW-0118",
+      "output": "NEW-0118"
+    },
+    {
+      "source": "NEW-0119",
+      "output": "NEW-0119"
+    },
+    {
+      "source": "NEW-0120",
+      "output": "NEW-0120"
+    },
+    {
+      "source": "NEW-0121",
+      "output": "NEW-0121"
+    },
+    {
+      "source": "NEW-0122",
+      "output": "NEW-0122"
+    },
+    {
+      "source": "NEW-0123",
+      "output": "NEW-0123"
+    },
+    {
+      "source": "NEW-0124",
+      "output": "NEW-0124"
+    },
+    {
+      "source": "NEW-0125",
+      "output": "NEW-0125"
+    },
+    {
+      "source": "NEW-0126",
+      "output": "NEW-0126"
+    },
+    {
+      "source": "NEW-0127",
+      "output": "NEW-0127"
+    },
+    {
+      "source": "NEW-0128",
+      "output": "NEW-0128"
+    },
+    {
+      "source": "NEW-0129",
+      "output": "NEW-0129"
+    },
+    {
+      "source": "NEW-0130",
+      "output": "NEW-0130"
+    },
+    {
+      "source": "NEW-0131",
+      "output": "NEW-0131"
+    },
+    {
+      "source": "NEW-0132",
+      "output": "NEW-0132"
+    },
+    {
+      "source": "NEW-0133",
+      "output": "NEW-0133"
+    },
+    {
+      "source": "NEW-0134",
+      "output": "NEW-0134"
+    },
+    {
+      "source": "NEW-0135",
+      "output": "NEW-0135"
+    },
+    {
+      "source": "NEW-0136",
+      "output": "NEW-0136"
+    },
+    {
+      "source": "NEW-0137",
+      "output": "NEW-0137"
+    },
+    {
+      "source": "NEW-0138",
+      "output": "NEW-0138"
+    },
+    {
+      "source": "NEW-0139",
+      "output": "NEW-0139"
+    },
+    {
+      "source": "NEW-0140",
+      "output": "NEW-0140"
+    },
+    {
+      "source": "NEW-0141",
+      "output": "NEW-0141"
+    },
+    {
+      "source": "NEW-0142",
+      "output": "NEW-0142"
+    },
+    {
+      "source": "NEW-0143",
+      "output": "NEW-0143"
+    },
+    {
+      "source": "NEW-0144",
+      "output": "NEW-0144"
+    },
+    {
+      "source": "NEW-0145",
+      "output": "NEW-0145"
+    },
+    {
+      "source": "NEW-0146",
+      "output": "NEW-0146"
+    },
+    {
+      "source": "NEW-0147",
+      "output": "NEW-0147"
+    },
+    {
+      "source": "NEW-0148",
+      "output": "NEW-0148"
+    },
+    {
+      "source": "NEW-0149",
+      "output": "NEW-0149"
+    },
+    {
+      "source": "NEW-0150",
+      "output": "NEW-0150"
+    },
+    {
+      "source": "NEW-0151",
+      "output": "NEW-0151"
+    },
+    {
+      "source": "NEW-0152",
+      "output": "NEW-0152"
+    },
+    {
+      "source": "NEW-0153",
+      "output": "NEW-0153"
+    },
+    {
+      "source": "NEW-0154",
+      "output": "NEW-0154"
+    },
+    {
+      "source": "NEW-0155",
+      "output": "NEW-0155"
+    },
+    {
+      "source": "NEW-0156",
+      "output": "NEW-0156"
+    },
+    {
+      "source": "NEW-0157",
+      "output": "NEW-0157"
+    },
+    {
+      "source": "NEW-0158",
+      "output": "NEW-0158"
+    },
+    {
+      "source": "NEW-0159",
+      "output": "NEW-0159"
+    },
+    {
+      "source": "NEW-0160",
+      "output": "NEW-0160"
+    },
+    {
+      "source": "NEW-0161",
+      "output": "NEW-0161"
+    },
+    {
+      "source": "NEW-0162",
+      "output": "NEW-0162"
+    },
+    {
+      "source": "NEW-0163",
+      "output": "NEW-0163"
+    },
+    {
+      "source": "NEW-0164",
+      "output": "NEW-0164"
+    },
+    {
+      "source": "NEW-0165",
+      "output": "NEW-0165"
+    },
+    {
+      "source": "NEW-0166",
+      "output": "NEW-0166"
+    },
+    {
+      "source": "NEW-0167",
+      "output": "NEW-0167"
+    },
+    {
+      "source": "NEW-0168",
+      "output": "NEW-0168"
+    },
+    {
+      "source": "NEW-0169",
+      "output": "NEW-0169"
+    },
+    {
+      "source": "NEW-0170",
+      "output": "NEW-0170"
+    },
+    {
+      "source": "NEW-0171",
+      "output": "NEW-0171"
+    },
+    {
+      "source": "NEW-0172",
+      "output": "NEW-0172"
+    },
+    {
+      "source": "NEW-0173",
+      "output": "NEW-0173"
+    },
+    {
+      "source": "NEW-0174",
+      "output": "NEW-0174"
+    },
+    {
+      "source": "NEW-0175",
+      "output": "NEW-0175"
+    },
+    {
+      "source": "NEW-0176",
+      "output": "NEW-0176"
+    },
+    {
+      "source": "NEW-0177",
+      "output": "NEW-0177"
+    },
+    {
+      "source": "NEW-0178",
+      "output": "NEW-0178"
+    },
+    {
+      "source": "NEW-0179",
+      "output": "NEW-0179"
+    },
+    {
+      "source": "NEW-0180",
+      "output": "NEW-0180"
+    },
+    {
+      "source": "NEW-0181",
+      "output": "NEW-0181"
+    },
+    {
+      "source": "NEW-0182",
+      "output": "NEW-0182"
+    },
+    {
+      "source": "NEW-0183",
+      "output": "NEW-0183"
+    },
+    {
+      "source": "NEW-0184",
+      "output": "NEW-0184"
+    },
+    {
+      "source": "NEW-0185",
+      "output": "NEW-0185"
+    },
+    {
+      "source": "NEW-0186",
+      "output": "NEW-0186"
+    },
+    {
+      "source": "NEW-0187",
+      "output": "NEW-0187"
+    },
+    {
+      "source": "NEW-0188",
+      "output": "NEW-0188"
+    },
+    {
+      "source": "NEW-0189",
+      "output": "NEW-0189"
+    },
+    {
+      "source": "NEW-0190",
+      "output": "NEW-0190"
+    },
+    {
+      "source": "NEW-0191",
+      "output": "NEW-0191"
+    },
+    {
+      "source": "NEW-0192",
+      "output": "NEW-0192"
+    },
+    {
+      "source": "NEW-0193",
+      "output": "NEW-0193"
+    },
+    {
+      "source": "NEW-0194",
+      "output": "NEW-0194"
+    },
+    {
+      "source": "NEW-0195",
+      "output": "NEW-0195"
+    },
+    {
+      "source": "NEW-0196",
+      "output": "NEW-0196"
+    },
+    {
+      "source": "NEW-0197",
+      "output": "NEW-0197"
+    },
+    {
+      "source": "NEW-0198",
+      "output": "NEW-0198"
+    },
+    {
+      "source": "NEW-0199",
+      "output": "NEW-0199"
+    },
+    {
+      "source": "NEW-0200",
+      "output": "NEW-0200"
+    },
+    {
+      "source": "NEW-0201",
+      "output": "NEW-0201"
+    },
+    {
+      "source": "NEW-0202",
+      "output": "NEW-0202"
+    },
+    {
+      "source": "NEW-0203",
+      "output": "NEW-0203"
+    },
+    {
+      "source": "NEW-0204",
+      "output": "NEW-0204"
+    },
+    {
+      "source": "NEW-0205",
+      "output": "NEW-0205"
+    },
+    {
+      "source": "NEW-0206",
+      "output": "NEW-0206"
+    },
+    {
+      "source": "NEW-0207",
+      "output": "NEW-0207"
+    },
+    {
+      "source": "NEW-0208",
+      "output": "NEW-0208"
+    },
+    {
+      "source": "NEW-0209",
+      "output": "NEW-0209"
+    },
+    {
+      "source": "NEW-0210",
+      "output": "NEW-0210"
+    },
+    {
+      "source": "NEW-0211",
+      "output": "NEW-0211"
+    },
+    {
+      "source": "NEW-0212",
+      "output": "NEW-0212"
+    },
+    {
+      "source": "NEW-0213",
+      "output": "NEW-0213"
+    },
+    {
+      "source": "NEW-0214",
+      "output": "NEW-0214"
+    },
+    {
+      "source": "NEW-0215",
+      "output": "NEW-0215"
+    },
+    {
+      "source": "NEW-0216",
+      "output": "NEW-0216"
+    },
+    {
+      "source": "NEW-0217",
+      "output": "NEW-0217"
+    },
+    {
+      "source": "NEW-0218",
+      "output": "NEW-0218"
+    },
+    {
+      "source": "NEW-0219",
+      "output": "NEW-0219"
+    },
+    {
+      "source": "NEW-0220",
+      "output": "NEW-0220"
+    },
+    {
+      "source": "NEW-0221",
+      "output": "NEW-0221"
+    },
+    {
+      "source": "NEW-0222",
+      "output": "NEW-0222"
+    },
+    {
+      "source": "NEW-0223",
+      "output": "NEW-0223"
+    },
+    {
+      "source": "NEW-0224",
+      "output": "NEW-0224"
+    },
+    {
+      "source": "NEW-0225",
+      "output": "NEW-0225"
+    },
+    {
+      "source": "NEW-0226",
+      "output": "NEW-0226"
+    },
+    {
+      "source": "NEW-0227",
+      "output": "NEW-0227"
+    },
+    {
+      "source": "NEW-0228",
+      "output": "NEW-0228"
+    },
+    {
+      "source": "NEW-0229",
+      "output": "NEW-0229"
+    },
+    {
+      "source": "NEW-0230",
+      "output": "NEW-0230"
+    },
+    {
+      "source": "NEW-0231",
+      "output": "NEW-0231"
+    },
+    {
+      "source": "NEW-0232",
+      "output": "NEW-0232"
+    },
+    {
+      "source": "NEW-0233",
+      "output": "NEW-0233"
+    },
+    {
+      "source": "NEW-0234",
+      "output": "NEW-0234"
+    },
+    {
+      "source": "NEW-0235",
+      "output": "NEW-0235"
+    },
+    {
+      "source": "NEW-0236",
+      "output": "NEW-0236"
+    },
+    {
+      "source": "NEW-0237",
+      "output": "NEW-0237"
+    },
+    {
+      "source": "NEW-0238",
+      "output": "NEW-0238"
+    },
+    {
+      "source": "NEW-0239",
+      "output": "NEW-0239"
+    },
+    {
+      "source": "NEW-0240",
+      "output": "NEW-0240"
+    },
+    {
+      "source": "NEW-0241",
+      "output": "NEW-0241"
+    },
+    {
+      "source": "NEW-0242",
+      "output": "NEW-0242"
+    },
+    {
+      "source": "NEW-0243",
+      "output": "NEW-0243"
+    },
+    {
+      "source": "NEW-0244",
+      "output": "NEW-0244"
+    },
+    {
+      "source": "NEW-0245",
+      "output": "NEW-0245"
+    },
+    {
+      "source": "NEW-0246",
+      "output": "NEW-0246"
+    },
+    {
+      "source": "NEW-0247",
+      "output": "NEW-0247"
+    },
+    {
+      "source": "NEW-0248",
+      "output": "NEW-0248"
+    },
+    {
+      "source": "NEW-0249",
+      "output": "NEW-0249"
+    },
+    {
+      "source": "NEW-0250",
+      "output": "NEW-0250"
+    },
+    {
+      "source": "NEW-0251",
+      "output": "NEW-0251"
+    },
+    {
+      "source": "NEW-0252",
+      "output": "NEW-0252"
+    },
+    {
+      "source": "NEW-0253",
+      "output": "NEW-0253"
+    },
+    {
+      "source": "NEW-0254",
+      "output": "NEW-0254"
+    },
+    {
+      "source": "NEW-0255",
+      "output": "NEW-0255"
+    },
+    {
+      "source": "NEW-0256",
+      "output": "NEW-0256"
+    },
+    {
+      "source": "NEW-0257",
+      "output": "NEW-0257"
+    },
+    {
+      "source": "NEW-0258",
+      "output": "NEW-0258"
+    },
+    {
+      "source": "NEW-0259",
+      "output": "NEW-0259"
+    },
+    {
+      "source": "NEW-0260",
+      "output": "NEW-0260"
+    },
+    {
+      "source": "NEW-0261",
+      "output": "NEW-0261"
+    },
+    {
+      "source": "NEW-0262",
+      "output": "NEW-0262"
+    },
+    {
+      "source": "NEW-0263",
+      "output": "NEW-0263"
+    },
+    {
+      "source": "NEW-0264",
+      "output": "NEW-0264"
+    },
+    {
+      "source": "SUP-001",
+      "output": "SUP-001"
+    },
+    {
+      "source": "SUP-002",
+      "output": "SUP-002"
+    },
+    {
+      "source": "SUP-003",
+      "output": "SUP-003"
+    },
+    {
+      "source": "SUP-004",
+      "output": "SUP-004"
+    },
+    {
+      "source": "SUP-005",
+      "output": "SUP-005"
+    },
+    {
+      "source": "SUP-006",
+      "output": "SUP-006"
+    },
+    {
+      "source": "SUP-007",
+      "output": "SUP-007"
+    },
+    {
+      "source": "SUP-008",
+      "output": "SUP-008"
+    },
+    {
+      "source": "SUP-009",
+      "output": "SUP-009"
+    },
+    {
+      "source": "SUP-010",
+      "output": "SUP-010"
+    },
+    {
+      "source": "SUP-011",
+      "output": "SUP-011"
+    },
+    {
+      "source": "SUP-012",
+      "output": "SUP-012"
+    },
+    {
+      "source": "SUP-013",
+      "output": "SUP-013"
+    },
+    {
+      "source": "SUP-014",
+      "output": "SUP-014"
+    },
+    {
+      "source": "SUP-015",
+      "output": "SUP-015"
+    },
+    {
+      "source": "SUP-016",
+      "output": "SUP-016"
+    },
+    {
+      "source": "SUP-017",
+      "output": "SUP-017"
+    },
+    {
+      "source": "SUP-018",
+      "output": "SUP-018"
+    },
+    {
+      "source": "SUP-019",
+      "output": "SUP-019"
+    },
+    {
+      "source": "SUP-020",
+      "output": "SUP-020"
+    },
+    {
+      "source": "SUP-021",
+      "output": "SUP-021"
+    },
+    {
+      "source": "SUP-022",
+      "output": "SUP-022"
+    }
+  ],
+  "duplicateDisplays": {
+    "時雨": [
+      "NEW-0019",
+      "NEW-0152"
+    ],
+    "霰": [
+      "NEW-0137",
+      "NEW-0193"
+    ],
+    "青海波": [
+      "NEW-0169",
+      "NEW-0225"
+    ]
+  },
+  "corrections": [
+    {
+      "id": "SUP-017",
+      "reason": "昆虫候補に鳥類目録が設定されているため、参考リンクから除外。原出典はrawSourceおよび原本CSVに保持。名称・読みは未修正。",
+      "changes": {
+        "source.url": "",
+        "source.note": "原記録の鳥類目録はこの昆虫の名称・読み・漢字表記の根拠に使用しません。適切な個別出典は未確認です。"
+      }
+    },
+    {
+      "id": "SUP-018",
+      "reason": "昆虫候補に鳥類目録が設定されているため、参考リンクから除外。原出典はrawSourceおよび原本CSVに保持。名称・読みは未修正。",
+      "changes": {
+        "source.url": "",
+        "source.note": "原記録の鳥類目録はこの昆虫の名称・読み・漢字表記の根拠に使用しません。適切な個別出典は未確認です。"
+      }
+    },
+    {
+      "id": "SUP-019",
+      "reason": "昆虫候補に鳥類目録が設定されているため、参考リンクから除外。原出典はrawSourceおよび原本CSVに保持。名称・読みは未修正。",
+      "changes": {
+        "source.url": "",
+        "source.note": "原記録の鳥類目録はこの昆虫の名称・読み・漢字表記の根拠に使用しません。適切な個別出典は未確認です。"
+      }
+    },
+    {
+      "id": "SUP-020",
+      "reason": "昆虫候補に鳥類目録が設定されているため、参考リンクから除外。原出典はrawSourceおよび原本CSVに保持。名称・読みは未修正。",
+      "changes": {
+        "source.url": "",
+        "source.note": "原記録の鳥類目録はこの昆虫の名称・読み・漢字表記の根拠に使用しません。適切な個別出典は未確認です。"
+      }
+    },
+    {
+      "id": "SUP-021",
+      "reason": "昆虫候補に鳥類目録が設定されているため、参考リンクから除外。原出典はrawSourceおよび原本CSVに保持。名称・読みは未修正。",
+      "changes": {
+        "source.url": "",
+        "source.note": "原記録の鳥類目録はこの昆虫の名称・読み・漢字表記の根拠に使用しません。適切な個別出典は未確認です。"
+      }
+    },
+    {
+      "id": "SUP-022",
+      "reason": "昆虫候補に鳥類目録が設定されているため、参考リンクから除外。原出典はrawSourceおよび原本CSVに保持。名称・読みは未修正。",
+      "changes": {
+        "source.url": "",
+        "source.note": "原記録の鳥類目録はこの昆虫の名称・読み・漢字表記の根拠に使用しません。適切な個別出典は未確認です。"
+      }
+    }
+  ],
+  "notes": [
+    "原本CSVはバイト列を変更せず保持。名称・読み・由来は修正していない。",
+    "用途フラグは全件継承。ND389件のname=0も一覧と直接選択に残す。",
+    "原本HOM群は同表記別義を含むためrelatedGroupUnconfirmedに保存。canonicalGroupは独立ID。",
+    "SUP全22件の異表記リンクは未確定。全675件の個別出典照合は未実施。"
+  ]
+}
