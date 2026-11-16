@@ -3,19 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>名前辞典 | 創作OCメーカー v2.0</title>
+<title>名前辞典 | 創作OCメーカー v2.1</title>
 <link rel="icon" href="./icons/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <link rel="stylesheet" href="./dictionary.css">
 <link rel="stylesheet" href="./css/studio.css">
+<link rel="stylesheet" href="./css/word-naming.css">
 <script src="./js/dictionary-core.js" defer></script>
 <script src="./js/dictionary-page.js" defer></script>
 </head>
 <body><main class="wrap">
-<header><p class="eyebrow">創作OCメーカー v2.0</p><h1>名前辞典</h1><p>自然や古典のことばから、キャラクターの種を探す。</p></header>
+<header><p class="eyebrow">創作OCメーカー v2.1</p><h1>名前辞典</h1><p>自然や古典のことばから、キャラクターの種を探す。</p></header>
 <div id="studioNav" data-page="dictionary"></div>
 <script src="./js/studio/nav.js"></script>
 <nav class="site-nav st-subnav" aria-label="画面切り替え"><a href="./index.html">ガチャ</a><a href="./dictionary.html" aria-current="page">名前辞典</a></nav>
+<div class="wn-modes" id="wnModes" role="tablist" aria-label="名前辞典のモード">
+<button type="button" role="tab" id="modeFindBtn" aria-controls="modeFind" aria-selected="true">名前を探す</button>
+<button type="button" role="tab" id="modeWordsBtn" aria-controls="modeWords" aria-selected="false" tabindex="-1">言葉から名付け</button>
+</div>
+<div id="modeFind" role="tabpanel" aria-labelledby="modeFindBtn">
 <p id="loadStatus" role="status">辞典を読み込んでいます…</p>
 <div id="loadError" role="alert" hidden><p>名前辞典を読み込めませんでした。接続を確認して再読み込みしてください。</p><button id="retry" type="button">再読み込み</button></div>
 <p id="storageWarning" role="status" hidden></p>
@@ -40,10 +46,40 @@
 <button id="more" type="button" hidden>もっと見る</button>
 <p id="actionStatus" role="status" aria-live="polite"></p>
 <section id="copyFallback" class="panel" hidden><label for="copyText">自動コピーできませんでした。選択してコピーしてください。</label><textarea id="copyText" readonly></textarea><button id="closeCopy" type="button">閉じる</button></section>
+</div>
+<section id="modeWords" role="tabpanel" aria-labelledby="modeWordsBtn" hidden>
+<p class="wn-lead">外国語の実在語をもとに、創作キャラクターの名前を考えるモードです。翻訳機能ではありません。</p>
+<p id="wnNotice" class="notice"></p>
+<p id="wnLoadStatus" role="status">言葉のデータを読み込んでいます…</p>
+<div id="wnLoadError" role="alert" hidden><p>言葉のデータを読み込めませんでした。接続を確認して再読み込みしてください。</p><button id="wnRetry" type="button">再読み込み</button></div>
+<p id="wnStorageWarning" role="status" hidden></p>
+<form id="wnFilters" class="panel" aria-label="言葉を絞り込む">
+<fieldset id="wnFilterControls" disabled>
+<label for="wnSearch">意味・テーマ・原語・読みで検索</label>
+<input id="wnSearch" type="search" placeholder="例：賛成、認める、accord、アコール" autocomplete="off">
+<fieldset><legend>言語（複数可・未選択なら全言語）</legend><div id="wnLangs" class="chips"></div></fieldset>
+<fieldset><legend>意味カテゴリ（複数可）</legend><div id="wnCategories" class="chips"></div></fieldset>
+<details><summary>ニュアンス・創作名の長さや印象で絞り込む</summary>
+<fieldset><legend>原語のニュアンス（選んだものをすべて含む語）</legend><div id="wnNuances" class="chips"></div></fieldset>
+<fieldset><legend>創作名の長さ</legend><div id="wnLengths" class="chips"></div></fieldset>
+<fieldset><legend>創作名の音の印象（編集上の提案）</legend><div id="wnImpressions" class="chips"></div></fieldset>
+</details>
+<div class="filter-bottom"><label class="check"><input id="wnFavoritesOnly" type="checkbox">お気に入りだけ</label>
+<button id="wnClear" type="button">条件をクリア</button></div>
+</fieldset></form>
+<p id="wnCount" role="status" aria-live="polite"></p>
+<p id="wnTheme" class="wn-theme" role="status" aria-live="polite"></p>
+<div id="wnResults" aria-busy="true"></div>
+<p id="wnStatus" role="status" aria-live="polite" class="wn-sr"></p>
+<section id="wnCopyFallback" class="panel" hidden><label for="wnCopyText">自動コピーできませんでした。選択してコピーしてください。</label><textarea id="wnCopyText" readonly></textarea><button id="wnCloseCopy" type="button">閉じる</button></section>
+<section class="wn-ideas-wrap" aria-labelledby="wnIdeasTitle"><h2 id="wnIdeasTitle">この作品の名前候補</h2><div id="wnIdeas"></div></section>
+</section>
 <footer>名前は創作の素材です。実在人名としての用例を示すものではありません。</footer>
 </main>
 <script src="./js/studio/core.js"></script>
 <script src="./js/studio/db.js"></script>
 <script src="./js/studio/app.js"></script>
+<script src="./js/word-naming-core.js"></script>
+<script src="./js/word-naming-page.js"></script>
 <script src="./js/studio/boot.js"></script>
 </body></html>

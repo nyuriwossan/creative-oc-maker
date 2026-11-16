@@ -1,0 +1,41 @@
+/* 言葉から名付け（名前辞典の2つ目のモード）。dictionary.css の配色変数を使う。 */
+.wn-modes{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--accent-soft);border-radius:999px;padding:4px;margin:0 0 16px}
+.wn-modes button{border:0;background:none;color:var(--accent-deep);border-radius:999px;min-height:44px;padding:0 8px;font-size:.88rem;font-weight:700;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.wn-modes button[aria-selected="true"]{background:var(--card);box-shadow:0 1px 5px rgba(45,42,51,.16)}
+#modeFind[hidden],#modeWords[hidden]{display:none}
+.wn-lead{font-size:.86rem;color:var(--sub);margin:0 2px 8px}
+.wn-theme{font-size:.8rem;color:var(--accent-deep);margin:4px 2px;min-height:0}
+.wn-theme:empty{display:none}
+.wn-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wn-empty{font-size:.86rem;color:var(--sub);border:1.5px dashed var(--line);border-radius:14px;padding:18px 16px;text-align:center;background:#FAF9F6}
+.wn-card,.wn-idea{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.wn-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:10px}
+.wn-head h2{font:1.5rem var(--serif);letter-spacing:.04em;color:var(--accent-deep);margin:0;overflow-wrap:anywhere}
+.wn-meta{font-size:.78rem;color:var(--sub);margin:0}
+.wn-origin,.wn-made{border-radius:12px;padding:12px 14px;margin-top:10px}
+.wn-origin{background:#F6F8FB;border:1px solid #DCE4EE}
+.wn-made{background:#FBF7F1;border:1px solid #EADFCF}
+.wn-origin h3,.wn-made h3{font-size:.78rem;letter-spacing:.08em;margin:0 0 8px}
+.wn-origin h3{color:#3F5878}.wn-made h3{color:#8A6D1B}
+.wn-row{font-size:.88rem;margin:6px 0;line-height:1.7;overflow-wrap:anywhere}
+.wn-label{display:block;font-size:.7rem;color:var(--sub);font-weight:700;letter-spacing:.04em}
+.wn-warn{color:#8E4257}
+.wn-id{font-size:.68rem;color:var(--sub);margin:8px 0 0}
+.wn-caution{font-size:.76rem;color:#7A5A12;background:rgba(170,140,90,.14);border-radius:8px;padding:8px 10px;margin:0 0 10px;line-height:1.6}
+.wn-cands{display:grid;gap:8px}
+.wn-cand{display:grid;grid-template-columns:1fr;gap:4px;-webkit-tap-highlight-color:transparent;text-align:left;width:100%;background:var(--card);border:1.5px solid #E3D7C4;border-radius:12px;padding:10px 12px;min-height:56px;color:var(--ink)}
+.wn-cand strong{font:1.12rem var(--serif);letter-spacing:.06em;color:var(--accent-deep)}
+.wn-cand .wn-method{font-size:.66rem;color:#8A6D1B;border:1px solid #D9C7A3;border-radius:999px;padding:1px 8px;justify-self:start}
+.wn-cand .wn-note{font-size:.76rem;color:var(--sub);line-height:1.5}
+.wn-cand.dim{opacity:.45}
+.wn-made .actions,.wn-idea .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.wn-ideas-wrap{margin-top:28px;border-top:1px solid var(--line);padding-top:8px}
+.wn-ideas-wrap h2{font:1.1rem var(--serif);letter-spacing:.08em;color:var(--accent-deep);margin:14px 2px 4px}
+.wn-idea h3{font:1.25rem var(--serif);letter-spacing:.06em;color:var(--accent-deep);margin:0 0 6px}
+.wn-editor .wn-src{background:#F6F8FB;border:1px solid #DCE4EE;border-radius:12px;padding:10px 12px;margin-bottom:12px}
+.wn-editor .wn-src p{margin:2px 0;font-size:.86rem;line-height:1.6}
+.wn-editor .wn-src-lemma{font:1.1rem var(--serif);color:var(--accent-deep)}
+.wn-editor .st-field{margin-bottom:10px}
+.wn-editor select{width:100%}
+.wn-editor .st-actions .btn-sm{min-height:44px}
+#wnLoadError,#wnStorageWarning{background:#f6ecef;border-radius:8px;padding:12px;font-size:.85rem}

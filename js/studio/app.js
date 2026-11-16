@@ -291,6 +291,12 @@ async function registerFromGacha(g,opts){
   let text="";
   try{text=typeof buildDetailText==="function"?buildDetailText(g):"";}catch(e){}
   const c=C.fromGacha(S.project.id,g,text);
+  if(g&&g.manualName){ // 「言葉から名付け」で作った名前なら、由来を名前のメモに残す
+    const idea=(S.project.nameIdeas||[]).find(x=>x.name===c.name);
+    let pending=null;try{pending=JSON.parse(sessionStorage.getItem("ocNameIdeaPending")||"null");}catch(e){}
+    if(idea)c.profile.nameNote=C.nameIdeaNote(idea);
+    else if(pending&&pending.name===c.name&&typeof pending.note==="string")c.profile.nameNote=pending.note.slice(0,3000);
+  }
   await guard(()=>DB.put("characters",c));
   S.chars.push(c);emit("chars");
   if(!(opts&&opts.quiet))toast("「"+S.project.name+"」の図鑑に登録しました");
@@ -360,6 +366,21 @@ function openProjectMenu(){
   });
 }
 
+/* 「言葉から名付け」から送られた名前を、ガチャの「この名前に設定をつける」欄に入れる */
+function applyNameIdea(){
+  let name=null;
+  try{name=new URLSearchParams(location.search).get("nameIdea");}catch(e){}
+  if(name==null||standalone())return;
+  try{const u=new URL(location.href);u.searchParams.delete("nameIdea");history.replaceState(null,"",u);}catch(e){}
+  const input=$("nameInput");name=name.trim().slice(0,input&&input.maxLength>0?input.maxLength:40);
+  if(!input||!name)return;
+  // 名前を指定できるのは既存の「設定だけ」モード。既存のボタンを押して切り替える（ガチャ本体のコードは変更しない）
+  const modeBtn=document.querySelector('#modeBtns [data-mode="settingOnly"]');
+  if(modeBtn&&!$("nameInputWrap").classList.contains("show"))modeBtn.click();
+  input.value=name;input.dispatchEvent(new Event("input",{bubbles:true}));
+  toast("名前「"+name+"」を入力欄に入れました。生成するとこの名前に設定がつきます");
+  input.scrollIntoView({block:"center"});
+}
 async function init(){
   initTabs();
   showTab(location.hash.slice(1),{silent:true});
@@ -372,6 +393,8 @@ async function init(){
   S.ready=true;
   await openProject(current);
   setStatus();
+  applyNameIdea();
+  document.dispatchEvent(new Event("ocstudio:ready"));
   if(!DB.isPersistent()){
     const n=$("studioNotice");
     if(n){n.hidden=false;n.textContent="この環境ではブラウザ保存が使えないため、図鑑などのデータはページを閉じると消えます（プライベートブラウズを解除すると保存できます）。";}

@@ -1,0 +1,23 @@
+{
+ "passed": true,
+ "checks": [
+  "dictionary untouched (675, search, favorites); two modes switch by click/keys and keep the 5 tabs; planned categories disabled",
+  "each card separates the verified source word from coined names; source links go to the right dictionary; unconfirmed pronunciation is labelled",
+  "language multi-select, category, free-text theme mapping, no fake translation, nuance, length/impression, favorites under a separate key",
+  "pick or write a name, method follows edits, save with source word + intent, re-edit, copy; user text never parsed as HTML",
+  "send to the world glossary once, with the source meaning kept",
+  "ideas are stored per project, included in backup/restore, isolated between projects; a v2.0 project without the field opens and saves normally",
+  "send to character creation fills the fixed-name field, the generated card uses it, and the encyclopedia keeps the name origin; back returns to the words mode",
+  "if the word data fails to load, the dictionary keeps working and retry recovers",
+  "iPhone-sized screens (390/320): no horizontal overflow, 44px targets, 16px inputs, touch select-edit-save"
+ ],
+ "consoleErrors": [],
+ "screenshots": [
+  "words-desktop.png",
+  "editor-desktop.png",
+  "mobile-words-top.png",
+  "mobile-words-card.png",
+  "mobile-editor.png",
+  "mobile-ideas.png"
+ ]
+}

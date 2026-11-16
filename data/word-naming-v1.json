@@ -1,0 +1,1536 @@
+{
+ "schema": "oc-word-naming",
+ "schemaVersion": 1,
+ "dataVersion": "1.0.0",
+ "stage": 1,
+ "theme": "ポジティブな意味の言葉",
+ "notice": "原語の意味は辞書で確認した内容を短く編集したものです。創作名は原語を加工した造語で、原語に実在する人名・単語であることを示しません。",
+ "languages": {
+  "fr": {
+   "label": "フランス語",
+   "dictionary": "Larousse",
+   "host": "www.larousse.fr"
+  },
+  "de": {
+   "label": "ドイツ語",
+   "dictionary": "Duden",
+   "host": "www.duden.de"
+  },
+  "it": {
+   "label": "イタリア語",
+   "dictionary": "Treccani",
+   "host": "www.treccani.it"
+  },
+  "en": {
+   "label": "英語",
+   "dictionary": "Cambridge Dictionary",
+   "host": "dictionary.cambridge.org"
+  },
+  "pt": {
+   "label": "ポルトガル語",
+   "dictionary": "Priberam",
+   "host": "dicionario.priberam.org"
+  }
+ },
+ "categories": [
+  {
+   "id": "affirm",
+   "label": "肯定・同意",
+   "status": "available",
+   "aliases": [
+    "はい",
+    "賛成",
+    "同意",
+    "うなずく",
+    "承諾",
+    "了承",
+    "肯定",
+    "合意",
+    "一致",
+    "イエス",
+    "ok",
+    "オーケー"
+   ]
+  },
+  {
+   "id": "recognize",
+   "label": "承認・認知",
+   "status": "available",
+   "aliases": [
+    "認める",
+    "承認",
+    "認知",
+    "評価",
+    "称賛",
+    "ほめる",
+    "褒める",
+    "敬意",
+    "認められる",
+    "感謝"
+   ]
+  },
+  {
+   "id": "accept",
+   "label": "受容・寛容",
+   "status": "planned",
+   "aliases": []
+  },
+  {
+   "id": "harmony",
+   "label": "調和・平和",
+   "status": "planned",
+   "aliases": []
+  },
+  {
+   "id": "hope",
+   "label": "希望・未来",
+   "status": "planned",
+   "aliases": []
+  },
+  {
+   "id": "bless",
+   "label": "祝福・幸福",
+   "status": "planned",
+   "aliases": []
+  },
+  {
+   "id": "trust",
+   "label": "信頼・誠実",
+   "status": "planned",
+   "aliases": []
+  },
+  {
+   "id": "love",
+   "label": "慈愛・優しさ",
+   "status": "planned",
+   "aliases": []
+  },
+  {
+   "id": "courage",
+   "label": "勇気・意志",
+   "status": "planned",
+   "aliases": []
+  },
+  {
+   "id": "freedom",
+   "label": "自由・解放",
+   "status": "planned",
+   "aliases": []
+  },
+  {
+   "id": "thanks",
+   "label": "感謝・称賛",
+   "status": "planned",
+   "aliases": []
+  }
+ ],
+ "nuances": {
+  "everyday": "日常的",
+  "formal": "あらたまった",
+  "official": "公的・手続き",
+  "praise": "称賛を含む",
+  "harmony": "調和を含む",
+  "gratitude": "感謝を含む",
+  "polysemy": "多義語（別の意味に注意）"
+ },
+ "methods": {
+  "kana": "原語の響きを参考にしたカタカナ化",
+  "short": "短縮形",
+  "adjust": "読みやすさのための音の調整",
+  "free": "自由編集"
+ },
+ "impressions": {
+  "soft": "やわらかい",
+  "crisp": "凛とした",
+  "bright": "明るい",
+  "calm": "落ち着いた",
+  "noble": "気品のある",
+  "strong": "力強い"
+ },
+ "words": [
+  {
+   "id": "WN-FR-0001",
+   "lemma": "oui",
+   "lang": "fr",
+   "pos": "副詞",
+   "meaningJa": "問いかけに肯定で答える語。「はい」。賛成や承認の表明にも使う。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "日常のもっとも基本的な返事。名詞として「賛成（の返事・票）」の意味でも使う。",
+   "pronunciation": {
+    "ipa": "wi",
+    "note": ""
+   },
+   "kana": {
+    "text": "ウィ",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Larousse",
+    "url": "https://www.larousse.fr/dictionnaires/francais/oui/56881"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "はい",
+    "返事",
+    "賛成"
+   ],
+   "candidates": [
+    {
+     "id": "WN-FR-0001-a",
+     "name": "ウィ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "一音で軽やか。愛称や妖精のような小さな存在に。"
+    },
+    {
+     "id": "WN-FR-0001-b",
+     "name": "ウィア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾に母音を足して名前らしくした形。明るく親しみやすい。"
+    },
+    {
+     "id": "WN-FR-0001-c",
+     "name": "ウィエル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "soft"
+     ],
+     "note": "語尾を伸ばして響きを整えた形。澄んだ印象。"
+    }
+   ]
+  },
+  {
+   "id": "WN-FR-0002",
+   "lemma": "accord",
+   "lang": "fr",
+   "pos": "名詞（男性）",
+   "meaningJa": "人や集団のあいだの一致・調和。また同意や許可、取り決め・協定。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "harmony",
+    "polysemy"
+   ],
+   "nuanceNote": "音楽の「和音」、文法の「一致」の意味もある多義語。",
+   "pronunciation": {
+    "ipa": "akɔr",
+    "note": ""
+   },
+   "kana": {
+    "text": "アコール",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Larousse",
+    "url": "https://www.larousse.fr/dictionnaires/francais/accord/479"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "一致",
+    "調和",
+    "協定",
+    "和音"
+   ],
+   "candidates": [
+    {
+     "id": "WN-FR-0002-a",
+     "name": "アコール",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "伸びやかで落ち着いた響き。調停役や楽師に。"
+    },
+    {
+     "id": "WN-FR-0002-b",
+     "name": "コール",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "前半を落とした短い形。呼びやすく凛とする。"
+    },
+    {
+     "id": "WN-FR-0002-c",
+     "name": "アコル",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "長音を詰めて引き締めた形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-FR-0003",
+   "lemma": "assentiment",
+   "lang": "fr",
+   "pos": "名詞（男性）",
+   "meaningJa": "他者の考えや提案に賛同を示すこと。同意、承認。",
+   "categories": [
+    "affirm",
+    "recognize"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "あらたまった語。うなずきなど、態度で示す同意にも使う。",
+   "pronunciation": {
+    "ipa": "asɑ̃timɑ̃",
+    "note": ""
+   },
+   "kana": {
+    "text": "アサンティマン",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Larousse",
+    "url": "https://www.larousse.fr/dictionnaires/francais/assentiment/5798"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "賛同",
+    "同意",
+    "うなずき"
+   ],
+   "candidates": [
+    {
+     "id": "WN-FR-0003-a",
+     "name": "アサンティマン",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "長く優雅な響き。称号や家名向き。"
+    },
+    {
+     "id": "WN-FR-0003-b",
+     "name": "サンティ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "中ほどを取り出した形。軽く愛らしい。"
+    },
+    {
+     "id": "WN-FR-0003-c",
+     "name": "アサント",
+     "method": "adjust",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "後半を畳んで短く整えた形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-FR-0004",
+   "lemma": "reconnaissance",
+   "lang": "fr",
+   "pos": "名詞（女性）",
+   "meaningJa": "真実・価値・正当性を認めること。また、恩を受けた相手への感謝の気持ち。",
+   "categories": [
+    "recognize"
+   ],
+   "nuances": [
+    "gratitude",
+    "polysemy"
+   ],
+   "nuanceNote": "多義語。「見分けること」「偵察」「罪を認めること」の意味もあり、文脈で印象が変わる。",
+   "pronunciation": {
+    "ipa": "rəkɔnesɑ̃s",
+    "note": ""
+   },
+   "kana": {
+    "text": "ルコネサンス",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Larousse",
+    "url": "https://www.larousse.fr/dictionnaires/francais/reconnaissance/67116"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "認める",
+    "感謝",
+    "承認"
+   ],
+   "candidates": [
+    {
+     "id": "WN-FR-0004-a",
+     "name": "ルコネサンス",
+     "method": "kana",
+     "impressions": [
+      "noble"
+     ],
+     "note": "格調のある長い響き。組織名や称号に。"
+    },
+    {
+     "id": "WN-FR-0004-b",
+     "name": "ルコネ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半だけを取った形。丸くやさしい。"
+    },
+    {
+     "id": "WN-FR-0004-c",
+     "name": "ネサン",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "後半を取った形。短く引き締まる。"
+    },
+    {
+     "id": "WN-FR-0004-d",
+     "name": "コネッサ",
+     "method": "adjust",
+     "impressions": [
+      "bright",
+      "strong"
+     ],
+     "note": "音を入れ替えて女性名風に整えた形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-DE-0001",
+   "lemma": "ja",
+   "lang": "de",
+   "pos": "不変化詞",
+   "meaningJa": "決定疑問に肯定で答える語。「はい」。強調や念押しの働きもする。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "日常語。文の途中では「たしかに」「〜だよね」のような調子を添える語としても使う。",
+   "pronunciation": {
+    "ipa": "jaː",
+    "note": ""
+   },
+   "kana": {
+    "text": "ヤー",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Duden",
+    "url": "https://www.duden.de/rechtschreibung/ja"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "はい",
+    "返事",
+    "賛成"
+   ],
+   "candidates": [
+    {
+     "id": "WN-DE-0001-a",
+     "name": "ヤー",
+     "method": "kana",
+     "impressions": [
+      "bright",
+      "strong"
+     ],
+     "note": "短く力強い一声。豪快な人物の愛称に。"
+    },
+    {
+     "id": "WN-DE-0001-b",
+     "name": "ヤーレ",
+     "method": "adjust",
+     "impressions": [
+      "bright"
+     ],
+     "note": "語尾を足して名前らしくした形。"
+    },
+    {
+     "id": "WN-DE-0001-c",
+     "name": "ヤア",
+     "method": "adjust",
+     "impressions": [
+      "soft"
+     ],
+     "note": "長音を母音に開いた形。やわらかく幼い印象。"
+    }
+   ]
+  },
+  {
+   "id": "WN-DE-0002",
+   "lemma": "Zustimmung",
+   "lang": "de",
+   "pos": "名詞（女性）",
+   "meaningJa": "賛成すること。同意、了承。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "official"
+   ],
+   "nuanceNote": "個人の賛同から、議会や保護者の正式な同意まで広く使う。",
+   "pronunciation": {
+    "ipa": "ˈtsuːʃtɪmʊŋ",
+    "note": ""
+   },
+   "kana": {
+    "text": "ツーシュティムング",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Duden",
+    "url": "https://www.duden.de/rechtschreibung/Zustimmung"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "賛成",
+    "同意",
+    "了承"
+   ],
+   "candidates": [
+    {
+     "id": "WN-DE-0002-a",
+     "name": "ツーシュティムング",
+     "method": "kana",
+     "impressions": [
+      "strong"
+     ],
+     "note": "重厚で硬質な響き。制度や組織の名に。"
+    },
+    {
+     "id": "WN-DE-0002-b",
+     "name": "シュティム",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "中心部を取り出した形。鋭く短い。"
+    },
+    {
+     "id": "WN-DE-0002-c",
+     "name": "ティムング",
+     "method": "short",
+     "impressions": [
+      "calm"
+     ],
+     "note": "後半を取った形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-DE-0003",
+   "lemma": "Anerkennung",
+   "lang": "de",
+   "pos": "名詞（女性）",
+   "meaningJa": "価値や功績を認めること。評価、称賛、敬意。また公的な承認。",
+   "categories": [
+    "recognize"
+   ],
+   "nuances": [
+    "praise",
+    "official"
+   ],
+   "nuanceNote": "「称賛・敬意」と「（国家などの）公式な承認」の二つの軸がある。",
+   "pronunciation": {
+    "ipa": null,
+    "note": "Dudenで確認できたのは強勢の位置（語頭）まで。発音記号は未確認。"
+   },
+   "kana": {
+    "text": "アンエアケヌング",
+    "basis": "unconfirmed"
+   },
+   "source": {
+    "dictionary": "Duden",
+    "url": "https://www.duden.de/rechtschreibung/Anerkennung"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "評価",
+    "称賛",
+    "敬意",
+    "承認"
+   ],
+   "candidates": [
+    {
+     "id": "WN-DE-0003-a",
+     "name": "アネルケン",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "音をなめらかにつないだ形。騎士や家名に。"
+    },
+    {
+     "id": "WN-DE-0003-b",
+     "name": "アネル",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "noble"
+     ],
+     "note": "前半を取った形。やわらかく上品。"
+    },
+    {
+     "id": "WN-DE-0003-c",
+     "name": "ケヌン",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "後半を取った形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-DE-0004",
+   "lemma": "Beifall",
+   "lang": "de",
+   "pos": "名詞（男性）",
+   "meaningJa": "拍手や歓声で示す賛意、喝采。また賛成、同意。",
+   "categories": [
+    "affirm",
+    "recognize"
+   ],
+   "nuances": [
+    "praise"
+   ],
+   "nuanceNote": "第一義は「拍手喝采」。意見が賛同を得る、という使い方もする。",
+   "pronunciation": {
+    "ipa": null,
+    "note": "発音記号は未確認。"
+   },
+   "kana": {
+    "text": "バイファル",
+    "basis": "unconfirmed"
+   },
+   "source": {
+    "dictionary": "Duden",
+    "url": "https://www.duden.de/rechtschreibung/Beifall"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "拍手",
+    "喝采",
+    "賛成"
+   ],
+   "candidates": [
+    {
+     "id": "WN-DE-0004-a",
+     "name": "バイファル",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "bright"
+     ],
+     "note": "張りのある響き。舞台人や英雄に。"
+    },
+    {
+     "id": "WN-DE-0004-b",
+     "name": "ファル",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "後半を取った短い形。"
+    },
+    {
+     "id": "WN-DE-0004-c",
+     "name": "バイファ",
+     "method": "short",
+     "impressions": [
+      "bright"
+     ],
+     "note": "語尾を落とした形。軽快。"
+    }
+   ]
+  },
+  {
+   "id": "WN-IT-0001",
+   "lemma": "sì",
+   "lang": "it",
+   "pos": "副詞",
+   "meaningJa": "肯定の返事「はい」。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "古い・文語的な用法では「このように」の意味。アクセント記号のない si は別の語（再帰代名詞）。",
+   "pronunciation": {
+    "ipa": null,
+    "note": "発音記号は未確認。"
+   },
+   "kana": {
+    "text": "シ",
+    "basis": "unconfirmed"
+   },
+   "source": {
+    "dictionary": "Treccani",
+    "url": "https://www.treccani.it/vocabolario/si/"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "はい",
+    "返事",
+    "賛成"
+   ],
+   "candidates": [
+    {
+     "id": "WN-IT-0001-a",
+     "name": "シ",
+     "method": "kana",
+     "impressions": [
+      "soft"
+     ],
+     "note": "一音の名。静かで控えめ。"
+    },
+    {
+     "id": "WN-IT-0001-b",
+     "name": "シーア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "伸ばして母音を足した形。澄んだ響き。"
+    },
+    {
+     "id": "WN-IT-0001-c",
+     "name": "シエラ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "bright"
+     ],
+     "note": "語尾を足して名前らしくした形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-IT-0002",
+   "lemma": "assenso",
+   "lang": "it",
+   "pos": "名詞（男性）",
+   "meaningJa": "賛成すること、承認。それを示す言葉やしぐさ。",
+   "categories": [
+    "affirm",
+    "recognize"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "哲学では、ある観念を真と認めて受け入れる心の働きを指す。",
+   "pronunciation": {
+    "ipa": "a's:ɛnso",
+    "note": "Treccani「Sinonimi e Contrari」の表記。"
+   },
+   "kana": {
+    "text": "アッセンソ",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Treccani",
+    "url": "https://www.treccani.it/vocabolario/assenso/"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "賛成",
+    "承認",
+    "同意"
+   ],
+   "candidates": [
+    {
+     "id": "WN-IT-0002-a",
+     "name": "アッセンソ",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "弾むような力のある響き。"
+    },
+    {
+     "id": "WN-IT-0002-b",
+     "name": "センソ",
+     "method": "short",
+     "impressions": [
+      "calm"
+     ],
+     "note": "後半を取った形。落ち着いた印象。"
+    },
+    {
+     "id": "WN-IT-0002-c",
+     "name": "アセン",
+     "method": "adjust",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "促音を外して短くした形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-IT-0003",
+   "lemma": "consenso",
+   "lang": "it",
+   "pos": "名詞（男性）",
+   "meaningJa": "意志や意見の一致。また同意・許可、好意的な評価。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "official",
+    "harmony"
+   ],
+   "nuanceNote": "法律・医療・政治など公的な文脈でよく使う（契約の合意、説明を受けたうえでの同意、支持など）。",
+   "pronunciation": {
+    "ipa": "kon'sɛnso",
+    "note": "Treccani「Sinonimi e Contrari」の表記。"
+   },
+   "kana": {
+    "text": "コンセンソ",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Treccani",
+    "url": "https://www.treccani.it/vocabolario/consenso/"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "合意",
+    "一致",
+    "同意",
+    "支持"
+   ],
+   "candidates": [
+    {
+     "id": "WN-IT-0003-a",
+     "name": "コンセンソ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "まとまりのある響き。評議会や同盟の名に。"
+    },
+    {
+     "id": "WN-IT-0003-b",
+     "name": "コンセ",
+     "method": "short",
+     "impressions": [
+      "bright",
+      "soft"
+     ],
+     "note": "前半を取った形。親しみやすい。"
+    },
+    {
+     "id": "WN-IT-0003-c",
+     "name": "コセン",
+     "method": "adjust",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "撥音をひとつ外して引き締めた形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-IT-0004",
+   "lemma": "riconoscimento",
+   "lang": "it",
+   "pos": "名詞（男性）",
+   "meaningJa": "認めること、認められること。識別・確認、権利や価値の承認。",
+   "categories": [
+    "recognize"
+   ],
+   "nuances": [
+    "official",
+    "praise",
+    "polysemy"
+   ],
+   "nuanceNote": "第一義は「人や物を見分けること」。功績への報い、表彰の意味でも使う。",
+   "pronunciation": {
+    "ipa": "rikonoʃi'mento",
+    "note": "Treccani「Sinonimi e Contrari」の表記。"
+   },
+   "kana": {
+    "text": "リコノシメント",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Treccani",
+    "url": "https://www.treccani.it/vocabolario/riconoscimento/"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "認める",
+    "承認",
+    "表彰",
+    "識別"
+   ],
+   "candidates": [
+    {
+     "id": "WN-IT-0004-a",
+     "name": "リコノシメント",
+     "method": "kana",
+     "impressions": [
+      "noble"
+     ],
+     "note": "長く流れる響き。儀式や称号に。"
+    },
+    {
+     "id": "WN-IT-0004-b",
+     "name": "リコノ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "前半を取った形。軽く呼びやすい。"
+    },
+    {
+     "id": "WN-IT-0004-c",
+     "name": "ノシメ",
+     "method": "short",
+     "impressions": [
+      "calm"
+     ],
+     "note": "中ほどを取った形。和風にも寄せられる。"
+    },
+    {
+     "id": "WN-IT-0004-d",
+     "name": "リコーノ",
+     "method": "adjust",
+     "impressions": [
+      "bright",
+      "noble"
+     ],
+     "note": "長音を入れて伸びやかにした形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-EN-0001",
+   "lemma": "yes",
+   "lang": "en",
+   "pos": "副詞",
+   "meaningJa": "同意や承諾を表す語。「はい」。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "日常語。くだけた形に yeah などがある。",
+   "pronunciation": {
+    "ipa": "jes",
+    "note": ""
+   },
+   "kana": {
+    "text": "イェス",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Cambridge Dictionary",
+    "url": "https://dictionary.cambridge.org/dictionary/english/yes"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "はい",
+    "返事",
+    "賛成"
+   ],
+   "candidates": [
+    {
+     "id": "WN-EN-0001-a",
+     "name": "イェス",
+     "method": "kana",
+     "impressions": [
+      "bright",
+      "crisp"
+     ],
+     "note": "短く明るい。表記「イエス」は別の固有名（キリスト）と重なるので避けた。"
+    },
+    {
+     "id": "WN-EN-0001-b",
+     "name": "イェシア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾に母音を足して名前らしくした形。"
+    },
+    {
+     "id": "WN-EN-0001-c",
+     "name": "エス",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "頭の半母音を落とした形。記号的で無機質な印象にもなる。"
+    }
+   ]
+  },
+  {
+   "id": "WN-EN-0002",
+   "lemma": "assent",
+   "lang": "en",
+   "pos": "名詞・動詞",
+   "meaningJa": "考え・計画・要請に対する正式な同意、承認。",
+   "categories": [
+    "affirm",
+    "recognize"
+   ],
+   "nuances": [
+    "formal",
+    "official"
+   ],
+   "nuanceNote": "フォーマルな語。英国では法案への国王の裁可（Royal Assent）にも使う。",
+   "pronunciation": {
+    "ipa": "əˈsent",
+    "note": ""
+   },
+   "kana": {
+    "text": "アセント",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Cambridge Dictionary",
+    "url": "https://dictionary.cambridge.org/dictionary/english/assent"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "同意",
+    "承認",
+    "裁可"
+   ],
+   "candidates": [
+    {
+     "id": "WN-EN-0002-a",
+     "name": "アセント",
+     "method": "kana",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "端正な響き。書記官や審判役に。"
+    },
+    {
+     "id": "WN-EN-0002-b",
+     "name": "アセン",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "語尾を落とした形。"
+    },
+    {
+     "id": "WN-EN-0002-c",
+     "name": "セント",
+     "method": "short",
+     "impressions": [
+      "calm"
+     ],
+     "note": "後半を取った形。別の英単語を連想させやすい点に注意。"
+    }
+   ]
+  },
+  {
+   "id": "WN-EN-0003",
+   "lemma": "accord",
+   "lang": "en",
+   "pos": "名詞・動詞",
+   "meaningJa": "（正式な）合意、協定。意見などの一致。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "formal",
+    "harmony"
+   ],
+   "nuanceNote": "of one's own accord で「自発的に」。動詞では敬意や待遇を「与える」意味のフォーマルな語。",
+   "pronunciation": {
+    "ipa": "əˈkɔːd",
+    "note": "英国式の発音。"
+   },
+   "kana": {
+    "text": "アコード",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Cambridge Dictionary",
+    "url": "https://dictionary.cambridge.org/dictionary/english/accord"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "合意",
+    "協定",
+    "一致"
+   ],
+   "candidates": [
+    {
+     "id": "WN-EN-0003-a",
+     "name": "アコード",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "strong"
+     ],
+     "note": "安定した響き。同名の商品名が広く知られている点に注意。"
+    },
+    {
+     "id": "WN-EN-0003-b",
+     "name": "コード",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "後半を取った形。別の英単語（code／cord）を連想させやすい。"
+    },
+    {
+     "id": "WN-EN-0003-c",
+     "name": "アコー",
+     "method": "short",
+     "impressions": [
+      "soft"
+     ],
+     "note": "語尾を落とした形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-EN-0004",
+   "lemma": "acknowledgment",
+   "lang": "en",
+   "pos": "名詞",
+   "meaningJa": "何かが事実である・正しいと認めること。また感謝のしるし、受け取りの知らせ。",
+   "categories": [
+    "recognize"
+   ],
+   "nuances": [
+    "gratitude",
+    "polysemy"
+   ],
+   "nuanceNote": "綴りは acknowledgement とも書く。複数形は本の「謝辞」を指す。",
+   "pronunciation": {
+    "ipa": "əkˈnɒlɪdʒmənt",
+    "note": "英国式の発音。"
+   },
+   "kana": {
+    "text": "アクノリッジメント",
+    "basis": "ipa"
+   },
+   "source": {
+    "dictionary": "Cambridge Dictionary",
+    "url": "https://dictionary.cambridge.org/dictionary/english/acknowledgment"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "認める",
+    "謝辞",
+    "感謝",
+    "承認"
+   ],
+   "candidates": [
+    {
+     "id": "WN-EN-0004-a",
+     "name": "アクノリッジ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "語尾を落とした形。学者や記録官に。"
+    },
+    {
+     "id": "WN-EN-0004-b",
+     "name": "ノリッジ",
+     "method": "short",
+     "impressions": [
+      "calm"
+     ],
+     "note": "中ほどを取った形。地名風にも使える。"
+    },
+    {
+     "id": "WN-EN-0004-c",
+     "name": "アクノ",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "前半を取った形。"
+    },
+    {
+     "id": "WN-EN-0004-d",
+     "name": "リッジ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "強く響く部分を取った形。別の英単語（ridge）と重なる。"
+    }
+   ]
+  },
+  {
+   "id": "WN-PT-0001",
+   "lemma": "sim",
+   "lang": "pt",
+   "pos": "副詞・名詞（男性）",
+   "meaningJa": "肯定・同意・承諾を表す語。「はい」。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "名詞として「承諾（の返事）」。dar o sim で「承諾する」。",
+   "pronunciation": {
+    "ipa": null,
+    "note": "発音記号は未確認。語末は鼻にかかる音で、カタカナでは近似にとどまる。"
+   },
+   "kana": {
+    "text": "シン",
+    "basis": "unconfirmed"
+   },
+   "source": {
+    "dictionary": "Priberam",
+    "url": "https://dicionario.priberam.org/pt-pt/sim"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "はい",
+    "返事",
+    "承諾"
+   ],
+   "candidates": [
+    {
+     "id": "WN-PT-0001-a",
+     "name": "シン",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "crisp"
+     ],
+     "note": "短く静かな名。和名にも洋名にも寄せられる。"
+    },
+    {
+     "id": "WN-PT-0001-b",
+     "name": "シムア",
+     "method": "adjust",
+     "impressions": [
+      "soft"
+     ],
+     "note": "綴りの m を生かして母音を足した形。"
+    },
+    {
+     "id": "WN-PT-0001-c",
+     "name": "シンエ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾に母音を足した形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-PT-0002",
+   "lemma": "acordo",
+   "lang": "pt",
+   "pos": "名詞（男性）",
+   "meaningJa": "人や物事のあいだの調和。取り決め・協定。許可、同意。",
+   "categories": [
+    "affirm"
+   ],
+   "nuances": [
+    "harmony",
+    "polysemy"
+   ],
+   "nuanceNote": "「分別・思慮」の意味もある。同じ綴りが動詞 acordar（目を覚ます／合意する）の活用形にもなる。",
+   "pronunciation": {
+    "ipa": null,
+    "note": "Priberamで確認できたのは「co」の母音が閉じた音であることまで。"
+   },
+   "kana": {
+    "text": "アコルド",
+    "basis": "unconfirmed"
+   },
+   "source": {
+    "dictionary": "Priberam",
+    "url": "https://dicionario.priberam.org/pt-pt/acordo"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "調和",
+    "協定",
+    "同意",
+    "合意"
+   ],
+   "candidates": [
+    {
+     "id": "WN-PT-0002-a",
+     "name": "アコルド",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "strong"
+     ],
+     "note": "落ち着いた重みのある響き。"
+    },
+    {
+     "id": "WN-PT-0002-b",
+     "name": "コルド",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "後半を取った形。"
+    },
+    {
+     "id": "WN-PT-0002-c",
+     "name": "アコル",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "語尾を落とした形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-PT-0003",
+   "lemma": "assentimento",
+   "lang": "pt",
+   "pos": "名詞（男性）",
+   "meaningJa": "同意すること。承諾、賛成。",
+   "categories": [
+    "affirm",
+    "recognize"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "動詞 assentir（納得して、または自分の意志で同意する）から。",
+   "pronunciation": {
+    "ipa": null,
+    "note": "発音記号は未確認。"
+   },
+   "kana": {
+    "text": "アセンティメント",
+    "basis": "unconfirmed"
+   },
+   "source": {
+    "dictionary": "Priberam",
+    "url": "https://dicionario.priberam.org/pt-pt/assentimento"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "同意",
+    "承諾",
+    "賛成"
+   ],
+   "candidates": [
+    {
+     "id": "WN-PT-0003-a",
+     "name": "アセンティメント",
+     "method": "kana",
+     "impressions": [
+      "noble"
+     ],
+     "note": "長く丁寧な響き。儀礼や誓約の名に。"
+    },
+    {
+     "id": "WN-PT-0003-b",
+     "name": "センティ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "中ほどを取った形。"
+    },
+    {
+     "id": "WN-PT-0003-c",
+     "name": "ティメント",
+     "method": "short",
+     "impressions": [
+      "calm"
+     ],
+     "note": "後半を取った形。"
+    }
+   ]
+  },
+  {
+   "id": "WN-PT-0004",
+   "lemma": "reconhecimento",
+   "lang": "pt",
+   "pos": "名詞（男性）",
+   "meaningJa": "認めること。事実を認める表明、感謝の気持ち、報いや褒賞。",
+   "categories": [
+    "recognize"
+   ],
+   "nuances": [
+    "gratitude",
+    "praise",
+    "polysemy"
+   ],
+   "nuanceNote": "「綿密な調査」、軍事の「偵察」の意味もある。",
+   "pronunciation": {
+    "ipa": null,
+    "note": "発音記号は未確認。"
+   },
+   "kana": {
+    "text": "レコニェシメント",
+    "basis": "unconfirmed"
+   },
+   "source": {
+    "dictionary": "Priberam",
+    "url": "https://dicionario.priberam.org/reconhecimento"
+   },
+   "verification": {
+    "status": "verified",
+    "date": "2026-11-17",
+    "scope": "見出し語の表記・品詞・語義を辞書の見出しページで確認"
+   },
+   "tags": [
+    "認める",
+    "感謝",
+    "褒賞",
+    "承認"
+   ],
+   "candidates": [
+    {
+     "id": "WN-PT-0004-a",
+     "name": "レコニェ",
+     "method": "short",
+     "impressions": [
+      "soft"
+     ],
+     "note": "前半を取った形。やわらかく異国風。"
+    },
+    {
+     "id": "WN-PT-0004-b",
+     "name": "ニェシ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "中ほどを取った形。小さく愛らしい。"
+    },
+    {
+     "id": "WN-PT-0004-c",
+     "name": "レコニ",
+     "method": "adjust",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "拗音を外して読みやすくした形。"
+    }
+   ]
+  }
+ ]
+}

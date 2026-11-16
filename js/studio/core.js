@@ -106,7 +106,27 @@ function newProject(name,templateKey){
   return {id:uid("prj"),name:str(name).trim()||"マイ作品",createdAt:now,updatedAt:now,
     world:defaultWorld(templateKey),
     heightCompare:{items:[],bg:"#F7F5F0",showScale:true,showNames:true},
-    charts:[]};
+    charts:[],nameIdeas:[]};
+}
+/* 「言葉から名付け」で作品に保存した創作名。作品レコードの中に持つので、バックアップ・復元・複製の対象になる。 */
+function sanitizeNameIdeas(list){
+  return (Array.isArray(list)?list:[]).filter(x=>x&&typeof x==="object"&&str(x.name).trim()).map(x=>{
+    const s=x.source&&typeof x.source==="object"?x.source:{};
+    return {id:str(x.id)||uid("idea"),name:str(x.name).trim().slice(0,60),wordId:str(x.wordId),dataVersion:str(x.dataVersion),
+      candidateId:x.candidateId?str(x.candidateId):null,baseName:str(x.baseName),
+      method:["kana","short","adjust","free"].includes(x.method)?x.method:"free",edited:!!x.edited,intent:str(x.intent).slice(0,2000),
+      createdAt:Number.isFinite(x.createdAt)?x.createdAt:Date.now(),updatedAt:Number.isFinite(x.updatedAt)?x.updatedAt:Date.now(),
+      source:{lemma:str(s.lemma),lang:str(s.lang),langLabel:str(s.langLabel),pos:str(s.pos),meaningJa:str(s.meaningJa),
+        dictionary:str(s.dictionary),url:/^https:\/\//.test(str(s.url))?str(s.url):"",verified:str(s.verified)}};
+  });
+}
+function nameIdeaNote(idea){
+  const s=idea.source||{},L=[];
+  L.push("もとにした言葉："+s.lemma+"（"+s.langLabel+"・"+s.pos+"）","原語の意味："+s.meaningJa);
+  if(idea.intent)L.push("創作上の意図："+idea.intent);
+  L.push("※創作名は造語です。原語に実在する人名・単語であることを示しません。");
+  if(s.url)L.push("出典："+s.dictionary+" "+s.url);
+  return L.join("\n");
 }
 function newChart(name){
   return {id:uid("cht"),name:str(name).trim()||"相関図",bg:"#FFFFFF",nodes:[],edges:[]};
@@ -228,6 +248,7 @@ function repairProject(project,chars){
     ch.edges=(ch.edges||[]).filter(e=>e&&inChart.has(e.from)&&inChart.has(e.to)&&e.from!==e.to);
   }
   if(!project.world||!Array.isArray(project.world.sections))project.world=defaultWorld();
+  if(!Array.isArray(project.nameIdeas))project.nameIdeas=[];
   return project;
 }
 
@@ -337,6 +358,7 @@ function importBundle(b,nameOverride){
   project.world=src.world&&Array.isArray(src.world.sections)?src.world:defaultWorld();
   project.heightCompare=Object.assign(project.heightCompare,src.heightCompare||{});
   project.charts=Array.isArray(src.charts)?src.charts:[];
+  project.nameIdeas=sanitizeNameIdeas(src.nameIdeas).map(x=>Object.assign(x,{id:uid("idea")}));
   const images=b.images.map(im=>{
     const id=uid("img");imgMap[im.id]=id;
     return {id,projectId:project.id,type:str(im.type)||"image/png",w:im.w||0,h:im.h||0,buffer:b64ToBuf(im.data)};
@@ -390,7 +412,7 @@ function importBundle(b,nameOverride){
 }
 
 return {FORMAT,FORMAT_VERSION,uid,clone,SECTION_DEFS,TEMPLATES,newEntry,defaultWorld,applyTemplate,allEntries,worldToText,
-  newProject,newChart,PROFILE_FIELDS,newVariant,newCharacter,fromGacha,duplicateCharacter,displayName,parseHeight,mainVariant,
+  newProject,sanitizeNameIdeas,nameIdeaNote,newChart,PROFILE_FIELDS,newVariant,newCharacter,fromGacha,duplicateCharacter,displayName,parseHeight,mainVariant,
   characterToText,matchesQuery,deleteImpact,removeCharacterRefs,removeEntryRefs,repairProject,
   ASSUMED_HEIGHT,sortByHeight,imagePlacement,scaleMax,
   RELATION_TYPES,relationType,newEdge,edgeLabel,edgeOffsets,curvePoints,

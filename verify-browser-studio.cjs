@@ -28,7 +28,7 @@ const legacy=[{id:'old-v12',mode:'nameOnly',name:'旧保存 テスト',reading:'
 
   /* ---- 起動・既存機能・移行 ---- */
   await page.goto(origin);await ready();
-  assert.equal(await page.title(),'創作OCメーカー v2.0');
+  assert.equal(await page.title(),'創作OCメーカー v2.1');
   assert.deepEqual(await page.locator('#studioTabs [role="tab"]').allTextContents(),['作成','図鑑','身長比較','相関図','世界観']);
   assert.ok(await page.locator('#tab-create').isVisible());assert.ok(await page.locator('#btnGen1').isVisible());
   for(const k of ['zukan','height','relation','world'])assert.equal(await page.locator('#tab-'+k).isVisible(),false);
@@ -316,7 +316,7 @@ const legacy=[{id:'old-v12',mode:'nameOnly',name:'旧保存 テスト',reading:'
   await page.locator('.site-nav a').filter({hasText:'名前辞典'}).click();
   await page.waitForURL('**/dictionary.html');await ready();
   await page.waitForFunction(n=>document.getElementById('count').textContent.includes(String(n)),dictData.entries.length);
-  assert.equal(await page.title(),'名前辞典 | 創作OCメーカー v2.0');
+  assert.equal(await page.title(),'名前辞典 | 創作OCメーカー v2.1');
   assert.deepEqual(await navShape(),navIndex,'both pages render the same shared navigation');
   assert.equal(await page.locator('#projectSelect option:checked').textContent(),'第二作');
   assert.equal(await page.locator('#projectSelect option').count(),3);
@@ -447,5 +447,6 @@ const legacy=[{id:'old-v12',mode:'nameOnly',name:'旧保存 テスト',reading:'
   fs.writeFileSync(path.join(outdir,'report.json'),JSON.stringify(report,null,1));
   console.log(report.passed?'PASS '+report.checks.length+' groups':'FAIL after '+report.checks.length+' groups\n'+report.error);
   report.checks.forEach(c=>console.log(' - '+c));
+  if(report.consoleErrors.length)console.log('console errors: '+JSON.stringify(report.consoleErrors));
  }
 })();
