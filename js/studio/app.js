@@ -13,7 +13,9 @@ function on(evt,fn){(listeners[evt]=listeners[evt]||[]).push(fn);}
 function emit(evt,data){(listeners[evt]||[]).forEach(fn=>{try{fn(data);}catch(e){console.error(e);}});}
 function toast(msg){
   if(typeof showToast==="function"){showToast(msg);return;}
-  const t=$("toast");if(!t)return;t.textContent=msg;t.classList.add("show");
+  let t=$("toast");
+  if(!t){t=document.createElement("div");t.id="toast";t.className="st-toast";t.setAttribute("role","status");t.setAttribute("aria-live","polite");document.body.appendChild(t);}
+  t.textContent=msg;t.classList.add("show");
   clearTimeout(t._timer);t._timer=setTimeout(()=>t.classList.remove("show"),1800);
 }
 function copy(text,msg){
@@ -184,8 +186,14 @@ function safeFileName(name){return String(name||"oc").replace(/[\\/:*?"<>|\s]+/g
 function stamp(){const d=new Date(),p=n=>String(n).padStart(2,"0");return d.getFullYear()+p(d.getMonth()+1)+p(d.getDate())+"-"+p(d.getHours())+p(d.getMinutes());}
 
 /* ---------- タブ ---------- */
+/* タブの中身を持たないページ（名前辞典）では、タブは index.html への移動になる */
+const standalone=()=>!$("tab-create");
 function showTab(key,opts){
   if(!TAB_KEYS.includes(key))key="create";
+  if(standalone()){
+    if(key!=="create"&&!(opts&&opts.silent)){flush().then(()=>{location.href="./index.html#"+key;});}
+    return;
+  }
   S.tab=key;
   document.body.dataset.tab=key;
   for(const k of TAB_KEYS){
@@ -206,10 +214,23 @@ function initTabs(){
   nav.addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(b)showTab(b.dataset.tab);});
   nav.addEventListener("keydown",e=>{
     if(e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
-    const i=TAB_KEYS.indexOf(S.tab),n=TAB_KEYS[(i+(e.key==="ArrowRight"?1:TAB_KEYS.length-1))%TAB_KEYS.length];
-    showTab(n);nav.querySelector('[data-tab="'+n+'"]').focus();
+    const from=standalone()?(document.activeElement&&document.activeElement.dataset.tab)||"create":S.tab;
+    const i=TAB_KEYS.indexOf(from),n=TAB_KEYS[(i+(e.key==="ArrowRight"?1:TAB_KEYS.length-1))%TAB_KEYS.length];
+    if(!standalone())showTab(n); // 別ページへ移るタブは、矢印では移動せずフォーカスだけ動かす
+    nav.querySelector('[data-tab="'+n+'"]').focus();
   });
   window.addEventListener("hashchange",()=>showTab(location.hash.slice(1),{silent:true}));
+  /* 「戻る」でページが復元されたとき（Safariのbfcache）、別ページで変えた作品の選択や内容に合わせ直す */
+  window.addEventListener("pageshow",e=>{if(e.persisted&&S.ready)resync();});
+}
+async function resync(){
+  try{
+    S.projects=(await DB.all("projects")).sort((a,b)=>a.createdAt-b.createdAt);
+    if(!S.projects.length)return;
+    let current=null;try{current=localStorage.getItem(CURRENT_KEY);}catch(e){}
+    await openProject(current||(S.project&&S.project.id));
+    if(!standalone())showTab(location.hash.slice(1),{silent:true});
+  }catch(e){console.error(e);}
 }
 
 /* ---------- 作品 ---------- */
@@ -360,5 +381,5 @@ async function init(){
 
 window.OCStudio={S,C,$,esc,on,emit,toast,copy,tabs,showTab,refresh,sheet,confirmBox,promptBox,download,showPng,safeFileName,stamp,
   saveProject,saveChar,flush,guard,imageURL,imageEl,importImage,releaseImage,registerFromGacha,init,
-  putChar:c=>guard(()=>DB.put("characters",c)),delChar:id=>guard(()=>DB.del("characters",id))};
+  resync,putChar:c=>guard(()=>DB.put("characters",c)),delChar:id=>guard(()=>DB.del("characters",id))};
 })();

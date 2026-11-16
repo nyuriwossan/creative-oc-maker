@@ -9,7 +9,8 @@
   "world: template start, overview, entries with kind/date/reading, custom category, non-destructive template merge, search, text export, two-way character links",
   "deleting a character lists the affected views, can be cancelled, and cascades; shared image kept",
   "projects: backup with images, rename, new with template, switch, restore as a new project, corrupt files refused, duplicate, delete; legacy key still untouched",
-  "mobile 390px and 320px: no horizontal overflow on any tab, 44px tabs, touch tap-linking, touch drag of nodes and head/foot markers, 16px inputs",
+  "dictionary page: same shared nav markup, 作成 selected + 名前辞典 current, project selection carried both ways, direct jump to all four tabs, back/forward, project management from the dictionary, bfcache resync; dictionary search/favorites/clear unchanged",
+  "mobile 390px and 320px: no horizontal overflow on any tab or on the dictionary page, 44px tabs, touch tap-linking, touch drag of nodes and head/foot markers, 16px inputs",
   "without IndexedDB: warning shown, generator and in-memory encyclopedia still work"
  ],
  "consoleErrors": [],
@@ -22,6 +23,7 @@
   "relation-desktop.png",
   "export-relation.png",
   "world-desktop.png",
+  "dictionary-desktop.png",
   "mobile-create.png",
   "mobile-zukan.png",
   "mobile-height.png",
@@ -30,6 +32,8 @@
   "mobile-relation-edit.png",
   "mobile-relation-linked.png",
   "mobile-calibrator.png",
-  "mobile-zukan-detail.png"
+  "mobile-zukan-detail.png",
+  "mobile-dictionary.png",
+  "mobile-dictionary-menu.png"
  ]
 }

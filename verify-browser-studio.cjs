@@ -307,11 +307,71 @@ const legacy=[{id:'old-v12',mode:'nameOnly',name:'旧保存 テスト',reading:'
   assert.equal(await S(()=>localStorage.getItem('ocMakerSavedV1')),JSON.stringify(legacy));
   ok('projects: backup with images, rename, new with template, switch, restore as a new project, corrupt files refused, duplicate, delete; legacy key still untouched');
 
+  /* ---- 名前辞典ページの共通ナビ・ページ間の移動・戻る ---- */
+  const dictData=require('./data/dictionary-v1.7.json');
+  await page.goto(origin);await ready();
+  await page.locator('#projectSelect').selectOption({label:'第二作'});await page.waitForFunction(()=>OCStudio.S.project.name==='第二作');
+  const navShape=()=>page.evaluate(()=>[...document.querySelectorAll('#studioNav *')].filter(e=>e.tagName!=='OPTION').map(e=>[e.tagName,e.id,e.getAttribute('data-tab')||'',e.getAttribute('role')||'',e.getAttribute('aria-label')||'',e.id==='saveStatus'?'':String(e.getAttribute('class')||'')].join('|')).concat([...document.querySelectorAll('#studioTabs button')].map(b=>b.textContent)));
+  const navIndex=await navShape();assert.ok(navIndex.length>=15);
+  await page.locator('.site-nav a').filter({hasText:'名前辞典'}).click();
+  await page.waitForURL('**/dictionary.html');await ready();
+  await page.waitForFunction(n=>document.getElementById('count').textContent.includes(String(n)),dictData.entries.length);
+  assert.equal(await page.title(),'名前辞典 | 創作OCメーカー v2.0');
+  assert.deepEqual(await navShape(),navIndex,'both pages render the same shared navigation');
+  assert.equal(await page.locator('#projectSelect option:checked').textContent(),'第二作');
+  assert.equal(await page.locator('#projectSelect option').count(),3);
+  assert.deepEqual(await page.locator('#studioTabs [role="tab"]').evaluateAll(b=>b.map(x=>x.getAttribute('aria-selected'))),['true','false','false','false','false']);
+  assert.equal(await page.locator('.site-nav a[aria-current="page"]').textContent(),'名前辞典');
+  await page.waitForFunction(()=>document.getElementById('saveStatus').textContent==='保存済み');
+  // 辞典の検索・絞り込み・お気に入りは従来どおり
+  await page.locator('#search').fill('あとり');await page.waitForFunction(()=>document.querySelectorAll('#results .dictionary-card').length>=1&&document.querySelectorAll('#results .dictionary-card').length<20);
+  const favBtn=page.locator('#results .dictionary-card').first().getByRole('button',{name:'☆ お気に入り',exact:true});
+  await favBtn.click();await page.locator('#favoritesOnly').check();
+  await page.waitForFunction(()=>document.querySelectorAll('#results .dictionary-card').length===1);
+  await page.locator('#clear').click();await page.waitForFunction(n=>document.getElementById('count').textContent.includes(String(n)),dictData.entries.length);
+  await shot('dictionary-desktop.png');
+  // 「作成」は選択済みなので押しても移動しない。矢印キーはフォーカスだけ動かす
+  await page.locator('#studioTabs [data-tab="create"]').click();assert.ok(page.url().endsWith('/dictionary.html'));
+  await page.locator('#studioTabs [data-tab="create"]').focus();await page.keyboard.press('ArrowRight');
+  assert.equal(await page.evaluate(()=>document.activeElement.dataset.tab),'zukan');assert.ok(page.url().endsWith('/dictionary.html'));
+  // 辞典で作品を切り替え → 図鑑タブへ直接移動 → その作品の図鑑が開く
+  await page.locator('#projectSelect').selectOption({label:'マイ作品'});await page.waitForFunction(()=>OCStudio.S.project.name==='マイ作品'&&OCStudio.S.chars.length===4);
+  await page.keyboard.press('Tab');
+  await page.locator('#studioTabs [data-tab="zukan"]').click();
+  await page.waitForURL('**/index.html#zukan');await ready();
+  await page.waitForSelector('#tab-zukan:not([hidden])');assert.equal(await page.locator('#tab-create').isVisible(),false);
+  assert.equal(await page.locator('#projectSelect option:checked').textContent(),'マイ作品');
+  assert.equal(await page.locator('#zkGrid .zk-card').count(),4);
+  // 戻る → 辞典（作品の選択は維持）→ 進む → 図鑑
+  await page.goBack();await page.waitForURL('**/dictionary.html');await ready();
+  await page.waitForFunction(()=>OCStudio.S.project&&OCStudio.S.project.name==='マイ作品');
+  await page.waitForFunction(n=>document.getElementById('count').textContent.includes(String(n)),dictData.entries.length);
+  await page.goForward();await page.waitForURL('**/index.html#zukan');await ready();await page.waitForSelector('#tab-zukan:not([hidden])');
+  await page.goBack();await page.waitForURL('**/dictionary.html');await ready();
+  for(const [k,sel] of [['height','#hcCanvas'],['relation','#rlCanvas'],['world','#wdBody']]){
+   await page.locator('#studioTabs [data-tab="'+k+'"]').click();await page.waitForURL('**/index.html#'+k);await ready();
+   await page.waitForSelector('#tab-'+k+':not([hidden]) '+sel);
+   assert.equal(await page.locator('#studioTabs [data-tab="'+k+'"]').getAttribute('aria-selected'),'true');
+   await page.goBack();await page.waitForURL('**/dictionary.html');await ready();
+  }
+  // 辞典ページの歯車からも作品管理ができる（名前変更）。戻った先のページにも反映される
+  await page.locator('#projectMenuBtn').click();await sheet().locator('[data-a="rename"]').click();
+  await sheet().locator('input.st-input').fill('マイ作品・改');await sheet().locator('[data-r="1"]').click();await toast('名前を変更しました');
+  await sheet().locator('.st-x').click();await settle();
+  await page.locator('.site-nav a').filter({hasText:'ガチャ'}).click();await page.waitForURL('**/index.html');await ready();
+  assert.ok(await page.locator('#tab-create').isVisible());
+  assert.equal(await page.locator('#projectSelect option:checked').textContent(),'マイ作品・改');
+  // bfcacheからの復元（pageshow persisted）：別ページで変えた作品の選択に追従する
+  await page.evaluate(()=>{const other=OCStudio.S.projects.find(p=>p.name==='星の王国');localStorage.setItem('ocMakerStudioCurrentV2',other.id);window.dispatchEvent(new PageTransitionEvent('pageshow',{persisted:true}));});
+  await page.waitForFunction(()=>OCStudio.S.project.name==='星の王国'&&document.querySelector('#projectSelect option:checked').textContent==='星の王国');
+  await page.locator('#projectSelect').selectOption({label:'マイ作品・改'});await page.waitForFunction(()=>OCStudio.S.chars.length===4);await settle();
+  ok('dictionary page: same shared nav markup, 作成 selected + 名前辞典 current, project selection carried both ways, direct jump to all four tabs, back/forward, project management from the dictionary, bfcache resync; dictionary search/favorites/clear unchanged');
+
   /* ---- スマホ幅・タッチ ---- */
   const mobile=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:3,hasTouch:true,isMobile:true,storageState:await context.storageState({indexedDB:true})});
   const m=await mobile.newPage();m.on('pageerror',e=>report.consoleErrors.push('mobile: '+e.message));
   await m.goto(origin+'/#zukan');await m.waitForSelector('html[data-studio="ready"]');
-  await m.locator('#projectSelect').selectOption({label:'マイ作品'});await m.waitForFunction(()=>OCStudio.S.chars.length===4);
+  await m.locator('#projectSelect').selectOption({label:'マイ作品・改'});await m.waitForFunction(()=>OCStudio.S.chars.length===4);
   const noOverflow=async label=>assert.ok(await m.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),label+' overflows');
   const mtab=async k=>{await m.locator('#studioTabs [data-tab="'+k+'"]').tap();await m.waitForSelector('#tab-'+k+':not([hidden])');};
   for(const w of [390,320]){
@@ -353,8 +413,20 @@ const legacy=[{id:'old-v12',mode:'nameOnly',name:'旧保存 テスト',reading:'
   await m.screenshot({path:path.join(outdir,'mobile-zukan-detail.png')});report.screenshots.push('mobile-zukan-detail.png');
   assert.ok(await m.evaluate(()=>[...document.querySelectorAll('.st-sheet input[type=text],.st-sheet textarea,.st-sheet select')].every(e=>parseFloat(getComputedStyle(e).fontSize)>=16)),'inputs must be >=16px to avoid iOS zoom');
   await m.locator('.st-sheet .st-x').tap();
+  // スマホ幅の名前辞典：共通ナビつきで横はみ出しなし、タップで図鑑へ移動して戻る
+  for(const w of [390,320]){
+   await m.setViewportSize({width:w,height:w===390?844:568});await m.goto(origin+'/dictionary.html');await m.waitForSelector('html[data-studio="ready"]');
+   await m.waitForFunction(()=>/\d/.test(document.getElementById('count').textContent));await noOverflow('dictionary@'+w);
+   assert.ok(await m.evaluate(()=>[...document.querySelectorAll('#studioTabs button')].every(b=>{const r=b.getBoundingClientRect();return r.height>=44&&b.scrollWidth<=b.clientWidth;})));
+   assert.equal(await m.locator('#projectSelect option:checked').textContent(),'マイ作品・改');
+   if(w===390){await m.screenshot({path:path.join(outdir,'mobile-dictionary.png')});report.screenshots.push('mobile-dictionary.png');}
+  }
+  await m.locator('#studioTabs [data-tab="relation"]').tap();await m.waitForURL('**/index.html#relation');await m.waitForSelector('#tab-relation:not([hidden]) #rlCanvas');
+  await m.goBack();await m.waitForURL('**/dictionary.html');await m.waitForSelector('html[data-studio="ready"]');
+  await m.locator('#projectMenuBtn').tap();await m.screenshot({path:path.join(outdir,'mobile-dictionary-menu.png')});report.screenshots.push('mobile-dictionary-menu.png');
+  await m.locator('.st-sheet .st-x').tap();
   await mobile.close();
-  ok('mobile 390px and 320px: no horizontal overflow on any tab, 44px tabs, touch tap-linking, touch drag of nodes and head/foot markers, 16px inputs');
+  ok('mobile 390px and 320px: no horizontal overflow on any tab or on the dictionary page, 44px tabs, touch tap-linking, touch drag of nodes and head/foot markers, 16px inputs');
 
   /* ---- 保存できない環境でも既存機能は動く ---- */
   const broken=await browser.newContext({viewport:{width:390,height:844}});const bp=await broken.newPage();const berr=[];bp.on('pageerror',e=>berr.push(e.message));

@@ -317,27 +317,11 @@ button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var
   <div class="rule"></div>
 </header>
 
-<section class="st-project" id="studioBar" aria-label="現在の作品">
-  <div class="st-project-head">
-    <label for="projectSelect">現在の作品</label>
-    <span id="saveStatus" class="st-status" role="status"></span>
-  </div>
-  <div class="st-project-row">
-    <select id="projectSelect" aria-label="作品を選ぶ"></select>
-    <button id="projectMenuBtn" class="st-gear" type="button" aria-label="作品の管理" title="作品の管理"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
-  </div>
-</section>
-<p id="studioNotice" class="naming-notice" role="alert" hidden></p>
-<div class="st-tabs" id="studioTabs" role="tablist" aria-label="機能の切り替え">
-  <button type="button" role="tab" data-tab="create" aria-controls="tab-create" aria-selected="true">作成</button>
-  <button type="button" role="tab" data-tab="zukan" aria-controls="tab-zukan" aria-selected="false" tabindex="-1">図鑑</button>
-  <button type="button" role="tab" data-tab="height" aria-controls="tab-height" aria-selected="false" tabindex="-1">身長比較</button>
-  <button type="button" role="tab" data-tab="relation" aria-controls="tab-relation" aria-selected="false" tabindex="-1">相関図</button>
-  <button type="button" role="tab" data-tab="world" aria-controls="tab-world" aria-selected="false" tabindex="-1">世界観</button>
-</div>
+<div id="studioNav"></div>
+<script src="./js/studio/nav.js"></script>
 
 <div id="tab-create" class="tab-panel" role="tabpanel" aria-label="キャラ作成">
-<nav class="site-nav" aria-label="画面切り替え"><a href="./index.html" aria-current="page">ガチャ</a><a href="./dictionary.html">名前辞典</a></nav>
+<nav class="site-nav st-subnav" aria-label="画面切り替え"><a href="./index.html" aria-current="page">ガチャ</a><a href="./dictionary.html">名前辞典</a></nav>
 <section id="dictionarySelection" class="naming-notice" aria-label="辞典名の固定" hidden>
   <p id="dictionarySelectionText" role="status"></p>
   <button id="releaseDictionary" class="btn-sm" type="button">固定を解除</button>

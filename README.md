@@ -57,6 +57,7 @@ GitHub Pagesで動く静的な創作支援ツールです。キャラクター�
 | --- | --- |
 | `js/studio/core.js` | 共通データ構造・変換・縮尺計算・バックアップ形式（DOM非依存、Nodeで検証可能） |
 | `js/studio/db.js` | IndexedDBの保存層（使えない環境ではメモリに切り替え） |
+| `js/studio/nav.js` | 共通ナビゲーション（現在の作品カード＋5タブ）のマークアップ。`index.html` と `dictionary.html` が同じファイルを読み込むので、変更は両ページに反映される |
 | `js/studio/app.js` | タブ、作品管理、共通UI、保存状態 |
 | `js/studio/zukan.js` `height.js` `relation.js` `world.js` | 各タブ |
 | `css/studio.css` | 新機能のスタイル（既存の配色変数を使用） |
