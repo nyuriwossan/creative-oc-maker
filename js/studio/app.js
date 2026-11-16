@@ -195,8 +195,8 @@ function showTab(key,opts){
   }
   if(!(opts&&opts.silent)){
     try{const u=new URL(location.href);u.hash=key==="create"?"":key;history.replaceState(null,"",u);}catch(e){}
-    const bar=$("studioBar");
-    if(bar&&window.scrollY>bar.offsetTop)window.scrollTo(0,bar.offsetTop);
+    const bar=$("studioTabs");
+    if(bar&&window.scrollY>bar.offsetTop-6)window.scrollTo(0,bar.offsetTop-6);
   }
   if(S.ready&&tabs[key]&&tabs[key].render)tabs[key].render();
 }

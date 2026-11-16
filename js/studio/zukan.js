@@ -57,7 +57,7 @@ function renderGrid(){
   const list=visible();
   A.$("zkCount").textContent=S.chars.length?list.length+"人を表示（全"+S.chars.length+"人）":"";
   if(!S.chars.length){
-    grid.innerHTML='<div class="empty-msg">まだキャラが登録されていません。<br>「キャラ作成」タブで生成したカードの「図鑑へ登録」を押すか、「白紙から作る」で追加できます。</div>';return;
+    grid.innerHTML='<div class="empty-msg">まだキャラが登録されていません。<br>「作成」タブで生成したカードの「図鑑へ登録」を押すか、「白紙から作る」で追加できます。</div>';return;
   }
   if(!list.length){grid.innerHTML='<div class="empty-msg">条件に合うキャラがいません。</div>';return;}
   grid.innerHTML=list.map(c=>{
