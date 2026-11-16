@@ -7,7 +7,7 @@
 <link rel="icon" href="./icons/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <link rel="manifest" href="./manifest.webmanifest">
-<title>創作OCメーカー v1.7</title>
+<title>創作OCメーカー v2.0</title>
 <style>
 :root{
   --bg:#F2F0EB;
@@ -305,6 +305,7 @@ button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var
 .site-nav{display:flex;gap:8px;margin-bottom:18px}.site-nav a{flex:1;text-align:center;text-decoration:none;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--accent)}.site-nav a[aria-current]{background:var(--accent);color:#fff}
 #dictionarySelection p{margin:0 0 8px}#dictionarySelection button{min-height:44px;margin-right:8px}#namingOptions .chip{min-height:44px}
 </style>
+<link rel="stylesheet" href="./css/studio.css">
 </head>
 <body>
 <div class="wrap">
@@ -316,6 +317,22 @@ button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var
   <div class="rule"></div>
 </header>
 
+<div class="st-bar" id="studioBar">
+  <label for="projectSelect">作品</label>
+  <select id="projectSelect" aria-label="作品を選ぶ"></select>
+  <button id="projectMenuBtn" class="btn-sm" type="button">管理</button>
+  <span id="saveStatus" class="st-status" role="status"></span>
+</div>
+<p id="studioNotice" class="naming-notice" role="alert" hidden></p>
+<div class="st-tabs" id="studioTabs" role="tablist" aria-label="機能の切り替え">
+  <button type="button" role="tab" data-tab="create" aria-controls="tab-create" aria-selected="true">作成</button>
+  <button type="button" role="tab" data-tab="zukan" aria-controls="tab-zukan" aria-selected="false" tabindex="-1">図鑑</button>
+  <button type="button" role="tab" data-tab="height" aria-controls="tab-height" aria-selected="false" tabindex="-1">身長比較</button>
+  <button type="button" role="tab" data-tab="relation" aria-controls="tab-relation" aria-selected="false" tabindex="-1">相関図</button>
+  <button type="button" role="tab" data-tab="world" aria-controls="tab-world" aria-selected="false" tabindex="-1">世界観</button>
+</div>
+
+<div id="tab-create" class="tab-panel" role="tabpanel" aria-label="キャラ作成">
 <nav class="site-nav" aria-label="画面切り替え"><a href="./index.html" aria-current="page">ガチャ</a><a href="./dictionary.html">名前辞典</a></nav>
 <section id="dictionarySelection" class="naming-notice" aria-label="辞典名の固定" hidden>
   <p id="dictionarySelectionText" role="status"></p>
@@ -348,15 +365,20 @@ button:focus-visible,summary:focus-visible,a:focus-visible{outline:2px solid var
 
 <section id="savedWrap">
   <h2>保存リスト</h2>
-  <p class="saved-note">気に入ったキャラはこの端末（ブラウザ）に保存されます。</p>
+  <p class="saved-note">気に入ったキャラはこの端末（ブラウザ）に保存されます。画像や身長をつけて育てたいキャラは「図鑑へ登録」へ。</p>
   <div class="saved-actions">
     <button class="btn-sm" id="btnCopyAllSaved">まとめてコピー</button>
     <button class="btn-sm btn-danger" id="btnClearSaved">全削除</button>
   </div>
   <div id="savedList"></div>
 </section>
+</div>
+<section id="tab-zukan" class="tab-panel" role="tabpanel" aria-label="キャラ図鑑" hidden></section>
+<section id="tab-height" class="tab-panel" role="tabpanel" aria-label="身長比較" hidden></section>
+<section id="tab-relation" class="tab-panel" role="tabpanel" aria-label="相関図" hidden></section>
+<section id="tab-world" class="tab-panel" role="tabpanel" aria-label="世界観設定" hidden></section>
 
-<footer>創作OCメーカー v1.7</footer>
+<footer>創作OCメーカー v2.0</footer>
 </div>
 
 <div id="toast"></div>
@@ -4001,6 +4023,7 @@ function renderResults(results){
       '<button class="btn-sm copy" data-act="detail" data-id="' + esc(c.id) + '">詳細コピー</button>' +
       (c.name && !c.manualName ? '<button class="btn-sm" data-act="name" data-id="' + esc(c.id) + '">名前だけコピー</button>' : "") +
       (c.mode !== "nameOnly" ? '<button class="btn-sm" data-act="img" data-id="' + esc(c.id) + '">画像生成用コピー</button>' : "") +
+      '<button class="btn-sm copy" data-act="zukan" data-id="' + esc(c.id) + '">図鑑へ登録</button>' +
       '</div>';
     return '<article class="card">' + inner + '</article>';
   }).join("");
@@ -4014,6 +4037,7 @@ function renderResults(results){
       else if(act === "detail") copyToClipboard(buildDetailText(c));
       else if(act === "name") copyToClipboard(buildNameText(c));
       else if(act === "img") copyToClipboard(buildImagePrompt(c));
+      else if(act === "zukan") registerToZukan(c);
     });
   });
 }
@@ -4040,6 +4064,12 @@ function buildDetailText(c){
     if(part.hypothetical)provenance+="\n位置づけ：仮説上の用語";
   }
   return base+"\n名前の系統："+namingSummary(c)+provenance+(sourceLine?"\n出典："+sourceLine:"")+(c.naming.notice?"\n"+c.naming.notice:"");
+}
+
+/* v2.0: 図鑑（作品ごとの保管庫）へ渡す。保存リスト ocMakerSavedV1 には触れない。 */
+function registerToZukan(c){
+  if(typeof window === "undefined" || !window.OCStudio){ showToast("図鑑を読み込めませんでした"); return; }
+  window.OCStudio.registerFromGacha(c);
 }
 
 function savedTitle(c){
@@ -4070,6 +4100,7 @@ function renderSavedCharacters(){
       '<div class="s-actions">' +
         '<button class="btn-sm" data-sact="toggle">詳細表示</button>' +
         '<button class="btn-sm copy" data-sact="copy">コピー</button>' +
+        '<button class="btn-sm" data-sact="zukan">図鑑へ登録</button>' +
         '<button class="btn-sm btn-danger" data-sact="del">削除</button>' +
       '</div></div>'
   ).join("");
@@ -4079,6 +4110,7 @@ function renderSavedCharacters(){
     item.querySelector('[data-sact="toggle"]').addEventListener("click", () => item.classList.toggle("open"));
     item.querySelector('[data-sact="copy"]').addEventListener("click", () => copyToClipboard(buildDetailText(c)));
     item.querySelector('[data-sact="del"]').addEventListener("click", () => deleteSavedCharacter(id));
+    item.querySelector('[data-sact="zukan"]').addEventListener("click", () => registerToZukan(c));
   });
 }
 
@@ -5319,5 +5351,13 @@ function generateNatureBatch(count,options){
 
 init();
 </script>
+<script src="./js/studio/core.js"></script>
+<script src="./js/studio/db.js"></script>
+<script src="./js/studio/app.js"></script>
+<script src="./js/studio/zukan.js"></script>
+<script src="./js/studio/height.js"></script>
+<script src="./js/studio/relation.js"></script>
+<script src="./js/studio/world.js"></script>
+<script src="./js/studio/boot.js"></script>
 </body>
 </html>

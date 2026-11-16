@@ -1,0 +1,35 @@
+{
+ "passed": true,
+ "checks": [
+  "boots with five tabs, legacy save list intact, default project created",
+  "register from result cards and legacy list; duplicates refused; ocMakerSavedV1 byte-identical",
+  "encyclopedia: search/filter, edit, image upload, head/foot markers by drag+keyboard, variants, custom fields, copy, duplicate, blank; survives reload; no HTML injection",
+  "height compare: same scale from head/foot markers (layout math + real pixels), silhouette fallback, sort, reorder, variant, background, PNG export, edits flow back to the character",
+  "relation chart: drag placement, tap-tap linking, three parallel relations (direction/style/color/label) without label overlap, label tap edit, pan/zoom/fit, rename propagates, multiple charts, PNG, reload",
+  "world: template start, overview, entries with kind/date/reading, custom category, non-destructive template merge, search, text export, two-way character links",
+  "deleting a character lists the affected views, can be cancelled, and cascades; shared image kept",
+  "projects: backup with images, rename, new with template, switch, restore as a new project, corrupt files refused, duplicate, delete; legacy key still untouched",
+  "mobile 390px and 320px: no horizontal overflow on any tab, 44px tabs, touch tap-linking, touch drag of nodes and head/foot markers, 16px inputs",
+  "without IndexedDB: warning shown, generator and in-memory encyclopedia still work"
+ ],
+ "consoleErrors": [],
+ "screenshots": [
+  "calibrator.png",
+  "zukan-detail.png",
+  "zukan-grid.png",
+  "height-desktop.png",
+  "export-height.png",
+  "relation-desktop.png",
+  "export-relation.png",
+  "world-desktop.png",
+  "mobile-create.png",
+  "mobile-zukan.png",
+  "mobile-height.png",
+  "mobile-relation.png",
+  "mobile-world.png",
+  "mobile-relation-edit.png",
+  "mobile-relation-linked.png",
+  "mobile-calibrator.png",
+  "mobile-zukan-detail.png"
+ ]
+}
