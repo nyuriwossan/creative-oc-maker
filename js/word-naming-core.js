@@ -1,14 +1,17 @@
 /* 言葉から名付け — データの検証・検索・創作名の記録（DOM非依存。Nodeでも検証可能）
-   既存の名前辞典（OCDictionary）とは別のスキーマ・別の保存キーを使う。 */
+   既存の名前辞典（OCDictionary）とは別のスキーマ・別の保存キーを使う。
+   schemaVersion 1（v2.1・20語）と 2（v2.2・11カテゴリ）の両方を検証できる。画面が読むのは v2。 */
 (function(root,factory){
   if(typeof module==="object"&&module.exports)module.exports=factory();
   else root.OCWordNaming=factory();
 })(typeof self!=="undefined"?self:this,function(){
 "use strict";
-const SCHEMA="oc-word-naming",SCHEMA_VERSION=1;
-const DATA_URL="./data/word-naming-v1.json";
+const SCHEMA="oc-word-naming",SCHEMA_VERSION=2,SUPPORTED_VERSIONS=[1,2];
+const DATA_URL="./data/word-naming-v2.json";
 const FAVORITE_KEY="ocWordNamingFavoritesV1";
 const LENGTHS={short:"短い（〜3音）",mid:"ふつう（4〜5音）",long:"長い（6音〜）"};
+const SCOPES={all:"すべて",lemma:"原語（意味・綴り・読み）だけ",name:"創作名だけ"};
+const OVERLAP_UNCHECKED="未確認";
 const str=v=>v==null?"":String(v);
 
 function normalize(text){
@@ -16,8 +19,9 @@ function normalize(text){
     .replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)) // カタカナ→ひらがな
     .replace(/[̀-ͯ]/g,"").trim();
 }
-/* 検索用：アクセント記号を外した形でも当たるようにする（sì→si、ß はそのまま） */
-function fold(text){return normalize(str(text).normalize("NFD"));}
+/* 検索用：アクセント記号を外した形でも当たるようにする（sì→si、Güte→gute、ß はそのまま）。
+   v2.1 では NFKC が結合文字を戻してしまい外れていなかったので、分解した直後に取り除く。 */
+function fold(text){return normalize(str(text).normalize("NFD").replace(/[\u0300-\u036f]/g,""));}
 
 /* 音の数（拗音の小書きは前の字と合わせて1音、促音・長音・撥音は1音） */
 function moraCount(name){
@@ -39,11 +43,14 @@ function validate(data){
   const errors=[],E=m=>errors.push(m);
   if(!data||typeof data!=="object")return ["データを読み取れません"];
   if(data.schema!==SCHEMA)E("schema が違います");
-  if(data.schemaVersion!==SCHEMA_VERSION)E("schemaVersion が未対応です");
+  if(!SUPPORTED_VERSIONS.includes(data.schemaVersion))E("schemaVersion が未対応です");
   if(!/^\d+\.\d+\.\d+$/.test(str(data.dataVersion)))E("dataVersion が不正です");
+  const v2=data.schemaVersion===2;
+  if(v2&&parseInt(str(data.dataVersion),10)<2)E("schemaVersion 2 のデータは dataVersion 2.x 以上が必要です");
   const langs=data.languages&&typeof data.languages==="object"?data.languages:{};
   const cats=new Map((Array.isArray(data.categories)?data.categories:[]).map(c=>[c&&c.id,c]));
   for(const key of ["nuances","methods","impressions"])if(!data[key]||typeof data[key]!=="object")E(key+" がありません");
+  if(v2&&(!data.access||typeof data.access!=="object"))E("access（確認方法の一覧）がありません");
   if(!Array.isArray(data.words)){E("words がありません");return errors;}
   if(errors.length)return errors;
   const ids=new Set(),candIds=new Set(),lemmas=new Set();
@@ -76,6 +83,7 @@ function validate(data){
       if(!/^\d{4}-\d{2}-\d{2}$/.test(str(v.date)))E(at+"確認日がありません");
       if(!str(v.scope).trim())E(at+"確認範囲がありません");
       if(s&&langs[w.lang]&&s.dictionary!==langs[w.lang].dictionary)E(at+"辞書名が言語の設定と一致しません");
+      if(v2&&!data.access[v.access])E(at+"確認方法（access）が未定義です");
     }
     if(!Array.isArray(w.candidates)||!w.candidates.length){E(at+"candidates が空");continue;}
     const names=new Set();
@@ -88,6 +96,7 @@ function validate(data){
       if(c.method==="kana"&&normalize(c.name)!==normalize(k&&k.text))E(at+"「カタカナ化」の候補はカタカナ読みと一致させてください "+c.name);
       if(normalize(c.name)===normalize(w.lemma))E(at+"候補名が原語そのものです");
       for(const i of Array.isArray(c.impressions)?c.impressions:[])if(!data.impressions[i])E(at+"未定義の印象 "+i);
+      if(v2&&typeof c.overlap!=="string")E(at+"候補の overlap（実在の人名・単語との重なり）は文字列で指定してください "+c.name);
     }
   }
   return errors;
@@ -101,47 +110,114 @@ async function load(fetcher){
 }
 
 /* 自由入力のテーマは、まず登録済みの意味カテゴリ（別名つき）に結びつける。翻訳はしない。 */
+function categoryNames(c){return [c.label].concat(c.label.split("・"),c.aliases||[]).map(fold);}
 function matchedCategories(data,query){
   const tokens=fold(query).split(/\s+/).filter(Boolean),out=new Set();
   for(const t of tokens)for(const c of data.categories){
     if(c.status!=="available")continue;
-    const names=[c.label].concat(c.label.split("・"),c.aliases||[]).map(fold);
-    if(names.some(n=>n===t||(t.length>=2&&(n.includes(t)||t.includes(n)))))out.add(c.id);
+    if(categoryNames(c).some(n=>n===t||(t.length>=2&&(n.includes(t)||t.includes(n)))))out.add(c.id);
   }
   return [...out];
 }
-function haystack(data,w){
-  return [w.lemma,w.kana.text,w.meaningJa,w.nuanceNote,w.pos,data.languages[w.lang].label].concat(w.tags||[],
-    w.categories.map(c=>(data.categories.find(x=>x.id===c)||{}).label),
-    (w.nuances||[]).map(n=>data.nuances[n]),w.candidates.map(c=>c.name)).map(fold).join("\n");
+/* 0件のときの案内用：検索語と同じ漢字を含むテーマ（翻訳ではなく、登録済みの語との字面の近さ） */
+function nearCategories(data,query){
+  const kanji=new Set([...fold(query)].filter(ch=>/[一-鿿]/.test(ch)));
+  if(!kanji.size)return [];
+  return data.categories.filter(c=>c.status==="available"&&categoryNames(c).some(n=>[...n].some(ch=>kanji.has(ch)))).map(c=>c.id).slice(0,4);
 }
-/* 戻り値：[{word, candidates}]。創作名の条件（長さ・印象）があるときは、合う候補だけを candidates に入れる。 */
+function categoryLabel(data,id){return (data.categories.find(x=>x.id===id)||{}).label||"";}
+function lemmaTexts(data,w){
+  return [w.lemma,w.kana.text,w.meaningJa,w.nuanceNote,w.pos,data.languages[w.lang].label].concat(w.tags||[],
+    w.categories.map(c=>categoryLabel(data,c)),(w.nuances||[]).map(n=>data.nuances[n]));
+}
+/* アクセント記号つきで入力された語はそのまま（sì は sì だけ）、記号なしで入力された語は記号を無視して（si は sì にも sim にも）探す */
+function hayOf(texts){return {plain:texts.map(normalize).join("\n"),folded:texts.map(fold).join("\n")};}
+function hayHas(hay,token){const f=fold(token);return hay.plain.includes(token)||(token===f&&hay.folded.includes(f));}
+/* 戻り値：{results:[{word, candidates}], themeCategories}。
+   創作名の条件（長さ・印象・創作名だけの検索）があるときは、合う候補だけを candidates に入れる。
+   opts.categoryMode: "or"（既定。選んだカテゴリのいずれか）／"and"（すべて）
+   opts.scope: "all"（既定）／"lemma"（原語側だけ）／"name"（創作名だけ） */
 function filter(data,opts){
   opts=opts||{};
-  const tokens=fold(opts.query).split(/\s+/).filter(Boolean);
-  const themeCats=matchedCategories(data,opts.query);
+  const scope=SCOPES[opts.scope]?opts.scope:"all";
+  const tokens=normalize(opts.query).split(/\s+/).filter(Boolean);
+  const themeCats=scope==="name"?[]:matchedCategories(data,opts.query);
   const has=a=>Array.isArray(a)&&a.length>0;
+  const and=opts.categoryMode==="and";
   const out=[];
   for(const w of data.words){
     if(opts.ids&&!opts.ids.has(w.id))continue;
     if(has(opts.langs)&&!opts.langs.includes(w.lang))continue;
-    if(has(opts.categories)&&!opts.categories.some(c=>w.categories.includes(c)))continue;
+    if(has(opts.categories)&&!(and?opts.categories.every(c=>w.categories.includes(c)):opts.categories.some(c=>w.categories.includes(c))))continue;
     if(has(opts.nuances)&&!opts.nuances.every(n=>(w.nuances||[]).includes(n)))continue;
+    let cands=w.candidates,narrowed=false;
     if(tokens.length){
-      const hay=haystack(data,w);
-      const ok=tokens.every(t=>hay.includes(t)||matchedCategories(data,t).some(c=>w.categories.includes(c)));
-      if(!ok)continue;
+      if(scope==="name"){
+        cands=cands.filter(c=>{const hay=hayOf([c.name]);return tokens.every(t=>hayHas(hay,t));});narrowed=true;
+      }else{
+        const hay=hayOf(scope==="lemma"?lemmaTexts(data,w):lemmaTexts(data,w).concat(w.candidates.map(c=>c.name)));
+        if(!tokens.every(t=>hayHas(hay,t)||matchedCategories(data,t).some(c=>w.categories.includes(c))))continue;
+      }
     }
-    let cands=w.candidates;
-    if(has(opts.lengths))cands=cands.filter(c=>opts.lengths.includes(lengthBucket(c.name)));
-    if(has(opts.impressions))cands=cands.filter(c=>opts.impressions.some(i=>(c.impressions||[]).includes(i)));
-    if((has(opts.lengths)||has(opts.impressions))&&!cands.length)continue;
+    if(has(opts.lengths)){cands=cands.filter(c=>opts.lengths.includes(lengthBucket(c.name)));narrowed=true;}
+    if(has(opts.impressions)){cands=cands.filter(c=>opts.impressions.some(i=>(c.impressions||[]).includes(i)));narrowed=true;}
+    if(narrowed&&!cands.length)continue;
     out.push({word:w,candidates:cands});
   }
   return {results:out,themeCategories:themeCats};
 }
+/* 0件のときに、条件をひとつ緩めると何件になるかを調べる。戻り値：{relax:[{key,label,count}], themes:[categoryId]} */
+function suggest(data,opts){
+  opts=opts||{};
+  const has=a=>Array.isArray(a)&&a.length>0,relax=[];
+  const tries=[
+    ["query","検索語を消す",!!fold(opts.query),o=>{o.query="";}],
+    ["scope","検索の対象を「すべて」に戻す",!!opts.scope&&opts.scope!=="all",o=>{o.scope="all";}],
+    ["categoryMode","カテゴリを「いずれかを含む」にする",opts.categoryMode==="and"&&has(opts.categories)&&opts.categories.length>1,o=>{o.categoryMode="or";}],
+    ["categories","意味カテゴリの選択を外す",has(opts.categories),o=>{o.categories=[];}],
+    ["langs","言語の選択を外す",has(opts.langs),o=>{o.langs=[];}],
+    ["nuances","ニュアンスの選択を外す",has(opts.nuances),o=>{o.nuances=[];}],
+    ["lengths","名前の長さの選択を外す",has(opts.lengths),o=>{o.lengths=[];}],
+    ["impressions","音の印象の選択を外す",has(opts.impressions),o=>{o.impressions=[];}],
+    ["ids","「お気に入りだけ」を外す",!!opts.ids,o=>{o.ids=null;}]
+  ];
+  for(const [key,label,active,apply] of tries){
+    if(!active)continue;
+    const o=Object.assign({},opts);apply(o);
+    const count=filter(data,o).results.length;
+    if(count>0)relax.push({key,label,count});
+  }
+  return {relax,themes:opts.scope==="name"?[]:nearCategories(data,opts.query)};
+}
 
-/* 創作名の記録。参照した原語の情報を写しとして持つので、データが更新されても由来を失わない。 */
+/* ---------- 複数キャラへの割り当て ---------- */
+/* 検索結果を「語ごとに1候補ずつ」の順に並べ直す（同じ語の候補が続かないようにする） */
+function candidatePool(results){
+  const pool=[],max=results.reduce((m,r)=>Math.max(m,r.candidates.length),0);
+  for(let i=0;i<max;i++)for(const r of results)if(r.candidates[i])pool.push({word:r.word,candidate:r.candidates[i]});
+  return pool;
+}
+/* pool から n 件、名前が重ならないように選ぶ。taken は避けたい名前（既存キャラ名など）。足りないぶんは null。 */
+function pickAssignments(pool,n,taken){
+  const used=new Set((taken||[]).map(normalize).filter(Boolean)),out=[];
+  for(const item of pool){
+    if(out.length>=n)break;
+    const key=normalize(item.candidate.name);
+    if(used.has(key))continue;
+    used.add(key);out.push(item);
+  }
+  while(out.length<n)out.push(null);
+  return out;
+}
+/* 同じ名前（かな・カナ、大文字小文字、前後の空白の違いは同一視）が2回以上あるものを返す：[{name, indexes}] */
+function findDuplicates(names){
+  const map=new Map();
+  names.forEach((n,i)=>{const k=normalize(n);if(!k)return;if(!map.has(k))map.set(k,{name:str(n).trim(),indexes:[]});map.get(k).indexes.push(i);});
+  return [...map.values()].filter(x=>x.indexes.length>1);
+}
+
+/* ---------- 創作名の記録 ---------- */
+/* 参照した原語の情報を写しとして持つので、データが更新されても由来を失わない。 */
 function newIdea(data,word,input){
   input=input||{};
   const cand=word.candidates.find(c=>c.id===input.candidateId)||null;
@@ -151,11 +227,18 @@ function newIdea(data,word,input){
   if(edited&&cand&&method===cand.method&&!input.methodChosen)method="free";
   return {id:input.id||("idea_"+Date.now().toString(36)+Math.random().toString(36).slice(2,8)),
     name,wordId:word.id,dataVersion:data.dataVersion,candidateId:cand?cand.id:null,baseName:cand?cand.name:"",
-    method,edited,intent:str(input.intent).trim(),createdAt:input.createdAt||Date.now(),updatedAt:Date.now(),
+    method,edited,intent:str(input.intent).trim(),overlap:cand&&!edited?str(cand.overlap):"",
+    createdAt:input.createdAt||Date.now(),updatedAt:Date.now(),
     source:{lemma:word.lemma,lang:word.lang,langLabel:data.languages[word.lang].label,pos:word.pos,meaningJa:word.meaningJa,
       dictionary:word.source.dictionary,url:word.source.url,verified:word.verification.status==="verified"?word.verification.date:""}};
 }
 function methodLabel(data,idea){return (data&&data.methods[idea.method])||{kana:"カタカナ化",short:"短縮形",adjust:"音の調整",free:"自由編集"}[idea.method]||"自由編集";}
+/* 実在する人名・単語との重なり。分かっているものだけを記し、それ以外は「未確認」と表示する（重複がないことは保証しない）。 */
+function overlapText(overlap){
+  const o=str(overlap).trim();
+  return o?o+"（ほかの重複は未確認）":OVERLAP_UNCHECKED;
+}
+const CAUTION="創作向けに加工した名前です。実在する人名・単語との重複は確認していません。";
 /* 原語の意味と、創作名としての意図は必ず別の行にする */
 function ideaToText(data,idea){
   const s=idea.source||{},L=[];
@@ -164,7 +247,8 @@ function ideaToText(data,idea){
   L.push("原語の意味："+s.meaningJa);
   L.push("加工方法："+methodLabel(data,idea)+(idea.baseName&&idea.edited?"（候補「"+idea.baseName+"」から編集）":""));
   if(idea.intent)L.push("創作上の意図："+idea.intent);
-  L.push("※創作名は造語です。原語に実在する人名・単語であることを示しません。");
+  L.push("実在の人名・単語との重なり："+overlapText(idea.overlap));
+  L.push("※"+CAUTION);
   if(s.url)L.push("出典："+s.dictionary+" "+s.url);
   return L.join("\n");
 }
@@ -181,6 +265,7 @@ function favorites(getStorage,onWarning){
   return {ids:()=>ids.slice(),has:id=>ids.includes(id),
     toggle(id){const i=ids.indexOf(id);if(i>=0)ids.splice(i,1);else ids.push(id);save();return i<0;}};
 }
-return {SCHEMA,SCHEMA_VERSION,DATA_URL,FAVORITE_KEY,LENGTHS,normalize,fold,moraCount,lengthBucket,safeUrl,validate,load,
-  matchedCategories,filter,newIdea,methodLabel,ideaToText,favorites};
+return {SCHEMA,SCHEMA_VERSION,SUPPORTED_VERSIONS,DATA_URL,FAVORITE_KEY,LENGTHS,SCOPES,CAUTION,normalize,fold,moraCount,lengthBucket,safeUrl,validate,load,
+  matchedCategories,nearCategories,categoryLabel,filter,suggest,candidatePool,pickAssignments,findDuplicates,
+  newIdea,methodLabel,overlapText,ideaToText,favorites};
 });

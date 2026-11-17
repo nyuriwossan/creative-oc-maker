@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>名前辞典 | 創作OCメーカー v2.1</title>
+<title>名前辞典 | 創作OCメーカー v2.2</title>
 <link rel="icon" href="./icons/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <link rel="stylesheet" href="./dictionary.css">
@@ -13,7 +13,7 @@
 <script src="./js/dictionary-page.js" defer></script>
 </head>
 <body><main class="wrap">
-<header><p class="eyebrow">創作OCメーカー v2.1</p><h1>名前辞典</h1><p>自然や古典のことばから、キャラクターの種を探す。</p></header>
+<header><p class="eyebrow">創作OCメーカー v2.2</p><h1>名前辞典</h1><p>自然や古典のことばから、キャラクターの種を探す。</p></header>
 <div id="studioNav" data-page="dictionary"></div>
 <script src="./js/studio/nav.js"></script>
 <nav class="site-nav st-subnav" aria-label="画面切り替え"><a href="./index.html">ガチャ</a><a href="./dictionary.html" aria-current="page">名前辞典</a></nav>
@@ -48,18 +48,27 @@
 <section id="copyFallback" class="panel" hidden><label for="copyText">自動コピーできませんでした。選択してコピーしてください。</label><textarea id="copyText" readonly></textarea><button id="closeCopy" type="button">閉じる</button></section>
 </div>
 <section id="modeWords" role="tabpanel" aria-labelledby="modeWordsBtn" hidden>
-<p class="wn-lead">外国語の実在語をもとに、創作キャラクターの名前を考えるモードです。翻訳機能ではありません。</p>
-<p id="wnNotice" class="notice"></p>
+<p class="wn-lead">外国語の実在語をもとに、創作向けの名前を考えるモードです。翻訳機能ではありません。</p>
+<div class="wn-subtabs" id="wnSubtabs" role="tablist" aria-label="言葉から名付けの機能">
+<button type="button" role="tab" id="wnTab-find" aria-controls="wnPane-find" aria-selected="true">言葉を探す</button>
+<button type="button" role="tab" id="wnTab-collections" aria-controls="wnPane-collections" aria-selected="false" tabindex="-1">命名コレクション</button>
+<button type="button" role="tab" id="wnTab-batch" aria-controls="wnPane-batch" aria-selected="false" tabindex="-1">複数キャラ命名</button>
+</div>
 <p id="wnLoadStatus" role="status">言葉のデータを読み込んでいます…</p>
 <div id="wnLoadError" role="alert" hidden><p>言葉のデータを読み込めませんでした。接続を確認して再読み込みしてください。</p><button id="wnRetry" type="button">再読み込み</button></div>
 <p id="wnStorageWarning" role="status" hidden></p>
+<div id="wnPane-find" role="tabpanel" aria-labelledby="wnTab-find">
 <form id="wnFilters" class="panel" aria-label="言葉を絞り込む">
 <fieldset id="wnFilterControls" disabled>
-<label for="wnSearch">意味・テーマ・原語・読みで検索</label>
-<input id="wnSearch" type="search" placeholder="例：賛成、認める、accord、アコール" autocomplete="off">
+<label for="wnSearch">意味・テーマ・原語・読み・創作名で検索</label>
+<input id="wnSearch" type="search" placeholder="例：希望、優しさ、accord、アコール" autocomplete="off">
+<fieldset><legend>意味カテゴリ（複数可・未選択なら全カテゴリ）</legend><div id="wnCategories" class="chips"></div>
+<div id="wnCatModeBox" class="wn-catmode" role="radiogroup" aria-label="複数のカテゴリを選んだときの探し方" hidden>
+<label class="check"><input type="radio" name="wnCatMode" value="or" checked>いずれかを含む</label>
+<label class="check"><input type="radio" name="wnCatMode" value="and">すべてを含む</label></div></fieldset>
+<details id="wnMoreFilters"><summary>言語・ニュアンス・名前の長さや印象で絞り込む</summary>
 <fieldset><legend>言語（複数可・未選択なら全言語）</legend><div id="wnLangs" class="chips"></div></fieldset>
-<fieldset><legend>意味カテゴリ（複数可）</legend><div id="wnCategories" class="chips"></div></fieldset>
-<details><summary>ニュアンス・創作名の長さや印象で絞り込む</summary>
+<label for="wnScope">検索語を探す場所</label><select id="wnScope"></select>
 <fieldset><legend>原語のニュアンス（選んだものをすべて含む語）</legend><div id="wnNuances" class="chips"></div></fieldset>
 <fieldset><legend>創作名の長さ</legend><div id="wnLengths" class="chips"></div></fieldset>
 <fieldset><legend>創作名の音の印象（編集上の提案）</legend><div id="wnImpressions" class="chips"></div></fieldset>
@@ -69,17 +78,31 @@
 </fieldset></form>
 <p id="wnCount" role="status" aria-live="polite"></p>
 <p id="wnTheme" class="wn-theme" role="status" aria-live="polite"></p>
+<div id="wnSuggest" class="wn-suggest" role="status" hidden></div>
 <div id="wnResults" aria-busy="true"></div>
+<button id="wnMore" type="button" hidden>もっと見る</button>
+<p id="wnIdeasLink" class="wn-ideas-link" hidden><span></span> <button id="wnGoCollections" type="button">保存した名前を見る</button></p>
+<p id="wnNotice" class="notice"></p>
+</div>
+<div id="wnPane-collections" role="tabpanel" aria-labelledby="wnTab-collections" hidden>
+<section aria-labelledby="wnColTitle"><h2 id="wnColTitle" class="wn-h2">命名コレクション</h2>
+<p class="wn-help">保存した名前を、テーマごとにまとめます（例：「全肯定する兄弟」）。作品ごとに保存され、バックアップにも含まれます。</p>
+<div class="actions"><button id="wnColNew" type="button">新しいコレクション</button></div>
+<div id="wnCollections"></div></section>
+<section class="wn-ideas-wrap" aria-labelledby="wnIdeasTitle"><h2 id="wnIdeasTitle" class="wn-h2">この作品の名前候補</h2><div id="wnIdeas"></div></section>
+</div>
+<div id="wnPane-batch" role="tabpanel" aria-labelledby="wnTab-batch" hidden><div id="wnBatch"></div></div>
 <p id="wnStatus" role="status" aria-live="polite" class="wn-sr"></p>
 <section id="wnCopyFallback" class="panel" hidden><label for="wnCopyText">自動コピーできませんでした。選択してコピーしてください。</label><textarea id="wnCopyText" readonly></textarea><button id="wnCloseCopy" type="button">閉じる</button></section>
-<section class="wn-ideas-wrap" aria-labelledby="wnIdeasTitle"><h2 id="wnIdeasTitle">この作品の名前候補</h2><div id="wnIdeas"></div></section>
 </section>
-<footer>名前は創作の素材です。実在人名としての用例を示すものではありません。</footer>
+<footer>名前は創作の素材です。実在人名としての用例を示すものではありません。「言葉から名付け」の創作名は、実在する人名・単語との重複を確認していません。</footer>
 </main>
 <script src="./js/studio/core.js"></script>
 <script src="./js/studio/db.js"></script>
 <script src="./js/studio/app.js"></script>
 <script src="./js/word-naming-core.js"></script>
 <script src="./js/word-naming-page.js"></script>
+<script src="./js/word-naming-collections.js"></script>
+<script src="./js/word-naming-batch.js"></script>
 <script src="./js/studio/boot.js"></script>
 </body></html>

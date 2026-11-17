@@ -6,7 +6,7 @@
 "use strict";
 
 const FORMAT="creative-oc-maker-project";
-const FORMAT_VERSION=2;
+const FORMAT_VERSION=3; // 3: 命名コレクション・名前の利用先（v2.2）。2以下のバックアップもそのまま読める
 
 let seq=0;
 function uid(prefix){
@@ -106,7 +106,7 @@ function newProject(name,templateKey){
   return {id:uid("prj"),name:str(name).trim()||"マイ作品",createdAt:now,updatedAt:now,
     world:defaultWorld(templateKey),
     heightCompare:{items:[],bg:"#F7F5F0",showScale:true,showNames:true},
-    charts:[],nameIdeas:[]};
+    charts:[],nameIdeas:[],nameCollections:[],nameUses:[]};
 }
 /* 「言葉から名付け」で作品に保存した創作名。作品レコードの中に持つので、バックアップ・復元・複製の対象になる。 */
 function sanitizeNameIdeas(list){
@@ -114,7 +114,8 @@ function sanitizeNameIdeas(list){
     const s=x.source&&typeof x.source==="object"?x.source:{};
     return {id:str(x.id)||uid("idea"),name:str(x.name).trim().slice(0,60),wordId:str(x.wordId),dataVersion:str(x.dataVersion),
       candidateId:x.candidateId?str(x.candidateId):null,baseName:str(x.baseName),
-      method:["kana","short","adjust","free"].includes(x.method)?x.method:"free",edited:!!x.edited,intent:str(x.intent).slice(0,2000),
+      method:["kana","short","adjust","free"].includes(x.method)?x.method:"free",edited:!!x.edited,intent:typeof x.intent==="string"?x.intent.slice(0,2000):"",
+      overlap:typeof x.overlap==="string"?x.overlap.slice(0,200):"",
       createdAt:Number.isFinite(x.createdAt)?x.createdAt:Date.now(),updatedAt:Number.isFinite(x.updatedAt)?x.updatedAt:Date.now(),
       source:{lemma:str(s.lemma),lang:str(s.lang),langLabel:str(s.langLabel),pos:str(s.pos),meaningJa:str(s.meaningJa),
         dictionary:str(s.dictionary),url:/^https:\/\//.test(str(s.url))?str(s.url):"",verified:str(s.verified)}};
@@ -124,9 +125,92 @@ function nameIdeaNote(idea){
   const s=idea.source||{},L=[];
   L.push("もとにした言葉："+s.lemma+"（"+s.langLabel+"・"+s.pos+"）","原語の意味："+s.meaningJa);
   if(idea.intent)L.push("創作上の意図："+idea.intent);
-  L.push("※創作名は造語です。原語に実在する人名・単語であることを示しません。");
+  L.push("※"+NAME_CAUTION);
   if(s.url)L.push("出典："+s.dictionary+" "+s.url);
   return L.join("\n");
+}
+const NAME_CAUTION="創作向けに加工した名前です。実在する人名・単語との重複は確認していません。";
+
+/* ---------- 命名コレクション（v2.2） ----------
+   作品の中に持つ。項目は nameIdeas のIDを参照するので、ひとつの名前を複数のコレクションに入れられる。言語は混在してよい。 */
+function newCollection(name){
+  const now=Date.now();
+  return {id:uid("col"),name:str(name).trim().slice(0,60)||"命名コレクション",theme:"",memo:"",items:[],createdAt:now,updatedAt:now};
+}
+function sanitizeCollections(list){
+  return (Array.isArray(list)?list:[]).filter(c=>c&&typeof c==="object").map(c=>{
+    const seen=new Set();
+    return {id:str(c.id)||uid("col"),name:str(c.name).trim().slice(0,60)||"命名コレクション",
+      theme:typeof c.theme==="string"?c.theme.slice(0,200):"",memo:typeof c.memo==="string"?c.memo.slice(0,4000):"",
+      items:(Array.isArray(c.items)?c.items:[]).filter(i=>i&&typeof i==="object"&&typeof i.ideaId==="string"&&i.ideaId&&!seen.has(i.ideaId)&&seen.add(i.ideaId))
+        .map(i=>({ideaId:i.ideaId,note:typeof i.note==="string"?i.note.slice(0,1000):""})),
+      createdAt:Number.isFinite(c.createdAt)?c.createdAt:Date.now(),updatedAt:Number.isFinite(c.updatedAt)?c.updatedAt:Date.now()};
+  });
+}
+/* 並び替え：index の項目を delta（-1／+1）だけ動かす。動かせたら true。 */
+function moveCollectionItem(col,index,delta){
+  const to=index+delta;
+  if(!col||index<0||to<0||index>=col.items.length||to>=col.items.length)return false;
+  const [item]=col.items.splice(index,1);col.items.splice(to,0,item);col.updatedAt=Date.now();return true;
+}
+function collectionToText(col,ideas){
+  const byId=new Map((ideas||[]).map(i=>[i.id,i])),L=["コレクション："+col.name];
+  if(col.theme)L.push("共通テーマ："+col.theme);
+  if(col.memo)L.push("メモ："+col.memo);
+  const items=col.items.filter(i=>byId.has(i.ideaId));
+  L.push("（"+items.length+"件）","");
+  items.forEach((it,n)=>{
+    const idea=byId.get(it.ideaId),s=idea.source||{};
+    L.push((n+1)+". "+idea.name+"："+s.lemma+"（"+s.langLabel+"）／"+s.meaningJa);
+    if(idea.intent)L.push("   創作上の意図："+idea.intent);
+    if(it.note)L.push("   メモ："+it.note);
+  });
+  L.push("","※"+NAME_CAUTION+"「／」のあとは原語の意味で、創作名そのものの意味ではありません。");
+  return L.join("\n");
+}
+
+/* ---------- 名前の利用先（v2.2） ----------
+   同じ創作名を、キャラ名・家名・地名・組織名・用語として使ったときの記録。語彙データは書き換えず、
+   利用先ごとに「実際に使った名前」と「命名意図」を持つ。 */
+const NAME_USE_KINDS=[
+  {key:"character",label:"キャラクター名",target:"character"},
+  {key:"family",label:"姓・家名",target:"entry",section:"organization",entryKind:"家系"},
+  {key:"nation",label:"国家名",target:"entry",section:"geography",entryKind:"国家"},
+  {key:"region",label:"地域名",target:"entry",section:"geography",entryKind:"地域"},
+  {key:"city",label:"都市名",target:"entry",section:"geography",entryKind:"都市"},
+  {key:"organization",label:"組織・派閥名",target:"entry",section:"organization",entryKind:"派閥"},
+  {key:"glossary",label:"用語集（固有名詞）",target:"entry",section:"glossary",entryKind:"固有名詞"}
+];
+function nameUseKind(key){return NAME_USE_KINDS.find(k=>k.key===key)||null;}
+function newNameUse(idea,kindKey,name,intent,targetId){
+  const kind=nameUseKind(kindKey);if(!kind)throw new Error("利用先の種類が不正です");
+  return {id:uid("use"),ideaId:str(idea&&idea.id),kind:kind.key,name:str(name).trim().slice(0,80),intent:str(intent).trim().slice(0,2000),
+    targetType:kind.target,targetId:str(targetId),createdAt:Date.now()};
+}
+function sanitizeNameUses(list){
+  return (Array.isArray(list)?list:[]).filter(u=>u&&typeof u==="object"&&nameUseKind(u.kind)&&str(u.name).trim()&&typeof u.targetId==="string"&&u.targetId).map(u=>({
+    id:str(u.id)||uid("use"),ideaId:typeof u.ideaId==="string"?u.ideaId:"",kind:u.kind,name:str(u.name).trim().slice(0,80),
+    intent:typeof u.intent==="string"?u.intent.slice(0,2000):"",targetType:nameUseKind(u.kind).target,targetId:u.targetId,
+    createdAt:Number.isFinite(u.createdAt)?u.createdAt:Date.now()}));
+}
+/* 利用先に書き込む説明文。原語の意味と、その利用先での命名意図を別の行にする。 */
+function nameUseBody(idea,name,intent){
+  const s=(idea&&idea.source)||{},L=["名前の由来（言葉から名付け）"];
+  if(idea&&str(name).trim()&&str(name).trim()!==idea.name)L.push("もとにした創作名："+idea.name);
+  L.push("もとにした言葉："+s.lemma+"（"+s.langLabel+"・"+s.pos+"）","原語の意味："+s.meaningJa);
+  if(str(intent).trim())L.push("命名意図："+str(intent).trim());
+  L.push("※"+NAME_CAUTION);
+  if(s.url)L.push("出典："+s.dictionary+" "+s.url);
+  return L.join("\n");
+}
+/* 名前候補を消すときに、どこから参照されているか */
+function ideaImpact(project,ideaId){
+  return {collections:(project.nameCollections||[]).filter(c=>c.items.some(i=>i.ideaId===ideaId)).map(c=>c.name),
+    uses:(project.nameUses||[]).filter(u=>u.ideaId===ideaId).length};
+}
+function removeIdeaRefs(project,ideaId){
+  for(const c of project.nameCollections||[])c.items=c.items.filter(i=>i.ideaId!==ideaId);
+  for(const u of project.nameUses||[])if(u.ideaId===ideaId)u.ideaId=""; // 利用先の名前と命名意図は残す
 }
 function newChart(name){
   return {id:uid("cht"),name:str(name).trim()||"相関図",bg:"#FFFFFF",nodes:[],edges:[]};
@@ -236,6 +320,11 @@ function removeEntryRefs(chars,entryIds){
   }
   return changed;
 }
+function allEntryIds(world){
+  const out=[];
+  for(const s of (world&&Array.isArray(world.sections)?world.sections:[]))for(const e of (s&&Array.isArray(s.entries)?s.entries:[]))if(e&&typeof e.id==="string")out.push(e.id);
+  return out;
+}
 /* 存在しないキャラ・差分への参照を取り除く（復元や手編集で壊れたデータへの保険） */
 function repairProject(project,chars){
   const ids=new Set(chars.map(c=>c.id));
@@ -249,6 +338,12 @@ function repairProject(project,chars){
   }
   if(!project.world||!Array.isArray(project.world.sections))project.world=defaultWorld();
   if(!Array.isArray(project.nameIdeas))project.nameIdeas=[];
+  const ideaIds=new Set(project.nameIdeas.map(i=>i&&i.id));
+  project.nameCollections=sanitizeCollections(project.nameCollections);
+  for(const c of project.nameCollections)c.items=c.items.filter(i=>ideaIds.has(i.ideaId));
+  const entryIds=new Set(allEntryIds(project.world));
+  project.nameUses=sanitizeNameUses(project.nameUses).filter(u=>u.targetType==="character"?ids.has(u.targetId):entryIds.has(u.targetId));
+  for(const u of project.nameUses)if(u.ideaId&&!ideaIds.has(u.ideaId))u.ideaId="";
   return project;
 }
 
@@ -336,7 +431,7 @@ function usedImageIds(chars){
 }
 function exportBundle(project,chars,images){
   const used=usedImageIds(chars);
-  return {format:FORMAT,version:FORMAT_VERSION,app:"2.0",exportedAt:new Date().toISOString(),
+  return {format:FORMAT,version:FORMAT_VERSION,app:"2.2",exportedAt:new Date().toISOString(),
     project:clone(project),characters:clone(chars),
     images:images.filter(im=>used.has(im.id)).map(im=>({id:im.id,type:im.type,w:im.w,h:im.h,data:bufToB64(im.buffer)}))};
 }
@@ -358,7 +453,11 @@ function importBundle(b,nameOverride){
   project.world=src.world&&Array.isArray(src.world.sections)?src.world:defaultWorld();
   project.heightCompare=Object.assign(project.heightCompare,src.heightCompare||{});
   project.charts=Array.isArray(src.charts)?src.charts:[];
-  project.nameIdeas=sanitizeNameIdeas(src.nameIdeas).map(x=>Object.assign(x,{id:uid("idea")}));
+  const ideaMap={};
+  project.nameIdeas=sanitizeNameIdeas(src.nameIdeas).map(x=>{const id=uid("idea");ideaMap[x.id]=id;return Object.assign(x,{id});});
+  project.nameCollections=sanitizeCollections(src.nameCollections).map(c=>Object.assign(c,{id:uid("col"),
+    items:c.items.filter(i=>ideaMap[i.ideaId]).map(i=>({ideaId:ideaMap[i.ideaId],note:i.note}))}));
+  const rawUses=sanitizeNameUses(src.nameUses);
   const images=b.images.map(im=>{
     const id=uid("img");imgMap[im.id]=id;
     return {id,projectId:project.id,type:str(im.type)||"image/png",w:im.w||0,h:im.h||0,buffer:b64ToBuf(im.data)};
@@ -391,6 +490,11 @@ function importBundle(b,nameOverride){
     ch.nodes=(ch.nodes||[]).filter(n=>n&&charMap[n.charId]).map(n=>Object.assign({},n,{charId:charMap[n.charId]}));
     ch.edges=(ch.edges||[]).filter(e=>e&&charMap[e.from]&&charMap[e.to]).map(e=>Object.assign({},e,{id:uid("edg"),from:charMap[e.from],to:charMap[e.to]}));
   }
+  // 世界観の項目はIDを保つので、利用先のうちキャラへの参照だけを付け替える。行き先が無いものは repairProject が外す
+  project.nameUses=rawUses.map(u=>Object.assign(u,{id:uid("use"),ideaId:ideaMap[u.ideaId]||"",
+    targetId:u.targetType==="character"?(charMap[u.targetId]||"missing"):u.targetId}));
+  const w0=project.world;
+  for(const s of w0.sections)if(s&&Array.isArray(s.entries))for(const e of s.entries)if(e&&typeof e==="object"&&!str(e.id))e.id=uid("ent");
   repairProject(project,characters);
   const color=(x,dflt)=>/^#[0-9a-fA-F]{6}$/.test(x)?x:dflt;
   project.heightCompare.bg=color(project.heightCompare.bg,"#F7F5F0");
@@ -412,7 +516,8 @@ function importBundle(b,nameOverride){
 }
 
 return {FORMAT,FORMAT_VERSION,uid,clone,SECTION_DEFS,TEMPLATES,newEntry,defaultWorld,applyTemplate,allEntries,worldToText,
-  newProject,sanitizeNameIdeas,nameIdeaNote,newChart,PROFILE_FIELDS,newVariant,newCharacter,fromGacha,duplicateCharacter,displayName,parseHeight,mainVariant,
+  newProject,sanitizeNameIdeas,nameIdeaNote,NAME_CAUTION,newCollection,sanitizeCollections,moveCollectionItem,collectionToText,
+  NAME_USE_KINDS,nameUseKind,newNameUse,sanitizeNameUses,nameUseBody,ideaImpact,removeIdeaRefs,allEntryIds,newChart,PROFILE_FIELDS,newVariant,newCharacter,fromGacha,duplicateCharacter,displayName,parseHeight,mainVariant,
   characterToText,matchesQuery,deleteImpact,removeCharacterRefs,removeEntryRefs,repairProject,
   ASSUMED_HEIGHT,sortByHeight,imagePlacement,scaleMax,
   RELATION_TYPES,relationType,newEdge,edgeLabel,edgeOffsets,curvePoints,

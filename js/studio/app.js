@@ -242,9 +242,11 @@ async function openProject(id){
   await flush();
   const p=S.projects.find(x=>x.id===id)||S.projects[0];
   forgetImages();
-  S.project=p;
-  S.chars=(await DB.byProject("characters",p.id)).sort((a,b)=>a.createdAt-b.createdAt);
-  C.repairProject(p,S.chars);
+  // キャラの読み込みと補修（古い作品に足りない欄を足す）が済んでから公開する。
+  // 先に S.project だけ差し替えると、読み込みを待つあいだ「欄の足りない作品」が他の画面から見えてしまう（v2.1 の名前辞典で起きていた）。
+  const chars=(await DB.byProject("characters",p.id)).sort((a,b)=>a.createdAt-b.createdAt);
+  C.repairProject(p,chars);
+  S.project=p;S.chars=chars;
   try{localStorage.setItem(CURRENT_KEY,p.id);}catch(e){}
   renderProjectSelect();
   emit("project");

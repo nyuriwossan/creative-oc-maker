@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""「言葉から名付け」用データ data/word-naming-v1.json を組み立てる。
+"""「言葉から名付け」用データを組み立てる。
+  data/word-naming-v1.json … v2.1 の第1段階（20語）。互換性のためそのまま残す。
+  data/word-naming-v2.json … v2.2 の第2段階（11カテゴリ）。画面が読み込むのはこちら。
+v2 で追加した語は scripts/word_naming_words_v2.py にある。
 既存の名前辞典データ（data/dictionary-v1.7.json）とは別スキーマ・別ファイル。
 語義は各辞書の見出しページで確認し、説明は短く編集した日本語で書く（辞書本文は転載しない）。
   python scripts/build_word_naming.py          # 書き出す
@@ -174,14 +177,75 @@ def build():
             "notice": "原語の意味は辞書で確認した内容を短く編集したものです。創作名は原語を加工した造語で、原語に実在する人名・単語であることを示しません。",
             "languages": LANGS, "categories": CATEGORIES, "nuances": NUANCES, "methods": METHODS, "impressions": IMPRESSIONS, "words": words}
 
+# ---------------------------------------------------------------- v2（第2段階）
+CATEGORIES_V2 = [
+    {"id": "affirm", "label": "肯定・同意", "aliases": CATEGORIES[0]["aliases"]},
+    {"id": "recognize", "label": "承認・認知", "aliases": CATEGORIES[1]["aliases"]},
+    {"id": "accept", "label": "受容・寛容", "aliases": ["受け入れる", "寛大", "許す", "赦す", "許し", "赦し", "包容", "歓迎", "迎える", "もてなし"]},
+    {"id": "harmony", "label": "調和・平和", "aliases": ["平穏", "安らぎ", "穏やか", "協調", "和合", "静けさ", "落ち着き", "ハーモニー", "ピース", "和解"]},
+    {"id": "hope", "label": "希望・未来", "aliases": ["将来", "望み", "期待", "夜明け", "朝焼け", "楽観", "抱負", "始まり", "ホープ"]},
+    {"id": "bless", "label": "祝福・幸福", "aliases": ["幸せ", "しあわせ", "喜び", "歓喜", "至福", "幸運", "恵み", "祝う", "ハッピー"]},
+    {"id": "trust", "label": "信頼・誠実", "aliases": ["正直", "忠実", "忠誠", "信じる", "信義", "率直", "真心", "信仰", "約束"]},
+    {"id": "love", "label": "慈愛・優しさ", "aliases": ["やさしさ", "優しい", "やさしい", "愛情", "思いやり", "慈悲", "親切", "いたわり", "慈しみ", "善意"]},
+    {"id": "courage", "label": "勇気・意志", "aliases": ["勇敢", "大胆", "決意", "武勇", "度胸", "不屈", "果敢", "勇ましい", "気概"]},
+    {"id": "freedom", "label": "自由・解放", "aliases": ["独立", "自立", "救い", "救済", "解き放つ", "自主", "フリーダム"]},
+    {"id": "thanks", "label": "感謝・称賛", "aliases": ["ありがとう", "お礼", "賛辞", "賛美", "たたえる", "讃える", "名誉", "敬意", "ほめる", "褒める", "謝意"]},
+]
+for c in CATEGORIES_V2:
+    c["status"] = "available"
+NUANCES_V2 = dict(NUANCES, literary="文語・雅語", religious="宗教的な意味を含む")
+IMPRESSIONS_V2 = dict(IMPRESSIONS, elegant="優雅な")
+ACCESS = {"search-excerpt": "辞書サイトに限定した検索で見出しページを特定し、検索結果に表示されたページ抜粋で確認（ページを直接開いての全文確認ではない）"}
+SCOPE_V2 = "見出し語の表記・品詞・語義の冒頭"
+# v2.1 の20語に、v2 で使えるようになったカテゴリを足す（ID・語義・候補は変更しない）
+EXTRA_CATS = {"WN-FR-0002": ["harmony"], "WN-FR-0004": ["thanks"], "WN-DE-0003": ["thanks"], "WN-DE-0004": ["thanks"],
+              "WN-IT-0003": ["harmony"], "WN-IT-0004": ["thanks"], "WN-EN-0003": ["harmony"], "WN-EN-0004": ["thanks"],
+              "WN-PT-0002": ["harmony"], "WN-PT-0004": ["thanks"]}
+# v2.1 の候補のうち、実在の語・名称との重なりが分かっているもの
+OVERLAP_V1 = {"コール": "外来語「コール」と同じ表記", "アコード": "商品名として広く知られている", "コード": "外来語「コード」と同じ表記",
+              "セント": "外来語「セント」と同じ表記", "リッジ": "英語 ridge と同じ読み", "シン": "日本語の人名・語と同音",
+              "エス": "アルファベットの S と同じ読み", "ノリッジ": "英国の都市ノリッジ（Norwich）と同じ表記", "シエラ": "スペイン語 sierra（山脈）・実在の人名と同じ表記",
+              "ファル": "", "アセント": "英語 ascent（上昇）のカタカナ表記とも同じ", "コンセ": "", "ヤー": "ドイツ語の返事として知られる"}
+
+def word_v2(wid, lemma, lang, pos, meaning, cats, nuances, note, ipa, pnote, kana, url, tags, cands, scope_note, v1=False):
+    scope = SCOPE_V2 + ("。" + scope_note if scope_note else "")
+    return {
+        "id": wid, "lemma": lemma, "lang": lang, "pos": pos, "meaningJa": meaning,
+        "categories": cats + ([c for c in EXTRA_CATS.get(wid, []) if c not in cats] if v1 else []),
+        "nuances": nuances, "nuanceNote": note,
+        "pronunciation": {"ipa": ipa, "note": pnote},
+        "kana": {"text": kana, "basis": "ipa" if ipa else "unconfirmed"},
+        "source": {"dictionary": LANGS[lang]["dictionary"], "url": url},
+        "verification": {"status": "verified", "date": CHECKED, "access": "search-excerpt", "scope": scope},
+        "tags": tags, "since": "2.1" if v1 else "2.2",
+        "candidates": [{"id": "%s-%s" % (wid, "abcdefgh"[i]), "name": c[0], "method": c[1], "impressions": c[2], "note": c[3],
+                        "overlap": (OVERLAP_V1.get(c[0], "") if v1 else c[4])} for i, c in enumerate(cands)],
+    }
+
+def build_v2():
+    sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+    from word_naming_words_v2 import NEW
+    words = [word_v2(*w, None, v1=True) for w in W] + [word_v2(*w) for w in NEW]
+    return {"schema": "oc-word-naming", "schemaVersion": 2, "dataVersion": "2.0.0", "stage": 2,
+            "theme": "ポジティブな意味の言葉",
+            "notice": "原語の意味は、辞書で確認した内容を短く編集したものです。創作名は原語をもとに創作向けに加工した候補で、実在する人名・単語との重複は確認していません。",
+            "languages": LANGS, "categories": CATEGORIES_V2, "nuances": NUANCES_V2, "methods": METHODS,
+            "impressions": IMPRESSIONS_V2, "access": ACCESS, "words": words}
+
 def main():
-    out = pathlib.Path(__file__).resolve().parent.parent / "data" / "word-naming-v1.json"
-    text = json.dumps(build(), ensure_ascii=False, indent=1) + "\n"
+    root = pathlib.Path(__file__).resolve().parent.parent / "data"
+    targets = [(root / "word-naming-v1.json", build()), (root / "word-naming-v2.json", build_v2())]
+    stale = False
+    for out, data in targets:
+        text = json.dumps(data, ensure_ascii=False, indent=1) + "\n"
+        if "--check" in sys.argv:
+            if not out.exists() or out.read_text(encoding="utf8") != text:
+                print("%s is stale; run scripts/build_word_naming.py" % out.name); stale = True
+        else:
+            out.write_text(text, encoding="utf8"); print("wrote %s (%d words)" % (out.name, len(data["words"])))
     if "--check" in sys.argv:
-        if not out.exists() or out.read_text(encoding="utf8") != text:
-            print("data/word-naming-v1.json is stale; run scripts/build_word_naming.py"); sys.exit(1)
-        print("word-naming data is up to date (%d words)" % len(W)); return
-    out.write_text(text, encoding="utf8"); print("wrote %s (%d words)" % (out, len(W)))
+        if stale: sys.exit(1)
+        print("word-naming data is up to date (%s)" % ", ".join("%s: %d words" % (o.name, len(d["words"])) for o, d in targets))
 
 if __name__ == "__main__":
     main()

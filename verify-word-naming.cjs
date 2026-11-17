@@ -1,5 +1,6 @@
 'use strict';
-// Run: node verify-word-naming.cjs — 「言葉から名付け」のデータと検索・記録ロジックの検証
+// Run: node verify-word-naming.cjs — 「言葉から名付け」v2.1 の20語（data/word-naming-v1.json）が、v2.2 のコードでもそのまま検証・検索・記録できること
+// v2.2 で追加した語と機能は verify-word-naming-v2.cjs で検証する
 const assert=require('node:assert/strict'),fs=require('fs');
 const W=require('./js/word-naming-core.js'),C=require('./js/studio/core.js');
 const data=JSON.parse(fs.readFileSync('./data/word-naming-v1.json','utf8'));
@@ -85,7 +86,8 @@ const own=W.newIdea(data,word,{name:'コルデ',method:'free'});assert.equal(own
 assert.deepEqual(edited.source,{lemma:'accord',lang:'fr',langLabel:'フランス語',pos:'名詞（男性）',meaningJa:word.meaningJa,dictionary:'Larousse',url:word.source.url,verified:'2026-11-17'});
 const text=W.ideaToText(data,edited).split('\n');
 assert.ok(text.includes('創作名：アコリエ'));assert.ok(text.includes('原語の意味：'+word.meaningJa));assert.ok(text.includes('創作上の意図：調停役の少女に。'));
-assert.ok(text.some(l=>l.includes('候補「アコール」から編集')));assert.ok(text.some(l=>l.includes('実在する人名・単語であることを示しません')));
+assert.ok(text.some(l=>l.includes('候補「アコール」から編集')));assert.ok(text.includes('実在の人名・単語との重なり：未確認'));assert.ok(text.some(l=>l.includes('実在する人名・単語との重複は確認していません')));
+assert.ok(!text.some(l=>l.includes('実在する人名・単語ではありません')),'must not claim the coined name is not a real name');
 assert.notEqual(text.findIndex(l=>l.startsWith('原語の意味')),text.findIndex(l=>l.startsWith('創作上の意図')));
 ok('coined names keep the source word, method and edit trail; source meaning and creative intent stay separate');
 
