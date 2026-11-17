@@ -1,0 +1,2931 @@
+{
+ "lang": "en",
+ "words": [
+  {
+   "lemma": "hatred",
+   "pos": "名詞",
+   "meaningJa": "強い嫌悪や憎しみ。互いに抱き合う悪意や恨みも指す。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "個人への憎しみにも集団間の憎悪にも使う。hate より名詞として重く、長く続く感情の印象。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ヘイトレッド",
+   "url": "https://www.merriam-webster.com/dictionary/hatred",
+   "tags": [
+    "憎悪",
+    "嫌悪",
+    "怨恨"
+   ],
+   "candidates": [
+    {
+     "name": "ヘイトレッド",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "そのままの読み。重く硬い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヘイト",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半だけを取った短い形。",
+     "overlap": "外来語「ヘイト」と同じ表記"
+    },
+    {
+     "name": "ヘトラ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "音を詰めて語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / extreme dislike or disgust",
+   "id": "WN-EN-0031",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "hostility",
+   "pos": "名詞",
+   "meaningJa": "根深い、多くは互いに向け合う悪意。敵対的な行為や、考え方の上での対立・抵抗。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal"
+   ],
+   "nuanceNote": "複数形 hostilities は「戦闘行為・交戦」の意味になる。感情だけでなく行動や立場の対立も表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ホスティリティ",
+   "url": "https://www.merriam-webster.com/dictionary/hostility",
+   "tags": [
+    "敵意",
+    "敵対",
+    "対立"
+   ],
+   "candidates": [
+    {
+     "name": "ホスティル",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "前半を取った形。冷たく鋭い。",
+     "overlap": "形容詞 hostile の読みに近い"
+    },
+    {
+     "name": "ホスティ",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "頭の三音だけの軽い形。",
+     "overlap": ""
+    },
+    {
+     "name": "スティリア",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "中ほどの音に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / deep-seated usually mutual ill will",
+   "id": "WN-EN-0032",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "enmity",
+   "pos": "名詞",
+   "meaningJa": "積極的で、たいていは互いに抱き合う憎しみや悪意。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "個人や集団の間に続く敵対関係を言うことが多い。一時の怒りより、根を張った不和の印象。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "エンミティ",
+   "url": "https://www.merriam-webster.com/dictionary/enmity",
+   "tags": [
+    "敵意",
+    "反目",
+    "不和"
+   ],
+   "candidates": [
+    {
+     "name": "エンミティ",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "そのままの読み。細く硬い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エンミ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半二拍の短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "エミティア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "音を詰めて語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / positive, active, and typically mutual hatred",
+   "id": "WN-EN-0033",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "curse",
+   "pos": "名詞・動詞",
+   "meaningJa": "誰かに害が及ぶよう願う祈りや言葉。呪い。ののしりの言葉、呪われたものも指す。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "「呪い」のほか「悪態・ののしり言葉」の意味でも日常的に使う。災いの元という意味にもなる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "カース",
+   "url": "https://www.merriam-webster.com/dictionary/curse",
+   "tags": [
+    "呪い",
+    "呪詛",
+    "災厄"
+   ],
+   "candidates": [
+    {
+     "name": "カース",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "そのままの読み。短く乾いた響き。",
+     "overlap": "外来語「カース」と同じ表記"
+    },
+    {
+     "name": "カーシェ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾をやわらげた形。",
+     "overlap": ""
+    },
+    {
+     "name": "カルス",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "綴りの r を立てた形。",
+     "overlap": "トルコの地名カルスと同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / a prayer or invocation for harm",
+   "id": "WN-EN-0034",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "malediction",
+   "pos": "名詞",
+   "meaningJa": "呪い。呪詛の言葉。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "literary",
+    "formal"
+   ],
+   "nuanceNote": "curse の硬い言い方。対になる語は benediction（祝福）。日常会話ではあまり使わない。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "マレディクション",
+   "url": "https://www.merriam-webster.com/dictionary/malediction",
+   "tags": [
+    "呪詛",
+    "呪い",
+    "呪言"
+   ],
+   "candidates": [
+    {
+     "name": "マレディ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "前半を取った形。なめらかで翳りがある。",
+     "overlap": ""
+    },
+    {
+     "name": "マレディア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "前半に母音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "レディクス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを取り語尾を締めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / curse, execration",
+   "id": "WN-EN-0035",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "envy",
+   "pos": "名詞・動詞",
+   "meaningJa": "他人が持つ有利さを、苦しさや恨めしさとともに意識すること。羨望。羨望の的も指す。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "the envy of ～ で「～の羨望の的」。古くは「悪意」の意味もあった（廃義）。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "エンヴィ",
+   "url": "https://www.merriam-webster.com/dictionary/envy",
+   "tags": [
+    "羨望",
+    "嫉妬",
+    "妬み"
+   ],
+   "candidates": [
+    {
+     "name": "エンヴィ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "そのままの読み。短く鋭い。",
+     "overlap": "外来語「エンヴィー」に近い"
+    },
+    {
+     "name": "エンヴィア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": "スペイン語 envía に近い音"
+    },
+    {
+     "name": "エヴィ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "ンを抜いて軽くした形。",
+     "overlap": "人名エヴィと同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / painful or resentful awareness of an advantage",
+   "id": "WN-EN-0036",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "jealousy",
+   "pos": "名詞",
+   "meaningJa": "嫉妬深い気質・態度・感情。大切なものを油断なく守ろうとする警戒の意味もある。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "恋愛や競争での嫉妬に使うのが普通。「熱心な見張り」という意味は硬い文脈のもの。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ジェラシー",
+   "url": "https://www.merriam-webster.com/dictionary/jealousy",
+   "tags": [
+    "嫉妬",
+    "妬心",
+    "独占欲"
+   ],
+   "candidates": [
+    {
+     "name": "ジェラシー",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "そのままの読み。甘く翳る響き。",
+     "overlap": "外来語「ジェラシー」と同じ表記"
+    },
+    {
+     "name": "ジェラ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "前半二拍の短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ジェラス",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語尾を締めた形。",
+     "overlap": "形容詞 jealous の読みと同じ"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / a jealous disposition, attitude, or feeling",
+   "id": "WN-EN-0037",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "obsession",
+   "pos": "名詞",
+   "meaningJa": "理屈に合わない考えや感情に、しつこく心を占められること。その対象も指す。",
+   "categories": [
+    "obsession"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "病的な強迫観念から「夢中になっているもの」という軽い言い方まで幅がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "オブセッション",
+   "url": "https://www.merriam-webster.com/dictionary/obsession",
+   "tags": [
+    "執着",
+    "強迫",
+    "妄執"
+   ],
+   "candidates": [
+    {
+     "name": "オブセ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "前半三音の短い形。",
+     "overlap": "地名「小布施」と同じ音"
+    },
+    {
+     "name": "オブセス",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半を取り語尾を締めた形。",
+     "overlap": "動詞 obsess の読みと同じ"
+    },
+    {
+     "name": "セッシア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "後半を取り語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / a persistent disturbing preoccupation",
+   "id": "WN-EN-0038",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "fixation",
+   "pos": "名詞",
+   "meaningJa": "執拗で不健全なこだわりや愛着。心理学では欲求が特定の対象に留まり続けること。",
+   "categories": [
+    "obsession"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal"
+   ],
+   "nuanceNote": "心理学用語の色が濃い。日常では「～への異常なこだわり」の意味で使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "フィクセイション",
+   "url": "https://www.merriam-webster.com/dictionary/fixation",
+   "tags": [
+    "固執",
+    "執着",
+    "固着"
+   ],
+   "candidates": [
+    {
+     "name": "フィクス",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "頭の部分だけを取った形。",
+     "overlap": "外来語「フィックス」に近い"
+    },
+    {
+     "name": "フィクセ",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "前半三音の軽い形。",
+     "overlap": ""
+    },
+    {
+     "name": "フィクシア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "前半に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / an obsessive or unhealthy preoccupation or attachment",
+   "id": "WN-EN-0039",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "solitude",
+   "pos": "名詞",
+   "meaningJa": "ひとりでいること、世間から離れている状態。人けのない寂しい場所も指す。",
+   "categories": [
+    "solitude",
+    "silence"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "苦しい孤独より、自ら選ぶ静かなひとりの時間を言うことが多い。寂しさは loneliness。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ソリチュード",
+   "url": "https://www.merriam-webster.com/dictionary/solitude",
+   "tags": [
+    "孤独",
+    "隠棲",
+    "独居"
+   ],
+   "candidates": [
+    {
+     "name": "ソリチュード",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "そのままの読み。静かで気品がある。",
+     "overlap": "外来語「ソリチュード」と同じ表記"
+    },
+    {
+     "name": "ソリテ",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "前半を取り語尾を軽くした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ソリュード",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "elegant"
+     ],
+     "note": "中の音を詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / being alone or remote from society",
+   "id": "WN-EN-0040",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "loneliness",
+   "pos": "名詞",
+   "meaningJa": "ひとりでいること。人里から離れた寂しさ。孤独から来る沈んだ気持ち。",
+   "categories": [
+    "solitude",
+    "grief"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "solitude と違い、つらさ・寂しさの感情を伴う孤独を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ロンリネス",
+   "url": "https://www.merriam-webster.com/dictionary/loneliness",
+   "tags": [
+    "孤独",
+    "寂寥",
+    "孤立"
+   ],
+   "candidates": [
+    {
+     "name": "ロンリネス",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "そのままの読み。やわらかく沈む響き。",
+     "overlap": "外来語「ロンリネス」と同じ表記"
+    },
+    {
+     "name": "ロンリ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半三音の短い形。",
+     "overlap": "外来語「ロンリー」に近い"
+    },
+    {
+     "name": "ロネス",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "音を詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the fact or condition of being alone",
+   "id": "WN-EN-0041",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "isolation",
+   "pos": "名詞",
+   "meaningJa": "切り離すこと、また切り離されている状態。孤立・隔離。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [
+    "formal",
+    "official"
+   ],
+   "nuanceNote": "心の孤独より、物理的・社会的に隔てられた状態を言う。医療や生物学の用語にもなる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "アイソレイション",
+   "url": "https://www.merriam-webster.com/dictionary/isolation",
+   "tags": [
+    "孤立",
+    "隔離",
+    "隔絶"
+   ],
+   "candidates": [
+    {
+     "name": "アイソレ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "前半四音の形。",
+     "overlap": ""
+    },
+    {
+     "name": "アイソラ",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "前半を取り語尾を開いた形。",
+     "overlap": "イタリア語 isola（島）に近い音"
+    },
+    {
+     "name": "イソレア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "綴り読みに寄せて整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the action of isolating; condition of being isolated",
+   "id": "WN-EN-0042",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "grief",
+   "pos": "名詞",
+   "meaningJa": "死別などによる、深く胸を刺すような悲しみ。悲嘆。面倒・厄介ごとの意味もある。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "come to grief は「ひどい目にあう・失敗する」。口語では「小言・面倒」の意味でも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "グリーフ",
+   "url": "https://www.merriam-webster.com/dictionary/grief",
+   "tags": [
+    "悲嘆",
+    "哀悼",
+    "喪失"
+   ],
+   "candidates": [
+    {
+     "name": "グリーフ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "そのままの読み。低く沈む響き。",
+     "overlap": "外来語「グリーフ（ケア）」と同じ表記"
+    },
+    {
+     "name": "グリフ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "長音を詰めた形。",
+     "overlap": "外来語「グリフ（字形）」と同じ表記"
+    },
+    {
+     "name": "グリーファ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / deep and poignant distress caused by bereavement",
+   "id": "WN-EN-0043",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "mourning",
+   "pos": "名詞",
+   "meaningJa": "死を悲しむこと。喪。喪服など悲しみを表すしるしや、喪に服する期間も指す。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "in mourning で「喪に服して」。感情そのものより、悼むという行いや慣習を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "モーニング",
+   "url": "https://www.merriam-webster.com/dictionary/mourning",
+   "tags": [
+    "服喪",
+    "哀悼",
+    "喪"
+   ],
+   "candidates": [
+    {
+     "name": "モーニング",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "morning（朝）のカタカナ表記と同じ"
+    },
+    {
+     "name": "モーニア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "モルン",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "動詞 mourn の綴りに寄せた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the act of sorrowing",
+   "id": "WN-EN-0044",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "despair",
+   "pos": "名詞・動詞",
+   "meaningJa": "望みをすっかり失うこと。絶望。大きな不幸や失望、また絶望の原因も指す。",
+   "categories": [
+    "despair"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "be the despair of ～ で「～を絶望させる存在」。動詞では「絶望する」。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ディスペア",
+   "url": "https://www.merriam-webster.com/dictionary/despair",
+   "tags": [
+    "絶望",
+    "失意",
+    "失望"
+   ],
+   "candidates": [
+    {
+     "name": "ディスペア",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「ディスペア」と同じ表記"
+    },
+    {
+     "name": "ディスペ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "スペア",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "後半だけを取った形。",
+     "overlap": "外来語「スペア（予備）」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / utter loss of hope",
+   "id": "WN-EN-0045",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "desperation",
+   "pos": "名詞",
+   "meaningJa": "望みを失い絶望に身を任せること。追い詰められて無謀になる状態。",
+   "categories": [
+    "despair"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "despair が静かな絶望なら、こちらは「なりふり構わぬ必死さ」を含む。in desperation で「やけになって」。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "デスパレイション",
+   "url": "https://www.merriam-webster.com/dictionary/desperation",
+   "tags": [
+    "自暴自棄",
+    "絶望",
+    "必死"
+   ],
+   "candidates": [
+    {
+     "name": "デスパ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "頭の三音の形。",
+     "overlap": ""
+    },
+    {
+     "name": "デスパレ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "前半四音の形。",
+     "overlap": ""
+    },
+    {
+     "name": "パレイシア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "後半を取り語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / loss of hope and surrender to despair",
+   "id": "WN-EN-0046",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "dread",
+   "pos": "名詞・動詞・形容詞",
+   "meaningJa": "迫る災いを前にした強い恐れ。嫌な見通しへの激しい不安。恐れを呼ぶ存在も指す。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "古くは「畏れ」の意味もあった。dreads は髪型のドレッドロックスも指すので文脈に注意。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ドレッド",
+   "url": "https://www.merriam-webster.com/dictionary/dread",
+   "tags": [
+    "恐怖",
+    "戦慄",
+    "畏怖"
+   ],
+   "candidates": [
+    {
+     "name": "ドレッド",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "そのままの読み。重く短い。",
+     "overlap": "髪型「ドレッド」と同じ表記"
+    },
+    {
+     "name": "ドレダ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ドレディア",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾を足して整えた形。",
+     "overlap": "ゲームのキャラクター名と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / great fear especially in the face of impending evil",
+   "id": "WN-EN-0047",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "terror",
+   "pos": "名詞",
+   "meaningJa": "圧倒されるほど強い恐怖。暴力やその脅し、恐ろしい様相の意味もある。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "政治的な暴力（テロ）の意味を持つ語。口語では「手に負えない子」の意味にもなる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "テラー",
+   "url": "https://www.merriam-webster.com/dictionary/terror",
+   "tags": [
+    "恐怖",
+    "戦慄",
+    "脅威"
+   ],
+   "candidates": [
+    {
+     "name": "テラー",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「テラー」と同じ表記"
+    },
+    {
+     "name": "テロル",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "綴り読みに寄せた形。",
+     "overlap": "外来語「テロル」と同じ表記"
+    },
+    {
+     "name": "テラ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "長音を落とした短い形。",
+     "overlap": "外来語「テラ」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / a state of intense or overwhelming fear",
+   "id": "WN-EN-0048",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "fear",
+   "pos": "名詞・動詞",
+   "meaningJa": "危険を予期・察知して起こる、強く不快な感情。恐れ。神への深い畏敬の意味もある。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "everyday",
+    "religious"
+   ],
+   "nuanceNote": "fear of God のように「畏れ敬う」意味でも使う。「心配の種・危険」の意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "フィアー",
+   "url": "https://www.merriam-webster.com/dictionary/fear",
+   "tags": [
+    "恐怖",
+    "不安",
+    "畏敬"
+   ],
+   "candidates": [
+    {
+     "name": "フィアー",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「フィアー」と同じ表記"
+    },
+    {
+     "name": "フィア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "長音を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "フィアル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / unpleasant often strong emotion caused by anticipation",
+   "id": "WN-EN-0049",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "remorse",
+   "pos": "名詞",
+   "meaningJa": "罪の意識から生じる、身を噛むような苦しみ。自責の念。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "regret より強く、自分の過ちを責める苦しみを表す。古くは「憐れみ」の意味もあった（廃義）。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "リモース",
+   "url": "https://www.merriam-webster.com/dictionary/remorse",
+   "tags": [
+    "悔恨",
+    "自責",
+    "良心"
+   ],
+   "candidates": [
+    {
+     "name": "リモース",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "そのままの読み。低く尾を引く響き。",
+     "overlap": ""
+    },
+    {
+     "name": "リモ",
+     "method": "short",
+     "impressions": [
+      "soft"
+     ],
+     "note": "頭の二拍だけの形。",
+     "overlap": ""
+    },
+    {
+     "name": "リモーサ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / gnawing distress arising from a sense of guilt",
+   "id": "WN-EN-0050",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "repentance",
+   "pos": "名詞",
+   "meaningJa": "悔い改めること、またその過程。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "religious",
+    "formal"
+   ],
+   "nuanceNote": "過ちを悔いるだけでなく、改めようとする行いを含む。宗教的な文脈でよく使う語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "リペンタンス",
+   "url": "https://www.merriam-webster.com/dictionary/repentance",
+   "tags": [
+    "悔悟",
+    "改悛",
+    "懺悔"
+   ],
+   "candidates": [
+    {
+     "name": "リペンタ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ペンタス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "中ほどを取り語尾を締めた形。",
+     "overlap": "花の名「ペンタス」と同じ表記"
+    },
+    {
+     "name": "リペント",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "crisp"
+     ],
+     "note": "動詞の形に寄せた短縮。",
+     "overlap": "動詞 repent の読みと同じ"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the action or process of repenting",
+   "id": "WN-EN-0051",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "penitence",
+   "pos": "名詞",
+   "meaningJa": "悔いている状態。自分の罪や過ちを悲しむ気持ち。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "religious",
+    "formal"
+   ],
+   "nuanceNote": "罪を悲しむ謙虚な心のあり方を表す硬い語。日常語では sorry や regret で言うことが多い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ペニテンス",
+   "url": "https://www.merriam-webster.com/dictionary/penitence",
+   "tags": [
+    "悔悛",
+    "懺悔",
+    "贖罪"
+   ],
+   "candidates": [
+    {
+     "name": "ペニテンス",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "そのままの読み。静かで硬質。",
+     "overlap": ""
+    },
+    {
+     "name": "ペニテ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半三音の形。",
+     "overlap": ""
+    },
+    {
+     "name": "ニテンス",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / sorrow for sins or faults",
+   "id": "WN-EN-0052",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "shame",
+   "pos": "名詞・動詞",
+   "meaningJa": "罪や欠点、不作法を自覚して起こるつらい感情。恥。不名誉な状態や、非難を招くものも指す。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "What a shame は「残念だ」の意味で、恥とは関係なく日常的に使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "シェイム",
+   "url": "https://www.merriam-webster.com/dictionary/shame",
+   "tags": [
+    "羞恥",
+    "恥辱",
+    "不名誉"
+   ],
+   "candidates": [
+    {
+     "name": "シェイム",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "そのままの読み。",
+     "overlap": ""
+    },
+    {
+     "name": "シェイマ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "シェム",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "音を詰めた短い形。",
+     "overlap": "人名シェム（セム）と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / a painful emotion caused by consciousness of guilt",
+   "id": "WN-EN-0053",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "disgrace",
+   "pos": "名詞・動詞",
+   "meaningJa": "恩寵や信用を失った状態。面目・名誉を失うこと。恥のもとになる人や物も指す。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "in disgrace で「不興を買って・面目を失って」。a disgrace で「恥さらし」。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ディスグレイス",
+   "url": "https://www.merriam-webster.com/dictionary/disgrace",
+   "tags": [
+    "不名誉",
+    "失墜",
+    "恥辱"
+   ],
+   "candidates": [
+    {
+     "name": "ディスグレ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ディグレス",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "音を詰めた形。",
+     "overlap": "動詞 digress の読みに近い"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: verb, noun / loss of grace, favor, or honor",
+   "id": "WN-EN-0054",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "dishonor",
+   "pos": "名詞・動詞",
+   "meaningJa": "名誉や評判がないこと、失うこと。名誉を失った状態。不面目のもとも指す。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "米国式の綴り。英国式は dishonour。騎士道や家名など「名誉」を重んじる文脈に合う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ディスオナー",
+   "url": "https://www.merriam-webster.com/dictionary/dishonor",
+   "tags": [
+    "不名誉",
+    "汚名",
+    "恥辱"
+   ],
+   "candidates": [
+    {
+     "name": "ディスオナ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "長音を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ディソナ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "音をつなげて詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / lack or loss of honor or reputation",
+   "id": "WN-EN-0055",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "wrath",
+   "pos": "名詞",
+   "meaningJa": "復讐心を帯びた激しい怒りや憤り。罪や過ちへの報いとしての罰も指す。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "literary",
+    "religious"
+   ],
+   "nuanceNote": "神の怒り（the wrath of God）のような重い文脈で使う。日常の怒りは anger。形容詞用法は古語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ラス",
+   "url": "https://www.merriam-webster.com/dictionary/wrath",
+   "tags": [
+    "憤怒",
+    "激怒",
+    "天罰"
+   ],
+   "candidates": [
+    {
+     "name": "ラス",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "そのままの読み。短く強い。",
+     "overlap": ""
+    },
+    {
+     "name": "ラース",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "長音を入れた形。",
+     "overlap": "人名ラースと同じ表記"
+    },
+    {
+     "name": "ラシア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, adjective / strong vengeful anger or indignation",
+   "id": "WN-EN-0056",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "rage",
+   "pos": "名詞・動詞",
+   "meaningJa": "抑えのきかない激しい怒り。風や海の荒れ狂う動き、強い情熱の意味もある。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "古くは「狂気」の意味もあった。怒りだけでなく、嵐や熱狂のような激しさ全般を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "レイジ",
+   "url": "https://www.merriam-webster.com/dictionary/rage",
+   "tags": [
+    "激怒",
+    "憤激",
+    "狂乱"
+   ],
+   "candidates": [
+    {
+     "name": "レイジ",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "日本の人名「れいじ」と同じ音"
+    },
+    {
+     "name": "レイジア",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "elegant"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "レイガ",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "綴りの g を硬く読んだ形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / violent and uncontrolled anger",
+   "id": "WN-EN-0057",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "resentment",
+   "pos": "名詞",
+   "meaningJa": "不当な扱いや侮辱、害と感じたことへの憤りや、尾を引く悪意。恨み。",
+   "categories": [
+    "wrath",
+    "hatred"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "爆発する怒りではなく、内にくすぶり続ける恨みを表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "リゼントメント",
+   "url": "https://www.merriam-webster.com/dictionary/resentment",
+   "tags": [
+    "怨恨",
+    "憤慨",
+    "遺恨"
+   ],
+   "candidates": [
+    {
+     "name": "リゼント",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "動詞 resent の読みと同じ"
+    },
+    {
+     "name": "リゼン",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "頭の三音の形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゼントメ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / indignant displeasure or persistent ill will",
+   "id": "WN-EN-0058",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "betrayal",
+   "pos": "名詞",
+   "meaningJa": "人の信頼や信用を踏みにじること。裏切り。隠されていたものが露わになることも指す。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "「秘密の露見」という意味もあり、感情がうっかり表に出ることにも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ビトレイアル",
+   "url": "https://www.merriam-webster.com/dictionary/betrayal",
+   "tags": [
+    "裏切り",
+    "背信",
+    "露見"
+   ],
+   "candidates": [
+    {
+     "name": "ビトレイ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "動詞 betray の読みと同じ"
+    },
+    {
+     "name": "トレイアル",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "外来語「トライアル」に近い"
+    },
+    {
+     "name": "ビトレア",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "音を詰めて語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / violation of a person's trust or confidence",
+   "id": "WN-EN-0059",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "deceit",
+   "pos": "名詞",
+   "meaningJa": "人を欺く行為やその習い。欺くための企てや仕掛け、不誠実さも指す。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "一度の嘘より、だまそうとする性質ややり口全体を言う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ディシート",
+   "url": "https://www.merriam-webster.com/dictionary/deceit",
+   "tags": [
+    "欺瞞",
+    "虚偽",
+    "詐術"
+   ],
+   "candidates": [
+    {
+     "name": "ディシート",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "そのままの読み。細く冷たい。",
+     "overlap": ""
+    },
+    {
+     "name": "ディシー",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "シート",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "後半だけを取った形。",
+     "overlap": "外来語「シート」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the act or practice of deceiving",
+   "id": "WN-EN-0060",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "treachery",
+   "pos": "名詞",
+   "meaningJa": "忠誠や信義、信頼に背くこと。背信・反逆の行為。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "formal",
+    "literary"
+   ],
+   "nuanceNote": "betrayal より重く、主君・国・仲間への裏切りという物語的な響きがある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "トレチャリー",
+   "url": "https://www.merriam-webster.com/dictionary/treachery",
+   "tags": [
+    "背信",
+    "反逆",
+    "裏切り"
+   ],
+   "candidates": [
+    {
+     "name": "トレチャリー",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "そのままの読み。",
+     "overlap": ""
+    },
+    {
+     "name": "トレチャ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半三音の形。",
+     "overlap": ""
+    },
+    {
+     "name": "トレチェル",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "語尾を締めて整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / violation of allegiance or of faith and confidence",
+   "id": "WN-EN-0061",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "doubt",
+   "pos": "名詞・動詞",
+   "meaningJa": "信頼できないという気持ち。不信。考えが定まらない不確かさや、迷いを生む状況も指す。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "人への不信にも、事実についての疑問にも使う。no doubt は「おそらく・きっと」。b は発音しない。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ダウト",
+   "url": "https://www.merriam-webster.com/dictionary/doubt",
+   "tags": [
+    "疑念",
+    "不信",
+    "疑惑"
+   ],
+   "candidates": [
+    {
+     "name": "ダウト",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語・トランプ遊び「ダウト」と同じ表記"
+    },
+    {
+     "name": "ダウタ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ダウテル",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "語尾を足して整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: verb, noun / a lack of confidence; uncertainty of belief",
+   "id": "WN-EN-0062",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "refusal",
+   "pos": "名詞",
+   "meaningJa": "断ること、拒むこと。他の人より先に受けるか断るかを決められる権利の意味もある。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "everyday",
+    "official"
+   ],
+   "nuanceNote": "first refusal は「優先的に買う・断る権利」という取引上の言い方。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "リフューザル",
+   "url": "https://www.merriam-webster.com/dictionary/refusal",
+   "tags": [
+    "拒絶",
+    "拒否",
+    "辞退"
+   ],
+   "candidates": [
+    {
+     "name": "リフューズ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "動詞の形に寄せた短縮。",
+     "overlap": "動詞 refuse の読みと同じ"
+    },
+    {
+     "name": "リフュー",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "前半だけを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "フューザ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "cold"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the act of refusing or denying",
+   "id": "WN-EN-0063",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "denial",
+   "pos": "名詞",
+   "meaningJa": "求めや望みに応じないこと。事実や現実を認めようとしないこと。否認。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "心理的に現実を受け入れない状態（in denial）にも使う。法律では被告による否認を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ディナイアル",
+   "url": "https://www.merriam-webster.com/dictionary/denial",
+   "tags": [
+    "否認",
+    "否定",
+    "拒否"
+   ],
+   "candidates": [
+    {
+     "name": "ディナイ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "動詞 deny の読みと同じ"
+    },
+    {
+     "name": "ディナ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "頭の二拍の形。",
+     "overlap": "人名ディナと同じ表記"
+    },
+    {
+     "name": "ナイアル",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "人名ナイアル（Niall）と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / refusal to admit the truth or reality",
+   "id": "WN-EN-0064",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "rejection",
+   "pos": "名詞",
+   "meaningJa": "退けること、退けられた状態。拒絶。退けられた物も指す。",
+   "categories": [
+    "refusal",
+    "solitude"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "人に受け入れてもらえない痛みを表す語でもある。医学では移植の拒絶反応。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "リジェクション",
+   "url": "https://www.merriam-webster.com/dictionary/rejection",
+   "tags": [
+    "拒絶",
+    "排斥",
+    "却下"
+   ],
+   "candidates": [
+    {
+     "name": "リジェクト",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "動詞の形に寄せた短縮。",
+     "overlap": "外来語「リジェクト」と同じ表記"
+    },
+    {
+     "name": "リジェ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "頭の二拍の形。",
+     "overlap": ""
+    },
+    {
+     "name": "ジェクシア",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "中ほどを取り語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the action of rejecting; state of being rejected",
+   "id": "WN-EN-0065",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "fate",
+   "pos": "名詞・動詞",
+   "meaningJa": "物事の成り行きを定めるとされる力。運命。避けられない、しばしば不幸な結末や最期も指す。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "悪い結末や死を含みやすい語。単に「最終的な結果・行く末」の意味でも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "フェイト",
+   "url": "https://www.merriam-webster.com/dictionary/fate",
+   "tags": [
+    "運命",
+    "宿命",
+    "末路"
+   ],
+   "candidates": [
+    {
+     "name": "フェイト",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「フェイト」・作品名と同じ表記"
+    },
+    {
+     "name": "フェイタ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "フェイテル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "語尾を足した形。",
+     "overlap": "fatal の読み「フェイタル」に近い"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / an inevitable and often adverse outcome",
+   "id": "WN-EN-0066",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "destiny",
+   "pos": "名詞",
+   "meaningJa": "人や物があらかじめ向かうよう定められているもの。抗えない力とされる、定められた成り行き。",
+   "categories": [
+    "fate",
+    "hope"
+   ],
+   "nuances": [
+    "everyday",
+    "literary"
+   ],
+   "nuanceNote": "fate より前向きで、果たすべき使命や約束された未来という響きを持ちやすい。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "デスティニー",
+   "url": "https://www.merriam-webster.com/dictionary/destiny",
+   "tags": [
+    "運命",
+    "天命",
+    "宿命"
+   ],
+   "candidates": [
+    {
+     "name": "デスティニー",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "bright"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「デスティニー」と同じ表記"
+    },
+    {
+     "name": "デスティ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "前半三音の形。",
+     "overlap": ""
+    },
+    {
+     "name": "ティニー",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "後半を取った愛称風の形。",
+     "overlap": "外来語「タイニー／ティニー」に近い"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / a predetermined course of events",
+   "id": "WN-EN-0067",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "doom",
+   "pos": "名詞・動詞",
+   "meaningJa": "不幸な運命。破滅。裁き・判決の意味や、古いイングランドの法令の意味もある。",
+   "categories": [
+    "fate",
+    "despair"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "逃れられない破滅や死という暗い含みが強い。もとは「裁き・判決」を表した語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ドゥーム",
+   "url": "https://www.merriam-webster.com/dictionary/doom",
+   "tags": [
+    "破滅",
+    "悲運",
+    "審判"
+   ],
+   "candidates": [
+    {
+     "name": "ドゥーム",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "そのままの読み。重く低い。",
+     "overlap": "ゲーム名「DOOM」と同じ読み"
+    },
+    {
+     "name": "ドゥーマ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": "ロシアの議会「ドゥーマ」と同じ表記"
+    },
+    {
+     "name": "ドゥメル",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "長音を詰めて語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun, verb / destiny; especially unhappy destiny",
+   "id": "WN-EN-0068",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "eternity",
+   "pos": "名詞",
+   "meaningJa": "永遠であること。果てしなく続く時間。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "literary",
+    "religious"
+   ],
+   "nuanceNote": "「永遠に感じるほど長い時間」という誇張にも使う。死後の世界を指す文脈もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "エターニティ",
+   "url": "https://www.merriam-webster.com/dictionary/eternity",
+   "tags": [
+    "永遠",
+    "永劫",
+    "無限"
+   ],
+   "candidates": [
+    {
+     "name": "エターニティ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「エタニティ」に近い"
+    },
+    {
+     "name": "エターナ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "elegant"
+     ],
+     "note": "前半を取り語尾を開いた形。",
+     "overlap": "eternal の読み「エターナル」に近い"
+    },
+    {
+     "name": "エタニア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "音を詰めて整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the quality or state of being eternal; infinite time",
+   "id": "WN-EN-0069",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "perpetuity",
+   "pos": "名詞",
+   "meaningJa": "永続すること、その性質。永遠。法律では財産権を長期に拘束する取り決めを指す。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "formal",
+    "official"
+   ],
+   "nuanceNote": "in perpetuity（永久に）の形で契約や法律の文に多い。詩的な「永遠」は eternity。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "パーペチュイティ",
+   "url": "https://www.merriam-webster.com/dictionary/perpetuity",
+   "tags": [
+    "永続",
+    "永代",
+    "恒久"
+   ],
+   "candidates": [
+    {
+     "name": "パーペチュア",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "elegant"
+     ],
+     "note": "前半を取り語尾を開いた形。",
+     "overlap": "人名ペルペトゥアの英語読みに近い"
+    },
+    {
+     "name": "ペチュイ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "中ほどを取った軽い形。",
+     "overlap": ""
+    },
+    {
+     "name": "パーペル",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "前半を詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / the quality or state of being perpetual",
+   "id": "WN-EN-0070",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "mystery",
+   "pos": "名詞",
+   "meaningJa": "理解できないもの、理解を超えたもの。深く説明のつかない、秘密めいた性質。啓示によってのみ知られる宗教的真理。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "推理小説の意味でも使う。古くは「職業・同業組合」を表す別語もあった（古語）。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ミステリー",
+   "url": "https://www.merriam-webster.com/dictionary/mystery",
+   "tags": [
+    "神秘",
+    "謎",
+    "秘儀"
+   ],
+   "candidates": [
+    {
+     "name": "ミステリー",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「ミステリー」と同じ表記"
+    },
+    {
+     "name": "ミステル",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "語尾を締めた形。",
+     "overlap": "ドイツ語 Mistel（ヤドリギ）に近い音"
+    },
+    {
+     "name": "ミスティ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "外来語「ミスティ」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: noun / something not understood or beyond understanding",
+   "id": "WN-EN-0071",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "sacrifice",
+   "pos": "名詞",
+   "meaningJa": "価値あるものを、別の何かのために手放すこと。神に尊いものを捧げる行為、その捧げ物。",
+   "categories": [
+    "sacrifice"
+   ],
+   "nuances": [
+    "everyday",
+    "religious",
+    "polysemy"
+   ],
+   "nuanceNote": "日常の「犠牲」と、祭壇に捧げる宗教的な供犠の両方を指す。損失の意味や野球用語もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "サクリファイス",
+   "url": "https://www.merriam-webster.com/dictionary/sacrifice",
+   "tags": [
+    "犠牲",
+    "供物",
+    "献身"
+   ],
+   "candidates": [
+    {
+     "name": "サクリファイス",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "そのままの読み。重く荘重な響き。",
+     "overlap": "外来語「サクリファイス」と同じ表記"
+    },
+    {
+     "name": "サクリ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "前半だけを取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "サクリス",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "語尾を詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "search-excerpt",
+   "evidence": "WebSearch excerpt (main session, 2026-11-17)",
+   "id": "WN-EN-0072",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "devotion",
+   "pos": "名詞",
+   "meaningJa": "信仰の篤さ。祈りや礼拝の行い。大義や人に熱心に身を捧げ、忠実であること。",
+   "categories": [
+    "sacrifice",
+    "love"
+   ],
+   "nuances": [
+    "formal",
+    "religious",
+    "polysemy"
+   ],
+   "nuanceNote": "宗教的な敬虔さが第一義。人や大義への一途な献身・忠誠にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ディヴォーション",
+   "url": "https://www.merriam-webster.com/dictionary/devotion",
+   "tags": [
+    "献身",
+    "敬虔",
+    "忠誠"
+   ],
+   "candidates": [
+    {
+     "name": "ディヴォーション",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "そのままの読み。",
+     "overlap": ""
+    },
+    {
+     "name": "ディヴォ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "soft"
+     ],
+     "note": "前半だけを取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "デヴォーテ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "elegant"
+     ],
+     "note": "動詞 devote の形に寄せて語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "search-excerpt",
+   "evidence": "WebSearch excerpt (main session, 2026-11-17)",
+   "id": "WN-EN-0073",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "bondage",
+   "pos": "名詞",
+   "meaningJa": "法などの強制によって縛られた状態。奴隷・農奴の身分。支配する人や力への隷属。",
+   "categories": [
+    "order"
+   ],
+   "nuances": [
+    "formal",
+    "polysemy"
+   ],
+   "nuanceNote": "隷属・束縛を表す硬い語。辞書には性的な拘束行為を指す語義もあるため、使う場面に注意。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ボンデージ",
+   "url": "https://www.merriam-webster.com/dictionary/bondage",
+   "tags": [
+    "束縛",
+    "隷属",
+    "拘束"
+   ],
+   "candidates": [
+    {
+     "name": "ボンデージ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「ボンデージ」と同じ表記（服飾・性的な意味で使われる）"
+    },
+    {
+     "name": "ボンダ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "前半を取って語尾を開いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ボンディア",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾を地名風に整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "search-excerpt",
+   "evidence": "WebSearch excerpt (main session, 2026-11-17)",
+   "id": "WN-EN-0074",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "metamorphosis",
+   "pos": "名詞",
+   "meaningJa": "姿・構造・実体が、とくに超自然的な力で変わること。外見や性質、境遇の著しい変化。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [
+    "formal",
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "人が獣に変わるような神話的な変身から、生物学の変態、人や組織の大きな変貌まで指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "メタモルフォーシス",
+   "url": "https://www.merriam-webster.com/dictionary/metamorphosis",
+   "tags": [
+    "変身",
+    "変容",
+    "変態"
+   ],
+   "candidates": [
+    {
+     "name": "メタモルフォーシス",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「メタモルフォーシス」と同じ表記"
+    },
+    {
+     "name": "メタモル",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "soft"
+     ],
+     "note": "前半だけを取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "モルフォス",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "中ほどの音を取り出した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "search-excerpt",
+   "evidence": "WebSearch excerpt (main session, 2026-11-17)",
+   "id": "WN-EN-0075",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "oblivion",
+   "pos": "名詞",
+   "meaningJa": "覚えていないこと。意識や自覚のない状態。忘れ去られていること。破壊され消え去った状態。",
+   "categories": [
+    "memory",
+    "silence"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "「忘れること」と「忘れ去られること」の両方を指す。眠りや酩酊による無意識、消滅の意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "オブリヴィオン",
+   "url": "https://www.merriam-webster.com/dictionary/oblivion",
+   "tags": [
+    "忘却",
+    "無意識",
+    "消滅"
+   ],
+   "candidates": [
+    {
+     "name": "オブリヴィオン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「オブリビオン」に近い"
+    },
+    {
+     "name": "オブリヴィ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "リヴィオン",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "後半だけを取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "search-excerpt",
+   "evidence": "WebSearch excerpt (main session, 2026-11-17)",
+   "id": "WN-EN-0076",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "yearning",
+   "pos": "名詞",
+   "meaningJa": "やさしく、あるいは切実に何かを求める思い。あこがれ、渇望。",
+   "categories": [
+    "desire",
+    "hope"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "手の届かないものへの切ない思慕を表す。激しい欲よりも、静かで切実な響き。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "ヤーニング",
+   "url": "https://www.merriam-webster.com/dictionary/yearning",
+   "tags": [
+    "渇望",
+    "憧れ",
+    "思慕"
+   ],
+   "candidates": [
+    {
+     "name": "ヤーニング",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "そのままの読み。",
+     "overlap": ""
+    },
+    {
+     "name": "ヤーン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "動詞 yearn の読みに当たる短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヤルニア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "綴りの r を立てて語尾を開いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "search-excerpt",
+   "evidence": "WebSearch excerpt (main session, 2026-11-17)",
+   "id": "WN-EN-0077",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "remembrance",
+   "pos": "名詞",
+   "meaningJa": "心に留めていること。思い出すこと、その思い出。思い出させる品。追悼・記念。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "formal",
+    "polysemy"
+   ],
+   "nuanceNote": "memory より改まった語で、追悼・記念の場面でよく使う。思い出の品や贈り物も指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "リメンブランス",
+   "url": "https://www.merriam-webster.com/dictionary/remembrance",
+   "tags": [
+    "記憶",
+    "追憶",
+    "追悼"
+   ],
+   "candidates": [
+    {
+     "name": "リメンブランス",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "そのままの読み。",
+     "overlap": ""
+    },
+    {
+     "name": "リメン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "soft"
+     ],
+     "note": "前半だけを取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "メンブラ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "中ほどの音を取り出した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "search-excerpt",
+   "evidence": "WebSearch excerpt (main session, 2026-11-17)",
+   "id": "WN-EN-0078",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  },
+  {
+   "lemma": "memory",
+   "pos": "名詞",
+   "meaningJa": "学んだことを思い出す力やその働き。記念としての追憶。記憶されていること。思い出。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "覚える力と、覚えている内容の両方を指す基本語。「〜をしのんで」の意味でも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。（Merriam-Webster は独自の綴り字式表記のため記録していない）",
+   "kana": "メモリー",
+   "url": "https://www.merriam-webster.com/dictionary/memory",
+   "tags": [
+    "記憶",
+    "思い出",
+    "追憶"
+   ],
+   "candidates": [
+    {
+     "name": "メモリー",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "そのままの読み。",
+     "overlap": "外来語「メモリー」と同じ表記"
+    },
+    {
+     "name": "メモア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾を開いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "メモリス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "語尾に s を添えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "search-excerpt",
+   "evidence": "WebSearch excerpt (main session, 2026-11-17)",
+   "id": "WN-EN-0079",
+   "date": "2026-11-17",
+   "dictionary": "Merriam-Webster"
+  }
+ ],
+ "extraCategories": [
+  {
+   "id": "WN-EN-0008",
+   "lemma": "serenity",
+   "add": [
+    "silence"
+   ]
+  }
+ ],
+ "notFound": [],
+ "dictionary": "Merriam-Webster",
+ "host": "www.merriam-webster.com"
+}

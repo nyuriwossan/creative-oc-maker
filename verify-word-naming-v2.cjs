@@ -1,5 +1,5 @@
 'use strict';
-// Run: node verify-word-naming-v2.cjs — 「言葉から名付け」v2.2（11カテゴリ・命名コレクション・複数キャラ命名・利用先）のデータとロジックの検証
+// Run: node verify-word-naming-v2.cjs — 「言葉から名付け」v2.2 のデータ（11カテゴリ・192語）が、v2.3 のコードでもそのまま読めて同じ結果になることの検証
 const assert=require('node:assert/strict'),fs=require('fs');
 const W=require('./js/word-naming-core.js'),C=require('./js/studio/core.js');
 const data=JSON.parse(fs.readFileSync('./data/word-naming-v2.json','utf8'));
@@ -11,7 +11,7 @@ const CATS=['affirm','recognize','accept','harmony','hope','bless','trust','love
 
 // ---- スキーマ・11カテゴリ・5言語・ID ----
 assert.deepEqual(W.validate(data),[]);assert.deepEqual(W.validate(v1),[],'v2.1 data must still validate');
-assert.equal(data.schemaVersion,2);assert.equal(data.dataVersion,'2.0.0');assert.equal(W.SCHEMA_VERSION,2);assert.ok(W.DATA_URL.endsWith('word-naming-v2.json'));
+assert.equal(data.schemaVersion,2);assert.equal(data.dataVersion,'2.0.0');assert.ok(W.SUPPORTED_VERSIONS.includes(2),'v2 data must stay readable');
 assert.deepEqual(data.categories.map(c=>c.id),CATS);assert.ok(data.categories.every(c=>c.status==='available'&&c.aliases.length>=5));
 assert.deepEqual(data.categories.map(c=>c.label),['肯定・同意','承認・認知','受容・寛容','調和・平和','希望・未来','祝福・幸福','信頼・誠実','慈愛・優しさ','勇気・意志','自由・解放','感謝・称賛']);
 assert.deepEqual(Object.keys(data.languages).sort(),['de','en','fr','it','pt']);
@@ -70,7 +70,7 @@ bad(d=>{d.words[25].kana.basis='ipa';d.words[25].pronunciation.ipa=null;},/発�
 bad(d=>{d.words[30].categories=['luck'];},/未定義のカテゴリ/);
 bad(d=>{d.categories[4].status='planned';},/準備中のカテゴリ/);
 bad(d=>{d.words[30].nuances=['slang'];},/未定義のニュアンス/);
-bad(d=>{d.dataVersion='1.0.0';},/schemaVersion 2/);bad(d=>{d.schemaVersion=3;},/schemaVersion が未対応/);bad(d=>{delete d.access;},/access/);
+bad(d=>{d.dataVersion='1.0.0';},/schemaVersion 2/);bad(d=>{d.schemaVersion=4;},/schemaVersion が未対応/);bad(d=>{d.schemaVersion=3;},/groups（大分類）がありません/);bad(d=>{delete d.access;},/access/);
 ok('validator rejects duplicate IDs, unknown verification method, missing overlap field, wrong dictionary host, unverified pronunciation, unknown/planned categories');
 
 // ---- 逆引き検索：テーマ語・OR/AND・言語・ニュアンス・長さ・印象・原語／創作名の別 ----

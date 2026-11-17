@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>名前辞典 | 創作OCメーカー v2.2</title>
+<title>名前辞典 | 創作OCメーカー v2.3</title>
 <link rel="icon" href="./icons/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <link rel="stylesheet" href="./dictionary.css">
@@ -13,7 +13,7 @@
 <script src="./js/dictionary-page.js" defer></script>
 </head>
 <body><main class="wrap">
-<header><p class="eyebrow">創作OCメーカー v2.2</p><h1>名前辞典</h1><p>自然や古典のことばから、キャラクターの種を探す。</p></header>
+<header><p class="eyebrow">創作OCメーカー v2.3</p><h1>名前辞典</h1><p>自然や古典のことばから、キャラクターの種を探す。</p></header>
 <div id="studioNav" data-page="dictionary"></div>
 <script src="./js/studio/nav.js"></script>
 <nav class="site-nav st-subnav" aria-label="画面切り替え"><a href="./index.html">ガチャ</a><a href="./dictionary.html" aria-current="page">名前辞典</a></nav>
@@ -61,11 +61,20 @@
 <form id="wnFilters" class="panel" aria-label="言葉を絞り込む">
 <fieldset id="wnFilterControls" disabled>
 <label for="wnSearch">意味・テーマ・原語・読み・創作名で検索</label>
-<input id="wnSearch" type="search" placeholder="例：希望、優しさ、accord、アコール" autocomplete="off">
-<fieldset><legend>意味カテゴリ（複数可・未選択なら全カテゴリ）</legend><div id="wnCategories" class="chips"></div>
+<input id="wnSearch" type="search" placeholder="例：希望、孤独、運命、accord、アコール" autocomplete="off">
+<fieldset id="wnThemeBox"><legend>テーマの大分類</legend><div id="wnGroups" class="wn-groups" role="radiogroup" aria-label="テーマの大分類"></div>
+<p id="wnGroupNote" class="wn-note"></p>
+<fieldset><legend id="wnCatLegend">意味カテゴリ（複数可・未選択なら全カテゴリ）</legend><div id="wnCategories"></div>
+<p id="wnCatSelected" class="wn-selected" hidden><span></span> <button id="wnCatClear" type="button">選択を外す</button></p>
 <div id="wnCatModeBox" class="wn-catmode" role="radiogroup" aria-label="複数のカテゴリを選んだときの探し方" hidden>
 <label class="check"><input type="radio" name="wnCatMode" value="or" checked>いずれかを含む</label>
-<label class="check"><input type="radio" name="wnCatMode" value="and">すべてを含む</label></div></fieldset>
+<label class="check"><input type="radio" name="wnCatMode" value="and">すべてを含む</label></div></fieldset></fieldset>
+<details id="wnContrastBox"><summary>テーマを対比して探す（希望 ↔ 絶望 など）</summary>
+<p class="wn-note">対になる兄弟、主人公と宿敵、表と裏の人格などに、対照的な意味の名前を探せます。</p>
+<label for="wnContrast">対比</label><select id="wnContrast"></select>
+<p id="wnContrastNote" class="wn-contrast-note" hidden></p>
+<div class="actions"><button id="wnContrastCollect" type="button" hidden>この対比でコレクションを作る</button><button id="wnContrastOff" type="button" hidden>対比をやめる</button></div>
+</details>
 <details id="wnMoreFilters"><summary>言語・ニュアンス・名前の長さや印象で絞り込む</summary>
 <fieldset><legend>言語（複数可・未選択なら全言語）</legend><div id="wnLangs" class="chips"></div></fieldset>
 <label for="wnScope">検索語を探す場所</label><select id="wnScope"></select>

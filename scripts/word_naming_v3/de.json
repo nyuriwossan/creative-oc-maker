@@ -1,0 +1,3508 @@
+{
+ "lang": "de",
+ "words": [
+  {
+   "lemma": "Hass",
+   "pos": "名詞（男性）",
+   "meaningJa": "人や集団・組織に対する強い嫌悪と、敵意のこもった拒絶の気持ち。憎悪。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "「einen Hass haben」は口語の言い方。怒りよりも持続的で根深い敵意を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ハス",
+   "url": "https://www.duden.de/rechtschreibung/Hass",
+   "tags": [
+    "憎悪",
+    "敵意",
+    "嫌悪"
+   ],
+   "candidates": [
+    {
+     "name": "ハス",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "二音で短く鋭い響き。",
+     "overlap": "植物の「蓮（ハス）」と同じ表記"
+    },
+    {
+     "name": "ハッセ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "促音と語尾を足した形。硬質。",
+     "overlap": "ドイツ語圏の姓ハッセと重なる"
+    },
+    {
+     "name": "ハスル",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "dark"
+     ],
+     "note": "語尾にルを足して名前らしく。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／starke Abneigung, feindselige Ablehnung",
+   "id": "WN-DE-0046",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Feindschaft",
+   "pos": "名詞（女性）",
+   "meaningJa": "相手に害を与えたいと願うほどの敵対的な態度。また、互いに敵意を抱き合う関係。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "個人の感情（敵意）と、二者の関係（敵対関係）の両方を指す。宿敵同士の設定に向く。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ファイントシャフト",
+   "url": "https://www.duden.de/rechtschreibung/Feindschaft",
+   "tags": [
+    "敵意",
+    "敵対",
+    "対立"
+   ],
+   "candidates": [
+    {
+     "name": "ファイント",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "前半だけを取った形。強い響き。",
+     "overlap": "Feind（敵）の読みと同じ"
+    },
+    {
+     "name": "ファイン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語頭を短く切った形。澄んだ音。",
+     "overlap": "外来語「ファイン」と同じ表記"
+    },
+    {
+     "name": "ファイシャ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "前後を詰めて縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／feindselige Haltung; Beziehung",
+   "id": "WN-DE-0047",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Fluch",
+   "pos": "名詞（男性）",
+   "meaningJa": "怒りにまかせて吐く罵りの言葉。また、誰かに災いを願う呪いの言葉や、その結果の災い・破滅。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "「罵り」「呪詛」「呪いとしての災厄」の三義。創作では呪い・宿命的な災いの意味が使いやすい。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フルーフ",
+   "url": "https://www.duden.de/rechtschreibung/Fluch",
+   "tags": [
+    "呪い",
+    "呪詛",
+    "災厄"
+   ],
+   "candidates": [
+    {
+     "name": "フルーフ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "息の抜ける暗い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "フルカ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾をカに変えた軽い形。",
+     "overlap": ""
+    },
+    {
+     "name": "フルーエ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾を母音に替え柔らかく。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／Kraftausdruck; böse Verwünschung; Unheil",
+   "id": "WN-DE-0048",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Eifersucht",
+   "pos": "名詞（女性）",
+   "meaningJa": "愛情や利益を他人と分け合うこと、他人に奪われることへの強く過剰な恐れ。嫉妬。",
+   "categories": [
+    "envy",
+    "obsession"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "恋愛の嫉妬が典型だが、利益や立場を奪われる恐れにも使う。失う恐れが中心にある語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "アイファーズフト",
+   "url": "https://www.duden.de/rechtschreibung/Eifersucht",
+   "tags": [
+    "嫉妬",
+    "独占",
+    "恋慕"
+   ],
+   "candidates": [
+    {
+     "name": "アイファ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "前半を取った形。はっきりした音。",
+     "overlap": ""
+    },
+    {
+     "name": "アイゼル",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "音を詰め語尾を整えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "エイファ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語頭の母音を変えた柔らかい形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／übersteigerte Furcht … teilen zu müssen",
+   "id": "WN-DE-0049",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Neid",
+   "pos": "名詞（男性）",
+   "meaningJa": "他人の持ち物や成功を素直に認められず、自分もそれを欲しいと思う気持ち。羨望・ねたみ。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "Eifersucht が「失う恐れ」なのに対し、Neid は他人が持つものを欲しがるねたみ。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ナイト",
+   "url": "https://www.duden.de/rechtschreibung/Neid",
+   "tags": [
+    "羨望",
+    "嫉妬",
+    "妬心"
+   ],
+   "candidates": [
+    {
+     "name": "ナイト",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "短く締まった響き。",
+     "overlap": "外来語「ナイト（夜・騎士）」と同じ表記"
+    },
+    {
+     "name": "ナイダ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾を濁音にして和らげた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ネイド",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "綴り寄りに読み替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／Besitz oder Erfolg nicht gönnt",
+   "id": "WN-DE-0050",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Missgunst",
+   "pos": "名詞（女性）",
+   "meaningJa": "相手を快く思わないために、その成功や利益を喜べず、認めたくないと感じる気持ち。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [],
+   "nuanceNote": "Neid より「相手に得をさせたくない」という拒む気持ちが強い。悪意寄りの語。",
+   "ipa": "ˈmɪsɡʊnst",
+   "pronNote": "",
+   "kana": "ミスグンスト",
+   "url": "https://www.duden.de/rechtschreibung/Missgunst",
+   "tags": [
+    "嫉妬",
+    "悪意",
+    "妬心"
+   ],
+   "candidates": [
+    {
+     "name": "ミスグン",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語尾を落とした形。重い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ミスカ",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "後半を詰めて軽くした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ミグナ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "子音を間引き語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Erfolg oder Vorteile nicht gönnen",
+   "id": "WN-DE-0051",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Besessenheit",
+   "pos": "名詞（女性）",
+   "meaningJa": "何かに取りつかれ、心を完全に支配されている状態。",
+   "categories": [
+    "obsession"
+   ],
+   "nuances": [],
+   "nuanceNote": "ページの語義は「取りつかれていること」のみ。熱中・偏執か憑依かは文脈で決まる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ベゼッセンハイト",
+   "url": "https://www.duden.de/rechtschreibung/Besessenheit",
+   "tags": [
+    "執着",
+    "憑依",
+    "偏執"
+   ],
+   "candidates": [
+    {
+     "name": "ベゼッセ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "前半を取った形。粘る響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ベゼル",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "音を詰めて語尾を整えた形。",
+     "overlap": "腕時計の部品名「ベゼル」と同じ表記"
+    },
+    {
+     "name": "ゼッセン",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／das Besessensein",
+   "id": "WN-DE-0052",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Abhängigkeit",
+   "pos": "名詞（女性）",
+   "meaningJa": "何かや誰かに頼らなければ成り立たない状態。従属・依存。",
+   "categories": [
+    "obsession",
+    "order"
+   ],
+   "nuances": [
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "経済的・政治的な従属の例が挙がる。薬物などへの依存にも、他者への従属にも使える。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "アプヘンギヒカイト",
+   "url": "https://www.duden.de/rechtschreibung/Abhaengigkeit",
+   "tags": [
+    "依存",
+    "従属",
+    "隷属"
+   ],
+   "candidates": [
+    {
+     "name": "アプヘン",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語頭を取った形。詰まった響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヘンギ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "中ほどを切り出した短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "アプヒカ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "前後をつないで縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Abhängigsein; wirtschaftliche, politische Abhängigkeit",
+   "id": "WN-DE-0053",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Sucht",
+   "pos": "名詞（女性）",
+   "meaningJa": "酒や薬物などへの病的な依存。また、物事や行為を過度に欲しがる気持ち。",
+   "categories": [
+    "obsession",
+    "desire"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "嗜癖（病的依存）と、何かへの過剰な欲求の二義。「病」の意味は古い用法。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ズフト",
+   "url": "https://www.duden.de/rechtschreibung/Sucht",
+   "tags": [
+    "依存",
+    "中毒",
+    "渇望"
+   ],
+   "candidates": [
+    {
+     "name": "ズフト",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "濁音で始まる重い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ズフタ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "ズーフ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "母音を伸ばし語尾を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／krankhafte Abhängigkeit; übermäßiges Verlangen",
+   "id": "WN-DE-0054",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Einsamkeit",
+   "pos": "名詞（女性）",
+   "meaningJa": "ひとりでいる状態。孤独。また、人里離れた人けのない土地。",
+   "categories": [
+    "solitude",
+    "silence"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "心の孤独と、人けのない場所の両方を指す。寂しさにも、自ら選ぶ静かな独居にも使える。",
+   "ipa": "ˈaɪ̯nzaːmkaɪ̯t",
+   "pronNote": "",
+   "kana": "アインザームカイト",
+   "url": "https://www.duden.de/rechtschreibung/Einsamkeit",
+   "tags": [
+    "孤独",
+    "孤立",
+    "寂寥"
+   ],
+   "candidates": [
+    {
+     "name": "アインザ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "語頭を取った形。静かな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ザームカ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": ""
+    },
+    {
+     "name": "アインゼル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "前半に語尾を足して整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Zustand, allein zu sein; menschenleere Gegend",
+   "id": "WN-DE-0055",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Verlassenheit",
+   "pos": "名詞（女性）",
+   "meaningJa": "見捨てられ、ひとり取り残されている状態。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [],
+   "nuanceNote": "Einsamkeit より「置き去りにされた」受け身の響きが強い。類義語に孤独・空虚・荒涼が並ぶ。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フェアラッセンハイト",
+   "url": "https://www.duden.de/rechtschreibung/Verlassenheit",
+   "tags": [
+    "孤独",
+    "遺棄",
+    "孤立"
+   ],
+   "candidates": [
+    {
+     "name": "フェアラ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語頭を取った形。柔らかい。",
+     "overlap": ""
+    },
+    {
+     "name": "ラッセン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": "人名・ブランド名ラッセンと重なる"
+    },
+    {
+     "name": "フェラッセ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "音を詰めて語尾を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／das Verlassensein",
+   "id": "WN-DE-0056",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Verlorenheit",
+   "pos": "名詞（女性）",
+   "meaningJa": "自分を見失い、よるべのない状態。また、孤独、見捨てられていること。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [],
+   "nuanceNote": "迷子のように居場所がない心細さを表す。孤独・見捨てられた状態の意味でも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フェアローレンハイト",
+   "url": "https://www.duden.de/rechtschreibung/Verlorenheit",
+   "tags": [
+    "喪失",
+    "孤独",
+    "彷徨"
+   ],
+   "candidates": [
+    {
+     "name": "ローレン",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "中ほどを切り出した形。優しい音。",
+     "overlap": "人名ローレンと同じ表記"
+    },
+    {
+     "name": "フェアロ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語頭を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "フェローレ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "音を詰め語尾を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Einsamkeit, Verlassenheit",
+   "id": "WN-DE-0057",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Trauer",
+   "pos": "名詞（女性）",
+   "meaningJa": "喪失や不幸に遭ったあとの深い心の痛み。また、死別後の服喪の期間や喪服。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "心の悲嘆のほか、公的な服喪期間、喪服そのものも指す。死別と結びつきやすい語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "トラウアー",
+   "url": "https://www.duden.de/rechtschreibung/Trauer",
+   "tags": [
+    "悲嘆",
+    "服喪",
+    "哀悼"
+   ],
+   "candidates": [
+    {
+     "name": "トラウア",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "長音を落とした形。沈んだ響き。",
+     "overlap": ""
+    },
+    {
+     "name": "トラウ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語頭だけを取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "トラウエル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "語尾を伸ばして整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／seelischer Schmerz; Zeit des Trauerns; Trauerkleidung",
+   "id": "WN-DE-0058",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Verlust",
+   "pos": "名詞（男性）",
+   "meaningJa": "物をなくすこと。また、人を失って痛みと悲しみを覚えること、財産などの損失。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "落とし物から死別、財産の損失まで幅広い。感情語ではなく「失うこと」という出来事を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フェアルスト",
+   "url": "https://www.duden.de/rechtschreibung/Verlust",
+   "tags": [
+    "喪失",
+    "損失",
+    "死別"
+   ],
+   "candidates": [
+    {
+     "name": "フェアル",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "語頭を取った形。淡い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ルスト",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "後半を切り出した形。",
+     "overlap": "ドイツ語 Lust（欲・喜び）の読みと重なる"
+    },
+    {
+     "name": "フェルスタ",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "音を詰め語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／das Verlieren; Verlust eines Menschen; Einbuße",
+   "id": "WN-DE-0059",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Wehmut",
+   "pos": "名詞（女性）",
+   "meaningJa": "過ぎ去って二度と戻らないものを思う、控えめで静かな悲しみ。",
+   "categories": [
+    "grief",
+    "memory"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "あらたまった文体の語。激しい嘆きではなく、懐かしさを帯びた静かな哀愁を表す。",
+   "ipa": "ˈveːmuːt",
+   "pronNote": "",
+   "kana": "ヴェームート",
+   "url": "https://www.duden.de/rechtschreibung/Wehmut",
+   "tags": [
+    "哀愁",
+    "郷愁",
+    "追憶"
+   ],
+   "candidates": [
+    {
+     "name": "ヴェームート",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "長音が続く穏やかな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴェーム",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を落とした柔らかい形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴェムタ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "長音を詰め語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／gehoben／leise Trauer über Vergangenes",
+   "id": "WN-DE-0060",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Kummer",
+   "pos": "名詞（男性）",
+   "meaningJa": "重い運命や自分の苦しみを思って心が沈むこと。心痛。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "口語では「手に負えない困りごと」の意味でも使う。Trauer より日常的な悩み・心痛に寄る。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "クマー",
+   "url": "https://www.duden.de/rechtschreibung/Kummer",
+   "tags": [
+    "心痛",
+    "悲嘆",
+    "憂苦"
+   ],
+   "candidates": [
+    {
+     "name": "クマー",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "二音で丸い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "クメル",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "語尾を整えて名前らしくした形。",
+     "overlap": "民族名・言語名クメールに近い"
+    },
+    {
+     "name": "クンマ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "原語の重子音を生かした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／Betrübnis über schweres Geschick",
+   "id": "WN-DE-0061",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Verzweiflung",
+   "pos": "名詞（女性）",
+   "meaningJa": "望みをすっかり失い、どうしてよいか分からなくなった状態。絶望。",
+   "categories": [
+    "despair"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "希望が完全に断たれた心の状態を指す。追いつめられた末の行動の動機としても描きやすい。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フェアツヴァイフルング",
+   "url": "https://www.duden.de/rechtschreibung/Verzweiflung",
+   "tags": [
+    "絶望",
+    "悲観",
+    "窮地"
+   ],
+   "candidates": [
+    {
+     "name": "ツヴァイフ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "中ほどを切り出した形。硬い音。",
+     "overlap": ""
+    },
+    {
+     "name": "フェアツァ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語頭を取り語尾を詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ツヴァイル",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "語尾を整えて名前らしくした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Zustand völliger Hoffnungslosigkeit",
+   "id": "WN-DE-0062",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Resignation",
+   "pos": "名詞（女性）",
+   "meaningJa": "変えられないと思える事柄を前に、あきらめて身をゆだねること。諦念。",
+   "categories": [
+    "despair",
+    "accept"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "絶望というより、抗うのをやめて受け入れる静かなあきらめ。複数形はまれ。",
+   "ipa": "rezɪɡnaˈtsi̯oːn",
+   "pronNote": "",
+   "kana": "レジグナツィオーン",
+   "url": "https://www.duden.de/rechtschreibung/Resignation",
+   "tags": [
+    "諦念",
+    "断念",
+    "甘受"
+   ],
+   "candidates": [
+    {
+     "name": "レジグナ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "前半を取った形。落ち着いた音。",
+     "overlap": ""
+    },
+    {
+     "name": "レジーナ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "子音を抜いて滑らかにした形。",
+     "overlap": "人名レジーナと同じ表記"
+    },
+    {
+     "name": "ジグナ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "中ほどを切り出した短い形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Sichfügen in das unabänderlich Scheinende",
+   "id": "WN-DE-0063",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Hoffnungslosigkeit",
+   "pos": "名詞（女性）",
+   "meaningJa": "希望がまったくない状態。望みのなさ。",
+   "categories": [
+    "despair"
+   ],
+   "nuances": [],
+   "nuanceNote": "ページの語義は「希望がないこと」のみ。人の心境にも、状況の見込みのなさにも使える。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ホフヌングスロージヒカイト",
+   "url": "https://www.duden.de/rechtschreibung/Hoffnungslosigkeit",
+   "tags": [
+    "絶望",
+    "悲観",
+    "無望"
+   ],
+   "candidates": [
+    {
+     "name": "ホフヌン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語頭を取った形。丸い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ロージヒ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "後半を切り出した形。",
+     "overlap": ""
+    },
+    {
+     "name": "ホフロス",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "前後をつないで縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／das Hoffnungslossein",
+   "id": "WN-DE-0064",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Angst",
+   "pos": "名詞（女性）",
+   "meaningJa": "危険を前にして胸が締めつけられ、心が騒ぐ状態。また、何かに脅かされているという漠然とした感じ。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "専門的には、対象のはっきりしない不安が Angst、対象のある恐れが Furcht と区別される。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "アングスト",
+   "url": "https://www.duden.de/rechtschreibung/Angst",
+   "tags": [
+    "不安",
+    "恐怖",
+    "危惧"
+   ],
+   "candidates": [
+    {
+     "name": "アングスト",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "子音が詰まった重い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "アングス",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": "人名アンガスに近い"
+    },
+    {
+     "name": "アンスタ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "子音を間引き語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Beklemmung angesichts einer Gefahr; Gefühl des Bedrohtseins",
+   "id": "WN-DE-0065",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Furcht",
+   "pos": "名詞（女性）",
+   "meaningJa": "脅威や危険を前にして抱く恐れ。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "Angst よりあらたまった語として使われる。心理学・哲学では対象のある恐れを指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フルヒト",
+   "url": "https://www.duden.de/rechtschreibung/Furcht",
+   "tags": [
+    "恐怖",
+    "畏怖",
+    "危惧"
+   ],
+   "candidates": [
+    {
+     "name": "フルヒト",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "dark"
+     ],
+     "note": "息の音が続く冷たい響き。",
+     "overlap": ""
+    },
+    {
+     "name": "フルヒ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "soft"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "フルタ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "子音を抜いて平らにした形。",
+     "overlap": "日本の姓「古田」と同音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Angst angesichts einer Bedrohung",
+   "id": "WN-DE-0066",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Grauen",
+   "pos": "名詞（中性）",
+   "meaningJa": "不気味なもの、迫りくるものに対する恐れと戦慄。また、身の毛のよだつ出来事。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "感情としての戦慄と、恐ろしい出来事そのものの両方を指す。怪異・惨禍の場面に合う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "グラウエン",
+   "url": "https://www.duden.de/rechtschreibung/Grauen",
+   "tags": [
+    "戦慄",
+    "恐怖",
+    "惨禍"
+   ],
+   "candidates": [
+    {
+     "name": "グラウエン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "重く広がる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "グラウ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "語頭だけを取った形。",
+     "overlap": "ドイツ語 grau（灰色）の読みと重なる"
+    },
+    {
+     "name": "グラエン",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "母音を詰めて縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, Neutrum／Furcht, Entsetzen vor Unheimlichem; grauenerregendes Ereignis",
+   "id": "WN-DE-0067",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Reue",
+   "pos": "名詞（女性）",
+   "meaningJa": "自分の行いをあとから不正・道徳的な誤りと感じ、深く悔やむ気持ち。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "everyday",
+    "official"
+   ],
+   "nuanceNote": "法律用語「tätige Reue」は、始めた犯罪行為から自ら手を引くことを指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ロイエ",
+   "url": "https://www.duden.de/rechtschreibung/Reue",
+   "tags": [
+    "後悔",
+    "悔悟",
+    "悔恨"
+   ],
+   "candidates": [
+    {
+     "name": "ロイエ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "母音の多い柔らかな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ロイ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": "人名ロイと同じ表記"
+    },
+    {
+     "name": "ロイエル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "soft"
+     ],
+     "note": "語尾を足して名前らしくした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／tiefes Bedauern über … Unrecht empfundenes Handeln",
+   "id": "WN-DE-0068",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Gewissensbiss",
+   "pos": "名詞（男性）",
+   "meaningJa": "不正を働いた、何かの責任が自分にあるという、心にのしかかる意識。良心の呵責。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [],
+   "nuanceNote": "字義は「良心が噛むこと」。行いそのものより、あとから胸を刺す責めの感覚を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ゲヴィッセンスビス",
+   "url": "https://www.duden.de/rechtschreibung/Gewissensbiss",
+   "tags": [
+    "呵責",
+    "罪悪",
+    "良心"
+   ],
+   "candidates": [
+    {
+     "name": "ゲヴィッセ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "前半を取った形。重みがある。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴィッセン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": "ドイツ語 Wissen（知）の読みと重なる"
+    },
+    {
+     "name": "ゲヴィス",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "促音を抜いて短く詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／belastendes Bewusstsein, Unrecht begangen",
+   "id": "WN-DE-0069",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Schuldgefühl",
+   "pos": "名詞（中性）",
+   "meaningJa": "自分は罪を負ったという主観的な感覚。客観的には根拠が見えにくいことも多い。罪悪感。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [],
+   "nuanceNote": "とくに心理学で使う語で、多くは複数形。実際の罪の有無より本人の感じ方を指す。",
+   "ipa": "ˈʃʊltɡəfyːl",
+   "pronNote": "",
+   "kana": "シュルトゲフュール",
+   "url": "https://www.duden.de/rechtschreibung/Schuldgefuehl",
+   "tags": [
+    "罪悪",
+    "自責",
+    "負目"
+   ],
+   "candidates": [
+    {
+     "name": "シュルト",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半だけを取った形。",
+     "overlap": "Schuld（罪・負い目）の読みと同じ"
+    },
+    {
+     "name": "ゲフュール",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "後半を切り出した形。",
+     "overlap": ""
+    },
+    {
+     "name": "シュルフェ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "前後をつないで縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, Neutrum／besonders Psychologie／Gefühl, eine Schuld auf sich geladen",
+   "id": "WN-DE-0070",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Schande",
+   "pos": "名詞（女性）",
+   "meaningJa": "人の名声や評判をひどく傷つけるもの。恥辱。また、嘆かわしく憤りを覚える状態や出来事。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "個人の不名誉のほか、「これは恥ずべきことだ」と事態を非難する言い方にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "シャンデ",
+   "url": "https://www.duden.de/rechtschreibung/Schande",
+   "tags": [
+    "恥辱",
+    "不名誉",
+    "汚名"
+   ],
+   "candidates": [
+    {
+     "name": "シャンデ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "柔らかく沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "シャンダ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "シャンデル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "語尾を足して名前らしくした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Ansehen stark schadet; empörender Zustand",
+   "id": "WN-DE-0071",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Schmach",
+   "pos": "名詞（女性）",
+   "meaningJa": "本人が侮辱・恥・屈辱として受け止める仕打ち。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "あらたまった、感情のこもった語。受けた側が屈辱と感じる点に重心がある。",
+   "ipa": "ʃmaːx",
+   "pronNote": "",
+   "kana": "シュマーハ",
+   "url": "https://www.duden.de/rechtschreibung/Schmach",
+   "tags": [
+    "屈辱",
+    "恥辱",
+    "侮辱"
+   ],
+   "candidates": [
+    {
+     "name": "シュマーハ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "息の抜ける陰りのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "シュマ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "シュマーラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾を流音に替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／gehoben, emotional／Kränkung, Schande, Demütigung",
+   "id": "WN-DE-0072",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Demütigung",
+   "pos": "名詞（女性）",
+   "meaningJa": "心を深く傷つけ、人としての価値をおとしめる仕打ち。屈辱。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [],
+   "nuanceNote": "他者からおとしめられる行為・経験を指す。Scham（羞恥の感情）とは違い、加えられる側の語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "デミューティグング",
+   "url": "https://www.duden.de/rechtschreibung/Demuetigung",
+   "tags": [
+    "屈辱",
+    "侮辱",
+    "卑下"
+   ],
+   "candidates": [
+    {
+     "name": "デミュー",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語頭を取った形。柔らかい。",
+     "overlap": ""
+    },
+    {
+     "name": "デミュティ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "前半を詰めて取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ミューティ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／tiefe Kränkung, Herabwürdigung",
+   "id": "WN-DE-0073",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Zorn",
+   "pos": "名詞（男性）",
+   "meaningJa": "不当だと感じた出来事や、望みを妨げられたことへの激しい憤り。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "理由のある憤りを指す。Wut が抑えの利かない爆発なのに対し、Zorn は義憤にも使える。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ツォルン",
+   "url": "https://www.duden.de/rechtschreibung/Zorn",
+   "tags": [
+    "憤怒",
+    "義憤",
+    "激怒"
+   ],
+   "candidates": [
+    {
+     "name": "ツォルン",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "一拍で重く落ちる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ツォルナ",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "elegant"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゾルン",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "語頭を濁音に替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／heftiger Unmut über … ungerecht empfundene Vorgänge",
+   "id": "WN-DE-0074",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Groll",
+   "pos": "名詞（男性）",
+   "meaningJa": "表に出さず胸の奥に根を張った敵意、抑えこんだ憎しみ。外へ吐き出されない不満や恨み。",
+   "categories": [
+    "wrath",
+    "hatred"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "あらたまった語。爆発する怒りではなく、内にこもって続く恨み・わだかまりを表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "グロル",
+   "url": "https://www.duden.de/rechtschreibung/Groll",
+   "tags": [
+    "怨恨",
+    "遺恨",
+    "鬱憤"
+   ],
+   "candidates": [
+    {
+     "name": "グロル",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "低くこもる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "グロラ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾を母音にして和らげた形。",
+     "overlap": ""
+    },
+    {
+     "name": "グローレ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "母音を伸ばし語尾を整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／gehoben／versteckte Feindseligkeit, unterdrückter Hass",
+   "id": "WN-DE-0075",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Rache",
+   "pos": "名詞（女性）",
+   "meaningJa": "自分が受けた侮辱や傷への仕返しとして、感情に駆られて行う報復。復讐。",
+   "categories": [
+    "wrath",
+    "hatred"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "「Rache üben（復讐を果たす）」はあらたまった言い方。私的な恨みに基づく報復を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ラッヘ",
+   "url": "https://www.duden.de/rechtschreibung/Rache",
+   "tags": [
+    "復讐",
+    "報復",
+    "怨恨"
+   ],
+   "candidates": [
+    {
+     "name": "ラッヘ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "短く乾いた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ラヘル",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "促音を抜き語尾を足した形。",
+     "overlap": "人名ラヘル（ラケル）と重なる"
+    },
+    {
+     "name": "ラーヘ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "促音を長音に替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Vergeltung aus persönlicher Kränkung",
+   "id": "WN-DE-0076",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Wut",
+   "pos": "名詞（女性）",
+   "meaningJa": "腹立ちなどから起こる、抑えの利かない激しい感情の爆発。表情・言葉・行動に表れる。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "Tollwut（狂犬病）の短縮形としても使う。Zorn より制御を失った荒々しい怒り。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ヴート",
+   "url": "https://www.duden.de/rechtschreibung/Wut",
+   "tags": [
+    "激怒",
+    "憤怒",
+    "逆上"
+   ],
+   "candidates": [
+    {
+     "name": "ヴート",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "短く低い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴータ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾を母音に替えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴーテル",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "語尾を足して名前らしくした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／heftiger, unbeherrschter Gefühlsausbruch; Tollwut",
+   "id": "WN-DE-0077",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Verrat",
+   "pos": "名詞（男性）",
+   "meaningJa": "秘密などを漏らすこと。また、人や物事を売り渡して信頼を破ること。裏切り。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "秘密の漏洩と、味方を見捨てる背信の両方を指す。Treue（忠実）の対になる語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フェアラート",
+   "url": "https://www.duden.de/rechtschreibung/Verrat",
+   "tags": [
+    "裏切",
+    "背信",
+    "密告"
+   ],
+   "candidates": [
+    {
+     "name": "フェアラート",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "dark"
+     ],
+     "note": "伸びやかだが冷たい響き。",
+     "overlap": ""
+    },
+    {
+     "name": "フェラート",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "母音を詰めて滑らかにした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ラート",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "後半を切り出した短い形。",
+     "overlap": "ドイツ語 Rat（助言）の読みと重なる"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／das Verraten; Vertrauensbruch durch Preisgabe",
+   "id": "WN-DE-0078",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Lüge",
+   "pos": "名詞（女性）",
+   "meaningJa": "相手をだますために、わざと事実と違うことを言うこと。嘘。転じて、偽りの上に成り立つもの。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "「fromme Lüge」という言い回しもページに挙がる。発言の嘘から、偽りの人生などの比喩まで。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "リューゲ",
+   "url": "https://www.duden.de/rechtschreibung/Luege",
+   "tags": [
+    "虚偽",
+    "欺瞞",
+    "偽言"
+   ],
+   "candidates": [
+    {
+     "name": "リューゲ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "滑らかで陰りのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "リュゲル",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "長音を詰め語尾を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "リューガ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／absichtlich unwahre Äußerung",
+   "id": "WN-DE-0079",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Täuschung",
+   "pos": "名詞（女性）",
+   "meaningJa": "人をあざむくこと。また、自分が思い違いをすること、だまされている状態。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "「だます行為」と「錯覚・思い違い」の二義。悪意のある欺瞞にも、感覚の錯覚にも使える。",
+   "ipa": "ˈtɔɪ̯ʃʊŋ",
+   "pronNote": "",
+   "kana": "トイシュング",
+   "url": "https://www.duden.de/rechtschreibung/Taeuschung",
+   "tags": [
+    "欺瞞",
+    "錯覚",
+    "幻惑"
+   ],
+   "candidates": [
+    {
+     "name": "トイシュ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を落とした形。軽い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "トイシュン",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "末尾の音だけ落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "トイシャ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾を母音に替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／das Täuschen; das Sichtäuschen",
+   "id": "WN-DE-0080",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Zweifel",
+   "pos": "名詞（男性）",
+   "meaningJa": "言われたことを信じてよいか、やり方が正しいかについての迷いと、揺れ動く不確かさ。疑念。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "相手への不信だけでなく、自分の判断への迷いも含む。Vertrauen（信頼）の対になる語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ツヴァイフェル",
+   "url": "https://www.duden.de/rechtschreibung/Zweifel",
+   "tags": [
+    "疑念",
+    "懐疑",
+    "不信"
+   ],
+   "candidates": [
+    {
+     "name": "ツヴァイフェル",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "硬質で知的な響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ツヴァイ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語頭を取った形。",
+     "overlap": "ドイツ語 zwei（二）の読みと同じ"
+    },
+    {
+     "name": "ヴァイフェル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "soft"
+     ],
+     "note": "語頭の子音を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／Bedenken, schwankende Ungewissheit",
+   "id": "WN-DE-0081",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Ablehnung",
+   "pos": "名詞（女性）",
+   "meaningJa": "申し出や要求を受け入れず断ること。拒否。また、断りを伝える書面。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "official",
+    "polysemy"
+   ],
+   "nuanceNote": "行為としての拒絶と、不採用・却下の通知文書の両方を指す。Zustimmung（賛成）の対。",
+   "ipa": "ˈapleːnʊŋ",
+   "pronNote": "",
+   "kana": "アプレーヌング",
+   "url": "https://www.duden.de/rechtschreibung/Ablehnung",
+   "tags": [
+    "拒絶",
+    "拒否",
+    "却下"
+   ],
+   "candidates": [
+    {
+     "name": "アプレーヌ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "アプレ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語頭だけを取った短い形。",
+     "overlap": "フランス語 après（〜の後）の読みに近い"
+    },
+    {
+     "name": "レーヌ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": "フランス語 reine（女王）の読みと重なる"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Vorgang des Ablehnens; Zurückweisung in Briefform",
+   "id": "WN-DE-0082",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Verweigerung",
+   "pos": "名詞（女性）",
+   "meaningJa": "求められたことを拒んで応じないこと。また、自分から関わりを拒み、身を引くこと。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [],
+   "nuanceNote": "ページの語義は動詞の名詞化二つ（拒むこと／自らを閉ざすこと）。後者は心を閉ざす態度にも使える。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フェアヴァイゲルング",
+   "url": "https://www.duden.de/rechtschreibung/Verweigerung",
+   "tags": [
+    "拒否",
+    "拒絶",
+    "不服従"
+   ],
+   "candidates": [
+    {
+     "name": "ヴァイゲル",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "cold"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": "ドイツ語圏の姓ヴァイゲルと重なる"
+    },
+    {
+     "name": "フェアヴァイ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "語頭を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴァイゲ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを短く切り出した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／das Verweigern; das Sichverweigern",
+   "id": "WN-DE-0083",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Leugnung",
+   "pos": "名詞（女性）",
+   "meaningJa": "事実や自分の関与を認めず、そうではないと言い張ること。否認。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [],
+   "nuanceNote": "ページの語義は「否認すること」のみ。事実を認めない意味で、申し出を断る拒否とは違う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ロイグヌング",
+   "url": "https://www.duden.de/rechtschreibung/Leugnung",
+   "tags": [
+    "否認",
+    "否定",
+    "拒絶"
+   ],
+   "candidates": [
+    {
+     "name": "ロイグ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語頭を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ロイグナ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾を母音に替えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ロイヌ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "子音を抜いて縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／das Leugnen",
+   "id": "WN-DE-0084",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Schicksal",
+   "pos": "名詞（中性）",
+   "meaningJa": "高次の力によって定められ、人の人生を決定づけるもの。また、人生を定め導く力そのもの。運命。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "個々人に降りかかる定め（複数形あり）と、人を導く力としての運命（複数形なし）を書き分けられる。",
+   "ipa": "ˈʃɪkzaːl",
+   "pronNote": "",
+   "kana": "シックザール",
+   "url": "https://www.duden.de/rechtschreibung/Schicksal",
+   "tags": [
+    "運命",
+    "宿命",
+    "天命"
+   ],
+   "candidates": [
+    {
+     "name": "シックザール",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "重みのある荘重な響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ザール",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "crisp"
+     ],
+     "note": "後半を切り出した形。",
+     "overlap": "地名ザール（ザールラント）と重なる"
+    },
+    {
+     "name": "シクザ",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "促音と長音を詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, Neutrum／von höherer Macht Verhängtes; höhere Macht",
+   "id": "WN-DE-0085",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Verhängnis",
+   "pos": "名詞（中性）",
+   "meaningJa": "高次の力が人に下した不幸。また、逃れることのできない災い。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [],
+   "nuanceNote": "Schicksal が中立なのに対し、こちらは破滅へ向かう悪い定めだけを指す。悲劇向きの語。",
+   "ipa": "fɛɐ̯ˈhɛŋnɪs",
+   "pronNote": "",
+   "kana": "フェアヘングニス",
+   "url": "https://www.duden.de/rechtschreibung/Verhaengnis",
+   "tags": [
+    "宿命",
+    "災厄",
+    "破滅"
+   ],
+   "candidates": [
+    {
+     "name": "フェアヘン",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語頭を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヘングニス",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "後半を切り出した形。",
+     "overlap": ""
+    },
+    {
+     "name": "フェルニス",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "中ほどを抜いて縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, Neutrum／Unglück … höhere Macht; Unheil, dem man nicht entgeht",
+   "id": "WN-DE-0086",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Ewigkeit",
+   "pos": "名詞（女性）",
+   "meaningJa": "終わりなく続くこと、滅びないこと。宗教では時間を超えた彼岸の世界。口語では果てしなく長い時間。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "「永遠の世界へ入る」の形で死の婉曲表現にもなる。祝福にも、終わらない責め苦にも使える。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "エーヴィヒカイト",
+   "url": "https://www.duden.de/rechtschreibung/Ewigkeit",
+   "tags": [
+    "永遠",
+    "不滅",
+    "彼岸"
+   ],
+   "candidates": [
+    {
+     "name": "エーヴィヒ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "前半を取った形。澄んだ響き。",
+     "overlap": "ewig（永遠の）の読みと同じ"
+    },
+    {
+     "name": "エーヴィ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語頭を短く取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "エヴィカ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "長音を詰め語尾をつないだ形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／ewige Dauer, Unvergänglichkeit; Religion; umgangssprachlich",
+   "id": "WN-DE-0087",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Unendlichkeit",
+   "pos": "名詞（女性）",
+   "meaningJa": "限りがないこと、果てしない広がり。空間や時間に終わりがないこと。口語ではとても長い時間。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "polysemy",
+    "literary"
+   ],
+   "nuanceNote": "空間と時間に終わりがない意味はあらたまった用法。Ewigkeit より広がり・果てしなさに寄る。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ウンエントリヒカイト",
+   "url": "https://www.duden.de/rechtschreibung/Unendlichkeit",
+   "tags": [
+    "無限",
+    "無窮",
+    "永遠"
+   ],
+   "candidates": [
+    {
+     "name": "エントリヒ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": "endlich（ついに）の読みと同じ"
+    },
+    {
+     "name": "ウネント",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語頭を詰めて取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "エントリ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "中ほどを短く切り出した形。",
+     "overlap": "外来語「エントリー」に近い"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Unendlichsein; ohne Ende von Raum und Zeit",
+   "id": "WN-DE-0088",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Geheimnis",
+   "pos": "名詞（中性）",
+   "meaningJa": "人に知らせず隠しておくべき事柄。限られた者だけが知る事柄。また、解き明かされていない、解き明かせない謎。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "隠しごと・内輪だけの秘密・自然や生命の神秘の三義。守るものにも、暴かれるものにもなる。",
+   "ipa": "ɡəˈhaɪ̯mnɪs",
+   "pronNote": "",
+   "kana": "ゲハイムニス",
+   "url": "https://www.duden.de/rechtschreibung/Geheimnis",
+   "tags": [
+    "秘密",
+    "神秘",
+    "機密"
+   ],
+   "candidates": [
+    {
+     "name": "ゲハイム",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": "geheim（秘密の）の読みと同じ"
+    },
+    {
+     "name": "ハイムニス",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゲハイナ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾を詰めて母音で終えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, Neutrum／was geheim bleiben soll; etwas Unerforschtes",
+   "id": "WN-DE-0089",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Rätsel",
+   "pos": "名詞（中性）",
+   "meaningJa": "言い換えられた答えを自分で探し当てる謎かけ。また、どうしても理解できない物事や人物。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "遊びのなぞなぞと、解けない謎（人物にも使う）の両方。「あの人は謎だ」という言い方ができる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "レーツェル",
+   "url": "https://www.duden.de/rechtschreibung/Raetsel",
+   "tags": [
+    "謎",
+    "不可解",
+    "神秘"
+   ],
+   "candidates": [
+    {
+     "name": "レーツェル",
+     "method": "kana",
+     "impressions": [
+      "crisp",
+      "elegant"
+     ],
+     "note": "軽く弾む澄んだ響き。",
+     "overlap": ""
+    },
+    {
+     "name": "レーツ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "レツェラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "長音を詰め語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, Neutrum／Denkaufgabe; Sache oder Person … unbegreiflich",
+   "id": "WN-DE-0090",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Opfer",
+   "pos": "名詞（中性）",
+   "meaningJa": "神に捧げる供物・供犠。他者のために自分の何かをあきらめる犠牲。また、被害に遭った人、犠牲者。",
+   "categories": [
+    "sacrifice"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "「捧げもの」「自己犠牲」「被害者」が同じ語。人をあざける罵り語としての用法もあるので注意。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "オプファー",
+   "url": "https://www.duden.de/rechtschreibung/Opfer",
+   "tags": [
+    "犠牲",
+    "供物",
+    "献身"
+   ],
+   "candidates": [
+    {
+     "name": "オプファー",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "重く厳かな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "オプファ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "長音を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "オフェル",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "noble"
+     ],
+     "note": "子音を抜き語尾を整えた形。",
+     "overlap": "人名オフェル・オフィールに近い"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, Neutrum／kultische Handlung; persönlicher Verzicht; Person, die Schaden erleidet",
+   "id": "WN-DE-0091",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Hingabe",
+   "pos": "名詞（女性）",
+   "meaningJa": "人や物事に惜しみなく自分を捧げること。また、深く打ちこむ熱意、情熱。",
+   "categories": [
+    "sacrifice",
+    "love"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "献身と熱中の二義が中心。性的に身を任せる意味もあるが、あらたまった婉曲表現でやや古い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ヒンガーベ",
+   "url": "https://www.duden.de/rechtschreibung/Hingabe",
+   "tags": [
+    "献身",
+    "没頭",
+    "熱意"
+   ],
+   "candidates": [
+    {
+     "name": "ヒンガーベ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "noble"
+     ],
+     "note": "やわらかく伸びる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヒンガ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヒンベル",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "中ほどを抜き語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／rückhaltloses Sichhingeben; hingebungsvoller Eifer",
+   "id": "WN-DE-0092",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Sehnsucht",
+   "pos": "名詞（女性）",
+   "meaningJa": "遠くにあるもの、失われて手元にない人や物を、胸が痛むほど強く求める気持ち。憧れ・思慕。",
+   "categories": [
+    "desire",
+    "memory"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "欲望というより、届かないものへの切ない憧れ。故郷・過去・不在の人への思いによく使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ゼーンズフト",
+   "url": "https://www.duden.de/rechtschreibung/Sehnsucht",
+   "tags": [
+    "憧憬",
+    "思慕",
+    "渇望"
+   ],
+   "candidates": [
+    {
+     "name": "ゼーンズフト",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "長く尾を引く切ない響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ゼーン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語頭を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゼーネ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語頭に母音を足して整えた形。",
+     "overlap": "ドイツ語 Sehne（腱・弦）の読みと重なる"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／schmerzliches Verlangen nach … Fernem, Entbehrtem",
+   "id": "WN-DE-0093",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Begierde",
+   "pos": "名詞（女性）",
+   "meaningJa": "快楽、望みの成就、所有を求める激しい欲求。",
+   "categories": [
+    "desire"
+   ],
+   "nuances": [],
+   "nuanceNote": "Sehnsucht の切なさに対し、手に入れたい・味わいたいという熱く直接的な欲。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ベギーアデ",
+   "url": "https://www.duden.de/rechtschreibung/Begierde",
+   "tags": [
+    "欲望",
+    "渇望",
+    "情欲"
+   ],
+   "candidates": [
+    {
+     "name": "ベギーア",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ベギル",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "長音を詰めて語尾を整えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ギーアデ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "dark"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／leidenschaftliches Verlangen nach Genuss, Besitz",
+   "id": "WN-DE-0094",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Knechtschaft",
+   "pos": "名詞（女性）",
+   "meaningJa": "自由のない状態。抑圧され、囚われて生きること。隷属。",
+   "categories": [
+    "order"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "あらたまった語で、非難の含みをもつ。Freiheit（自由）・Befreiung（解放）の対になる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "クネヒトシャフト",
+   "url": "https://www.duden.de/rechtschreibung/Knechtschaft",
+   "tags": [
+    "隷属",
+    "束縛",
+    "抑圧"
+   ],
+   "candidates": [
+    {
+     "name": "クネヒト",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "前半だけを取った形。",
+     "overlap": "Knecht（下僕）の読みと同じ"
+    },
+    {
+     "name": "クネヒ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "dark"
+     ],
+     "note": "語頭を短く取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "クネシャ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "前後をつないで縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／gehoben, abwertend／Unfreiheit; Leben in Unterdrückung",
+   "id": "WN-DE-0095",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Ordnung",
+   "pos": "名詞（女性）",
+   "meaningJa": "物事が整い、見通しのよい状態。整えること。また、規律ある暮らしや、社会生活を律する決まり。秩序。",
+   "categories": [
+    "order",
+    "harmony"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "部屋の整頓から社会の秩序まで幅広い。安心をもたらす調和にも、人を縛る規律にもなる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "オルドヌング",
+   "url": "https://www.duden.de/rechtschreibung/Ordnung",
+   "tags": [
+    "秩序",
+    "規律",
+    "整頓"
+   ],
+   "candidates": [
+    {
+     "name": "オルドヌ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "オルド",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "語頭だけを取った形。",
+     "overlap": "ラテン語 ordo（秩序）に近い"
+    },
+    {
+     "name": "オルナ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "中ほどを抜いて縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／geordneter Zustand; Disziplin; Regelung des öffentlichen Lebens",
+   "id": "WN-DE-0096",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Herrschaft",
+   "pos": "名詞（女性）",
+   "meaningJa": "人を治め、支配する権利と力。複数形では紳士淑女の一同、古くは使用人から見た主人。",
+   "categories": [
+    "order",
+    "power"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "「支配・統治」が中心。歴史用語では領主の所領も指す。守護にも圧政にも使える中立の語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ヘルシャフト",
+   "url": "https://www.duden.de/rechtschreibung/Herrschaft",
+   "tags": [
+    "支配",
+    "統治",
+    "君臨"
+   ],
+   "candidates": [
+    {
+     "name": "ヘルシャ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヘルシャフト",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "堂々とした硬い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヘルフト",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "中ほどを抜いて縮めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Recht und Macht, über jemanden zu herrschen",
+   "id": "WN-DE-0097",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Wandel",
+   "pos": "名詞（男性）",
+   "meaningJa": "移り変わること。変化、変遷。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [],
+   "nuanceNote": "「生き方・品行」の意味は古い用法。急な転換より、時とともに進む移ろいを表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ヴァンデル",
+   "url": "https://www.duden.de/rechtschreibung/Wandel",
+   "tags": [
+    "変化",
+    "変遷",
+    "推移"
+   ],
+   "candidates": [
+    {
+     "name": "ヴァンデル",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "滑らかで落ち着いた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴァンデ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴァンデラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, maskulin／Sichwandeln; Wandlung",
+   "id": "WN-DE-0098",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Verwandlung",
+   "pos": "名詞（女性）",
+   "meaningJa": "姿や性質がすっかり別のものに変わること。また、何かを別のものに変えること。変身・変容。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [],
+   "nuanceNote": "自分が変わる場合にも、他から変えられる場合にも使う。Wandel より劇的な変身を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フェアヴァンドルング",
+   "url": "https://www.duden.de/rechtschreibung/Verwandlung",
+   "tags": [
+    "変身",
+    "変容",
+    "変貌"
+   ],
+   "candidates": [
+    {
+     "name": "ヴァンドル",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "elegant"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": ""
+    },
+    {
+     "name": "フェアヴァン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語頭を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴァンドラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "中ほどを取り語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Vorgang des Sich-Verwandelns",
+   "id": "WN-DE-0099",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Stille",
+   "pos": "名詞（女性）",
+   "meaningJa": "耳ざわりな物音のない状態。ふいに音が途絶えた静けさ。また、海などが穏やかに凪いでいる状態。",
+   "categories": [
+    "silence",
+    "harmony"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "安らかな静けさにも、急に音が消えた不穏な沈黙にも使える。場面で印象が反転する語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "シュティレ",
+   "url": "https://www.duden.de/rechtschreibung/Stille",
+   "tags": [
+    "静寂",
+    "閑静",
+    "沈黙"
+   ],
+   "candidates": [
+    {
+     "name": "シュティレ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "息のように静かな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "シュティラ",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "elegant"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "スティレ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "語頭を軽くした形。",
+     "overlap": "イタリア語 stile（様式）の読みと重なる"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Zustand ohne störendes Geräusch; Ruhigsein",
+   "id": "WN-DE-0100",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Schweigen",
+   "pos": "名詞（中性）",
+   "meaningJa": "口をきかないこと。話すのをやめること。沈黙。",
+   "categories": [
+    "silence",
+    "secret"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "「沈黙を破る」の言い回しがある。「黙らせる」は殺害の婉曲表現にもなり、秘匿・口封じの含みをもつ。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "シュヴァイゲン",
+   "url": "https://www.duden.de/rechtschreibung/Schweigen",
+   "tags": [
+    "沈黙",
+    "無言",
+    "黙秘"
+   ],
+   "candidates": [
+    {
+     "name": "シュヴァイゲン",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "硬く閉じた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "シュヴァイ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "語頭を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴァイゲン",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "cold"
+     ],
+     "note": "語頭の子音を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, Neutrum／das Nichtreden; das Nicht-mehr-Reden",
+   "id": "WN-DE-0101",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Erinnerung",
+   "pos": "名詞（女性）",
+   "meaningJa": "物事を思い出す力。心に残っている印象の総体、記憶。また、思い出の品や追憶・追悼。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "能力・記憶の内容・形見や追悼まで含む。法律用語では不服申立ての一種も指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "エアインネルング",
+   "url": "https://www.duden.de/rechtschreibung/Erinnerung",
+   "tags": [
+    "記憶",
+    "追憶",
+    "回想"
+   ],
+   "candidates": [
+    {
+     "name": "エアイン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語頭を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "インネル",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": ""
+    },
+    {
+     "name": "エリンネ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "母音を詰めて滑らかにした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Vermögen, sich zu erinnern; Gedächtnis; Andenken",
+   "id": "WN-DE-0102",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Vergessenheit",
+   "pos": "名詞（女性）",
+   "meaningJa": "人々から忘れ去られている状態。忘却。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [],
+   "nuanceNote": "「忘却に沈む」「忘却から救い出す」の言い回しで使う。忘れる行為ではなく、忘れられた状態を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "フェアゲッセンハイト",
+   "url": "https://www.duden.de/rechtschreibung/Vergessenheit",
+   "tags": [
+    "忘却",
+    "埋没",
+    "消失"
+   ],
+   "candidates": [
+    {
+     "name": "フェアゲ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語頭を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゲッセン",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "中ほどを切り出した形。",
+     "overlap": ""
+    },
+    {
+     "name": "フェゲッセ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "音を詰めて語尾を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／das Vergessensein; in Vergessenheit geraten",
+   "id": "WN-DE-0103",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Macht",
+   "pos": "名詞（女性）",
+   "meaningJa": "他者に対して使える影響力と手段。超自然的・神秘的な力（多くは複数形）。統治する政治的・社会的な権限。",
+   "categories": [
+    "power"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "権力・影響力のほか、複数形で「闇の力」のような人知を超えた力も表せる。軍勢の意味は古い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "マハト",
+   "url": "https://www.duden.de/rechtschreibung/Macht",
+   "tags": [
+    "権力",
+    "勢力",
+    "威力"
+   ],
+   "candidates": [
+    {
+     "name": "マハト",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "短く力のある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "マハ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "soft"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "マハティ",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "elegant"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Einfluss; übernatürliche Kraft; Befugnis zur Herrschaft",
+   "id": "WN-DE-0104",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "Gewalt",
+   "pos": "名詞（女性）",
+   "meaningJa": "人を支配し従わせる力と手段。不当な強制、容赦なくふるわれる暴力。また、自然などの圧倒的な力。",
+   "categories": [
+    "power",
+    "order"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "正当な権力（国家権力など）と暴力が同じ語。自然の猛威を指す用法はあらたまった言い方。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには強勢の位置のみ。",
+   "kana": "ゲヴァルト",
+   "url": "https://www.duden.de/rechtschreibung/Gewalt",
+   "tags": [
+    "権力",
+    "暴力",
+    "猛威"
+   ],
+   "candidates": [
+    {
+     "name": "ゲヴァルト",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "重く押し出す響き。",
+     "overlap": "ドイツ語由来の外来語「ゲバルト」に近い"
+    },
+    {
+     "name": "ゲヴァル",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "cold"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴァルト",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": "ドイツ語 Wald（森）の読みと重なる"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: Substantiv, feminin／Macht … zu herrschen; unrechtmäßiger Zwang; elementare Kraft",
+   "id": "WN-DE-0105",
+   "date": "2026-11-17"
+  }
+ ],
+ "extraCategories": [
+  {
+   "id": "WN-DE-0008",
+   "lemma": "Frieden",
+   "add": [
+    "silence"
+   ]
+  }
+ ],
+ "notFound": [
+  "Exil（検索結果に見出しページのURLが出なかった）",
+  "Scham（検索結果に見出しページのURLが出なかった）",
+  "Schuld（検索結果に見出しページのURLが出なかった）",
+  "Bedauern（検索結果に見出しページのURLが出なかった）",
+  "Los（検索結果に見出しページのURLが出なかった）",
+  "Verlangen（検索結果に見出しページのURLが出なかった）",
+  "Kraft（検索結果には前置詞 kraft のページしか出なかった）"
+ ]
+}

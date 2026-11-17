@@ -4,7 +4,7 @@
 "use strict";
 const P=window.OCWordNamingPage;if(!P)return;
 const {W,A,el,button,field,status}=P,$=id=>document.getElementById(id);
-const st={selected:new Set(),source:"theme",cats:new Set(),langs:new Set(),collectionId:"",theme:"",saveCollection:true,rows:[],pool:[],message:""};
+const st={selected:new Set(),source:"theme",group:"light",cats:new Set(),langs:new Set(),collectionId:"",contrastId:"",theme:"",saveCollection:true,rows:[],pools:{a:[],b:[]},labels:null,message:""};
 
 function chars(){return P.studioReady()?A().S.chars:[];}
 function shuffle(list){const a=list.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
@@ -14,39 +14,51 @@ function itemSource(item){
   if(item.idea)return {lemma:item.idea.source.lemma,langLabel:item.idea.source.langLabel,meaningJa:item.idea.source.meaningJa};
   return {lemma:item.word.lemma,langLabel:P.data().languages[item.word.lang].label,meaningJa:item.word.meaningJa};
 }
-function buildPool(){
-  const data=P.data(),p=P.project();
+/* 候補の出どころごとに {a, b} の2つの山を作る。対比のときだけ b を使い、A・Bを交互に割り当てる */
+function buildPools(){
+  const data=P.data(),p=P.project();st.labels=null;
   if(st.source==="collection"){
     const col=p.nameCollections.find(c=>c.id===st.collectionId);
-    return col?col.items.map(i=>P.ideas().find(x=>x.id===i.ideaId)).filter(Boolean).map(idea=>({idea})):[];
+    return {a:col?col.items.map(i=>P.ideas().find(x=>x.id===i.ideaId)).filter(Boolean).map(idea=>({idea})):[],b:[]};
   }
-  const out=W.filter(data,{categories:[...st.cats],langs:[...st.langs]});
-  return W.candidatePool(shuffle(out.results));
+  if(st.source==="contrast"){
+    const r=W.contrastResults(data,st.contrastId,{langs:[...st.langs]});
+    if(!r)return {a:[],b:[]};
+    st.labels={a:r.a.label,b:r.b.label};
+    return {a:W.candidatePool(shuffle(r.a.results)),b:W.candidatePool(shuffle(r.b.results))};
+  }
+  const out=W.filter(data,{categories:[...st.cats],group:st.cats.size?"":st.group,langs:[...st.langs]});
+  return {a:W.candidatePool(shuffle(out.results)),b:[]};
 }
 function assign(){
   const data=P.data();if(!data){status("言葉のデータを読み込めていません");return;}
   const picked=chars().filter(c=>st.selected.has(c.id));
   if(!picked.length){st.message="キャラクターを1人以上選んでください。";st.rows=[];renderTable();return;}
   if(st.source==="collection"&&!st.collectionId){st.message="コレクションを選んでください。";st.rows=[];renderTable();return;}
-  st.pool=buildPool();
+  if(st.source==="contrast"&&!W.contrastById(data,st.contrastId)){st.message="対比を選んでください。";st.rows=[];renderTable();return;}
+  st.pools=buildPools();
   const others=chars().filter(c=>!st.selected.has(c.id)).map(c=>c.name);
-  // 名前の重なりを避けて割り当てる（プールの中の同名、選んでいないキャラの名前）
-  const pool=st.pool.map(it=>({word:it.word,idea:it.idea,candidate:{name:itemName(it)},item:it}));
-  const got=W.pickAssignments(pool,picked.length,others);
-  st.rows=picked.map((c,i)=>{const it=got[i]?got[i].item:null;return {charId:c.id,apply:!!it,item:it,name:itemName(it)};});
+  // 名前の重なりを避けて割り当てる（山の中の同名、選んでいないキャラの名前、もう一方の山で使った名前）
+  const two=st.source==="contrast",sideOf=i=>two&&i%2?"b":"a";
+  const wrap=list=>list.map(it=>({candidate:{name:itemName(it)},item:it}));
+  const nA=picked.filter((c,i)=>sideOf(i)==="a").length,gotA=W.pickAssignments(wrap(st.pools.a),nA,others);
+  const gotB=W.pickAssignments(wrap(st.pools.b),picked.length-nA,others.concat(gotA.filter(Boolean).map(x=>x.candidate.name)));
+  let ia=0,ib=0;
+  st.rows=picked.map((c,i)=>{const side=sideOf(i),g=side==="a"?gotA[ia++]:gotB[ib++],it=g?g.item:null;return {charId:c.id,side,apply:!!it,item:it,name:itemName(it)};});
   const missing=st.rows.filter(r=>!r.item).length;
-  st.message=!st.pool.length?"条件に合う候補がありません。テーマやコレクションを変えてください。"
+  st.message=!(st.pools.a.length+st.pools.b.length)?"条件に合う候補がありません。テーマやコレクションを変えてください。"
     :missing?missing+"人ぶんの候補が足りません。テーマを広げるか、名前を直接入力してください。":"";
   renderTable();
 }
 /* 別の候補に替える。ほかの行で使っている名前は飛ばす */
 function cycle(row,dir){
-  if(!st.pool.length)return;
+  const pool=st.pools[row.side||"a"];
+  if(!pool.length)return;
   const used=new Set(st.rows.filter(r=>r!==row).map(r=>W.normalize(r.name)).filter(Boolean));
-  let i=st.pool.indexOf(row.item);
-  for(let n=0;n<st.pool.length;n++){
-    i=(i+dir+st.pool.length)%st.pool.length;
-    const it=st.pool[i];
+  let i=pool.indexOf(row.item);
+  for(let n=0;n<pool.length;n++){
+    i=(i+dir+pool.length)%pool.length;
+    const it=pool[i];
     if(!used.has(W.normalize(itemName(it)))){row.item=it;row.name=itemName(it);row.apply=true;return;}
   }
 }
@@ -79,6 +91,7 @@ function renderTable(){
     const c=chars().find(x=>x.id===r.charId);if(!c)return;
     const rowEl=el("div",undefined,"wn-brow"+(r.apply?"":" off"));rowEl.dataset.row=c.id;
     const cur=el("div",undefined,"wn-bcell");cur.dataset.label="キャラクター";cur.append(el("strong",C.displayName(c)));
+    if(st.labels){const tag=el("span",(r.side==="b"?"B":"A")+"：「"+st.labels[r.side]+"」の側","wn-bside");tag.dataset.side=r.side;cur.append(el("br"),tag);}
     const nameCell=el("div",undefined,"wn-bcell");nameCell.dataset.label="新しい名前";
     const input=el("input");input.type="text";input.maxLength=60;input.value=r.name;input.setAttribute("aria-label",C.displayName(c)+"の新しい名前");input.dataset.b="name";
     const len=el("span","","wn-blen");
@@ -90,7 +103,7 @@ function renderTable(){
     const mean=el("div",undefined,"wn-bcell wn-bmean");mean.dataset.label="原語の意味";mean.append(document.createTextNode(src?src.meaningJa:"候補がありません。名前を直接入力する場合は、由来は記録されません。"));
     const acts=el("div",undefined,"wn-bcell wn-bacts");acts.dataset.label="候補の変更";
     const prev=button("前の候補"),next=button("次の候補");prev.dataset.b="prev";next.dataset.b="next";
-    prev.disabled=next.disabled=st.pool.length<2;
+    prev.disabled=next.disabled=st.pools[r.side||"a"].length<2;
     const refocus=act=>{const b=document.querySelector('[data-row="'+CSS.escape(c.id)+'"] [data-b="'+act+'"]');if(b)b.focus({preventScroll:true});};
     prev.addEventListener("click",()=>{cycle(r,-1);renderTable();refocus("prev");});
     next.addEventListener("click",()=>{cycle(r,1);renderTable();refocus("next");});
@@ -111,9 +124,11 @@ async function apply(){
   const ok=await a.confirmBox("次の"+rows.length+"人の名前を、キャラ図鑑に反映します。\n\n"+lines.join("\n")+
     (warn.length?"\n\n【注意】"+warn.join(" "):"")+"\n\n読み・ローマ字は変更しません。必要なら図鑑で直してください。",{ok:"名前を変更する",title:"名前の変更の確認"});
   if(!ok){status("変更しませんでした");return;}
-  const theme=st.theme.trim(),intent=theme?"共通テーマ「"+theme+"」":"",saved=[];
+  const theme=st.theme.trim(),contrastOf=W.contrastById(data,st.source==="contrast"?st.contrastId:""),saved=[];
+  const label=theme||(contrastOf?contrastOf.a.label+"と"+contrastOf.b.label:"");
   for(const {r,c} of rows){
     const name=r.name.trim();let idea=null;
+    const intent=contrastOf?"対比テーマ「"+label+"」の「"+st.labels[r.side]+"」の側":(theme?"共通テーマ「"+theme+"」":"");
     if(r.item&&r.item.idea)idea=r.item.idea;
     else if(r.item){idea=W.newIdea(data,r.item.word,{candidateId:r.item.candidate.id,name,method:r.item.candidate.method,intent});p.nameIdeas.push(idea);}
     if(idea){P.applyNameToCharacter(c,idea,name,intent);saved.push(idea);}
@@ -124,11 +139,11 @@ async function apply(){
     }
   }
   if(st.saveCollection&&saved.length&&st.source!=="collection"){
-    const col=C.newCollection(theme||"一括命名");col.theme=theme;col.memo="複数キャラ命名で作成（"+rows.map(x=>x.r.name.trim()).join("、")+"）";
+    const col=C.newCollection(label||"一括命名");col.theme=contrastOf?"対比："+W.contrastTitle(contrastOf):theme;col.memo="複数キャラ命名で作成（"+rows.map(x=>x.r.name.trim()).join("、")+"）";
     col.items=[...new Set(saved.map(i=>i.id))].map(id=>({ideaId:id,note:""}));p.nameCollections.push(col);
   }
   a.saveProject();
-  st.rows=[];st.pool=[];st.message="";st.selected.clear();
+  st.rows=[];st.pools={a:[],b:[]};st.labels=null;st.message="";st.selected.clear();
   P.emit("ideas");
   status(rows.length+"人の名前を図鑑に反映しました");
 }
@@ -166,17 +181,34 @@ function render(){
   theme.addEventListener("input",()=>{st.theme=theme.value;});
   f2.append(field("テーマの名前（任意。名前の由来メモに残ります）",theme));
   const src=el("select");src.id="wnBatchSource";
-  src.append(new Option("意味カテゴリから候補を出す","theme"),new Option("命名コレクションの名前を使う","collection"));
+  src.append(new Option("意味カテゴリから候補を出す","theme"),new Option("テーマの対比から（A・Bを交互に割り当てる）","contrast"),new Option("命名コレクションの名前を使う","collection"));
   src.value=st.source;src.addEventListener("change",()=>{st.source=src.value;render();});
   f2.append(field("候補の出どころ",src));
-  if(st.source==="theme"){
-    const g1=el("fieldset");g1.append(el("legend","意味カテゴリ（複数可・未選択なら全カテゴリ）"));
-    const c1=el("div",undefined,"chips");c1.id="wnBatchCats";g1.append(c1);
-    P.chipGroup(c1,data.categories.filter(c=>c.status==="available").map(c=>[c.id,c.label]),st.cats,()=>{});
+  const langBox=()=>{
     const g2=el("fieldset");g2.append(el("legend","言語（複数可・未選択なら全言語）"));
     const c2=el("div",undefined,"chips");c2.id="wnBatchLangs";g2.append(c2);
-    P.chipGroup(c2,Object.entries(data.languages).map(([k,v])=>[k,v.label]),st.langs,()=>{});
-    f2.append(g1,g2);
+    P.chipGroup(c2,Object.entries(data.languages).map(([k,v])=>[k,v.label]),st.langs,()=>{});return g2;
+  };
+  if(st.source==="theme"){
+    if(data.groups){
+      if(!data.groups[st.group])st.group=Object.keys(data.groups)[0];
+      const gs=el("select");gs.id="wnBatchGroup";
+      for(const [k,v] of Object.entries(data.groups))gs.append(new Option(v.label,k));
+      gs.value=st.group;gs.addEventListener("change",()=>{st.group=gs.value;st.cats.clear();render();});
+      f2.append(field("テーマの大分類",gs));
+    }
+    const g1=el("fieldset");g1.append(el("legend","意味カテゴリ（複数可・未選択ならこの大分類の全カテゴリ）"));
+    const c1=el("div",undefined,"chips");c1.id="wnBatchCats";g1.append(c1);
+    P.chipGroup(c1,P.catsOf(data.groups?st.group:"").map(c=>[c.id,c.label]),st.cats,()=>{});
+    f2.append(g1,langBox());
+  }else if(st.source==="contrast"){
+    const sel=el("select");sel.id="wnBatchContrast";sel.append(new Option("選んでください",""));
+    for(const [kind,label] of Object.entries(W.CONTRAST_KINDS)){
+      const list=(data.contrasts||[]).filter(c=>c.kind===kind);if(!list.length)continue;
+      const og=document.createElement("optgroup");og.label=label;for(const c of list)og.append(new Option(W.contrastTitle(c),c.id));sel.append(og);
+    }
+    sel.value=W.contrastById(data,st.contrastId)?st.contrastId:"";sel.addEventListener("change",()=>{st.contrastId=sel.value;});
+    f2.append(field("対比",sel),el("p","選んだ順に、1人目はA、2人目はB、3人目はA…と交互に割り当てます。対比は創作上のもので、辞書上の対義語とは限りません。","wn-note"),langBox());
   }else{
     const sel=el("select");sel.id="wnBatchCollection";
     sel.append(new Option(p.nameCollections.length?"選んでください":"コレクションがありません",""),...p.nameCollections.map(c=>new Option(c.name+"（"+c.items.length+"件）",c.id)));

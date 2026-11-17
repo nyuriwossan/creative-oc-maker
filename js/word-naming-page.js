@@ -6,7 +6,8 @@
 const W=window.OCWordNaming,$=id=>document.getElementById(id);
 const A=()=>window.OCStudio;                       // 作品管理（共通ナビ）。読み込めなくても検索と閲覧は動かす
 const PAGE=24;
-let data=null,favorites=null,loading=false,limit=PAGE,leaving=false;
+let data=null,favorites=null,loading=false,limit=PAGE,leaving=false,group="",contrast="";
+const SIDE_PAGE=6,sideLimit={a:SIDE_PAGE,b:SIDE_PAGE};
 const state={langs:new Set(),categories:new Set(),nuances:new Set(),lengths:new Set(),impressions:new Set()};
 const listeners={data:[],ideas:[]};
 const SUBS=["find","collections","batch"];
@@ -77,10 +78,61 @@ function chipGroup(host,entries,set,onChange){
     host.append(b);
   }
 }
-function changed(){limit=PAGE;render();}
+function changed(){limit=PAGE;sideLimit.a=sideLimit.b=SIDE_PAGE;render();}
+/* 大分類（すべて／明／陰／両義）。色だけに頼らず、必ず文字のラベルを出す */
+function groupBadge(g,long){const b=el("span",long?data.groups[g].label:data.groups[g].short,"wn-badge");b.dataset.group=g;return b;}
+function catsOf(g){return data.categories.filter(c=>c.status==="available"&&(!g||c.group===g));}
+function setGroup(g){
+  group=g;
+  if(g)for(const id of [...state.categories])if((data.categories.find(c=>c.id===id)||{}).group!==g)state.categories.delete(id);
+  buildGroups();buildCategories();changed();
+}
+function buildGroups(){
+  const host=$("wnGroups");host.replaceChildren();
+  for(const [value,label] of [["","すべて"]].concat(Object.entries(data.groups||{}).map(([k,v])=>[k,v.label]))){
+    const b=button(label);b.dataset.value=value;b.setAttribute("role","radio");b.setAttribute("aria-checked",String(group===value));if(value)b.dataset.group=value;
+    b.addEventListener("click",()=>setGroup(value));host.append(b);
+  }
+  $("wnGroupNote").textContent=group?data.groups[group].note:"明・陰・両義の分類は創作上のテーマによるものです。語の意味を善悪に断定するものではありません。";
+}
+function catEntries(g){return catsOf(g).map(c=>[c.id,c.label]);}
+/* 33カテゴリを一度に並べない。「すべて」のときは大分類ごとに折りたたみ、大分類を選んだらその分だけ並べる */
+function buildCategories(){
+  const host=$("wnCategories");host.replaceChildren();
+  if(!data.groups){const d=el("div",undefined,"chips");host.append(d);chipGroup(d,catEntries(""),state.categories,changed);return;}
+  if(group){
+    const d=el("div",undefined,"chips");d.dataset.group=group;host.append(d);chipGroup(d,catEntries(group),state.categories,changed);
+  }else for(const g of Object.keys(data.groups)){
+    const det=el("details",undefined,"wn-catgroup");det.dataset.group=g;
+    const picked=catsOf(g).filter(c=>state.categories.has(c.id)).length;
+    const sum=el("summary"),txt=el("span");sum.append(groupBadge(g),txt);
+    const label=()=>{const n=catsOf(g).filter(c=>state.categories.has(c.id)).length;txt.textContent=" "+data.groups[g].label+"（"+catsOf(g).length+"カテゴリ"+(n?"・"+n+"件選択中":"")+"）";};label();
+    const d=el("div",undefined,"chips");d.dataset.group=g;det.append(sum,d);if(picked||g===Object.keys(data.groups)[0])det.open=true;host.append(det);
+    chipGroup(d,catEntries(g),state.categories,()=>{label();changed();});
+  }
+}
+function renderSelected(){
+  const p=$("wnCatSelected"),ids=[...state.categories];p.hidden=!ids.length;
+  p.querySelector("span").textContent=ids.length?"選択中："+ids.map(id=>W.categoryLabel(data,id)).join("、"):"";
+}
+function buildContrasts(){
+  const sel=$("wnContrast");sel.replaceChildren(new Option("対比しない",""));
+  for(const [kind,label] of Object.entries(W.CONTRAST_KINDS)){
+    const list=(data.contrasts||[]).filter(c=>c.kind===kind);if(!list.length)continue;
+    const og=document.createElement("optgroup");og.label=label;
+    for(const c of list)og.append(new Option(W.contrastTitle(c),c.id));
+    sel.append(og);
+  }
+  sel.value=contrast;$("wnContrastBox").hidden=!(data.contrasts||[]).length;
+}
+function setContrast(id){
+  contrast=W.contrastById(data,id)?id:"";$("wnContrast").value=contrast;
+  if(contrast)$("wnContrastBox").open=true;
+  changed();
+}
 function buildFilters(){
   chipGroup("wnLangs",Object.entries(data.languages).map(([k,v])=>[k,v.label]),state.langs,changed);
-  chipGroup("wnCategories",data.categories.map(c=>[c.id,c.label+(c.status==="available"?"":"（準備中）"),c.status!=="available"]),state.categories,changed);
+  buildGroups();buildCategories();buildContrasts();
   chipGroup("wnNuances",Object.entries(data.nuances),state.nuances,changed);
   chipGroup("wnLengths",Object.entries(W.LENGTHS),state.lengths,changed);
   chipGroup("wnImpressions",Object.entries(data.impressions),state.impressions,changed);
@@ -88,13 +140,14 @@ function buildFilters(){
 }
 function categoryMode(){const r=document.querySelector('input[name="wnCatMode"]:checked');return r&&r.value==="and"?"and":"or";}
 function options(){
-  return {query:$("wnSearch").value,scope:$("wnScope").value||"all",langs:[...state.langs],categories:[...state.categories],categoryMode:categoryMode(),
+  return {query:$("wnSearch").value,scope:$("wnScope").value||"all",langs:[...state.langs],group,categories:[...state.categories],categoryMode:categoryMode(),
     nuances:[...state.nuances],lengths:[...state.lengths],impressions:[...state.impressions],ids:$("wnFavoritesOnly").checked?new Set(favorites.ids()):null};
 }
 function clearFilters(){
   $("wnSearch").value="";$("wnFavoritesOnly").checked=false;$("wnScope").value="all";
   document.querySelector('input[name="wnCatMode"][value="or"]').checked=true;
   for(const s of Object.values(state))s.clear();
+  group="";contrast="";
   buildFilters();changed();$("wnSearch").focus();
 }
 /* 0件の案内から呼ぶ：条件をひとつ緩める */
@@ -103,11 +156,13 @@ function relax(key){
   else if(key==="scope")$("wnScope").value="all";
   else if(key==="categoryMode")document.querySelector('input[name="wnCatMode"][value="or"]').checked=true;
   else if(key==="ids")$("wnFavoritesOnly").checked=false;
+  else if(key==="group"){setGroup("");return;}
   else if(state[key]){state[key].clear();buildFilters();}
   changed();
 }
 function useTheme(id){
   $("wnSearch").value="";state.categories.clear();state.categories.add(id);
+  const g=(data.categories.find(c=>c.id===id)||{}).group;if(group&&g!==group)group="";contrast="";
   document.querySelector('input[name="wnCatMode"][value="or"]').checked=true;buildFilters();changed();
 }
 
@@ -127,6 +182,13 @@ function card(item){
   const article=el("article",undefined,"wn-card");article.dataset.id=w.id;
   const head=el("div",undefined,"wn-head"),h=el("h2",w.lemma);h.lang=w.lang;
   head.append(h,el("p",lang.label+" ／ "+w.pos,"wn-meta"));article.append(head);
+  const groups=W.wordGroups(data,w);
+  if(groups.length){
+    article.dataset.group=groups[0];
+    const themes=el("p",undefined,"wn-themes");
+    for(const g of groups){themes.append(groupBadge(g,true));themes.append(document.createTextNode(w.categories.filter(c=>(data.categories.find(x=>x.id===c)||{}).group===g).map(c=>W.categoryLabel(data,c)).join("、")+" "));}
+    article.append(themes);
+  }
 
   const origin=el("section",undefined,"wn-origin");
   origin.append(el("h3","原語（辞書で確認した実在語）"));
@@ -188,10 +250,53 @@ function renderSuggest(opts,out){
   }
   const all=button("条件をすべてクリア");all.dataset.relax="all";all.addEventListener("click",clearFilters);box.append(all);
 }
+/* テーマの対比：A側とB側を、同じ絞り込み条件で並べて見せる */
+function renderContrast(opts){
+  const r=W.contrastResults(data,contrast,opts),c=r.contrast,box=$("wnResults");box.replaceChildren();
+  $("wnCount").textContent="対比："+W.contrastTitle(c)+" ／ "+c.a.label+" "+r.a.results.length+"語・"+c.b.label+" "+r.b.results.length+"語";
+  $("wnTheme").textContent="";$("wnSuggest").hidden=true;$("wnMore").hidden=true;
+  for(const key of ["a","b"]){
+    const side=r[key],sec=el("section",undefined,"wn-side");sec.dataset.side=key;sec.dataset.group=(data.categories.find(x=>x.id===side.category)||{}).group||"";
+    const h=el("h2",undefined,"wn-side-title");h.append(groupBadge(sec.dataset.group),document.createTextNode(" "+(key==="a"?"A":"B")+"：「"+side.label+"」の言葉（"+W.categoryLabel(data,side.category)+"・"+side.results.length+"語）"));
+    sec.append(h);
+    if(!side.results.length)sec.append(el("p","この条件では見つかりません。言語や名前の長さ・印象の絞り込みをゆるめてください。","wn-empty"));
+    for(const item of side.results.slice(0,sideLimit[key]))sec.append(card(item));
+    if(side.results.length>sideLimit[key]){
+      const more=button("「"+side.label+"」をもっと見る（残り"+(side.results.length-sideLimit[key])+"語）","wn-side-more");more.dataset.more=key;
+      more.addEventListener("click",()=>{sideLimit[key]+=SIDE_PAGE;render();});sec.append(more);
+    }
+    box.append(sec);
+  }
+  box.setAttribute("aria-busy","false");
+}
+function renderContrastControls(){
+  const c=contrast&&W.contrastById(data,contrast),note=$("wnContrastNote");
+  $("wnThemeBox").disabled=!!c;$("wnContrastOff").hidden=!c;$("wnContrastCollect").hidden=!c;note.hidden=!c;
+  note.replaceChildren();
+  if(c){
+    note.dataset.kind=c.kind;
+    note.append(el("strong",W.CONTRAST_KINDS[c.kind]),el("br"),document.createTextNode(c.kind==="lexical"
+      ?c.evidence+" ただし、ここに並ぶ語のすべてが互いに対義語というわけではありません（テーマどうしの対比です）。"
+      :c.note+" 創作上の対照として並べています。辞書で対義語とされているわけではありません。"));
+  }
+}
+function contrastCollection(){
+  const c=W.contrastById(data,contrast);if(!c)return;
+  if(!studioReady()){status("作品を読み込めていないため、作れません");return;}
+  const a=A(),p=a.S.project,name=c.a.label+"と"+c.b.label;
+  if(p.nameCollections.some(x=>x.name===name)){status("コレクション「"+name+"」はすでにあります。名前を保存するときに選べます");return;}
+  const col=a.C.newCollection(name);
+  col.theme="対比："+c.a.label+"（"+W.categoryLabel(data,c.a.category)+"）↔ "+c.b.label+"（"+W.categoryLabel(data,c.b.category)+"）";
+  col.memo=W.CONTRAST_KINDS[c.kind]+"。A：「"+c.a.label+"」を表す名前／B：「"+c.b.label+"」を表す名前。";
+  p.nameCollections.push(col);a.saveProject();emit("ideas");
+  status("コレクション「"+name+"」を作りました。名前を保存するときに、このコレクションを選べます");
+}
 function render(){
   if(!data)return;
-  $("wnCatModeBox").hidden=state.categories.size<2;
-  const opts=options(),out=W.filter(data,opts);
+  $("wnCatModeBox").hidden=state.categories.size<2;renderSelected();renderContrastControls();
+  const opts=options();
+  if(contrast&&W.contrastById(data,contrast)){renderContrast(opts);return;}
+  const out=W.filter(data,opts);
   const box=$("wnResults");box.replaceChildren();
   const shown=Math.min(limit,out.results.length);
   $("wnCount").textContent="全"+data.words.length+"語 ／ 該当"+out.results.length+"語"+(shown<out.results.length?"（"+shown+"語を表示中）":"");
@@ -328,7 +433,7 @@ async function start(){
     data=await W.load();
     favorites=W.favorites(()=>localStorage,msg=>{const w=$("wnStorageWarning");w.hidden=false;w.textContent=msg;});
     $("wnNotice").textContent=data.notice+" 収録："+data.categories.filter(c=>c.status==="available").length+"カテゴリ・"+data.words.length+"語・創作名の候補"+
-      data.words.reduce((n,w)=>n+w.candidates.length,0)+"件。語義は、辞書サイトの検索結果に表示されたページ抜粋で確認した範囲です（各語の「確認状況」に記載）。";
+      data.words.reduce((n,w)=>n+w.candidates.length,0)+"件。語義の確認は、辞書サイトの検索結果の抜粋、または取得した辞書ページの読み取りによるもので、人がページ全文を読んだ確認ではありません（確認方法は語ごとに「確認状況」に記載）。";
     buildFilters();$("wnFilterControls").disabled=false;$("wnLoadStatus").hidden=true;
     render();emit("data");emit("ideas");
   }catch(e){
@@ -345,6 +450,10 @@ function init(){
   $("wnFavoritesOnly").addEventListener("change",changed);
   for(const r of document.querySelectorAll('input[name="wnCatMode"]'))r.addEventListener("change",changed);
   $("wnClear").addEventListener("click",clearFilters);
+  $("wnCatClear").addEventListener("click",()=>{state.categories.clear();buildCategories();changed();});
+  $("wnContrast").addEventListener("change",e=>setContrast(e.target.value));
+  $("wnContrastOff").addEventListener("click",()=>setContrast(""));
+  $("wnContrastCollect").addEventListener("click",contrastCollection);
   $("wnMore").addEventListener("click",showMore);
   $("wnRetry").addEventListener("click",start);
   $("wnGoCollections").addEventListener("click",()=>{setSub("collections");$("wnTab-collections").focus();});
@@ -358,6 +467,6 @@ function init(){
 }
 window.OCWordNamingPage={W,A,el,button,row,field,status,studioReady,project,ideas,chipGroup,
   data:()=>data,state:()=>({data,mode:$("modeWords").hidden?"find":"words",sub:currentSub()}),
-  on:(evt,fn)=>{listeners[evt].push(fn);},emit,setSub,ideaText,copyText,sendToCreate,saveIdea,wordOf,openEditor,applyNameToCharacter};
+  on:(evt,fn)=>{listeners[evt].push(fn);},emit,setSub,groupBadge,catsOf,ideaText,copyText,sendToCreate,saveIdea,wordOf,openEditor,applyNameToCharacter};
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();

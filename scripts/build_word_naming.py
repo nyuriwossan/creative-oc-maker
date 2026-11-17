@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """「言葉から名付け」用データを組み立てる。
   data/word-naming-v1.json … v2.1 の第1段階（20語）。互換性のためそのまま残す。
-  data/word-naming-v2.json … v2.2 の第2段階（11カテゴリ）。画面が読み込むのはこちら。
+  data/word-naming-v2.json … v2.2 の第2段階（明の11カテゴリ・192語）。互換性のためそのまま残す。
+  data/word-naming-v3.json … v2.3（明・陰・両義の33カテゴリと、テーマの対比）。画面が読み込むのはこちら。
 v2 で追加した語は scripts/word_naming_words_v2.py にある。
 既存の名前辞典データ（data/dictionary-v1.7.json）とは別スキーマ・別ファイル。
 語義は各辞書の見出しページで確認し、説明は短く編集した日本語で書く（辞書本文は転載しない）。
@@ -232,9 +233,133 @@ def build_v2():
             "languages": LANGS, "categories": CATEGORIES_V2, "nuances": NUANCES_V2, "methods": METHODS,
             "impressions": IMPRESSIONS_V2, "access": ACCESS, "words": words}
 
+# ---------------------------------------------------------------- v3（明・陰・両義）
+# v2.3 で追加した語は scripts/word_naming_v3/<言語>.json にある（辞書ページを取得して確認した語。ID は取り込み時に確定済み）。
+GROUPS = {"light": {"label": "明の言葉", "short": "明", "note": "肯定・希望・信頼など、明るい側のテーマ。"},
+          "shade": {"label": "陰の言葉", "short": "陰", "note": "憎しみ・喪失・恐れなど、暗い側のテーマ。語の意味を「悪」と断定するものではありません。"},
+          "ambi": {"label": "両義的な言葉", "short": "両義", "note": "運命・秘密・力など、物語によって善にも悪にも読めるテーマ。"}}
+CATEGORIES_V3_NEW = [
+    ("hatred", "憎悪・敵意", "shade", ["憎しみ", "憎む", "敵対", "嫌悪", "呪い", "呪う", "怨敵"]),
+    ("envy", "嫉妬・羨望", "shade", ["妬み", "ねたみ", "羨む", "うらやましい", "やきもち", "羨み"]),
+    ("obsession", "執着・依存", "shade", ["こだわり", "中毒", "囚われ", "取り憑く", "愛着", "固執"]),
+    ("solitude", "孤独・疎外", "shade", ["ひとり", "孤立", "追放", "流刑", "見捨てる", "さびしさ", "寂しさ", "独り"]),
+    ("grief", "喪失・悲嘆", "shade", ["悲しみ", "哀しみ", "嘆き", "失う", "別れ", "哀悼", "服喪"]),
+    ("despair", "絶望・諦念", "shade", ["あきらめ", "諦め", "失望", "落胆", "無力"]),
+    ("fear", "恐怖・不安", "shade", ["恐れ", "怖れ", "おそれ", "怯え", "戦慄", "苦悶", "心配"]),
+    ("remorse", "後悔・罪悪感", "shade", ["悔い", "罪悪", "悔恨", "懺悔", "良心", "自責", "罪の意識"]),
+    ("shame", "羞恥・屈辱", "shade", ["恥辱", "不名誉", "辱め", "汚名", "恥じる"]),
+    ("wrath", "怒り・怨恨", "shade", ["憤り", "激怒", "恨み", "怨み", "復讐", "憤怒", "逆上"]),
+    ("deceit", "欺瞞・裏切り", "shade", ["偽り", "欺く", "騙す", "裏切る", "疑念", "疑い", "背信", "虚偽"]),
+    ("refusal", "拒絶・否認", "shade", ["拒否", "否定", "拒む", "断る", "排斥", "却下"]),
+    ("fate", "運命・宿命", "ambi", ["定め", "さだめ", "天命", "巡り合わせ", "破滅", "因果"]),
+    ("eternity", "永遠・無限", "ambi", ["永久", "とこしえ", "不滅", "不死", "果てしない", "無窮"]),
+    ("secret", "秘密・隠蔽", "ambi", ["神秘", "隠す", "隠し事", "ベール", "内緒", "謎めく", "ミステリー"]),
+    ("sacrifice", "犠牲・献身", "ambi", ["捧げる", "供物", "殉教", "自己犠牲", "奉仕", "生贄", "いけにえ"]),
+    ("desire", "欲望・渇望", "ambi", ["願望", "憧れ", "野心", "情熱", "切望", "渇き", "貪欲", "欲求"]),
+    ("order", "秩序・支配", "ambi", ["規律", "統治", "君臨", "束縛", "隷属", "強制", "支配する"]),
+    ("change", "変化・変容", "ambi", ["変身", "変わる", "転生", "再生", "生まれ変わり", "転換", "移ろい"]),
+    ("silence", "沈黙・静寂", "ambi", ["無言", "黙る", "しじま", "安息", "静まり", "サイレンス"]),
+    ("memory", "記憶・忘却", "ambi", ["思い出", "追憶", "忘れる", "郷愁", "回想", "形見", "ノスタルジー"]),
+    ("power", "力・権威", "ambi", ["権力", "威厳", "主権", "威光", "強大", "パワー"]),
+]
+IMPRESSIONS_V3 = dict(IMPRESSIONS_V2, dark="翳りのある", cold="冷たい")
+ACCESS_V3 = dict(ACCESS, **{"page-fetch": "辞書サイトに限定した検索で見出しページを特定し、そのページを取得して、見出し語・品詞・語義・発音表記を読み取り役のAIに報告させて確認（人がページ全文を読んだ確認ではない）"})
+SCOPE_V3 = "見出し語の表記・品詞・語義（最初の3つまで）"
+# (id, 種類, (カテゴリA, ラベルA, 見出し語の限定 or None), (カテゴリB, ラベルB, 見出し語の限定 or None), 根拠または説明)
+CONTRASTS = [
+    ("hope-despair", "lexical", ("hope", "希望", None), ("despair", "絶望", None), "Larousse の espoir の項に、対義語として désespoir が挙がっています。"),
+    ("bless-curse", "lexical", ("bless", "祝福", None), ("hatred", "呪い", ["malédiction", "Fluch", "maledizione", "curse", "maldição"]), "Larousse の bénédiction の項に、対義語として malédiction が挙がっています。"),
+    ("freedom-bondage", "lexical", ("freedom", "自由", None), ("order", "束縛", ["servitude", "Knechtschaft", "Zwang", "schiavitù", "bondage", "servidão"]), "Larousse の délivrance の項に対義語として servitude、Treccani の libertà の項に schiavitù が挙がっています。"),
+    ("courage-fear", "lexical", ("courage", "勇気", None), ("fear", "恐怖", None), "Larousse の courage の項に対義語として peur、Treccani の coraggio の項に paura が挙がっています。"),
+    ("trust-deceit", "lexical", ("trust", "誠実", None), ("deceit", "欺瞞", None), "Larousse の sincérité の項に、対義語として mensonge・tromperie が挙がっています。"),
+    ("joy-grief", "lexical", ("bless", "喜び", None), ("grief", "悲嘆", None), "Larousse の joie の項に、対義語として tristesse が挙がっています。"),
+    ("trust-doubt", "narrative", ("trust", "信頼", None), ("deceit", "疑念", ["doute", "Zweifel", "dubbio", "doubt", "dúvida"]), "信じる者と疑う者。"),
+    ("accept-refusal", "narrative", ("accept", "受容", None), ("refusal", "拒絶", None), "迎え入れる者と拒む者。"),
+    ("affirm-refusal", "narrative", ("affirm", "肯定", None), ("refusal", "否認", None), "「はい」と「いいえ」。"),
+    ("love-hatred", "narrative", ("love", "慈愛", None), ("hatred", "憎悪", None), "慈しむ者と憎む者。"),
+    ("harmony-wrath", "narrative", ("harmony", "調和", None), ("wrath", "怒り", None), "鎮める者と荒ぶる者。"),
+    ("recognize-shame", "narrative", ("recognize", "承認", None), ("shame", "屈辱", None), "認められた者と辱められた者。"),
+    ("thanks-envy", "narrative", ("thanks", "称賛", None), ("envy", "嫉妬", None), "たたえる者と妬む者。"),
+    ("freedom-fate", "narrative", ("freedom", "自由", None), ("fate", "宿命", None), "運命に抗う者と受け入れる者。"),
+    ("eternity-change", "narrative", ("eternity", "永遠", None), ("change", "変化", None), "変わらないものと移ろうもの。"),
+    ("memory-oblivion", "narrative", ("memory", "記憶", ["mémoire", "souvenir", "Erinnerung", "Gedächtnis", "Andenken", "memoria", "ricordo", "memory", "remembrance", "memória", "lembrança"]),
+     ("memory", "忘却", ["oubli", "Vergessenheit", "Vergessen", "oblio", "oblivion", "esquecimento"]), "覚えている者と忘れた者。"),
+    ("power-sacrifice", "narrative", ("power", "権威", None), ("sacrifice", "献身", None), "支配する者と捧げる者。"),
+    ("solitude-harmony", "narrative", ("harmony", "和合", None), ("solitude", "孤独", None), "輪の中の者と外の者。"),
+]
+
+def load_v3_sources():
+    src = pathlib.Path(__file__).resolve().parent / "word_naming_v3"
+    words, extra, also = [], {}, {}
+    for lang in LANGS:
+        f = src / (lang + ".json")
+        if not f.exists():
+            continue
+        d = json.loads(f.read_text(encoding="utf8"))
+        assert d["lang"] == lang, f
+        if d.get("dictionary") and d["dictionary"] != LANGS[lang]["dictionary"]:
+            also[lang] = {"dictionary": d["dictionary"], "host": d["host"]}
+        for w in d["words"]:
+            assert w.get("id", "").startswith("WN-%s-" % lang.upper()), (f.name, w.get("lemma"))
+            words.append((lang, w))
+        for e in d.get("extraCategories", []):
+            extra.setdefault(e["id"], []).extend(e["add"])
+    return words, extra, also
+
+def build_v3():
+    base = build_v2()
+    new, extra, also = load_v3_sources()
+    langs = {k: (dict(v, also=[also[k]]) if k in also else dict(v)) for k, v in LANGS.items()}
+    cats = [dict(c, group="light") for c in CATEGORIES_V2] + [
+        {"id": i, "label": l, "aliases": a, "status": "available", "group": g} for i, l, g, a in CATEGORIES_V3_NEW]
+    cat_ids = {c["id"] for c in cats}
+    words = []
+    for w in base["words"]:
+        w = dict(w)
+        add = [c for c in extra.get(w["id"], []) if c in cat_ids and c not in w["categories"]]
+        if add:
+            w["categories"] = w["categories"] + add
+        words.append(w)
+    for lang, w in new:
+        scope = (SCOPE_V2 if w.get("access") == "search-excerpt" else SCOPE_V3) + ("。" + w["scopeNote"] if w.get("scopeNote") else "")
+        ipa = w.get("ipa") or None
+        words.append({
+            "id": w["id"], "lemma": w["lemma"], "lang": lang, "pos": w["pos"], "meaningJa": w["meaningJa"],
+            "categories": [c for c in w["categories"] if c in cat_ids], "nuances": [n for n in w.get("nuances", []) if n in NUANCES_V2],
+            "nuanceNote": w["nuanceNote"],
+            "pronunciation": {"ipa": ipa, "note": w.get("pronNote") or ("" if ipa else "発音記号は未確認。")},
+            "kana": {"text": w["kana"], "basis": "ipa" if ipa else "unconfirmed"},
+            "source": {"dictionary": w.get("dictionary") or LANGS[lang]["dictionary"], "url": w["url"]},
+            "verification": {"status": "verified", "date": w.get("date", CHECKED), "access": w.get("access", "page-fetch"), "scope": scope},
+            "tags": w["tags"], "since": "2.3",
+            "candidates": [{"id": "%s-%s" % (w["id"], "abcdefgh"[i]), "name": c["name"], "method": c["method"],
+                            "impressions": [x for x in c["impressions"] if x in IMPRESSIONS_V3], "note": c["note"], "overlap": c.get("overlap", "")}
+                           for i, c in enumerate(w["candidates"])],
+        })
+    by_lemma = {}
+    for w in words:
+        by_lemma.setdefault(w["lemma"], []).append(w)
+    def side(cat, label, lemmas):
+        s = {"category": cat, "label": label}
+        if lemmas is not None:
+            s["ids"] = [w["id"] for l in lemmas for w in by_lemma.get(l, []) if cat in w["categories"]]
+        return s
+    contrasts = []
+    for cid, kind, a, b, text in CONTRASTS:
+        sa, sb = side(*a), side(*b)
+        if any("ids" in s and not s["ids"] for s in (sa, sb)) or not any(sa["category"] in w["categories"] for w in words) or not any(sb["category"] in w["categories"] for w in words):
+            print("  (対比 %s は、該当する語が無いので省略)" % cid); continue
+        c = {"id": cid, "kind": kind, "a": sa, "b": sb, "note": text}
+        if kind == "lexical":
+            c["evidence"] = text
+        contrasts.append(c)
+    return dict(base, schemaVersion=3, dataVersion="3.0.0", stage=3, theme="明・陰・両義の言葉",
+                notice="原語の意味は、辞書で確認した内容を短く編集したものです。創作名は原語をもとに創作向けに加工した候補で、実在する人名・単語との重複は確認していません。明・陰・両義の分類は創作上のテーマによるもので、語の意味を善悪に断定するものではありません。",
+                groups=GROUPS, languages=langs, categories=cats, impressions=IMPRESSIONS_V3, access=ACCESS_V3, contrasts=contrasts, words=words)
+
 def main():
     root = pathlib.Path(__file__).resolve().parent.parent / "data"
-    targets = [(root / "word-naming-v1.json", build()), (root / "word-naming-v2.json", build_v2())]
+    targets = [(root / "word-naming-v1.json", build()), (root / "word-naming-v2.json", build_v2()), (root / "word-naming-v3.json", build_v3())]
     stale = False
     for out, data in targets:
         text = json.dumps(data, ensure_ascii=False, indent=1) + "\n"

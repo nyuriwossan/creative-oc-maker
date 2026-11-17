@@ -1,0 +1,37 @@
+{
+ "passed": true,
+ "checks": [
+  "dictionary untouched (675, search, favorites); 2 modes kept, 3 functions inside “言葉から名付け” switch by click/keys; first screen shows only search + 11 enabled categories",
+  "each card separates the verified source word from coined names; says how far it was verified; known overlaps are noted and everything else is “未確認”; all 496 source links go to the right dictionary (paged list)",
+  "reverse lookup: theme word → category, multi-category OR/AND, multi-language, nuance, length × impression, source-only / name-only search; zero results offer near themes and relaxations without pretending to translate; favorites under a separate key",
+  "pick or write a name, method follows edits, save with source word + intent + (optional) collection, known overlap shown, re-edit, copy; user text never parsed as HTML",
+  "collections: create (from the editor or empty), add several saved names, mixed languages, reorder, per-item memo, rename + theme + memo, copy, text export, remove item / delete collection without losing the saved names",
+  "a saved name can be sent as family / nation / region / city / organization / glossary entry: each use keeps its own name and naming intent beside the source meaning, duplicates are refused, the saved name and the vocabulary stay unchanged, and the entries appear in the world tab",
+  "batch naming: choose characters + a common theme, different candidates per character from that theme, side-by-side name / source / meaning, cycle and edit individually, duplicate warnings (within the batch and against other characters), nothing changes until the confirmation is accepted, then names + origin notes land in the encyclopedia; collection names can be assigned too",
+  "names, collections and uses are stored per project and travel in the project backup (restored links point at the restored characters and world entries); other projects stay separate; v2.1 backups and v2.0 projects open and save normally",
+  "send to character creation still fills the fixed-name field, the generated card uses it, and the encyclopedia keeps the name origin; back returns to the same function",
+  "if the word data fails to load, the dictionary and the collections keep working and retry recovers; leaving the page mid-load logs nothing",
+  "light / shade / ambi filter inside the existing search screen: picking a group shows only its categories; combines with language, impression, OR/AND, favourites; groups are labelled in text; new words say how they were checked",
+  "contrast search: lexical and narrative contrasts are grouped and explained differently; both sides listed with the same filters; a same-category contrast splits by headword; a contrast collection mixes names from both sides",
+  "batch naming: from a contrast, characters alternate between side A and side B; from a category, the group is chosen first (shade categories only)",
+  "iPhone-sized screens (390/320): no horizontal overflow in any of the 3 functions, 44px targets, 16px inputs, extra filters folded, batch comparison stacks into labelled cards, touch select-edit-save"
+ ],
+ "consoleErrors": [],
+ "screenshots": [
+  "words-desktop.png",
+  "editor-desktop.png",
+  "collections-desktop.png",
+  "batch-desktop.png",
+  "v23-group-ambi.png",
+  "v23-contrast.png",
+  "v23-batch-contrast.png",
+  "mobile-find-top.png",
+  "mobile-v23-shade.png",
+  "mobile-v23-contrast.png",
+  "mobile-find-card.png",
+  "mobile-collections.png",
+  "mobile-ideas.png",
+  "mobile-batch.png",
+  "mobile-editor.png"
+ ]
+}

@@ -1,0 +1,4079 @@
+{
+ "lang": "pt",
+ "words": [
+  {
+   "lemma": "ódio",
+   "pos": "名詞（男性）",
+   "meaningJa": "人や物事に向ける激しい敵意の感情。憎悪。また、その憎しみの対象。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "感情だけでなく「憎まれているもの」も指す。反対語として友情・愛が挙げられている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オディオ",
+   "url": "https://dicionario.priberam.org/pt-pt/%C3%B3dio",
+   "tags": [
+    "憎悪",
+    "敵意",
+    "嫌悪"
+   ],
+   "candidates": [
+    {
+     "name": "オディオ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みのまま。短く重い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "オディ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ディオ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "後半を取った鋭い名。",
+     "overlap": "人名・キャラクター名「ディオ」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Sentimento de intensa animosidade",
+   "id": "WN-PT-0037",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "hostilidade",
+   "pos": "名詞（女性）",
+   "meaningJa": "敵として振る舞うこと、その結果。敵対的な性質。公然とした対立。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "個人の感情より、態度や関係としての敵対を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オスティリダーデ",
+   "url": "https://dicionario.priberam.org/pt-pt/hostilidade",
+   "tags": [
+    "敵対",
+    "対立",
+    "敵意"
+   ],
+   "candidates": [
+    {
+     "name": "オスティ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "前半を取った硬い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "スティリ",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "中ほどを取った軽い形。",
+     "overlap": ""
+    },
+    {
+     "name": "オスティリア",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "語尾を母音で閉じた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto ou efeito de hostilizar",
+   "id": "WN-PT-0038",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "maldição",
+   "pos": "名詞（女性）",
+   "meaningJa": "呪うこと、その結果。誰かに災いが起こるよう願う言葉。悪いことが続く巡り合わせ。",
+   "categories": [
+    "hatred",
+    "fate"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "かけられる「呪いの言葉」と、不運が続く「たたり」のような状態の両方を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "マルディサン",
+   "url": "https://dicionario.priberam.org/maldi%C3%A7%C3%A3o",
+   "tags": [
+    "呪詛",
+    "災厄",
+    "不運"
+   ],
+   "candidates": [
+    {
+     "name": "マルディサン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "読みのまま。重く古風な響き。",
+     "overlap": ""
+    },
+    {
+     "name": "マルディ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "前半を取った呼びやすい形。",
+     "overlap": "フランス語 mardi（火曜日）に近い音"
+    },
+    {
+     "name": "ルディサ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "中ほどを取ったやわらかい形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto ou efeito de amaldiçoar",
+   "id": "WN-PT-0039",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "inimizade",
+   "pos": "名詞（女性）",
+   "meaningJa": "敵に向ける憎しみ、悪意。広く、関係が断たれること。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [],
+   "nuanceNote": "感情としての敵意のほか、仲たがいして絶交した状態も表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "イニミザーデ",
+   "url": "https://dicionario.priberam.org/pt-pt/inimizade",
+   "tags": [
+    "敵意",
+    "不和",
+    "絶交"
+   ],
+   "candidates": [
+    {
+     "name": "イニミザ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ニミザ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "中ほどを取った短い名。",
+     "overlap": ""
+    },
+    {
+     "name": "イニミア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "語尾を母音に替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Ódio de inimigo ou de contrário",
+   "id": "WN-PT-0040",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "ciúme",
+   "pos": "名詞（男性）",
+   "meaningJa": "他人の愛情が自分だけに向けられないことへの恐れや悔しさ。嫉妬。ねたみ。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "愛情をめぐる嫉妬が中心。単に「ねたみ」「恐れ」の意味でも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "シウーメ",
+   "url": "https://dicionario.priberam.org/ci%C3%BAme",
+   "tags": [
+    "嫉妬",
+    "独占",
+    "不安"
+   ],
+   "candidates": [
+    {
+     "name": "シウーメ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みのまま。湿った響き。",
+     "overlap": ""
+    },
+    {
+     "name": "シウメ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "長音を詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "シウマ",
+     "method": "adjust",
+     "impressions": [
+      "soft"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Receio ou despeito de certos afectos",
+   "id": "WN-PT-0041",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "inveja",
+   "pos": "名詞（女性）",
+   "meaningJa": "他人の幸せを不快に思う気持ち。人の持つものを欲しがり、持ち主を憎むことも多い。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "相手の幸福そのものが不快という面と、相手の持ち物を欲しがる面がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "インヴェージャ",
+   "url": "https://dicionario.priberam.org/pt-pt/inveja",
+   "tags": [
+    "羨望",
+    "嫉妬",
+    "欲求"
+   ],
+   "candidates": [
+    {
+     "name": "インヴェージャ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みのまま。粘りのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴェージャ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "後半を取った名前らしい形。",
+     "overlap": ""
+    },
+    {
+     "name": "インヴェ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Desgosto pelo bem alheio",
+   "id": "WN-PT-0042",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "cobiça",
+   "pos": "名詞（女性）",
+   "meaningJa": "多くは他人のものを、節度なくひそかに欲しがる気持ち。財産や名誉を得たいという欲。",
+   "categories": [
+    "envy",
+    "desire"
+   ],
+   "nuances": [],
+   "nuanceNote": "人に言えない過度な欲を指す。反対語として無私・執着のなさが挙げられている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "コビッサ",
+   "url": "https://dicionario.priberam.org/cobi%C3%A7a",
+   "tags": [
+    "貪欲",
+    "強欲",
+    "野心"
+   ],
+   "candidates": [
+    {
+     "name": "コビッサ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みのまま。詰まる音が鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "コビサ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "促音を抜いたなめらかな形。",
+     "overlap": ""
+    },
+    {
+     "name": "コビス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を子音寄りにした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Desejo imoderado e inconfessável de possuir",
+   "id": "WN-PT-0043",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "obsessão",
+   "pos": "名詞（女性）",
+   "meaningJa": "しつこくつきまとうこと。頭を離れない固定観念。",
+   "categories": [
+    "obsession"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "「悪魔のような迫害」の語義もあり、心霊主義の用語としても使う。取り憑かれる印象が強い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オブセサン",
+   "url": "https://dicionario.priberam.org/obsess%C3%A3o",
+   "tags": [
+    "執着",
+    "強迫",
+    "固定観念"
+   ],
+   "candidates": [
+    {
+     "name": "オブセサン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みのまま。重く沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "オブセ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "セサン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "後半を取った静かな名。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Importunação perseverante; Ideia fixa",
+   "id": "WN-PT-0044",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "apego",
+   "pos": "名詞（男性）",
+   "meaningJa": "くっついて離れないこと、固執。愛着、好意。",
+   "categories": [
+    "obsession",
+    "love"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "しがみつく執着と、あたたかい愛着の両方を表す。植物学の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アペーゴ",
+   "url": "https://dicionario.priberam.org/apego",
+   "tags": [
+    "執着",
+    "愛着",
+    "固執"
+   ],
+   "candidates": [
+    {
+     "name": "アペーゴ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "読みのまま。丸みのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "アペゴ",
+     "method": "adjust",
+     "impressions": [
+      "soft"
+     ],
+     "note": "長音を詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ペーゴ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Apegamento; Aferro; Afeição",
+   "id": "WN-PT-0045",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "obstinação",
+   "pos": "名詞（女性）",
+   "meaningJa": "意地を張ること。断られても主張や行動を改めない頑固さ。考えを貫く粘り強さ。",
+   "categories": [
+    "obsession"
+   ],
+   "nuances": [],
+   "nuanceNote": "頑固という悪い面と、一貫して諦めないというよい面の両方に使われる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オブスティナサン",
+   "url": "https://dicionario.priberam.org/pt-pt/obstina%C3%A7%C3%A3o",
+   "tags": [
+    "頑固",
+    "固執",
+    "不屈"
+   ],
+   "candidates": [
+    {
+     "name": "オブスティ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "前半を取った硬い形。",
+     "overlap": ""
+    },
+    {
+     "name": "スティナ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "crisp"
+     ],
+     "note": "中ほどを取った名前らしい形。",
+     "overlap": ""
+    },
+    {
+     "name": "ティナサン",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "strong"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto ou estado de pessoa que se obstina",
+   "id": "WN-PT-0046",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "solidão",
+   "pos": "名詞（女性）",
+   "meaningJa": "ひとりでいる状態。人里離れた場所。隔絶。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "心や暮らしの孤独のほか、人のいない寂しい場所そのものも指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ソリダン",
+   "url": "https://dicionario.priberam.org/solid%C3%A3o",
+   "tags": [
+    "孤独",
+    "隔絶",
+    "僻地"
+   ],
+   "candidates": [
+    {
+     "name": "ソリダン",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "dark"
+     ],
+     "note": "読みのまま。静かに沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ソリダ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": "外来語「ソリッド」に近い音"
+    },
+    {
+     "name": "リダン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "後半を取った短い名。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Estado do que está só",
+   "id": "WN-PT-0047",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "isolamento",
+   "pos": "名詞（男性）",
+   "meaningJa": "孤立させること、みずから孤立すること。孤立した状態。完全な分離。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "人から切り離される場合と、自分から離れる場合の両方を表す。医学の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "イゾラメント",
+   "url": "https://dicionario.priberam.org/pt-pt/isolamento",
+   "tags": [
+    "孤立",
+    "隔離",
+    "分離"
+   ],
+   "candidates": [
+    {
+     "name": "イゾラ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "前半を取った短い名。",
+     "overlap": "イタリア語 isola（島）に近い音"
+    },
+    {
+     "name": "ゾラメ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "イゾラン",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "前半に撥音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Acto de isolar ou de se isolar",
+   "id": "WN-PT-0048",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "exílio",
+   "pos": "名詞（男性）",
+   "meaningJa": "祖国から追われること。比喩で、人が置かれた孤立の暮らし。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [],
+   "nuanceNote": "政治的な追放・亡命が本義。比喩として、世間から離れた孤独な境遇にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エジーリオ",
+   "url": "https://dicionario.priberam.org/ex%C3%ADlio",
+   "tags": [
+    "追放",
+    "亡命",
+    "流浪"
+   ],
+   "candidates": [
+    {
+     "name": "エジーリオ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "読みのまま。遠い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エジリ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を落として詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ジーリオ",
+     "method": "short",
+     "impressions": [
+      "elegant"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": "イタリア語 giglio（百合）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Expulsão da pátria",
+   "id": "WN-PT-0049",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "luto",
+   "pos": "名詞（男性）",
+   "meaningJa": "人の死を悼む気持ち。喪服や、喪に服す期間も指す。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "感情・衣服・期間をまとめて表す語。精神分析の用語としての語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ルート",
+   "url": "https://dicionario.priberam.org/pt-pt/luto",
+   "tags": [
+    "喪",
+    "哀悼",
+    "服喪"
+   ],
+   "candidates": [
+    {
+     "name": "ルート",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みのまま。短く沈む響き。",
+     "overlap": "外来語「ルート」と同じ表記"
+    },
+    {
+     "name": "ルトア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "ルーテ",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Sentimento, pesar pela morte de alguém",
+   "id": "WN-PT-0050",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "tristeza",
+   "pos": "名詞（女性）",
+   "meaningJa": "悲しい状態・性質。心の痛み、苦悩。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "広く「悲しみ」を表す基本語。ブラジルでは家畜の病気を指す語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "トリステーザ",
+   "url": "https://dicionario.priberam.org/tristeza",
+   "tags": [
+    "悲哀",
+    "憂愁",
+    "苦悩"
+   ],
+   "candidates": [
+    {
+     "name": "トリステーザ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みのまま。流れるような響き。",
+     "overlap": ""
+    },
+    {
+     "name": "トリステ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "「トリステ」（悲しい）という外来語的な表記と同じ"
+    },
+    {
+     "name": "ステーザ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Qualidade ou estado do que é triste",
+   "id": "WN-PT-0051",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "mágoa",
+   "pos": "名詞（女性）",
+   "meaningJa": "傷つけられた結果。打ち身の痣。比喩で、悲しみ・心の痛み・苦い思い。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "体の痣が元の意味で、心の傷は比喩の語義。恨みを含んだ悲しみにも使われる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "マーゴア",
+   "url": "https://dicionario.priberam.org/pt-pt/m%C3%A1goa",
+   "tags": [
+    "傷心",
+    "悲嘆",
+    "遺恨"
+   ],
+   "candidates": [
+    {
+     "name": "マーゴア",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みのまま。母音が続くやわらかさ。",
+     "overlap": ""
+    },
+    {
+     "name": "マゴア",
+     "method": "adjust",
+     "impressions": [
+      "soft"
+     ],
+     "note": "長音を詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "マーゴ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": "人名「マーゴ」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Efeito de magoar; Tristeza; desgosto",
+   "id": "WN-PT-0052",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "desespero",
+   "pos": "名詞（男性）",
+   "meaningJa": "怒りをともなう絶望。逆上、激しい苛立ち。",
+   "categories": [
+    "despair",
+    "wrath"
+   ],
+   "nuances": [],
+   "nuanceNote": "静かな諦めではなく、怒りや取り乱しを帯びた絶望を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デゼスペーロ",
+   "url": "https://dicionario.priberam.org/pt-pt/desespero",
+   "tags": [
+    "絶望",
+    "逆上",
+    "焦燥"
+   ],
+   "candidates": [
+    {
+     "name": "デゼスペーロ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みのまま。濁音が重い。",
+     "overlap": ""
+    },
+    {
+     "name": "ゼスペ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "中ほどを取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "スペーロ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "イタリア語 spero（私は望む）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Desesperança acompanhada de cólera",
+   "id": "WN-PT-0053",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "desalento",
+   "pos": "名詞（男性）",
+   "meaningJa": "気力を失うこと。意気消沈、落胆。",
+   "categories": [
+    "despair"
+   ],
+   "nuances": [],
+   "nuanceNote": "激しさのない、力が抜けていくような落ち込みを表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デザレント",
+   "url": "https://dicionario.priberam.org/pt-pt/desalento",
+   "tags": [
+    "落胆",
+    "消沈",
+    "無気力"
+   ],
+   "candidates": [
+    {
+     "name": "デザレント",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みのまま。沈んだ響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デザレ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ザレント",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Falta de alento; esmorecimento, desânimo",
+   "id": "WN-PT-0054",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "resignação",
+   "pos": "名詞（女性）",
+   "meaningJa": "甘んじて受け入れること、身を引くこと。神の意志への服従。職や恩恵をみずから手放すこと。",
+   "categories": [
+    "despair",
+    "accept"
+   ],
+   "nuances": [
+    "religious",
+    "polysemy"
+   ],
+   "nuanceNote": "諦めて受け入れる面と、信仰による従順の面がある。辞任・辞退の意味でも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "レジグナサン",
+   "url": "https://dicionario.priberam.org/resigna%C3%A7%C3%A3o",
+   "tags": [
+    "諦念",
+    "忍従",
+    "辞任"
+   ],
+   "candidates": [
+    {
+     "name": "レジグナ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ジグナ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを取った短い名。",
+     "overlap": ""
+    },
+    {
+     "name": "レジナ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "音を詰めて整えた形。",
+     "overlap": "人名「レジーナ」に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Submissão à vontade de Deus",
+   "id": "WN-PT-0055",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "medo",
+   "pos": "名詞（男性）",
+   "meaningJa": "現実または想像上の危険・脅威を意識して生じる感情。恐れ。勇気のなさ、気がかり。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "恐怖を表す基本語。俗に「あの世の霊」を指す語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "メード",
+   "url": "https://dicionario.priberam.org/pt-pt/medo",
+   "tags": [
+    "恐怖",
+    "不安",
+    "臆病"
+   ],
+   "candidates": [
+    {
+     "name": "メード",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みのまま。短く静かな響き。",
+     "overlap": "外来語「メイド」に近い音"
+    },
+    {
+     "name": "メドア",
+     "method": "adjust",
+     "impressions": [
+      "soft"
+     ],
+     "note": "母音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "メーダ",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Estado emocional resultante da consciência de perigo",
+   "id": "WN-PT-0056",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "pavor",
+   "pos": "名詞（男性）",
+   "meaningJa": "驚きや動揺をともなう強い恐れ。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [],
+   "nuanceNote": "不意を突かれて身がすくむような、激しい恐怖を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "パヴォル",
+   "url": "https://dicionario.priberam.org/pt-pt/pavor",
+   "tags": [
+    "恐怖",
+    "戦慄",
+    "驚愕"
+   ],
+   "candidates": [
+    {
+     "name": "パヴォル",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "読みのまま。短く強い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "パヴォ",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "パヴォラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Grande temor com espanto ou sobressalto",
+   "id": "WN-PT-0057",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "temor",
+   "pos": "名詞（男性）",
+   "meaningJa": "恐れ、懸念。敬意のこもった畏れ。恐れを抱かせる人や物。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "怖がる気持ちと、敬い畏れる気持ちの両方を表す。比喩で慎み・熱心さの語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "テモル",
+   "url": "https://dicionario.priberam.org/pt-pt/temor",
+   "tags": [
+    "畏怖",
+    "懸念",
+    "恐れ"
+   ],
+   "candidates": [
+    {
+     "name": "テモル",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "読みのまま。落ち着いた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "テモ",
+     "method": "short",
+     "impressions": [
+      "soft"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "テモラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Medo, receio; sentimento respeitoso",
+   "id": "WN-PT-0058",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "remorso",
+   "pos": "名詞（男性）",
+   "meaningJa": "してはならなかった行いを責めてくる、痛みをともなう心の動き。良心の呵責。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [],
+   "nuanceNote": "複数形で使われることが多い。自分を刺すような後悔を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "レモルソ",
+   "url": "https://dicionario.priberam.org/pt-pt/remorso",
+   "tags": [
+    "悔恨",
+    "呵責",
+    "罪悪感"
+   ],
+   "candidates": [
+    {
+     "name": "レモルソ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みのまま。低く沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "レモル",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "モルソ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": "イタリア語 morso（噛み傷）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Manifestação pungente da afectividade humana",
+   "id": "WN-PT-0059",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "arrependimento",
+   "pos": "名詞（男性）",
+   "meaningJa": "悔いること。悔悟、痛悔。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [],
+   "nuanceNote": "過ちを悔い改めるという、宗教的な「痛悔」に通じる語義も挙げられている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アレペンディメント",
+   "url": "https://dicionario.priberam.org/pt-pt/arrependimento",
+   "tags": [
+    "後悔",
+    "悔悟",
+    "改心"
+   ],
+   "candidates": [
+    {
+     "name": "アレペン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "レペンディ",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "中ほどを取った軽い形。",
+     "overlap": ""
+    },
+    {
+     "name": "アレディ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "音を詰めて整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Acto de arrepender-se; Contrição",
+   "id": "WN-PT-0060",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "culpa",
+   "pos": "名詞（女性）",
+   "meaningJa": "義務に背く過ち、怠り。害や損害の原因。責めを負わせること。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "感情としての罪悪感より、「落ち度」「～のせい」という責任の所在を表すのが基本。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "クルパ",
+   "url": "https://dicionario.priberam.org/pt-pt/culpa",
+   "tags": [
+    "罪",
+    "過失",
+    "責任"
+   ],
+   "candidates": [
+    {
+     "name": "クルパ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みのまま。短く硬い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "クルパス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾に子音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "クルピア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾を母音で伸ばした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Falta voluntária contra o dever",
+   "id": "WN-PT-0061",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "vergonha",
+   "pos": "名詞（女性）",
+   "meaningJa": "気まずさ・居心地の悪さの感情。気後れ、内気。恥じらいによる頬の赤らみ。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "恥辱だけでなく、はにかみ・慎みに近い語義もあり、印象は使い方で変わる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ヴェルゴーニャ",
+   "url": "https://dicionario.priberam.org/pt-pt/vergonha",
+   "tags": [
+    "羞恥",
+    "内気",
+    "赤面"
+   ],
+   "candidates": [
+    {
+     "name": "ヴェルゴーニャ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みのまま。やわらかく重い。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴェルゴ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゴーニャ",
+     "method": "short",
+     "impressions": [
+      "soft"
+     ],
+     "note": "後半を取った丸い響き。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Sentimento de desconforto ou mal-estar",
+   "id": "WN-PT-0062",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "humilhação",
+   "pos": "名詞（女性）",
+   "meaningJa": "辱めること、へりくだること、その結果。恥、おとしめられること。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [],
+   "nuanceNote": "他人に屈辱を与える場合と、みずから身を低くする場合の両方を含む。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ウミリャサン",
+   "url": "https://dicionario.priberam.org/pt-pt/humilha%C3%A7%C3%A3o",
+   "tags": [
+    "屈辱",
+    "侮辱",
+    "卑下"
+   ],
+   "candidates": [
+    {
+     "name": "ウミリャ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ミリャサ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ウミリア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "拗音を開いて整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto ou efeito de humilhar; Vergonha",
+   "id": "WN-PT-0063",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "desonra",
+   "pos": "名詞（女性）",
+   "meaningJa": "名誉を失うこと。不名誉な行い。信用の失墜。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "個人の恥じらいではなく、世間に対する名誉・信用の喪失を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デゾンラ",
+   "url": "https://dicionario.priberam.org/pt-pt/desonra",
+   "tags": [
+    "不名誉",
+    "汚名",
+    "失墜"
+   ],
+   "candidates": [
+    {
+     "name": "デゾンラ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みのまま。濁音が重い。",
+     "overlap": ""
+    },
+    {
+     "name": "デゾン",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゾンラ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Perda da honra",
+   "id": "WN-PT-0064",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "ira",
+   "pos": "名詞（女性）",
+   "meaningJa": "怒り、憤り、荒々しい激しさ。神が下す罰・報復。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "religious"
+   ],
+   "nuanceNote": "人の激怒のほか、神の怒り・天罰という語義がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "イラ",
+   "url": "https://dicionario.priberam.org/pt-pt/ira",
+   "tags": [
+    "憤怒",
+    "激怒",
+    "天罰"
+   ],
+   "candidates": [
+    {
+     "name": "イラ",
+     "method": "kana",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "読みのまま。二音で鋭い。",
+     "overlap": "人名「イラ」と同じ表記"
+    },
+    {
+     "name": "イーラ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "母音を伸ばした形。",
+     "overlap": ""
+    },
+    {
+     "name": "イラス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "語尾に子音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Cólera; raiva, indignação",
+   "id": "WN-PT-0065",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "fúria",
+   "pos": "名詞（女性）",
+   "meaningJa": "激しい怒りの表れ。怒りに駆られた心の高ぶりの極み。怒りの激しい衝動。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "神話に関わる語義や、人を指す軽蔑的な語義、比喩の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "フーリア",
+   "url": "https://dicionario.priberam.org/f%C3%BAria",
+   "tags": [
+    "激怒",
+    "狂乱",
+    "猛威"
+   ],
+   "candidates": [
+    {
+     "name": "フーリア",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "elegant"
+     ],
+     "note": "読みのまま。伸びのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "フリア",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "長音を詰めた形。",
+     "overlap": "ゲームなどに見られる名「フリア」と同じ表記"
+    },
+    {
+     "name": "フーリ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Manifestação de furor",
+   "id": "WN-PT-0066",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "rancor",
+   "pos": "名詞（男性）",
+   "meaningJa": "侮辱や無礼を受けたあとも消えない強い恨み。ひそかで深い憎しみ。強い嫌悪。",
+   "categories": [
+    "wrath",
+    "hatred"
+   ],
+   "nuances": [],
+   "nuanceNote": "その場の怒りではなく、長く胸に残り続ける恨みを表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ランコル",
+   "url": "https://dicionario.priberam.org/pt-pt/rancor",
+   "tags": [
+    "怨恨",
+    "遺恨",
+    "憎悪"
+   ],
+   "candidates": [
+    {
+     "name": "ランコル",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みのまま。くぐもった響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ランコ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ラコル",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "撥音を抜いた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Sentimento forte de mágoa que perdura",
+   "id": "WN-PT-0067",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "traição",
+   "pos": "名詞（女性）",
+   "meaningJa": "裏切ること、その結果。背信、不実。卑劣な引き渡し。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [],
+   "nuanceNote": "信頼を破る行い全般。味方を敵に売り渡すような行為も含む。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "トライサン",
+   "url": "https://dicionario.priberam.org/trai%C3%A7%C3%A3o",
+   "tags": [
+    "裏切り",
+    "背信",
+    "不実"
+   ],
+   "candidates": [
+    {
+     "name": "トライサン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みのまま。切れのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "トライ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "外来語「トライ」と同じ表記"
+    },
+    {
+     "name": "ライサ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "中ほどを取った名前らしい形。",
+     "overlap": "人名「ライサ」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto ou efeito de trair; Perfídia",
+   "id": "WN-PT-0068",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "mentira",
+   "pos": "名詞（女性）",
+   "meaningJa": "嘘をつくこと。作り話。意図した欺き。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "日常的な「嘘」を表す基本語。ブラジルでは爪にできる白い斑点を指す語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "メンティーラ",
+   "url": "https://dicionario.priberam.org/pt-pt/mentira",
+   "tags": [
+    "嘘",
+    "虚偽",
+    "作り話"
+   ],
+   "candidates": [
+    {
+     "name": "メンティーラ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みのまま。軽やかな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "メンティ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ティーラ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "bright"
+     ],
+     "note": "後半を取った名前らしい形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto de mentir; História falsa",
+   "id": "WN-PT-0069",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "engano",
+   "pos": "名詞（男性）",
+   "meaningJa": "欺くこと、その結果。欺くための策略。錯覚、幻想。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "人をだます行為と、自分が抱く思い違い・幻の両方を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エンガーノ",
+   "url": "https://dicionario.priberam.org/pt-pt/engano",
+   "tags": [
+    "欺瞞",
+    "策略",
+    "錯覚"
+   ],
+   "candidates": [
+    {
+     "name": "エンガーノ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みのまま。ゆったりした響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エンガ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ガーノ",
+     "method": "short",
+     "impressions": [
+      "strong"
+     ],
+     "note": "後半を取った力強い形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Acto ou efeito de enganar",
+   "id": "WN-PT-0070",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "dúvida",
+   "pos": "名詞（女性）",
+   "meaningJa": "確信が持てないこと。信じにくいこと。疑い。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "迷い・ためらいとしての疑問と、人を怪しむ疑念の両方を表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ドゥーヴィダ",
+   "url": "https://dicionario.priberam.org/d%C3%BAvida",
+   "tags": [
+    "疑念",
+    "不信",
+    "迷い"
+   ],
+   "candidates": [
+    {
+     "name": "ドゥーヴィダ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みのまま。低く揺れる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ドゥヴィ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半を詰めて取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴィダ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "ポルトガル語 vida（命）と同音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Falta de convencimento; Suspeita",
+   "id": "WN-PT-0071",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "recusa",
+   "pos": "名詞（女性）",
+   "meaningJa": "断ること。否定の返事。同意しないこと。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "申し出や要求を受け入れないこと。動詞 recusar の活用形と同じ綴り。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "レクーザ",
+   "url": "https://dicionario.priberam.org/pt-pt/recusa",
+   "tags": [
+    "拒否",
+    "拒絶",
+    "辞退"
+   ],
+   "candidates": [
+    {
+     "name": "レクーザ",
+     "method": "kana",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "読みのまま。きっぱりした響き。",
+     "overlap": ""
+    },
+    {
+     "name": "レクザ",
+     "method": "adjust",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "長音を詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "クーザ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto de recusar; Resposta negativa",
+   "id": "WN-PT-0072",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "rejeição",
+   "pos": "名詞（女性）",
+   "meaningJa": "退けること、その結果。受け入れの場面での拒絶。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [],
+   "nuanceNote": "反対語は「受容」。差し出されたものや人をはねつける意味合い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "レジェイサン",
+   "url": "https://dicionario.priberam.org/pt-pt/rejei%C3%A7%C3%A3o",
+   "tags": [
+    "拒絶",
+    "排斥",
+    "却下"
+   ],
+   "candidates": [
+    {
+     "name": "レジェイサン",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "dark"
+     ],
+     "note": "読みのまま。重なりのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "レジェイ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ジェイサ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto ou efeito de rejeitar",
+   "id": "WN-PT-0073",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "negação",
+   "pos": "名詞（女性）",
+   "meaningJa": "否定すること、その結果。拒否。適性のなさという語義もある。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "事実を認めない「否認」と、要求を断る「拒否」の両方に使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ネガサン",
+   "url": "https://dicionario.priberam.org/nega%C3%A7%C3%A3o",
+   "tags": [
+    "否定",
+    "否認",
+    "拒否"
+   ],
+   "candidates": [
+    {
+     "name": "ネガサン",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "calm"
+     ],
+     "note": "読みのまま。静かに突き放す響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ネガ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": "外来語「ネガ」と同じ表記"
+    },
+    {
+     "name": "ネガサ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto ou efeito de negar; Recusa",
+   "id": "WN-PT-0074",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "destino",
+   "pos": "名詞（男性）",
+   "meaningJa": "避けがたく作用する出来事や状況のめぐり合わせ。運命。そこから生じる境遇。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "「悲しい運命」のような境遇にも使う。用途・使い道という語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デスティーノ",
+   "url": "https://dicionario.priberam.org/pt-pt/destino",
+   "tags": [
+    "運命",
+    "宿命",
+    "境遇"
+   ],
+   "candidates": [
+    {
+     "name": "デスティーノ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "読みのまま。堂々とした響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デスティ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ティーノ",
+     "method": "short",
+     "impressions": [
+      "bright",
+      "soft"
+     ],
+     "note": "後半を取った軽い形。",
+     "overlap": "人名「ティーノ」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Combinação de circunstâncias ou de acontecimentos",
+   "id": "WN-PT-0075",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "sina",
+   "pos": "名詞（女性）",
+   "meaningJa": "人生で避けられないと信じられている出来事のめぐり合わせ。宿命。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [],
+   "nuanceNote": "類義語に destino・fado・sorte。古い語義として「旗、軍旗」もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "シーナ",
+   "url": "https://dicionario.priberam.org/pt-pt/sina",
+   "tags": [
+    "宿命",
+    "運命",
+    "定め"
+   ],
+   "candidates": [
+    {
+     "name": "シーナ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "読みのまま。静かで短い。",
+     "overlap": "日本語の人名「しいな」に近い音"
+    },
+    {
+     "name": "シナル",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "calm"
+     ],
+     "note": "語尾に音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "シーネ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / acontecimentos da vida que se acredita inevitáveis",
+   "id": "WN-PT-0076",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "fado",
+   "pos": "名詞（男性）",
+   "meaningJa": "すべての出来事を司ると信じられる上位の力。人の意志に関わらず起こること。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "ポルトガルの大衆歌謡「ファド」もこの語。古い軽蔑的な語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ファード",
+   "url": "https://dicionario.priberam.org/pt-pt/fado",
+   "tags": [
+    "宿命",
+    "天命",
+    "歌謡"
+   ],
+   "candidates": [
+    {
+     "name": "ファード",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "読みのまま。哀調のある響き。",
+     "overlap": "音楽の「ファド」に近い表記"
+    },
+    {
+     "name": "ファドラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾に音を足した形。",
+     "overlap": ""
+    },
+    {
+     "name": "ファーダ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Força superior que se crê controlar",
+   "id": "WN-PT-0077",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "eternidade",
+   "pos": "名詞（女性）",
+   "meaningJa": "永遠であること。始まりも終わりもない持続。永遠の命、来世。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "religious"
+   ],
+   "nuanceNote": "時間の果てしなさのほか、死後の「永遠の生」という語義がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エテルニダーデ",
+   "url": "https://dicionario.priberam.org/pt-pt/eternidade",
+   "tags": [
+    "永遠",
+    "永劫",
+    "来世"
+   ],
+   "candidates": [
+    {
+     "name": "エテルニ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "テルニダ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "エテルナ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "語尾を詰めて整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Duração, sem princípio nem fim",
+   "id": "WN-PT-0078",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "infinito",
+   "pos": "形容詞・名詞（男性）・副詞",
+   "meaningJa": "終わりのない、限りのない、永遠の、絶対の。名詞（男性）としても使う。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "確認した語義は形容詞のもの。文法用語としての語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "インフィニート",
+   "url": "https://dicionario.priberam.org/pt-pt/infinito",
+   "tags": [
+    "無限",
+    "無窮",
+    "絶対"
+   ],
+   "candidates": [
+    {
+     "name": "インフィニート",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "読みのまま。広がりのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "インフィニ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "bright"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": "外来語「インフィニティ」に近い音"
+    },
+    {
+     "name": "フィニート",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "calm"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": "イタリア語 finito（終わった）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: adjectivo, nome masculino / Não finito; sem fim",
+   "id": "WN-PT-0079",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "segredo",
+   "pos": "名詞（男性）",
+   "meaningJa": "他人に知られてはならないこと。打ち明けた相手以外に漏らせない話。慎み、口の堅さ。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "隠し事そのもののほか、秘密を守る慎み深さも表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "セグレード",
+   "url": "https://dicionario.priberam.org/pt-pt/segredo",
+   "tags": [
+    "秘密",
+    "内密",
+    "機密"
+   ],
+   "candidates": [
+    {
+     "name": "セグレード",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "dark"
+     ],
+     "note": "読みのまま。ひそやかな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "セグレ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "calm"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "グレード",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "外来語「グレード」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Coisa que não deve ser sabida",
+   "id": "WN-PT-0080",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "mistério",
+   "pos": "名詞（男性）",
+   "meaningJa": "隠れた原因をもち説明のつかないもの。多神教の秘儀や、理性で理解できない教義も指す。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "religious",
+    "polysemy"
+   ],
+   "nuanceNote": "最初に挙がるのは宗教史の語義（秘儀・教義）。一般の「謎」はその後の語義。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ミステーリオ",
+   "url": "https://dicionario.priberam.org/mist%C3%A9rio",
+   "tags": [
+    "神秘",
+    "秘儀",
+    "謎"
+   ],
+   "candidates": [
+    {
+     "name": "ミステーリオ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "読みのまま。奥行きのある響き。",
+     "overlap": "外来語「ミステリー」に近い音"
+    },
+    {
+     "name": "ミステ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ステーリオ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Tudo o que tem causa oculta",
+   "id": "WN-PT-0081",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "enigma",
+   "pos": "名詞（男性）",
+   "meaningJa": "名を言い当てさせる曖昧な描写、謎かけ。比喩で、わかりにくい理屈や理解しがたいもの。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [],
+   "nuanceNote": "なぞなぞが元の語義で、「不可解なもの・人」は広がった使い方。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エニグマ",
+   "url": "https://dicionario.priberam.org/pt-pt/enigma",
+   "tags": [
+    "謎",
+    "難解",
+    "不可解"
+   ],
+   "candidates": [
+    {
+     "name": "エニグマ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みのまま。硬く閉じた響き。",
+     "overlap": "外来語「エニグマ」と同じ表記"
+    },
+    {
+     "name": "エニグ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ニグマ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Descrição obscura ou ambígua",
+   "id": "WN-PT-0082",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "sacrifício",
+   "pos": "名詞（男性）",
+   "meaningJa": "神への厳かな捧げ物（供物やいけにえ）。キリストの死、ミサも指す。",
+   "categories": [
+    "sacrifice"
+   ],
+   "nuances": [
+    "religious",
+    "polysemy"
+   ],
+   "nuanceNote": "確認した語義は宗教的なものが先頭。身を捧げる「献身」の語義はこの範囲では未確認。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "サクリフィーシオ",
+   "url": "https://dicionario.priberam.org/pt-pt/sacrif%C3%ADcio",
+   "tags": [
+    "犠牲",
+    "供物",
+    "生贄"
+   ],
+   "candidates": [
+    {
+     "name": "サクリフィ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "クリフィ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "中ほどを取った軽い形。",
+     "overlap": ""
+    },
+    {
+     "name": "サクリア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "音を詰めて母音で閉じた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Oferta solene à divindade",
+   "id": "WN-PT-0083",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "devoção",
+   "pos": "名詞（女性）",
+   "meaningJa": "信心の行いを守ること。特別な崇敬。比喩で、愛情、献身。",
+   "categories": [
+    "sacrifice",
+    "love"
+   ],
+   "nuances": [
+    "religious"
+   ],
+   "nuanceNote": "信仰上の勤めが元の語義で、人や物事への献身・愛着は比喩の語義。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デヴォサン",
+   "url": "https://dicionario.priberam.org/devo%C3%A7%C3%A3o",
+   "tags": [
+    "献身",
+    "信心",
+    "崇敬"
+   ],
+   "candidates": [
+    {
+     "name": "デヴォサン",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "読みのまま。落ち着いた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デヴォ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "calm"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴォサン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "noble"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Observância de certas práticas religiosas",
+   "id": "WN-PT-0084",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "desejo",
+   "pos": "名詞（男性）",
+   "meaningJa": "望むこと。望まれているもの。意志、願望。",
+   "categories": [
+    "desire"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "願い・欲求を広く表す基本語。動詞 desejar の活用形と同じ綴り。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デゼージョ",
+   "url": "https://dicionario.priberam.org/pt-pt/desejo",
+   "tags": [
+    "欲望",
+    "願望",
+    "希求"
+   ],
+   "candidates": [
+    {
+     "name": "デゼージョ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みのまま。濁音が続く甘い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デゼジ",
+     "method": "short",
+     "impressions": [
+      "soft"
+     ],
+     "note": "語尾を詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゼージョ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Acto de desejar; Vontade; aspiração",
+   "id": "WN-PT-0085",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "anseio",
+   "pos": "名詞（男性）",
+   "meaningJa": "切に求めること。燃えるような願い、苦しいほどの思い。",
+   "categories": [
+    "desire"
+   ],
+   "nuances": [],
+   "nuanceNote": "強い願いと、それにともなう苦しさ・焦りを一語で表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アンセイオ",
+   "url": "https://dicionario.priberam.org/pt-pt/anseio",
+   "tags": [
+    "切望",
+    "渇望",
+    "焦燥"
+   ],
+   "candidates": [
+    {
+     "name": "アンセイオ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "読みのまま。母音が流れる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "アンセイ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": "日本語「安静」と同音"
+    },
+    {
+     "name": "セイオ",
+     "method": "short",
+     "impressions": [
+      "bright",
+      "soft"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Desejo ardente, aflição",
+   "id": "WN-PT-0086",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "ânsia",
+   "pos": "名詞（女性）",
+   "meaningJa": "息苦しさをともなう動揺。燃えるような強い欲求。事の成り行きを恐れる心の苦しみ。",
+   "categories": [
+    "desire",
+    "fear"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "渇望と不安の両面をもつ。不安の語義は複数形で使われることが多い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アンシア",
+   "url": "https://dicionario.priberam.org/%C3%A2nsia",
+   "tags": [
+    "渇望",
+    "不安",
+    "焦燥"
+   ],
+   "candidates": [
+    {
+     "name": "アンシア",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みのまま。息の詰まる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "アンシ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "アンシエ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾の母音を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Desejo ardente ou intenso",
+   "id": "WN-PT-0087",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "ambição",
+   "pos": "名詞（女性）",
+   "meaningJa": "権力や優位をもたらすものへの激しい欲求。何かを成し遂げたいという大きな願い。",
+   "categories": [
+    "desire",
+    "power"
+   ],
+   "nuances": [],
+   "nuanceNote": "強欲に近い悪い面と、高い志というよい面の両方に使われる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アンビサン",
+   "url": "https://dicionario.priberam.org/pt-pt/ambi%C3%A7%C3%A3o",
+   "tags": [
+    "野心",
+    "大望",
+    "権勢欲"
+   ],
+   "candidates": [
+    {
+     "name": "アンビサン",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "読みのまま。張りのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "アンビ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ビサン",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Desejo veemente de poder",
+   "id": "WN-PT-0088",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "servidão",
+   "pos": "名詞（女性）",
+   "meaningJa": "農奴・しもべである状態。他人に依存し、服従している状態。",
+   "categories": [
+    "order"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "法律用語として、他人の土地のために不動産に課される負担（地役）の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "セルヴィダン",
+   "url": "https://dicionario.priberam.org/servid%C3%A3o",
+   "tags": [
+    "隷属",
+    "服従",
+    "束縛"
+   ],
+   "candidates": [
+    {
+     "name": "セルヴィダン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "読みのまま。重く古風な響き。",
+     "overlap": ""
+    },
+    {
+     "name": "セルヴィ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ルヴィダ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Estado ou condição de servo",
+   "id": "WN-PT-0089",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "escravidão",
+   "pos": "名詞（女性）",
+   "meaningJa": "奴隷である状態、囚われの身。比喩で、隷属、従属、自由のなさ。",
+   "categories": [
+    "order"
+   ],
+   "nuances": [],
+   "nuanceNote": "制度としての奴隷状態が本義。何かに縛られて自由がない状態にも比喩で使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エスクラヴィダン",
+   "url": "https://dicionario.priberam.org/escravid%C3%A3o",
+   "tags": [
+    "隷属",
+    "束縛",
+    "不自由"
+   ],
+   "candidates": [
+    {
+     "name": "エスクラ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "クラヴィ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "elegant"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": "楽器名「クラヴィ」（クラヴィコード等）に近い音"
+    },
+    {
+     "name": "ラヴィダ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "後半寄りを取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Estado de escravo; cativeiro",
+   "id": "WN-PT-0090",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "domínio",
+   "pos": "名詞（男性）",
+   "meaningJa": "所有権。自分のものを自由に使い処分できる権能。国や領主に属する領土。",
+   "categories": [
+    "order",
+    "power"
+   ],
+   "nuances": [
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "権利・領地としての「支配」が先に挙がる。情報技術・数学の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ドミーニオ",
+   "url": "https://dicionario.priberam.org/dom%C3%ADnio",
+   "tags": [
+    "支配",
+    "領有",
+    "領土"
+   ],
+   "candidates": [
+    {
+     "name": "ドミーニオ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "読みのまま。威厳のある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ドミニ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "語尾を詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ミーニオ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Direito de propriedade",
+   "id": "WN-PT-0091",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "ordem",
+   "pos": "名詞（女性）",
+   "meaningJa": "ふさわしい配置、整えること。権威をもって物事のやり方を指示すること。命令。",
+   "categories": [
+    "order"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "「秩序」と「命令」の両方を表す。建築・生物・宗教の分野の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オルデン",
+   "url": "https://dicionario.priberam.org/pt-pt/ordem",
+   "tags": [
+    "秩序",
+    "命令",
+    "整頓"
+   ],
+   "candidates": [
+    {
+     "name": "オルデン",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "crisp"
+     ],
+     "note": "読みのまま。引き締まった響き。",
+     "overlap": "ドイツ語 Orden（勲章・修道会）に近い音"
+    },
+    {
+     "name": "オルデ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "オルデナ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Disposição conveniente",
+   "id": "WN-PT-0092",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "reinado",
+   "pos": "名詞（男性）",
+   "meaningJa": "君主による統治。広く、主権。比喩で、誰かが権力や優位をふるう期間。",
+   "categories": [
+    "order",
+    "power"
+   ],
+   "nuances": [],
+   "nuanceNote": "王の治世が本義。「～の天下」のように、ある人が幅を利かせる時期にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "レイナード",
+   "url": "https://dicionario.priberam.org/pt-pt/reinado",
+   "tags": [
+    "治世",
+    "統治",
+    "君臨"
+   ],
+   "candidates": [
+    {
+     "name": "レイナード",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "elegant"
+     ],
+     "note": "読みのまま。気品のある響き。",
+     "overlap": "人名「レイナード」と同じ表記"
+    },
+    {
+     "name": "レイナ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "bright"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "スペイン語 reina（女王）と同音。日本語の人名にもある"
+    },
+    {
+     "name": "イナード",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Governo de um soberano",
+   "id": "WN-PT-0093",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "metamorfose",
+   "pos": "名詞（女性）",
+   "meaningJa": "人や物の形・構造が目に見えて変わること。生物学で、成体になるまでの大きな変態。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "姿かたちの変化に重点がある。昆虫や両生類の「変態」もこの語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "メタモルフォーゼ",
+   "url": "https://dicionario.priberam.org/pt-pt/metamorfose",
+   "tags": [
+    "変身",
+    "変容",
+    "変態"
+   ],
+   "candidates": [
+    {
+     "name": "メタモル",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "モルフォ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "bright"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": "蝶の名「モルフォ」と同じ表記"
+    },
+    {
+     "name": "メタフォ",
+     "method": "adjust",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "音を詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Alteração visível na forma ou na estrutura",
+   "id": "WN-PT-0094",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "transformação",
+   "pos": "名詞（女性）",
+   "meaningJa": "変えること、変わること、その結果。変更。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [],
+   "nuanceNote": "類義語として metamorfose が挙げられている。動詞 transformar からできた名詞。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "トランスフォルマサン",
+   "url": "https://dicionario.priberam.org/transforma%C3%A7%C3%A3o",
+   "tags": [
+    "変化",
+    "変容",
+    "変換"
+   ],
+   "candidates": [
+    {
+     "name": "フォルマ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": "ラテン語系の forma（形）と同音"
+    },
+    {
+     "name": "トランサ",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "前半を詰めて整えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ルマサン",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto ou efeito de transformar",
+   "id": "WN-PT-0095",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "mudança",
+   "pos": "名詞（女性）",
+   "meaningJa": "変えること、移ること。人や物が別のものに入れ替わること。変わっていく過程。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "身体や心の変化にも、引っ越し・交替にも使う日常語。工学の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ムダンサ",
+   "url": "https://dicionario.priberam.org/mudan%C3%A7a",
+   "tags": [
+    "変化",
+    "交替",
+    "移転"
+   ],
+   "candidates": [
+    {
+     "name": "ムダンサ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "読みのまま。弾むような響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ムダン",
+     "method": "short",
+     "impressions": [
+      "calm"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ダンサ",
+     "method": "short",
+     "impressions": [
+      "bright",
+      "elegant"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": "ポルトガル語・スペイン語の dança / danza（踊り）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto de mudar ou de se mudar",
+   "id": "WN-PT-0096",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "silêncio",
+   "pos": "名詞（男性）",
+   "meaningJa": "話すのを控える、あるいはやめている状態。音や騒音がやむこと。便りや連絡が途絶えること。",
+   "categories": [
+    "silence"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "口をつぐむ沈黙と、物音のない静寂の両方。音信不通の意味にもなる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "シレンシオ",
+   "url": "https://dicionario.priberam.org/sil%C3%AAncio",
+   "tags": [
+    "沈黙",
+    "静寂",
+    "無音"
+   ],
+   "candidates": [
+    {
+     "name": "シレンシオ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "読みのまま。澄んだ響き。",
+     "overlap": "スペイン語 silencio と同じ読み"
+    },
+    {
+     "name": "シレン",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "crisp"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "外来語「セイレーン／シレン」に近い表記"
+    },
+    {
+     "name": "レンシオ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Estado de quem se abstém de falar",
+   "id": "WN-PT-0097",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "quietude",
+   "pos": "名詞（女性）",
+   "meaningJa": "静かである性質。心の安らぎ。",
+   "categories": [
+    "silence",
+    "harmony"
+   ],
+   "nuances": [],
+   "nuanceNote": "類義語に paz・sossego。動きのない静けさと、心の平穏を表す明るい語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "キエトゥーデ",
+   "url": "https://dicionario.priberam.org/pt-pt/quietude",
+   "tags": [
+    "静穏",
+    "平安",
+    "安息"
+   ],
+   "candidates": [
+    {
+     "name": "キエトゥーデ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "読みのまま。ゆるやかな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "キエトゥ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "キエタ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を詰めて母音を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Qualidade de quieto; Bem-estar do espírito",
+   "id": "WN-PT-0098",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "memória",
+   "pos": "名詞（女性）",
+   "meaningJa": "心が観念や像を保ち、呼び戻す働き。記憶。思い出。記念碑。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "記憶力・思い出・記念の建造物まで幅広い。情報技術の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "メモーリア",
+   "url": "https://dicionario.priberam.org/mem%C3%B3ria",
+   "tags": [
+    "記憶",
+    "追憶",
+    "記念"
+   ],
+   "candidates": [
+    {
+     "name": "メモーリア",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "noble"
+     ],
+     "note": "読みのまま。やわらかく伸びる響き。",
+     "overlap": "外来語「メモリア」に近い表記"
+    },
+    {
+     "name": "メモリ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾を詰めた形。",
+     "overlap": "外来語「メモリ」と同じ表記"
+    },
+    {
+     "name": "モーリア",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Faculdade pela qual o espírito conserva ideias",
+   "id": "WN-PT-0099",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "esquecimento",
+   "pos": "名詞（男性）",
+   "meaningJa": "記憶がないこと、物忘れ。不注意。感覚を失うこと。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "忘れることのほか、うっかり・手抜かりや、感覚の麻痺という語義がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エスケシメント",
+   "url": "https://dicionario.priberam.org/pt-pt/esquecimento",
+   "tags": [
+    "忘却",
+    "失念",
+    "麻痺"
+   ],
+   "candidates": [
+    {
+     "name": "エスケシ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ケシメ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "エスケス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を子音寄りにした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Falta de memória; Descuido",
+   "id": "WN-PT-0100",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "saudade",
+   "pos": "名詞（女性）",
+   "meaningJa": "今はいない人、過ぎた時、失ったものへの懐かしい思い出。その喪失がもたらす悲しみ、痛み。",
+   "categories": [
+    "memory",
+    "grief"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "懐かしさの甘さと失った痛みの両方を含む。植物（マツムシソウの類）の名でもある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "サウダーデ",
+   "url": "https://dicionario.priberam.org/pt-pt/saudade",
+   "tags": [
+    "郷愁",
+    "追慕",
+    "哀惜"
+   ],
+   "candidates": [
+    {
+     "name": "サウダーデ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "読みのまま。余韻の長い響き。",
+     "overlap": "外来語「サウダージ」と同じ語"
+    },
+    {
+     "name": "サウダ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ウダーデ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "dark"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Lembrança grata de pessoa ausente",
+   "id": "WN-PT-0101",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "lembrança",
+   "pos": "名詞（女性）",
+   "meaningJa": "記憶が過去の出来事をよみがえらせる心の働き。思い出。覚え書き。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "思い出すこと・思い出のほか、記憶を助けるためのメモも指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "レンブランサ",
+   "url": "https://dicionario.priberam.org/lembran%C3%A7a",
+   "tags": [
+    "追憶",
+    "回想",
+    "覚書"
+   ],
+   "candidates": [
+    {
+     "name": "レンブランサ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "読みのまま。響きの豊かな名。",
+     "overlap": ""
+    },
+    {
+     "name": "レンブラ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "crisp"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "画家「レンブラント」に近い音"
+    },
+    {
+     "name": "ブランサ",
+     "method": "short",
+     "impressions": [
+      "bright",
+      "elegant"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Acto mental pelo qual a memória reproduz",
+   "id": "WN-PT-0102",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "poder",
+   "pos": "名詞（男性）",
+   "meaningJa": "できること、能力。体や心の力、活力。支配、主権。",
+   "categories": [
+    "power"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "動詞「～できる」と同じ綴りの名詞。力と権力の両方を表し、法律の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ポデル",
+   "url": "https://dicionario.priberam.org/pt-pt/poder",
+   "tags": [
+    "力",
+    "権力",
+    "能力"
+   ],
+   "candidates": [
+    {
+     "name": "ポデル",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "読みのまま。短く力強い。",
+     "overlap": ""
+    },
+    {
+     "name": "ポデ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ポデラ",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "elegant"
+     ],
+     "note": "語尾に母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome masculino / Possibilidade, faculdade; Império, soberania",
+   "id": "WN-PT-0103",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "potência",
+   "pos": "名詞（女性）",
+   "meaningJa": "力、権力。活力、頑健さ。権威、指揮する力。",
+   "categories": [
+    "power"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "力学・数学・哲学・カトリックの用語としての語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ポテンシア",
+   "url": "https://dicionario.priberam.org/pot%C3%AAncia",
+   "tags": [
+    "威力",
+    "権勢",
+    "活力"
+   ],
+   "candidates": [
+    {
+     "name": "ポテンシア",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "読みのまま。張りのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ポテン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "テンシア",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "crisp"
+     ],
+     "note": "語頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Poder, força; Autoridade, mando",
+   "id": "WN-PT-0104",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  },
+  {
+   "lemma": "potestade",
+   "pos": "名詞（女性）",
+   "meaningJa": "力、権力。広く、神、至高の力。大きな権力・権威・影響力をもつ人。",
+   "categories": [
+    "power"
+   ],
+   "nuances": [
+    "religious"
+   ],
+   "nuanceNote": "複数形はカトリックの用語としての語義をもつ。神的な力や権力者を指す重い語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ポテスターデ",
+   "url": "https://dicionario.priberam.org/pt-pt/potestade",
+   "tags": [
+    "権能",
+    "神威",
+    "権力者"
+   ],
+   "candidates": [
+    {
+     "name": "ポテスタ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": "ラテン語 potestas に近い音"
+    },
+    {
+     "name": "テスタ",
+     "method": "short",
+     "impressions": [
+      "crisp"
+     ],
+     "note": "中ほどを取った短い形。",
+     "overlap": "イタリア語 testa（頭）と同音"
+    },
+    {
+     "name": "ポテスティ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "crisp"
+     ],
+     "note": "語尾を替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nome feminino / Potência, força, poder",
+   "id": "WN-PT-0105",
+   "date": "2026-11-17",
+   "dictionary": "Priberam"
+  }
+ ],
+ "extraCategories": [
+  {
+   "id": "WN-PT-0011",
+   "lemma": "serenidade",
+   "add": [
+    "silence"
+   ]
+  },
+  {
+   "id": "WN-PT-0008",
+   "lemma": "paz",
+   "add": [
+    "silence"
+   ]
+  }
+ ],
+ "notFound": [
+  "perenidade（ページは開けたが語義が「perene である性質」のみで内容を確認できず、収録見送り）",
+  "raiva（検索結果に語自身の通常の見出しURLが出なかった）",
+  "perda（検索結果に見出しURLが出なかった）",
+  "dependência（検索結果に見出しURLが出なかった）",
+  "angústia（検索結果に見出しURLが出なかった）",
+  "abnegação（検索結果ページのURLしか出なかった）",
+  "oferenda（検索結果に見出しURLが出なかった）",
+  "véu（検索結果に見出しURLが出なかった）",
+  "renascimento（検索結果に見出しURLが出なかった）",
+  "sossego（検索結果に見出しURLが出なかった）",
+  "calma（検索結果に見出しURLが出なかった）",
+  "autoridade（検索結果に見出しURLが出なかった）",
+  "força（検索結果に見出しURLが出なかった）",
+  "sorte（見出しURLは得たが WebFetch 未実施のため未確認）"
+ ],
+ "dictionary": "Priberam",
+ "host": "dicionario.priberam.org"
+}

@@ -1,0 +1,3696 @@
+{
+ "lang": "fr",
+ "words": [
+  {
+   "lemma": "haine",
+   "pos": "名詞（女性）",
+   "meaningJa": "相手に害を願い、その不幸を喜ぶほどの強い憎しみ。物事への深い嫌悪・反発も指す。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "人への憎悪と、暴力など物事への嫌悪の両方に使う。日常語だが意味は重い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページには音声リンクのみ。",
+   "kana": "エーヌ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/haine/38852",
+   "tags": [
+    "憎悪",
+    "敵意",
+    "嫌悪"
+   ],
+   "candidates": [
+    {
+     "name": "エーヌ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みそのまま。短く鋭い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エニス",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "音を詰め語尾を足した形。冷ややか。",
+     "overlap": ""
+    },
+    {
+     "name": "エーネル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "語尾を足して名前らしくした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sentiment qui porte une personne à souhaiter…",
+   "id": "WN-FR-0041",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "hostilité",
+   "pos": "名詞（女性）",
+   "meaningJa": "人への敵意、または物事に反対する態度。複数形 hostilités は戦闘行為・交戦を指す。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "formal",
+    "polysemy"
+   ],
+   "nuanceNote": "単数は心情や態度、複数は戦争での行動を指す。計画や考えへの反対にも使える。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オスティリテ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/hostilit%C3%A9/40468",
+   "tags": [
+    "敵意",
+    "敵対",
+    "反対"
+   ],
+   "candidates": [
+    {
+     "name": "オスティリテ",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "読みそのまま。硬く張りつめた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "オスティル",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "前半を取った短縮形。引き締まる。",
+     "overlap": ""
+    },
+    {
+     "name": "オスティア",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "語尾を母音に変えた形。古風な趣。",
+     "overlap": "イタリアの古代都市オスティアと同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sentiment d'inimitié…; hostilités = opérations de guerre",
+   "id": "WN-FR-0042",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "malédiction",
+   "pos": "名詞（女性）",
+   "meaningJa": "不幸を願って発する呪いの言葉。また、超越的な力に定められたかのような災い・不運。",
+   "categories": [
+    "hatred",
+    "fate"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "呪う言葉そのもの（文語）と、逃れられない不運の両方を指す。既存の bénédiction（祝福）と対比できる語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "マレディクシオン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/mal%C3%A9diction/48860",
+   "tags": [
+    "呪詛",
+    "災厄",
+    "不運"
+   ],
+   "candidates": [
+    {
+     "name": "マレディ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "前半を取った短縮形。妖しく柔らか。",
+     "overlap": ""
+    },
+    {
+     "name": "マレディス",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "前半に語尾を足した形。翳りと気品。",
+     "overlap": ""
+    },
+    {
+     "name": "ディクシオン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "後半を取った短縮形。硬質な響き。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Paroles par lesquelles on souhaite un sort néfaste (littéraire)",
+   "id": "WN-FR-0043",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "inimitié",
+   "pos": "名詞（女性）",
+   "meaningJa": "反感や敵意、憎しみといった、相手を快く思わない感情。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "Larousse では語義は一つ。antipathie・hostilité・haine をまとめて言い表す語として定義されている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "イニミティエ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/inimiti%C3%A9/43119",
+   "tags": [
+    "反感",
+    "敵意",
+    "不和"
+   ],
+   "candidates": [
+    {
+     "name": "イニミティエ",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "読みそのまま。細く冷たい響き。",
+     "overlap": ""
+    },
+    {
+     "name": "イニミ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半を取った短縮形。小さく翳る。",
+     "overlap": ""
+    },
+    {
+     "name": "ミティエ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "後半を取った短縮形。軽やか。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sentiment d'antipathie, d'hostilité, de haine",
+   "id": "WN-FR-0044",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "jalousie",
+   "pos": "名詞（女性）",
+   "meaningJa": "愛する人を独占したい気持ちと、奪われる恐れから生じる嫉妬。他人の優位へのねたみも指す。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "文語では「何かへの強い愛着」の意味もある。恋愛の嫉妬と、他人の恵まれた境遇へのねたみを文脈で書き分ける。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ジャルジ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/jalousie/44684",
+   "tags": [
+    "嫉妬",
+    "独占",
+    "羨望"
+   ],
+   "candidates": [
+    {
+     "name": "ジャルジ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "読みそのまま。甘く翳る響き。",
+     "overlap": "外来語「ジャルジー（よろい窓）」に近い"
+    },
+    {
+     "name": "ジャルジア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾に母音を足した形。艶がある。",
+     "overlap": ""
+    },
+    {
+     "name": "ジャルゼ",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "語尾を詰めて変えた形。鋭さが出る。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sentiment fondé sur le désir de posséder la personne aimée",
+   "id": "WN-FR-0045",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "envie",
+   "pos": "名詞（女性）",
+   "meaningJa": "他人の幸福や優位を欲しがる気持ち。羨望。また、何かを持ちたい・したいという欲求。",
+   "categories": [
+    "envy",
+    "desire"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "羨望（陰）と単なる「〜したい気持ち」（中立）で印象が大きく変わる。急に起こる生理的な欲求の意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アンヴィ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/envie/30147",
+   "tags": [
+    "羨望",
+    "欲求",
+    "願望"
+   ],
+   "candidates": [
+    {
+     "name": "アンヴィ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みそのまま。短く含みがある。",
+     "overlap": ""
+    },
+    {
+     "name": "アンヴィア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾に母音を足した形。華やぐ。",
+     "overlap": ""
+    },
+    {
+     "name": "アンヴィエ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "soft"
+     ],
+     "note": "語尾を伸ばした形。上品な響き。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Convoitise…; Désir d'avoir ou de faire quelque chose",
+   "id": "WN-FR-0046",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "convoitise",
+   "pos": "名詞（女性）",
+   "meaningJa": "何かを手に入れたいという度を越した欲望。強欲。文語では人への肉欲も指す。",
+   "categories": [
+    "envy",
+    "desire"
+   ],
+   "nuances": [
+    "polysemy",
+    "literary"
+   ],
+   "nuanceNote": "所有への行き過ぎた欲を言う。第2義（肉欲）は文語のラベル付きなので、名前に使う際は意味の重さに注意。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "コンヴォワティーズ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/convoitise/19023?q=convoitise",
+   "tags": [
+    "強欲",
+    "貪欲",
+    "渇望"
+   ],
+   "candidates": [
+    {
+     "name": "コンヴォワ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "前半を取った短縮形。重く響く。",
+     "overlap": "フランス語 convoi（護送隊）と同じ音"
+    },
+    {
+     "name": "ヴォワティーズ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "後半を取った短縮形。艶やか。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴォワティ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "中ほどを取った短縮形。軽い。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Désir extrême ou immodéré de posséder",
+   "id": "WN-FR-0047",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "obsession",
+   "pos": "名詞（女性）",
+   "meaningJa": "意識に繰り返し押し入ってくる、振り払えない考え。本人が不合理と分かっていても離れない観念。",
+   "categories": [
+    "obsession"
+   ],
+   "nuances": [],
+   "nuanceNote": "Larousse の語義は心理学的な強迫観念の一つだけ。取りつかれて離れない思いを表すのに向く。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オプセシオン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/obsession/55432",
+   "tags": [
+    "強迫",
+    "執着",
+    "妄執"
+   ],
+   "candidates": [
+    {
+     "name": "オプセシオン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "読みそのまま。重く粘る響き。",
+     "overlap": "英語 obsession（オブセッション）と同じ綴り"
+    },
+    {
+     "name": "オプセス",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半を取った短縮形。鋭く短い。",
+     "overlap": ""
+    },
+    {
+     "name": "セシオン",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "後半を取った短縮形。滑らか。",
+     "overlap": "外来語「セッション」に近い"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Idée répétitive et menaçante, s'imposant…",
+   "id": "WN-FR-0048",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "emprise",
+   "pos": "名詞（女性）",
+   "meaningJa": "人が他者に及ぼす知的・精神的な支配力。物事が人に与える強い影響。",
+   "categories": [
+    "obsession",
+    "order"
+   ],
+   "nuances": [
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "行政による私有地の占有、道路・鉄道の用地という行政上の意味もある。精神分析の語義も載っている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アンプリーズ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/emprise/29011",
+   "tags": [
+    "支配",
+    "影響",
+    "呪縛"
+   ],
+   "candidates": [
+    {
+     "name": "アンプリーズ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。絡みつく響き。",
+     "overlap": ""
+    },
+    {
+     "name": "アンプリ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半を取った短縮形。軽く翳る。",
+     "overlap": ""
+    },
+    {
+     "name": "アンプリーゼ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "語尾を母音に変えた形。古風。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Ascendant intellectuel ou moral de quelqu'un",
+   "id": "WN-FR-0049",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "dépendance",
+   "pos": "名詞（女性）",
+   "meaningJa": "何かに条件づけられ左右される関係。他者の権威に従う状態や、自立できない状態。",
+   "categories": [
+    "obsession",
+    "order"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "依存（心理）にも従属（支配関係）にも使える。確認した冒頭3義は、密接な関係・服従・自立の欠如。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デパンダンス",
+   "url": "https://www.larousse.fr/dictionnaires/francais/d%C3%A9pendance/23742",
+   "tags": [
+    "依存",
+    "従属",
+    "隷属"
+   ],
+   "candidates": [
+    {
+     "name": "デパンダンス",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "読みそのまま。重く揺れる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デパン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "前半を取った短縮形。短く硬い。",
+     "overlap": ""
+    },
+    {
+     "name": "デパンダ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "calm"
+     ],
+     "note": "語尾を落とした短縮形。安定感。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / État de quelqu'un qui est soumis à l'autorité d'autrui",
+   "id": "WN-FR-0050",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "solitude",
+   "pos": "名詞（女性）",
+   "meaningJa": "一時的または習慣的に独りでいる状態。精神的な孤立。人けのない場所の寂しさ。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "literary"
+   ],
+   "nuanceNote": "状態としては中立で、苦しい孤独にも独りの静けさにも読める。文語では人里離れた場所そのものも指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ソリチュード",
+   "url": "https://www.larousse.fr/dictionnaires/francais/solitude/73340",
+   "tags": [
+    "孤独",
+    "孤立",
+    "寂寥"
+   ],
+   "candidates": [
+    {
+     "name": "ソリチュード",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "読みそのまま。静かで澄む響き。",
+     "overlap": "英語 solitude の外来語表記と同じ"
+    },
+    {
+     "name": "ソリュード",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "elegant"
+     ],
+     "note": "音を一つ詰めた形。流れが良い。",
+     "overlap": ""
+    },
+    {
+     "name": "ソリテ",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を短く変えた形。凛とする。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / État de quelqu'un qui est seul",
+   "id": "WN-FR-0051",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "isolement",
+   "pos": "名詞（男性）",
+   "meaningJa": "人里離れた場所の孤立した状態。離れて暮らす人や心が独りの人の状態。社会からの隔離。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "心の孤立にも物理的な隔離にも使う。建築・生物・電気・医学の分野での専門的な語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "イゾルマン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/isolement/44469",
+   "tags": [
+    "孤立",
+    "隔離",
+    "疎外"
+   ],
+   "candidates": [
+    {
+     "name": "イゾルマン",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "読みそのまま。硬く閉じた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "イゾル",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "前半を取った短縮形。冷たく短い。",
+     "overlap": ""
+    },
+    {
+     "name": "ゾルマン",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "後半を取った短縮形。重厚。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / État de quelqu'un qui vit isolé ou qui est moralement seul",
+   "id": "WN-FR-0052",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "exil",
+   "pos": "名詞（男性）",
+   "meaningJa": "祖国を追われ、または離れて暮らさざるを得ない境遇。その滞在地。なじめない土地で暮らす状態。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "政治的な追放にも、居場所を失った境遇にも使える。占星術では、星が本来の座と反対の宮にある状態を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エグジル",
+   "url": "https://www.larousse.fr/dictionnaires/francais/exil/32134",
+   "tags": [
+    "追放",
+    "流浪",
+    "亡命"
+   ],
+   "candidates": [
+    {
+     "name": "エグジル",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "読みそのまま。乾いた鋭い響き。",
+     "overlap": "英語 exile（エグザイル）と同語源"
+    },
+    {
+     "name": "エグジ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を落とした短縮形。鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "エグジラ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾に母音を足した形。妖しさ。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Situation de quelqu'un qui est expulsé ou obligé de vivre hors de sa patrie",
+   "id": "WN-FR-0053",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "deuil",
+   "pos": "名詞（男性）",
+   "meaningJa": "身近な人の死。その死によって味わう深い悲しみ。慣習として示す喪のしるし。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "死別の出来事・悲嘆・外に表す喪のしるしの三つを指す。死と結びついた語なので扱いは慎重に。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ドゥイユ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/deuil/24893",
+   "tags": [
+    "喪失",
+    "悲嘆",
+    "服喪"
+   ],
+   "candidates": [
+    {
+     "name": "ドゥイユ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "読みそのまま。沈んだ柔らかさ。",
+     "overlap": ""
+    },
+    {
+     "name": "ドゥイ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を落とした短縮形。儚い。",
+     "overlap": ""
+    },
+    {
+     "name": "ドゥイエ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾を変えた形。静かな気品。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Douleur, affliction éprouvée à la suite du décès",
+   "id": "WN-FR-0054",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "chagrin",
+   "pos": "名詞（男性）",
+   "meaningJa": "不快・つらさ・悲嘆の状態。心の痛み、悲しみ。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "同じ綴りで別見出しの形容詞（文語。ふさぎがちな）と、革を表す名詞がある。ここは悲しみを表す名詞。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "シャグラン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/chagrin/14423",
+   "tags": [
+    "悲哀",
+    "心痛",
+    "悲嘆"
+   ],
+   "candidates": [
+    {
+     "name": "シャグラン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。翳りと艶。",
+     "overlap": "革の名「シャグラン」と同じ表記"
+    },
+    {
+     "name": "シャグリ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を変えた形。小さく愛らしい。",
+     "overlap": ""
+    },
+    {
+     "name": "シャグラ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語尾を落とした短縮形。ざらつく。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / État de déplaisir, de peine, d'affliction",
+   "id": "WN-FR-0055",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "tristesse",
+   "pos": "名詞（女性）",
+   "meaningJa": "悲しみや憂いを抱いている状態。悲しげな表情。活気のないものが与えるもの寂しい印象。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "人の心情にも、風景などが与える寂しい印象にも使える。語義には憂愁（mélancolie）の語が含まれる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "トリステス",
+   "url": "https://www.larousse.fr/dictionnaires/francais/tristesse/79816",
+   "tags": [
+    "悲哀",
+    "憂愁",
+    "哀愁"
+   ],
+   "candidates": [
+    {
+     "name": "トリステス",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。細く沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "トリステ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を落とした形。やわらぐ。",
+     "overlap": "イタリア語・スペイン語 triste（悲しい）と同じ音"
+    },
+    {
+     "name": "リステス",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "後半を取った短縮形。涼しげ。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / État de quelqu'un qui éprouve du chagrin, de la mélancolie",
+   "id": "WN-FR-0056",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "désespoir",
+   "pos": "名詞（男性）",
+   "meaningJa": "すべての希望を失うこと。望みを捨てた人の完全な落胆。人を嘆かせる人や物も指す。",
+   "categories": [
+    "despair"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "心情のほか、「深く悲しませる人」「完璧すぎて、または難しすぎて落胆させるもの」という転義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デゼスポワール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/d%C3%A9sespoir/24408",
+   "tags": [
+    "絶望",
+    "落胆",
+    "失意"
+   ],
+   "candidates": [
+    {
+     "name": "デゼス",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "前半を取った短縮形。乾いた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "スポワール",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "後半を取った短縮形。余韻が長い。",
+     "overlap": ""
+    },
+    {
+     "name": "デゼール",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "dark"
+     ],
+     "note": "中を詰めた形。荒涼とした印象。",
+     "overlap": "フランス語 désert（砂漠）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Perte de toute espérance…",
+   "id": "WN-FR-0057",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "détresse",
+   "pos": "名詞（女性）",
+   "meaningJa": "見捨てられた感覚や無力感、絶望的な状況から来る苦悶。すぐに救助が必要な危機的状況。",
+   "categories": [
+    "despair",
+    "fear"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "心の苦しみと、急いで助けが要る切迫した危機の両方を指す。語義に angoisse（不安）の語が含まれる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デトレス",
+   "url": "https://www.larousse.fr/dictionnaires/francais/d%C3%A9tresse/24863",
+   "tags": [
+    "苦悶",
+    "窮地",
+    "絶望"
+   ],
+   "candidates": [
+    {
+     "name": "デトレス",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みそのまま。切迫した響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デトレ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を落とした短縮形。鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "デトレア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾を母音に変えた形。柔らぐ。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Angoisse causée par un sentiment d'abandon, d'impuissance",
+   "id": "WN-FR-0058",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "peur",
+   "pos": "名詞（女性）",
+   "meaningJa": "現実または想像上の危険や脅威を前にして感じる不安な気持ち。恐れ。悪いことが起きるという懸念。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "avoir peur・faire peur の形でよく使うとページに記載。逃げ出したくなる恐れから心配まで幅がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "プール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/peur/60046",
+   "tags": [
+    "恐怖",
+    "不安",
+    "懸念"
+   ],
+   "candidates": [
+    {
+     "name": "プール",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みそのまま。丸く短い響き。",
+     "overlap": "外来語「プール」と同じ表記"
+    },
+    {
+     "name": "プーラ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を母音に変えた形。穏やか。",
+     "overlap": ""
+    },
+    {
+     "name": "プルア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "音を詰めて母音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sentiment d'angoisse éprouvé en présence… d'un danger",
+   "id": "WN-FR-0059",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "angoisse",
+   "pos": "名詞（女性）",
+   "meaningJa": "差し迫っているが正体のはっきりしない脅威を感じて生じる、深い不安。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "実存主義哲学での用法（人間の根本的な経験）や、心理面の定義も載る。対象の定まらない不安に使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アンゴワス",
+   "url": "https://www.larousse.fr/dictionnaires/francais/angoisse/3528",
+   "tags": [
+    "不安",
+    "苦悩",
+    "焦燥"
+   ],
+   "candidates": [
+    {
+     "name": "アンゴワス",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みそのまま。喉に詰まる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "アンゴワ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾を落とした短縮形。くぐもる。",
+     "overlap": ""
+    },
+    {
+     "name": "ゴワス",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "後半を取った短縮形。荒々しい。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Grande inquiétude, anxiété profonde…",
+   "id": "WN-FR-0060",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "effroi",
+   "pos": "名詞（男性）",
+   "meaningJa": "身が凍りつくほどの激しい恐怖。戦慄。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [],
+   "nuanceNote": "Larousse では語義は一つ。凍りつかせる・おびえさせるほどの恐怖で、terreur と言い換えられている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エフロワ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/effroi/27975?q=effroi",
+   "tags": [
+    "戦慄",
+    "恐怖",
+    "畏怖"
+   ],
+   "candidates": [
+    {
+     "name": "エフロワ",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "dark"
+     ],
+     "note": "読みそのまま。冷たく広がる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エフロ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "語尾を落とした短縮形。短く鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "フロワ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "後半を取った短縮形。冷ややか。",
+     "overlap": "フランス語 froid（冷たい）と同じ音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Grande frayeur qui glace, épouvante ; terreur",
+   "id": "WN-FR-0061",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "remords",
+   "pos": "名詞（男性）",
+   "meaningJa": "悪いことをしたという自覚から来る、激しい心の痛み。良心の呵責。強い後悔。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "道徳的な呵責が中心だが、家具を買わなかったことを悔やむ例文のように、軽い後悔にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ルモール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/remords/68055",
+   "tags": [
+    "呵責",
+    "後悔",
+    "罪悪感"
+   ],
+   "candidates": [
+    {
+     "name": "ルモール",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みそのまま。低く沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ルモア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を母音に変えた形。柔らかい。",
+     "overlap": ""
+    },
+    {
+     "name": "ルモーラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾に母音を足した形。余韻がある。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Vive douleur morale causée par la conscience d'avoir mal agi",
+   "id": "WN-FR-0062",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "regret",
+   "pos": "名詞（男性）",
+   "meaningJa": "失ったものやいなくなった人を惜しむつらさ。したこと・しなかったことへの悔い。遺憾の気持ち。",
+   "categories": [
+    "remorse",
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "喪失を惜しむ気持ち、行いへの後悔、残念に思う気持ちの三つの意味がある。文脈で重さが変わる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ルグレ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/regret/67696",
+   "tags": [
+    "後悔",
+    "哀惜",
+    "遺憾"
+   ],
+   "candidates": [
+    {
+     "name": "ルグレ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "dark"
+     ],
+     "note": "読みそのまま。短く静かな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ルグレア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾に母音を足した形。優しい。",
+     "overlap": ""
+    },
+    {
+     "name": "グレ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "後半を取った短縮形。灰色の印象。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Peine causée par une perte…; Chagrin, repentir d'avoir fait…",
+   "id": "WN-FR-0063",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "repentir",
+   "pos": "名詞（男性）",
+   "meaningJa": "犯した過ちへの強い悔い。償いの約束を伴う。作家や画家が作品に加える修正も指す。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "償おうとする意志を含む悔い。美術・文学では作者による手直しのこと。代名動詞 se repentir は別見出し。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ルパンティール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/repentir/68362",
+   "tags": [
+    "悔悟",
+    "改悛",
+    "贖罪"
+   ],
+   "candidates": [
+    {
+     "name": "ルパンティール",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "読みそのまま。長く厳かな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ルパンテ",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "calm"
+     ],
+     "note": "語尾を詰めた形。すっきりする。",
+     "overlap": ""
+    },
+    {
+     "name": "ルパン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "elegant"
+     ],
+     "note": "前半を取った短縮形。軽快。",
+     "overlap": "怪盗「ルパン」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Vif regret éprouvé pour une faute commise…",
+   "id": "WN-FR-0064",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "honte",
+   "pos": "名詞（女性）",
+   "meaningJa": "名誉や尊厳を傷つけられて感じる屈辱感。自分にふさわしくない行いをした恥ずかしさ。気後れ。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "屈辱、不名誉な行いへの恥、内気さから来る気恥ずかしさの三つ。重い恥辱から軽い照れまで幅がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オント",
+   "url": "https://www.larousse.fr/dictionnaires/francais/honte/40358",
+   "tags": [
+    "羞恥",
+    "屈辱",
+    "恥辱"
+   ],
+   "candidates": [
+    {
+     "name": "オント",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みそのまま。短く詰まる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "オンティア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾に母音を足した形。華やぐ。",
+     "overlap": ""
+    },
+    {
+     "name": "オンテ",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "dark"
+     ],
+     "note": "語尾の母音を変えた形。控えめ。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sentiment d'abaissement, d'humiliation…",
+   "id": "WN-FR-0065",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "déshonneur",
+   "pos": "名詞（男性）",
+   "meaningJa": "名誉を失うこと。名誉を汚された人の境遇。恥辱。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "感情としての恥よりも、名誉を失った状態・立場を指す語。家名や誇りを扱う物語に合う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デゾヌール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/d%C3%A9shonneur/24437",
+   "tags": [
+    "不名誉",
+    "汚名",
+    "恥辱"
+   ],
+   "candidates": [
+    {
+     "name": "デゾヌール",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "読みそのまま。重く気高い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デゾヌ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "語尾を落とした短縮形。乾く。",
+     "overlap": ""
+    },
+    {
+     "name": "ゾヌール",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "後半を取った短縮形。低く響く。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Perte de l'honneur…",
+   "id": "WN-FR-0066",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "opprobre",
+   "pos": "名詞（男性）",
+   "meaningJa": "非難されるべき行いに向けられる世間の糾弾。恥の原因となるもの。卑しめられた状態。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "文語のラベルが付く語。個人の感情というより、公の非難や汚名を言う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "オプローブル",
+   "url": "https://www.larousse.fr/dictionnaires/francais/opprobre/56243",
+   "tags": [
+    "汚名",
+    "非難",
+    "恥辱"
+   ],
+   "candidates": [
+    {
+     "name": "オプロ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "前半を取った短縮形。短く重い。",
+     "overlap": ""
+    },
+    {
+     "name": "オプローブ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "語尾を落とした短縮形。厳めしい。",
+     "overlap": ""
+    },
+    {
+     "name": "プローブル",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "後半を取った短縮形。硬い響き。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Réprobation publique… (Littéraire)",
+   "id": "WN-FR-0067",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "colère",
+   "pos": "名詞（女性）",
+   "meaningJa": "攻撃や不快を受けたと感じて起こる、激しく一時的な感情。怒り。その表れである癇癪。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "一時的に激しく表れる怒りを指す。文語の類義語として courroux が挙がっている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "コレール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/col%C3%A8re/17100",
+   "tags": [
+    "怒気",
+    "憤怒",
+    "激昂"
+   ],
+   "candidates": [
+    {
+     "name": "コレール",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "読みそのまま。張りのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "コレル",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "長音を詰めた形。きびきびする。",
+     "overlap": ""
+    },
+    {
+     "name": "コレーヌ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "strong"
+     ],
+     "note": "語尾を変えた形。気位の高さ。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / État affectif violent et passager…",
+   "id": "WN-FR-0068",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "courroux",
+   "pos": "名詞（男性）",
+   "meaningJa": "激しい怒り、激昂。荒れ狂う海の様子にも言う。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "文語のラベルが付く語。Les flots en courroux（怒れる波）のように自然の荒れにも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "クルー",
+   "url": "https://www.larousse.fr/dictionnaires/francais/courroux/19937",
+   "tags": [
+    "憤怒",
+    "激怒",
+    "怒濤"
+   ],
+   "candidates": [
+    {
+     "name": "クルー",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "読みそのまま。短く低い響き。",
+     "overlap": "外来語「クルー（乗組員）」と同じ表記"
+    },
+    {
+     "name": "クルース",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "cold"
+     ],
+     "note": "語尾に子音を足した形。鋭さ。",
+     "overlap": ""
+    },
+    {
+     "name": "クルーア",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "語尾に母音を足した形。古雅。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Vive colère ; emportement (Littéraire)",
+   "id": "WN-FR-0069",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "fureur",
+   "pos": "名詞（女性）",
+   "meaningJa": "狂ったような激しい怒り。抑えがたい熱中・熱狂。文語では自然の猛威。",
+   "categories": [
+    "wrath",
+    "desire"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "怒りだけでなく「〜への抑えがたい熱中」という意味もある。自然の荒々しさの語義は文語扱い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "フュルール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/fureur/35617",
+   "tags": [
+    "激怒",
+    "狂乱",
+    "熱狂"
+   ],
+   "candidates": [
+    {
+     "name": "フュルール",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "読みそのまま。うなるような響き。",
+     "overlap": ""
+    },
+    {
+     "name": "フュルー",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "語尾を落とした短縮形。鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "フュレル",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "母音を変えて詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Colère violente, frénétique, furie",
+   "id": "WN-FR-0070",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "trahison",
+   "pos": "名詞（女性）",
+   "meaningJa": "祖国や大義を裏切る行為。約束・誓い・連帯の義務に背くこと。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "個人間の背信にも国家への反逆にも使う。法律上は、国の基本的利益を害する罪を指す語義がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "トライゾン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/trahison/78940",
+   "tags": [
+    "裏切",
+    "背信",
+    "反逆"
+   ],
+   "candidates": [
+    {
+     "name": "トライゾン",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みそのまま。重く断ち切る響き。",
+     "overlap": ""
+    },
+    {
+     "name": "トライゾ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語尾を落とした短縮形。鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "ライゾン",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "後半を取った短縮形。理知的。",
+     "overlap": "フランス語 raison（理性）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Action de trahir son pays…; Manquement à la parole donnée",
+   "id": "WN-FR-0071",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "mensonge",
+   "pos": "名詞（男性）",
+   "meaningJa": "嘘をつき、真実を偽り歪める行為。事実に反する主張。文語では偽り・幻のようなもの。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday",
+    "literary"
+   ],
+   "nuanceNote": "日常語の「嘘」。文語では、偽りのもの・人を惑わす幻という抽象的な意味にも広がる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "マンソンジュ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/mensonge/50492",
+   "tags": [
+    "虚言",
+    "虚偽",
+    "幻影"
+   ],
+   "candidates": [
+    {
+     "name": "マンソンジュ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。甘く濁る響き。",
+     "overlap": ""
+    },
+    {
+     "name": "マンソン",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "前半を取った短縮形。重い。",
+     "overlap": "人名「マンソン」と同じ表記"
+    },
+    {
+     "name": "ソンジュ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "後半を取った短縮形。夢のよう。",
+     "overlap": "フランス語 songe（夢）と同じ音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Action de mentir, de déguiser, d'altérer la vérité",
+   "id": "WN-FR-0072",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "tromperie",
+   "pos": "名詞（女性）",
+   "meaningJa": "人をだますもの、だまそうとする行い。法律では商品やサービスについて人を誤らせる罪。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "ごまかし・ぺてんの意味。法律用語としては、商品などについて相手を誤らせる違法行為を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "トロンプリ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/tromperie/79918",
+   "tags": [
+    "欺瞞",
+    "詐欺",
+    "偽装"
+   ],
+   "candidates": [
+    {
+     "name": "トロンプリ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "読みそのまま。軽く弾む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "トロンプ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半を取った短縮形。短く切れる。",
+     "overlap": "美術用語「トロンプ・ルイユ」の前半と同じ"
+    },
+    {
+     "name": "ロンプリ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "後半を取った短縮形。愛嬌がある。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Ce qui trompe ou vise à tromper",
+   "id": "WN-FR-0073",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "refus",
+   "pos": "名詞（男性）",
+   "meaningJa": "差し出されたもの・求められたことを受け入れない行為。ある状態や考えを否定し拒むこと。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "申し出の拒否と、状態や考えの否認の両方に使う。農業では家畜が食べ残した餌を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ルフュ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/refus/67564",
+   "tags": [
+    "拒絶",
+    "拒否",
+    "否認"
+   ],
+   "candidates": [
+    {
+     "name": "ルフュ",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "読みそのまま。短く突き放す響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ルフュス",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "語尾に子音を足した形。硬い。",
+     "overlap": ""
+    },
+    {
+     "name": "ルフュア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "語尾に母音を足した形。涼やか。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Action de refuser ce qui est offert, proposé, demandé",
+   "id": "WN-FR-0074",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "déni",
+   "pos": "名詞（男性）",
+   "meaningJa": "権利や法的に当然与えられるべきものを拒むこと。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "official"
+   ],
+   "nuanceNote": "déni de justice（裁判の拒否）、déni de la réalité（つらい知覚を否定する心の防衛の働き）という表現が載る。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デニ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/d%C3%A9ni/23559",
+   "tags": [
+    "否認",
+    "拒否",
+    "拒絶"
+   ],
+   "candidates": [
+    {
+     "name": "デニ",
+     "method": "kana",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "読みそのまま。二音で鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "デニア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾に母音を足した形。明るむ。",
+     "overlap": "スペインの都市デニアと同じ表記"
+    },
+    {
+     "name": "デニル",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "語尾に子音を足した形。硬質。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Refus d'un droit, d'une chose légalement due",
+   "id": "WN-FR-0075",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "reniement",
+   "pos": "名詞（男性）",
+   "meaningJa": "否認する行為。自分のものと認めず打ち消すこと。",
+   "categories": [
+    "refusal",
+    "deceit"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "語義は「renier すること、désaveu（否認）」の一つだけで、動詞 renier に意味を預けた短い定義になっている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ルニマン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/reniement/68193",
+   "tags": [
+    "否認",
+    "背信",
+    "棄却"
+   ],
+   "candidates": [
+    {
+     "name": "ルニマン",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "calm"
+     ],
+     "note": "読みそのまま。静かに閉じる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ルニマ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "語尾を落とした短縮形。軽い。",
+     "overlap": ""
+    },
+    {
+     "name": "ルニア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾を母音に変えた形。澄む。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Action de renier ; désaveu",
+   "id": "WN-FR-0076",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "doute",
+   "pos": "名詞（男性）",
+   "meaningJa": "何を信じてよいか分からず、態度を決めかねている状態。確信の欠如、疑い、不信。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "迷い（中立）と、相手の誠実さへの疑念（陰）で印象が変わる。疑念の意味では主に複数形。哲学上の懐疑の語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ドゥート",
+   "url": "https://www.larousse.fr/dictionnaires/francais/doute/26648",
+   "tags": [
+    "疑念",
+    "懐疑",
+    "不信"
+   ],
+   "candidates": [
+    {
+     "name": "ドゥート",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みそのまま。低くこもる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ドゥー",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を落とした短縮形。柔らかい。",
+     "overlap": "フランス語 doux（甘い・優しい）と同じ音"
+    },
+    {
+     "name": "ドゥーテ",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "語尾に母音を足した形。静か。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Manque de certitude, soupçon, méfiance",
+   "id": "WN-FR-0077",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "servitude",
+   "pos": "名詞（女性）",
+   "meaningJa": "他者への完全な従属状態。独立や政治的自由を失った国・民の状態。自由を縛る義務や制約。",
+   "categories": [
+    "order"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "隷属の意味（第1・2義）は文語のラベル付き。第3義は、自由への制限と感じられる義務・束縛を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "セルヴィチュード",
+   "url": "https://www.larousse.fr/dictionnaires/francais/servitude/72406",
+   "tags": [
+    "隷属",
+    "束縛",
+    "従属"
+   ],
+   "candidates": [
+    {
+     "name": "セルヴィ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半を取った短縮形。従順な響き。",
+     "overlap": ""
+    },
+    {
+     "name": "セルヴィチュ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語尾を落とした短縮形。締まる。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴィチュード",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "後半を取った短縮形。硬質。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / État de dépendance complète… (Littéraire)",
+   "id": "WN-FR-0078",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "résignation",
+   "pos": "名詞（女性）",
+   "meaningJa": "つらいこと・避けられないことを、抗議せずに耐え受け入れること。諦念。",
+   "categories": [
+    "despair"
+   ],
+   "nuances": [],
+   "nuanceNote": "古い用法（vieux のラベル）として、権利や職を誰かのために放棄する意味がある。静かに受け入れる諦めの語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "レジニャシオン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/r%C3%A9signation/68610",
+   "tags": [
+    "諦念",
+    "忍従",
+    "断念"
+   ],
+   "candidates": [
+    {
+     "name": "レジニャ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半を取った短縮形。穏やか。",
+     "overlap": ""
+    },
+    {
+     "name": "レジーニャ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "前半を伸ばした形。しとやか。",
+     "overlap": ""
+    },
+    {
+     "name": "レジナ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "音を詰めた形。気品がある。",
+     "overlap": "ラテン語 regina（女王）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Fait de se résigner, de supporter sans protester",
+   "id": "WN-FR-0079",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "rancune",
+   "pos": "名詞（女性）",
+   "meaningJa": "長く続き、表に出さず胸に秘めた敵意。恨み。",
+   "categories": [
+    "wrath",
+    "hatred"
+   ],
+   "nuances": [],
+   "nuanceNote": "Larousse の語義は一つ。「持続する」「隠された」敵意と定義され、内に持ち続ける恨みを指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ランキュヌ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/rancune/66431",
+   "tags": [
+    "怨恨",
+    "遺恨",
+    "宿怨"
+   ],
+   "candidates": [
+    {
+     "name": "ランキュヌ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "読みそのまま。冷たく尖る響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ランキュ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "語尾を落とした短縮形。鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "ランキュナ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾を母音に変えた形。妖しい。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sentiment d'animosité durable et caché",
+   "id": "WN-FR-0080",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "humiliation",
+   "pos": "名詞（女性）",
+   "meaningJa": "誇りや尊厳を傷つけられた人の気持ち。そこから来る恥。自尊心を傷つける行為や状況。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "受けた側の感情と、辱める行為・出来事そのものの両方を指す。語源は教会ラテン語と記載されている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ユミリアシオン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/humiliation/40654",
+   "tags": [
+    "屈辱",
+    "恥辱",
+    "侮辱"
+   ],
+   "candidates": [
+    {
+     "name": "ユミリア",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "前半を取った短縮形。柔らかい。",
+     "overlap": ""
+    },
+    {
+     "name": "ユミリ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "さらに短くした形。小さく可憐。",
+     "overlap": ""
+    },
+    {
+     "name": "ユミリエ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "前半の語尾を変えた形。翳りが出る。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sentiment de quelqu'un qui est humilié",
+   "id": "WN-FR-0081",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "destin",
+   "pos": "名詞（男性）",
+   "meaningJa": "人生の出来事を抗いがたく定めているように見える高次の力。その力に導かれる出来事の連なり。人の一生。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "運命を定める力そのものと、定められた人生の成り行きの両方を指す。類義語に文語の fatum が挙がる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デスタン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/destin/24692",
+   "tags": [
+    "運命",
+    "宿命",
+    "天命"
+   ],
+   "candidates": [
+    {
+     "name": "デスタン",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "読みそのまま。きっぱりした響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デスタ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "語尾を落とした短縮形。歯切れ良い。",
+     "overlap": ""
+    },
+    {
+     "name": "デスティア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "語尾を母音に変えた形。華やか。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Puissance supérieure qui semble régler… la vie humaine",
+   "id": "WN-FR-0082",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "destinée",
+   "pos": "名詞（女性）",
+   "meaningJa": "高次の力によってあらかじめ定められた人生の成り行き。幸不幸を含む個人の一生。物事に与えられた行く末。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "類義語に destin・fatalité が挙がる。個人の人生のほか、物事に用意された役割・行く末（使命）にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デスティネ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/destin%C3%A9e/24696",
+   "tags": [
+    "運命",
+    "宿命",
+    "使命"
+   ],
+   "candidates": [
+    {
+     "name": "デスティネ",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "読みそのまま。澄んだ気品。",
+     "overlap": ""
+    },
+    {
+     "name": "スティネ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "後半を取った短縮形。軽やか。",
+     "overlap": ""
+    },
+    {
+     "name": "デスティナ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "bright"
+     ],
+     "note": "語尾の母音を変えた形。明るむ。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Détermination préétablie des événements de la vie humaine",
+   "id": "WN-FR-0083",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "fatalité",
+   "pos": "名詞（女性）",
+   "meaningJa": "出来事を決めるとされる運命、隠れた力。避けられないという性質。意志の及ばない必然。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "語義は「運命の力」「不可避であること」「意志を超えた必然」の三つ。避けられなさを前面に出した運命の語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ファタリテ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/fatalit%C3%A9/32970",
+   "tags": [
+    "宿命",
+    "必然",
+    "不可避"
+   ],
+   "candidates": [
+    {
+     "name": "ファタリテ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "読みそのまま。乾いた厳しさ。",
+     "overlap": ""
+    },
+    {
+     "name": "ファタル",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "前半を取った短縮形。重く断つ。",
+     "overlap": "「ファム・ファタル」の後半と同じ表記"
+    },
+    {
+     "name": "ファタリ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "soft"
+     ],
+     "note": "語尾を落とした短縮形。軽く翳る。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Destin, force occulte qui déterminerait les événements",
+   "id": "WN-FR-0084",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "éternité",
+   "pos": "名詞（女性）",
+   "meaningJa": "始まりも終わりもない持続。一部の宗教では死後の生。果てしなく長い時間。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "religious",
+    "polysemy"
+   ],
+   "nuanceNote": "永遠そのもの、宗教的な意味での死後の生、非常に長い時間の三つの意味がある。",
+   "ipa": "etɛrnite",
+   "pronNote": "Larousse collège 版ページに表示された発音記号。",
+   "kana": "エテルニテ",
+   "url": "https://www.larousse.fr/dictionnaires/college/%C3%A9ternit%C3%A9/15255",
+   "tags": [
+    "永遠",
+    "永劫",
+    "悠久"
+   ],
+   "candidates": [
+    {
+     "name": "エテルニテ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "読みそのまま。澄んで長い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エテル",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "前半を取った短縮形。透明感。",
+     "overlap": "外来語「エーテル」に近い"
+    },
+    {
+     "name": "エテルナ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "elegant"
+     ],
+     "note": "語尾を母音に変えた形。荘厳。",
+     "overlap": "ラテン語 aeterna（永遠の）に近い音"
+    }
+   ],
+   "scopeNote": "Larousse の学習者向け辞典（dictionnaires/college）のページで確認。dictionnaires/francais の見出しページは検索結果に出なかった。",
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin [etɛrnite] / Durée sans commencement ni fin",
+   "id": "WN-FR-0085",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "infini",
+   "pos": "名詞（男性）・形容詞",
+   "meaningJa": "限りがなく、物として量ることのできないもの。形容詞では時間・空間に限界がないこと。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "見出しは形容詞 infini, infinie と男性名詞 infini の両方。形容詞には「計り知れないほど大きい・強い」の意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アンフィニ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/infini/42937",
+   "tags": [
+    "無限",
+    "無窮",
+    "果てなし"
+   ],
+   "candidates": [
+    {
+     "name": "アンフィニ",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "読みそのまま。軽く広がる響き。",
+     "overlap": "車の名称「アンフィニ」と同じ表記"
+    },
+    {
+     "name": "アンフィ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾を落とした短縮形。軽快。",
+     "overlap": ""
+    },
+    {
+     "name": "アンフィニア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "語尾に母音を足した形。優美。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Ce qui est sans limites…; adjectif: Sans limites dans le temps ou l'espace",
+   "id": "WN-FR-0086",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "mystère",
+   "pos": "名詞（男性）",
+   "meaningJa": "人間の理性では届かないもの。説明のつかない出来事。知られていない、または限られた者だけが知る事柄。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "超自然的で不可解なもの、謎めいた事件、秘儀を受けた者だけが知る事柄の三つ。検索結果の見出しは mystère, mystères。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ミステール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/myst%C3%A8re/53614",
+   "tags": [
+    "神秘",
+    "謎",
+    "秘儀"
+   ],
+   "candidates": [
+    {
+     "name": "ミステール",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。霧のような響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ミステ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "語尾を落とした短縮形。小さな謎。",
+     "overlap": ""
+    },
+    {
+     "name": "ミステラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾を母音に変えた形。妖しい。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Ce qui est inaccessible à la raison humaine",
+   "id": "WN-FR-0087",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "énigme",
+   "pos": "名詞（女性）",
+   "meaningJa": "情報や状況の示し方にわざと込められた曖昧さ。理解しがたい物や人。ぼかした言葉で答えを当てさせる短い詩。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "人についても「理解しがたい存在」として使える。謎かけの短詩という文学上の意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "エニグム",
+   "url": "https://www.larousse.fr/dictionnaires/francais/%C3%A9nigme/29610",
+   "tags": [
+    "謎",
+    "不可解",
+    "暗号"
+   ],
+   "candidates": [
+    {
+     "name": "エニグム",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "cold"
+     ],
+     "note": "読みそのまま。閉じた硬い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エニグ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を落とした短縮形。短く鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "エニグマ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "語尾を母音に変えた形。重厚。",
+     "overlap": "外来語「エニグマ」（暗号機の名）と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Chose ou personne qui est difficile à comprendre ; mystère",
+   "id": "WN-FR-0088",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "sacrifice",
+   "pos": "名詞（男性）",
+   "meaningJa": "神への捧げ物、とくに生贄を屠ること。自ら何かを手放し、損失や不自由を受け入れること。",
+   "categories": [
+    "sacrifice"
+   ],
+   "nuances": [
+    "religious",
+    "polysemy"
+   ],
+   "nuanceNote": "宗教的な供犠、償いやとりなしのために進んで受ける苦しみ、日常的な「犠牲を払う」の三つがある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "サクリフィス",
+   "url": "https://www.larousse.fr/dictionnaires/francais/sacrifice/70455",
+   "tags": [
+    "犠牲",
+    "供犠",
+    "献身"
+   ],
+   "candidates": [
+    {
+     "name": "サクリフィス",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "読みそのまま。厳かで鋭い響き。",
+     "overlap": "英語 sacrifice（サクリファイス）と同じ綴り"
+    },
+    {
+     "name": "サクリ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "前半を取った短縮形。清冽。",
+     "overlap": ""
+    },
+    {
+     "name": "サクリス",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "中を詰めた形。引き締まる。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Offrande à une divinité…; Renoncement volontaire",
+   "id": "WN-FR-0089",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "abnégation",
+   "pos": "名詞（女性）",
+   "meaningJa": "自分にとって最も大切なものを、他人のためにすべて差し出すこと。自己犠牲。",
+   "categories": [
+    "sacrifice"
+   ],
+   "nuances": [],
+   "nuanceNote": "Larousse の語義は一つ。「他者のための全面的な sacrifice」として定義され、献身の極みを表す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "アブネガシオン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/abn%C3%A9gation/129",
+   "tags": [
+    "献身",
+    "自己犠牲",
+    "無私"
+   ],
+   "candidates": [
+    {
+     "name": "アブネガ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "calm"
+     ],
+     "note": "前半を取った短縮形。重みがある。",
+     "overlap": ""
+    },
+    {
+     "name": "アブネ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "さらに短くした形。素朴。",
+     "overlap": ""
+    },
+    {
+     "name": "アブネシア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "前半に語尾を足した形。柔らぐ。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Sacrifice total au bénéfice d'autrui…",
+   "id": "WN-FR-0090",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "désir",
+   "pos": "名詞（男性）",
+   "meaningJa": "何かを得たい、したいと望むこと。願い。望みの対象。人を性的な行為や快楽へ向かわせる身体的な衝動。",
+   "categories": [
+    "desire"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "穏やかな願い・望みから性的な欲望まで幅が広い。願いの対象そのものも指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "デジール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/d%C3%A9sir/24525",
+   "tags": [
+    "欲望",
+    "願望",
+    "渇望"
+   ],
+   "candidates": [
+    {
+     "name": "デジール",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "読みそのまま。艶のある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デジ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "語尾を落とした短縮形。軽い。",
+     "overlap": ""
+    },
+    {
+     "name": "デジーラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾に母音を足した形。華やぐ。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Action de désirer, d'aspirer à avoir…",
+   "id": "WN-FR-0091",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "soif",
+   "pos": "名詞（女性）",
+   "meaningJa": "水分を欲する欲求とその感覚。渇き。転じて、何かへの激しく性急で情熱的な欲求。",
+   "categories": [
+    "desire"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "身体の渇きが本義。比喩では「何かへの熱く待ちきれない欲求」を表し、渇望の語として使える。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ソワフ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/soif/73225",
+   "tags": [
+    "渇望",
+    "渇き",
+    "熱望"
+   ],
+   "candidates": [
+    {
+     "name": "ソワフ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みそのまま。息の抜ける響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ソワ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾を落とした短縮形。絹のよう。",
+     "overlap": "フランス語 soie（絹）と同じ音"
+    },
+    {
+     "name": "ソワフィ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾に母音を足した形。愛らしい。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Besoin de boire…; Désir ardent, impatient, passionné",
+   "id": "WN-FR-0092",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "domination",
+   "pos": "名詞（女性）",
+   "meaningJa": "権威や影響力をふるって支配すること。競争相手や敵に対して優位に立つこと。",
+   "categories": [
+    "order",
+    "power"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "政治的・精神的な支配のほか、競技などで相手を圧倒する意味もある。哲学（主人と奴隷の関係）の語義も載る。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ドミナシオン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/domination/26382",
+   "tags": [
+    "支配",
+    "統治",
+    "制圧"
+   ],
+   "candidates": [
+    {
+     "name": "ドミナ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "前半を取った短縮形。威厳がある。",
+     "overlap": "ラテン語 domina（女主人）と同じ音"
+    },
+    {
+     "name": "ドミナス",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "cold"
+     ],
+     "note": "前半に子音を足した形。厳格。",
+     "overlap": "ラテン語 dominus（主人）に近い音"
+    },
+    {
+     "name": "ミナシオン",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "後半を取った短縮形。滑らか。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Action de dominer, d'exercer son autorité ou son influence",
+   "id": "WN-FR-0093",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "règne",
+   "pos": "名詞（男性）",
+   "meaningJa": "君主による統治と、その期間・時代。ある分野で絶対的な力を持つ者の支配。ある思想が時代に及ぼす大きな影響。",
+   "categories": [
+    "order",
+    "power"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "君主の治世が本義。人や集団の絶対的な支配、ある考えが時代の思考を左右する状態にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "レーニュ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/r%C3%A8gne/67677",
+   "tags": [
+    "治世",
+    "君臨",
+    "統治"
+   ],
+   "candidates": [
+    {
+     "name": "レーニュ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "soft"
+     ],
+     "note": "読みそのまま。なめらかで気高い。",
+     "overlap": ""
+    },
+    {
+     "name": "レーニア",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "elegant"
+     ],
+     "note": "語尾を母音に変えた形。王族風。",
+     "overlap": "人名「レーニア」と同じ表記"
+    },
+    {
+     "name": "レニュス",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "長音を詰め子音を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Gouvernement d'un souverain ; durée, époque…",
+   "id": "WN-FR-0094",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "métamorphose",
+   "pos": "名詞（女性）",
+   "meaningJa": "ある存在が別の存在に変わること。性格や状態、姿かたちの完全な変化。生物の変態。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "別の存在への変身、人や物の全面的な変貌、卵から出た後の成長段階での形の変化（変態）の三つを指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "メタモルフォーズ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/m%c3%a9tamorphose/50881",
+   "tags": [
+    "変身",
+    "変貌",
+    "変態"
+   ],
+   "candidates": [
+    {
+     "name": "メタモル",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "前半を取った短縮形。硬く響く。",
+     "overlap": ""
+    },
+    {
+     "name": "モルフォーズ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "後半を取った短縮形。妖艶。",
+     "overlap": ""
+    },
+    {
+     "name": "モルフォ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "bright"
+     ],
+     "note": "中ほどを取った短縮形。軽やか。",
+     "overlap": "蝶の名「モルフォ」と同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Changement d'un être en un autre",
+   "id": "WN-FR-0095",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "mutation",
+   "pos": "名詞（女性）",
+   "meaningJa": "根本的な変化、深い変容。公務員や社員の配置換え・異動。選手のクラブ移籍。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "「変革のただ中にある産業」のような大きな変化と、人事異動・移籍という事務的な意味が同居する語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ミュタシオン",
+   "url": "https://www.larousse.fr/dictionnaires/francais/mutation/53438",
+   "tags": [
+    "変容",
+    "変革",
+    "異動"
+   ],
+   "candidates": [
+    {
+     "name": "ミュタシオン",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "elegant"
+     ],
+     "note": "読みそのまま。滑らかで冷たい。",
+     "overlap": ""
+    },
+    {
+     "name": "ミュタ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "前半を取った短縮形。短く鋭い。",
+     "overlap": ""
+    },
+    {
+     "name": "ミュタス",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "前半に子音を足した形。硬質。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Changement radical, conversion, évolution profonde",
+   "id": "WN-FR-0096",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "silence",
+   "pos": "名詞（男性）",
+   "meaningJa": "静かな場所に物音がないこと。黙っていること、何も言わないこと。便りを絶つこと。",
+   "categories": [
+    "silence"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "物音のない静けさにも、口を閉ざすこと・音信を絶つことにも使える。静寂と沈黙で印象が分かれる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "シランス",
+   "url": "https://www.larousse.fr/dictionnaires/francais/silence/72720",
+   "tags": [
+    "沈黙",
+    "静寂",
+    "無言"
+   ],
+   "candidates": [
+    {
+     "name": "シランス",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "読みそのまま。すっと引く響き。",
+     "overlap": "英語 silence（サイレンス）と同じ綴り"
+    },
+    {
+     "name": "シラン",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "語尾を落とした短縮形。静か。",
+     "overlap": "植物名「シラン（紫蘭）」と同じ表記"
+    },
+    {
+     "name": "シランセ",
+     "method": "adjust",
+     "impressions": [
+      "calm",
+      "elegant"
+     ],
+     "note": "語尾に母音を足した形。たおやか。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Absence de bruit…; Action, fait de se taire",
+   "id": "WN-FR-0097",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "mutisme",
+   "pos": "名詞（男性）",
+   "meaningJa": "黙り続ける人の態度。ある話題について人や報道機関が沈黙を守ること。言葉を発しない状態。",
+   "categories": [
+    "silence",
+    "refusal"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "物音のなさではなく「語らないこと」を指す。精神医学的な原因による発語の欠如という語義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ミュティスム",
+   "url": "https://www.larousse.fr/dictionnaires/francais/mutisme/53459",
+   "tags": [
+    "沈黙",
+    "無言",
+    "黙秘"
+   ],
+   "candidates": [
+    {
+     "name": "ミュティスム",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "dark"
+     ],
+     "note": "読みそのまま。閉ざした響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ミュティ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "cold"
+     ],
+     "note": "前半を取った短縮形。小さく静か。",
+     "overlap": ""
+    },
+    {
+     "name": "ミュティス",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "語尾を落とした短縮形。涼しい。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Attitude de quelqu'un qui reste silencieux",
+   "id": "WN-FR-0098",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "mémoire",
+   "pos": "名詞（女性）",
+   "meaningJa": "情報を蓄え、保ち、呼び出す心身の働き。記憶が刻まれる抽象的な場。物事を覚えておく能力。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "確認したのは女性名詞の、記憶に関する冒頭3義。類義語として文語の souvenance が挙がっている。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "メモワール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/m%C3%A9moire/50401",
+   "tags": [
+    "記憶",
+    "追憶",
+    "想起"
+   ],
+   "candidates": [
+    {
+     "name": "メモワール",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "calm"
+     ],
+     "note": "読みそのまま。余韻の長い響き。",
+     "overlap": "外来語「メモワール（回想録）」と同じ表記"
+    },
+    {
+     "name": "メモワ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を落とした短縮形。柔らか。",
+     "overlap": ""
+    },
+    {
+     "name": "モワール",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "後半を取った短縮形。揺らめく。",
+     "overlap": "フランス語 moire（波紋模様の織物）に近い音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Activité biologique et psychique qui permet d'emmagasiner…",
+   "id": "WN-FR-0099",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "oubli",
+   "pos": "名詞（男性）",
+   "meaningJa": "特定のことを思い出せなくなること。記憶が消え去ること。集団の記憶が失われること。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "思い出せないという不調、記憶の消失（気がかりな考えから離れることを含む）、集団の記憶の喪失の三つ。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ウブリ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/oubli/56858",
+   "tags": [
+    "忘却",
+    "失念",
+    "風化"
+   ],
+   "candidates": [
+    {
+     "name": "ウブリ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みそのまま。淡く消える響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ウブリア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "語尾に母音を足した形。優しい。",
+     "overlap": ""
+    },
+    {
+     "name": "ウブリエ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾を伸ばした形。物憂い。",
+     "overlap": "フランス語 oublier（忘れる）と同じ音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Effacement, disparition des souvenirs",
+   "id": "WN-FR-0100",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "nostalgie",
+   "pos": "名詞（女性）",
+   "meaningJa": "故郷を離れていることから来る悲しみと物憂さ。郷愁。甘く懐かしむ気持ちや、憂いを帯びた漠然とした憧れ。",
+   "categories": [
+    "memory",
+    "grief"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "望郷の念（mal du pays）が第1義。第2義は、憂いを伴う甘い懐かしさや漠然とした憧れ。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ノスタルジ",
+   "url": "https://www.larousse.fr/dictionnaires/francais/nostalgie/55033",
+   "tags": [
+    "郷愁",
+    "追憶",
+    "懐古"
+   ],
+   "candidates": [
+    {
+     "name": "ノスタルジ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みそのまま。甘く沈む響き。",
+     "overlap": "外来語「ノスタルジー」とほぼ同じ"
+    },
+    {
+     "name": "ノスタ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "前半を取った短縮形。素朴。",
+     "overlap": ""
+    },
+    {
+     "name": "ノスタリア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾を変えた形。遠い国の趣。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Tristesse et état de langueur causés par l'éloignement du pays natal",
+   "id": "WN-FR-0101",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "pouvoir",
+   "pos": "名詞（男性）",
+   "meaningJa": "物が何らかの効果を生む性質・能力。人や物が何かをなし得る力や可能性。その者に固有の力。",
+   "categories": [
+    "power"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "確認した冒頭3義は能力・可能性・固有の力。法律分野（Droit）の語義も載る。検索結果の見出しは pouvoir, pouvoirs。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "プヴォワール",
+   "url": "https://www.larousse.fr/dictionnaires/francais/pouvoir/63206",
+   "tags": [
+    "権力",
+    "能力",
+    "権能"
+   ],
+   "candidates": [
+    {
+     "name": "プヴォワール",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "読みそのまま。重く伸びる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "プヴォワ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "soft"
+     ],
+     "note": "語尾を落とした短縮形。丸い。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴォワール",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "後半を取った短縮形。流麗。",
+     "overlap": "フランス語 voir（見る）と同じ音"
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom masculin / Propriété, capacité qu'a quelque chose de produire certains effets",
+   "id": "WN-FR-0102",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "puissance",
+   "pos": "名詞（女性）",
+   "meaningJa": "現象の力・強さ。装置や製品の強さ、効き目。手持ちの手段に見合う効力。",
+   "categories": [
+    "power"
+   ],
+   "nuances": [
+    "polysemy"
+   ],
+   "nuanceNote": "確認した冒頭3義は風などの力、機器や製品の強さ、効力。馬術・物理・数学の専門語義や文語の表現も載る。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。",
+   "kana": "ピュイサンス",
+   "url": "https://www.larousse.fr/dictionnaires/francais/puissance/65022",
+   "tags": [
+    "威力",
+    "勢力",
+    "強大"
+   ],
+   "candidates": [
+    {
+     "name": "ピュイサンス",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "elegant"
+     ],
+     "note": "読みそのまま。鋭く伸びる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ピュイサ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "語尾を落とした短縮形。きりっと。",
+     "overlap": ""
+    },
+    {
+     "name": "ピュイス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中を詰めた形。細く鋭い。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "access": "page-fetch",
+   "evidence": "WebFetch: nom féminin / Force, intensité d'un phénomène",
+   "id": "WN-FR-0103",
+   "date": "2026-11-17"
+  }
+ ],
+ "extraCategories": [],
+ "notFound": [
+  "secret（francais の見出しページは形容詞 secret, secrète の題名。WebFetch が利用上限で失敗し、名詞の内容は未確認）",
+  "culpabilité・offrande・dévouement・ordre・abandon（検索結果に francais の見出しページが出なかった）",
+  "perpétuité・ambition・passion・quiétude・souvenir・autorité・force・changement・sort・attachement・crainte・rejet（見出しページのURLは得たが WebFetch で開いておらず未確認）"
+ ]
+}

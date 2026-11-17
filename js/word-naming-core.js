@@ -1,13 +1,14 @@
 /* 言葉から名付け — データの検証・検索・創作名の記録（DOM非依存。Nodeでも検証可能）
    既存の名前辞典（OCDictionary）とは別のスキーマ・別の保存キーを使う。
-   schemaVersion 1（v2.1・20語）と 2（v2.2・11カテゴリ）の両方を検証できる。画面が読むのは v2。 */
+   schemaVersion 1（v2.1・20語）、2（v2.2・明の11カテゴリ）、3（v2.3・明／陰／両義の33カテゴリと対比）を検証できる。画面が読むのは v3。 */
 (function(root,factory){
   if(typeof module==="object"&&module.exports)module.exports=factory();
   else root.OCWordNaming=factory();
 })(typeof self!=="undefined"?self:this,function(){
 "use strict";
-const SCHEMA="oc-word-naming",SCHEMA_VERSION=2,SUPPORTED_VERSIONS=[1,2];
-const DATA_URL="./data/word-naming-v2.json";
+const SCHEMA="oc-word-naming",SCHEMA_VERSION=3,SUPPORTED_VERSIONS=[1,2,3];
+const DATA_URL="./data/word-naming-v3.json";
+const CONTRAST_KINDS={lexical:"辞書の対義語欄に例がある対比",narrative:"物語上の対照（辞書上の対義語ではありません）"};
 const FAVORITE_KEY="ocWordNamingFavoritesV1";
 const LENGTHS={short:"短い（〜3音）",mid:"ふつう（4〜5音）",long:"長い（6音〜）"};
 const SCOPES={all:"すべて",lemma:"原語（意味・綴り・読み）だけ",name:"創作名だけ"};
@@ -39,18 +40,25 @@ function lengthBucket(name){const n=moraCount(name);return n<=3?"short":n<=5?"mi
 function safeUrl(url){
   try{const u=new URL(str(url));return u.protocol==="https:"?u.href:"";}catch(e){return "";}
 }
+/* 言語ごとの辞書。主な辞書のほかに、追加の辞書（also）を持てる（v2.3 の英語：主の辞書のページを取得できなかった語のため） */
+function dictionariesOf(lang){return [{dictionary:lang.dictionary,host:lang.host}].concat(Array.isArray(lang.also)?lang.also:[]);}
 function validate(data){
   const errors=[],E=m=>errors.push(m);
   if(!data||typeof data!=="object")return ["データを読み取れません"];
   if(data.schema!==SCHEMA)E("schema が違います");
   if(!SUPPORTED_VERSIONS.includes(data.schemaVersion))E("schemaVersion が未対応です");
   if(!/^\d+\.\d+\.\d+$/.test(str(data.dataVersion)))E("dataVersion が不正です");
-  const v2=data.schemaVersion===2;
-  if(v2&&parseInt(str(data.dataVersion),10)<2)E("schemaVersion 2 のデータは dataVersion 2.x 以上が必要です");
+  const v2=data.schemaVersion>=2,v3=data.schemaVersion===3;
+  if(v2&&parseInt(str(data.dataVersion),10)<data.schemaVersion)E("schemaVersion "+data.schemaVersion+" のデータは dataVersion "+data.schemaVersion+".x 以上が必要です");
   const langs=data.languages&&typeof data.languages==="object"?data.languages:{};
   const cats=new Map((Array.isArray(data.categories)?data.categories:[]).map(c=>[c&&c.id,c]));
   for(const key of ["nuances","methods","impressions"])if(!data[key]||typeof data[key]!=="object")E(key+" がありません");
   if(v2&&(!data.access||typeof data.access!=="object"))E("access（確認方法の一覧）がありません");
+  if(v3){
+    if(!data.groups||typeof data.groups!=="object"||!Object.keys(data.groups).length)E("groups（大分類）がありません");
+    else for(const c of cats.values())if(!c||!data.groups[c.group])E("カテゴリ "+str(c&&c.id)+" の大分類（group）が未定義です");
+    if(!Array.isArray(data.contrasts))E("contrasts（テーマの対比）がありません");
+  }
   if(!Array.isArray(data.words)){E("words がありません");return errors;}
   if(errors.length)return errors;
   const ids=new Set(),candIds=new Set(),lemmas=new Set();
@@ -79,10 +87,10 @@ function validate(data){
     else if(v.status==="verified"){
       const url=s&&safeUrl(s.url);
       if(!url)E(at+"確認済みなのに出典URLがありません");
-      else if(langs[w.lang]&&new URL(url).hostname!==langs[w.lang].host)E(at+"出典URLがその言語の辞書（"+langs[w.lang].host+"）ではありません");
+      else if(langs[w.lang]&&!dictionariesOf(langs[w.lang]).some(d=>d.host===new URL(url).hostname&&(!s.dictionary||d.dictionary===s.dictionary)))E(at+"出典URLがその言語の辞書（"+langs[w.lang].host+"）ではありません");
       if(!/^\d{4}-\d{2}-\d{2}$/.test(str(v.date)))E(at+"確認日がありません");
       if(!str(v.scope).trim())E(at+"確認範囲がありません");
-      if(s&&langs[w.lang]&&s.dictionary!==langs[w.lang].dictionary)E(at+"辞書名が言語の設定と一致しません");
+      if(s&&langs[w.lang]&&!dictionariesOf(langs[w.lang]).some(d=>d.dictionary===s.dictionary))E(at+"辞書名が言語の設定と一致しません");
       if(v2&&!data.access[v.access])E(at+"確認方法（access）が未定義です");
     }
     if(!Array.isArray(w.candidates)||!w.candidates.length){E(at+"candidates が空");continue;}
@@ -97,6 +105,25 @@ function validate(data){
       if(normalize(c.name)===normalize(w.lemma))E(at+"候補名が原語そのものです");
       for(const i of Array.isArray(c.impressions)?c.impressions:[])if(!data.impressions[i])E(at+"未定義の印象 "+i);
       if(v2&&typeof c.overlap!=="string")E(at+"候補の overlap（実在の人名・単語との重なり）は文字列で指定してください "+c.name);
+    }
+  }
+  if(v3){
+    const byId=new Map(data.words.map(w=>[w&&w.id,w])),seen=new Set();
+    for(const c of data.contrasts){
+      const at="[対比 "+str(c&&c.id)+"] ";
+      if(!c||typeof c!=="object"||!str(c.id)){E("対比のデータが壊れています");continue;}
+      if(seen.has(c.id))E(at+"ID が重複");seen.add(c.id);
+      if(!CONTRAST_KINDS[c.kind])E(at+"種類（kind）が不正");
+      if(c.kind==="lexical"&&!str(c.evidence).trim())E(at+"辞書上の対義関係とするには、確認した例（evidence）が必要です");
+      for(const side of [c.a,c.b]){
+        if(!side||!cats.has(side.category)){E(at+"未定義のカテゴリ "+str(side&&side.category));continue;}
+        if(!str(side.label).trim())E(at+"ラベルが空");
+        if(side.ids!==undefined){
+          if(!Array.isArray(side.ids)||!side.ids.length)E(at+"ids が空");
+          else for(const id of side.ids){const w=byId.get(id);if(!w)E(at+"未定義の語 "+id);else if(!w.categories.includes(side.category))E(at+id+" はカテゴリ "+side.category+" に入っていません");}
+        }
+      }
+      if(c.a&&c.b&&c.a.category===c.b.category&&!c.a.ids&&!c.b.ids)E(at+"同じカテゴリどうしの対比には ids が必要です");
     }
   }
   return errors;
@@ -144,9 +171,11 @@ function filter(data,opts){
   const themeCats=scope==="name"?[]:matchedCategories(data,opts.query);
   const has=a=>Array.isArray(a)&&a.length>0;
   const and=opts.categoryMode==="and";
+  const groupCats=opts.group&&data.groups&&data.groups[opts.group]?new Set(data.categories.filter(c=>c.group===opts.group).map(c=>c.id)):null;
   const out=[];
   for(const w of data.words){
     if(opts.ids&&!opts.ids.has(w.id))continue;
+    if(groupCats&&!w.categories.some(c=>groupCats.has(c)))continue;
     if(has(opts.langs)&&!opts.langs.includes(w.lang))continue;
     if(has(opts.categories)&&!(and?opts.categories.every(c=>w.categories.includes(c)):opts.categories.some(c=>w.categories.includes(c))))continue;
     if(has(opts.nuances)&&!opts.nuances.every(n=>(w.nuances||[]).includes(n)))continue;
@@ -175,6 +204,7 @@ function suggest(data,opts){
     ["scope","検索の対象を「すべて」に戻す",!!opts.scope&&opts.scope!=="all",o=>{o.scope="all";}],
     ["categoryMode","カテゴリを「いずれかを含む」にする",opts.categoryMode==="and"&&has(opts.categories)&&opts.categories.length>1,o=>{o.categoryMode="or";}],
     ["categories","意味カテゴリの選択を外す",has(opts.categories),o=>{o.categories=[];}],
+    ["group","大分類を「すべて」に戻す",!!opts.group,o=>{o.group="";}],
     ["langs","言語の選択を外す",has(opts.langs),o=>{o.langs=[];}],
     ["nuances","ニュアンスの選択を外す",has(opts.nuances),o=>{o.nuances=[];}],
     ["lengths","名前の長さの選択を外す",has(opts.lengths),o=>{o.lengths=[];}],
@@ -188,6 +218,28 @@ function suggest(data,opts){
     if(count>0)relax.push({key,label,count});
   }
   return {relax,themes:opts.scope==="name"?[]:nearCategories(data,opts.query)};
+}
+
+/* ---------- テーマの対比 ----------
+   対比の両側を、同じ絞り込み条件（言語・長さ・印象・検索語・お気に入り）で探す。カテゴリと大分類の指定は対比の側が決める。
+   戻り値：{contrast, a:{label,category,results}, b:{…}}。未定義のIDなら null。 */
+function contrastById(data,id){return (data.contrasts||[]).find(c=>c.id===id)||null;}
+function contrastResults(data,id,opts){
+  const c=contrastById(data,id);if(!c)return null;
+  const side=s=>{
+    let ids=opts&&opts.ids?opts.ids:null;
+    if(s.ids){const own=new Set(s.ids);ids=ids?new Set([...own].filter(x=>ids.has(x))):own;}
+    const o=Object.assign({},opts,{categories:[s.category],categoryMode:"or",group:"",ids});
+    return {label:s.label,category:s.category,results:filter(data,o).results};
+  };
+  return {contrast:c,a:side(c.a),b:side(c.b)};
+}
+function contrastTitle(c){return c.a.label+" ↔ "+c.b.label;}
+/* 語の大分類（その語が入っているカテゴリの大分類を、定義順に重複なく） */
+function wordGroups(data,w){
+  if(!data.groups)return [];
+  const set=new Set(w.categories.map(c=>(data.categories.find(x=>x.id===c)||{}).group));
+  return Object.keys(data.groups).filter(g=>set.has(g));
 }
 
 /* ---------- 複数キャラへの割り当て ---------- */
@@ -265,7 +317,7 @@ function favorites(getStorage,onWarning){
   return {ids:()=>ids.slice(),has:id=>ids.includes(id),
     toggle(id){const i=ids.indexOf(id);if(i>=0)ids.splice(i,1);else ids.push(id);save();return i<0;}};
 }
-return {SCHEMA,SCHEMA_VERSION,SUPPORTED_VERSIONS,DATA_URL,FAVORITE_KEY,LENGTHS,SCOPES,CAUTION,normalize,fold,moraCount,lengthBucket,safeUrl,validate,load,
+return {SCHEMA,SCHEMA_VERSION,SUPPORTED_VERSIONS,DATA_URL,dictionariesOf,FAVORITE_KEY,LENGTHS,SCOPES,CAUTION,CONTRAST_KINDS,contrastById,contrastResults,contrastTitle,wordGroups,normalize,fold,moraCount,lengthBucket,safeUrl,validate,load,
   matchedCategories,nearCategories,categoryLabel,filter,suggest,candidatePool,pickAssignments,findDuplicates,
   newIdea,methodLabel,overlapText,ideaToText,favorites};
 });

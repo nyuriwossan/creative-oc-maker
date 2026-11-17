@@ -1,0 +1,3756 @@
+{
+ "lang": "it",
+ "words": [
+  {
+   "lemma": "odio",
+   "pos": "名詞（男性）",
+   "meaningJa": "相手の不幸や破滅を願うほどの、強く長く続く憎しみ。弱い意味では嫌悪・反感。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "悪に対する正当な反感という文語的な用法もある。憎しみの対象そのものも指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "オディオ",
+   "url": "https://www.treccani.it/vocabolario/odio/",
+   "tags": [
+    "憎悪",
+    "敵意",
+    "嫌悪"
+   ],
+   "candidates": [
+    {
+     "name": "オディオ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みそのまま。重く丸い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ディオ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "後半を取った短い形。",
+     "overlap": "イタリア語 dio（神）のカナ表記・人名ディオと同じ"
+    },
+    {
+     "name": "オディア",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾をアに替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. m. / Sentimento di forte e persistente avversione",
+   "access": "page-fetch",
+   "id": "WN-IT-0042",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "maledizione",
+   "pos": "名詞（女性）",
+   "meaningJa": "神罰や災いを願って呪う行為とその言葉。呪われた者の不幸な状態。激しい罵り。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "語義の中に教会の破門への言及がある。災いを願う罵りの言葉としても使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "マレディツィオーネ",
+   "url": "https://www.treccani.it/vocabolario/maledizione/",
+   "tags": [
+    "呪詛",
+    "呪縛",
+    "災厄"
+   ],
+   "candidates": [
+    {
+     "name": "マレディ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半を取った短縮形。鋭く翳る。",
+     "overlap": ""
+    },
+    {
+     "name": "マレーデ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "前半を伸ばして整えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ディツィオ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "中ほどを取った硬質な響き。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / L'atto e le parole con cui si maledice",
+   "access": "page-fetch",
+   "id": "WN-IT-0043",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "ostilità",
+   "pos": "名詞（女性）",
+   "meaningJa": "敵意のある態度、悪意をもって敵対する感情やふるまい。",
+   "categories": [
+    "hatred"
+   ],
+   "nuances": [
+    "formal",
+    "polysemy"
+   ],
+   "nuanceNote": "複数形では、交戦国どうしの戦闘行為（敵対行為）を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "オスティリタ",
+   "url": "https://www.treccani.it/vocabolario/ostilita/",
+   "tags": [
+    "敵意",
+    "敵対",
+    "反目"
+   ],
+   "candidates": [
+    {
+     "name": "オスティ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "前半を取った短縮形。冷たく硬い。",
+     "overlap": ""
+    },
+    {
+     "name": "スティリ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを取った細い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "オスティラ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "語尾を詰めてラで結んだ形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Atteggiamento ostile; sentimento o comportamento malevolo",
+   "access": "page-fetch",
+   "id": "WN-IT-0044",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "gelosia",
+   "pos": "名詞（女性）",
+   "meaningJa": "愛する相手を他人に奪われる恐れから生じる、疑いと苦しい不安。嫉妬。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "自分より他人が選ばれることへの憤り、対抗心・羨望の意味にも広がる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ジェロジーア",
+   "url": "https://www.treccani.it/vocabolario/gelosia/",
+   "tags": [
+    "嫉妬",
+    "疑心",
+    "独占"
+   ],
+   "candidates": [
+    {
+     "name": "ジェロジーア",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "読みそのまま。甘く翳る響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ジェロ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ロジーア",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "後半を取った流れる響き。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Stato emotivo di dubbio e di tormentosa ansia",
+   "access": "page-fetch",
+   "id": "WN-IT-0045",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "invidia",
+   "pos": "名詞（女性）",
+   "meaningJa": "他人の持ち物や長所を自分のものにしたいと思うときの不快な感情。羨望。",
+   "categories": [
+    "envy"
+   ],
+   "nuances": [
+    "everyday",
+    "religious"
+   ],
+   "nuanceNote": "カトリックの教えでは七つの大罪の一つ。弱い意味では単なる「うらやましさ」。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "インヴィディア",
+   "url": "https://www.treccani.it/vocabolario/invidia1/",
+   "tags": [
+    "羨望",
+    "妬み",
+    "大罪"
+   ],
+   "candidates": [
+    {
+     "name": "インヴィディア",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "読みそのまま。重厚で翳る。",
+     "overlap": "米企業名 NVIDIA と綴りが近い"
+    },
+    {
+     "name": "ヴィディア",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "cold"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "インヴィ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: invìdia¹ s. f. / Sentimento spiacevole che si prova per un bene",
+   "access": "page-fetch",
+   "id": "WN-IT-0046",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "dipendenza",
+   "pos": "名詞（女性）",
+   "meaningJa": "他に頼り従属している状態。医学では物質などへの抑えがたい欲求に支配された状態。",
+   "categories": [
+    "obsession",
+    "order"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal"
+   ],
+   "nuanceNote": "建物の付属部分（別館）という具体的な意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ディペンデンツァ",
+   "url": "https://www.treccani.it/vocabolario/dipendenza/",
+   "tags": [
+    "依存",
+    "従属",
+    "中毒"
+   ],
+   "candidates": [
+    {
+     "name": "ディペン",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "前半を取った短縮形。",
+     "overlap": ""
+    },
+    {
+     "name": "デンツァ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "語尾を取った弾む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ペンディア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "中ほどを取りアで結んだ形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Il dipendere, l'essere dipendente",
+   "access": "page-fetch",
+   "id": "WN-IT-0047",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "attaccamento",
+   "pos": "名詞（男性）",
+   "meaningJa": "くっつく・くっつけること。比喩的には人や物への愛着、強い結びつき。",
+   "categories": [
+    "obsession",
+    "love"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "比喩の「愛着」の用法のほうが一般的。温かい愛情にも、離れられない執着にも読める。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "アッタッカメント",
+   "url": "https://www.treccani.it/vocabolario/attaccamento/",
+   "tags": [
+    "愛着",
+    "執着",
+    "固着"
+   ],
+   "candidates": [
+    {
+     "name": "アッタカ",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "前半を詰めた歯切れのよい形。",
+     "overlap": ""
+    },
+    {
+     "name": "カメント",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "strong"
+     ],
+     "note": "後半を取った落ち着いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "タッカ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "中ほどを取った短い形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. m. / L'attaccare, l'attaccarsi; affezione verso persona o cosa",
+   "access": "page-fetch",
+   "id": "WN-IT-0048",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "dubbio",
+   "pos": "名詞（男性）",
+   "meaningJa": "判断や態度を決められない不確かさ、ためらい。その迷いの中にある心の状態。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "哲学では方法としての判断保留も指す。見出しは dubbio²（名詞）で、dubbio¹ は別見出し。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ドゥッビオ",
+   "url": "https://www.treccani.it/vocabolario/dubbio2/",
+   "tags": [
+    "疑念",
+    "疑惑",
+    "逡巡"
+   ],
+   "candidates": [
+    {
+     "name": "ドゥッビオ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みそのまま。重く詰まる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ドゥビオ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "促音を抜いてなめらかにした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ドゥビア",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾をアに替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: dùbbio² s. m. / Incertezza, esitazione nell'esprimere un giudizio",
+   "access": "page-fetch",
+   "id": "WN-IT-0049",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "schiavitù",
+   "pos": "名詞（女性）",
+   "meaningJa": "奴隷である身分・状態。広く、自由や政治的独立を欠いた従属。",
+   "categories": [
+    "order"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal"
+   ],
+   "nuanceNote": "比喩では、情念・悪癖・習慣・規範などに縛られて逃れられない状態を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "スキアヴィトゥ",
+   "url": "https://www.treccani.it/vocabolario/schiavitu/",
+   "tags": [
+    "隷属",
+    "束縛",
+    "奴隷"
+   ],
+   "candidates": [
+    {
+     "name": "スキアヴィ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "前半を取った形。鋭く翳る。",
+     "overlap": ""
+    },
+    {
+     "name": "キアヴィ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": "イタリア語 chiavi（鍵の複数形）のカナ表記と同じ"
+    },
+    {
+     "name": "スキアト",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "中を詰めて短くした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / L'essere schiavo; condizione di schiavo",
+   "access": "page-fetch",
+   "id": "WN-IT-0050",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "servitù",
+   "pos": "名詞（女性）",
+   "meaningJa": "仕える身・奴隷の身分。また一家の使用人全体。法律では地役権。",
+   "categories": [
+    "order"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal",
+    "official"
+   ],
+   "nuanceNote": "隷属の意味では schiavitù より格調の高い語とされる。比喩的な束縛にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "セルヴィトゥ",
+   "url": "https://www.treccani.it/vocabolario/servitu/",
+   "tags": [
+    "隷属",
+    "従僕",
+    "束縛"
+   ],
+   "candidates": [
+    {
+     "name": "セルヴィトゥ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "読みそのまま。古風で硬い。",
+     "overlap": ""
+    },
+    {
+     "name": "セルヴィ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "セルヴィア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾をアに替えた形。",
+     "overlap": "国名セルビアに近い"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Condizione di servo, cioè di schiavo",
+   "access": "page-fetch",
+   "id": "WN-IT-0051",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "esilio",
+   "pos": "名詞（男性）",
+   "meaningJa": "祖国から遠ざける刑罰（追放）。亡命者の境遇とその地。望む場所から離れていること。",
+   "categories": [
+    "solitude"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal",
+    "religious"
+   ],
+   "nuanceNote": "修道的・宗教的な文脈での用法もある。別形 esiglio。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "エジーリオ",
+   "url": "https://www.treccani.it/vocabolario/esilio/",
+   "tags": [
+    "追放",
+    "亡命",
+    "流離"
+   ],
+   "candidates": [
+    {
+     "name": "エジーリオ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "dark"
+     ],
+     "note": "読みそのまま。遠くへ伸びる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エジル",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を落として詰めた形。",
+     "overlap": "実在の姓エジルと同じ表記"
+    },
+    {
+     "name": "ジーリオ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "イタリア語 giglio（百合）のカナ表記と同じ"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: eṡìlio s. m. / Pena limitativa della libertà personale",
+   "access": "page-fetch",
+   "id": "WN-IT-0052",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "solitudine",
+   "pos": "名詞（女性）",
+   "meaningJa": "ひとりでいる状態（一時的にも長く続く場合にも）。人けのない寂しい場所。",
+   "categories": [
+    "solitude",
+    "silence"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "苦しい孤独にも、望んで得る静けさにも使う（「やっと一人で落ち着ける」という言い回しがある）。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ソリトゥーディネ",
+   "url": "https://www.treccani.it/vocabolario/solitudine/",
+   "tags": [
+    "孤独",
+    "孤絶",
+    "静寂"
+   ],
+   "candidates": [
+    {
+     "name": "ソリト",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": "イタリア語 solito（いつもの）のカナ表記と同じ"
+    },
+    {
+     "name": "ソリーネ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "前半と語尾をつないだ形。",
+     "overlap": ""
+    },
+    {
+     "name": "トゥーディ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "dark"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / La condizione, lo stato di chi è solo",
+   "access": "page-fetch",
+   "id": "WN-IT-0053",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "lutto",
+   "pos": "名詞（男性）",
+   "meaningJa": "親しい人の死に感じる深い悲しみ。喪に服す習慣・服装・期間。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "literary"
+   ],
+   "nuanceNote": "文語では広く苦しみ・痛ましい状態。精神分析では愛する対象を失った後の心の過程。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ルット",
+   "url": "https://www.treccani.it/vocabolario/lutto/",
+   "tags": [
+    "服喪",
+    "哀悼",
+    "死別"
+   ],
+   "candidates": [
+    {
+     "name": "ルット",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みそのまま。短く沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ルトー",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "促音を抜き語尾を伸ばした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ルッティア",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾を足して名前らしくした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. m. / Sentimento di profondo dolore… morte di persona cara",
+   "access": "page-fetch",
+   "id": "WN-IT-0054",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "tristezza",
+   "pos": "名詞（女性）",
+   "meaningJa": "悲しい気分・状態と、その表れ。悲しみを呼び起こす光景や出来事。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "古い用法では悪意・邪悪さ、悪い行いの意味があった。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "トリステッツァ",
+   "url": "https://www.treccani.it/vocabolario/tristezza/",
+   "tags": [
+    "悲哀",
+    "憂愁",
+    "哀感"
+   ],
+   "candidates": [
+    {
+     "name": "トリステ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "前半を取った形。静かに翳る。",
+     "overlap": "イタリア語 triste（悲しい）のカナ表記と同じ"
+    },
+    {
+     "name": "リステッツァ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "crisp"
+     ],
+     "note": "頭を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "トリッツァ",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "中を詰めて弾ませた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: tristézza s. f. / stato d'animo; ant. で悪意の意",
+   "access": "page-fetch",
+   "id": "WN-IT-0055",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "perdita",
+   "pos": "名詞（女性）",
+   "meaningJa": "失うこと。身近な人を亡くすこと、物・機能・権利・利益などを失うこと。",
+   "categories": [
+    "grief"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "経済（損失）・物理・地理などの専門的な意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ペルディタ",
+   "url": "https://www.treccani.it/vocabolario/perdita/",
+   "tags": [
+    "喪失",
+    "損失",
+    "死別"
+   ],
+   "candidates": [
+    {
+     "name": "ペルディタ",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "読みそのまま。澄んで翳る響き。",
+     "overlap": "シェイクスピア『冬物語』の人物名 Perdita と同じ綴り"
+    },
+    {
+     "name": "ペルディ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "soft"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ルディタ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: pèrdita s. f. / Con riferimento a persona… a cose",
+   "access": "page-fetch",
+   "id": "WN-IT-0056",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "disperazione",
+   "pos": "名詞（女性）",
+   "meaningJa": "もう何の希望も持てず、深く打ちひしがれた心の状態。絶望。",
+   "categories": [
+    "despair"
+   ],
+   "nuances": [
+    "everyday",
+    "religious"
+   ],
+   "nuanceNote": "神学では「希望」に対立する心。弱い意味で「人を困り果てさせる人・もの」も指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ディスペラツィオーネ",
+   "url": "https://www.treccani.it/vocabolario/disperazione/",
+   "tags": [
+    "絶望",
+    "失意",
+    "悲嘆"
+   ],
+   "candidates": [
+    {
+     "name": "ディスペラ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "前半を取った形。重く翳る。",
+     "overlap": ""
+    },
+    {
+     "name": "ペラツィオ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ディスペル",
+     "method": "adjust",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "語尾をルで切った形。",
+     "overlap": "英語 dispel（追い払う）の読みと同じ"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Stato d'animo di chi non ha più alcuna speranza",
+   "access": "page-fetch",
+   "id": "WN-IT-0057",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "rassegnazione",
+   "pos": "名詞（女性）",
+   "meaningJa": "自分の意に反していても他者の意志を受け入れること。あきらめ、忍従。",
+   "categories": [
+    "despair",
+    "accept"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal"
+   ],
+   "nuanceNote": "あまり使われない意味として、職や任務を辞退すること（辞任）がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ラッセニャツィオーネ",
+   "url": "https://www.treccani.it/vocabolario/rassegnazione/",
+   "tags": [
+    "諦念",
+    "忍従",
+    "甘受"
+   ],
+   "candidates": [
+    {
+     "name": "ラッセ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "crisp"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": "人名ラッセと同じ表記"
+    },
+    {
+     "name": "セニャ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "中ほどを取ったやわらかい形。",
+     "overlap": ""
+    },
+    {
+     "name": "ラセーニャ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "促音を抜き伸ばして整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Accettazione della volontà altrui",
+   "access": "page-fetch",
+   "id": "WN-IT-0058",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "paura",
+   "pos": "名詞（女性）",
+   "meaningJa": "危険を前にしたときの不安と恐れの感情。弱い意味では続く心配や気がかり。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "口語・俗語的な言い回しや誇張表現が多い、ごく日常的な語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "パウーラ",
+   "url": "https://www.treccani.it/vocabolario/paura/",
+   "tags": [
+    "恐怖",
+    "不安",
+    "怯え"
+   ],
+   "candidates": [
+    {
+     "name": "パウーラ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みそのまま。丸くやわらかい。",
+     "overlap": ""
+    },
+    {
+     "name": "パウラ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "長音を抜いた形。",
+     "overlap": "実在の人名パウラと同じ表記"
+    },
+    {
+     "name": "ウーラ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Stato emotivo consistente in un senso di insicurezza",
+   "access": "page-fetch",
+   "id": "WN-IT-0059",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "timore",
+   "pos": "名詞（男性）",
+   "meaningJa": "害や苦しみが起こるのではと恐れる心の状態。気後れを伴う深い敬意。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "timore di Dio はカトリック神学で聖霊の賜物の一つ（神への畏れ）。恐怖より「畏れ」に近い面がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ティモーレ",
+   "url": "https://www.treccani.it/vocabolario/timore/",
+   "tags": [
+    "畏怖",
+    "懸念",
+    "畏敬"
+   ],
+   "candidates": [
+    {
+     "name": "ティモーレ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "読みそのまま。静かで品がある。",
+     "overlap": ""
+    },
+    {
+     "name": "ティモ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": "イタリア語 timo（タイム＝香草）・人名ティモと同じ表記"
+    },
+    {
+     "name": "ティモーラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾をラに替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: timóre s. m. / La condizione, lo stato d'animo di chi teme",
+   "access": "page-fetch",
+   "id": "WN-IT-0060",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "terrore",
+   "pos": "名詞（男性）",
+   "meaningJa": "強い恐怖や激しいおののきの感情・心理状態。恐怖を与える人やもの。",
+   "categories": [
+    "fear"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "歴史用語 il Terrore はフランス革命期の恐怖政治の時期を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "テッローレ",
+   "url": "https://www.treccani.it/vocabolario/terrore/",
+   "tags": [
+    "恐怖",
+    "戦慄",
+    "脅威"
+   ],
+   "candidates": [
+    {
+     "name": "テッローレ",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "読みそのまま。巻き舌の重い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "テローレ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "促音を抜いた形。",
+     "overlap": ""
+    },
+    {
+     "name": "テローラ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "促音を抜き語尾をラにした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: terróre s. m. / Sentimento e stato psichico di forte paura",
+   "access": "page-fetch",
+   "id": "WN-IT-0061",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "rimorso",
+   "pos": "名詞（男性）",
+   "meaningJa": "良心がとがめること。悪いことをしたという苦しい自覚。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "誇張して、軽い後悔や残念な気持ちにも使う。見出しは rimorso²。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "リモルソ",
+   "url": "https://www.treccani.it/vocabolario/rimorso2/",
+   "tags": [
+    "悔恨",
+    "呵責",
+    "自責"
+   ],
+   "candidates": [
+    {
+     "name": "リモルソ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みそのまま。低く沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "リモル",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "モルソ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "イタリア語 morso（噛むこと）のカナ表記と同じ"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: rimòrso² s. m. / Il rimordere della coscienza",
+   "access": "page-fetch",
+   "id": "WN-IT-0062",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "pentimento",
+   "pos": "名詞（男性）",
+   "meaningJa": "犯した罪や過ちを悔やむ気持ち。広く、したこと・しなかったことへの後悔。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "宗教的な罪の悔い改めにも使う。刑法では犯人が改心して司法に協力すること。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ペンティメント",
+   "url": "https://www.treccani.it/vocabolario/pentimento/",
+   "tags": [
+    "悔悟",
+    "改悛",
+    "後悔"
+   ],
+   "candidates": [
+    {
+     "name": "ペンティメント",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "読みそのまま。やや長いが整った響き。",
+     "overlap": "美術用語ペンティメント（描き直しの跡）と同じ表記"
+    },
+    {
+     "name": "ペンティ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ティメント",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "crisp"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: pentiménto s. m. / Sentimento di rimorso, dolore, rammarico",
+   "access": "page-fetch",
+   "id": "WN-IT-0063",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "colpa",
+   "pos": "名詞（女性）",
+   "meaningJa": "法や道徳の定めに背く行為・怠り。過ち、罪。悪い結果を招いた原因（〜のせい）。",
+   "categories": [
+    "remorse"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "神学的な「罪」、法律上の「過失」、心理学の用語としても使われる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "コルパ",
+   "url": "https://www.treccani.it/vocabolario/colpa/",
+   "tags": [
+    "罪過",
+    "過失",
+    "罪責"
+   ],
+   "candidates": [
+    {
+     "name": "コルパ",
+     "method": "kana",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "読みそのまま。短く硬い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "コルパス",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "cold"
+     ],
+     "note": "語尾にスを足した形。",
+     "overlap": "英語 corpus（コーパス）に近い"
+    },
+    {
+     "name": "コルピア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾をイアに替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: cólpa s. f. / ogni azione o omissione che contravviene",
+   "access": "page-fetch",
+   "id": "WN-IT-0064",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "onta",
+   "pos": "名詞（女性）",
+   "meaningJa": "卑劣な行いなどから生じる不名誉・恥辱。名誉をひどく傷つける侮辱。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "比喩的・詩的に「害・わずらわしさ」の意味でも使われる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "オンタ",
+   "url": "https://www.treccani.it/vocabolario/onta/",
+   "tags": [
+    "恥辱",
+    "汚名",
+    "侮辱"
+   ],
+   "candidates": [
+    {
+     "name": "オンタ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "読みそのまま。短く重い。",
+     "overlap": ""
+    },
+    {
+     "name": "オンタール",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "語尾を足して伸ばした形。",
+     "overlap": ""
+    },
+    {
+     "name": "オンティア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾をイアに替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: ónta s. f. / Disonore, vergogna",
+   "access": "page-fetch",
+   "id": "WN-IT-0065",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "furia",
+   "pos": "名詞（女性）",
+   "meaningJa": "怒りの発作、激しい憤りや興奮の状態。たいへんな急ぎ。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "激しい怒りの擬人化としてローマ神話の女神フリエ（Furie）を暗示する用法がある。a furia di は成句。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "フーリア",
+   "url": "https://www.treccani.it/vocabolario/furia/",
+   "tags": [
+    "激怒",
+    "狂乱",
+    "猛威"
+   ],
+   "candidates": [
+    {
+     "name": "フーリア",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "読みそのまま。風のように荒い響き。",
+     "overlap": "ローマ神話の復讐の女神たち（Furie）を連想させる"
+    },
+    {
+     "name": "フーリ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "語尾を落とした短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "フリアナ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "strong"
+     ],
+     "note": "長音を抜き語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: fùria s. f. / accesso di collera, impeto d'ira",
+   "access": "page-fetch",
+   "id": "WN-IT-0066",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "ira",
+   "pos": "名詞（女性）",
+   "meaningJa": "人の行いや出来事に触発されて突然わき起こる、激しい怒り。",
+   "categories": [
+    "wrath",
+    "hatred"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious",
+    "literary"
+   ],
+   "nuanceNote": "キリスト教では七つの大罪の一つ。憎しみ・悪意の意味や、文語で不和のもとになる憎悪（複数形）も指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "イーラ",
+   "url": "https://www.treccani.it/vocabolario/ira/",
+   "tags": [
+    "憤怒",
+    "激怒",
+    "大罪"
+   ],
+   "candidates": [
+    {
+     "name": "イーラ",
+     "method": "kana",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "読みそのまま。短く鋭い。",
+     "overlap": "英語圏の人名 Ira と同じ綴り"
+    },
+    {
+     "name": "イラーナ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾を足して名前らしくした形。",
+     "overlap": ""
+    },
+    {
+     "name": "イーラス",
+     "method": "adjust",
+     "impressions": [
+      "strong",
+      "cold"
+     ],
+     "note": "語尾にスを足した硬い形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Sentimento per lo più improvviso e violento",
+   "access": "page-fetch",
+   "id": "WN-IT-0067",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "collera",
+   "pos": "名詞（女性）",
+   "meaningJa": "侮辱や過ちに対して不意にわき起こる怒りの感情。",
+   "categories": [
+    "wrath"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "古くは体液の「胆汁」の意味。比喩で、風など自然の力が荒れ狂うさまにも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "コッレラ",
+   "url": "https://www.treccani.it/vocabolario/collera/",
+   "tags": [
+    "憤怒",
+    "立腹",
+    "激昂"
+   ],
+   "candidates": [
+    {
+     "name": "コッレラ",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "読みそのまま。詰まって弾ける響き。",
+     "overlap": ""
+    },
+    {
+     "name": "コッレ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "calm"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": "イタリア語 colle（丘）のカナ表記と同じ"
+    },
+    {
+     "name": "レーラ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "後半を伸ばして整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: còllera s. f. / Improvviso sentimento di ira",
+   "access": "page-fetch",
+   "id": "WN-IT-0068",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "rancore",
+   "pos": "名詞（男性）",
+   "meaningJa": "表に出さず心の内に抱え込む、憎しみ・憤り・深い恨みの感情。",
+   "categories": [
+    "wrath",
+    "hatred"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "爆発する怒り（ira・collera）と違い、内にこもって長く残る恨みを言う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ランコーレ",
+   "url": "https://www.treccani.it/vocabolario/rancore/",
+   "tags": [
+    "怨恨",
+    "遺恨",
+    "怨念"
+   ],
+   "candidates": [
+    {
+     "name": "ランコーレ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "calm"
+     ],
+     "note": "読みそのまま。低くこもる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ランコ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "コーレ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "ギリシア神話のコレー（Kore）に近い"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: rancóre s. m. / Sentimento di odio, sdegno, risentimento profondo",
+   "access": "page-fetch",
+   "id": "WN-IT-0069",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "menzogna",
+   "pos": "名詞（女性）",
+   "meaningJa": "知っていること・真実と信じることに反する主張。意図して真実を曲げ隠す嘘。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "formal",
+    "literary"
+   ],
+   "nuanceNote": "単数形で集合的に「嘘をつく習慣」も表す。文語的な言い回しでも使われる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "メンツォーニャ",
+   "url": "https://www.treccani.it/vocabolario/menzogna/",
+   "tags": [
+    "虚偽",
+    "虚言",
+    "欺瞞"
+   ],
+   "candidates": [
+    {
+     "name": "メンツォーニャ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。ねばる響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ツォーニャ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "メンツァ",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を詰めた短い形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: menzógna s. f. / Affermazione contraria a ciò che si sa",
+   "access": "page-fetch",
+   "id": "WN-IT-0070",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "tradimento",
+   "pos": "名詞（男性）",
+   "meaningJa": "忠誠・誠実の義務や約束に背く行為。意図を隠して行う有害な行為、不意打ち。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "法律（軍刑法など）の用語としても使われる。口語の成句もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "トラディメント",
+   "url": "https://www.treccani.it/vocabolario/tradimento/",
+   "tags": [
+    "裏切",
+    "背信",
+    "謀反"
+   ],
+   "candidates": [
+    {
+     "name": "トラディ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "前半を取った短縮形。",
+     "overlap": ""
+    },
+    {
+     "name": "ディメント",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "strong"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "英語 dement- 系の語に近い響き"
+    },
+    {
+     "name": "トラディア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "前半にアを足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: tradiménto s. m. / venire meno a un dovere… di fedeltà",
+   "access": "page-fetch",
+   "id": "WN-IT-0071",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "inganno",
+   "pos": "名詞（男性）",
+   "meaningJa": "だます行為・やり方、そのための手段や言葉。また誤った思い込み、判断の誤り、錯覚。",
+   "categories": [
+    "deceit"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "音楽用語 cadenza d'inganno（偽終止）にも使う。「欺き」と「思い違い」の両面がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "インガンノ",
+   "url": "https://www.treccani.it/vocabolario/inganno/",
+   "tags": [
+    "欺瞞",
+    "策略",
+    "錯覚"
+   ],
+   "candidates": [
+    {
+     "name": "インガンノ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "読みそのまま。重く響く。",
+     "overlap": ""
+    },
+    {
+     "name": "ガンノ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "インガナ",
+     "method": "adjust",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "語尾を詰めてナで結んだ形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. m. / L'atto, il modo di ingannare",
+   "access": "page-fetch",
+   "id": "WN-IT-0072",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "diniego",
+   "pos": "名詞（男性）",
+   "meaningJa": "否定すること、拒むこと。拒絶・拒否。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "formal"
+   ],
+   "nuanceNote": "ページの定義は「否定、拒絶」の一つだけ。複数形は dinieghi。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ディニエーゴ",
+   "url": "https://www.treccani.it/vocabolario/diniego/",
+   "tags": [
+    "拒否",
+    "拒絶",
+    "否認"
+   ],
+   "candidates": [
+    {
+     "name": "ディニエーゴ",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "noble"
+     ],
+     "note": "読みそのまま。硬く冷たい響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ディニエ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ニエーゴ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: diniègo s. m. (pl. -ghi) / Negazione, rifiuto",
+   "access": "page-fetch",
+   "id": "WN-IT-0073",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "fatalità",
+   "pos": "名詞（女性）",
+   "meaningJa": "運命的で避けられないこと。逆らう運命、不運。重大な結果を招く不幸な出来事。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "感嘆や挿入句では「運が悪い」「あいにく」程度の軽い意味でも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ファタリタ",
+   "url": "https://www.treccani.it/vocabolario/fatalita/",
+   "tags": [
+    "宿命",
+    "不運",
+    "災厄"
+   ],
+   "candidates": [
+    {
+     "name": "ファタリタ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。軽やかで翳る。",
+     "overlap": ""
+    },
+    {
+     "name": "ファタリ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "ファターリア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "伸ばして語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / L'essere fatale; fato avverso",
+   "access": "page-fetch",
+   "id": "WN-IT-0074",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "fato",
+   "pos": "名詞（男性）",
+   "meaningJa": "古代ローマで、神の言葉から転じた「変えられない運命」。現在は広く運命のこと。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "転じて巡り合わせ、特に不幸な運命。l'ultimo fato は死を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ファート",
+   "url": "https://www.treccani.it/vocabolario/fato/",
+   "tags": [
+    "運命",
+    "宿命",
+    "天命"
+   ],
+   "candidates": [
+    {
+     "name": "ファート",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "読みそのまま。短く厳かな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ファータ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾をアに替えた形。",
+     "overlap": "イタリア語 fata（妖精）のカナ表記と同じ"
+    },
+    {
+     "name": "ファティオ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "crisp"
+     ],
+     "note": "語尾を足して名前らしくした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. m. / destino irrevocabile; il destino",
+   "access": "page-fetch",
+   "id": "WN-IT-0075",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "destino",
+   "pos": "名詞（男性）",
+   "meaningJa": "出来事があらかじめ定められ避けられないこと。人の意志や力を超えた運命。",
+   "categories": [
+    "fate"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "口語で è destino（そういう運命だ）。本来でない用法として「行き先・宛先」の意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "デスティーノ",
+   "url": "https://www.treccani.it/vocabolario/destino_res-2fa4fc0c-0018-11de-9d89-0016357eee51/",
+   "tags": [
+    "運命",
+    "宿命",
+    "定め"
+   ],
+   "candidates": [
+    {
+     "name": "デスティーノ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "読みそのまま。堂々とした響き。",
+     "overlap": ""
+    },
+    {
+     "name": "デスティ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "スティーノ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. m. / La predeterminazione fatale dell'accadere",
+   "access": "page-fetch",
+   "id": "WN-IT-0076",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "perpetuità",
+   "pos": "名詞（女性）",
+   "meaningJa": "永続的であること。永久に続くこと、または永久に続くよう定められていること。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "literary",
+    "formal"
+   ],
+   "nuanceNote": "文語のラベルが付く語。日常の「永遠」より硬い言い方。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ペルペトゥイタ",
+   "url": "https://www.treccani.it/vocabolario/perpetuita/",
+   "tags": [
+    "永続",
+    "恒久",
+    "不朽"
+   ],
+   "candidates": [
+    {
+     "name": "ペルペトゥ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ペトゥア",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "中ほどを取りアで結んだ形。",
+     "overlap": ""
+    },
+    {
+     "name": "ペルペタ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "crisp"
+     ],
+     "note": "中を詰めた形。",
+     "overlap": "ラテン語の女性名 Perpetua に近い"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. letter. / L'esser perpetuo",
+   "access": "page-fetch",
+   "id": "WN-IT-0077",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "mistero",
+   "pos": "名詞（男性）",
+   "meaningJa": "もとは秘儀・秘密の祭儀。はっきり理解も説明もできない事柄、謎。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "カトリック神学では啓示によってのみ知られる真理。考えの読めない謎めいた人も指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ミステーロ",
+   "url": "https://www.treccani.it/vocabolario/mistero/",
+   "tags": [
+    "神秘",
+    "秘儀",
+    "謎"
+   ],
+   "candidates": [
+    {
+     "name": "ミステーロ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "noble"
+     ],
+     "note": "読みそのまま。奥行きのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ミステ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ステーロ",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: mistèro s. m. / culti segreti; ciò che non si può intendere",
+   "access": "page-fetch",
+   "id": "WN-IT-0078",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "velo",
+   "pos": "名詞（男性）",
+   "meaningJa": "ごく薄く軽い透ける布、ヴェール。比喩で、物を覆って視線から隠すもの。",
+   "categories": [
+    "secret"
+   ],
+   "nuances": [
+    "polysemy",
+    "literary",
+    "religious"
+   ],
+   "nuanceNote": "霧や涙など視界をさえぎるものにも言う。典礼で使う布、薄い膜の意味もある。見出しは velo¹。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ヴェーロ",
+   "url": "https://www.treccani.it/vocabolario/velo1/",
+   "tags": [
+    "薄布",
+    "覆い",
+    "隠蔽"
+   ],
+   "candidates": [
+    {
+     "name": "ヴェーロ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "読みそのまま。薄く軽い響き。",
+     "overlap": "イタリア語 vero（本当の）のカナ表記と同じ"
+    },
+    {
+     "name": "ヴェーリア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "語尾をイアに替えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴェロス",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "長音を抜きスを足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: vélo¹ s. m. / Tessuto finissimo e leggerissimo, trasparente",
+   "access": "page-fetch",
+   "id": "WN-IT-0079",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "abnegazione",
+   "pos": "名詞（女性）",
+   "meaningJa": "他者の幸福や自分の務めのために、見返りを求めず尽くす自己犠牲の精神。",
+   "categories": [
+    "sacrifice"
+   ],
+   "nuances": [
+    "formal",
+    "religious"
+   ],
+   "nuanceNote": "キリスト教道徳では利己心に反する徳を行う心構え。自分自身や自分の意志を進んで捨てること。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "アブネガツィオーネ",
+   "url": "https://www.treccani.it/vocabolario/abnegazione/",
+   "tags": [
+    "献身",
+    "滅私",
+    "自己犠牲"
+   ],
+   "candidates": [
+    {
+     "name": "アブネ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ネガツィオ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "アブネーガ",
+     "method": "adjust",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "前半を伸ばして整えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: abnegazióne s. f. / dedizione assoluta e disinteressata",
+   "access": "page-fetch",
+   "id": "WN-IT-0080",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "sacrificio",
+   "pos": "名詞（男性）",
+   "meaningJa": "神にささげる儀礼的な行為や供物。キリスト教ではキリストの死とその記念。",
+   "categories": [
+    "sacrifice"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "経済やチェスなどでの用法もある。異形 sacrifizio はトスカーナ・文語形。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "サクリフィーチョ",
+   "url": "https://www.treccani.it/vocabolario/sacrificio/",
+   "tags": [
+    "犠牲",
+    "供犠",
+    "献身"
+   ],
+   "candidates": [
+    {
+     "name": "サクリ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "crisp"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "フィーチョ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "サクリフィ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "cold"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: sacrifìcio s. m. / Atto di culto rituale",
+   "access": "page-fetch",
+   "id": "WN-IT-0081",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "dedizione",
+   "pos": "名詞（女性）",
+   "meaningJa": "人・仕事・理想に、犠牲の心をもって全身で打ち込むこと。献身。",
+   "categories": [
+    "sacrifice"
+   ],
+   "nuances": [
+    "formal",
+    "polysemy"
+   ],
+   "nuanceNote": "「献身」は比喩的な意味。古い意味は敵への降伏、自発的な服従による明け渡し。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "デディツィオーネ",
+   "url": "https://www.treccani.it/vocabolario/dedizione/",
+   "tags": [
+    "献身",
+    "専心",
+    "帰服"
+   ],
+   "candidates": [
+    {
+     "name": "デディ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "デディツィア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "語尾をアで結んだ形。",
+     "overlap": ""
+    },
+    {
+     "name": "ディツィオーネ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "頭を落とした形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: dedizióne s. f. / Il dedicarsi interamente e con spirito di sacrificio",
+   "access": "page-fetch",
+   "id": "WN-IT-0082",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "bramosia",
+   "pos": "名詞（女性）",
+   "meaningJa": "燃えるように激しい欲望。",
+   "categories": [
+    "desire"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "快楽への欲、殺戮への欲などの用例がある。「物欲しげに見つめる」という言い回しでも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ブラモジーア",
+   "url": "https://www.treccani.it/vocabolario/bramosia/",
+   "tags": [
+    "渇望",
+    "貪欲",
+    "欲望"
+   ],
+   "candidates": [
+    {
+     "name": "ブラモジーア",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。熱を帯びた響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ブラモ",
+     "method": "short",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "モジーア",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: bramosìa s. f. / Ardente desiderio",
+   "access": "page-fetch",
+   "id": "WN-IT-0083",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "brama",
+   "pos": "名詞（女性）",
+   "meaningJa": "きわめて強い欲求、度を越した欲。",
+   "categories": [
+    "desire"
+   ],
+   "nuances": [
+    "literary"
+   ],
+   "nuanceNote": "ページの定義は一つだけ。抑えのきかない貪るような欲を言う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ブラーマ",
+   "url": "https://www.treccani.it/vocabolario/brama/",
+   "tags": [
+    "渇望",
+    "貪欲",
+    "熱望"
+   ],
+   "candidates": [
+    {
+     "name": "ブラーマ",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "dark"
+     ],
+     "note": "読みそのまま。太く短い響き。",
+     "overlap": "ヒンドゥー教の神ブラフマーの別表記に近い"
+    },
+    {
+     "name": "ブラーミア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "語尾をイアに替えた形。",
+     "overlap": ""
+    },
+    {
+     "name": "ブラム",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "長音を抜いて詰めた形。",
+     "overlap": "実在の人名ブラムと同じ表記"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / Desiderio vivissimo, appetito smodato",
+   "access": "page-fetch",
+   "id": "WN-IT-0084",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "metamorfosi",
+   "pos": "名詞（女性）",
+   "meaningJa": "ある存在や物が性質の違う別のものへ姿を変えること。変身、変容。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [
+    "polysemy",
+    "literary"
+   ],
+   "nuanceNote": "神話や古典文学の変身譚で使われる。生物学では変態。比喩で人の外見・性格・ふるまいの変化。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "メタモルフォージ",
+   "url": "https://www.treccani.it/vocabolario/metamorfosi/",
+   "tags": [
+    "変身",
+    "変容",
+    "変態"
+   ],
+   "candidates": [
+    {
+     "name": "メタモル",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "前半を取った短縮形。",
+     "overlap": ""
+    },
+    {
+     "name": "モルフォ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": "モルフォ蝶の「モルフォ」と同じ表記"
+    },
+    {
+     "name": "メタモーラ",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "前半を伸ばしラで結んだ形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: metamòrfoṡi s. f. / trasformazione di un essere… in un altro",
+   "access": "page-fetch",
+   "id": "WN-IT-0085",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "mutamento",
+   "pos": "名詞（男性）",
+   "meaningJa": "変わること・変えること、またその結果。変化。",
+   "categories": [
+    "change"
+   ],
+   "nuances": [
+    "literary",
+    "formal",
+    "polysemy"
+   ],
+   "nuanceNote": "cambiamento より文語的な語とされる。社会学では社会構造の持続的な変化を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ムタメント",
+   "url": "https://www.treccani.it/vocabolario/mutamento/",
+   "tags": [
+    "変化",
+    "変動",
+    "推移"
+   ],
+   "candidates": [
+    {
+     "name": "ムタメント",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "読みそのまま。落ち着いた重み。",
+     "overlap": ""
+    },
+    {
+     "name": "ムタ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半を取った二音の形。",
+     "overlap": ""
+    },
+    {
+     "name": "タメント",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "calm"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: mutaménto s. m. / L'azione e l'effetto del mutare",
+   "access": "page-fetch",
+   "id": "WN-IT-0086",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "rinascita",
+   "pos": "名詞（女性）",
+   "meaningJa": "再び生まれること、再び生じること。活動や文化の復興・刷新。",
+   "categories": [
+    "change",
+    "hope"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal"
+   ],
+   "nuanceNote": "疑いや情熱が「よみがえる」ことにも使う。文明史ではルネサンスの意味でも用いる。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "リナッシタ",
+   "url": "https://www.treccani.it/vocabolario/rinascita/",
+   "tags": [
+    "再生",
+    "復興",
+    "新生"
+   ],
+   "candidates": [
+    {
+     "name": "リナッシタ",
+     "method": "kana",
+     "impressions": [
+      "bright",
+      "crisp"
+     ],
+     "note": "読みそのまま。弾むような響き。",
+     "overlap": ""
+    },
+    {
+     "name": "リナ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "前半を取った二音の形。",
+     "overlap": "実在の人名リナと同じ表記"
+    },
+    {
+     "name": "ナッシタ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "イタリア語 nascita（誕生）のカナ表記と同じ"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: rinàscita s. f. / Il rinascere, in senso proprio",
+   "access": "page-fetch",
+   "id": "WN-IT-0087",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "silenzio",
+   "pos": "名詞（男性）",
+   "meaningJa": "物音や声がないこと。話さないこと、話すのをやめること。",
+   "categories": [
+    "silence"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "意思を示さないこと（法律上の「沈黙」）も指す。軍隊・典礼の用語もある。静けさにも黙秘にも読める。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "シレンツィオ",
+   "url": "https://www.treccani.it/vocabolario/silenzio/",
+   "tags": [
+    "沈黙",
+    "静寂",
+    "無言"
+   ],
+   "candidates": [
+    {
+     "name": "シレンツィオ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "noble"
+     ],
+     "note": "読みそのまま。静かに引く響き。",
+     "overlap": ""
+    },
+    {
+     "name": "シレン",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": "日本語「試練」と同音"
+    },
+    {
+     "name": "レンツィオ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "calm"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: silènzio s. m. / Assenza di rumori, di suoni, voci",
+   "access": "page-fetch",
+   "id": "WN-IT-0088",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "quiete",
+   "pos": "名詞（女性）",
+   "meaningJa": "動かず静止している状態。動きや騒音に乱されない静けさ、心身が休まる穏やかさ。",
+   "categories": [
+    "silence",
+    "harmony"
+   ],
+   "nuances": [
+    "polysemy",
+    "literary"
+   ],
+   "nuanceNote": "物理的な「静止」と、休息を許す「平穏」の両方を表す。詩文の引用例が多い。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "クイエーテ",
+   "url": "https://www.treccani.it/vocabolario/quiete/",
+   "tags": [
+    "静穏",
+    "平穏",
+    "静止"
+   ],
+   "candidates": [
+    {
+     "name": "クイエーテ",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "読みそのまま。静かにほどける響き。",
+     "overlap": ""
+    },
+    {
+     "name": "クイエ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "クイエッタ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾を詰めてタで結んだ形。",
+     "overlap": "イタリア語 quieta（静かな・女性形）に近い"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: quiète s. f. / Stato di tranquillità esterna",
+   "access": "page-fetch",
+   "id": "WN-IT-0089",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "memoria",
+   "pos": "名詞（女性）",
+   "meaningJa": "経験の痕跡を保ち続ける能力、記憶力。個々の事柄を覚えていること、思い出。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "事実を残すための覚え書き・記録の意味もある。キリスト教の用語としての用法もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "メモーリア",
+   "url": "https://www.treccani.it/vocabolario/memoria/",
+   "tags": [
+    "記憶",
+    "追憶",
+    "記録"
+   ],
+   "candidates": [
+    {
+     "name": "メモーリア",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "elegant"
+     ],
+     "note": "読みそのまま。やわらかく長い響き。",
+     "overlap": ""
+    },
+    {
+     "name": "メモリ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "長音と語尾を落とした形。",
+     "overlap": "外来語「メモリ」と同じ表記"
+    },
+    {
+     "name": "モーリア",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "『指輪物語』の地名モリアに近い"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: memòria s. f. / la capacità… di conservare traccia",
+   "access": "page-fetch",
+   "id": "WN-IT-0090",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "ricordo",
+   "pos": "名詞（男性）",
+   "meaningJa": "人・出来事・像などを心に呼び起こすこと。思い出されるものそのもの、思い出。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "「思い出す行為」と「思い出の内容」の両方を指す、日常的な語。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "リコルド",
+   "url": "https://www.treccani.it/vocabolario/ricordo/",
+   "tags": [
+    "追憶",
+    "思い出",
+    "回想"
+   ],
+   "candidates": [
+    {
+     "name": "リコルド",
+     "method": "kana",
+     "impressions": [
+      "calm",
+      "soft"
+     ],
+     "note": "読みそのまま。穏やかな響き。",
+     "overlap": ""
+    },
+    {
+     "name": "リコル",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "コルド",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "英語 cord のカナ表記「コード」に近い"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: ricòrdo s. m. / L'atto, il fatto del ricordare",
+   "access": "page-fetch",
+   "id": "WN-IT-0091",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "oblio",
+   "pos": "名詞（男性）",
+   "meaningJa": "一時の物忘れではなく、長く続く状態としての忘却。忘れ去られていること。",
+   "categories": [
+    "memory"
+   ],
+   "nuances": [
+    "literary",
+    "polysemy"
+   ],
+   "nuanceNote": "文語のラベルが付く。心理学では記憶の痕跡が消える過程。忘却を誘うまどろみ・放心も指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "オブリーオ",
+   "url": "https://www.treccani.it/vocabolario/oblio/",
+   "tags": [
+    "忘却",
+    "忘失",
+    "埋没"
+   ],
+   "candidates": [
+    {
+     "name": "オブリーオ",
+     "method": "kana",
+     "impressions": [
+      "dark",
+      "elegant"
+     ],
+     "note": "読みそのまま。沈んでいく響き。",
+     "overlap": ""
+    },
+    {
+     "name": "オブリ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "ブリーオ",
+     "method": "short",
+     "impressions": [
+      "bright",
+      "crisp"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "イタリア語 brio（活気）のカナ表記と同じ"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: oblìo s. m. letter. / non come fatto momentaneo",
+   "access": "page-fetch",
+   "id": "WN-IT-0092",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "nostalgia",
+   "pos": "名詞（女性）",
+   "meaningJa": "かつて暮らした場所へ戻りたいという強い願い。遠い人や失ったものを思う憂いの気分。",
+   "categories": [
+    "memory",
+    "desire"
+   ],
+   "nuances": [
+    "everyday"
+   ],
+   "nuanceNote": "甘い懐かしさにも、帰れない痛みにも読める語。病的な形は nostomania と呼ぶとの補足がある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ノスタルジーア",
+   "url": "https://www.treccani.it/vocabolario/nostalgia/",
+   "tags": [
+    "郷愁",
+    "懐旧",
+    "思慕"
+   ],
+   "candidates": [
+    {
+     "name": "ノスタルジーア",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "読みそのまま。",
+     "overlap": "外来語「ノスタルジア」に近い"
+    },
+    {
+     "name": "ノスタル",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "dark"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "タルジーア",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "soft"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: nostalgìa s. f. / Desiderio acuto di tornare a vivere in un luogo",
+   "access": "page-fetch",
+   "id": "WN-IT-0093",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "potere",
+   "pos": "名詞（男性）",
+   "meaningJa": "何かを行う能力、客観的に行える可能性。法的に意味のある行為を行う権能、権力。",
+   "categories": [
+    "power"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy",
+    "official"
+   ],
+   "nuanceNote": "動詞 potere（できる）の名詞用法。見出しは potere¹。能力・特性の意味で専門分野でも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ポテーレ",
+   "url": "https://www.treccani.it/vocabolario/potere1/",
+   "tags": [
+    "権力",
+    "権能",
+    "能力"
+   ],
+   "candidates": [
+    {
+     "name": "ポテーレ",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "読みそのまま。張りのある響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ポテル",
+     "method": "adjust",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "長音を抜き語尾を詰めた形。",
+     "overlap": ""
+    },
+    {
+     "name": "テーレ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: potére¹ s. m. / Capacità, possibilità oggettiva di agire",
+   "access": "page-fetch",
+   "id": "WN-IT-0094",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "potenza",
+   "pos": "名詞（女性）",
+   "meaningJa": "力があること、できる状態。事物や自然現象の強大な力・激しさ。",
+   "categories": [
+    "power"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal"
+   ],
+   "nuanceNote": "超自然的・神的な存在（神秘の「力」）も指す。数学など分野ごとの専門義もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ポテンツァ",
+   "url": "https://www.treccani.it/vocabolario/potenza/",
+   "tags": [
+    "威力",
+    "強大",
+    "勢力"
+   ],
+   "candidates": [
+    {
+     "name": "ポテンツァ",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "crisp"
+     ],
+     "note": "読みそのまま。弾ける強さ。",
+     "overlap": "イタリアの都市ポテンツァと同じ表記"
+    },
+    {
+     "name": "テンツァ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ポテンシア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "strong"
+     ],
+     "note": "語尾をシアに替えた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: potènza s. f. / l'essere potente, il fatto di potere",
+   "access": "page-fetch",
+   "id": "WN-IT-0095",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "autorità",
+   "pos": "名詞（女性）",
+   "meaningJa": "命令する権限と職務を与えられた立場。人の意志が他者に及ぼす決定的な影響力。",
+   "categories": [
+    "power",
+    "order"
+   ],
+   "nuances": [
+    "formal",
+    "official",
+    "polysemy"
+   ],
+   "nuanceNote": "年齢・徳・学識によって得る信用や評価（権威・威信）の意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "アウトリタ",
+   "url": "https://www.treccani.it/vocabolario/autorita/",
+   "tags": [
+    "権威",
+    "威信",
+    "当局"
+   ],
+   "candidates": [
+    {
+     "name": "アウトリタ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "strong"
+     ],
+     "note": "読みそのまま。硬く整った響き。",
+     "overlap": ""
+    },
+    {
+     "name": "アウトリ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "noble"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "トリタ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / la posizione di chi è investito di poteri",
+   "access": "page-fetch",
+   "id": "WN-IT-0096",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "vergogna",
+   "pos": "名詞（女性）",
+   "meaningJa": "他人の非難や軽蔑を恐れて生じる、動揺と居心地の悪さ。恥ずかしさ。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "軽い意味では遠慮・気後れ。顔が赤くなるなど、その表れも指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ヴェルゴーニャ",
+   "url": "https://www.treccani.it/vocabolario/vergogna/",
+   "tags": [
+    "羞恥",
+    "恥辱",
+    "含羞"
+   ],
+   "candidates": [
+    {
+     "name": "ヴェルゴーニャ",
+     "method": "kana",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "読みそのまま。やわらかく沈む響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ヴェルゴ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "strong"
+     ],
+     "note": "前半を取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ゴーニャ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "dark"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: vergógna s. f. / Sentimento… di turbamento e di disagio",
+   "access": "page-fetch",
+   "id": "WN-IT-0097",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "umiliazione",
+   "pos": "名詞（女性）",
+   "meaningJa": "辱めること、辱められること、自らへりくだること。人を辱める出来事。",
+   "categories": [
+    "shame"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "古い・まれな用法では、謙遜と恭順をこめた服従の行為を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ウミリアツィオーネ",
+   "url": "https://www.treccani.it/vocabolario/umiliazione/",
+   "tags": [
+    "屈辱",
+    "侮辱",
+    "卑下"
+   ],
+   "candidates": [
+    {
+     "name": "ウミリア",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "elegant"
+     ],
+     "note": "前半を取った形。やわらかい響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ミリアツィ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "ウミーリ",
+     "method": "adjust",
+     "impressions": [
+      "soft",
+      "calm"
+     ],
+     "note": "前半を伸ばして詰めた形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: umiliazióne s. f. / L'atto di umiliare",
+   "access": "page-fetch",
+   "id": "WN-IT-0098",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "rifiuto",
+   "pos": "名詞（男性）",
+   "meaningJa": "拒むこと、断ること。不要・有害なものとして捨てること、捨てられた物（廃棄物）。",
+   "categories": [
+    "refusal"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "比喩・蔑称で「社会のくず」のように人にも使う。gran rifiuto は成句。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "リフィウート",
+   "url": "https://www.treccani.it/vocabolario/rifiuto/",
+   "tags": [
+    "拒絶",
+    "拒否",
+    "廃棄"
+   ],
+   "candidates": [
+    {
+     "name": "リフィウート",
+     "method": "kana",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "読みそのまま。突き放す響き。",
+     "overlap": ""
+    },
+    {
+     "name": "リフィ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "フィウート",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "cold"
+     ],
+     "note": "後半を取った形。",
+     "overlap": "イタリア語 fiuto（嗅覚）に近い"
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. m. / fare un r., opporre un r.",
+   "access": "page-fetch",
+   "id": "WN-IT-0099",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "eternità",
+   "pos": "名詞（女性）",
+   "meaningJa": "永遠であること。始まりも終わりもない時間の無限の広がり。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "polysemy",
+    "religious"
+   ],
+   "nuanceNote": "神や天の至福について言う。死後の生、不滅の名声、誇張して「とても長い時間」にも使う。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "エテルニタ",
+   "url": "https://www.treccani.it/vocabolario/eternita/",
+   "tags": [
+    "永遠",
+    "永劫",
+    "無窮"
+   ],
+   "candidates": [
+    {
+     "name": "エテルニタ",
+     "method": "kana",
+     "impressions": [
+      "noble",
+      "calm"
+     ],
+     "note": "読みそのまま。澄んで長く残る響き。",
+     "overlap": ""
+    },
+    {
+     "name": "エテル",
+     "method": "short",
+     "impressions": [
+      "calm",
+      "cold"
+     ],
+     "note": "前半を取った形。",
+     "overlap": "外来語「エーテル」に近い"
+    },
+    {
+     "name": "テルニタ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / L'esser eterno; l'infinita estensione del tempo",
+   "access": "page-fetch",
+   "id": "WN-IT-0100",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "immortalità",
+   "pos": "名詞（女性）",
+   "meaningJa": "死なないこと、不死である状態や性質。",
+   "categories": [
+    "eternity"
+   ],
+   "nuances": [
+    "formal",
+    "polysemy"
+   ],
+   "nuanceNote": "転じて、長く残る不朽の名声。紋章学では不死鳥が乗る薪の山を指す。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "インモルタリタ",
+   "url": "https://www.treccani.it/vocabolario/immortalita/",
+   "tags": [
+    "不死",
+    "不滅",
+    "不朽"
+   ],
+   "candidates": [
+    {
+     "name": "モルタリ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "crisp"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "インモルタ",
+     "method": "short",
+     "impressions": [
+      "dark",
+      "strong"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": ""
+    },
+    {
+     "name": "モルターリア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "中ほどを伸ばし語尾を足した形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: s. f. / fama durevole, imperitura（転義）",
+   "access": "page-fetch",
+   "id": "WN-IT-0101",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "ossessione",
+   "pos": "名詞（女性）",
+   "meaningJa": "頭から離れない考えや悩み、つきまとう苦しみ。精神医学では意志で消せない観念や衝動。",
+   "categories": [
+    "obsession"
+   ],
+   "nuances": [
+    "polysemy",
+    "everyday"
+   ],
+   "nuanceNote": "あまり使われない第一義は「悪魔に取り憑かれた状態」。日常語の用法は転義。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "オッセッシオーネ",
+   "url": "https://www.treccani.it/vocabolario/ossessione/",
+   "tags": [
+    "強迫",
+    "執着",
+    "憑依"
+   ],
+   "candidates": [
+    {
+     "name": "オッセ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "dark"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "セッシオ",
+     "method": "short",
+     "impressions": [
+      "cold",
+      "crisp"
+     ],
+     "note": "中ほどを取った形。",
+     "overlap": ""
+    },
+    {
+     "name": "オセーシア",
+     "method": "adjust",
+     "impressions": [
+      "elegant",
+      "dark"
+     ],
+     "note": "促音を抜きアで結んだ形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: ossessióne s. f. / idea persistente, incubo, preoccupazione assillante",
+   "access": "page-fetch",
+   "id": "WN-IT-0102",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "desiderio",
+   "pos": "名詞（男性）",
+   "meaningJa": "心身の必要を満たすものを手に入れたい・実現したいと駆り立てる強い気持ち。",
+   "categories": [
+    "desire"
+   ],
+   "nuances": [
+    "everyday",
+    "polysemy"
+   ],
+   "nuanceNote": "必要なものが欠けている感じ（〜が恋しい）も表す。pio desiderio は皮肉で「はかない望み」。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "デジデーリオ",
+   "url": "https://www.treccani.it/vocabolario/desiderio/",
+   "tags": [
+    "欲望",
+    "願望",
+    "渇望"
+   ],
+   "candidates": [
+    {
+     "name": "デジデーリオ",
+     "method": "kana",
+     "impressions": [
+      "elegant",
+      "noble"
+     ],
+     "note": "読みそのまま。",
+     "overlap": "実在の人名デジデリオに近い"
+    },
+    {
+     "name": "デジデ",
+     "method": "short",
+     "impressions": [
+      "crisp",
+      "soft"
+     ],
+     "note": "前半を取った短い形。",
+     "overlap": ""
+    },
+    {
+     "name": "デーリオ",
+     "method": "short",
+     "impressions": [
+      "elegant",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: desidèrio s. m. / Sentimento intenso che spinge a cercare",
+   "access": "page-fetch",
+   "id": "WN-IT-0103",
+   "date": "2026-11-17"
+  },
+  {
+   "lemma": "dominio",
+   "pos": "名詞（男性）",
+   "meaningJa": "支配すること、支配されること。主権・権威が及ぶ領土。",
+   "categories": [
+    "order",
+    "power"
+   ],
+   "nuances": [
+    "polysemy",
+    "formal"
+   ],
+   "nuanceNote": "物理学の「領域」、情報技術の「ドメイン」、法律用語など分野ごとの意味もある。",
+   "ipa": null,
+   "pronNote": "発音記号は未確認。ページにIPA表記はなかった。",
+   "kana": "ドミーニオ",
+   "url": "https://www.treccani.it/vocabolario/dominio/",
+   "tags": [
+    "支配",
+    "統治",
+    "領土"
+   ],
+   "candidates": [
+    {
+     "name": "ドミーニオ",
+     "method": "kana",
+     "impressions": [
+      "strong",
+      "noble"
+     ],
+     "note": "読みそのまま。重く治める響き。",
+     "overlap": ""
+    },
+    {
+     "name": "ドミニ",
+     "method": "short",
+     "impressions": [
+      "noble",
+      "crisp"
+     ],
+     "note": "語尾を落とした形。",
+     "overlap": "ラテン語 Domini（主の）と同じ読み"
+    },
+    {
+     "name": "ミーニオ",
+     "method": "short",
+     "impressions": [
+      "soft",
+      "bright"
+     ],
+     "note": "後半を取った形。",
+     "overlap": ""
+    }
+   ],
+   "scopeNote": null,
+   "evidence": "Treccani: domìnio s. m. / Genericam., il fatto di dominare",
+   "access": "page-fetch",
+   "id": "WN-IT-0104",
+   "date": "2026-11-17"
+  }
+ ],
+ "extraCategories": [
+  {
+   "id": "WN-IT-0012",
+   "lemma": "serenità",
+   "add": [
+    "silence"
+   ]
+  }
+ ],
+ "notFound": [
+  "isolamento（ページは確認できたが、報告された語義が医療・生物・物理の専門義のみで「孤立」の一般義を確認できず）",
+  "angoscia（ページの返答に品詞の記載がなかった）",
+  "enigma（ページの返答に品詞の記載がなかった）",
+  "calma・forza・regno（ページで見出し・品詞・語義は確認できたが、目安の語数を超えるため未収録。calma は冒頭3義が海・風の凪のみ）",
+  "ambizione・segreto・ripudio・dominazione・possanza（URLは得たが、利用上限でWebFetchが失敗し、再開後は取得していない）",
+  "infinito・sorte・cambiamento・disonore・rimpianto・sconforto・negazione・rigetto・offerta・ordine（検索で vocabolario の見出しページURLが出ず、Sinonimi e Contrari のみ等）"
+ ]
+}

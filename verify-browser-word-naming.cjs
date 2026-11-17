@@ -1,12 +1,13 @@
 'use strict';
-// Run: node verify-browser-word-naming.cjs [outdir] — 名前辞典「言葉から名付け」（v2.2）の実ブラウザ検証
+// Run: node verify-browser-word-naming.cjs [outdir] — 名前辞典「言葉から名付け」（v2.3）の実ブラウザ検証
 // v2.1 の検証項目（辞典への非干渉・原語と創作名の区分・保存・バックアップ・キャラ作成への送信・iPhone幅）を引き継ぎ、
 // 11カテゴリ・逆引き検索・命名コレクション・複数キャラ命名・世界観連携を加えた。
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
-const repo=__dirname,outdir=process.argv[2]||path.join(repo,'reports/v2.2/word-naming-browser');fs.mkdirSync(outdir,{recursive:true});
+const repo=__dirname,outdir=process.argv[2]||path.join(repo,'reports/v2.3/word-naming-browser');fs.mkdirSync(outdir,{recursive:true});
 const report={passed:false,checks:[],consoleErrors:[],screenshots:[]};
-const dict=require('./data/dictionary-v1.7.json'),words=require('./data/word-naming-v2.json');
+const WCore=require('./js/word-naming-core.js');
+const dict=require('./data/dictionary-v1.7.json'),words=require('./data/word-naming-v3.json');
 const TOTAL=words.words.length,PAGE=24;
 const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(c)));
 (async()=>{
@@ -36,7 +37,7 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
   /* ---- 既存の辞典はそのまま。2モード＋3機能 ---- */
   await page.goto(origin+'/dictionary.html');await ready();
   await page.waitForFunction(n=>document.getElementById('count').textContent.startsWith('全'+n+'候補'),dict.entries.length);
-  assert.equal(await page.title(),'名前辞典 | 創作OCメーカー v2.2');assert.equal(await page.locator('.eyebrow').textContent(),'創作OCメーカー v2.2');
+  assert.equal(await page.title(),'名前辞典 | 創作OCメーカー v2.3');assert.equal(await page.locator('.eyebrow').textContent(),'創作OCメーカー v2.3');
   assert.equal(await page.locator('#modeFindBtn').getAttribute('aria-selected'),'true');assert.equal(await page.locator('#modeWords').isVisible(),false);
   assert.deepEqual(await page.locator('#studioTabs [role="tab"]').allTextContents(),['作成','図鑑','身長比較','相関図','世界観']);
   assert.deepEqual(await page.locator('#wnModes [role="tab"]').allTextContents(),['名前を探す','言葉から名付け']);
@@ -50,10 +51,10 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
   assert.ok(await page.locator('#wnPane-find').isVisible());assert.equal(await page.locator('#wnPane-collections').isVisible(),false);assert.equal(await page.locator('#wnPane-batch').isVisible(),false);
   // 最初の画面は検索欄とカテゴリだけ。細かい絞り込みは折りたたみの中
   assert.equal(await page.locator('#wnMoreFilters').getAttribute('open'),null);assert.equal(await page.locator('#wnLangs').isVisible(),false);assert.equal(await page.locator('#wnCatModeBox').isVisible(),false);
-  assert.deepEqual(await page.locator('#wnCategories button').allTextContents(),words.categories.map(c=>c.label));assert.equal(await page.locator('#wnCategories button:disabled').count(),0);
+  assert.deepEqual(await page.locator('#wnCategories button').allTextContents(),words.categories.map(c=>c.label));assert.deepEqual((await page.locator('#wnCategories button:visible').allTextContents()),words.categories.filter(c=>c.group==='light').map(c=>c.label));assert.equal(await page.locator('#wnCategories button:disabled').count(),0);
   assert.equal(await page.locator('#wnResults .wn-card').count(),PAGE);
   const notice=await page.locator('#wnNotice').textContent();
-  assert.ok(notice.includes('11カテゴリ・'+TOTAL+'語')&&notice.includes('重複は確認していません')&&notice.includes('検索結果に表示されたページ抜粋'),notice);
+  assert.ok(notice.includes('33カテゴリ・'+TOTAL+'語')&&notice.includes('重複は確認していません')&&notice.includes('検索結果の抜粋')&&notice.includes('人がページ全文を読んだ確認ではありません')&&notice.includes('善悪'),notice);
   await page.locator('#modeWordsBtn').focus();await page.keyboard.press('ArrowLeft');assert.ok(await page.locator('#modeFind').isVisible());
   assert.equal(await page.locator('#results .dictionary-card').count(),36);
   await page.keyboard.press('ArrowRight');assert.ok(await page.locator('#modeWords').isVisible());
@@ -85,7 +86,7 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
   while(await page.locator('#wnMore').isVisible())await page.locator('#wnMore').click();
   assert.equal(await page.locator('#wnResults .wn-card').count(),TOTAL);
   const hosts=await page.evaluate(()=>[...document.querySelectorAll('#wnResults .wn-card')].map(c=>[c.dataset.id,new URL(c.querySelector('.wn-origin a').href).hostname]));
-  for(const [id,host] of hosts)assert.equal(host,words.languages[words.words.find(x=>x.id===id).lang].host,id);
+  for(const [id,host] of hosts){const w=words.words.find(x=>x.id===id),L=words.languages[w.lang];assert.equal(host,[L].concat(L.also||[]).find(d=>d.dictionary===w.source.dictionary).host,id);}
   assert.equal(await page.locator('#wnCount').textContent(),'全'+TOTAL+'語 ／ 該当'+TOTAL+'語');
   ok('each card separates the verified source word from coined names; says how far it was verified; known overlaps are noted and everything else is “未確認”; all '+TOTAL+' source links go to the right dictionary (paged list)');
 
@@ -116,7 +117,7 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
   await find('リベラ');await page.locator('#wnScope').selectOption('name');await count(2);
   assert.equal(await page.locator('#wnResults .wn-cand:not(.dim)').count(),4);
   await find('希望');await count(0);
-  await page.locator('#wnSuggest [data-relax="scope"]').click();await count(inCat('hope').length);assert.equal(await page.locator('#wnScope').inputValue(),'all');
+  await page.locator('#wnSuggest [data-relax="scope"]').click();await count(WCore.filter(words,{query:'希望'}).results.length);assert.equal(await page.locator('#wnScope').inputValue(),'all');
   await page.locator('#wnScope').selectOption('lemma');await find('ウィエル');await count(0);
   await page.locator('#wnScope').selectOption('all');await count(1);
   // 0件：翻訳しない。近いテーマと条件緩和を案内する
@@ -124,8 +125,8 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
   let sg=await page.locator('#wnSuggest').innerText();
   assert.ok(sg.includes('条件に合う言葉がありません。')&&sg.includes('翻訳して探す機能ではありません')&&sg.includes('検索語を消す（'+TOTAL+'語）'),sg);
   assert.equal(await page.locator('#wnResults .wn-card').count(),0);assert.equal(await page.locator('#wnSuggest [data-theme]').count(),0);
-  await find('望郷');await count(0);
-  assert.deepEqual(await page.locator('#wnSuggest [data-theme]').allTextContents(),['希望・未来']);
+  await find('望遠');await count(0);
+  assert.deepEqual(await page.locator('#wnSuggest [data-theme]').allTextContents(),['希望・未来','嫉妬・羨望','絶望・諦念','永遠・無限']);
   await page.locator('#wnSuggest [data-theme="hope"]').click();await count(inCat('hope').length);
   assert.equal(await page.locator('#wnSearch').inputValue(),'');assert.equal(await page.locator('#wnCategories [data-value="hope"]').getAttribute('aria-pressed'),'true');
   assert.equal(await page.locator('#wnSuggest').isVisible(),false);
@@ -161,7 +162,7 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
   assert.equal(await page.locator('.st-sheet').count(),0);
   const saved=await page.evaluate(()=>OCStudio.S.project.nameIdeas[0]);
   assert.deepEqual([saved.name,saved.wordId,saved.candidateId,saved.baseName,saved.method,saved.edited,saved.intent,saved.overlap,saved.source.lemma,saved.source.url,saved.dataVersion],
-   ['アコール','WN-FR-0002','WN-FR-0002-a','アコール','kana',false,'争いを収める兄。','','accord',w.source.url,'2.0.0']);
+   ['アコール','WN-FR-0002','WN-FR-0002-a','アコール','kana',false,'争いを収める兄。','','accord',w.source.url,words.dataVersion]);
   assert.deepEqual(await page.evaluate(()=>OCStudio.S.project.nameCollections.map(c=>[c.name,c.items.length])),[['全肯定する兄弟',1]]);
   assert.ok((await page.locator('#wnIdeasLink').textContent()).includes('「マイ作品」に保存した名前候補：1件 ／ コレクション：1件'));
   // 自分で作る：ドイツ語 jawohl は未収録なので、ja から自由編集で作る。名前が空のうちは保存できない
@@ -438,7 +439,7 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
   const slow=await context.newPage();watch(slow,'race ');
   await slow.addInitScript(()=>{let db;Object.defineProperty(window,'OCStudioDB',{configurable:true,get:()=>db,set(v){
    const orig=v.byProject;v.byProject=async(...a)=>{await new Promise(r=>setTimeout(r,700));return orig(...a);};db=v;}});});
-  await slow.route('**/data/word-naming-v2.json',async r=>{await new Promise(x=>setTimeout(x,300));await r.continue();});
+  await slow.route('**/data/word-naming-v3.json',async r=>{await new Promise(x=>setTimeout(x,300));await r.continue();});
   await slow.goto(origin+'/dictionary.html#words/collections');
   await slow.waitForFunction(t=>document.getElementById('wnCount').textContent.startsWith('全'+t+'語'),TOTAL);
   assert.equal(await slow.evaluate(()=>document.documentElement.dataset.studio),undefined,'the word data must arrive while the project is still loading');
@@ -483,7 +484,7 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
 
   /* ---- 読み込み失敗時：辞典は動き、再読み込みで復帰。読み込み中にページを離れてもエラーを出さない ---- */
   const p2=await context.newPage();let fail=true;watch(p2,'p2 ');
-  await p2.route('**/data/word-naming-v2.json',r=>fail?r.abort():r.continue());
+  await p2.route('**/data/word-naming-v3.json',r=>fail?r.abort():r.continue());
   await p2.goto(origin+'/dictionary.html#words');await p2.waitForSelector('html[data-studio="ready"]');
   await p2.waitForSelector('#wnLoadError:not([hidden])');assert.ok(await p2.locator('#wnSearch').isDisabled());
   const loadErrors=report.consoleErrors.splice(0).filter(e=>!/^p2 console .*Failed to fetch/.test(e));assert.deepEqual(loadErrors,[],'only the expected load failure is logged');
@@ -493,12 +494,126 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
   await p2.locator('#modeWordsBtn').click();await p2.waitForSelector('#wnLoadError:not([hidden])');report.consoleErrors.splice(0);
   fail=false;await p2.locator('#wnRetry').click();
   await p2.waitForFunction(t=>document.getElementById('wnCount').textContent.startsWith('全'+t+'語 ／ 該当'+t+'語'),TOTAL);
-  await p2.unroute('**/data/word-naming-v2.json');
-  await p2.route('**/data/word-naming-v2.json',async r=>{await new Promise(x=>setTimeout(x,500));try{await r.continue();}catch(e){}});
+  await p2.unroute('**/data/word-naming-v3.json');
+  await p2.route('**/data/word-naming-v3.json',async r=>{await new Promise(x=>setTimeout(x,500));try{await r.continue();}catch(e){}});
   await p2.goto(origin+'/dictionary.html#words');await p2.waitForSelector('html[data-studio="ready"]');
   await p2.goto(origin+'/index.html');await p2.waitForSelector('html[data-studio="ready"]');await p2.waitForTimeout(800);
   assert.deepEqual(report.consoleErrors,[]);await p2.close();
   ok('if the word data fails to load, the dictionary and the collections keep working and retry recovers; leaving the page mid-load logs nothing');
+
+  /* ---- v2.3：明・陰・両義の大分類、テーマの対比 ---- */
+  const G=words.groups,inGroup=g=>words.words.filter(w=>w.categories.some(c=>words.categories.find(x=>x.id===c).group===g));
+  const catLabels=g=>words.categories.filter(c=>c.group===g).map(c=>c.label);
+  await page.goto(origin+'/dictionary.html#words');await page.reload();await ready();await count(TOTAL);
+  assert.deepEqual(await page.locator('#wnGroups [role="radio"]').allTextContents(),['すべて',G.light.label,G.shade.label,G.ambi.label]);
+  assert.equal(await page.locator('#wnGroups [aria-checked="true"]').textContent(),'すべて');
+  assert.equal(await page.locator('#wnCategories details.wn-catgroup').count(),3);assert.equal(await page.locator('#wnCategories details[open]').count(),1);
+  assert.deepEqual(await page.locator('#wnCategories details.wn-catgroup summary .wn-badge').allTextContents(),['明','陰','両義'],'groups are labelled in text, not by colour alone');
+  assert.ok((await page.locator('#wnGroupNote').textContent()).includes('善悪に断定するものではありません'));
+  await page.locator('#wnGroups [data-value="shade"]').click();await count(inGroup('shade').length);
+  assert.deepEqual(await page.locator('#wnCategories button:visible').allTextContents(),catLabels('shade'));assert.equal(await page.locator('#wnCategories button').count(),12);
+  assert.equal(await page.locator('#wnGroupNote').textContent(),G.shade.note);
+  assert.ok(await page.evaluate(()=>[...document.querySelectorAll('#wnResults .wn-card')].every(c=>[...c.querySelectorAll('.wn-themes .wn-badge')].some(b=>b.textContent.includes('陰')))),'every card shows its group as text');
+  const cardColors=await page.evaluate(()=>{const f=g=>{const c=document.querySelector('#wnResults .wn-card[data-group="'+g+'"]');return c?getComputedStyle(c).borderLeftColor+getComputedStyle(c).backgroundColor:null;};return [f('shade')];});
+  await page.locator('#wnCategories [data-value="despair"]').click();await count(inCat('despair').length);
+  assert.ok((await page.locator('#wnCatSelected').textContent()).includes('絶望・諦念'));
+  await page.locator('#wnCategories [data-value="grief"]').click();await count(inCat('despair','grief').length);assert.ok(await page.locator('#wnCatModeBox').isVisible());
+  await page.locator('#wnMoreFilters > summary').click();await page.locator('#wnLangs [data-value="de"]').click();await count(inCat('despair','grief').filter(w=>w.lang==='de').length);
+  await page.locator('#wnImpressions [data-value="dark"]').click();
+  await count(WCore.filter(words,{group:'shade',categories:['despair','grief'],langs:['de'],impressions:['dark']}).results.length);
+  // 大分類を切り替えると、その大分類にないカテゴリの選択は外れる
+  await page.locator('#wnGroups [data-value="ambi"]').click();
+  await count(WCore.filter(words,{group:'ambi',langs:['de'],impressions:['dark']}).results.length);
+  assert.deepEqual(await page.locator('#wnCategories button:visible').allTextContents(),catLabels('ambi'));assert.equal(await page.locator('#wnCategories [aria-pressed="true"]').count(),0);
+  await shot(page,'v23-group-ambi.png');
+  await page.locator('#wnClear').click();await count(TOTAL);assert.equal(await page.locator('#wnGroups [aria-checked="true"]').textContent(),'すべて');
+  // 「すべて」のまま、陰のカテゴリを開いて明のカテゴリと横断して選べる
+  await page.locator('#wnCategories details[data-group="shade"] > summary').click();await page.locator('#wnCategories [data-value="despair"]').click();
+  await page.locator('#wnCategories [data-value="hope"]').click();await count(inCat('despair','hope').length);
+  assert.ok((await page.locator('#wnCategories details[data-group="shade"] > summary').textContent()).includes('1件選択中'));
+  // テーマ語で新しいカテゴリに届く。お気に入りも新語で使える
+  await page.locator('#wnClear').click();await find('裏切り');await page.waitForFunction(()=>document.getElementById('wnTheme').textContent.includes('「欺瞞・裏切り」に結びつけて'));
+  const sample=words.words.find(w=>w.since==='2.3'&&w.lang==='it'&&w.categories.includes('deceit')&&WCore.wordGroups(words,w).length===1);
+  await find(sample.lemma);await cardOf(sample.id).getByRole('button',{name:'☆ お気に入り',exact:true}).click();
+  await find('');await page.locator('#wnFavoritesOnly').check();await page.locator('#wnGroups [data-value="shade"]').click();await count(1);
+  await page.locator('#wnGroups [data-value="light"]').click();await count(1);await page.locator('#wnGroups [data-value="ambi"]').click();await count(0);
+  assert.ok(await page.locator('#wnSuggest [data-relax="group"]').isVisible());await page.locator('#wnSuggest [data-relax="group"]').click();await count(2);
+  await cardOf(sample.id).getByRole('button',{name:'★ お気に入り解除',exact:true}).click();await page.locator('#wnClear').click();await count(TOTAL);
+  // 新しい語のカード：確認方法が書かれ、発音が未確認なら記号を出さない
+  const fresh=words.words.find(w=>w.since==='2.3'&&w.pronunciation.ipa===null&&w.verification.access==='page-fetch');
+  await find(fresh.lemma);await cardOf(fresh.id).locator('.wn-detail > summary').click();
+  const detail=await cardOf(fresh.id).locator('.wn-detail').innerText();
+  assert.ok(detail.includes('未確認')&&detail.includes('そのページを取得して')&&detail.includes('人がページ全文を読んだ確認ではない')&&detail.includes(fresh.id),detail);
+  assert.ok((await cardOf(fresh.id).locator('.wn-origin').innerText()).includes('カタカナ読み（目安・発音は未確認）'));
+  await find('');
+  ok('light / shade / ambi filter inside the existing search screen: picking a group shows only its categories; combines with language, impression, OR/AND, favourites; groups are labelled in text; new words say how they were checked');
+
+  // 対比検索
+  await page.locator('#wnContrastBox > summary').click();
+  const optgroups=await page.evaluate(()=>[...document.querySelectorAll('#wnContrast optgroup')].map(o=>[o.label,o.children.length]));
+  assert.deepEqual(optgroups,[[WCore.CONTRAST_KINDS.lexical,words.contrasts.filter(c=>c.kind==='lexical').length],[WCore.CONTRAST_KINDS.narrative,words.contrasts.filter(c=>c.kind==='narrative').length]]);
+  await page.locator('#wnContrast').selectOption('hope-despair');
+  const hd=WCore.contrastResults(words,'hope-despair',{});
+  await page.waitForFunction(t=>document.getElementById('wnCount').textContent===t,'対比：希望 ↔ 絶望 ／ 希望 '+hd.a.results.length+'語・絶望 '+hd.b.results.length+'語');
+  assert.equal(await page.locator('#wnResults .wn-side').count(),2);
+  assert.deepEqual(await page.evaluate(()=>[...document.querySelectorAll('#wnResults .wn-side')].map(s=>[s.dataset.side,s.dataset.group,s.querySelectorAll('.wn-card').length])),[['a','light',6],['b','shade',6]]);
+  let cn=await page.locator('#wnContrastNote').innerText();
+  assert.ok(cn.includes(WCore.CONTRAST_KINDS.lexical)&&cn.includes('Larousse')&&cn.includes('すべてが互いに対義語というわけではありません'),cn);
+  assert.ok(await page.evaluate(()=>document.getElementById('wnThemeBox').disabled&&document.querySelector('#wnGroups button').matches(':disabled')));
+  await page.locator('#wnResults [data-more="b"]').click();assert.equal(await page.locator('#wnResults .wn-side[data-side="b"] .wn-card').count(),Math.min(12,hd.b.results.length));
+  await page.locator('#wnLangs [data-value="fr"]').click();
+  const hdFr=WCore.contrastResults(words,'hope-despair',{langs:['fr']});
+  await page.waitForFunction(t=>document.getElementById('wnCount').textContent.endsWith(t),'希望 '+hdFr.a.results.length+'語・絶望 '+hdFr.b.results.length+'語');
+  assert.ok(await page.evaluate(()=>[...document.querySelectorAll('#wnResults .wn-card h2')].every(h=>h.lang==='fr')));
+  await page.locator('#wnLangs [data-value="fr"]').click();
+  await page.locator('#wnContrast').selectOption('love-hatred');await page.waitForFunction(()=>document.getElementById('wnCount').textContent.startsWith('対比：慈愛 ↔ 憎悪'));
+  cn=await page.locator('#wnContrastNote').innerText();
+  assert.ok(cn.includes('物語上の対照（辞書上の対義語ではありません）')&&cn.includes('辞書で対義語とされているわけではありません')&&!cn.includes('Larousse'),cn);
+  assert.equal(await page.locator('#wnContrastNote').getAttribute('data-kind'),'narrative');
+  await shot(page,'v23-contrast.png');
+  // 同じカテゴリの中での対比（記憶 ↔ 忘却）は、見出し語で分かれる
+  await page.locator('#wnContrast').selectOption('memory-oblivion');await page.waitForFunction(()=>document.getElementById('wnCount').textContent.startsWith('対比：記憶 ↔ 忘却'));
+  const mo=words.contrasts.find(c=>c.id==='memory-oblivion');
+  assert.deepEqual(await page.evaluate(()=>[...document.querySelectorAll('#wnResults .wn-side[data-side="b"] .wn-card')].map(c=>c.dataset.id).sort()),mo.b.ids.slice().sort());
+  // 対比からコレクションを作り、両側の名前を入れる
+  await page.locator('#wnContrast').selectOption('freedom-bondage');await page.waitForFunction(()=>document.getElementById('wnCount').textContent.startsWith('対比：自由 ↔ 束縛'));
+  const before=await page.evaluate(()=>({cols:OCStudio.S.project.nameCollections.length,ideas:OCStudio.S.project.nameIdeas.length}));
+  await page.locator('#wnContrastCollect').click();await page.waitForFunction(n=>OCStudio.S.project.nameCollections.length===n+1,before.cols);
+  const made=await page.evaluate(()=>{const c=OCStudio.S.project.nameCollections.at(-1);return [c.name,c.theme,c.memo];});
+  assert.equal(made[0],'自由と束縛');assert.ok(made[1].includes('自由・解放')&&made[1].includes('秩序・支配'));assert.ok(made[2].includes('辞書の対義語欄に例がある対比'));
+  await page.locator('#wnContrastCollect').click();await page.waitForTimeout(200);assert.equal(await page.evaluate(()=>OCStudio.S.project.nameCollections.length),before.cols+1,'the same contrast collection is not created twice');
+  for(const side of ['a','b']){
+    await page.locator('#wnResults .wn-side[data-side="'+side+'"] .wn-card .wn-cand').first().click();
+    await sheet().locator('#wnCollection').selectOption({label:'自由と束縛'});await sheet().locator('[data-e="save"]').click();
+    await page.waitForFunction(([n,s])=>OCStudio.S.project.nameIdeas.length===n+(s==='a'?1:2),[before.ideas,side]);
+    if(await sheet().count())await sheet().locator('.st-x').click().catch(()=>{});
+  }
+  const mixed=await page.evaluate(()=>{const p=OCStudio.S.project,c=p.nameCollections.at(-1);return c.items.map(i=>p.nameIdeas.find(x=>x.id===i.ideaId).wordId);});
+  assert.equal(mixed.length,2);
+  const gOf=id=>WCore.wordGroups(words,words.words.find(w=>w.id===id));
+  assert.ok(gOf(mixed[0]).includes('light')&&gOf(mixed[1]).includes('ambi'),'the collection mixes a light word and an ambiguous word');
+  await page.locator('#wnContrastOff').click();await count(TOTAL);assert.equal(await page.evaluate(()=>document.getElementById('wnThemeBox').disabled),false);assert.equal(await page.locator('#wnContrastNote').isVisible(),false);
+  await sub('collections');
+  const colText23=await page.locator('#wnCollections .wn-col').last().innerText();assert.ok(colText23.includes('自由と束縛')&&colText23.includes('対比：自由'),colText23);
+  ok('contrast search: lexical and narrative contrasts are grouped and explained differently; both sides listed with the same filters; a same-category contrast splits by headword; a contrast collection mixes names from both sides');
+
+  // 複数キャラ命名：対比のA・Bを交互に
+  await sub('batch');
+  const nChars=await page.locator('#wnBatchChars input').count();assert.ok(nChars>=2);
+  for(let i=0;i<Math.min(4,nChars);i++)await page.locator('#wnBatchChars input').nth(i).check();
+  await page.locator('#wnBatchSource').selectOption('contrast');await page.locator('#wnBatchContrast').selectOption('hope-despair');
+  await page.locator('#wnBatchAssign').click();await page.waitForSelector('#wnBatchTable .wn-brow[data-row]');
+  const sides=await page.locator('#wnBatchTable .wn-bside').allTextContents();
+  assert.deepEqual(sides,['A：「希望」の側','B：「絶望」の側','A：「希望」の側','B：「絶望」の側'].slice(0,sides.length));assert.ok(sides.length>=2);
+  await shot(page,'v23-batch-contrast.png');
+  // 意味カテゴリからの割り当ても、大分類を選んでから
+  await page.locator('#wnBatchSource').selectOption('theme');await page.locator('#wnBatchGroup').selectOption('shade');
+  assert.deepEqual(await page.locator('#wnBatchCats button').allTextContents(),catLabels('shade'));
+  await page.locator('#wnBatchCats [data-value="wrath"]').click();await page.locator('#wnBatchAssign').click();await page.waitForSelector('#wnBatchTable .wn-brow[data-row]');
+  const names=await page.evaluate(()=>[...document.querySelectorAll('#wnBatchTable .wn-brow[data-row] input[type=text]')].map(i=>i.value));
+  const wrathNames=new Set(inCat('wrath').flatMap(w=>w.candidates.map(c=>c.name)));assert.ok(names.length>=2&&names.every(n=>wrathNames.has(n)),names.join());
+  await settle();
+  ok('batch naming: from a contrast, characters alternate between side A and side B; from a category, the group is chosen first (shade categories only)');
 
   /* ---- iPhone相当の画面（390 / 320） ---- */
   await page.locator('#projectSelect').selectOption({label:'マイ作品（復元）'});await page.waitForFunction(()=>OCStudio.S.project.name==='マイ作品（復元）'&&OCStudio.S.chars.length===4);await settle();
@@ -513,6 +628,15 @@ const inCat=(...cats)=>words.words.filter(w=>cats.some(c=>w.categories.includes(
    assert.ok(await m.evaluate(()=>[...document.querySelectorAll('#wnModes button,#wnSubtabs button')].every(b=>b.scrollWidth<=b.clientWidth)),'tab labels fit @'+wd);
    assert.equal(await m.locator('#wnLangs').isVisible(),false,'extra filters stay folded @'+wd);
    if(wd===390)await shot(m,'mobile-find-top.png');
+   // 33カテゴリでもボタンだらけにしない：最初に見えるカテゴリは明の11個だけ、残りは折りたたみ
+   assert.equal(await m.locator('#wnCategories button:visible').count(),11,'only the first group is expanded @'+wd);
+   assert.ok(await tall('#wnGroups button,#wnCategories summary,#wnContrastBox > summary'),'group targets @'+wd);
+   await m.locator('#wnGroups [data-value="shade"]').tap();await m.waitForFunction(()=>document.querySelectorAll('#wnCategories button').length===12);await noOverflow('shade@'+wd);
+   assert.ok(await tall('#wnCategories button'));if(wd===390)await shot(m,'mobile-v23-shade.png');
+   await m.locator('#wnContrastBox > summary').tap();await m.locator('#wnContrast').selectOption('trust-doubt');await m.waitForSelector('#wnResults .wn-side[data-side="b"] .wn-card');await noOverflow('contrast@'+wd);
+   assert.ok(await m.evaluate(()=>parseFloat(getComputedStyle(document.getElementById('wnContrast')).fontSize)>=16));assert.ok(await tall('#wnContrastBox .actions button,.wn-side-more'));
+   if(wd===390){await m.locator('#wnContrastNote').scrollIntoViewIfNeeded();await shot(m,'mobile-v23-contrast.png');}
+   await m.locator('#wnContrastOff').tap();await m.locator('#wnGroups [data-value=""]').tap();await m.waitForFunction(t=>document.getElementById('wnCount').textContent.startsWith('全'+t+'語 ／ 該当'+t+'語'),TOTAL);
    await m.locator('#wnMoreFilters > summary').tap();await m.waitForSelector('#wnLangs button');await noOverflow('filters@'+wd);assert.ok(await tall('#wnLangs button,#wnNuances button,#wnLengths button,#wnImpressions button'));
    assert.ok(await m.evaluate(()=>parseFloat(getComputedStyle(document.getElementById('wnSearch')).fontSize)>=16&&parseFloat(getComputedStyle(document.getElementById('wnScope')).fontSize)>=16));
    if(wd===390){await m.locator('[data-id="WN-FR-0004"]').scrollIntoViewIfNeeded();await shot(m,'mobile-find-card.png');}
